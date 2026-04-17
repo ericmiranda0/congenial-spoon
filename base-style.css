@@ -174,8 +174,22 @@ header .badge {
   z-index: 2;
 }
 
-header h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; z-index: 2; color: white; margin-bottom: 0.5rem; }
-header .subtitle { font-size: 1.25rem; font-weight: 300; opacity: 0.8; z-index: 2; margin-bottom: 1.5rem; }
+header h1 { 
+    font-size: clamp(2.2rem, 8vw, 4rem); 
+    font-weight: 900; 
+    z-index: 2; 
+    color: white; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: -0.04em;
+}
+header .subtitle { 
+    font-size: clamp(1rem, 4vw, 1.25rem); 
+    font-weight: 300; 
+    opacity: 0.8; 
+    z-index: 2; 
+    margin-bottom: 1.5rem; 
+    max-width: 600px;
+}
 header .header-meta, header .meta { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; opacity: 0.8; font-size: 0.9rem; z-index: 2; }
 header .header-meta span, header .meta span { background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 100px; }
 
@@ -901,12 +915,139 @@ details.artigo .lei-seca { background: var(--box-legal-bg); color: var(--box-leg
 }
 [data-theme="dark"] .pill.accent { color: var(--p-500); }
 
+/* ── Mobile Optimization (Premium Experience) ── */
 @media (max-width: 768px) {
-  header h1 { font-size: 2.2rem; }
-  .summary-card { grid-template-columns: 1fr; }
-  .grid2, .two-col, .dim-grid { grid-template-columns: 1fr; }
-  #sumario { padding: 1.5rem; }
-  .quick-review { padding: 1.5rem; }
+  :root {
+    --header-height: 280px;
+  }
+
+  body {
+    font-size: 1rem;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom)); /* Space for Bottom Nav */
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  header {
+    padding: 3rem 1.25rem;
+  }
+
+  header .badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 2rem 0;
+  }
+
+  .subject-card {
+    padding: 1.75rem;
+  }
+
+  .summary-card { 
+    grid-template-columns: 1fr; 
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .grid2, .two-col, .dim-grid { 
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  #sumario, .quick-review, .mindmap-box, .super-box { 
+    padding: 1.5rem; 
+    margin: 2rem 0;
+  }
+
+  h2 { font-size: 1.75rem; }
+  
+  /* Hide text in Report Button for mobile */
+  .report-btn span { display: none; }
+  .report-btn {
+    left: auto;
+    right: 1.5rem;
+    bottom: calc(85px + env(safe-area-inset-bottom));
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  /* Bottom Nav Visibility */
+  .bottom-nav { display: flex; }
+
+  /* Hide Legacy Scroll Top on mobile (redundant with bottom nav) */
+  #scroll-top { display: none !important; }
+}
+
+/* ── Mobile Bottom Navigation ── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(64px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-top: 1px solid var(--border);
+  display: none; /* Desktop hidden */
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 2500;
+  transition: var(--transition);
+}
+
+[data-theme="dark"] .bottom-nav {
+  background: rgba(15, 16, 18, 0.85);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--text-muted);
+  width: 25%;
+  height: 100%;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav-item span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bottom-nav-item svg {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.9);
+}
+
+.bottom-nav-item.active {
+  color: var(--p-500);
+}
+
+.bottom-nav-item.active svg {
+  transform: translateY(-2px);
 }
 
 /* ── Report Error System ── */

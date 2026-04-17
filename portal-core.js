@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDragScroll();
     initScrollTop();
     initErrorReporting();
+    initBottomNav();
 });
 
 /**
@@ -209,7 +210,7 @@ function initErrorReporting() {
                 <line x1="12" y1="9" x2="12" y2="13"></line>
                 <line x1="12" y1="17" x2="12.01" y2="17"></line>
             </svg>
-            Reportar Erro
+            <span>Reportar Erro</span>
         </a>
     `;
     
@@ -258,5 +259,53 @@ function initErrorReporting() {
         
         toggleModal();
         form.reset();
+    });
+}
+/**
+ * Mobile Bottom Navigation Injection & Logic
+ */
+function initBottomNav() {
+    const isSubjectPage = window.location.pathname.includes('/subjects/');
+    const homePath = isSubjectPage ? '../../index.html' : 'index.html';
+    
+    // Inject Bottom Nav HTML
+    const bottomNavHTML = `
+        <nav class="bottom-nav">
+            <a href="${homePath}" class="bottom-nav-item ${!isSubjectPage ? 'active' : ''}">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <span>Início</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="mobileSearch">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span>Busca</span>
+            </a>
+            <a href="#" class="bottom-nav-item" id="mobileScrollTop">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"></path></svg>
+                <span>Topo</span>
+            </a>
+        </nav>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', bottomNavHTML);
+
+    // Logic for Mobile Search Button
+    const btnSearch = document.getElementById('mobileSearch');
+    btnSearch.addEventListener('click', (e) => {
+        e.preventDefault();
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => searchInput.focus(), 500);
+        } else {
+            // If not on hub, maybe redirect to hub search?
+            window.location.href = homePath + '#search';
+        }
+    });
+
+    // Logic for Mobile Scroll Top
+    const btnTop = document.getElementById('mobileScrollTop');
+    btnTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
