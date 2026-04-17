@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Digital — Resumo Didático Completo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Digital Law Cyan */
+    :root {
+      --p-700: #134E4A;
+      --p-600: #0D9488;
+      --p-500: #14B8A6;
+      --p-50: #F0FDFA;
+    }
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #042F2E 100%); }
+    
+    /* Visibility managed by base-style and portal-core.js */
+
+    section h2 .icon { font-size: 1.4rem; color: var(--p-500); }
+    .kw { background: rgba(20, 184, 166, 0.1); padding: 0 3px; border-radius: 2px; font-weight: 600; color: var(--p-700); }
+    body.dark-mode .kw { color: var(--p-500); }
+  </style>
+</head>
+<body>
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+<header>
+  <div class="container">
+    <div class="badge">Material Didático · Direito Digital</div>
+    <h1>Direito Digital e Cibernético</h1>
+    <p class="subtitle">Privacidade · Proteção de Dados · Responsabilidade · Propriedade Intelectual</p>
+    <div class="meta" style="display:flex; justify-content:center; gap:20px; opacity:0.8; font-size:0.9rem;">
+      <span>🛡️ LGPD</span>
+      <span>🌐 Marco Civil</span>
+      <span>⚖️ 2026.1</span>
+    </div>
+  </div>
+</header>
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </a>
+    <div class="nav-list">
+      <a href="#sec1" class="nav-item">Fundamentos</a>
+      <a href="#sec2" class="nav-item">Privacidade</a>
+      <a href="#sec3" class="nav-item">LGPD</a>
+      <a href="#sec4" class="nav-item">Identidade</a>
+      <a href="#sec7" class="nav-item">Resp. Civil</a>
+      <a href="#mindmap" class="nav-item">Mapa Mental</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+<main>
+<div class="container">
+
+<!-- ════════════════════════════════════════════════
+     VISÃO GERAL
+════════════════════════════════════════════════ -->
+<section id="intro">
+  <h2><span class="icon">🎯</span> Visão Geral e Objetivos de Aprendizagem</h2>
+  <p>O <span class="kw">Direito Digital</span> (ou Direito Cibernético) é o ramo do ordenamento jurídico que regula as relações humanas mediadas por tecnologia, internet e ambientes virtuais. Seu estudo é essencial porque praticamente todos os demais ramos do Direito — civil, penal, trabalhista, constitucional — já possuem reflexos no mundo digital.</p>
+
+  <div class="box highlight">
+    <div class="box-title">🎓 Objetivos de aprendizagem</div>
+    Ao final deste material você deverá ser capaz de: <strong>(1)</strong> identificar os fundamentos constitucionais da privacidade e proteção de dados; <strong>(2)</strong> compreender a LGPD e seus agentes; <strong>(3)</strong> distinguir responsabilidade civil e penal digital; <strong>(4)</strong> aplicar o Marco Civil da Internet; <strong>(5)</strong> analisar o direito ao esquecimento à luz do STF (Tema 786); <strong>(6)</strong> relacionar propriedade intelectual ao ambiente digital.
+  </div>
+
+  <div class="box note">
+    <div class="box-title">💡 Analogia inicial</div>
+    Pense no Direito Digital como um <em>tradutor jurídico</em>: ele pega institutos já existentes (privacidade, responsabilidade civil, propriedade, crime) e os <em>recodifica</em> para o universo dos bytes, algoritmos e redes sociais.
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 1 — FUNDAMENTOS
+════════════════════════════════════════════════ -->
+<section id="sec1">
+  <h2><span class="icon">📚</span> 1. Fundamentos: Direito na Era da Informação <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>1.1 Sociedade da Informação</h3>
+  <p>A <span class="kw">Sociedade da Informação</span> é o modelo social contemporâneo em que o <em>dado</em> e o <em>conhecimento</em> tornaram-se os principais ativos econômicos — substituindo a terra (era agrária) e as máquinas (era industrial). O sociólogo Manuel Castells a chamou de "Sociedade em Rede".</p>
+
+  <div class="box example">
+    <div class="box-title">📌 Exemplo cotidiano</div>
+    Quando você usa o Google Maps gratuitamente, está <em>pagando</em> com seus dados de localização. A empresa monetiza esses dados para publicidade direcionada. Isso é a <strong>economia de dados</strong> em ação.
+  </div>
+
+  <h3>1.2 Impactos no Ordenamento Jurídico</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ramo do Direito</th><th>Impacto Digital</th><th>Norma Principal</th></tr></thead>
+      <tbody>
+        <tr><td>Constitucional</td><td>Novos direitos fundamentais (dado pessoal)</td><td>CF/88 + EC 115/2022</td></tr>
+        <tr><td>Civil</td><td>Dano moral digital, contratos eletrônicos</td><td>CC + Marco Civil</td></tr>
+        <tr><td>Penal</td><td>Crimes informáticos, invasão de dispositivo</td><td>CP + Lei 12.737/12</td></tr>
+        <tr><td>Administrativo</td><td>Fiscalização pela ANPD</td><td>LGPD (Lei 13.709/18)</td></tr>
+        <tr><td>Autoral</td><td>Proteção de software, obras digitais</td><td>Lei 9.609/98 + Lei 9.610/98</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Cai em Prova</div>
+    Questões frequentemente pedem a identificação de <strong>qual norma rege qual conduta digital</strong>. Memorize: Lei 9.609/98 = software; Lei 12.737/12 = crimes informáticos; Lei 12.965/14 = Marco Civil; Lei 13.709/18 = LGPD.
+  </div>
+
+  <h3>1.3 Questões Sociais da Era Digital</h3>
+  <div class="two-col">
+    <div class="box important">
+      <div class="box-title">📡 Inclusão Digital</div>
+      A desigualdade de acesso à internet (<em>digital divide</em>) gera novas formas de marginalização. O acesso à rede torna-se condição para o exercício da cidadania plena — votar, acessar serviços públicos, estudar.
+    </div>
+    <div class="box warning">
+      <div class="box-title">⚠️ Fake News e Democracia</div>
+      A desinformação em redes sociais desafia a estabilidade democrática e os processos eleitorais. O Direito Digital busca equilibrar liberdade de expressão e combate à desinformação.
+    </div>
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 1</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>O que caracteriza a Sociedade da Informação e por que o dado é considerado o "novo petróleo"?</li>
+        <li>Cite dois ramos do Direito impactados pela era digital e a norma correspondente.</li>
+        <li>O que é inclusão digital e qual sua relevância jurídica?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> A Sociedade da Informação é caracterizada pela centralidade do dado como ativo econômico e social. O dado é o "novo petróleo" porque é matéria-prima para algoritmos de IA, publicidade direcionada e tomada de decisões empresariais, gerando enorme valor econômico.</p>
+          <p><strong>2.</strong> Ex.: Direito Penal → Lei 12.737/12 (crimes informáticos); Direito Civil → Lei 12.965/14 (Marco Civil da Internet).</p>
+          <p><strong>3.</strong> Inclusão digital é a garantia de acesso igualitário à internet e às tecnologias. Juridicamente, o STF já reconheceu o acesso à internet como condição para o exercício de direitos fundamentais.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 2 — PRIVACIDADE E CF/88
+════════════════════════════════════════════════ -->
+<section id="sec2">
+  <h2><span class="icon">🛡️</span> 2. Privacidade e Direitos Fundamentais na CF/88 <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>2.1 Dignidade Humana como Base</h3>
+  <p>A <span class="kw">dignidade da pessoa humana</span> (Art. 1º, III, CF/88) é o fundamento de todos os direitos ligados à privacidade. O raciocínio é: se a pessoa é um fim em si mesma (e não um meio), sua esfera íntima deve ser protegida de invasões estatais e de terceiros.</p>
+
+  <div class="box essential">
+    <div class="box-title">🔴 Essencial — Art. 5º, X da CF/88</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 5º, X da Constituição Federal de 1988</strong></summary>
+      <div class="lei-seca">
+        <p><em>Constituição da República Federativa do Brasil de 1988</em></p>
+        <p>São invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação.</p>
+      </div>
+    </details>, quatro direitos são protegidos: <strong>intimidade</strong>, <strong>vida privada</strong>, <strong>honra</strong> e <strong>imagem</strong>.</p>
+  </div>
+
+  <h3>2.2 Intimidade vs. Vida Privada — Teoria das Esferas</h3>
+  <p>A doutrina alemã desenvolveu a chamada <span class="kw">Teoria das Esferas</span> (Sphärentheorie) para distinguir os níveis de proteção da privacidade:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Esfera</th><th>Conceito</th><th>Proteção</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Intimidade</strong></td>
+          <td>Círculo mais restrito e profundo</td>
+          <td>Máxima — oponível a todos</td>
+          <td>Diário pessoal, conversas entre cônjuges, orientação sexual</td>
+        </tr>
+        <tr>
+          <td><strong>Vida Privada</strong></td>
+          <td>Círculo mais amplo que a intimidade</td>
+          <td>Alta — relações familiares e de trabalho</td>
+          <td>O que acontece dentro de casa, hábitos de consumo, saúde</td>
+        </tr>
+        <tr>
+          <td><strong>Vida Pública</strong></td>
+          <td>O que é exposto voluntariamente à sociedade</td>
+          <td>Reduzida — especialmente para figuras públicas</td>
+          <td>Declarações públicas, atuação profissional, postagens em redes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Pegadinha Clássica</div>
+    Prova costuma confundir <strong>intimidade</strong> com <strong>vida privada</strong>. Lembre: <em>intimidade é o núcleo duro</em> (o que você nunca compartilha com ninguém), enquanto <em>vida privada é a camada intermediária</em> (o que você compartilha com pessoas próximas, mas não com o público).
+  </div>
+
+  <h3>2.3 Honra: Objetiva e Subjetiva</h3>
+  <div class="two-col">
+    <div class="box note">
+      <div class="box-title">Honra Objetiva</div>
+      A <span class="kw">reputação</span> do indivíduo perante a sociedade. O que os <em>outros</em> pensam de você. Ex.: publicar falsamente que alguém é desonesto.
+    </div>
+    <div class="box note">
+      <div class="box-title">Honra Subjetiva</div>
+      O <span class="kw">sentimento de dignidade própria</span> e autoestima. O que <em>você</em> pensa de si mesmo. Ex.: ofensas que causam humilhação íntima.
+    </div>
+  </div>
+
+  <h3>2.4 Imagem: Retrato e Atributo</h3>
+  <p>A proteção da imagem abrange duas dimensões:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><span class="kw">Imagem-retrato</span>: representação exterior da pessoa (foto, vídeo, caricatura).</li>
+    <li><span class="kw">Imagem-atributo</span>: qualidades e características que identificam socialmente a pessoa (reputação, talento).</li>
+  </ul>
+
+  <div class="box example">
+    <div class="box-title">📌 Caso Prático — Uso Comercial Não Autorizado de Imagem</div>
+    Uma empresa usa a foto de um atleta em seu outdoor publicitário sem autorização. Mesmo que o atleta não sofra prejuízo financeiro comprovado, há <strong>dever de indenizar</strong>, pois a simples utilização não autorizada da imagem já configura dano moral <em>in re ipsa</em> (presumido). Fundamento: Art. 5º, X, CF/88 + Art. 20, Código Civil.
+  </div>
+
+  <h3>2.5 Inviolabilidade das Comunicações — Art. 5º, XII, CF/88</h3>
+  <p>A regra geral é o <span class="kw">sigilo absoluto</span> das comunicações. A exceção é restritíssima:</p>
+
+  <div class="box essential">
+    <div class="box-title">🔴 Art. 5º, XII — Exceção à Inviolabilidade</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 5º, XII da Constituição Federal de 1988</strong></summary>
+      <div class="lei-seca">
+        <p><em>Constituição da República Federativa do Brasil de 1988</em></p>
+        <p>É inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, no último caso, por ordem judicial, nas hipóteses e na forma que a lei estabelecer para fins de investigação criminal ou instrução processual penal.</p>
+      </div>
+    </details>, a interceptação telefônica exige: <strong>(1) ordem judicial</strong>, <strong>(2) finalidade de investigação criminal ou instrução processual penal</strong>, <strong>(3) observância da forma da Lei nº 9.296/96</strong>.</p>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Cai em Prova — Acesso a WhatsApp Sem Ordem Judicial</div>
+    <strong>Jurisprudência consolidada do STF/STJ:</strong> A polícia <u>não pode</u> acessar as mensagens de WhatsApp de um celular apreendido, <strong>mesmo que o aparelho esteja desbloqueado</strong>, sem prévia autorização judicial. O Art. 5º, XII protege não apenas a voz, mas o <em>fluxo de dados digitais</em> — e-mails, mensagens de aplicativos, dados em nuvem.
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Pegadinha — Texto do Art. 5º, XII</div>
+    O dispositivo diz que a exceção (interceptação) se aplica "no último caso" — ou seja, <strong>apenas às comunicações telefônicas</strong>. A interceptação de correspondência, dados e comunicações telegráficas NÃO é permitida constitucionalmente nem com ordem judicial! (Debate doutrinário, mas a literalidade é cobrada.)
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 2</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Qual a diferença entre intimidade e vida privada segundo a Teoria das Esferas?</li>
+        <li>Quais são as três condições para a interceptação telefônica ser constitucional?</li>
+        <li>Um policial apreende o celular de um suspeito. Pode acessar o WhatsApp imediatamente? Fundamente.</li>
+        <li>Uma empresa usa a foto de um funcionário em material publicitário sem autorização. Há dever de indenizar mesmo sem prova de prejuízo financeiro?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Intimidade é o núcleo mais restrito da privacidade (pensamentos, segredos, vida sexual); vida privada é o círculo intermediário (relações familiares, profissionais, hábitos domésticos). Toda intimidade é vida privada, mas nem toda vida privada é intimidade.</p>
+          <p><strong>2.</strong> (a) Ordem judicial; (b) Finalidade de investigação criminal ou instrução processual penal; (c) Observância da Lei nº 9.296/96 (lei específica).</p>
+          <p><strong>3.</strong> Não. O STF/STJ firmou que o acesso a mensagens de aplicativos exige ordem judicial prévia, pois os dados digitais são protegidos pelo Art. 5º, XII da CF/88.</p>
+          <p><strong>4.</strong> Sim. O STJ/STF reconhecem o <em>dano moral in re ipsa</em> pelo uso não autorizado de imagem para fins comerciais — o próprio uso já configura o dano, independentemente de prejuízo financeiro comprovado.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 3 — EC 115 E LGPD
+════════════════════════════════════════════════ -->
+<section id="sec3">
+  <h2><span class="icon">🔒</span> 3. EC 115/2022 e LGPD — Proteção de Dados <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>3.1 A Emenda Constitucional nº 115/2022</h3>
+  <p>A <span class="kw">EC 115/2022</span> realizou duas grandes mudanças na CF/88:</p>
+
+  <div class="box essential">
+    <div class="box-title">🔴 Art. 5º, LXXIX — Novo Direito Fundamental</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 5º, LXXIX da CF/88 (inserido pela EC 115/2022)</strong></summary>
+      <div class="lei-seca">
+        <p><em>Constituição da República Federativa do Brasil de 1988</em></p>
+        <p>É assegurado, nos termos da lei, o direito à proteção dos dados pessoais, inclusive nos meios digitais.</p>
+      </div>
+    </details>, a proteção de dados pessoais é agora um <strong>direito fundamental autônomo</strong>.</p>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Cai em Prova — Cláusula Pétrea!</div>
+    Por ser um <strong>direito fundamental</strong> (Art. 5º), a proteção de dados é <strong>cláusula pétrea</strong> (Art. 60, §4º, IV, CF/88). Isso significa que <u>nenhuma emenda constitucional pode abolir ou reduzir</u> esse direito. Questões de concurso adoram perguntar isso!
+  </div>
+
+  <p>Além disso, a EC 115/2022 acrescentou competência legislativa à União:</p>
+  <div class="box essential">
+    <div class="box-title">🔴 Art. 22, XXX da CF/88 (EC 115/2022)</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 22, XXX da CF/88 (inserido pela EC 115/2022)</strong></summary>
+      <div class="lei-seca">
+        <p><em>Constituição da República Federativa do Brasil de 1988</em></p>
+        <p>Compete privativamente à União legislar sobre: (...) XXX — proteção e tratamento de dados pessoais.</p>
+      </div>
+    </details>, compete <strong>privativamente à União</strong> legislar sobre proteção e tratamento de dados, garantindo uniformidade nacional (evitando fragmentação por leis estaduais/municipais).</p>
+  </div>
+
+  <h3>3.2 LGPD — Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</h3>
+  <p>A <span class="kw">LGPD</span> é inspirada no GDPR europeu e regula o <em>tratamento de dados pessoais</em> por pessoas naturais ou jurídicas, de direito público ou privado.</p>
+
+  <h4>Conceitos Fundamentais da LGPD</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Conceito</th><th>Definição</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dado Pessoal</strong></td><td>Informação relacionada a pessoa natural identificada ou identificável</td><td>Nome, CPF, endereço, e-mail</td></tr>
+        <tr><td><strong>Dado Sensível</strong></td><td>Dado sobre origem racial/étnica, convicção religiosa, saúde, biometria, etc.</td><td>Exame de DNA, foto de rosto, religião</td></tr>
+        <tr><td><strong>Tratamento</strong></td><td>Toda operação realizada com dados pessoais (coleta, uso, armazenamento, etc.)</td><td>Cadastro de clientes, análise de comportamento</td></tr>
+        <tr><td><strong>Titular</strong></td><td>Pessoa natural a quem se referem os dados pessoais</td><td>O próprio indivíduo</td></tr>
+        <tr><td><strong>Controlador</strong></td><td>Quem toma as decisões sobre o tratamento dos dados</td><td>Empresa de e-commerce que define como usar dados dos clientes</td></tr>
+        <tr><td><strong>Operador</strong></td><td>Quem realiza o tratamento em nome do controlador</td><td>Empresa de cloud que armazena os dados</td></tr>
+        <tr><td><strong>DPO / Encarregado</strong></td><td>Canal de comunicação entre empresa, titular e ANPD</td><td>O "Data Protection Officer" da empresa</td></tr>
+        <tr><td><strong>ANPD</strong></td><td>Autoridade Nacional de Proteção de Dados — fiscaliza e aplica sanções</td><td>Equivale a uma agência reguladora de dados</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Os 10 Princípios da LGPD (Art. 6º)</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Princípio</th><th>O que significa</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>Finalidade</strong></td><td>Propósitos legítimos, específicos, explícitos e informados ao titular</td></tr>
+        <tr><td>2</td><td><strong>Adequação</strong></td><td>Compatibilidade com as finalidades informadas</td></tr>
+        <tr><td>3</td><td><strong>Necessidade</strong></td><td>Mínimo de dados necessários</td></tr>
+        <tr><td>4</td><td><strong>Livre Acesso</strong></td><td>Garantia de consulta facilitada pelo titular</td></tr>
+        <tr><td>5</td><td><strong>Qualidade</strong></td><td>Dados exatos, claros, relevantes e atualizados</td></tr>
+        <tr><td>6</td><td><strong>Transparência</strong></td><td>Informações claras sobre o tratamento</td></tr>
+        <tr><td>7</td><td><strong>Segurança</strong></td><td>Medidas técnicas para proteger dados</td></tr>
+        <tr><td>8</td><td><strong>Prevenção</strong></td><td>Adoção de medidas preventivas de danos</td></tr>
+        <tr><td>9</td><td><strong>Não Discriminação</strong></td><td>Vedação de tratamento para fins discriminatórios ilícitos</td></tr>
+        <tr><td>10</td><td><strong>Responsabilização</strong></td><td>Demonstração da adoção de medidas eficazes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Erro Comum sobre LGPD</div>
+    A LGPD <strong>não se aplica</strong> ao tratamento realizado: (a) por pessoa natural para fins exclusivamente particulares e não econômicos; (b) para fins exclusivamente jornalísticos, artísticos, acadêmicos ou de segurança pública/investigação criminal (com ressalvas). Prova frequentemente apresenta exceções como se fossem casos normais.
+  </div>
+
+  <h3>3.3 Sigilo e Segurança da Informação</h3>
+  <p>O sigilo de dados é tanto um <em>dever legal</em> (LGPD) quanto um <em>dever contratual</em>. As organizações devem implementar:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><span class="kw">Confidencialidade</span>: dever de sigilo profissional e contratual.</li>
+    <li><span class="kw">Medidas técnicas</span>: criptografia, firewalls, controle de acesso, autenticação em dois fatores.</li>
+    <li><span class="kw">Gestão de incidentes</span>: protocolos para vazamento de dados (data breach). A LGPD impõe obrigação de notificar a ANPD e os titulares afetados em prazo razoável.</li>
+  </ul>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 3</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>O que mudou com a EC 115/2022? Por que é importante para concursos?</li>
+        <li>Diferencie Controlador, Operador e DPO na LGPD.</li>
+        <li>Cite 3 dos 10 princípios da LGPD e explique-os brevemente.</li>
+        <li>Um app de delivery coleta dados de geolocalização para montar perfis e vender para anunciantes sem informar o usuário. Qual princípio da LGPD é violado?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> A EC 115/2022 elevou a proteção de dados a direito fundamental autônomo (Art. 5º, LXXIX) e fixou competência legislativa privativa da União (Art. 22, XXX). Para concursos, é crucial saber que esse direito é cláusula pétrea.</p>
+          <p><strong>2.</strong> Controlador: decide como e por que os dados são tratados (ex.: a empresa de e-commerce). Operador: executa o tratamento por conta do controlador (ex.: empresa de TI que hospeda o banco de dados). DPO: canal de comunicação entre empresa, titular dos dados e ANPD.</p>
+          <p><strong>3.</strong> Finalidade: coletar dados apenas para fins legítimos e previamente informados. Necessidade: coletar o mínimo necessário. Transparência: informar claramente ao titular como seus dados são usados.</p>
+          <p><strong>4.</strong> Viola os princípios da <strong>Finalidade</strong> (uso diferente do informado), <strong>Transparência</strong> (não informou o usuário) e <strong>Adequação</strong> (uso incompatível com as finalidades declaradas).</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 4 — DIREITOS DA PERSONALIDADE DIGITAL
+════════════════════════════════════════════════ -->
+<section id="sec4">
+  <h2><span class="icon">👤</span> 4. Direitos da Personalidade e Identidade Digital <span class="tag tag-important">Importante</span></h2>
+
+  <h3>4.1 Características dos Direitos da Personalidade</h3>
+  <p>Os <span class="kw">direitos da personalidade</span> são regulados pelo Código Civil (Arts. 11–21) e protegem atributos essenciais da pessoa humana. Possuem características especiais:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Característica</th><th>Significado</th><th>Consequência Prática</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Inatos</strong></td><td>Surgem com o nascimento com vida</td><td>Não precisam ser adquiridos ou registrados</td></tr>
+        <tr><td><strong>Absolutos</strong></td><td>Oponíveis erga omnes (contra todos)</td><td>Qualquer pessoa pode violar e ser responsabilizada</td></tr>
+        <tr><td><strong>Indisponíveis</strong></td><td>Intransmissíveis e irrenunciáveis</td><td>Não podem ser vendidos ou cedidos permanentemente</td></tr>
+        <tr><td><strong>Imprescritíveis</strong></td><td>Não se perdem pelo decurso do tempo</td><td>Pode ser reivindicado a qualquer momento</td></tr>
+        <tr><td><strong>Vitalícios</strong></td><td>Acompanham a pessoa por toda a vida</td><td>Alguns persistem post mortem (ex.: honra)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>4.2 Identidade Digital</h3>
+  <p>A <span class="kw">identidade digital</span> é a representação do indivíduo no ambiente virtual, composta por:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><strong>Rastros digitais</strong>: histórico de navegação, compras, curtidas.</li>
+    <li><strong>Metadados</strong>: dados sobre dados — quando você enviou, de onde, por quanto tempo ficou.</li>
+    <li><strong>Perfis algorítmicos</strong>: inferências que algoritmos fazem sobre sua personalidade, humor, intenções.</li>
+  </ul>
+
+  <div class="box warning">
+    <div class="box-title">⚠️ Vulnerabilidades da Identidade Digital</div>
+    <p><strong>1. Roubo de Identidade (Phishing):</strong> obtenção fraudulenta de dados para assumir a identidade da vítima. Ex.: e-mail falso do banco pedindo senha.</p>
+    <p><strong>2. Deepfakes:</strong> uso de IA para manipular imagem e voz, atingindo a honra e imagem. Ex.: vídeo falso atribuindo declarações a políticos.</p>
+    <p><strong>3. Perfilamento Algorítmico:</strong> coleta massiva de dados que pode resultar em práticas discriminatórias. Ex.: algoritmo que nega crédito a pessoas de bairros específicos.</p>
+  </div>
+
+  <h3>4.3 Ética na Era da Informação</h3>
+  <div class="two-col">
+    <div class="box complementary">
+      <div class="box-title">Algoritmos e Vieses</div>
+      Algoritmos aprendem com dados históricos e podem perpetuar preconceitos existentes (racismo, sexismo). A transparência algorítmica é um princípio emergente no Direito Digital.
+    </div>
+    <div class="box complementary">
+      <div class="box-title">Responsabilidade Profissional</div>
+      Advogados, médicos, contadores que lidam com dados de clientes têm dever reforçado de sigilo, agora regulado também pela LGPD.
+    </div>
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 4</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>O que são direitos da personalidade? Liste 3 características e explique-as.</li>
+        <li>O que diferencia a identidade real da identidade digital?</li>
+        <li>O que é um deepfake e qual direito fundamental ele viola?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> São prerrogativas inerentes à pessoa que protegem sua integridade física, psíquica e moral. Características: Inatos (surgem com o nascimento); Indisponíveis (não podem ser alienados); Imprescritíveis (não se perdem pelo tempo).</p>
+          <p><strong>2.</strong> A identidade real é biológica e física (nome, impressão digital). A digital é mediada por algoritmos, possui reprodutibilidade infinita e é composta de rastros digitais e metadados que geram um perfil comportamental detalhado.</p>
+          <p><strong>3.</strong> Deepfake é a manipulação de imagem/voz por IA para criar conteúdo falso. Viola o direito à imagem (Art. 5º, X, CF/88) e pode configurar crimes contra a honra (calúnia, difamação) agravados pelo ambiente digital.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 5 — SOFTWARE
+════════════════════════════════════════════════ -->
+<section id="sec5">
+  <h2><span class="icon">💻</span> 5. Lei de Software (Lei nº 9.609/98) <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>5.1 Regime Jurídico do Software</h3>
+  <p>O <span class="kw">software</span> é protegido no Brasil pelo regime do <strong>Direito Autoral</strong> (não pelo regime de patentes). A Lei de Software (Lei nº 9.609/98) remete subsidiariamente à Lei de Direitos Autorais (Lei nº 9.610/98).</p>
+
+  <div class="box essential">
+    <div class="box-title">🔴 Resumo do Regime Jurídico do Software</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspecto</th><th>Regra</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Prazo de Proteção</strong></td><td><strong>50 anos</strong> a partir de 1º de janeiro do ano subsequente à publicação (ou criação, se não publicado)</td></tr>
+          <tr><td><strong>O que é protegido</strong></td><td>O <strong>código-fonte</strong> e o <strong>código-objeto</strong> (a expressão) — <u>não</u> a ideia, o conceito ou a funcionalidade</td></tr>
+          <tr><td><strong>Registro</strong></td><td><strong>Facultativo</strong>, realizado perante o INPI. A proteção independe de registro</td></tr>
+          <tr><td><strong>Autoria por empresas</strong></td><td>Pertence à empresa quando desenvolvido por empregado em suas funções, salvo contrato em contrário</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Pegadinha — Prazo de 50 vs 70 anos</div>
+    O prazo de proteção do <strong>software é de 50 anos</strong>. O prazo de obras literárias e artísticas em geral (Lei 9.610/98) é de <strong>70 anos post mortem auctoris</strong>. Cuidado para não confundir!
+  </div>
+
+  <h3>5.2 Licenciamento de Software</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Tipo de Licença</th><th>Características</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Proprietário</strong></td><td>Código fechado; uso restrito; usuário não pode modificar</td><td>Microsoft Windows, Adobe Photoshop</td></tr>
+        <tr><td><strong>Livre (Open Source)</strong></td><td>Código aberto; pode ser usado, modificado e distribuído</td><td>Linux, LibreOffice</td></tr>
+        <tr><td><strong>Freeware</strong></td><td>Gratuito, mas código fechado</td><td>Skype, WhatsApp</td></tr>
+        <tr><td><strong>Shareware</strong></td><td>Gratuito por tempo limitado (trial)</td><td>Winzip, antivírus trial</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.3 Pirataria e Infrações — Consequências Legais</h3>
+  <div class="box essential">
+    <div class="box-title">🔴 Penas Previstas</div>
+    <p>A Lei nº 9.609/98 prevê, para violação de direitos autorais de software:</p>
+    <ul style="padding-left:1.5rem;">
+      <li><strong>Detenção</strong> de 6 meses a 2 anos (reprodução não autorizada para fins comerciais).</li>
+      <li><strong>Multa civil</strong> de até <strong>3.000 vezes o valor de cada cópia ilegal</strong> — valor altíssimo!</li>
+      <li>Além de indenização por perdas e danos.</li>
+    </ul>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Detalhe que Cai em Prova</div>
+    A proteção do software abrange a <em>expressão</em> (código), <strong>não a ideia</strong> por trás do programa. Isso significa que duas empresas podem criar softwares com a mesma funcionalidade (ideia) sem infração, desde que o código seja diferente.
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 5</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Qual é o prazo de proteção do software no Brasil? O registro é obrigatório?</li>
+        <li>Uma empresa desenvolve um software sem registrá-lo no INPI. Esse software é protegido pela lei?</li>
+        <li>Qual a diferença entre software proprietário e software livre (open source)?</li>
+        <li>A ideia de um aplicativo de carona pode ser protegida pela Lei de Software?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> 50 anos a partir de 1º de janeiro do ano subsequente à publicação. O registro é <em>facultativo</em> — a proteção independe de registro.</p>
+          <p><strong>2.</strong> Sim. A proteção independe de registro. O registro no INPI é apenas recomendável para fins probatórios (prova de autoria).</p>
+          <p><strong>3.</strong> Software proprietário tem código fechado, uso restrito e não permite modificação. Software livre tem código aberto, podendo ser usado, modificado e redistribuído conforme a licença (ex.: GPL).</p>
+          <p><strong>4.</strong> Não. A Lei de Software protege a expressão (o código), <em>não a ideia</em>. A funcionalidade "aplicativo de carona" é uma ideia que não pode ser monopolizada.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 6 — PROPRIEDADE INTELECTUAL
+════════════════════════════════════════════════ -->
+<section id="sec6">
+  <h2><span class="icon">💡</span> 6. Propriedade Imaterial e Intelectual <span class="tag tag-important">Importante</span></h2>
+
+  <h3>6.1 Visão Geral — Os Dois Grandes Ramos</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ramo</th><th>O que protege</th><th>Lei</th><th>Exemplos no ambiente digital</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Direito Autoral</strong></td>
+          <td>Obras literárias, artísticas, científicas e software</td>
+          <td>Lei 9.610/98 + Lei 9.609/98</td>
+          <td>E-books, músicas em streaming, código-fonte, posts criativos</td>
+        </tr>
+        <tr>
+          <td><strong>Propriedade Industrial</strong></td>
+          <td>Marcas, Patentes, Desenho Industrial, Segredos de Negócio</td>
+          <td>Lei 9.279/96 (LPI)</td>
+          <td>Marcas em domínios de internet, patentes de algoritmos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>6.2 Marcas e Nomes de Domínio</h3>
+  <p>A proteção de <span class="kw">marcas</span> estende-se aos nomes de domínio e palavras-chave em buscadores. O conflito entre marcas registradas e nomes de domínio é resolvido por:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><strong>Anterioridade</strong>: quem registrou primeiro tem prioridade.</li>
+    <li><strong>Boa-fé</strong>: o registro de domínio com intenção de se aproveitar de marca alheia configura <em>cybersquatting</em> (concorrência desleal).</li>
+  </ul>
+
+  <div class="box example">
+    <div class="box-title">📌 Caso Prático — Cybersquatting</div>
+    Uma pessoa registra o domínio "mercadolivre.com.br" antes da empresa Mercado Livre. Isso configura <strong>concorrência desleal</strong> se feito com má-fé (intenção de vender o domínio para a empresa ou prejudicá-la). A empresa pode reivindicar o domínio com base na anterioridade do registro da marca.
+  </div>
+
+  <h3>6.3 Patentes Digitais</h3>
+  <p>As <span class="kw">patentes</span> protegem invenções técnicas. No ambiente digital, o desafio está na patenteabilidade de <em>invenções implementadas por computador</em>. No Brasil, o INPI geralmente <u>não concede patentes para software puro</u>, mas pode conceder para sistemas técnicos que envolvem software como parte de uma solução técnica maior.</p>
+
+  <h3>6.4 Segredos de Negócio e Concorrência Desleal</h3>
+  <div class="two-col">
+    <div class="box note">
+      <div class="box-title">Segredos de Negócio</div>
+      Informações confidenciais de valor econômico que a empresa mantém em sigilo (fórmulas, algoritmos proprietários, listas de clientes). Protegidos pela Lei nº 9.279/96 e pela Lei nº 14.200/21.
+    </div>
+    <div class="box note">
+      <div class="box-title">Concorrência Desleal</div>
+      Repressão a meios fraudulentos de competição, como: divulgar segredo industrial de ex-empregador, uso indevido de marca alheia, publicidade enganosa comparativa.
+    </div>
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 6</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Quais são os dois grandes ramos da propriedade intelectual? O que cada um protege?</li>
+        <li>O que é cybersquatting? Como o Direito resolve conflitos entre marcas e domínios?</li>
+        <li>O Brasil concede patentes para software puro? Explique.</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Direito Autoral: protege obras do espírito (literárias, artísticas, científicas, software) — expressão criativa. Propriedade Industrial: protege criações aplicadas à indústria (marcas, patentes, desenho industrial) — inovação técnica.</p>
+          <p><strong>2.</strong> Cybersquatting é o registro oportunista de domínio que reproduz marca alheia, com má-fé. O conflito é resolvido por anterioridade do registro da marca e pela análise da boa-fé do registrante do domínio.</p>
+          <p><strong>3.</strong> Em regra, o INPI não concede patentes para software puro (apenas o código = expressão, protegido por direito autoral). Porém, pode conceder para um sistema técnico mais amplo do qual o software é parte integrante de uma solução técnica nova e inventiva.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 7 — RESPONSABILIDADE CIVIL DIGITAL
+════════════════════════════════════════════════ -->
+<section id="sec7">
+  <h2><span class="icon">⚖️</span> 7. Responsabilidade Civil Digital <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>7.1 Marco Civil da Internet (Lei nº 12.965/2014)</h3>
+  <p>O <span class="kw">Marco Civil da Internet</span> é a "Constituição da Internet brasileira". Estabelece princípios, direitos e deveres para o uso da internet no Brasil.</p>
+
+  <div class="box essential">
+    <div class="box-title">🔴 Regra Geral de Responsabilidade dos Provedores — Art. 19</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 19 da Lei nº 12.965/2014 (Marco Civil da Internet)</strong></summary>
+      <div class="lei-seca">
+        <p><em>Lei nº 12.965, de 23 de abril de 2014 — Marco Civil da Internet</em></p>
+        <p>Com o intuito de assegurar a liberdade de expressão e impedir a censura, o provedor de aplicações de internet somente poderá ser responsabilizado civilmente por danos decorrentes de conteúdo gerado por terceiros se, após ordem judicial específica, não tomar as providências para, no prazo assinalado, tornar indisponível o conteúdo apontado como infringente, ressalvadas as disposições legais em contrário.</p>
+      </div>
+    </details>, os provedores de aplicação (Facebook, YouTube, etc.) <strong>só respondem por conteúdo de terceiros</strong> se descumprirem <u>ordem judicial</u> de remoção.</p>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Cai Muito em Prova — Modelo de Responsabilidade</div>
+    <strong>Brasil (Marco Civil, Art. 19):</strong> Responsabilidade <em>por descumprimento de ordem judicial</em> de remoção.<br>
+    <strong>Exceção (Art. 21):</strong> Para conteúdo íntimo sem autorização (ex.: revenge porn), basta <em>notificação extrajudicial</em> — não precisa de ordem judicial. O provedor deve remover imediatamente.
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Pegadinha — Notificação Extrajudicial vs. Ordem Judicial</div>
+    Para a <strong>maioria dos conteúdos</strong> ofensivos, é necessária <strong>ordem judicial</strong> para responsabilizar o provedor (Art. 19). Mas para <strong>conteúdo íntimo não autorizado</strong> (Art. 21), basta <strong>notificação extrajudicial</strong> da vítima para obrigar a remoção.
+  </div>
+
+  <h3>7.2 Dano Moral Digital</h3>
+  <p>O <span class="kw">dano moral digital</span> decorre da violação de direitos da personalidade no ambiente virtual. Exige a comprovação do nexo entre a conduta e o prejuízo.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Tipo de Dano</th><th>Descrição</th><th>Exemplo Digital</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dano Material</strong></td><td>Prejuízo financeiro comprovado</td><td>Invasão de conta bancária por hacker que transfere valores</td></tr>
+        <tr><td><strong>Dano Moral</strong></td><td>Sofrimento, humilhação, abalo psicológico</td><td>Publicação de foto íntima sem consentimento</td></tr>
+        <tr><td><strong>Dano Moral In Re Ipsa</strong></td><td>Dano presumido pela própria natureza do ato</td><td>Uso comercial não autorizado de imagem</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>7.3 Economia de Dados e Responsabilidade do Consumidor Digital</h3>
+  <p>Na economia digital, os dados são "o novo petróleo". As plataformas oferecem serviços "gratuitos" em troca de dados comportamentais. O Código de Defesa do Consumidor (CDC) aplica-se integralmente às relações digitais, garantindo:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><strong>Transparência</strong> sobre o uso de dados para publicidade direcionada.</li>
+    <li>Proteção contra a <strong>vulnerabilidade informacional</strong> do consumidor.</li>
+    <li>Direito ao <strong>arrependimento</strong> em compras online no prazo de 7 dias.</li>
+  </ul>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 7</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Qual é a regra geral de responsabilidade dos provedores de aplicação pelo Marco Civil? Existe exceção?</li>
+        <li>Um usuário do Instagram posta uma foto difamatória sobre uma pessoa. A vítima pode processar o Instagram imediatamente? Fundamente.</li>
+        <li>Qual a diferença entre dano material e dano moral no ambiente digital?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Regra geral (Art. 19): provedores só respondem por conteúdo de terceiros após descumprir ordem judicial de remoção. Exceção (Art. 21): conteúdo íntimo não autorizado — basta notificação extrajudicial da vítima.</p>
+          <p><strong>2.</strong> Não. Pelo Art. 19, o Instagram só será responsabilizado civilmente se, após ordem judicial específica de remoção, não cumprir o prazo determinado. A vítima deve primeiro obter ordem judicial e intimá-lo. Exceção: se o conteúdo for íntimo, basta notificação extrajudicial (Art. 21).</p>
+          <p><strong>3.</strong> Dano material: prejuízo patrimonial comprovado (ex.: valores subtraídos de conta). Dano moral: abalo psíquico, sofrimento, humilhação — não precisa de prova do valor exato, é arbitrado pelo juiz. Em alguns casos (uso de imagem para fins comerciais) o dano é presumido (in re ipsa).</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 8 — RESPONSABILIDADE PENAL DIGITAL
+════════════════════════════════════════════════ -->
+<section id="sec8">
+  <h2><span class="icon">🚨</span> 8. Responsabilidade Penal na Era Digital <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>8.1 Crimes Informáticos Próprios e Impróprios</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Categoria</th><th>Definição</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Próprios</strong></td><td>Crimes que só existem no ambiente digital; o sistema informático é o objeto da conduta</td><td>Invasão de dispositivo (Art. 154-A CP)</td></tr>
+        <tr><td><strong>Impróprios</strong></td><td>Crimes comuns praticados com uso da tecnologia como meio</td><td>Estelionato via WhatsApp, calúnia em rede social</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>8.2 Lei Carolina Dieckmann (Lei nº 12.737/2012)</h3>
+  <div class="box essential">
+    <div class="box-title">🔴 Art. 154-A do Código Penal — Invasão de Dispositivo Informático</div>
+    <p>Conforme o 
+    <details class="artigo">
+      <summary><strong>Art. 154-A do Código Penal (inserido pela Lei nº 12.737/2012)</strong></summary>
+      <div class="lei-seca">
+        <p><em>Decreto-Lei nº 2.848/1940 — Código Penal (com redação dada pela Lei nº 12.737/2012)</em></p>
+        <p>Invadir dispositivo informático alheio, conectado ou não à rede de computadores, mediante violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do titular do dispositivo ou instalar vulnerabilidades para obter vantagem ilícita:</p>
+        <p>Pena — detenção, de 3 (três) meses a 1 (um) ano, e multa.</p>
+        <p>§1º Na mesma pena incorre quem produz, oferece, distribui, vende ou difunde dispositivo ou programa de computador com o intuito de permitir a prática da conduta definida no caput.</p>
+        <p>§2º Aumenta-se a pena de um sexto a um terço se da invasão resulta prejuízo econômico.</p>
+        <p>§3º Se da invasão resultar a obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas, assim definidas em lei, ou o controle remoto não autorizado do dispositivo invadido: Pena — reclusão, de 6 (seis) meses a 2 (dois) anos, e multa, se a conduta não constitui crime mais grave.</p>
+        <p>§4º Na hipótese do §3º, aumenta-se a pena de um a dois terços se houver divulgação, comercialização ou transmissão a terceiro, a qualquer título, dos dados ou informações obtidos.</p>
+        <p>§5º Aumenta-se a pena de um terço à metade se o crime for praticado contra: I — Presidente da República, governadores e prefeitos; II — Presidente do Supremo Tribunal Federal; III — Presidente da Câmara dos Deputados, do Senado Federal, de Assembleia Legislativa de Estado, da Câmara Legislativa do Distrito Federal ou de Câmara Municipal; ou IV — dirigente máximo da administração direta e indireta federal, estadual, municipal ou do Distrito Federal.</p>
+      </div>
+    </details>, a pena base é de <strong>3 meses a 1 ano de detenção + multa</strong>.</p>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Requisito Essencial do Art. 154-A</div>
+    Para que o crime se configure, é necessário que haja <strong>violação de mecanismo de segurança</strong>. Se o dispositivo estava completamente aberto (sem senha, sem proteção alguma), há debate doutrinário sobre a tipicidade. Prova pode explorar isso!
+  </div>
+
+  <h3>8.3 Principais Crimes Digitais</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Crime</th><th>Dispositivo</th><th>Descrição</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Invasão de Dispositivo</strong></td><td>Art. 154-A CP</td><td>Acesso não autorizado a dispositivo informático com violação de segurança</td></tr>
+        <tr><td><strong>Estelionato Digital</strong></td><td>Art. 171 CP</td><td>Fraudes via redes sociais, phishing, clonagem de cartão</td></tr>
+        <tr><td><strong>Calúnia Online</strong></td><td>Art. 138 CP</td><td>Imputar falsamente fato criminoso a alguém via internet</td></tr>
+        <tr><td><strong>Difamação Online</strong></td><td>Art. 139 CP</td><td>Imputar fato ofensivo à reputação (mesmo que verdadeiro)</td></tr>
+        <tr><td><strong>Injúria Online</strong></td><td>Art. 140 CP</td><td>Ofender a dignidade ou decoro via internet</td></tr>
+        <tr><td><strong>Stalking Digital</strong></td><td>Art. 147-A CP</td><td>Perseguição reiterada por meios digitais</td></tr>
+        <tr><td><strong>Revenge Porn</strong></td><td>Art. 218-C CP</td><td>Divulgação não autorizada de conteúdo íntimo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box common-error">
+    <div class="box-title">⛔ Erro Comum</div>
+    Muitos estudantes confundem <strong>calúnia</strong> (imputa <em>fato criminoso</em> falso) com <strong>difamação</strong> (imputa <em>fato ofensivo à reputação</em>, mesmo verdadeiro) e <strong>injúria</strong> (ofende <em>qualidade pessoal</em>, sem imputar fato). Na calúnia e difamação, a honra é objetiva; na injúria, é subjetiva.
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 8</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Qual a diferença entre crime informático próprio e impróprio? Dê exemplos.</li>
+        <li>Quais são os requisitos do crime de invasão de dispositivo (Art. 154-A CP)?</li>
+        <li>Diferencie calúnia, difamação e injúria no ambiente digital.</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Próprio: a tecnologia é o objeto do crime — ex.: invasão de dispositivo (Art. 154-A). Impróprio: crime comum praticado com auxílio da tecnologia — ex.: estelionato via WhatsApp (Art. 171).</p>
+          <p><strong>2.</strong> (a) Invasão de dispositivo informático alheio; (b) Mediante violação de mecanismo de segurança; (c) Finalidade de obter/adulterar/destruir dados ou instalar vulnerabilidades para vantagem ilícita.</p>
+          <p><strong>3.</strong> Calúnia: imputa fato criminoso falso (ex.: "você praticou furto" — falso). Difamação: imputa fato ofensivo à reputação, mesmo verdadeiro (ex.: expor que alguém teve doença vergonhosa). Injúria: ofende qualidade pessoal sem imputar fato específico (ex.: xingamentos, insultos degradantes).</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 9 — PROVAS DIGITAIS
+════════════════════════════════════════════════ -->
+<section id="sec9">
+  <h2><span class="icon">🔍</span> 9. Tutela da Informação e Provas Digitais <span class="tag tag-important">Importante</span></h2>
+
+  <h3>9.1 Requisitos para Validade da Prova Digital</h3>
+  <p>Para que uma <span class="kw">prova digital</span> seja válida em juízo, devem ser garantidas sua <strong>integridade</strong> (não foi alterada) e sua <strong>autenticidade</strong> (é genuína). O CPC e o CPP regulam a admissibilidade das provas digitais.</p>
+
+  <h3>9.2 Cadeia de Custódia</h3>
+  <p>A <span class="kw">cadeia de custódia</span> é o registro cronológico de todos os manuseios da evidência digital, desde sua coleta até sua apresentação em juízo. Garante que a prova não foi adulterada.</p>
+
+  <div class="box example">
+    <div class="box-title">📌 Analogia — Cadeia de Custódia</div>
+    Pense na cadeia de custódia como o "log de acesso" de uma prova: quem coletou, quando, onde, como armazenou, quem teve acesso. Qualquer "gap" nessa cadeia pode levar à imprestabilidade da prova.
+  </div>
+
+  <h3>9.3 Função Hash — A "Impressão Digital" do Arquivo</h3>
+  <p>O <span class="kw">algoritmo hash</span> (MD5, SHA-256) gera uma sequência alfanumérica única a partir de qualquer arquivo. Se um byte do arquivo for alterado, o hash muda completamente — permitindo detectar qualquer adulteração.</p>
+
+  <div class="box highlight">
+    <div class="box-title">💡 Exemplo Prático de Hash</div>
+    O arquivo "prova.pdf" gera o hash: <code style="font-family:var(--mono); font-size:0.8rem;">a3f8c2...1d94</code>. Se um caractere for alterado, o hash vira: <code style="font-family:var(--mono); font-size:0.8rem;">b7e1a9...5f2c</code>. Como os hashes são diferentes, a adulteração é detectada.
+  </div>
+
+  <h3>9.4 Meios de Prova Digital</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Meio de Prova</th><th>Características</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ata Notarial</strong></td><td>Lavrada por tabelião; prova pré-constituída de conteúdo digital</td><td>Forma mais robusta — fé pública</td></tr>
+        <tr><td><strong>Print Screen</strong></td><td>Captura de tela de mensagem, post ou e-mail</td><td>Isolado, tem valor probatório limitado; pode ser forjado</td></tr>
+        <tr><td><strong>Logs de Acesso</strong></td><td>Registros de conexão mantidos pelos provedores</td><td>Marco Civil: provedores devem guardar por 6 meses (conexão) ou 1 ano (aplicação)</td></tr>
+        <tr><td><strong>E-mails com Metadados</strong></td><td>Cabeçalho do e-mail contém IP, data, rota</td><td>Mais confiável que o conteúdo isolado</td></tr>
+        <tr><td><strong>Perícia Forense</strong></td><td>Análise técnica por expert</td><td>Maior credibilidade em juízo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Prazos de Guarda de Logs (Marco Civil)</div>
+    <strong>Provedores de conexão:</strong> guardar logs por <strong>1 ano</strong>.<br>
+    <strong>Provedores de aplicação:</strong> guardar logs por <strong>6 meses</strong>.<br>
+    Atenção: é o inverso do que intuitivamente se esperaria — conexão guarda mais tempo.
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 9</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>O que é cadeia de custódia e por que ela é importante para as provas digitais?</li>
+        <li>O que é um algoritmo hash e como ele garante a integridade de uma prova digital?</li>
+        <li>Qual o prazo que provedores de conexão e de aplicação devem guardar logs de acesso?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Cadeia de custódia é o registro cronológico de todos os manuseios da evidência, garantindo rastreabilidade e integridade. Sem ela, a defesa pode arguir adulteração, tornando a prova imprestável.</p>
+          <p><strong>2.</strong> Hash é uma função matemática que gera uma sequência única para cada arquivo. Qualquer alteração no arquivo muda o hash, detectando adulterações. Funciona como uma "impressão digital" do arquivo digital.</p>
+          <p><strong>3.</strong> Provedores de conexão: 1 ano. Provedores de aplicação: 6 meses. Ambos os prazos são definidos pelo Marco Civil da Internet (Lei 12.965/14).</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 10 — DIREITO AO ESQUECIMENTO
+════════════════════════════════════════════════ -->
+<section id="sec10">
+  <h2><span class="icon">🗑️</span> 10. Direito ao Esquecimento — STF Tema 786 <span class="tag tag-essential">Essencial</span></h2>
+
+  <h3>10.1 Conceito e Fundamento</h3>
+  <p>O <span class="kw">direito ao esquecimento</span> é a pretensão de não ser perpetuamente lembrado por fatos desabonadores do passado que perderam o interesse público, visando proteger a dignidade e a privacidade do indivíduo.</p>
+
+  <div class="box note">
+    <div class="box-title">🌍 Referências Internacionais</div>
+    <p><strong>Caso Lebach (Alemanha, 1973):</strong> pioneiro — proteção da ressocialização do condenado frente à exposição midiática de crimes passados.</p>
+    <p><strong>Google Spain vs. AEPD (UE, 2014):</strong> Tribunal de Justiça da UE consolidou o direito à desindexação de links em mecanismos de busca para dados pessoais irrelevantes.</p>
+  </div>
+
+  <h3>10.2 Evolução no Brasil — Antes do STF</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Marco</th><th>Conteúdo</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Enunciado 531</strong> — VI Jornada de Direito Civil (CJF)</td>
+          <td>"A tutela da dignidade da pessoa humana na sociedade da informação inclui o direito ao esquecimento." — Base doutrinária brasileira.</td>
+        </tr>
+        <tr>
+          <td><strong>STJ — REsp 1.334.097</strong> (Caso Chacina da Candelária)</td>
+          <td>O STJ reconheceu o direito de um sobrevivente de não ser exposto em reconstituições televisivas décadas depois do crime. Marco jurisprudencial importante.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>10.3 O Caso Líder: RE 1.010.606 — Aida Curi</h3>
+  <div class="box important">
+    <div class="box-title">📖 Contexto Histórico</div>
+    <p>Em 1958, Aida Curi foi brutalmente assassinada no Rio de Janeiro. Décadas depois, um programa de televisão reconstituiu o crime sem autorização da família, utilizando o nome e a imagem da vítima. A família ingressou com ação pedindo indenização com base no direito ao esquecimento.</p>
+    <p><strong>Conflito:</strong> proteção da dignidade e intimidade dos familiares X liberdade de expressão e informação da emissora.</p>
+  </div>
+
+  <h3>10.4 A Decisão do STF — Tema 786 (fevereiro de 2021)</h3>
+  <p>Sob relatoria do Min. <strong>Dias Toffoli</strong>, o STF fixou a seguinte tese com <strong>repercussão geral</strong>:</p>
+
+  <div class="box essential" style="border-left-width:6px; font-size:1.05rem;">
+    <div class="box-title">🔴 TESE FIXADA — TEMA 786 DO STF</div>
+    <blockquote style="border-left:3px solid var(--accent); padding-left:1rem; font-style:italic; color:var(--ink-soft);">
+      "É incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar, em razão da passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados em meios de comunicação social — analógicos ou digitais."
+    </blockquote>
+    <p style="margin-top:0.8rem;"><strong>Fundamentos:</strong></p>
+    <ul style="padding-left:1.5rem;">
+      <li><strong>Liberdade de Expressão:</strong> o direito ao esquecimento funcionaria como censura prévia.</li>
+      <li><strong>Direito à História:</strong> a sociedade tem direito inalienável de conhecer fatos passados que compõem a memória coletiva.</li>
+    </ul>
+  </div>
+
+  <h3>10.5 Ressalvas e Exceções à Tese do STF</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Situação</th><th>Proteção Garantida</th><th>Fundamento</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dados falsos ou ilícitos</strong></td><td>Remoção imediata do conteúdo</td><td>A tese protege apenas fatos verídicos e licitamente obtidos</td></tr>
+        <tr><td><strong>Abusos de direito (calúnia, difamação, injúria)</strong></td><td>Indenizações e retratações</td><td>Honra e imagem protegidas pelo Art. 5º, X, CF/88</td></tr>
+        <tr><td><strong>Crianças e adolescentes</strong></td><td>Proteção absoluta</td><td>Princípio do melhor interesse do menor (ECA)</td></tr>
+        <tr><td><strong>Processos sob segredo de justiça</strong></td><td>Sigilo mantido</td><td>Regras processuais específicas</td></tr>
+        <tr><td><strong>Reabilitação penal</strong></td><td>Direito à reabilitação</td><td>Art. 93 do Código Penal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>10.6 Desindexação vs. Exclusão de Conteúdo</h3>
+  <div class="two-col">
+    <div class="box note">
+      <div class="box-title">🔗 Desindexação</div>
+      Remove o <em>link</em> dos resultados de busca (ex.: Google), mantendo a informação disponível na fonte original para fins históricos. É menos radical e mais aceita juridicamente.
+    </div>
+    <div class="box warning">
+      <div class="box-title">🗑️ Exclusão de Conteúdo</div>
+      Remove o próprio conteúdo do ar. Mais invasivo à liberdade de imprensa. O STF, no Tema 786, rejeita a exclusão de conteúdos verídicos baseada apenas no direito ao esquecimento.
+    </div>
+  </div>
+
+  <div class="box exam-tip">
+    <div class="box-title">⭐ Resumo do Tema 786 para Prova</div>
+    <strong>O STF disse NÃO ao direito ao esquecimento autônomo.</strong> Porém, disse SIM à proteção contra: dados falsos, abusos de expressão, conteúdo sobre menores e processos sigilosos. A chave é: <em>fatos verídicos + licitamente obtidos = podem ser divulgados, mesmo com o passar do tempo</em>.
+  </div>
+
+  <div class="box pitfall">
+    <div class="box-title">🪤 Cuidado com Mudança Jurisprudencial</div>
+    Antes do STF (Tema 786), o STJ <em>reconhecia</em> o direito ao esquecimento (caso Chacina da Candelária, 2013). O STF <em>reverteu</em> esse entendimento em 2021. Questões de prova podem tentar confundir o posicionamento do STJ com o atual entendimento do STF!
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 10</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>O que é o direito ao esquecimento? O STF reconheceu esse direito no Brasil?</li>
+        <li>Qual foi a tese fixada pelo STF no Tema 786 (RE 1.010.606)?</li>
+        <li>Quais são as exceções à tese do STF sobre o direito ao esquecimento?</li>
+        <li>Qual a diferença entre desindexação e exclusão de conteúdo?</li>
+        <li>Uma TV quer exibir documentário sobre crime cometido por adulto em 1980. O condenado, hoje ressocializado, pode impedir a exibição com base no direito ao esquecimento?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> Direito ao esquecimento é a pretensão de não ser perpetuamente lembrado por fatos passados que perderam interesse público. O STF (Tema 786, 2021) <em>não reconheceu</em> esse direito como autônomo, declarando sua incompatibilidade com a CF/88.</p>
+          <p><strong>2.</strong> "É incompatível com a Constituição a ideia de um direito ao esquecimento, assim entendido como o poder de obstar, em razão da passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados em meios de comunicação social — analógicos ou digitais."</p>
+          <p><strong>3.</strong> Exceções: (a) dados falsos ou obtidos ilicitamente; (b) abusos de expressão (calúnia, difamação, injúria); (c) proteção de crianças e adolescentes; (d) processos sob segredo de justiça; (e) reabilitação penal (Art. 93 CP).</p>
+          <p><strong>4.</strong> Desindexação: remove apenas o link dos resultados de busca, mantendo o conteúdo no site original. Exclusão: remove o próprio conteúdo. A desindexação é menos lesiva à liberdade de imprensa.</p>
+          <p><strong>5.</strong> Em regra, <em>não</em>. O STF fixou que fatos verídicos e licitamente obtidos podem ser divulgados mesmo com o passar do tempo. Porém, se o condenado obteve reabilitação penal (Art. 93 CP), pode haver limitações à publicidade dos dados do processo criminal.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 11 — IA E FUTURO
+════════════════════════════════════════════════ -->
+<section id="sec11">
+  <h2><span class="icon">🤖</span> 11. Tendências e Futuro do Direito Digital <span class="tag tag-complementary">Complementar</span></h2>
+
+  <h3>11.1 Inteligência Artificial e o Direito</h3>
+  <p>A <span class="kw">Inteligência Artificial</span> apresenta desafios regulatórios inéditos:</p>
+  <ul style="padding-left:1.5rem; margin-bottom:1rem;">
+    <li><strong>Responsabilidade civil:</strong> quem responde por dano causado por sistema autônomo — o fabricante, o programador, o usuário?</li>
+    <li><strong>Transparência algorítmica:</strong> direito de conhecer os critérios das decisões automatizadas que afetam a vida das pessoas.</li>
+    <li><strong>Regulação brasileira:</strong> o Brasil discute o PL 2.338/2023 (Marco Regulatório de IA), inspirado no AI Act europeu.</li>
+  </ul>
+
+  <h3>11.2 Blockchain e Smart Contracts</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Conceito</th><th>Definição Simplificada</th><th>Desafio Jurídico</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Blockchain</strong></td><td>Registro distribuído e imutável de transações</td><td>Jurisdição, imutabilidade vs. direito ao esquecimento</td></tr>
+        <tr><td><strong>Smart Contract</strong></td><td>Contrato autoexecutável em código — executa-se automaticamente quando condições são satisfeitas</td><td>Validade jurídica, vícios de consentimento, responsabilidade por bugs</td></tr>
+        <tr><td><strong>NFT</strong></td><td>Token não fungível — certificado digital de propriedade</td><td>Proteção autoral, tributação, lavagem de dinheiro</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>11.3 Metaverso e Jurisdição</h3>
+  <div class="box complementary">
+    <div class="box-title">🌐 Novas Fronteiras Jurídicas</div>
+    O Metaverso traz desafios sobre: (a) <strong>jurisdição</strong> — em qual país processar crime cometido em ambiente virtual global?; (b) <strong>crimes digitais</strong> no ambiente imersivo (assédio virtual, furto de avatares); (c) <strong>propriedade intelectual</strong> de obras em mundos sintéticos.
+  </div>
+
+  <details class="collapsible">
+    <summary>Questões de Revisão — Seção 11</summary>
+    <div class="collapsible-body questions">
+      <ol>
+        <li>Quais são os principais desafios jurídicos da Inteligência Artificial?</li>
+        <li>O que é um smart contract e quais são seus desafios para o Direito?</li>
+      </ol>
+      <details>
+        <summary><strong>Ver Gabarito Comentado</strong></summary>
+        <div class="answer-key">
+          <p><strong>1.</strong> (a) Responsabilidade civil por danos causados por sistemas autônomos; (b) Transparência algorítmica — direito de conhecer a lógica das decisões automatizadas; (c) Regulação de dados usados para treinar modelos (LGPD); (d) Definição de personalidade jurídica da IA.</p>
+          <p><strong>2.</strong> Smart contract é um contrato autoexecutável em código que roda em blockchain, cumprindo-se automaticamente quando as condições programadas são satisfeitas. Desafios: reconhecimento jurídico como contrato válido, responsabilidade por erros no código (bugs), impossibilidade de arrependimento após execução, e aplicação das regras de vícios de consentimento do Código Civil.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     MAPA MENTAL
+════════════════════════════════════════════════ -->
+<section id="mindmap">
+  <h2><span class="icon">🗺️</span> Mapa Mental — Direito Digital</h2>
+  <div class="mindmap">
+<pre><span class="root">⚡ DIREITO DIGITAL</span>
+│
+├── <span class="branch">🛡️ PRIVACIDADE (CF/88)</span>
+│   ├── <span class="leaf">Art. 5º, X → Intimidade | Vida Privada | Honra | Imagem</span>
+│   ├── <span class="leaf">Art. 5º, XII → Inviolabilidade comunicações (exceção: interceptação)</span>
+│   ├── <span class="leaf">Art. 5º, LXXIX → EC 115/2022 → Proteção de Dados (cláusula pétrea)</span>
+│   └── <span class="leaf">Art. 22, XXX → Competência legislativa privativa da União</span>
+│
+├── <span class="branch">🔒 LGPD (Lei 13.709/18)</span>
+│   ├── <span class="leaf">Agentes: Controlador | Operador | DPO | ANPD</span>
+│   ├── <span class="leaf">Dado Pessoal vs. Dado Sensível</span>
+│   ├── <span class="leaf">10 Princípios: Finalidade, Adequação, Necessidade... Responsabilização</span>
+│   └── <span class="leaf">Direitos do Titular: acesso, correção, portabilidade, exclusão</span>
+│
+├── <span class="branch">💻 SOFTWARE (Lei 9.609/98)</span>
+│   ├── <span class="leaf">Regime: Direito Autoral (não patente)</span>
+│   ├── <span class="leaf">Prazo: 50 anos (≠ obras: 70 anos post mortem)</span>
+│   ├── <span class="leaf">Protege: código (expressão) ≠ ideia</span>
+│   ├── <span class="leaf">Registro: facultativo (INPI)</span>
+│   └── <span class="leaf">Pirataria: detenção + multa de até 3.000x o valor</span>
+│
+├── <span class="branch">💡 PROPRIEDADE INTELECTUAL</span>
+│   ├── <span class="leaf">Direito Autoral (Lei 9.610/98): obras + software</span>
+│   └── <span class="leaf">Propriedade Industrial (Lei 9.279/96): marcas, patentes, desenho</span>
+│       ├── <span class="leaf">Cybersquatting: registro de domínio com má-fé</span>
+│       └── <span class="leaf">Segredos de Negócio + Concorrência Desleal</span>
+│
+├── <span class="branch">⚖️ RESPONSABILIDADE CIVIL (Marco Civil — Lei 12.965/14)</span>
+│   ├── <span class="leaf">Art. 19: provedor → responsável só após descumprir ordem judicial</span>
+│   ├── <span class="leaf">Art. 21: conteúdo íntimo → basta notificação extrajudicial</span>
+│   ├── <span class="leaf">Dano Material | Dano Moral | In Re Ipsa</span>
+│   └── <span class="leaf">Logs: Conexão = 1 ano | Aplicação = 6 meses</span>
+│
+├── <span class="branch">🚨 RESPONSABILIDADE PENAL</span>
+│   ├── <span class="leaf">Art. 154-A CP (Lei 12.737/12 — Lei Carolina Dieckmann)</span>
+│   ├── <span class="leaf">Crimes próprios vs. impróprios</span>
+│   └── <span class="leaf">Calúnia | Difamação | Injúria | Stalking | Revenge Porn</span>
+│
+├── <span class="branch">🔍 PROVAS DIGITAIS</span>
+│   ├── <span class="leaf">Cadeia de Custódia: registro cronológico da evidência</span>
+│   ├── <span class="leaf">Hash: impressão digital do arquivo (integridade)</span>
+│   └── <span class="leaf">Ata Notarial > Print Screen (em termos probatórios)</span>
+│
+├── <span class="branch">🗑️ DIREITO AO ESQUECIMENTO (STF — Tema 786)</span>
+│   ├── <span class="leaf">STJ antes: reconhecia (Caso Candelária, 2013)</span>
+│   ├── <span class="leaf">STF 2021 (RE 1.010.606 — Aida Curi): NÃO é compatível com CF/88</span>
+│   ├── <span class="leaf">Fundamentos: liberdade de expressão + direito à história</span>
+│   └── <span class="leaf">Exceções: dados falsos | menores | abusos | sigilo | reabilitação penal</span>
+│
+└── <span class="branch">🤖 FUTURO</span>
+    ├── <span class="leaf">IA: responsabilidade + transparência algorítmica</span>
+    ├── <span class="leaf">Blockchain + Smart Contracts: validade jurídica</span>
+    └── <span class="leaf">Metaverso: jurisdição + crimes digitais imersivos</span></pre>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     QUIZ FINAL
+════════════════════════════════════════════════ -->
+<section id="quiz">
+  <h2><span class="icon">📝</span> Questões Simuladas — Prova 14/04/2026</h2>
+
+  <div class="exercise">
+    <p><strong>Q1.</strong> <span class="tag tag-essential">Essencial</span> A Emenda Constitucional nº 115/2022 inseriu na Constituição Federal:</p>
+    <p>a) O direito fundamental à proteção de dados pessoais (Art. 5º, LXXIX) e a competência legislativa privativa da União para legislar sobre proteção de dados (Art. 22, XXX).</p>
+    <p>b) A obrigatoriedade do registro de dados pessoais junto à ANPD.</p>
+    <p>c) A vedação ao tratamento de dados por empresas privadas.</p>
+    <p>d) O direito ao esquecimento como cláusula pétrea.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q2.</strong> <span class="tag tag-essential">Essencial</span> Sobre a Lei de Software (Lei nº 9.609/98), é CORRETO afirmar:</p>
+    <p>a) O software é protegido pelo regime de patentes, com prazo de 20 anos.</p>
+    <p>b) O registro do software perante o INPI é obrigatório para que a proteção seja reconhecida.</p>
+    <p>c) O prazo de proteção do software é de 50 anos, contados de 1º de janeiro do ano subsequente à publicação.</p>
+    <p>d) A proteção abrange tanto a ideia quanto a expressão do programa de computador.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q3.</strong> <span class="tag tag-essential">Essencial</span> O STF, no julgamento do RE 1.010.606 (Tema 786), decidiu que:</p>
+    <p>a) O direito ao esquecimento é compatível com a Constituição quando aplicado a crimes cometidos há mais de 20 anos.</p>
+    <p>b) É incompatível com a Constituição a ideia de um direito ao esquecimento que impeça a divulgação de fatos verídicos e licitamente obtidos.</p>
+    <p>c) As emissoras de televisão têm obrigação de remover conteúdo histórico a pedido das famílias das vítimas.</p>
+    <p>d) O direito ao esquecimento prevalece sobre a liberdade de imprensa para proteger menores.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q4.</strong> <span class="tag tag-important">Importante</span> Segundo o Marco Civil da Internet (Lei nº 12.965/14), os provedores de aplicação são responsabilizados civilmente por conteúdo gerado por terceiros:</p>
+    <p>a) Imediatamente após o cometimento do ato ilícito, independentemente de notificação.</p>
+    <p>b) Após receberem notificação extrajudicial da vítima e não tomarem as devidas providências.</p>
+    <p>c) Somente se descumprirem ordem judicial específica de remoção do conteúdo.</p>
+    <p>d) Nunca, pois a responsabilidade é exclusivamente do usuário que gerou o conteúdo.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q5.</strong> <span class="tag tag-important">Importante</span> Na LGPD, o agente que realiza o tratamento de dados pessoais em nome do controlador é denominado:</p>
+    <p>a) Titular</p>
+    <p>b) DPO (Encarregado)</p>
+    <p>c) ANPD</p>
+    <p>d) Operador</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q6.</strong> <span class="tag tag-essential">Essencial</span> Assinale a alternativa CORRETA sobre o crime de invasão de dispositivo informático (Art. 154-A, CP):</p>
+    <p>a) O crime exige a obtenção efetiva de dados para sua consumação.</p>
+    <p>b) A conduta típica exige que haja violação de mecanismo de segurança do dispositivo.</p>
+    <p>c) O crime só se configura quando o dispositivo está conectado à internet.</p>
+    <p>d) A pena é de reclusão, de 1 a 4 anos, em qualquer hipótese.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q7.</strong> <span class="tag tag-important">Importante</span> Sobre provas digitais, a função hash serve para:</p>
+    <p>a) Criptografar o arquivo para impedir acesso não autorizado.</p>
+    <p>b) Gerar uma sequência única que permite verificar a integridade do arquivo, detectando qualquer alteração.</p>
+    <p>c) Rastrear o IP de origem de um documento digital.</p>
+    <p>d) Autenticar a identidade do usuário que criou o arquivo.</p>
+  </div>
+
+  <div class="exercise">
+    <p><strong>Q8.</strong> <span class="tag tag-essential">Essencial</span> Quanto à interceptação das comunicações telefônicas, a Constituição Federal exige:</p>
+    <p>a) Autorização do Ministério Público e decisão fundamentada do juiz.</p>
+    <p>b) Apenas decisão do Delegado de Polícia nas hipóteses de flagrante delito.</p>
+    <p>c) Ordem judicial, finalidade de investigação criminal ou instrução processual penal, e observância da Lei nº 9.296/96.</p>
+    <p>d) Autorização do Senado Federal para interceptação de comunicações de agentes públicos.</p>
+  </div>
+
+  <details>
+    <summary><strong>🔓 Ver Gabarito Completo Comentado</strong></summary>
+    <div class="answer-key">
+      <p><strong>Q1 — Resposta: A</strong><br>A EC 115/2022 inseriu o Art. 5º, LXXIX (direito fundamental à proteção de dados) e o Art. 22, XXX (competência privativa da União). Por ser direito fundamental, é cláusula pétrea. As demais alternativas são incorretas: não há obrigatoriedade de registro na ANPD, não há vedação ao tratamento por empresas privadas, e o direito ao esquecimento foi rejeitado pelo STF.</p>
+
+      <p><strong>Q2 — Resposta: C</strong><br>O prazo de proteção do software é de 50 anos (não 70, como nas obras em geral). O regime é de direito autoral (não patente). O registro é facultativo. A proteção abrange apenas a expressão (código), não a ideia.</p>
+
+      <p><strong>Q3 — Resposta: B</strong><br>Esta é a tese literal fixada pelo STF no Tema 786. A letra D é parcialmente verdadeira (menores são protegidos), mas como <em>exceção</em> à regra geral, não como regra.</p>
+
+      <p><strong>Q4 — Resposta: C</strong><br>Art. 19 do Marco Civil: a regra geral exige descumprimento de ordem judicial. A exceção (Art. 21) é para conteúdo íntimo, que basta notificação extrajudicial — mas essa exceção não foi apresentada como alternativa.</p>
+
+      <p><strong>Q5 — Resposta: D</strong><br>Controlador = decide sobre o tratamento. Operador = executa o tratamento em nome do controlador. DPO = canal de comunicação. Titular = o próprio indivíduo.</p>
+
+      <p><strong>Q6 — Resposta: B</strong><br>O Art. 154-A exige que haja "violação indevida de mecanismo de segurança". Não exige resultado (obtenção de dados) — é crime formal. Aplica-se a dispositivos com ou sem internet. A pena base é detenção (3 meses a 1 ano), não reclusão.</p>
+
+      <p><strong>Q7 — Resposta: B</strong><br>O hash é uma função de verificação de integridade. Não criptografa nem rastreia IP. É a "impressão digital" do arquivo: qualquer alteração muda completamente o hash.</p>
+
+      <p><strong>Q8 — Resposta: C</strong><br>Os três requisitos constitucionais (Art. 5º, XII): (1) ordem judicial, (2) finalidade investigatória criminal/instrução processual penal, (3) forma da Lei nº 9.296/96. Não há participação do MP como requisito constitucional autônomo.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     RESUMO FINAL
+════════════════════════════════════════════════ -->
+<section id="resumo">
+  <div class="final-summary">
+    <h2><span class="icon">⚡</span> Resumo Ultra Simplificado — Revisão Rápida</h2>
+
+    <h3>🛡️ Privacidade (CF/88)</h3>
+    <p>Art. 5º, X: <strong>intimidade + vida privada + honra + imagem</strong> são invioláveis → violação gera indenização. Art. 5º, XII: sigilo das comunicações; interceptação exige <strong>ordem judicial + finalidade penal + Lei 9.296/96</strong>. Art. 5º, LXXIX (EC 115/2022): proteção de dados = <strong>cláusula pétrea</strong>.</p>
+
+    <h3>🔒 LGPD (Lei 13.709/18)</h3>
+    <p>Agentes: <strong>Controlador</strong> (decide) + <strong>Operador</strong> (executa) + <strong>DPO</strong> (comunica) + <strong>ANPD</strong> (fiscaliza). 10 princípios (o mais cobrado: finalidade, transparência, necessidade). Dado sensível = maior proteção.</p>
+
+    <h3>💻 Software (Lei 9.609/98)</h3>
+    <p>Regime: <strong>direito autoral</strong>. Prazo: <strong>50 anos</strong>. Registro: <strong>facultativo</strong>. Protege o <strong>código</strong> (expressão), não a <strong>ideia</strong>.</p>
+
+    <h3>⚖️ Marco Civil (Lei 12.965/14)</h3>
+    <p>Provedor responde por conteúdo de terceiros só após <strong>descumprir ordem judicial</strong> (Art. 19). Exceção: conteúdo íntimo → basta <strong>notificação extrajudicial</strong> (Art. 21). Logs: conexão = <strong>1 ano</strong> | aplicação = <strong>6 meses</strong>.</p>
+
+    <h3>🚨 Crimes Digitais</h3>
+    <p>Art. 154-A CP: invasão de dispositivo exige <strong>violação de mecanismo de segurança</strong>. Pena base: detenção 3 meses a 1 ano. Calúnia ≠ Difamação ≠ Injúria.</p>
+
+    <h3>🗑️ Direito ao Esquecimento (STF — Tema 786)</h3>
+    <p>STF (2021): <strong>NÃO existe</strong> direito ao esquecimento autônomo para fatos verídicos. Exceções: dados falsos, menores, abusos de expressão, sigilo, reabilitação penal.</p>
+
+    <h3>🔍 Provas Digitais</h3>
+    <p>Cadeia de custódia = rastreabilidade. Hash = integridade. Ata notarial = prova mais robusta.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  DIREITO CIBERNÉTICO E DIGITAL &nbsp;|&nbsp; Prof. Esp. Antônio Alves Araújo Neto Mapurunga &nbsp;|&nbsp; 2026.1 &nbsp;|&nbsp; Material didático para fins educacionais
+</footer>
+
+
+  <script src="../../portal-core.js"></script>
+
+<button id="scroll-top" title="Voltar ao Topo">↑</button>
+</body>
+</html>

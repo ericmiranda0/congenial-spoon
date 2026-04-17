@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Civil II – Direito das Obrigações | Material Didático</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+    }
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #171717 100%); }
+    
+    /* Maintain section numbers */
+    /* Maintain section numbers */
+    section h2 .num { 
+        font-family: 'JetBrains Mono', monospace; 
+        font-size: 1.1rem; 
+        color: white; 
+        background: var(--p-500); 
+        padding: 0.4rem 0.8rem; 
+        border-radius: 8px; 
+    }
+  </style>
+</head>
+<body>
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+<header>
+  <div class="container">
+    <div class="badge">Material Didático · Direito Civil II</div>
+    <h1>Direito das Obrigações</h1>
+    <p class="subtitle">Guia mestre de estudos: da introdução técnica à obrigação de dar coisa incerta</p>
+    <div class="meta" style="display:flex; justify-content:center; gap:20px; opacity:0.8; font-size:0.9rem;">
+      <span>⚖️ CC/02</span>
+      <span>📚 Teoria Geral</span>
+      <span>🛡️ Patrimonialidade</span>
+    </div>
+  </div>
+</header>
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </a>
+    <div class="nav-list">
+      <a href="#intro" class="nav-item">Introdução</a>
+      <a href="#elementos" class="nav-item">Elementos</a>
+      <a href="#distincoes" class="nav-item">Distinções</a>
+      <a href="#classificacoes" class="nav-item">Classificações</a>
+      <a href="#coisa-certa" class="nav-item">Coisa Certa</a>
+      <a href="#coisa-incerta" class="nav-item">Coisa Incerta</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+<main>
+<div class="container">
+
+      <!-- ===== SUMÁRIO ===== -->
+      <div id="sumario">
+        <h2>📋 Sumário Interativo</h2>
+        <ol>
+          <li><a href="#sec1">Conceito e Âmbito do Direito das Obrigações</a></li>
+          <li><a href="#sec2">Elementos Constitutivos da Obrigação</a>
+            <ol>
+              <li><a href="#sec2a">Elemento Subjetivo – Sujeitos</a></li>
+              <li><a href="#sec2b">Elemento Objetivo – Objeto / Prestação</a></li>
+              <li><a href="#sec2c">Vínculo Jurídico (Débito + Responsabilidade)</a></li>
+            </ol>
+          </li>
+          <li><a href="#sec3">Fontes das Obrigações</a></li>
+          <li><a href="#sec4">Características da Prestação (Requisitos de Validade)</a>
+            <ol>
+              <li><a href="#sec4a">Licitude</a></li>
+              <li><a href="#sec4b">Possibilidade</a></li>
+              <li><a href="#sec4c">Determinabilidade</a></li>
+              <li><a href="#sec4d">Economicidade</a></li>
+            </ol>
+          </li>
+          <li><a href="#sec5">Modalidades das Obrigações – Visão Geral</a>
+            <ol>
+              <li><a href="#sec5a">Obrigações Simples e Compostas</a></li>
+              <li><a href="#sec5b">Obrigações Cumulativas e Alternativas</a></li>
+              <li><a href="#sec5c">Obrigação Facultativa</a></li>
+              <li><a href="#sec5d">Obrigações Divisíveis, Indivisíveis e Solidárias</a></li>
+            </ol>
+          </li>
+          <li><a href="#sec6">Obrigações de Dar – Anotações Gerais</a></li>
+          <li><a href="#sec7">Obrigação de Dar Coisa Certa</a>
+            <ol>
+              <li><a href="#sec7a">Conceito e Características</a></li>
+              <li><a href="#sec7b">Impossibilidade de Entrega de Coisa Diversa</a></li>
+              <li><a href="#sec7c">Direito aos Melhoramentos e Acrescidos</a></li>
+            </ol>
+          </li>
+          <li><a href="#sec_incerta">Obrigação de Dar Coisa Incerta (Concentração do Débito)</a></li>
+          <li><a href="#sec8">Tradição como Transferência Dominial</a></li>
+          <li><a href="#sec9">Abrangência dos Acessórios (Frutos, Produtos, Benfeitorias, Pertenças)</a></li>
+          <li><a href="#sec10">Questões de Revisão Ativa com Gabarito</a></li>
+          <li><a href="#sec11">Mapa Mental</a></li>
+          <li><a href="#sec12">Resumo Ultra Simplificado</a></li>
+        </ol>
+      </div>
+
+      <!-- ===== SEÇÃO 1 ===== -->
+      <section class="reveal" id="sec1">
+        <h2><span class="num">01</span> Conceito e Âmbito do Direito das Obrigações</h2>
+
+        <div class="layer-simple">
+          Imagina que você combinou com alguém que vai lhe pagar R$ 500 por um serviço. Existe uma "corda invisível" que
+          une você (credor) ao outro (devedor) até que ele cumpra o prometido. Essa "corda invisível" é a <em>relação
+            obrigacional</em>.
+        </div>
+        <div class="layer-tech">
+          O Direito das Obrigações é o conjunto de normas (regras e princípios) que regulam as relações patrimoniais
+          entre um <strong>credor</strong> (sujeito ativo) e um <strong>devedor</strong> (sujeito passivo), ao qual
+          incumbe o dever de cumprir, espontânea ou coativamente, uma prestação de dar, fazer ou não fazer.
+        </div>
+
+        <p>O termo <span class="kw">obrigação</span> é <strong>polissêmico</strong> — tem vários significados
+          (obrigações morais, religiosas, sociais). No Direito Civil, usa-se em sentido <strong>estrito e
+            patrimonial</strong>: vínculos entre pessoas, com conteúdo econômico.</p>
+
+        <h3>Posição no Direito Privado</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Ramo</th>
+                <th>Tipo de Direito</th>
+                <th>Exemplos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Direitos <strong>não patrimoniais</strong></td>
+                <td>Personalidade / Família</td>
+                <td>Nome, honra, guarda de filhos</td>
+              </tr>
+              <tr>
+                <td>Direitos <strong>patrimoniais reais</strong></td>
+                <td>Direito das Coisas</td>
+                <td>Propriedade, usufruto, hipoteca</td>
+              </tr>
+              <tr>
+                <td>Direitos <strong>patrimoniais obrigacionais</strong></td>
+                <td>Direito das Obrigações</td>
+                <td>Contratos, pagamentos, indenizações</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="essential reveal">
+          O Direito das Obrigações é o ramo mais propenso à <strong>uniformização internacional</strong>, por ser menos
+          influenciado por tradições locais e por estruturar o regime econômico. O Código Civil de 2002 promoveu a
+          unificação (parcial) entre o Direito Civil e o Comercial no Brasil.
+        </div>
+
+        <div class="exam-tip">
+          Questões costumam perguntar: "O Direito das Obrigações tem caráter <em>pessoal ou real</em>?" — Resposta:
+          <strong>pessoal/obrigacional</strong>, pois cria um vínculo entre pessoas (credor e devedor), não uma relação
+          direta com a coisa (como nos direitos reais).
+        </div>
+
+        <div class="note">
+          <strong>Localização no CC/2002:</strong> Arts. 233 a 420 — subdivididos em: Modalidades (233–285), Transmissão
+          (286–303), Adimplemento e Extinção (304–388) e Inadimplemento (389–420).
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 2 ===== -->
+      <section class="reveal" id="sec2">
+        <h2><span class="num">02</span> Elementos Constitutivos da Obrigação</h2>
+
+        <p>Toda relação obrigacional é composta por <strong>três elementos essenciais</strong>:</p>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Elemento</th>
+                <th>Denominação</th>
+                <th>O que é</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Subjetivo</td>
+                <td>Sujeitos</td>
+                <td>Credor (ativo) e Devedor (passivo)</td>
+              </tr>
+              <tr>
+                <td>Objetivo / Material</td>
+                <td>Prestação</td>
+                <td>O objeto da obrigação (dar/fazer/não fazer)</td>
+              </tr>
+              <tr>
+                <td>Vínculo Jurídico / Imaterial</td>
+                <td>Liame</td>
+                <td>A "corda" que une credor e devedor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 2A -->
+        <h3 id="sec2a">2.1 Elemento Subjetivo – Sujeitos</h3>
+
+        <div class="layer-simple">
+          Em toda obrigação tem quem <em>cobra</em> (credor) e quem <em>deve</em> (devedor). Ambos precisam ser pessoas
+          identificadas ou, ao menos, identificáveis no momento do cumprimento.
+        </div>
+        <div class="layer-tech">
+          Os sujeitos podem ser <strong>pessoa natural ou jurídica</strong> de qualquer natureza (pública ou privada,
+          com ou sem fins econômicos, inclusive sociedades de fato). Devem ser <strong>determinados ou
+            determináveis</strong>; nunca absolutamente indetermináveis.
+        </div>
+
+        <div class="example">
+          <strong>Sujeito indeterminado, mas determinável:</strong> "Será concedido um troféu ao melhor aluno da turma."
+          No momento da celebração do ato, o sujeito (ganhador) não está definido, mas será determinado no momento do
+          cumprimento. Outro exemplo: a promessa de recompensa a quem encontrar um animal de estimação perdido.
+        </div>
+
+        <h4>O Credor (Sujeito Ativo)</h4>
+        <p>É quem tem o <strong>direito de exigir</strong> o cumprimento da prestação. Pode ser individual ou coletivo.
+          Pode haver substituição de credor via <em>cessão de crédito</em>, sub-rogação, novação ou estipulação em favor
+          de terceiro. A obrigação pode existir em favor de <strong>pessoas futuras</strong>, como nascituros e pessoas
+          jurídicas em formação.</p>
+
+        <h4>O Devedor (Sujeito Passivo)</h4>
+        <p>É quem <strong>deve cumprir a prestação</strong>. Responde com todo o seu patrimônio pelo cumprimento (art.
+          391, CC). O vínculo se extingue quando credor e devedor se confundem na mesma pessoa:</p>
+
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 381 do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            Extingue-se a obrigação, desde que na mesma pessoa se confundam as qualidades de credor e devedor.
+          </div>
+        </details>
+        — Isso se chama <span class="kw">confusão</span> e é modo de extinção da obrigação.
+        </p>
+
+        <div class="pitfall">
+          <strong>Pegadinha!</strong> O sujeito incapaz (menor, por exemplo) pode figurar como credor ou devedor, desde
+          que <strong>representado ou assistido</strong> por seu representante legal. A incapacidade não impede a
+          participação na relação obrigacional — apenas exige representação.
+        </div>
+
+        <!-- 2B -->
+        <h3 id="sec2b">2.2 Elemento Objetivo – Objeto / Prestação</h3>
+
+        <div class="layer-simple">
+          O que o devedor precisa fazer? Dar uma coisa, realizar um serviço, ou se abster de praticar alguma ação. Esse
+          "o que fazer" é a <em>prestação</em>.
+        </div>
+        <div class="layer-tech">
+          A prestação é o <strong>objeto imediato (direto/próximo)</strong> da obrigação — é sempre uma conduta humana.
+          O <strong>objeto mediato (indireto/distante)</strong> é aquilo sobre o qual a conduta recai (a coisa, o
+          serviço, a abstenção em si).
+        </div>
+
+        <div class="example">
+          Na compra e venda de um veículo: o <strong>objeto imediato</strong> do vendedor é "entregar" (conduta = dar);
+          o <strong>objeto mediato</strong> é o próprio veículo. O vendedor se obriga a dar, o comprador se obriga a
+          pagar (dar o preço).
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo de Prestação</th>
+                <th>Natureza</th>
+                <th>Exemplos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dar</strong></td>
+                <td>Positiva</td>
+                <td>Entregar bem vendido, pagar preço, restituir coisa emprestada</td>
+              </tr>
+              <tr>
+                <td><strong>Fazer</strong></td>
+                <td>Positiva</td>
+                <td>Construir obra, prestar serviço, emitir declaração de vontade</td>
+              </tr>
+              <tr>
+                <td><strong>Não Fazer</strong></td>
+                <td>Negativa</td>
+                <td>Não construir acima de certa altura, não concorrer, não divulgar segredo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exam-tip">
+          Em prova, lembre-se: <strong>DAR e FAZER = positivas; NÃO FAZER = negativa</strong>. O <strong>objeto imediato
+            = a conduta (prestação)</strong>; o <strong>objeto mediato = a coisa ou o serviço em si</strong>.
+        </div>
+
+        <!-- 2C -->
+        <h3 id="sec2c">2.3 Elemento Imaterial – Vínculo Jurídico</h3>
+
+        <div class="layer-simple">
+          O vínculo jurídico é a "força" que mantém a obrigação de pé. Ela tem dois lados: a consciência moral do
+          devedor de que deve cumprir (débito) e a possibilidade de o credor usar a Justiça para forçar o cumprimento
+          (responsabilidade).
+        </div>
+        <div class="layer-tech">
+          O vínculo jurídico desdobra-se em dois subelementos (teoria dualista, de origem germânica):
+          <ul>
+            <li><span class="kw">Schuld (Débito)</span> — vínculo espiritual/abstrato: dever moral do devedor de honrar
+              o compromisso voluntariamente.</li>
+            <li><span class="kw">Haftung (Responsabilidade)</span> — vínculo material/concreto: poder do credor de
+              acionar o Judiciário e constranger os bens do devedor caso este não cumpra espontaneamente.</li>
+          </ul>
+        </div>
+
+        <div class="important reveal">
+          Nasce das chamadas <strong>fontes das obrigações</strong>: contratos, declarações unilaterais de vontade e
+          atos ilícitos. Tem caráter <strong>transitório</strong>: extingue-se com o cumprimento (pagamento) ou outra
+          forma de extinção.
+        </div>
+
+        <div class="pitfall">
+          <strong>Atenção!</strong> Existe um caso em que há <em>débito sem responsabilidade</em>: as <strong>obrigações
+            naturais</strong> (ex: dívida de jogo). O devedor não pode ser constrangido a pagar, mas se pagar
+          voluntariamente, não pode exigir de volta (art. 882, CC).
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 3 ===== -->
+      <section class="reveal" id="sec3">
+        <h2><span class="num">03</span> Fontes das Obrigações</h2>
+
+        <p><span class="kw">Fonte</span> = causa ou origem do vínculo obrigacional. É o ato ou fato jurídico que dá
+          origem à obrigação.</p>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo de Fonte</th>
+                <th>O que é</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lei</strong> (fonte imediata)</td>
+                <td>A norma jurídica cria diretamente a obrigação</td>
+                <td>Obrigação de pagar alimentos (art. 1.694, CC)</td>
+              </tr>
+              <tr>
+                <td><strong>Contrato</strong> (fonte mediata)</td>
+                <td>Acordo de vontades entre as partes</td>
+                <td>Compra e venda, locação, prestação de serviços</td>
+              </tr>
+              <tr>
+                <td><strong>Ato Unilateral</strong> (fonte mediata)</td>
+                <td>Declaração de vontade de uma só parte</td>
+                <td>Promessa de recompensa, gestão de negócios, pagamento indevido</td>
+              </tr>
+              <tr>
+                <td><strong>Ato Ilícito</strong> (fonte mediata)</td>
+                <td>Comportamento voluntário contrário ao direito que gera prejuízo</td>
+                <td>Atropelamento culposo → obrigação de indenizar (arts. 186 e 187, CC)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <strong>Arts. 186 e 187 do CC:</strong> O art. 186 trata do <em>ato ilícito subjetivo</em> (culpa/dolo). O
+          art. 187 trata do <em>abuso de direito</em> como fonte de obrigação de indenizar, sem necessidade de culpa em
+          sentido estrito.
+        </div>
+
+        <div class="exam-tip">
+          A <strong>fonte imediata</strong> é sempre a <em>lei</em>. As fontes <strong>mediatas</strong> são os fatos
+          jurídicos concretos (contrato, ato unilateral, ato ilícito) que, combinados com a lei, produzem a obrigação.
+          Concursos adoram explorar essa distinção!
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 4 ===== -->
+      <section class="reveal" id="sec4">
+        <h2><span class="num">04</span> Características da Prestação (Requisitos de Validade)</h2>
+
+        <p>Para que a obrigação seja <strong>válida</strong>, a prestação deve reunir quatro requisitos cumulativos:</p>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Requisito</th>
+                <th>Explicação Simples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Licitude</td>
+                <td>Não pode ser contrária à lei, moral ou bons costumes</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Possibilidade</td>
+                <td>Deve ser fisicamente e juridicamente realizável</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Determinabilidade</td>
+                <td>Deve ser determinada ou ao menos determinável</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Economicidade</td>
+                <td>Deve ter conteúdo patrimonial aferível</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Base legal:</p>
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 104, inciso II, do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            A validade do negócio jurídico requer:<br>
+            II - objeto lícito, possível, determinado ou determinável;
+          </div>
+        </details>
+        </p>
+
+        <h3 id="sec4a">4.1 Licitude</h3>
+        <div class="layer-simple">A prestação não pode ser "coisa errada": não pode violar a lei, os bons costumes ou a
+          moral.</div>
+        <div class="layer-tech">A licitude é mais ampla que a simples legalidade. Envolve o respeito à moral e aos bons
+          costumes. <strong>Prestação juridicamente impossível ≠ prestação ilícita:</strong> a impossível não é admitida
+          pela lei; a ilícita, além de não admitida, é punível (ex: venda de notas falsas = ilícita; alienação de praça
+          pública = juridicamente impossível).</div>
+
+        <h3 id="sec4b">4.2 Possibilidade</h3>
+        <div class="layer-simple">O que o devedor prometeu deve ser humanamente possível de ser realizado.</div>
+        <div class="layer-tech">
+          <div class="table-wrap reveal">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>O que é</th>
+                  <th>Efeito</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Impossibilidade Física Absoluta</strong></td>
+                  <td>Ninguém pode cumprir (ex: colocar a água dos oceanos num copo)</td>
+                  <td>Nulidade da obrigação</td>
+                </tr>
+                <tr>
+                  <td><strong>Impossibilidade Física Relativa</strong></td>
+                  <td>Atinge só o devedor, não terceiros</td>
+                  <td>Não invalida (art. 106, CC)</td>
+                </tr>
+                <tr>
+                  <td><strong>Impossibilidade Jurídica</strong></td>
+                  <td>Ordenamento proíbe o negócio (herança de vivo, bem público)</td>
+                  <td>Nulidade</td>
+                </tr>
+                <tr>
+                  <td><strong>Impossibilidade Originária</strong></td>
+                  <td>Existia ao tempo da formação do contrato</td>
+                  <td>Nulidade (negócio não prospera)</td>
+                </tr>
+                <tr>
+                  <td><strong>Impossibilidade Superveniente</strong></td>
+                  <td>Surge após a formação do vínculo</td>
+                  <td>Extinção da obrigação (ou aproveitamento parcial)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="example">
+          <strong>Impossibilidade originária:</strong> Kleber vende a Judite um imóvel que já tinha sido destruído por
+          incêndio <em>antes</em> da assinatura do contrato → negócio nulo.<br><br>
+          <strong>Impossibilidade superveniente sem culpa:</strong> Kleber obriga-se a entregar um veículo. Após o
+          contrato, o veículo é destruído em acidente sem culpa → obrigação extinta (arts. 238–239, CC).
+        </div>
+
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 106 do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            A impossibilidade inicial do objeto não invalida o negócio jurídico se for relativa, ou se cessar antes de
+            realizada a condição a que ele estiver subordinado.
+          </div>
+        </details>
+        </p>
+
+        <h3 id="sec4c">4.3 Determinabilidade</h3>
+        <div class="layer-simple">A obrigação precisa "saber o que deve". Não pode ser tão vaga que seja impossível
+          saber o que cumprir.</div>
+        <div class="layer-tech">
+          <ul>
+            <li><span class="kw">Prestação determinada</span> = já especificada, certa, individualizada.</li>
+            <li><span class="kw">Prestação determinável</span> = ainda não especificada, mas com elementos mínimos para
+              individualização futura (obrigações genéricas: ex: "duas sacas de café", sem especificar a qualidade).
+            </li>
+          </ul>
+          O processo de especificação que converte a obrigação genérica em determinada chama-se <span
+            class="kw">concentração do débito</span>. A indeterminação deve cessar no momento do pagamento.
+        </div>
+
+        <h3 id="sec4d">4.4 Economicidade (Conteúdo Patrimonial)</h3>
+        <div class="layer-simple">A obrigação precisa ter "valor em dinheiro" — deve ser passível de avaliação
+          econômica.</div>
+        <div class="layer-tech">Obrigações com conteúdo exclusivamente moral ou afetivo (dever de fidelidade entre
+          cônjuges, por ex.) ficam fora do Direito das Obrigações. A responsabilidade patrimonial do devedor abrange
+          todo o seu patrimônio, salvo bens impenhoráveis (bem de família — Lei n. 8.009/90 e art. 1.711, CC).</div>
+
+        <div class="exam-tip">
+          Nos concursos, o requisito mais cobrado em conjunto é: "<strong>lícita, possível, determinada ou
+            determinável</strong>". Memorize essa tríade. A economicidade costuma ser abordada separadamente, em
+          questões sobre direitos não patrimoniais.
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 5 ===== -->
+      <section class="reveal" id="sec5">
+        <h2><span class="num">05</span> Modalidades das Obrigações – Visão Geral</h2>
+
+        <p>A divisão das obrigações em espécies é necessária porque indica os normativos aplicáveis. A classificação
+          pode considerar o <strong>objeto</strong> (dar/fazer/não fazer) ou os <strong>sujeitos</strong>
+          (singular/plural).</p>
+
+        <h3 id="sec5a">5.1 Obrigações Simples e Compostas</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Características</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Simples</strong></td>
+                <td>1 sujeito ativo + 1 sujeito passivo + 1 objeto</td>
+                <td>João deve entregar um carro para Maria</td>
+              </tr>
+              <tr>
+                <td><strong>Composta (multiplicidade de objetos)</strong></td>
+                <td>Mais de um objeto</td>
+                <td>José obriga-se a entregar um veículo <em>e</em> um animal</td>
+              </tr>
+              <tr>
+                <td><strong>Composta (multiplicidade de sujeitos)</strong></td>
+                <td>Mais de um credor ou devedor</td>
+                <td>João e Pedro devem pagar a Carlos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="sec5b">5.2 Cumulativas vs. Alternativas</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Conjunção</th>
+                <th>Cumprimento</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="kw">Cumulativa (Conjuntiva)</span></td>
+                <td>"E"</td>
+                <td>Precisa cumprir <em>todos</em> os objetos</td>
+                <td>Entregar um veículo <strong>e</strong> um animal</td>
+              </tr>
+              <tr>
+                <td><span class="kw">Alternativa (Disjuntiva)</span></td>
+                <td>"OU"</td>
+                <td>Basta cumprir <em>um</em> dos objetos</td>
+                <td>Entregar um veículo <strong>ou</strong> um animal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          Nas obrigações alternativas, quem faz a <strong>escolha</strong> (concentração da obrigação) é, em regra, o
+          <strong>devedor</strong> — salvo se o título dispuser em contrário (art. 252, CC).
+        </div>
+
+        <h3 id="sec5c">5.3 Obrigação Facultativa</h3>
+        <div class="layer-simple">É uma obrigação de objeto único, mas o devedor pode se "trocar" — pagar com outra
+          coisa predeterminada, se quiser.</div>
+        <div class="layer-tech">
+          É obrigação com <span class="kw">faculdade de substituição</span>. Tem <strong>um só objeto
+            principal</strong>, mas o devedor pode se exonerar cumprindo prestação diversa, se ele quiser. O credor não
+          pode exigir a prestação alternativa.
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Critério</th>
+                <th>Obrigação Alternativa</th>
+                <th>Obrigação Facultativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Número de objetos</td>
+                <td>Dois ou mais objetos principais</td>
+                <td>Um objeto principal + um acessório (substitutivo)</td>
+              </tr>
+              <tr>
+                <td>Quem escolhe</td>
+                <td>Devedor (regra) ou credor (se previsto)</td>
+                <td>Apenas o devedor</td>
+              </tr>
+              <tr>
+                <td>Perecimento de um objeto</td>
+                <td>Subsiste a outra prestação</td>
+                <td>Se perece o principal, extingue-se tudo</td>
+              </tr>
+              <tr>
+                <td>Vício em um objeto</td>
+                <td>A outra prestação permanece eficaz</td>
+                <td>Vício no principal invalida toda a obrigação</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pitfall">
+          <strong>Pegadinha clássica!</strong> Na obrigação facultativa, se a prestação principal perecer sem culpa do
+          devedor, a obrigação se extingue — o credor <strong>não pode</strong> exigir a prestação substitutiva. Já na
+          alternativa, o perecimento de um dos objetos não extingue a obrigação, que subsiste quanto ao outro.
+        </div>
+
+        <h3 id="sec5d">5.4 Divisíveis, Indivisíveis e Solidárias</h3>
+
+        <div class="important reveal">
+          A distinção entre <strong>divisível/indivisível</strong> só importa quando há multiplicidade de credores ou
+          devedores. Com um único credor e um único devedor, a prestação sempre deve ser cumprida integralmente, seja
+          ela divisível ou não.
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>O que é</th>
+                <th>Efeito com múltiplos sujeitos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Divisível</strong></td>
+                <td>Objeto pode ser dividido (2 sacas de café)</td>
+                <td>Cada credor exige sua parte; cada devedor responde pela sua quota</td>
+              </tr>
+              <tr>
+                <td><strong>Indivisível</strong></td>
+                <td>Objeto não pode ser dividido (um cavalo)</td>
+                <td>Prestação deve ser cumprida por inteiro; um dos credores pode exigir o todo, prestando contas ao
+                  outro (art. 259, CC)</td>
+              </tr>
+              <tr>
+                <td><strong>Solidária</strong></td>
+                <td>Resulta da lei ou da vontade; independe da divisibilidade</td>
+                <td>Cada devedor solidário responde pela dívida <em>inteira</em> (art. 264, CC); credor pode cobrar de
+                  qualquer um</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exam-tip">
+          A <strong>solidariedade não se presume</strong> — resulta da lei ou da vontade das partes (
+          <details class="artigo" style="display:inline">
+            <summary><strong>art. 265 do CC</strong></summary>
+            <div class="lei-seca">
+              <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+              A solidariedade não se presume; resulta da lei ou da vontade das partes.
+            </div>
+          </details>). <strong>Nunca</strong> diga que a solidariedade é "presumida" — isso é erro grave em concurso!
+        </div>
+
+        <div class="note">
+          O devedor solidário que paga a dívida inteira tem <strong>direito de regresso</strong> contra os demais
+          codevedores, podendo cobrar a quota-parte de cada um (art. 283, CC).
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 6 ===== -->
+      <section class="reveal" id="sec6">
+        <h2><span class="num">06</span> Obrigações de Dar – Anotações Gerais</h2>
+
+        <p>A divisão tricotômica (dar/fazer/não fazer) é baseada no <strong>objeto da prestação</strong>. Toda obrigação
+          se enquadrará em uma dessas categorias, ainda que complexa.</p>
+
+        <div class="essential reveal">
+          <strong>Obrigações de Dar e Fazer = POSITIVAS</strong><br>
+          <strong>Obrigação de Não Fazer = NEGATIVA</strong><br><br>
+          A obrigação de não fazer não se confunde com o <em>dever geral de abstenção</em> dos direitos reais (que é
+          imposto a todos pelo ordenamento). A obrigação de não fazer é <em>contraída voluntariamente</em> pelo devedor.
+        </div>
+
+        <p>O verbo "<span class="kw">dar</span>" no direito obrigacional tem sentido amplo: abrange tanto a
+          <strong>transferência de propriedade</strong> quanto a simples <strong>entrega de posse</strong> ou uso. Os
+          atos de "entregar" e "restituir" se resumem em uma única palavra: <span class="kw">tradição</span>.</p>
+
+        <div class="example">
+          Na <strong>compra e venda</strong>: o vendedor dá (entrega) a coisa; o comprador dá (entrega) o preço.<br>
+          No <strong>comodato</strong>: o comodatário dá (restitui) a coisa emprestada gratuitamente ao fim do contrato.
+        </div>
+
+        <div class="note">
+          O <strong>processo de execução</strong> difere conforme a obrigação: para <em>entrega de coisa</em> (dar),
+          aplicam-se os arts. 806 a 810 do CPC/2015; para obrigações de fazer e não fazer, os arts. 814 a 823 do mesmo
+          diploma.
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 7 ===== -->
+      <section class="reveal" id="sec7">
+        <h2><span class="num">07</span> Obrigação de Dar Coisa Certa</h2>
+
+        <h3 id="sec7a">7.1 Conceito e Características</h3>
+
+        <div class="layer-simple">
+          "Coisa certa" é a coisa que tem identidade própria — como o seu apartamento específico, no endereço tal, com a
+          matrícula tal. É diferente de "coisa incerta", que seria apenas "um apartamento" qualquer, sem identificação.
+        </div>
+        <div class="layer-tech">
+          <span class="kw">Coisa certa</span> = coisa determinada, perfeitamente individualizada, distinguível de
+          qualquer outra por características próprias (chassi, placa, matrícula imobiliária, obra de arte específica
+          etc.). O CC disciplina nas <details class="artigo" style="display:inline">
+            <summary><strong>arts. 233 a 242</strong></summary>
+            <div class="lei-seca"><em>Código Civil Brasileiro – Lei n. 10.406/2002</em>Arts. 233 a 242 — Obrigações de
+              dar coisa certa: disciplinam a extensão da obrigação, os acessórios, o direito aos melhoramentos, os
+              riscos antes e depois da tradição, e os efeitos para o devedor de boa ou má-fé.</div>
+          </details>. A coisa incerta é disciplinada nos arts. 243 a 246.
+        </div>
+
+        <div class="highlight reveal">
+          <strong>Natureza do direito:</strong> A obrigação de dar coisa certa confere ao credor apenas um direito <span
+            class="kw">pessoal (jus ad rem)</span>, e não um direito real <span class="kw">(jus in re)</span>. O credor
+          adquire a propriedade somente com a <strong>tradição</strong> (bens móveis) ou com o <strong>registro</strong>
+          (bens imóveis).
+        </div>
+
+        <div class="example">
+          <strong>Consequência prática:</strong> Se você comprou um apartamento e o vendedor se recusa a transferir,
+          você <strong>não pode</strong> usar ação reivindicatória (pois ela pressupõe domínio). Seu direito é pessoal:
+          pode exigir a entrega ou pedir resolução do contrato com perdas e danos (arts. 389 e 475, CC). Veja também os
+          arts. 498, 499 e 538, §3º, CPC/2015.
+        </div>
+
+        <div class="pitfall">
+          <strong>Pegadinha!</strong> Se o vendedor, antes de você propor a ação, alienar o bem a um terceiro, você
+          <em>não pode</em> reivindicar o bem do terceiro — seu direito pessoal <strong>não é oponível erga
+            omnes</strong>. Só lhe restam perdas e danos.
+        </div>
+
+        <h3 id="sec7b">7.2 Impossibilidade de Entrega de Coisa Diversa</h3>
+
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 313 do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            O credor não é obrigado a receber prestação diversa da que lhe é devida, ainda que mais valiosa.
+          </div>
+        </details>
+        </p>
+
+        <div class="essential reveal">
+          <strong>Regra da identidade da prestação:</strong> Na obrigação de dar coisa certa:<br>
+          ✔ O devedor NÃO pode dar coisa diferente, ainda que mais valiosa.<br>
+          ✔ O credor NÃO pode exigir coisa diferente, ainda que menos valiosa.<br>
+          A recíproca é verdadeira em ambos os lados!
+        </div>
+
+        <div class="note">
+          A entrega de coisa diversa da prometida, com consentimento de ambas as partes, configura <span
+            class="kw">novação objetiva</span> (mudança do objeto da obrigação). Sem consentimento, é inadimplemento. A
+          <span class="kw">dação em pagamento</span> (dar bem em vez de dinheiro) depende de expresso consentimento do
+          credor (art. 356, CC).
+        </div>
+
+        <h3 id="sec7c">7.3 Direito aos Melhoramentos e Acrescidos</h3>
+
+        <div class="note">
+          <strong>Premissa fundamental:</strong> No Direito brasileiro, o <em>contrato por si só não transfere o
+            domínio</em>. Apenas gera a obrigação de entregar. Enquanto não houver tradição (bens móveis) ou registro
+          (bens imóveis), o devedor continua sendo o proprietário.
+        </div>
+
+        <h4>Na obrigação de ENTREGAR (ex: compra e venda)</h4>
+        <p>O devedor ainda é proprietário até a tradição. Por isso:</p>
+        <ul>
+          <li>Os <strong>melhoramentos e acrescidos</strong> pertencem ao devedor, que pode exigir aumento no preço; se
+            o credor não anuir, pode resolver a obrigação (
+            <details class="artigo" style="display:inline">
+              <summary><strong>art. 237, CC</strong></summary>
+              <div class="lei-seca"><em>Código Civil Brasileiro – Lei n. 10.406/2002</em>Art. 237. Até a tradição
+                pertence ao devedor a coisa, com os seus melhoramentos e acrescidos, pelos quais poderá exigir aumento
+                no preço; se o credor não anuir, poderá o devedor resolver a obrigação. Parágrafo único. Os frutos
+                percebidos são do devedor; pendentes, do credor.</div>
+            </details>
+            ).
+          </li>
+          <li>Os <strong>frutos percebidos</strong> (já colhidos) são do devedor.</li>
+          <li>Os <strong>frutos pendentes</strong> (ainda na coisa) são do credor.</li>
+        </ul>
+
+        <h4>Na obrigação de RESTITUIR (ex: comodato, depósito)</h4>
+        <p>Aqui o credor é o dono. Por isso:</p>
+        <ul>
+          <li>Se a coisa teve melhoramento ou acréscimo <em>sem despesa ou trabalho do devedor</em>, o credor lucra sem
+            indenizar (
+            <details class="artigo" style="display:inline">
+              <summary><strong>art. 241, CC</strong></summary>
+              <div class="lei-seca"><em>Código Civil Brasileiro – Lei n. 10.406/2002</em>Art. 241. Se, no caso do artigo
+                antecedente, tiver o devedor despesas necessárias para a conservação da coisa, será o credor obrigado a
+                reembolsá-lo, contanto que as despesas não excedam o valor da coisa.</div>
+            </details>
+            ).
+          </li>
+          <li>Se o devedor empregou <em>trabalho ou dispêndio</em>, aplicam-se as normas das benfeitorias do possuidor (
+            <details class="artigo" style="display:inline">
+              <summary><strong>art. 242, CC</strong></summary>
+              <div class="lei-seca"><em>Código Civil Brasileiro – Lei n. 10.406/2002</em>Art. 242. Se para o
+                melhoramento, ou aumento, empregou o devedor trabalho ou dispêndio, o caso se regulará pelas normas
+                deste Código atinentes às benfeitorias realizadas pelo possuidor de boa-fé ou de má-fé.</div>
+            </details>
+            ).
+          </li>
+        </ul>
+
+        <h4>Tipos de Benfeitorias (base para os efeitos)</h4>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Definição</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Necessárias</strong></td>
+                <td>Conservam o bem ou evitam sua deterioração</td>
+                <td>Conserto do telhado que está vazando</td>
+              </tr>
+              <tr>
+                <td><strong>Úteis</strong></td>
+                <td>Aumentam ou facilitam o uso do bem</td>
+                <td>Construção de garagem em casa alugada</td>
+              </tr>
+              <tr>
+                <td><strong>Voluptuárias</strong></td>
+                <td>Mero deleite ou recreio, sem necessidade prática</td>
+                <td>Jardim ornamental, piscina, sauna</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Efeitos conforme a boa-fé ou má-fé do devedor (art. 1.219, CC)</h4>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Benfeitoria</th>
+                <th>Devedor de BOA-FÉ</th>
+                <th>Devedor de MÁ-FÉ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Necessárias</strong></td>
+                <td>Indenização + direito de retenção</td>
+                <td>Indenização, SEM direito de retenção</td>
+              </tr>
+              <tr>
+                <td><strong>Úteis</strong></td>
+                <td>Indenização + direito de retenção</td>
+                <td>SEM indenização, SEM retenção</td>
+              </tr>
+              <tr>
+                <td><strong>Voluptuárias</strong></td>
+                <td>Pode levantá-las se não causar dano; ou ser indenizado se o credor ficar com elas</td>
+                <td>Não pode levantá-las, não é indenizado</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exam-tip">
+          Quanto aos frutos, na obrigação de restituir: o devedor de <strong>boa-fé</strong> faz seus os frutos
+          percebidos; o de <strong>má-fé</strong> responde por todos os frutos colhidos e pelos que, por culpa sua,
+          deixou de perceber (art. 1.216, CC) — mas sempre tem direito às despesas de produção e custeio (vedação ao
+          enriquecimento sem causa).
+        </div>
+      </section>
+
+
+      <!-- ===== SEÇÃO COISA INCERTA ===== -->
+      <section class="reveal" id="sec_incerta" class="reveal">
+        <h2><span class="num">08</span> Obrigação de Dar Coisa Incerta</h2>
+
+        <div class="layer-simple">
+          Na restituição ou entrega de uma "coisa incerta", o objeto não está perfeitamente individualizado desde o
+          começo. Você promete entregar, por exemplo, "50 sacas de café". A obrigação já existe, mas antes de entregar
+          precisamos separar <em>quais</em> sacas exatas serão entregues. Esse ato de escolha chama-se
+          <strong>Concentração</strong>.
+        </div>
+        <div class="layer-tech">
+          A obrigação de dar coisa incerta (art. 243 a 246, CC) é a que tem por objeto coisa sujeita à
+          <strong>determinação futura</strong>, indicada ao menos pelo <em>gênero e pela quantidade</em>. Trata-se de
+          uma obrigação genérica que, obrigatoriamente, deverá ser especificada até o momento do cumprimento.
+        </div>
+
+        <h3>A Escolha (Concentração do Débito)</h3>
+        <p>O ato de individualizar o objeto da prestação genérica chama-se <strong>concentração do débito</strong> (ou
+          escolha). É o evento jurídico que converte a obrigação de dar coisa incerta em obrigação de dar coisa certa
+          (art. 245, CC).</p>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Regra da Escolha</th>
+                <th>Fundamento (Código Civil)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A quem pertence a escolha?</strong></td>
+                <td>A regra geral é que a escolha cabe ao <strong>DEVEDOR</strong>, salvo estipulação em contrário (art.
+                  244).</td>
+              </tr>
+              <tr>
+                <td><strong>Qualidade Intermediária</strong></td>
+                <td>Ao escolher, o devedor não pode dar a coisa pior, mas também não é obrigado a dar a melhor (teoria
+                  da qualidade média) (art. 244, parte final).</td>
+              </tr>
+              <tr>
+                <td><strong>Efeito da Escolha</strong></td>
+                <td>Feita a escolha (e <em>cientificado o credor</em>), a obrigação torna-se de dar coisa certa,
+                  aplicando-se todas as suas regras, inclusive a dos riscos e melhoramentos (art. 245).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="important reveal">
+          A concentração perfaz-se não apenas pelo ato de escolha, mas exige a manifestação externa dessa escolha: a
+          <strong>cientificação do credor</strong> (ou separação física com notificação, remessa etc.). Sem a ciência do
+          credor, a obrigação continua sendo de coisa incerta.
+        </div>
+
+        <h3>A Regra de Ouro: O Gênero Nunca Perece (<em>Genus nunquam perit</em>)</h3>
+        <p>Na obrigação de dar coisa incerta antes da escolha, vigora uma presunção inafastável de que bens no mundo não
+          acabam por completo (enquanto figurarem como gênero).</p>
+
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 246 do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            Antes da escolha, não poderá o devedor alegar perda ou deterioração da coisa, ainda que por força maior ou
+            caso fortuito.
+          </div>
+        </details>
+        </p>
+
+        <div class="example">
+          <strong>Caso Prático:</strong> João comprometeu-se a entregar 50 cabeças de gado zebu a Maria. Um raio atinge
+          a fazenda de João e mata todo o gado que ele possuía. João <strong>não</strong> está desobrigado! Como a
+          obrigação é genérica (ainda não houve a concentração), ele terá que comprar gado de terceiros e entregar a
+          Maria. O <em>genus nunquam perit</em> impede a alegação de força maior antes da escolha.
+        </div>
+
+        <div class="pitfall">
+          <strong>Pegadinha de Prova!</strong> Existe uma exceção doutrinária: as chamadas <em>obrigações genéricas
+            restritas (ou limitadas)</em>, nas quais o gênero é delimitado. Ex: "50 cabeças de gado <em>da minha fazenda
+            X</em>". Nesses casos excepcionais, se TODO o estoque perecer sem culpa, a obrigação poderá ser resolvida.
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 8 ===== -->
+      <section class="reveal" id="sec8">
+        <h2><span class="num">09</span> Tradição como Transferência Dominial</h2>
+
+        <div class="layer-simple">
+          No Brasil, assinar um contrato de compra e venda <strong>não transfere a propriedade</strong>. Para isso, é
+          preciso outro ato: entregar fisicamente o bem (tradição) no caso de bens móveis, ou registrar o contrato no
+          Cartório de Imóveis no caso de imóveis.
+        </div>
+        <div class="layer-tech">
+          O contrato cria apenas um vínculo obrigacional. A propriedade transfere-se por:
+          <ul>
+            <li><strong>Tradição</strong> → bens móveis (arts. 1.226 e 1.267, CC)</li>
+            <li><strong>Registro no CRI</strong> (tradição solene) → bens imóveis (arts. 1.227 e 1.245, CC)</li>
+          </ul>
+        </div>
+
+        <div class="essential reveal">
+          Enquanto não houver tradição/registro, existe apenas vínculo obrigacional, não direito real. O comprador não é
+          ainda proprietário. O art. 481, CC deixa claro: na compra e venda, um "se obriga a transferir" — ou seja,
+          ainda não transferiu.
+        </div>
+
+        <h3>Modalidades da Tradição</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Modalidade</th>
+                <th>Em que consiste</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="kw">Real</span></td>
+                <td>Entrega efetiva e material da coisa</td>
+                <td>Entrega física de um veículo</td>
+              </tr>
+              <tr>
+                <td><span class="kw">Simbólica</span></td>
+                <td>Ato que representa a alienação</td>
+                <td>Entrega das chaves do imóvel ou do veículo vendido</td>
+              </tr>
+              <tr>
+                <td><span class="kw">Ficta (constituto possessório)</span></td>
+                <td>O alienante continua com a posse, mas agora em nome alheio (ex: como locatário)</td>
+                <td>Vendedor vende imóvel mas continua morando como locatário</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="important reveal">
+          A <span class="kw">cláusula constituti</span> (constituto possessório) <strong>não se presume</strong>. Deve
+          constar expressamente do ato ou resultar de estipulação que a pressuponha (art. 1.268, §2º, CC).
+        </div>
+
+        <div class="exam-tip">
+          A tradição, para transferir o domínio de bens móveis, precisa ser acompanhada da <strong>intenção</strong> de
+          alienar. É por isso que no comodato, depósito e locação, embora haja entrega da coisa, <em>não há
+            transferência de domínio</em> — falta o animus de alienar.
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 9 ===== -->
+      <section class="reveal" id="sec9">
+        <h2><span class="num">10</span> Abrangência dos Acessórios e Entidades Conexas</h2>
+
+        <p>
+        <details class="artigo">
+          <summary><strong>Art. 233 do Código Civil</strong></summary>
+          <div class="lei-seca">
+            <em>Código Civil Brasileiro – Lei n. 10.406/2002</em>
+            A obrigação de dar coisa certa abrange os acessórios dela embora não mencionados, salvo se o contrário
+            resultar do título ou das circunstâncias do caso.
+          </div>
+        </details>
+        </p>
+
+        <div class="essential reveal">
+          <strong>Princípio fundamental:</strong> "O acessório segue o destino do principal." Aplica-se às partes
+          integrantes e expansões da coisa (como frutos, produtos e benfeitorias), mas <em>NÃO</em> às <strong>pertenças</strong> (arts. 93-94,
+          CC).
+        </div>
+
+        <div class="note reveal">
+          <strong>Atenção Conceitual:</strong> Em sentido técnico-jurídico estrito, os <strong>frutos (e produtos) não são bens acessórios</strong>. Contudo, são estudados conjuntamente com os acessórios nesta seção por <em>razões didáticas e sistemáticas</em> no contexto das obrigações de dar coisa certa, visto que a eles também se estende a força atrativa do princípio de que devem acompanhar o principal.
+        </div>
+
+        <h3 id="sec10a">10.1 Bens Acessórios Próprios</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Conceito</th>
+                <th>Exemplo</th>
+                <th>Segue o principal?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Benfeitorias</strong></td>
+                <td>Obras/melhoramentos na coisa</td>
+                <td>Reforma, garagem, piscina</td>
+                <td>Sim (com regras de indenização)</td>
+              </tr>
+              <tr>
+                <td><strong>Pertenças</strong></td>
+                <td>Destinadas duradouramente ao uso, serviço ou aformoseamento do principal, SEM ser parte integrante
+                </td>
+                <td>Mobiliário de uma casa</td>
+                <td><strong>NÃO</strong> (art. 94, CC)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pitfall">
+          <strong>Pertenças NÃO seguem o principal!</strong> Se um imóvel é vendido, o mobiliário da casa (pertenças)
+          <em>não</em> acompanha o imóvel automaticamente — ao contrário das benfeitorias. Salvo se lei, manifestação de
+          vontade ou circunstâncias do caso determinarem o contrário (art. 94, CC).
+        </div>
+
+        <h3 id="sec10b">10.2 Frutos e Produtos (Estudo Sistemático)</h3>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Conceito</th>
+                <th>Exemplo</th>
+                <th>Segue o principal?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Frutos Naturais</strong></td>
+                <td>Renovam-se por força da natureza</td>
+                <td>Frutas das árvores, crias de animais</td>
+                <td>Sim</td>
+              </tr>
+              <tr>
+                <td><strong>Frutos Industriais</strong></td>
+                <td>Surgem pela ação do homem sobre a natureza</td>
+                <td>Produção de uma fábrica</td>
+                <td>Sim</td>
+              </tr>
+              <tr>
+                <td><strong>Frutos Civis</strong></td>
+                <td>Rendimentos pela utilização por outrem</td>
+                <td>Juros, aluguéis</td>
+                <td>Sim (percebidos dia a dia — art. 1.215, CC)</td>
+              </tr>
+              <tr>
+                <td><strong>Produtos</strong></td>
+                <td>Retirados da coisa, diminuindo sua substância</td>
+                <td>Pedras e metais de uma mina</td>
+                <td>Sim</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 id="sec10b1">10.2.1 Estados dos Frutos</h4>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Estado</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Pendentes</strong></td>
+                <td>Ainda unidos à coisa que os produziu</td>
+              </tr>
+              <tr>
+                <td><strong>Percebidos (colhidos)</strong></td>
+                <td>Já separados da coisa</td>
+              </tr>
+              <tr>
+                <td><strong>Estantes</strong></td>
+                <td>Separados e armazenados para venda</td>
+              </tr>
+              <tr>
+                <td><strong>Percipiendos</strong></td>
+                <td>Deviam ser colhidos, mas não foram</td>
+              </tr>
+              <tr>
+                <td><strong>Consumidos</strong></td>
+                <td>Não existem mais (foram utilizados)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="common-error">
+          <strong>Erro comum:</strong> Confundir <em>frutos</em> com <em>produtos</em>. Frutos se renovam periodicamente
+          sem diminuir a substância da coisa (laranjas da laranjeira). Produtos não se renovam — diminuem a substância
+          (extração de minerais de uma mina).
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 10 ===== -->
+      <section class="reveal" id="sec10">
+        <h2><span class="num">11</span> Questões de Revisão Ativa</h2>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q1.</strong> (Nível: Médio) João celebrou contrato de compra e venda de um apartamento com Maria. Após
+          a assinatura do contrato, mas antes do registro no cartório, João vendeu o mesmo apartamento a Pedro, que
+          registrou o imóvel. Carlos (o primeiro comprador) pode reivindicar o imóvel de Pedro? Justifique.
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> NÃO. Carlos (o primeiro comprador) tem apenas direito pessoal (<em>jus ad
+              rem</em>), não direito real (<em>jus in re</em>). No Direito brasileiro, o contrato por si só não
+            transfere a propriedade de imóveis — é necessário o registro (arts. 1.227 e 1.245, CC). Pedro registrou o
+            imóvel e, portanto, adquiriu o domínio. O direito pessoal de Carlos não é oponível erga omnes. Restará a
+            Carlos apenas a ação por perdas e danos contra João (art. 389, CC).
+          </div>
+        </details>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q2.</strong> (Nível: Fácil) Qual a diferença entre a obrigação alternativa e a obrigação facultativa
+          quanto ao perecimento de um dos objetos?
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> Na <strong>obrigação alternativa</strong>, o perecimento de um dos objetos não
+            extingue a obrigação, que subsiste quanto ao outro (pois há dois objetos principais). Na <strong>obrigação
+              facultativa</strong>, o perecimento do objeto principal extingue toda a obrigação — o credor não pode
+            exigir a prestação substitutiva, pois esta existe apenas em benefício do devedor.
+          </div>
+        </details>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q3.</strong> (Nível: Difícil) Ana é devedora de uma obrigação de restituir um quadro a Bruno. Enquanto
+          o quadro estava em sua posse, Ana reformou o telhado do imóvel onde o quadro ficava armazenado (necessária),
+          construiu uma vitrine especial para exibi-lo (útil) e instalou uma iluminação cenográfica de alto valor
+          (voluptuária). Ana estava de má-fé ao momento das benfeitorias. Quais são seus direitos?
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> Como Ana estava de <strong>má-fé</strong>, aplicam-se as regras do art. 1.220 do
+            CC:<br>
+            • <strong>Benfeitoria necessária</strong> (reforma do telhado): Ana tem direito à indenização, mas <em>sem
+              direito de retenção</em> do quadro. Isso porque, mesmo de má-fé, Bruno não pode se enriquecer sem causa às
+            custas de Ana.<br>
+            • <strong>Benfeitoria útil</strong> (vitrine especial): Sem direito a indenização e sem direito de
+            retenção.<br>
+            • <strong>Benfeitoria voluptuária</strong> (iluminação cenográfica): Não pode levantá-la, não tem direito à
+            indenização.<br>
+            Obs.: O art. 1.222, CC estabelece que, quando indenizar o devedor de má-fé pelas benfeitorias necessárias, o
+            credor pode optar entre o valor atual e o custo da benfeitoria.
+          </div>
+        </details>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q4.</strong> (Nível: Médio) Pedro deve a Clara a entrega de um carro específico (coisa certa). Antes
+          da tradição, Pedro realizou modificações no veículo que aumentaram seu valor (instalou som premium e colocou
+          rodas novas). Clara se recusa a pagar a mais pelo carro. O que pode Pedro fazer?
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> Como o contrato não transfere automaticamente o domínio e Pedro continua dono até
+            a tradição, os melhoramentos pertencem a ele (art. 237, CC). Pedro pode <strong>exigir aumento no
+              preço</strong> proporcional aos melhoramentos. Se Clara não anuir ao aumento, Pedro pode <strong>resolver
+              a obrigação</strong> (desfazer o contrato), podendo pleitear perdas e danos.
+          </div>
+        </details>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q5.</strong> (Nível: Fácil) A solidariedade entre devedores pode ser presumida com base nas
+          circunstâncias do negócio? Fundamente.
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> NÃO. O art. 265 do CC é categórico: "A solidariedade não se presume; resulta da
+            lei ou da vontade das partes." Portanto, a solidariedade jamais pode ser presumida pelas circunstâncias —
+            precisa estar expressamente prevista em lei ou no contrato.
+          </div>
+        </details>
+
+        <hr class="divider">
+
+        <div class="exercise reveal">
+          <strong>Q6 (Caso Prático).</strong> Luciana contratou Rodrigo para pintar uma tela específica por R$ 3.000.
+          Semanas antes do prazo de entrega, Rodrigo quebrou o braço e não consegue pintar. Rodrigo pode alegar
+          impossibilidade para se eximir? Qual seria o resultado jurídico?
+        </div>
+        <details>
+          <summary style="cursor:pointer; color: var(--green); font-weight:600; margin: 0.5rem 0;">🔍 Ver Gabarito
+          </summary>
+          <div class="solution">
+            <strong>Resposta:</strong> A impossibilidade de Rodrigo é <strong>relativa</strong> (atinge apenas ele, não
+            outras pessoas capazes de pintar). Nos termos do art. 106 do CC, a impossibilidade relativa <em>não invalida
+              o negócio jurídico</em>. Contudo, se a obrigação de pintar for <strong>personalíssima</strong> (intuitu
+            personae — contratou-se especificamente Rodrigo pela sua habilidade), a situação é diferente: a
+            impossibilidade temporária pode ser invocada para suspender o prazo. Se a impossibilidade se tornar
+            permanente, a obrigação personalíssima poderá ser extinta sem culpa — análise do caso concreto determinará o
+            resultado.
+          </div>
+        </details>
+      </section>
+
+      <!-- ===== SEÇÃO 11 – MAPA MENTAL ===== -->
+      <section class="reveal" id="sec11">
+        <h2><span class="num">12</span> Mapa Mental</h2>
+
+        <div class="mindmap">
+          <div class="mm-title">🗺️ Direito das Obrigações — Mapa Mental</div>
+          <pre>
+DIREITO DAS OBRIGAÇÕES (Arts. 233–420 CC/2002)
+│
+├─── CONCEITO
+│     ├── Vínculo jurídico patrimonial entre credor e devedor
+│     ├── Finalidade: garantir ao credor exigir a prestação
+│     └── Caráter pessoal, transitório e patrimonial
+│
+├─── ELEMENTOS CONSTITUTIVOS
+│     ├── [1] SUBJETIVO — Sujeitos
+│     │     ├── Ativo = Credor (exige)
+│     │     └── Passivo = Devedor (cumpre)
+│     ├── [2] OBJETIVO — Prestação (objeto imediato)
+│     │     ├── Dar (positiva)
+│     │     ├── Fazer (positiva)
+│     │     └── Não Fazer (negativa)
+│     └── [3] VÍNCULO JURÍDICO
+│           ├── Débito (Schuld) → espiritual/moral
+│           └── Responsabilidade (Haftung) → material/coercitivo
+│
+├─── FONTES
+│     ├── Imediata: Lei
+│     └── Mediatas: Contrato | Ato Unilateral | Ato Ilícito (arts. 186/187)
+│
+├─── REQUISITOS DA PRESTAÇÃO
+│     ├── Lícita
+│     ├── Possível (física e juridicamente)
+│     ├── Determinada ou Determinável
+│     └── Economicamente apreciável
+│
+├─── MODALIDADES
+│     ├── Quanto ao objeto
+│     │     ├── Simples (1 objeto)
+│     │     └── Compostas
+│     │           ├── Cumulativas ("E") → cumpre tudo
+│     │           └── Alternativas ("OU") → cumpre um / escolha = devedor
+│     │                 └── Facultativa (sui generis) → 1 objeto; devedor pode substituir
+│     └── Quanto aos sujeitos (pluralidade)
+│           ├── Divisíveis → cada um responde por sua quota
+│           ├── Indivisíveis → prestação deve ser cumprida integralmente
+│           └── Solidárias → devedor responde pelo todo; NUNCA se presume (art. 265)
+│
+├─── OBRIGAÇÕES DE DAR
+│     ├── Entregar (transmite propriedade) ou Restituir
+│     │── COISA CERTA (arts. 233–242)
+│     │     ├── Direito pessoal (jus ad rem), NÃO real
+│     │     ├── Art. 313: devedor não pode dar coisa diversa, ainda que mais valiosa
+│     │     ├── Melhoramentos/Acrescidos
+│     │     │     ├── Obrig. de ENTREGAR → pertencem ao devedor
+│     │     │     └── Obrig. de RESTITUIR → pertencem ao credor
+│     │     └── Boa-fé x Má-fé → regras das benfeitorias
+│     └── COISA INCERTA (arts. 243–246) → gênero + quantidade → concentração
+│
+├─── TRADIÇÃO
+│     ├── Real, Simbólica, Ficta (constituto possessório)
+│     ├── Bens Móveis → Tradição
+│     └── Bens Imóveis → Registro no CRI
+│
+└─── ACESSÓRIOS (Art. 233)
+       ├── Princípio: acessório segue o principal
+       ├── Frutos (naturais/industriais/civis) → SEGUEM
+       ├── Produtos → SEGUEM
+       ├── Benfeitorias (necessárias/úteis/voluptuárias) → SEGUEM
+       └── Pertenças (art. 94) → NÃO SEGUEM (exceção)
+    </pre>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 12 – RESUMO FINAL ===== -->
+      <section class="reveal" id="sec12">
+        <h2><span class="num">13</span> Resumo Ultra Simplificado</h2>
+
+        <div class="quick-review">
+          <h2>⚡ Revisão Rápida — Pontos-Chave</h2>
+          <ul>
+            <li><strong>Obrigação</strong> = vínculo jurídico patrimonial (credor exige; devedor cumpre).</li>
+            <li><strong>3 elementos:</strong> Sujeitos + Prestação + Vínculo (débito + responsabilidade).</li>
+            <li><strong>Sujeitos</strong> devem ser determinados ou <em>determináveis</em>; nunca absolutamente
+              indetermináveis.</li>
+            <li><strong>Prestação:</strong> dar / fazer (positivas) | não fazer (negativa).</li>
+            <li><strong>4 requisitos da prestação:</strong> lícita, possível, determinada/determinável, economicamente
+              apreciável.</li>
+            <li><strong>Impossibilidade relativa ≠ absoluta:</strong> relativa não invalida (art. 106, CC).</li>
+            <li><strong>Fontes:</strong> lei (imediata), contrato, ato unilateral, ato ilícito (mediatas).</li>
+            <li><strong>Cumulativa "E"</strong> → cumpre tudo; <strong>Alternativa "OU"</strong> → cumpre um.</li>
+            <li><strong>Facultativa:</strong> 1 objeto; devedor pode substituir; perecimento do principal = extinção.
+            </li>
+            <li><strong>Solidariedade NÃO se presume</strong> (art. 265, CC) — exige lei ou convenção.</li>
+            <li><strong>Coisa certa → direito pessoal (jus ad rem)</strong>, não real. Propriedade só passa com
+              tradição/registro.</li>
+            <li><strong>Art. 313:</strong> ninguém é obrigado a receber/dar coisa diversa, ainda que mais valiosa.</li>
+            <li><strong>Tradição:</strong> real (entrega efetiva), simbólica (chaves), ficta (constituto possessório —
+              não se presume).</li>
+            <li><strong>Melhoramentos + obrigação de entregar</strong> → do devedor; <strong>obrigação de
+                restituir</strong> → do credor.</li>
+            <li><strong>Benfeitorias:</strong> necessárias > úteis > voluptuárias. Boa-fé = mais direitos; Má-fé = só
+              necessárias.</li>
+            <li><strong>Pertença NÃO segue o principal</strong> (art. 94, CC) — exceção ao princípio geral.</li>
+            <li><strong>Frutos percebidos → do devedor de boa-fé; pendentes → do credor</strong> (art. 237, pú, CC).
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Material elaborado com base nas aulas de <strong>Direito Civil II</strong> — Prof. Giovanna Farias</p>
+    <p style="margin-top:0.5rem">Base legal: <strong>Código Civil Brasileiro – Lei n. 10.406/2002</strong> · Arts.
+      233–420</p>
+    <p style="margin-top:0.5rem; opacity:0.4">Destinado à revisão acadêmica e preparação para concursos públicos</p>
+  </footer>
+
+
+  <button id="scroll-top" title="Voltar ao Topo">↑</button>
+
+
+  <script src="../../portal-core.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Estudos | Meus Resumos</title>
+    
+    <!-- Fonts: Heading: Outfit | Body: Lora | Labels/Code: JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="base-style.css">
+    <style>
+        :root {
+            --p-700: #1e293b;
+            --p-500: #334155;
+            --header-height: 350px;
+        }
+
+        .hero-hub {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--p-500);
+            box-shadow: 0 0 0 4px rgba(51, 65, 85, 0.3);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.6;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .subject-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text-main);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 6px;
+            background: var(--subject-color);
+        }
+
+        .subject-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--subject-color-light);
+            color: var(--subject-color);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .subject-card:hover .subject-icon {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .subject-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subject-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--subject-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Subject Specific Colors */
+        .color-constitucional { --subject-color: #10B981; --subject-color-light: #ECFDF5; }
+        .color-civil { --subject-color: #3B82F6; --subject-color-light: #EFF6FF; }
+        .color-dh { --subject-color: #8B5CF6; --subject-color-light: #F5F3FF; }
+        .color-digital { --subject-color: #06B6D4; --subject-color-light: #ECFEFF; }
+        .color-penal { --subject-color: #EF4444; --subject-color-light: #FEF2F2; }
+
+        [data-theme="dark"] .subject-icon { background: rgba(255,255,255,0.05); }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<header class="hero-hub">
+    <div class="badge">Portal de Estudos</div>
+    <h1>Meus Resumos Acadêmicos</h1>
+    <p class="subtitle">Centralize seu conhecimento e organize sua jornada jurídica</p>
+    
+    <div class="search-container">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por matéria ou tópico...">
+    </div>
+
+    <div style="position: absolute; top: 1rem; right: 2rem; display: flex; gap: 1rem;">
+        <button class="theme-toggle" id="themeToggle"><svg width="20" height="20" id="themeIcon"></svg></button>
+    </div>
+</header>
+
+<main class="container">
+    <div class="subjects-grid" id="subjectsGrid">
+        <!-- CONSTITUCIONAL -->
+        <a href="subjects/constitucional/index.html" class="subject-card color-constitucional" data-tags="constitucional estado cpi">
+            <div class="subject-icon">🏛️</div>
+            <h3>Constitucional II</h3>
+            <p>Organização do Estado, CPIs e controle de constitucionalidade.</p>
+            <div class="card-footer">
+                <span>Material Completo</span>
+                <span>→</span>
+            </div>
+        </a>
+
+        <!-- CIVIL II -->
+        <a href="subjects/civil-ii/index.html" class="subject-card color-civil" data-tags="civil obrigaçoes contratos">
+            <div class="subject-icon">⚖️</div>
+            <h3>Direito Civil II</h3>
+            <p>Teoria Geral das Obrigações, dar, fazer e não fazer.</p>
+            <div class="card-footer">
+                <span>Aula 01 + AP1</span>
+                <span>→</span>
+            </div>
+        </a>
+
+        <!-- DIREITOS HUMANOS -->
+        <a href="subjects/direitos-humanos/index.html" class="subject-card color-dh" data-tags="dh direitos humanos internacional">
+            <div class="subject-icon">🌍</div>
+            <h3>Direitos Humanos</h3>
+            <p>Da teoria geral à proteção internacional e sistemas regionais.</p>
+            <div class="card-footer">
+                <span>Guia de Estudo</span>
+                <span>→</span>
+            </div>
+        </a>
+
+        <!-- DIREITO DIGITAL -->
+        <a href="subjects/direito-digital/index.html" class="subject-card color-digital" data-tags="digital lgpd internet crimes">
+            <div class="subject-icon">💻</div>
+            <h3>Direito Digital</h3>
+            <p>LGPD, Marco Civil da Internet e responsabilidade civil digital.</p>
+            <div class="card-footer">
+                <span>Resumo Didático</span>
+                <span>→</span>
+            </div>
+        </a>
+
+        <!-- PENAL II -->
+        <a href="subjects/penal-ii/index.html" class="subject-card color-penal" data-tags="penal crime punição teoria">
+            <div class="subject-icon">⛓️</div>
+            <h3>Direito Penal II</h3>
+            <p>Teoria do Crime, culpabilidade e aplicação da pena.</p>
+            <div class="card-footer">
+                <span>Conteúdo Atualizado</span>
+                <span>→</span>
+            </div>
+        </a>
+    </div>
+
+    <div id="emptyState" class="empty-state">
+        <h3>Nenhum resumo encontrado...</h3>
+        <p>Tente termos diferentes ou navegue pelas matérias.</p>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="credit">MEU HUB DE ESTUDOS</div>
+        <p>Sistema de resumos interativos otimizados para alto desempenho.</p>
+        <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2026 - Produzido com foco em excelência acadêmica.</p>
+    </div>
+</footer>
+
+<script src="portal-core.js"></script>
+<script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const subjectsGrid = document.getElementById('subjectsGrid');
+    const cards = document.querySelectorAll('.subject-card');
+    const emptyState = document.getElementById('emptyState');
+
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        let found = false;
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const desc = card.querySelector('p').textContent.toLowerCase();
+            const tags = card.getAttribute('data-tags');
+
+            if (title.includes(term) || desc.includes(term) || tags.includes(term)) {
+                card.style.display = 'flex';
+                found = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        emptyState.style.display = found ? 'none' : 'block';
+    });
+</script>
+</body>
+</html>
