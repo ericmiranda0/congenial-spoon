@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal II — Teoria das Penas | Premium Learning</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Penal II</div>
+      <h1>Teoria das Penas</h1>
+      <div class="subtitle">Guia Completo — Do fundamento histórico à dosimetria aplicada</div>
+      <div class="meta">
+        <span>⚖️ CP/40</span>
+        <span>📚 Teoria Geral</span>
+        <span>🛡️ Garantismo</span>
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#historia" class="nav-item">Histórico</a>
+        <a href="#conceito" class="nav-item">Conceito</a>
+        <a href="#especies" class="nav-item">Espécies</a>
+        <a href="#regimes" class="nav-item">Regimes</a>
+        <a href="#prd" class="nav-item">Restritivas</a>
+        <a href="#dosimetria" class="nav-item">Dosimetria</a>
+        <a href="#quiz" class="nav-item">Quiz</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div class="summary-card" id="top">
+        <h2>📋 Sumário Interativo</h2>
+        <a href="#objetivos"><span>🎯</span> Objetivos de Aprendizagem</a>
+        <a href="#historia"><span>🏛️</span> História da Pena</a>
+        <a href="#conceito"><span>⚖️</span> Conceito e Funções</a>
+        <a href="#especies"><span>🔒</span> Espécies de Pena</a>
+        <a href="#regimes"><span>🏭</span> Regimes de Cumprimento</a>
+        <a href="#prd"><span>📋</span> Penas Restritivas (PRD)</a>
+        <a href="#multa"><span>💰</span> Pena de Multa</a>
+        <a href="#dosimetria"><span>📊</span> Dosimetria Trifásica</a>
+        <a href="#quiz"><span>📝</span> Exercícios Comentados</a>
+        <a href="#mapa"><span>🧠</span> Mapa Mental</a>
+      </div>
+
+      <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <p>Ao concluir o estudo deste módulo, você será capaz de:</p>
+        <ul>
+          <li>Compreender a <strong>evolução histórica</strong> e a humanização das penas;</li>
+          <li>Diferenciar as <strong>teorias da pena</strong> (retributiva, preventiva e mista);</li>
+          <li>Identificar os <strong>princípios constitucionais</strong> que regem a sanção penal;</li>
+          <li>Distinguir as espécies de pena: <strong>privativas de liberdade, restritivas e multa</strong>;</li>
+          <li>Aplicar as regras de <strong>regime inicial</strong> e os critérios de progressão;</li>
+          <li>Entender e simular o <strong>cálculo trifásico</strong> da dosimetria da pena.</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════════ 1. HISTÓRIA ══════════════════════════════ -->
+      <section class="section" id="historia">
+        <div class="section-label">Módulo 01</div>
+        <h2>História da Pena</h2>
+
+        <p>Antes de entender o que é pena hoje, é preciso entender de onde ela veio. Essa evolução histórica costuma
+          cair em provas teóricas.</p>
+
+        <div class="grid2">
+          <div class="card gold">
+            <h4>Antes do séc. XVIII</h4>
+            <p>A pena era <span class="kw">corporal e aflitiva</span>. O corpo do condenado "pagava" pelo crime.
+              Torturas, mutilações e execuções públicas eram comuns e aceitas como forma de justiça.</p>
+          </div>
+          <div class="card blue">
+            <h4>Séc. XVIII — Iluminismo</h4>
+            <p><span class="kw">Cesare Beccaria</span> publica em 1764 <em>"Dos Delitos e das Penas"</em> — marco da
+              humanização das penas. Ele clamou por proporcionalidade e legalidade, questionando o tratamento brutal dos
+              condenados.</p>
+          </div>
+        </div>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Cai em Prova</span>
+          <strong>Beccaria = 1764 = "Dos Delitos e das Penas"</strong> = início da humanização. Essa data e esse nome são recorrentes em questões de evolução histórica do Direito Penal.
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 2. CONCEITO ══════════════════════════════ -->
+      <section class="section" id="conceito">
+        <div class="section-label">Módulo 02</div>
+        <h2>O que é a Pena?</h2>
+
+        <div class="card gold">
+          <p style="font-size:1.1rem; color:#fff; font-style:italic;">"É a <span class="kw">sanção imposta pelo Estado</span>, por meio do <span class="kw">devido processo legal</span>, ao criminoso como <span class="kw">retribuição ao delito</span> perpetrado e <span class="kw">prevenção a novos crimes</span>." — Guilherme de Souza Nucci</p>
+        </div>
+
+        <h3>Funções e Finalidades da Pena</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Teoria</th>
+                <th>Palavras-chave</th>
+                <th>Lógica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Retributiva</strong></td>
+                <td><span class="badge badge-red">Punição · Castigo</span></td>
+                <td>A pena é o "troco" pelo mal causado. Olho por olho — com legalidade.</td>
+              </tr>
+              <tr>
+                <td><strong>Preventiva</strong></td>
+                <td><span class="badge badge-blue">Aviso · Prevenção</span></td>
+                <td>A pena serve para dissuadir o agente (prevenção especial) e a sociedade (prevenção geral).</td>
+              </tr>
+              <tr>
+                <td><strong>Mista / Unificadora ✅</strong></td>
+                <td><span class="badge badge-gold">Retribuição + Prevenção</span></td>
+                <td><strong>Adotada no Brasil</strong> — art. 59 CP: "necessário e suficiente para a reprovação e
+                  prevenção do crime".</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Princípios das Penas</h3>
+
+        <div class="grid2">
+          <div class="card blue">
+            <h4>Legalidade &amp; Anterioridade</h4>
+            <details class="artigo-block">
+              <summary>Art. 5º, XXXIX CF · Art. 1º CP</summary>
+              <div class="lei-seca">
+                <p>Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal.</p>
+              </div>
+            </details>
+          </div>
+          <div class="card green">
+            <h4>Humanidade</h4>
+            <details class="artigo-block">
+              <summary>Art. 5º, XLVII CF</summary>
+              <div class="lei-seca">
+                <p>Não haverá penas: a) de morte, salvo em caso de guerra declarada; b) de caráter perpétuo; c) de trabalhos forçados; d) de banimento; e) cruéis.</p>
+              </div>
+            </details>
+          </div>
+          <div class="card purple">
+            <h4>Pessoalidade / Intranscendência</h4>
+            <details class="artigo-block">
+              <summary>Art. 5º, XLV CF</summary>
+              <div class="lei-seca">
+                <p>Nenhuma pena passará da pessoa do condenado, podendo a obrigação de reparar o dano e a decretação do perdimento de bens ser, nos termos da lei, estendidas aos sucessores e contra eles executadas, até o limite do valor do patrimônio transferido.</p>
+              </div>
+            </details>
+          </div>
+          <div class="card gold">
+            <h4>Individualização</h4>
+            <details class="artigo-block">
+              <summary>Art. 5º, XLVI CF · Art. 68 CP</summary>
+              <div class="lei-seca">
+                <p>A lei regulará a individualização da pena e adotará, entre outras, as seguintes: a) privação ou restrição da liberdade; b) perda de bens; c) multa; d) prestação social alternativa; e) suspensão ou interdição de direitos.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="card red" style="margin-top:16px;">
+          <h4>Proporcionalidade</h4>
+          <p>A pena deve ser proporcional à gravidade da infração. Crime leve → pena leve. Crime grave → pena grave.</p>
+        </div>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Pegadinha de Prova</span>
+          A pena de morte <strong>NÃO é vedada absolutamente</strong> — ela é permitida em caso de guerra declarada (art. 5º, XLVII, a, CF). Questões de concurso tentam induzir ao erro afirmando que é proibida em qualquer hipótese!
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 3. ESPÉCIES ══════════════════════════════ -->
+      <section class="section" id="especies">
+        <div class="section-label">Módulo 03</div>
+        <h2>Espécies de Pena — <span class="art">Art. 32 CP</span></h2>
+
+        <details class="artigo-block">
+          <summary>Art. 32 do Código Penal</summary>
+          <div class="lei-seca">
+            <p>Art. 32 - As penas são: I - privativas de liberdade; II - restritivas de direitos; III - de multa.</p>
+          </div>
+        </details>
+
+        <div class="grid3">
+          <div class="mini-card">
+            <div class="label">I</div>
+            <div class="value">🔒 Privativas de Liberdade</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">II</div>
+            <div class="value">📋 Restritivas de Direitos</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">III</div>
+            <div class="value">💰 Multa</div>
+          </div>
+        </div>
+
+        <h3>Penas Privativas de Liberdade — Diferenças Cruciais</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Modalidade</th>
+                <th>Admite Fechado?</th>
+                <th>Admite Semiaberto?</th>
+                <th>Admite Aberto?</th>
+                <th>Para quem?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Reclusão</strong></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td>Crimes mais graves (ex.: homicídio, roubo)</td>
+              </tr>
+              <tr>
+                <td><strong>Detenção</strong></td>
+                <td><span class="badge badge-red">✗ Inicial Não*</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td>Crimes de menor gravidade (ex.: ameaça)</td>
+              </tr>
+              <tr>
+                <td><strong>Prisão Simples</strong></td>
+                <td><span class="badge badge-red">✗ Nunca</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td><span class="badge badge-green">✓ Sim</span></td>
+                <td>Contravenções penais</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warning">
+          <span class="box-label">⚠️ Pegadinha Clássica</span>
+          A detenção <strong>NÃO admite</strong> regime fechado como regime <em>inicial</em>. Porém, pode migrar para o fechado por <strong>regressão de regime</strong>. Já a prisão simples <strong>jamais</strong> admite o fechado — nem por regressão!
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 4. REGIMES ══════════════════════════════ -->
+      <section class="section" id="regimes">
+        <div class="section-label">Módulo 04</div>
+        <h2>Regimes de Cumprimento de Pena</h2>
+
+        <p>Pense nos regimes como degraus. O condenado começa em um degrau e pode subir (progressão) ou descer
+          (regressão) conforme seu comportamento.</p>
+
+        <div class="grid3">
+          <div class="card red">
+            <h4>🔒 Fechado</h4>
+            <p><strong>Presídio de segurança máxima/média</strong></p>
+            <p>Trabalho diurno em comum. Isolamento noturno. Trabalho externo só em obras públicas. Cela individual mín.
+              6m².</p>
+          </div>
+          <div class="card gold">
+            <h4>🏭 Semiaberto</h4>
+            <p><strong>Colônia agrícola, industrial ou similar</strong></p>
+            <p>Trabalho em comum. Permite trabalho externo e cursos profissionalizantes. Alojamento coletivo permitido.
+            </p>
+          </div>
+          <div class="card green">
+            <h4>🏠 Aberto</h4>
+            <p><strong>Casa de Albergado</strong></p>
+            <p>Baseado na autodisciplina. Trabalha/estuda fora sem vigilância durante o dia. Recolhe-se à noite e
+              folgas.</p>
+          </div>
+        </div>
+
+        <h3>Regra Geral do Regime Inicial — Réu Primário</h3>
+
+        <div class="formula">
+          Pena ≤ 4 anos → Regime ABERTO<br>
+          4 anos &lt; Pena ≤ 8 anos → Regime SEMIABERTO<br>
+          Pena &gt; 8 anos → Regime FECHADO
+        </div>
+
+        <h3>Tabela Completa: Reclusão (réu primário vs reincidente)</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pena Aplicada</th>
+                <th>Réu Primário</th>
+                <th>Réu Reincidente</th>
+                <th>Base Legal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Até 4 anos</td>
+                <td><span class="badge badge-green">Aberto</span></td>
+                <td><span class="badge badge-gold">Semiaberto ou Fechado*</span></td>
+                <td><span class="art">Art. 33, §2º, c, CP</span></td>
+              </tr>
+              <tr>
+                <td>4 a 8 anos</td>
+                <td><span class="badge badge-gold">Semiaberto</span></td>
+                <td><span class="badge badge-red">Fechado</span></td>
+                <td><span class="art">Art. 33, §2º, b, CP</span></td>
+              </tr>
+              <tr>
+                <td>Acima de 8 anos</td>
+                <td><span class="badge badge-red">Fechado</span></td>
+                <td><span class="badge badge-red">Fechado</span></td>
+                <td><span class="art">Art. 33, §2º, a, CP</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="important">
+          <span class="box-label">📌 Súmula 269 STJ</span>
+          Para reincidentes com pena igual ou inferior a 4 anos e circunstâncias judiciais favoráveis, é admissível a adoção do regime <strong>semiaberto</strong> (mesmo em reclusão).
+        </div>
+
+        <h3>Progressão de Regime</h3>
+
+        <p>O sistema é <span class="kw">progressivo</span>: o condenado avança do regime mais rigoroso ao mais brando
+          conforme o mérito. <span class="art">Art. 33, §2º CP · Art. 112 LEP</span></p>
+
+        <div class="grid2">
+          <div class="card green">
+            <h4>📈 Progressão (subir de regime)</h4>
+            <p><strong>Requisito Objetivo:</strong> Cumprir fração mínima da pena (art. 112 LEP)</p>
+            <p><strong>Requisito Subjetivo:</strong> Atestado de boa conduta carcerária emitido pelo diretor do
+              presídio.</p>
+          </div>
+          <div class="card red">
+            <h4>📉 Regressão (descer de regime)</h4>
+            <p><span class="art">Art. 118 LEP</span><br>
+              • Praticar crime doloso ou falta grave<br>
+              • Nova condenação que torna o regime incompatível</p>
+          </div>
+        </div>
+
+        <div class="warning">
+          <span class="box-label">⚠️ Atenção: Crimes contra a Adm. Pública</span>
+          <p>O <strong>Art. 33, §4º do CP</strong> estabelece que, nos crimes contra a administração pública, a progressão de regime fica condicionada à <strong>reparação do dano</strong> ou à devolução do produto do ilícito, com os acréscimos legais.</p>
+        </div>
+
+        <h3>Detração Penal — <span class="art">Art. 42 CP</span></h3>
+
+        <details class="artigo-block">
+          <summary>Art. 42 do Código Penal</summary>
+          <div class="lei-seca">
+            <p>Art. 42 - Computam-se, na pena privativa de liberdade e na medida de segurança, o tempo de prisão provisória, no Brasil ou no estrangeiro, o de prisão administrativa e o de internação em qualquer dos estabelecimentos referidos no artigo anterior.</p>
+          </div>
+        </details>
+
+        <p><span class="kw">Detração</span> = "abatimento" da pena. Computa-se na pena o tempo de:</p>
+        <div class="pill-group">
+          <div class="pill">Prisão provisória (Brasil ou exterior)</div>
+          <div class="pill">Prisão administrativa</div>
+          <div class="pill">Internação em hospital de custódia</div>
+        </div>
+
+        <div class="example">
+          <span class="box-label">📌 Caso Prático</span>
+          <strong>Mévio ficou 2 anos em prisão provisória e foi condenado a 9 anos de reclusão.</strong><br>
+          → 9 anos − 2 anos = <strong>7 anos efetivos</strong> restantes.<br>
+          → Para fins de regime inicial, usa-se a pena aplicada (9 anos) = Regime <strong>Fechado</strong>.<br>
+          → Porém, a detração vale para cálculo da progressão!
+        </div>
+
+        <h3>Remição de Pena — <span class="art">Art. 126 LEP</span></h3>
+
+        <details class="artigo-block">
+          <summary>Art. 126 da Lei de Execução Penal (LEP)</summary>
+          <div class="lei-seca">
+            <p>O condenado que cumpre a pena em regime fechado ou semiaberto poderá remir, por trabalho ou por estudo, parte do tempo de execução da pena.</p>
+          </div>
+        </details>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Atividade</th>
+                <th>Proporção de Remição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>📚 Estudo (fundamental, médio, superior, profissional)</td>
+                <td>1 dia de pena a cada <strong>12 horas</strong> de frequência</td>
+              </tr>
+              <tr>
+                <td>🔨 Trabalho</td>
+                <td>1 dia de pena a cada <strong>3 dias</strong> de trabalho</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warning">
+          <span class="box-label">⚠️ Falta Grave e Remição</span>
+          Em caso de falta grave (Art. 127 LEP), o juiz pode revogar até <strong>1/3</strong> do tempo remido. A contagem recomeça da data da infração disciplinar.
+        </div>
+      </section>
+
+        <h3>Espécies — <span class="art">Art. 43 CP</span></h3>
+
+        <details class="artigo-block">
+          <summary>Art. 43 e 44 do Código Penal</summary>
+          <div class="lei-seca">
+            <p>Art. 43. As penas restritivas de direitos são: I - prestação pecuniária; II - perda de bens e valores; IV - prestação de serviço à comunidade ou a entidades públicas; V - interdição temporária de direitos; VI - limitação de fim de semana.</p>
+          </div>
+        </details>
+
+        <div class="grid2">
+          <div class="card blue">
+            <h4>I — Prestação Pecuniária</h4>
+            <p>Pagamento em dinheiro à vítima, dependentes ou entidade social. Valor: <strong>1 a 360 salários mínimos</strong>.</p>
+          </div>
+          <div class="card purple">
+            <h4>II — Perda de Bens e Valores</h4>
+            <p>Vai para o <strong>Fundo Penitenciário Nacional</strong>. Teto: maior valor entre o prejuízo causado ou o proveito obtido.</p>
+          </div>
+          <div class="card green">
+            <h4>IV — Prestação de Serviços</h4>
+            <p>Tarefas gratuitas (1h/dia). Aplicável a condenações superiores a 6 meses.</p>
+          </div>
+          <div class="card gold">
+            <h4>V — Interdição de Direitos</h4>
+            <p>Proibição de exercer cargo público, profissão, dirigir veículo, frequentar lugares.</p>
+          </div>
+        </div>
+
+        <h3>Requisitos para Substituição — <span class="art">Art. 44 CP</span></h3>
+
+        <div class="important">
+          <span class="box-label">⭐ Requisitos Essenciais</span>
+          <ul>
+            <li><strong>Pena aplicada não superior a 4 anos</strong> (crime doloso sem violência) ou qualquer pena se crime culposo;</li>
+            <li><strong>Réu não reincidente em crime doloso</strong>;</li>
+            <li><strong>Culpabilidade e antecedentes favoráveis</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="pitfall">
+          <span class="box-label">🚫 Vedações Importantes</span>
+          <strong>Súmula 588 STJ</strong>: Crime contra a mulher com violência/grave ameaça em âmbito doméstico → <strong>NÃO ADMITE substituição por PRD</strong>.
+        </div>
+
+        <h3>Conversão da PRD em Privativa de Liberdade</h3>
+
+        <div class="card red">
+          <p><span class="art">Art. 44, §4º CP</span> — Converte-se quando há <span class="kw">descumprimento
+              injustificado</span>. O tempo já cumprido é abatido, respeitando saldo mínimo de <strong>30 dias</strong>
+            de detenção ou reclusão.</p>
+        </div>
+
+        <h3>Quantidade de PRDs na Substituição</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pena privativa aplicada</th>
+                <th>Substituição possível</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Até 1 ano</td>
+                <td>1 PRD <strong>ou</strong> Multa</td>
+              </tr>
+              <tr>
+                <td>Superior a 1 ano</td>
+                <td>1 PRD + Multa <strong>ou</strong> 2 PRDs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="multa">
+        <div class="section-label">Módulo 06</div>
+        <h2>Pena de Multa — <span class="art">Art. 49 CP</span></h2>
+
+        <div class="important">
+          <span class="box-label">⭐ Ponto Chave</span>
+          Depois do trânsito em julgado, a multa vira <strong>dívida de valor</strong>. NÃO se converte mais em prisão! Ela é executada como dívida ativa da Fazenda Pública.
+        </div>
+
+        <div class="card gold">
+          <p><strong>Cálculo Bifásico:</strong> 1º Quantidade (10 a 360 dias) | 2º Valor (1/30 a 5x sal. mín.).</p>
+        </div>
+
+        <h3>Multa Substitutiva — <span class="art">Art. 60, §2º CP</span></h3>
+
+        <div class="card blue">
+          <p>Pena privativa de liberdade <strong>não superior a 6 meses</strong> → pode ser substituída pela de multa,
+            observados os critérios do art. 44, II e III.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 7. DOSIMETRIA ══════════════════════════════ -->
+      <section class="section" id="dosimetria">
+        <div class="section-label">Módulo 07</div>
+        <h2>Aplicação da Pena — Critério Trifásico</h2>
+
+        <p>Este é o tema mais cobrado em provas práticas. O juiz calcula a pena em <span class="kw">3 fases
+            obrigatórias</span>, na ordem estabelecida pelo <span class="art">art. 68 CP</span>.</p>
+
+        <div class="grid3">
+          <div class="card gold">
+            <h4>1ª Fase</h4>
+            <p><strong>Pena-Base</strong></p>
+            <p>Critérios do art. 59 CP. 8 circunstâncias judiciais. Resultado: pena entre o mínimo e máximo legal.</p>
+          </div>
+          <div class="card blue">
+            <h4>2ª Fase</h4>
+            <p><strong>Pena Provisória</strong></p>
+            <p>Agravantes (art. 61) e Atenuantes (art. 65). Não pode ultrapassar o máximo nem ficar abaixo do mínimo
+              legal.</p>
+          </div>
+          <div class="card purple">
+            <h4>3ª Fase</h4>
+            <p><strong>Pena Definitiva</strong></p>
+            <p>Causas de aumento e diminuição (majorantes/minorantes). Pode ultrapassar máximo ou mínimo legal!</p>
+          </div>
+        </div>
+
+        <h3>1ª Fase — As 8 Circunstâncias Judiciais do <span class="art">Art. 59 CP</span></h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Circunstância</th>
+                <th>O que analisa?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>Culpabilidade</strong></td>
+                <td>Grau de reprovabilidade da conduta</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Antecedentes</strong></td>
+                <td>Vida pregressa do réu (≠ reincidência; sem prazo depurador)</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Conduta Social</strong></td>
+                <td>Comportamento na família, trabalho, sociedade</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>Personalidade</strong></td>
+                <td>Modo de ser e agir do agente</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>Motivos</strong></td>
+                <td>Razão que levou ao crime (ex.: vingança, ganância)</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>Circunstâncias</strong></td>
+                <td>Modo de execução (modus operandi)</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><strong>Consequências</strong></td>
+                <td>Impacto além do normal na vítima/sociedade</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><strong>Comportamento da Vítima</strong></td>
+                <td>Se contribuiu ou não para o crime</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="essential">
+          <span class="box-label">⭐ Regra de Ouro da 1ª Fase</span>
+          <ul>
+            <li>Circunstância favorável ou neutra → pena no mínimo legal;</li>
+            <li>Circunstância negativa → aumento (geralmente 1/8 por item);</li>
+            <li><strong>Súmula 444 STJ</strong>: Inquéritos e ações em curso não agravam a pena-base.</li>
+          </ul>
+        </div>
+
+        <h3>2ª Fase — Agravantes e Atenuantes</h3>
+
+        <div class="grid2">
+          <div class="card red">
+            <h4>Agravantes Genéricas — Art. 61 CP</h4>
+            <p>• Reincidência<br>
+              • Motivo fútil ou torpe<br>
+              • Traição, emboscada, dissimulação<br>
+              • Veneno, fogo, explosivo, crueldade<br>
+              • Contra ascendente, descendente, cônjuge<br>
+              • Abuso de autoridade / violência doméstica<br>
+              • Contra criança, idoso &gt; 60 anos, grávida<br>
+              • Em calamidade pública<br>
+              • Embriaguez preordenada<br>
+              • Em instituição de ensino</p>
+          </div>
+          <div class="card green">
+            <h4>Atenuantes — Art. 65 CP</h4>
+            <p>• Menor de 21 anos na data do fato<br>
+              • Maior de 70 anos na data da sentença<br>
+              • Desconhecimento da lei<br>
+              • Relevante valor social ou moral<br>
+              • Reparação do dano antes do julgamento<br>
+              • Coação resistível / ordem superior<br>
+              • Confissão espontânea ← muito cobrado!<br>
+              • Influência de multidão em tumulto</p>
+          </div>
+        </div>
+
+        <div class="alert essential">
+          <div class="alert-icon">⭐</div>
+          <div class="alert-content">
+            <strong>Súmula 545 STJ — Confissão</strong>
+            A confissão atenua a pena <strong>mesmo que não seja utilizada</strong> para formar o convencimento do juiz.
+            O simples ato de confessar já gera o benefício!
+          </div>
+        </div>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Súmula 231 STJ</span>
+          A incidência de circunstância atenuante <strong>não pode</strong> conduzir à redução da pena abaixo do mínimo legal.
+        </div>
+
+        <h3>Diferença Entre Qualificadora, Agravante e Majorante</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Figura</th>
+                <th>O que faz?</th>
+                <th>Fase</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Qualificadora</strong></td>
+                <td>Altera as penas mín. e máx. do tipo. Cria um tipo derivado autônomo.</td>
+                <td><span class="badge badge-gold">1ª Fase</span></td>
+                <td>Homicídio qualificado: 12 a 30 anos (vs 6 a 20 simples)</td>
+              </tr>
+              <tr>
+                <td><strong>Agravante</strong></td>
+                <td>Aumenta a pena dentro dos limites já fixados</td>
+                <td><span class="badge badge-blue">2ª Fase</span></td>
+                <td>Art. 61 — reincidência (+1/6)</td>
+              </tr>
+              <tr>
+                <td><strong>Majorante</strong></td>
+                <td>Aumenta por fração (pode ultrapassar o máximo)</td>
+                <td><span class="badge badge-purple">3ª Fase</span></td>
+                <td>Roubo com arma de fogo: +2/3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Caso Prático Completo — Dosimetria do Roubo</h3>
+
+        <div class="example">
+          <strong>Enunciado</strong>
+          João, reincidente, praticou roubo (art. 157 CP — pena: 4 a 10 anos) com emprego de arma branca, com 2
+          circunstâncias judiciais desfavoráveis (motivo e consequências).
+        </div>
+
+        <div class="calc-demo">
+          <div class="calc-line">
+            <span>Pena mínima base</span>
+            <span class="op">4 anos = 48 meses</span>
+          </div>
+          <div class="calc-line">
+            <span>1ª FASE: 2 circ. judiciais desfav. (1/8 cada sobre 48M)</span>
+            <span class="op">48 + 6 + 6 = 60 meses (5 anos)</span>
+          </div>
+          <div class="calc-line">
+            <span>Pena-base</span>
+            <span class="op">→ 5 anos</span>
+          </div>
+          <div class="calc-line">
+            <span>2ª FASE: Reincidência (+1/6 sobre 60M = 10M)</span>
+            <span class="op">60 + 10 = 70 meses (5a 10m)</span>
+          </div>
+          <div class="calc-line">
+            <span>Pena provisória</span>
+            <span class="op">→ 5 anos e 10 meses</span>
+          </div>
+          <div class="calc-line">
+            <span>3ª FASE: Arma branca +1/3 sobre 70M = 23,33M</span>
+            <span class="op">70 + 23,33 = 93,33 meses</span>
+          </div>
+          <div class="calc-line">
+            <span>Pena Definitiva</span>
+            <span class="op">→ 7 anos, 9 meses e ~9 dias</span>
+          </div>
+        </div>
+
+      </section>
+      <!-- ══════════════════════════════ 8. MAPA MENTAL ══════════════════════════════ -->
+      <section class='section' id='mapa'>
+        <div class='section-label'>Visão Global</div>
+        <h2>Mapa Mental — Teoria das Penas</h2>
+
+        <div class='mindmap-box'>
+          <div class='mm-root'>⚖️ TEORIA DAS PENAS</div>
+
+          <div class='mm-l1'>HISTÓRIA</div>
+          <div class='mm-l2'>Pré-séc. XVIII → Penas corporais</div>
+          <div class='mm-l2'>Beccaria 1764 → Humanização</div>
+
+          <div class='mm-l1'>CONCEITO & FUNÇÕES</div>
+          <div class='mm-l2'>Sanção estatal | Retribuição + Prevenção</div>
+          <div class='mm-l2'>Teoria mista adotada no Brasil (Art. 59 CP)</div>
+
+          <div class='mm-l1'>PRINCÍPIOS</div>
+          <div class='mm-l2'>Legalidade · Humanidade · Pessoalidade</div>
+          <div class='mm-l2'>Individualização · Proporcionalidade</div>
+
+          <div class='mm-l1'>ESPÉCIES (Art. 32 CP)</div>
+          <div class='mm-l2'>Privativas de Liberdade (Reclusão | Detenção)</div>
+          <div class='mm-l2'>Restritivas de Direitos & Multa</div>
+
+          <div class='mm-l1'>DOSIMETRIA (Art. 68 CP)</div>
+          <div class='mm-l2'>1ª: Pena-base (Art. 59)</div>
+          <div class='mm-l2'>2ª: Agravantes e Atenuantes</div>
+          <div class='mm-l2'>3ª: Causas de Aumento e Diminuição</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ QUIZ ══════════════════════════════ -->
+      <section class='section' id='quiz'>
+        <div class='section-label'>Revisão Ativa</div>
+        <h2>Quiz — Teste seu Conhecimento</h2>
+
+        <div class='exercise'>
+          <div class='exercise-number'>Questão 01</div>
+          <p><strong>Qual teoria das finalidades da pena é adotada pelo Brasil?</strong></p>
+          <details class='gabarito'>
+            <summary>Ver gabarito comentado</summary>
+            <div class='solution'>
+              <span class='box-label'>✅ Resposta: Teoria Mista</span>
+              <p>O art. 59 CP estabelece que a pena deve ser "necessária e suficiente para a reprovação e prevenção do crime".</p>
+            </div>
+          </details>
+        </div>
+
+        <div class='exercise'>
+          <div class='exercise-number'>Questão 02</div>
+          <p><strong>A pena de detenção pode ser cumprida em regime fechado logo no início?</strong></p>
+          <details class='gabarito'>
+            <summary>Ver gabarito comentado</summary>
+            <div class='solution'>
+              <span class='box-label'>✅ Resposta: Não</span>
+              <p>A detenção começa no semiaberto ou aberto. O regime fechado só é possível via <strong>regressão</strong>.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class='exercise'>
+          <div class='exercise-number'>Questão 03</div>
+          <p><strong>Inquérito policial em curso pode agravar a pena-base?</strong></p>
+          <details class='gabarito'>
+            <summary>Ver gabarito comentado</summary>
+            <div class='solution'>
+              <span class='box-label'>✅ Resposta: Não (Súmula 444 STJ)</span>
+              <p>É vedada a utilização de inquéritos policiais ou ações penais em curso para agravar a pena-base.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ RESUMÃO FINAL ══════════════════════════════ -->
+      <section class='section' id='resumao'>
+        <div class='super-box'>
+          <div class='section-label'>Resumão Ultra Rápido</div>
+          <h2>Cola Mental para a Prova</h2>
+
+          <h4>REGIMES (Réu Primário)</h4>
+          <div class='pill-group'>
+            <div class='pill accent'>≤ 4a → Aberto</div>
+            <div class='pill accent'>4 a 8a → Semiaberto</div>
+            <div class='pill accent'>> 8a → Fechado</div>
+          </div>
+
+          <h4>SÚMULAS DE OURO</h4>
+          <div class='pill-group'>
+            <div class='pill'>Súm. 444: IP não agrava base</div>
+            <div class='pill'>Súm. 231: Atenuante ≠ abaixo do mín.</div>
+            <div class='pill'>Súm. 545: Confissão sempre atenua</div>
+            <div class='pill'>Súm. 588: Violência Doméstica = Sem PRD</div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+  <div id='study-toolkit-bundle'>
+    <script src='../../portal-core.js'></script>
+  </div>
+</body>
+</html>

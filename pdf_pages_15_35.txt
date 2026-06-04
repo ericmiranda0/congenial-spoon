@@ -1,0 +1,427 @@
+PAGE 16:
+• FASE CONSTITUTIVA
+– O projeto de lei sempre deve ser apreciado nas duas Casas Legislativas
+(decorrência do bicameralismo federativo).
+– Salvo nos projetos de iniciativa de algum Senador ou de Comissões do
+Senado, a Casa iniciadora será sempre a Câmara dos Deputados e o
+Senado Federal será a Casa revisora.
+– A fase constitutiva compreende as seguintes etapas:
+• a) Discussão;
+– CCJ’s, Comissões Temáticas, Próprio plenário.
+• b) Votação;
+– lei ordinária: maioria relativa.
+– lei complementar: maioria absoluta.
+– Para o STJ e do STF, não há hierarquia entre lei complementar e lei ordinária. São apenas
+atos normativos que tratam de campos materiais distintos.
+• c) Aprovação;
+– Lei ordinária: 1 turno na Câmara e 1 turno no Senado. Maioria relativa
+– Lei complementar: 1 turno na Câmara e 1 turno no Senado. Maioria absoluta.
+– Emenda à constituição (art. 60, § 2º, da CF): 2 turno na Câmara e 2 turno no Senado.
+Maioria qualificada (3/5 dos membros da Casa)
+• d) Sanção/veto do Poder Executivo.
+– O veto jurídico: ocorre quando o Presidente entende que o projeto de lei é
+inconstitucional.
+– O veto político, por sua vez, ocorre quando o Presidente entende que o projeto de lei é
+contrário ao interesse público (art. 66, § 1º, da CF).
+
+PAGE 17:
+OBS.:
+• No caso de aprovação do projeto de lei, este é encaminhado para sanção ou
+veto do Presidente da República. A sanção pode ser classificada em:
+– a) Expressa: O Presidente manifesta a sua aquiescência de forma expressa;
+– b) Tácita: Não há manifestação expressa durante os primeiros 15 dias úteis;
+• A sanção também pode ser classificada em:
+– a) Total: Há concordância em relação a todo o projeto.
+– b) Parcial: Há concordância em relação a apenas uma parte do projeto. O veto
+só pode ser expresso. O veto pode ser parcial ou total (art. 66, § 2º, da CF).
+• Rejeição de matéria:
+– a) Lei ordinária e lei complementar (art. 67 da CF):
+• Cabe apresentação na mesma sessão, desde que a representação ocorra mediante
+aprovação da maioria absoluta da Câmara dos Deputados ou do Senado;
+• Art. 67. A matéria constante de projeto de lei rejeitado somente poderá constituir objeto
+de novo projeto, na mesma sessão legislativa, mediante proposta da maioria absoluta
+dos membros de qualquer das Casas do Congresso Nacional
+– b) Emenda à Constituição (art. 60, § 5º, da CF):
+• Não cabe a reapresentação na mesma sessão legislativa.
+• Art. 60. (...) § 5º A matéria constante de proposta de emenda rejeitada ou havida por
+prejudicada não pode ser objeto de nova proposta na mesma sessão legislativa.
+
+PAGE 18:
+• FASE COMPLEMENTAR
+– Compreende a promulgação e a publicação da lei.
+• a) Promulgação: Ato que atesta a existência válida da lei, conferindo-
+lhe executoriedade.
+• b) Publicação: Confere exigibilidade (obrigatoriedade) ao
+cumprimento da Lei.
+– Se o Presidente não promulgar a lei em 48 horas, a contar da
+sanção tácita ou da derrubada do veto, essa atribuição
+passará para o Presidente do Senado Federal.
+– Decorridas mais de 48 horas, passar-se-á a incumbência para
+o Vice-Presidente do Senado Federal.
+• Art. 66. (...) § 6º Esgotado sem deliberação o prazo estabelecido no §
+4º, o veto será colocado na ordem do dia da sessão imediata,
+sobrestadas as demais proposições, até sua votação final.
+• § 7º Se a lei não for promulgada dentro de quarenta e oito horas
+pelo Presidente da República, nos casos dos § 3º e § 5º, o Presidente
+do Senado a promulgará, e, se este não o fizer em igual prazo,
+caberá ao Vice Presidente do Senado fazê-lo.
+
+PAGE 19:
+• MEDIDA PROVISÓRIA (MP)
+– A medida provisória da CF/88 substituiu o antigo Decreto-lei das Constituições de 1967
+e EC 1/69
+– Produz dois efeitos imediatos: efeito de natureza normativa e efeito de natureza ritual
+(procedimental).
+– Tem prazo para apreciação de 60 dias, que é prorrogado, automaticamente, por mais 60
+dias em caso de inércia do Congresso Nacional (art. 62, § 7º, da CF). O prazo começa
+com a publicação da medida provisória.
+– Prazo de 60 dias não é contado durante os períodos de recesso parlamentar, ao
+contrário do que ocorria antes da EC 32. Atualmente o prazo é suspenso, o que permite
+que a MP possa ficar em vigor, sem aprovação, por muito mais de 120 dias (art. 62, § 4º,
+da CF).
+– Se a medida provisória não for votada no prazo de 45 dias, a contar de sua publicação,
+ela trancará a pauta do Congresso Nacional, que permaneceu inerte.
+– Quando a MP é editada pelo Presidente e enviada ao Congresso, vai para uma Comissão
+Mista do Congresso, que deverá emitir um parecer, apreciando seus aspectos
+constitucionais (relevância e urgência) e de mérito (art. 62, §§ 5º e 9º, da CF).
+– Se alguma das casas alterar o conteúdo da medida provisória, será imprescindível a
+sanção. Se não houver alteração, a sanção será desnecessária, de modo que caberá ao
+presidente do Congresso realizar a promulgação.
+– A medida provisória não pode revogar lei, pois são atos normativos advindos de
+autoridades diferentes. A revogação só pode ocorrer quando o ato é feito pelo mesmo
+órgão e possui a mesma densidade normativa.
+– Dado o princípio da simetria (suas regras são normas de observância obrigatória),
+entende-se que as Constituições Estaduais podem ofertar ao governador competência
+para editar MP
+
+PAGE 20:
+• Art. 62. Em caso de relevância e urgência, o Presidente
+da República poderá adotar medidas provisórias, com
+força de lei, devendo submetê-las de imediato ao
+Congresso Nacional.
+– § 1º É vedada a edição de medidas provisórias sobre matéria:
+• I - relativa a:
+– a) nacionalidade, cidadania, direitos políticos, partidos políticos e direito
+eleitoral;
+– b) direito penal, processual penal e processual civil;
+– c) organização do Poder Judiciário e do Ministério Público, a carreira e a
+garantia de seus membros;
+– d) planos plurianuais, diretrizes orçamentárias, orçamento e créditos
+adicionais e suplementares, ressalvado o previsto no art. 167, § 3º;
+• II - que vise a detenção ou sequestro de bens, de poupança popular
+ou qualquer outro ativo financeiro;
+• III - reservada a lei complementar;
+• IV - já disciplinada em projeto de lei aprovado pelo Congresso
+Nacional e pendente de sanção ou veto do Presidente da República.
+(...)
+
+PAGE 21:
+• LEIS DELEGADAS
+– Ato normativo primário elaborado pelo Presidente da República,
+após a delegação do Congresso Nacional.
+– Há a delegação de uma função típica (função de legislar) do Poder
+Legislativo ao Presidente da República.
+– Na vigência da CF/88, editaram-se apenas duas leis delegadas.
+Isso ocorre porque o Presidente da República pode editar medidas
+provisórias.
+– PROCESSO LEGISLATIVO DE LEIS DELEGADAS: a) Iniciativa
+solicitadora do Presidente da República; b) Após a solicitação, o
+Congresso Nacional decidirá, por meio de votação, se haverá, ou
+não, a delegação; c) O instrumento da delegação é uma resolução,
+que especificará o conteúdo e os termos do exercício (limitações)
+da lei delegada.
+– Se o Presidente da República exorbitar os limites da resolução, o
+Congresso poderá editar um decreto legislativo, com efeito ex
+nunc (a partir da sua publicação), que irá suspender a parte da lei
+delegada que infringiu os limites da delegação.
+• Art. 49. É da competência exclusiva do Congresso Nacional: (...) V - sustar os
+atos normativos do Poder Executivo que exorbitem do poder regulamentar
+ou dos limites de delegação legislativa; (...)
+
+PAGE 22:
+OBS.:
+– As restrições às leis delegadas são quase as mesmas das medidas provisórias, pois são
+matérias que o Presidente não pode tratar.
+• Art. 68. (...) § 1º Não serão objeto de delegação os atos de competência exclusiva do
+Congresso Nacional, os de competência privativa da Câmara dos Deputados ou do
+Senado Federal, a matéria reservada à lei complementar, nem a legislação sobre:
+• I - organização do Poder Judiciário e do Ministério Público, a carreira e a garantia de
+seus membros;
+• II - nacionalidade, cidadania, direitos individuais, políticos e eleitorais;
+• III - planos plurianuais, diretrizes orçamentárias e orçamentos.
+ESPÉCIES DE DELEGAÇÃO
+
+PAGE 24:
+• DECRETO LEGISLATIVO e RESOLUÇÕES
+– O decreto legislativo é uma das espécies normativas do art. 59 da CF.
+• Art. 59. O processo legislativo compreende a elaboração de:
+• I - emendas à Constituição;
+• II - leis complementares;
+• III - leis ordinárias;
+• IV - leis delegadas;
+• V - medidas provisórias;
+• VI - decretos legislativos;
+• VII - resoluções.
+• Parágrafo único. Lei complementar disporá sobre a elaboração, redação, alteração e
+consolidação das leis.
+– É um instrumento normativo, no qual são materializadas as competências
+exclusivas do Congresso Nacional, previstas no art. 49, I a XVIII, da CF.
+– As regras do seu procedimento estão previstas nos regimentos internos das
+casas ou do Congresso.
+– Além das matérias do art. 49 da CF, o Congresso Nacional regulamentará, por
+decreto legislativo, os efeitos decorrentes da medida provisória não convertida
+em lei.
+– Na resolução, há regulamentação das matérias de competência privativa da
+Câmara dos Deputados (art. 51 da CF) e do Senado Federal (art. 52 da CF). Os
+regimentos internos determinam as regras sobre o processo legislativo.
+
+PAGE 25:
+• Após o processo legislativo ser deflagrado na forma do regimento, a discussão
+ocorre nas respectivas Casas.
+– Resolução da Câmara dos Deputados – Tramitação na Câmara dos Deputados;
+– Resolução do Senado Federal – Tramitação no Senado Federal;
+– Resolução do Congresso Nacional – Tramitação no Congresso Federal.
+• Após a aprovação por maioria simples (art. 47 da CF), há a promulgação do
+Presidente da Casa (Câmara dos Deputados ou Senado Federal).
+• Na resolução do Congresso, a promulgação é feita pelo Presidente do Senado
+Federal. Os mencionados Presidentes determinam a publicação.
+• Outras hipóteses constitucionais de regulamentação por Resolução:
+– Art. 68, § 2º, da CF: O Congresso Nacional delega competência ao Presidente da
+República para elaborar a lei delegada por meio de resolução;
+– Art. 155, § 2º, IV, da CF: fixação alíquotas máximas do imposto sobre transmissão causa
+mortis e doação;
+– Art. 155, § 2º, IV, da CF: fixação de alíquotas aplicáveis às operações e prestações,
+interestaduais e de exportação;
+• Não há manifestação presidencial, para sancionar ou vetar o projeto de resolução
+(art. 48 da CF).
+– Art. 48. Cabe ao Congresso Nacional, com a sanção do Presidente da República, não
+exigida esta para o especificado nos arts. 49, 51 e 52, dispor sobre todas as matérias de
+competência da União, especialmente sobre: (...)
+• Por fim, as resoluções podem instrumentalizar as matérias de competência da
+Câmara dos Deputados, do Senado Federal ou do Congresso Nacional, enquanto os
+decretos legislativos só servem para regulamentar as matérias de competência
+exclusiva do Congresso Nacional (art. 49 da CF).
+
+PAGE 26:
+• PODER EXECUTIVO
+– O Poder Executivo no Brasil, estabelece o art 76, é exercido
+pelo Presidente da República, auxiliado pelos Ministros de
+Estado Como visto, há um acúmulo do exercício das funções
+de Chefe de Estado e de Governo na figura de uma única
+pessoa, no caso, o Presidente da República (Lenza).
+• Art. 76. O Poder Executivo é exercido pelo Presidente da República,
+auxiliado pelos Ministros de Estado.
+– O art. 84 atribui ao Presidente da República competências
+privativas, tanto de natureza de Chefe de estado
+(representando a República Federativa do Brasil nas relações
+internacionais e, internamente, sua unidade, previstas nos
+incisos VII, VIII e XIX do art 84) como de Chefe de Governo
+(prática de atos de administração e de natureza política —
+estes últimos quando participa do processo legislativo —
+conforme se percebe pela leitura das atribuições previstas
+nos incisos I a VI; IX a XVIII e XX a XXVII). (Lenza).
+
+PAGE 27:
+Art. 84. Compete privativamente ao Presidente da República:
+I - nomear e exonerar os Ministros de Estado;
+II - exercer, com o auxílio dos Ministros de Estado, a direção superior da administração federal;
+III - iniciar o processo legislativo, na forma e nos casos previstos nesta Constituição;
+IV - sancionar, promulgar e fazer publicar as leis, bem como expedir decretos e regulamentos
+para sua fiel execução;
+V - vetar projetos de lei, total ou parcialmente;
+VI - dispor sobre a organização e o funcionamento da administração federal, na forma da lei;
+VI - dispor, mediante decreto, sobre:
+a) organização e funcionamento da administração federal, quando não implicar aumento de
+despesa nem criação ou extinção de órgãos públicos;
+b)extinção de funções ou cargos públicos, quando vagos;
+VII - manter relações com Estados estrangeiros e acreditar seus representantes diplomáticos;
+VIII - celebrar tratados, convenções e atos internacionais, sujeitos a referendo do Congresso
+Nacional;
+IX - decretar o estado de defesa e o estado de sítio;
+X - decretar e executar a intervenção federal;
+XI - remeter mensagem e plano de governo ao Congresso Nacional por ocasião da abertura da
+sessão legislativa, expondo a situação do País e solicitando as providências que julgar
+necessárias;
+XII - conceder indulto e comutar penas, com audiência, se necessário, dos órgãos
+instituídos em lei;
+XIII - exercer o comando supremo das Forças Armadas, promover seus oficiais-generais e
+nomeá-los para os cargos que lhes são privativos;
+XIII - exercer o comando supremo das Forças Armadas, nomear os Comandantes da Marinha,
+do Exército e da Aeronáutica, promover seus oficiais-generais e nomeá-los para os cargos que
+lhes são privativos;
+
+PAGE 28:
+XIV - nomear, após aprovação pelo Senado Federal, os Ministros do Supremo Tribunal Federal e dos
+Tribunais Superiores, os Governadores de Territórios, o Procurador-Geral da República, o presidente e os
+diretores do banco central e outros servidores, quando determinado em lei;
+XV - nomear, observado o disposto no art. 73, os Ministros do Tribunal de Contas da União;
+XVI - nomear os magistrados, nos casos previstos nesta Constituição, e o Advogado-Geral da União;
+XVII - nomear membros do Conselho da República, nos termos do art. 89, VII;
+XVIII - convocar e presidir o Conselho da República e o Conselho de Defesa Nacional;
+XIX - declarar guerra, no caso de agressão estrangeira, autorizado pelo Congresso Nacional ou
+referendado por ele, quando ocorrida no intervalo das sessões legislativas, e, nas mesmas condições,
+decretar, total ou parcialmente, a mobilização nacional;
+XX - celebrar a paz, autorizado ou com o referendo do Congresso Nacional;
+XXI - conferir condecorações e distinções honoríficas;
+XXII - permitir, nos casos previstos em lei complementar, que forças estrangeiras transitem pelo território
+nacional ou nele permaneçam temporariamente;
+XXIII - enviar ao Congresso Nacional o plano plurianual, o projeto de lei de diretrizes orçamentárias e as
+propostas de orçamento previstos nesta Constituição;
+XXIV - prestar, anualmente, ao Congresso Nacional, dentro de sessenta dias após a abertura da sessão
+legislativa, as contas referentes ao exercício anterior;
+XXV - prover e extinguir os cargos públicos federais, na forma da lei;
+XXVI - editar medidas provisórias com força de lei, nos termos do art. 62;
+XXVII - exercer outras atribuições previstas nesta Constituição.
+XXVIII - propor ao Congresso Nacional a decretação do estado de calamidade pública de âmbito nacional
+previsto nos arts. 167-B, 167-C, 167-D, 167-E, 167-F e 167-G desta Constituição.
+Parágrafo único. O Presidente da República poderá delegar as atribuições mencionadas nos incisos VI, XII
+e XXV, primeira parte, aos Ministros de Estado, ao Procurador-Geral da República ou ao Advogado-Geral da
+União, que observarão os limites traçados nas respectivas delegações.
+
+PAGE 29:
+• As atribuições conferidas ao Presidente da República estão
+taxativamente previstas no art. 84?
+– O rol do art 84 é meramente exemplificativo, pois, conforme o seu
+inciso XXVII, compete privativamente ao Presidente da República
+exercer não só as atribuições definidas nos incisos precedentes
+bem como outras previstas na CF/88.
+• As atribuições do Presidente da República poderiam elas ser
+delegadas?
+– Sim, porém somente poderá delegar as atribuições previstas nos
+incisos VI, XII e XXV, primeira parte, aos Ministros de Estado, ao
+Procurador-Geral da República ou ao Advogado-Geral da União,
+devendo todos observar os limites traçados nas respectivas
+delegações (cf art 84, parágrafo único). ■
+• dispor, mediante decreto, sobre a organização e o funcionamento da
+administração federal, quando não implicar aumento de despesa nem
+criação ou extinção de órgãos públicos;
+• dispor, mediante decreto, sobre a extinção de funções ou de cargos
+públicos, quando vagos;
+• conceder indulto e comutar penas, com audiência, se necessário, dos
+órgãos instituídos em lei;
+• prover os cargos públicos federais, na forma da lei
+
+PAGE 30:
+• REQUISITOS PARA SER PRESIDENTE DA REPÚBLICA
+– Ser brasileiro nato (art. 12, § 3º, da CF - cargos
+privativos de brasileiros natos):
+– Idade mínima: 35 anos (art. 14, § 3º, da CF - condição de
+elegibilidade).
+– Filiação partidária: No Brasil a filiação partidária é uma
+condição de elegibilidade (art. 14, §3º). Não existem
+candidaturas avulsas, independentes, como pode
+ocorrer nos EUA e Portugal;
+– Plenitude do exercício dos direitos políticos: Significa
+não incorrer nas causas de perda ou suspensão dos
+direitos políticos previstas no art. 15 da CF;
+– Não ser inelegível (art. 14, § 7º, da CF): Ou seja,
+inalistável (estrangeiros e conscritos), ou analfabeto;
+
+PAGE 31:
+• ELEIÇÃO DO PRESIDENTE DA REPÚBLICA
+– O presidente e o vice são eleitos conjuntamente. Trata-se de uma
+novidade da CF/88.
+– Sistema Majoritário
+– Previsão de 1º e 2º turno (Acima de 200.000 eleitores)
+– Fundamento da maioria absoluta: Garantia de legitimidade ao
+eleito, ou seja, garantir que o eleito tenha apoio de, no mínimo, a
+maioria absoluta dos eleitores. Votos válidos: São todos os votos
+ofertados, subtraindo-se os votos em branco e os nulos (art. 77, §
+2º, da CF).
+– O sistema majoritário pode ser do tipo simples (sem segundo
+turno de votação). Neste caso, será eleito o candidato que
+alcançar maioria simples de votos. É adotado nas eleições para
+senadores e prefeitos de municípios com menos de 200.000
+eleitores.
+– No sistema proporcional, valoriza-se o partido político em
+detrimento do candidato. Assim, nem sempre o candidato mais
+votado será eleito. Nesse sistema, é possível o chamado voto de
+legenda. É adotado para deputados estaduais, deputados federais
+e vereadores.
+
+PAGE 32:
+– POSSE DO PRESIDENTE: O Presidente da República e o Vice-
+Presidente tomam posse em sessão conjunta do Congresso
+Nacional, no dia 5 de janeiro do ano seguinte ao pleito
+eleitoral (art. 82 da CF).
+– Se, decorridos 10 dias da data fixada para a posse, o
+Presidente ou o Vice-Presidente, salvo motivo de força maior,
+não tiverem assumido o cargo, este será declarado vago (art.
+78, parágrafo único, da CF).
+– Quem declara os cargos vagos? O Congresso Nacional, pois
+se trata de questão política.
+• Art. 82. O mandato do Presidente da República é de 4 (quatro) anos e
+terá início em 5 de janeiro do ano seguinte ao de sua eleição.
+• Art. 85. São crimes de responsabilidade os atos do Presidente da
+República que atentem contra a Constituição Federal e,
+especialmente, contra: (...)
+– VII - o cumprimento das leis e das decisões judiciais. (...)
+• Art. 78. (...) Parágrafo único. Se, decorridos dez dias da data fixada
+para a posse, o Presidente ou o Vice-Presidente, salvo motivo de
+força maior, não tiver assumido o cargo, este será declarado vago.
+
+PAGE 33:
+– POSSE DO PRESIDENTE: O Presidente da República e o Vice-
+Presidente tomam posse em sessão conjunta do Congresso
+Nacional, no dia 5 de janeiro do ano seguinte ao pleito
+eleitoral (art. 82 da CF).
+– Se, decorridos 10 dias da data fixada para a posse, o
+Presidente ou o Vice-Presidente, salvo motivo de força maior,
+não tiverem assumido o cargo, este será declarado vago (art.
+78, parágrafo único, da CF).
+– Quem declara os cargos vagos? O Congresso Nacional, pois
+se trata de questão política.
+• Art. 82. O mandato do Presidente da República é de 4 (quatro) anos e
+terá início em 5 de janeiro do ano seguinte ao de sua eleição.
+• Art. 85. São crimes de responsabilidade os atos do Presidente da
+República que atentem contra a Constituição Federal e,
+especialmente, contra: (...)
+– VII - o cumprimento das leis e das decisões judiciais. (...)
+• Art. 78. (...) Parágrafo único. Se, decorridos dez dias da data fixada
+para a posse, o Presidente ou o Vice-Presidente, salvo motivo de
+força maior, não tiver assumido o cargo, este será declarado vago.
+
+PAGE 34:
+• SUCESSÃO DO PRESIDENTE DA REPÚBLICA
+– A sucessão é gênero, do qual extraímos duas espécies (art. 79, caput, da
+CF):
+• a) Sucessão em sentido restrito: Ocorre nos casos de vacância (vaga), que é
+definitiva. Ex.: Morte, renúncia, condenação pela prática de crime de
+responsabilidade e incapacidade absoluta superveniente;
+• b) Substituição: Ocorre nos casos de impedimento, que é temporário. Ex.:
+Viagem, férias, licença para tratamento de saúde.
+– Art. 79. Substituirá o presidente, no caso de impedimento, e suceder- lhe-á, no de vaga,
+o Vice-Presidente. Parágrafo único. O Vice-Presidente da República, além de outras
+atribuições que lhe forem conferidas por lei complementar, auxiliará o Presidente,
+sempre que por ele convocado para missões especiais.
+– Os substitutos do Presidente da República são, pela ordem:
+• 1. Vice-Presidente;
+• 2. Presidente da Câmara;
+• 3. Presidente do Senado;
+• 4. Presidente do STF.
+
+PAGE 35:
+– Nota-se que, na linha sucessória do presidente, somente constam
+brasileiros natos, conforme o art. 12, § 3º, da CF:
+• Art. 12. (...) § 3º São privativos de brasileiro nato os cargos: I - de Presidente e
+Vice-Presidente da República; II - de Presidente da Câmara dos Deputados; III -
+de Presidente do Senado Federal; IV - de Ministro do Supremo Tribunal Federal;
+V - da carreira diplomática; VI - de oficial das Forças Armadas. VII - de Ministro
+de Estado da Defesa. (...)
+– Regra: Só o Vice-Presidente pode suceder (definitivamente). Os demais
+podem apenas substituir (temporariamente). São os “substitutos
+eventuais ou legais”.
+– Se o Vice-Presidente suceder o Presidente, ele se tornará o titular. Se
+também vier a morrer, o Presidente da Câmara assumirá em caráter
+temporário, ou seja, somente até que novas eleições sejam realizadas e
+o novo presidente seja eleito (direta ou indiretamente).
+• Art. 81. Vagando os cargos de Presidente e Vice-Presidente da República, far-se-
+á eleição noventa dias depois de aberta a última vaga.
+• § 1º Ocorrendo a vacância nos últimos dois anos do período presidencial, a
+eleição para ambos os cargos será feita trinta dias depois da última vaga, pelo
+Congresso Nacional, na forma da lei.
+• § 2º Em qualquer dos casos, os eleitos deverão completar o período de seus
+antecessores.
+• Art. 83. O Presidente e o Vice-Presidente da República não poderão, sem licença
+do Congresso Nacional, ausentar-se do País por período superior a quinze dias,
+sob pena de perda do cargo.

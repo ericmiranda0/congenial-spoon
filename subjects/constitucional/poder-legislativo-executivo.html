@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Constitucional II – Poderes Legislativo, Executivo e Judiciário | Premium Learning</title>
+  
+  <!-- Fonts: Heading: Outfit | Body: Lora | Labels/Code: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Constitutional Emerald */
+    :root {
+      --p-700: #064E3B;
+      --p-600: #065F46;
+      --p-500: #10B981;
+      --p-550: #059669;
+      --p-50: #ECFDF5;
+    }
+    
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #022C22 100%); }
+    
+    /* Custom Styling for Professor's Directives to draw maximum attention */
+    .professor-focus {
+      background-color: var(--warning-bg);
+      border-left: 6px solid var(--warning);
+      border-top: 1px solid rgba(245, 158, 11, 0.2);
+      border-right: 1px solid rgba(245, 158, 11, 0.2);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .professor-focus:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -3px rgba(245, 158, 11, 0.15), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
+    }
+    
+    .professor-focus .focus-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #D97706, #B45309);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    
+    [data-theme="dark"] .professor-focus {
+      background-color: rgba(217, 119, 6, 0.08);
+      border-top: 1px solid rgba(217, 119, 6, 0.15);
+      border-right: 1px solid rgba(217, 119, 6, 0.15);
+      border-bottom: 1px solid rgba(217, 119, 6, 0.15);
+    }
+    
+    .professor-focus p {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    .professor-focus p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .professor-focus ul, .professor-focus ol {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .professor-focus li {
+      margin-bottom: 0.4rem;
+    }
+    
+    /* Revision Questions Section Styling */
+    .revision-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-top: 3rem;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .revision-question-box {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+    
+    .revision-question-box:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .revision-question-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    
+    .revision-question-number {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      height: fit-content;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    [data-theme="dark"] .revision-question-number {
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--p-500);
+    }
+    
+    .revision-answer {
+      font-family: 'Lora', serif;
+      line-height: 1.7;
+      color: var(--text-main);
+      padding-left: 2.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<header>
+  <div class="container">
+    <div class="badge">Direito Constitucional II</div>
+    <h1>Poderes da República &amp; Processo Legislativo</h1>
+    <div class="subtitle">Guia Acadêmico Completo — Teoria, Jurisprudência &amp; Diretrizes do Professor</div>
+    <div class="meta">
+      <span style="opacity: 0.8; font-size: 0.8rem; margin: 0 10px;">🏛️ Poderes e Ritos</span>
+      <span style="opacity: 0.8; font-size: 0.8rem; margin: 0 10px;">⚖️ Processo Constitucional</span>
+      <span style="opacity: 0.8; font-size: 0.8rem; margin: 0 10px;">📜 CF/88 Atualizada</span>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </a>
+    <div class="nav-list">
+      <a href="#legislativo" class="nav-item">Poder Legislativo</a>
+      <a href="#processo" class="nav-item">Processo Legislativo</a>
+      <a href="#prerrogativas" class="nav-item">Prerrogativas</a>
+      <a href="#executivo" class="nav-item">Poder Executivo</a>
+      <a href="#regulamentar" class="nav-item">Poder Regulamentar</a>
+      <a href="#judiciario" class="nav-item">Poder Judiciário</a>
+      <a href="#guia-revisao" class="nav-item">Guia de Revisão</a>
+      <a href="#resumo" class="nav-item">Resumo</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <!-- SUMÁRIO INTERATIVO -->
+  <div class="summary-card" id="top">
+    <h2>📋 Sumário Interativo</h2>
+    <a href="#legislativo"><span>🏛️</span> 1. Poder Legislativo &amp; Bicameralismo Federativo</a>
+    <a href="#processo"><span>⚙️</span> 2. Processo Legislativo &amp; Espécies Normativas (Art. 59)</a>
+    <a href="#prerrogativas"><span>🛡️</span> 3. Prerrogativas e Imunidades Parlamentares</a>
+    <a href="#executivo"><span>👑</span> 4. Poder Executivo: Chefia, Sucessão e Responsabilidade</a>
+    <a href="#regulamentar"><span>📝</span> 5. Poder Regulamentar e a Teoria dos Decretos</a>
+    <a href="#judiciario"><span>⚖️</span> 6. Poder Judiciário: Estrutura, Garantias e CNJ</a>
+    <a href="#guia-revisao"><span>🎯</span> 7. Respostas ao Guia de Revisão do Professor</a>
+    <a href="#resumo"><span>⚡</span> 8. Resumo Rápido e Direto</a>
+  </div>
+
+  <!-- ============================== -->
+  <!-- 1. PODER LEGISLATIVO & BICAMERALISMO -->
+  <!-- ============================== -->
+  <section id="legislativo">
+    <h2>🏛️ 1. Poder Legislativo &amp; Bicameralismo Federativo</h2>
+    
+    <p>O Poder Legislativo Federal no Brasil adota o modelo de <span class="keyword">bicameralismo federativo</span> (Art. 44, CF/88), caracterizado pela existência de duas casas legislativas que compartilham a competência para formular as leis nacionais e fiscalizar o Poder Executivo. A justificativa para este modelo reside na própria essência do Estado Federal: é preciso garantir tanto a representação da população nacional quanto a representação paritária dos estados-membros da federação.</p>
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Câmara dos Deputados (Art. 45)</th>
+            <th>Senado Federal (Art. 46)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Representação</strong></td>
+            <td>Representa o <strong>povo brasileiro</strong></td>
+            <td>Representa os <strong>Estados</strong> e o <strong>Distrito Federal</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sistema Eleitoral</strong></td>
+            <td>Proporcional (quociente eleitoral e partidário)</td>
+            <td>Majoritário simples (candidato mais votado)</td>
+          </tr>
+          <tr>
+            <td><strong>Composição</strong></td>
+            <td>513 deputados federais (limites de 8 a 70 por Estado/DF)</td>
+            <td>81 senadores (3 por Estado e DF, representação paritária)</td>
+          </tr>
+          <tr>
+            <td><strong>Mandato</strong></td>
+            <td>4 anos (coincide com a Legislatura)</td>
+            <td>8 anos (renovação alternada por 1/3 e 2/3 a cada 4 anos)</td>
+          </tr>
+          <tr>
+            <td><strong>Suplência</strong></td>
+            <td>Não possui suplente nominal (chama-se o próximo da lista partidária)</td>
+            <td>Cada senador é eleito com 2 suplentes nominais (chapa fechada)</td>
+          </tr>
+          <tr>
+            <td><strong>Idade Mínima</strong></td>
+            <td>21 anos na data da posse</td>
+            <td>35 anos na data da posse</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Rito das Casas &amp; Mnemônico Visual das Cúpulas do Congresso:</strong>
+      <p>O professor utiliza as formas arquitetônicas do Congresso Nacional (desenhadas por Oscar Niemeyer) como um mnemônico visual essencial para entender a dinâmica de tramitação e representação legislativa:</p>
+      <ul>
+        <li><strong>A Cúpula voltada para cima ("prato para cima")</strong>: Representa a <strong>Câmara dos Deputados</strong>. A forma aberta simboliza a casa do povo, que é o canal aberto e receptivo a todas as ideias e correntes ideológicas. Em termos de rito, a Câmara atua como a <strong>casa iniciadora</strong> na esmagadora maioria das vezes (cerca de 90% das propostas de lei se iniciam nela).</li>
+        <li><strong>A Cúpula voltada para baixo ("prato para baixo")</strong>: Representa o <strong>Senado Federal</strong>. A cúpula invertida simboliza a reflexão, a ponderação e o amadurecimento dos debates (casa conservadora/revisora). Em termos de rito ordinário, o Senado atua como a <strong>casa revisora</strong>.</li>
+      </ul>
+      <p><strong>Observação de Prova do Professor:</strong> Embora ~90% das leis comecem na Câmara (por força de iniciativa do Executivo, do Judiciário ou de deputados federais), <strong>não há impedimento constitucional</strong> para que o Senado inicie projetos de lei. Por exemplo, projetos de lei propostos por senadores ou comissões internas do Senado iniciam-se obrigatoriamente no próprio Senado, invertendo as funções (Senado como iniciadora e Câmara como revisora), como ocorre comumente nas leis orçamentárias de autoria do Legislativo.</p>
+    </div>
+
+    <div class="note">
+      <span class="box-label">💡 Explicação didática</span>
+      No bicameralismo, o projeto aprovado na casa iniciadora é encaminhado à casa revisora. Se a casa revisora aprovar sem emendas, o projeto vai para sanção presidencial. Se a casa revisora fizer emendas, o projeto <strong>deve voltar</strong> para a casa iniciadora, que decidirá se aceita ou rejeita as alterações (somente no ponto emendado), sem que possa haver novas alterações no texto original já aprovado por ambas.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 2. PROCESSO LEGISLATIVO & ESPÉCIES NORMATIVAS -->
+  <!-- ============================== -->
+  <section id="processo">
+    <h2>⚙️ 2. Processo Legislativo &amp; Espécies Normativas (Art. 59)</h2>
+    
+    <p>O <span class="keyword">processo legislativo</span> é o conjunto ordenado de atos e fases (iniciativa, discussão, votação, sanção/veto, promulgação e publicação) estabelecidos pela Constituição para a criação de atos normativos primários. Esses atos normativos primários buscam validade diretamente na própria Constituição.</p>
+
+    <h3>2.1 Espécies Normativas Primárias (Art. 59, CF)</h3>
+    <p>A CF/88 elenca taxativamente sete espécies normativas primárias:</p>
+    <ol>
+      <li><strong>Emendas à Constituição (EC)</strong>: Modificam o texto constitucional originário, respeitados os limites formais, circunstanciais e materiais (cláusulas pétreas). Exigem quórum de 3/5 em dois turnos em cada casa do Congresso Nacional (Art. 60, §2º).</li>
+      <li><strong>Leis Complementares (LC)</strong>: Reservadas para matérias expressamente indicadas na CF. Seu quórum de aprovação é de <strong>maioria absoluta</strong> (primeiro número inteiro superior à metade dos membros da casa).</li>
+      <li><strong>Leis Ordinárias (LO)</strong>: Tratam de matérias residuais (tudo o que não exige lei complementar). Seu quórum de aprovação é de <strong>maioria relativa/simples</strong> (maioria dos presentes, desde que presente a maioria absoluta da casa).</li>
+      <li><strong>Leis Delegadas</strong>: Elaboradas pelo Presidente da República após autorização e delegação expressa do Congresso Nacional por meio de Resolução.</li>
+      <li><strong>Medidas Provisórias (MP)</strong>: Atos editados pelo Presidente em casos de relevância e urgência.</li>
+      <li><strong>Decretos Legislativos</strong>: Atos do Congresso Nacional sobre matérias de sua competência exclusiva (Art. 49).</li>
+      <li><strong>Resoluções</strong>: Atos que regulam matérias de competência privativa de cada casa (Câmara, Senado) ou do próprio Congresso.</li>
+    </ol>
+
+    <div class="essential">
+      <span class="box-label">⚠️ Diferença Crítica: Lei Complementar vs. Lei Ordinária</span>
+      Para o STF e STJ, <strong>não existe hierarquia</strong> entre Lei Complementar e Lei Ordinária. Ambas estão no mesmo patamar de validade normativa. O critério diferenciador é unicamente a <strong>repartição de campos materiais</strong> feito pela CF e o quórum de aprovação. Uma lei ordinária que trate de matéria reservada a lei complementar padece de inconstitucionalidade material (vício de quórum). Se uma lei complementar tratar de matéria ordinária, ela vale como ordinária e pode ser alterada por lei ordinária posterior.
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Medida Provisória (MP) e suas Restrições Críticas (Art. 62, §1º):</strong>
+      <p>As Medidas Provisórias possuem <strong>força de lei ordinária</strong> imediatamente no ato de sua publicação pelo Presidente da República. Por terem caráter transitório, estão sujeitas a ritos rigorosos de conversão em lei e controle material:</p>
+      <ul>
+        <li><strong>Vedações Absolutas de Matéria:</strong> O Art. 62, §1º da CF/88 elenca vedações intransponíveis para a edição de MPs. A diretriz acadêmica mais cobrada em prova é que <strong>é vedada a edição de Medidas Provisórias para matérias reservadas a LEI COMPLEMENTAR</strong>.</li>
+        <li><strong>Outras vedações:</strong> Nacionalidade, cidadania, direitos políticos, partidos políticos, direito penal, processual penal e processual civil, organização do Poder Judiciário e do Ministério Público, planos plurianuais, diretrizes orçamentárias e orçamento, além de medidas que impliquem o sequestro de bens, poupança ou qualquer outro ativo financeiro.</li>
+        <li><strong>Prazo de Validade:</strong> As MPs vigoram por <strong>60 dias</strong>. Se o Congresso Nacional não concluir a votação nesse período, o prazo é <strong>prorrogado automaticamente uma única vez por mais 60 dias</strong> (totalizando no máximo 120 dias).</li>
+        <li><strong>Suspensão nos Recessos:</strong> A contagem dos dias da MP <strong>fica suspensa</strong> durante os períodos de recesso parlamentar do Congresso. Isso significa que, na prática, a vigência de fato da MP pode superar em muito os 120 dias corridos caso coincida com o recesso parlamentar.</li>
+        <li><strong>Trancamento de Pauta (Art. 62, §6º):</strong> Se a MP não for julgada em até 45 dias a contar de sua publicação, ela entra em regime de urgência, <strong>sobrestando (trancando) todas as demais deliberações legislativas</strong> da Casa em que estiver tramitando, até que seja votada.</li>
+        <li><strong>Comissão Mista:</strong> Antes de ir ao plenário de cada casa, a MP é examinada por uma Comissão Mista de Deputados e Senadores, que emitirá parecer sobre a relevância, urgência e mérito.</li>
+      </ul>
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Decretos Legislativos e Resoluções vs. Veto Presidencial:</strong>
+      <p>Tanto os <strong>Decretos Legislativos</strong> quanto as <strong>Resoluções</strong> manifestam a manifestação política e legislativa isolada e independente do Congresso Nacional ou de suas Casas. Por esse motivo, <strong>não estão sujeitos a sanção ou veto do Presidente da República</strong>. A promulgação dessas espécies normativas é feita pela própria Mesa Diretora do Legislativo.</p>
+    </div>
+
+    <h3>2.2 Devido Processo Legislativo Constitucional</h3>
+    <p>Refere-se ao direito público subjetivo assegurado aos parlamentares (Deputados e Senadores) de exigir que o processo de elaboração normativa siga fielmente os trâmites, ritos e limites formais dispostos na Constituição Federal.</p>
+    <div class="highlight">
+      <span class="box-label">🔍 Controle Preventivo de Constitucionalidade pelo Judiciário</span>
+      No Brasil, o Poder Judiciário só realiza controle preventivo de constitucionalidade (antes do projeto virar lei) em uma única hipótese: <strong>Mandado de Segurança impetrado por parlamentar em exercício na respectiva casa legislativa onde tramita o projeto</strong>. O parlamentar alega violação ao devido processo legislativo constitucional (por exemplo, tentativa de votar uma PEC que viola cláusula pétrea, ou ausência de comissão obrigatória).
+      <ul>
+        <li>O parlamentar deve estar no exercício do mandato.</li>
+        <li>Se o parlamentar perder o mandato (renúncia, cassação) ou se o projeto de lei for aprovado e promulgado, o MS perde o objeto, restando apenas o controle repressivo posterior (ADI, etc.).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 3. PRERROGATIVAS E IMUNIDADES PARLAMENTARES -->
+  <!-- ============================== -->
+  <section id="prerrogativas">
+    <h2>🛡️ 3. Prerrogativas e Imunidades Parlamentares</h2>
+    
+    <p>As <span class="keyword">prerrogativas parlamentares</span> (imunidades, foro especial, isenção de testemunho) são garantias constitucionais outorgadas aos membros do Poder Legislativo para assegurar o livre exercício de suas funções, garantindo a independência das Casas frente a eventuais abusos ou perseguições políticas promovidas pelos demais Poderes ou grupos opressores.</p>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Finalidade das Garantias — O Mandato vs. O Indivíduo:</strong>
+      <p>As garantias parlamentares <strong>visam proteger o mandato eletivo (a função) e a integridade da instituição legislativa, e NÃO o indivíduo que ocupa o cargo</strong>. Por essa razão jurídica:</p>
+      <ul>
+        <li><strong>Irrenunciabilidade:</strong> As imunidades parlamentares são irrenunciáveis. O deputado ou senador não pode abrir mão de sua imunidade material ou formal em juízo ou fora dele, pois o titular da garantia é o Poder Legislativo como órgão estatal.</li>
+        <li><strong>Exclusão de Suplentes:</strong> O suplente de deputado ou senador <strong>não é considerado parlamentar enquanto não assumir efetivamente o cargo em substituição</strong>. Logo, o suplente não goza de nenhuma das imunidades materiais, formais ou de foro por prerrogativa de função, ainda que esteja diplomado.</li>
+      </ul>
+    </div>
+
+    <h3>3.1 Imunidade Material (Art. 53, caput)</h3>
+    <p>Determina a inviolabilidade civil e penal dos deputados e senadores por quaisquer de suas opiniões, palavras e votos. Divide-se em dois cenários conforme a jurisprudência do STF:</p>
+    <ul>
+      <li><strong>Manifestações dentro do Congresso Nacional:</strong> Gozam de <strong>presunção absoluta de conexão funcional</strong>. Significa que opiniões proferidas no recinto das Casas Legislativas consideram-se, de antemão, ligadas ao exercício da função de parlamentar. Eventuais abusos devem ser analisados exclusivamente pela respectiva Casa sob a ótica da quebra de decoro parlamentar (questão <em>interna corporis</em>).</li>
+      <li><strong>Manifestações fora do Congresso Nacional:</strong> Não gozam de presunção. Para estarem protegidas pela imunidade, <strong>deve haver nexo de causalidade (conexão direta)</strong> entre as opiniões emitidas e o exercício do mandato legislativo. Manifestações sobre temas puramente particulares ou disputas alheias à função de parlamentar não encontram amparo.</li>
+    </ul>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Imunidade Formal (Relacionada à Prisão e ao Processo):</strong>
+      <p>A imunidade formal processual visa resguardar a liberdade física e o pleno exercício das funções do parlamentar contra perseguições judiciais:</p>
+      <ol>
+        <li><strong>Imunidade Relativa à Prisão (Art. 53, §2º) - A Regra de Ouro:</strong> Os membros do Congresso Nacional, desde a expedição do diploma, <strong>não poderão ser presos, SALVO em flagrante de crime inafiançável</strong>.
+          <br><em>O que isso significa na prática?</em> <strong>Não cabe nenhum tipo de prisão penal cautelar</strong> (prisão preventiva, prisão temporária ou flagrante de crime afiançável) para deputados e senadores. A única prisão processual admitida é o flagrante de crime inafiançável (ex: racismo, tortura, crimes hediondos).
+        </li>
+        <li><strong>Deliberação pela Casa Legislativa:</strong> Ocorrendo a prisão em flagrante de crime inafiançável, os autos devem ser remetidos no prazo de <strong>24 horas</strong> à respectiva Casa (Câmara ou Senado) para que, pelo voto da <strong>maioria absoluta</strong> de seus membros, resolva sobre a manutenção ou revogação da prisão.</li>
+        <li><strong>Imunidade Relativa ao Processo (Art. 53, §3º):</strong> Recebida a denúncia pelo STF contra parlamentar por crime ocorrido <strong>após a diplomação</strong>, o STF deve dar ciência à Casa respectiva. Por iniciativa de partido político nela representado e pelo voto da <strong>maioria absoluta</strong> dos membros da Casa, <strong>o andamento da ação penal pode ser sustado (suspenso)</strong> até a decisão final do mandato.
+          <br><em>Nota crítica:</em> O pedido de sustação deve ser apreciado no prazo improrrogável de 45 dias. A sustação do processo <strong>suspende o prazo de prescrição criminal</strong> enquanto durar o mandato para evitar a impunidade.
+        </li>
+      </ol>
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Foro por Prerrogativa de Função (Art. 53, §1º &amp; Jurisprudência do STF):</strong>
+      <p>Compete originariamente ao <strong>Supremo Tribunal Federal (STF)</strong> julgar deputados federais e senadores nas infrações penais comuns (Art. 102, I, 'b'). No entanto, o STF restringiu sensivelmente a aplicação do foro especial no julgamento da <strong>Questão de Ordem na AP 937 (2018)</strong>:</p>
+      <ul>
+        <li>O foro por prerrogativa de função perante o STF aplica-se <strong>apenas aos crimes cometidos no cargo (durante o exercício do mandato) E em razão do cargo (com nexo funcional com a atividade parlamentar)</strong>.</li>
+        <li>Crimes cometidos antes de assumir o cargo ou crimes praticados na vigência do mandato que não guardem relação funcional (ex: crime passional doméstico) devem ser processados na primeira instância da Justiça comum.</li>
+        <li><strong>Não aplicação civil:</strong> O foro privilegiado <strong>não se aplica</strong> para ações de natureza não penal, tais como improbidade administrativa ou ações de reparação por danos civis. Nessas hipóteses, o processo corre normalmente na primeira instância.</li>
+        <li><strong>Súmula 245 do STF:</strong> A imunidade parlamentar <strong>não se estende aos corréus</strong> (cúmplices) que não detêm a prerrogativa parlamentar. O processo do corréu será desmembrado e julgado na primeira instância.</li>
+      </ul>
+    </div>
+
+    <h3>3.2 Extensão das Imunidades aos demais entes</h3>
+    <p>O princípio da simetria constitucional determina a divisão das garantias legislativas aos âmbitos estadual e municipal:</p>
+    
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Cargo</th>
+            <th>Imunidade Material</th>
+            <th>Imunidade Formal (Prisão / Processo)</th>
+            <th>Foro por Prerrogativa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Deputados Federais e Senadores</strong></td>
+            <td>Sim (em todo o território nacional)</td>
+            <td>Sim (conforme art. 53 da CF)</td>
+            <td>STF (crimes funcionais)</td>
+          </tr>
+          <tr>
+            <td><strong>Deputados Estaduais / Distritais</strong></td>
+            <td>Sim (extensão plena em todo o território nacional)</td>
+            <td>Sim (extensão plena garantida pelo Art. 27, §1º da CF e julgado STF ADI 5.823)</td>
+            <td>Tribunal de Justiça (TJ) do respectivo Estado</td>
+          </tr>
+          <tr>
+            <td><strong>Vereadores</strong></td>
+            <td><strong>Sim, porém restrita aos limites territoriais do Município</strong> (Art. 29, VIII)</td>
+            <td>❌ <strong>Não possui nenhuma imunidade formal</strong> (podem ser presos preventivamente)</td>
+            <td>❌ <strong>Não há foro por prerrogativa na CF</strong> (embora a Constituição Estadual possa prever no TJ)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>3.3 Perda de Mandato (Cassação vs. Extinção)</h3>
+    <p>A perda do mandato parlamentar ocorre por meio de dois procedimentos de naturezas distintas estabelecidos pelo Art. 55 da Constituição Federal:</p>
+    <ul>
+      <li><strong>Cassação do Mandato (Art. 55, I, II e VI):</strong> Decorre de um <strong>julgamento político</strong> realizado pelo plenário da respectiva Casa. Exige provocação da Mesa ou de partido representado e votação por <strong>maioria absoluta</strong> dos membros.
+        <br><em>Hipóteses:</em> Infringir as incompatibilidades do cargo (Art. 54), procedimento declarado incompatível com o decoro parlamentar, ou sofrer condenação criminal transitada em julgado (Embora haja oscilações na jurisprudência do STF, o texto expresso da CF prevê deliberação e cassação pela Casa nesses três casos). A votação sobre perda de mandato passou a ser aberta (voto aberto) a partir da EC 76/2013.
+      </li>
+      <li><strong>Extinção do Mandato (Art. 55, III, IV e V):</strong> Decorre de ato meramente declaratório e <strong>vinculado</strong> da própria Mesa Diretora da Casa, de ofício ou provocação. Não há deliberação política em plenário; ocorrendo a situação factual descrita na CF, a Mesa é obrigada a declarar a extinção do cargo.
+        <br><em>Hipóteses:</em> Deixar de comparecer a mais da terça parte (1/3) das sessões ordinárias na sessão legislativa (salvo licença), perder ou ter suspensos os direitos políticos, ou quando decretado pela Justiça Eleitoral nos casos previstos na CF.
+      </li>
+      <li><strong>Renúncia de Parlamentar (Art. 55, §4º):</strong> A renúncia de parlamentar submetido a processo que vise ou possa levar à perda do mandato (cassação) terá seus <strong>efeitos suspensos</strong> até as deliberações finais. Visa impedir que o parlamentar renuncie apenas para escapar da punição de inabilitação política.</li>
+    </ul>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 4. PODER EXECUTIVO -->
+  <!-- ============================== -->
+  <section id="executivo">
+    <h2>👑 4. Poder Executivo: Chefia, Sucessão e Responsabilidade</h2>
+    
+    <p>O Poder Executivo no Brasil é estruturado sob o sistema presidencialista de governo. A figura central do Executivo Federal é o <span class="keyword">Presidente da República</span>, auxiliado diretamente pelos Ministros de Estado.</p>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Acúmulo de Funções no Presidencialismo Brasileiro:</strong>
+      <p>No sistema presidencialista brasileiro, o Presidente da República acumula duas funções políticas distintas em sua pessoa, exercendo de forma unificada as competências de:</p>
+      <ol>
+        <li><strong>Chefe de Estado:</strong> Representa a soberania da República Federativa do Brasil nas relações internacionais, mantendo relações com estados estrangeiros, celebrando tratados (sujeitos a referendo do Congresso) e declarando guerra ou celebrando paz.</li>
+        <li><strong>Chefe de Governo:</strong> Representa o comando interno da administração pública federal, exercendo a direção superior da administração pública, propondo leis orçamentárias, nomeando e exonerando ministros e editando medidas provisórias.</li>
+      </ol>
+    </div>
+
+    <h3>4.1 Requisitos de Elegibilidade e Mandato</h3>
+    <p>Para candidatar-se e ser eleito Presidente ou Vice-Presidente da República, o cidadão deve satisfazer cumulativamente os seguintes requisitos no momento do registro da candidatura:</p>
+    <ul>
+      <li>Ser <strong>brasileiro nato</strong> (art. 12, §3º, I da CF);</li>
+      <li>Idade mínima de <strong>35 anos</strong> (art. 14, §3º, VI, 'a' da CF);</li>
+      <li>Estar no pleno exercício dos direitos políticos;</li>
+      <li>Possuir alistamento eleitoral e domicílio eleitoral na circunscrição do país;</li>
+      <li>Estar filiado a um <strong>partido político</strong> (o sistema constitucional brasileiro veda candidaturas avulsas).</li>
+    </ul>
+    <p>O mandato presidencial é de <strong>4 anos</strong>, permitida a reeleição para um único período subsequente. A posse ocorre no dia <strong>5 de janeiro</strong> do ano seguinte à eleição. Se, após 10 dias da data fixada para a posse, o eleito (salvo força maior) não tiver assumido o cargo, este será declarado vago pelo Congresso Nacional.</p>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Dinâmica da Sucessão e Substituição Presidencial (Arts. 79, 80 e 81):</strong>
+      <p>Em caso de impedimentos ou vacância do cargo do Presidente da República, o processo segue caminhos definidos:</p>
+      <ul>
+        <li><strong>Sucessão Definitiva (Vacância definitiva por morte, renúncia ou cassação):</strong> O único que <strong>sucede em caráter definitivo</strong> e assume o cargo de titular é o <strong>Vice-Presidente da República</strong>.</li>
+        <li><strong>Substituição Temporária (Impedimentos provisórios como férias, viagens e licenças):</strong> O impedido é substituído temporariamente pelos chamados <strong>substitutos legais/eventuais</strong>, na seguinte ordem de precedência:
+          <br><strong>1. Vice-Presidente da República</strong>
+          <br><strong>2. Presidente da Câmara dos Deputados</strong> (casa do povo)
+          <br><strong>3. Presidente do Senado Federal</strong> (casa federativa)
+          <br><strong>4. Presidente do Supremo Tribunal Federal (STF)</strong> (cúpula do Judiciário)
+          <br><em>Nota Crítica:</em> Se o Presidente da Câmara, do Senado ou do STF forem réus em ação penal perante o STF, eles ficam impedidos de assumir a linha de substituição temporária do Presidente.
+        </li>
+        <li><strong>Dupla Vacância (Vacância simultânea dos cargos de Presidente e Vice):</strong>
+          <ul>
+            <li><strong>Nos primeiros 2 anos do mandato:</strong> Realizam-se <strong>eleições diretas no prazo de 90 dias</strong> após a abertura da última vaga. O povo vota diretamente no novo Presidente e Vice.</li>
+            <li><strong>Nos últimos 2 anos do mandato:</strong> Realizam-se <strong>eleições indiretas no prazo de 30 dias</strong> após a última vaga. Os eleitores serão os próprios membros do Congresso Nacional (Senadores e Deputados), na forma da lei especial.</li>
+            <li><strong>Mandato-Tampão:</strong> Em ambos os casos, os novos eleitos assumirão os cargos apenas para completar o período remanescente de seus antecessores (mandato-tampão), para que a coincidência das eleições legislativas e presidenciais seja preservada.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Crimes de Responsabilidade (Impeachment) vs. Crimes Comuns:</strong>
+      <p>O Presidente da República sujeita-se a dois regimes de responsabilidade jurídica distintos durante o exercício do cargo:</p>
+      
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Crimes de Responsabilidade (Art. 85)</th>
+              <th>Infrações Penais Comuns (Art. 86)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Natureza Jurídica</strong></td>
+              <td>Infração <strong>político-administrativa</strong> (não penal)</td>
+              <td>Infração <strong>penal</strong> (crimes e contravenções comuns)</td>
+            </tr>
+            <tr>
+              <td><strong>Tipificação</strong></td>
+              <td>Definida em Lei Especial Federal (Lei 1.079/50). Súmula Vinculante 46 STF (competência privativa da União)</td>
+              <td>Definidos pelo Código Penal e Leis Penais Especiais</td>
+            </tr>
+            <tr>
+              <td><strong>Admissibilidade</strong></td>
+              <td>Exige autorização de <strong>2/3 da Câmara dos Deputados</strong></td>
+              <td>Exige autorização de <strong>2/3 da Câmara dos Deputados</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Órgão Julgador</strong></td>
+              <td><strong>Senado Federal</strong> (sessão presidida pelo Presidente do STF)</td>
+              <td><strong>Supremo Tribunal Federal (STF)</strong> (foro prerrogativa)</td>
+            </tr>
+            <tr>
+              <td><strong>Sanções Aplicáveis</strong></td>
+              <td><strong>Perda do cargo</strong> + <strong>inabilitação por 8 anos</strong> para função pública. ❌ Não cabe pena de prisão.</td>
+              <td>Penas privativas de liberdade (prisão), multas e restritivas de direitos.</td>
+            </tr>
+            <tr>
+              <td><strong>Afastamento Cautelar</strong></td>
+              <td>Afastado das funções por 180 dias se instaurado o processo pelo Senado Federal</td>
+              <td>Afastado das funções por 180 dias se recebida a denúncia/queixa pelo STF</td>
+            </tr>
+            <tr>
+              <td><strong>Imunidade Temporária</strong></td>
+              <td>❌ Não há. Responde normalmente por atos políticos na função.</td>
+              <td>✅ <strong>Sim. Irresponsabilidade penal relativa</strong> (Art. 86, §4º). Não pode ser processado por atos estranhos às funções.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p><strong>Aprofundamento na Irresponsabilidade Penal Relativa (Art. 86, §4º):</strong> O Presidente da República, na vigência de seu mandato, não pode ser responsabilizado por atos estranhos ao exercício de suas funções. Exemplos didáticos do professor:</p>
+      <ul>
+        <li><strong>Crime cometido antes do mandato:</strong> O processo penal por crime cometido antes de assumir o cargo fica <strong>suspenso</strong> e a prescrição penal corre suspensa até o fim do mandato presidencial. O STF assume como juízo competente, mas o processo não avança enquanto durar o cargo.</li>
+        <li><strong>Homicídio passional doméstico cometido durante o mandato:</strong> Por não possuir nexo com a função, o Presidente <strong>não pode ser preso cautelarmente nem processado criminalmente</strong> na vigência do mandato. O processo aguardará o término do cargo.</li>
+        <li><strong>Corrupção ativa praticada durante o mandato com verbas federais:</strong> Por guardar nexo funcional com a presidência, constitui crime <em>in officio</em>. Preenchido o quórum de admissibilidade de 2/3 da Câmara, o processo prosseguirá normalmente no STF.</li>
+      </ul>
+    </div>
+
+    <div class="note">
+      <span class="box-label">💡 Explicação didática sobre recall</span>
+      O <strong>Recall</strong> é um instituto de democracia direta que permite à população revogar o mandato político de um eleito antes do prazo regular por meio de plebiscito/referendo popular (comum em alguns estados dos EUA e na Suíça). <strong>No ordenamento jurídico brasileiro, o recall NÃO é previsto</strong>. A única forma de destituição antecipada do Presidente por ato institucional é o processo de Impeachment ou condenação penal no STF.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 5. PODER REGULAMENTAR -->
+  <!-- ============================== -->
+  <section id="regulamentar">
+    <h2>📝 5. Poder Regulamentar e a Teoria dos Decretos</h2>
+    
+    <p>O <span class="keyword">Poder Regulamentar</span> (ou executivo) é a prerrogativa conferida ao Chefe do Poder Executivo para editar atos administrativos gerais e abstratos (especialmente decretos e regulamentos) destinados a detalhar ou possibilitar a aplicação das leis, garantindo sua fiel execução no plano prático.</p>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Decreto Regulamentar Comum (Executivo) vs. Exemplo de Drogas e Armas:</strong>
+      <p>O decreto regulamentar comum de execução (Art. 84, IV da CF) emana diretamente de uma lei anterior para detalhar suas minúcias técnicas. O Executivo não pode criar obrigações novas ou alterar a substância da lei.</p>
+      <ul>
+        <li><strong>Exemplo Prático e Clássico:</strong> A lei penal brasileira tipifica o crime de tráfico de drogas, mas utiliza um termo indeterminado (norma penal em branco: "droga"). Quem define tecnicamente o rol de substâncias consideradas entorpecentes/drogas proibidas é o Poder Executivo, através de uma portaria técnica (Anvisa) fundamentada em Decreto Regulamentar do Executivo. A lei cria a infração criminal, mas a minúcia técnica é regulada pelo decreto executivo. O mesmo vale para o detalhamento sobre o que constitui "arma de fogo" de uso restrito ou permitido.</li>
+      </ul>
+    </div>
+
+    <h3>5.1 Decreto Regulamentar vs. Decreto Autônomo</h3>
+    <p>O ordenamento constitucional brasileiro admite duas modalidades de decretos editados pelo Executivo:</p>
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Decreto Regulamentar / Executivo (Art. 84, IV)</th>
+            <th>Decreto Autônomo (Art. 84, VI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fundamentação</strong></td>
+            <td>Subordinado à existência de uma <strong>lei ordinária ou complementar anterior</strong>.</td>
+            <td>Busca fundamentação <strong>diretamente no texto constitucional</strong> (Art. 84, VI).</td>
+            
+          </tr>
+          <tr>
+            <td><strong>Finalidade</strong></td>
+            <td>Garantir a <strong>fiel execução da lei</strong> no plano fático e administrativo.</td>
+            <td>Substituir a lei, inovando originariamente em matérias restritas administrativas.</td>
+          </tr>
+          <tr>
+            <td><strong>Matérias Permitidas</strong></td>
+            <td>Qualquer assunto regulado por lei que necessite de regulamentação.</td>
+            <td>Apenas duas hipóteses expressas:<br>
+              a) Organização e funcionamento da administração federal (quando não implicar aumento de despesa nem criação/extinção de órgãos).<br>
+              b) Extinção de funções ou cargos públicos, <strong>quando vagos</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Delegação</strong></td>
+            <td>❌ Não delegável. Privativo do Chefe do Executivo.</td>
+            <td>✅ <strong>Delegável</strong> aos Ministros de Estado, Procurador-Geral da República ou Advogado-Geral da União (Art. 84, parágrafo único).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning">
+      <span class="box-label">⚠️ Limites do Regulamento e Abuso de Poder</span>
+      Caso o decreto regulamentar exorbite a lei que deveria detalhar (criando tributos, restrições ou obrigações novas), ele comete abuso de poder regulamentar. O Art. 49, V da CF outorga competência exclusiva ao Congresso Nacional para <strong>sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar</strong> ou dos limites de delegação legislativa. Adicionalmente, o cidadão pode arguir a ilegalidade ou inconstitucionalidade do ato regulamentar perante o Poder Judiciário.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 6. PODER JUDICIÁRIO -->
+  <!-- ============================== -->
+  <section id="judiciario">
+    <h2>⚖️ 6. Poder Judiciário: Estrutura, Garantias e CNJ</h2>
+    
+    <p>O Poder Judiciário tem a função social e política de pacificar os conflitos na sociedade por meio da aplicação imperativa do ordenamento jurídico, dirimindo controvérsias com o selo da definitividade.</p>
+
+    <h3>6.1 Funções do Judiciário</h3>
+    <ul>
+      <li><strong>Função Típica (Jurisdição):</strong> Aplicação da lei ao caso concreto por um terceiro imparcial mediante processo formal, visando tutelar situações jurídicas de modo imperativo e criativo, em decisão apta a se tornar indiscutível pela <strong>coisa julgada</strong>, operando a substituição da vontade das partes em litígio (heterocomposição).</li>
+      <li><strong>Funções Atípicas (Autoadministração e Legislação):</strong> O Judiciário legisla ao editar os <strong>Regimentos Internos</strong> de seus tribunais e administra ao gerir seus servidores públicos, organizar seus quadros administrativos e prover cargos.</li>
+    </ul>
+
+    <h3>6.2 Garantias Funcionais e Judiciais</h3>
+    <p>Para assegurar a independência de julgamento e afastar pressões políticas e sociais, a CF/88 outorga três garantias fundamentais aos membros da magistratura (Art. 95):</p>
+    <ol>
+      <li><strong>Vitaliciedade:</strong> Em primeiro grau de jurisdição (juízes substitutos), adquire-se a vitaliciedade após <strong>dois anos de exercício</strong> efetivo. Após a vitaliciedade, a perda do cargo de juiz só pode ocorrer por força de <strong>sentença judicial transitada em julgado</strong> (em oposição aos servidores públicos comuns estáveis, que podem perder o cargo em processo administrativo disciplinar). Nos Tribunais, a vitaliciedade é adquirida de forma imediata no momento da posse.</li>
+      <li><strong>Inamovibilidade:</strong> O juiz não pode ser removido ou transferido do seu juízo de atuação, salvo por ato motivado de interesse público aprovado pelo voto de 2/3 do respectivo tribunal ou do CNJ, assegurada ampla defesa.</li>
+      <li><strong>Irredutibilidade de Subsídio:</strong> Proteção financeira para obstar perseguições pecuniárias aos magistrados por conta de decisões contrárias ao Executivo ou Legislativo.</li>
+    </ol>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>O Quinto Constitucional (Art. 94):</strong>
+      <p>Trata-se de um mecanismo de oxigenação e democratização dos órgãos colegiados do Poder Judiciário, trazendo profissionais de outras origens e vivências acadêmicas para os tribunais:</p>
+      <ul>
+        <li><strong>Tribunais Abrangidos:</strong> Aplica-se aos Tribunais de Justiça dos Estados (TJ), Tribunais Regionais Federais (TRF), Tribunais Regionais do Trabalho (TRT) e Tribunal Superior do Trabalho (TST).</li>
+        <li><strong>Fração e Classes:</strong> <strong>1/5 (um quinto - 20%) das vagas</strong> desses tribunais devem ser preenchidas por membros do <strong>Ministério Público</strong> (com mais de 10 anos de carreira) e por <strong>Advogados</strong> de notório saber jurídico e de reputação ilibada (com mais de 10 anos de efetiva atividade profissional).</li>
+        <li><strong>Rito de Escolha:</strong> A classe correspondente (OAB ou Ministério Público) elege uma <strong>lista sêxtupla (6 nomes)</strong>. Essa lista é enviada ao Tribunal, que a reduz para uma <strong>lista tríplice (3 nomes)</strong>. Finalmente, a lista tríplice é enviada ao Chefe do Poder Executivo (Governador do Estado ou Presidente da República), que livremente escolhe um nome e o nomeia para a vaga vitalícia do Tribunal.</li>
+      </ul>
+    </div>
+
+    <!-- PROFESSOR FOCUS BOX -->
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Conselho Nacional de Justiça (CNJ) e a Ausência de Jurisdição:</strong>
+      <p>O CNJ é um órgão interno de controle de constitucionalidade e controle institucional do Poder Judiciário criado pela EC 45/2004:</p>
+      <ul>
+        <li><strong>Atenção de Prova: O CNJ NÃO possui nenhuma função jurisdicional</strong>. O CNJ não julga ações judiciais, não analisa recursos de mérito, não decide controvérsias de direito entre cidadãos e não anula decisões judiciais. Sua função constitucional é <strong>estritamente administrativa, financeira e de fiscalização disciplinar</strong> dos juízes e tribunais brasileiros (Art. 103-B, §4º).</li>
+      </ul>
+    </div>
+
+    <h3>6.3 Organização do Poder Judiciário (Art. 92)</h3>
+    <p>Os órgãos do Poder Judiciário organizam-se de forma hierarquizada. No topo da pirâmide jurisdicional está o <strong>Supremo Tribunal Federal (STF)</strong>, composto por 11 ministros nomeados pelo Presidente (após aprovação do Senado por maioria absoluta), cuja função precípua é a guarda da Constituição Federal por meio do controle de constitucionalidade das leis e atos normativos.</p>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 7. RESPOSTAS AO GUIA DE REVISÃO DO PROFESSOR -->
+  <!-- ============================== -->
+  <section id="guia-revisao" class="revision-card">
+    <h2 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">🎯 7. Respostas ao Guia de Revisão do Professor</h2>
+    <p>Abaixo estão as respostas fundamentadas, detalhadas e completas para as 5 perguntas de revisão propostas pelo professor no guia de estudos da prova:</p>
+
+    <!-- QUESTION 1 -->
+    <div class="revision-question-box">
+      <div class="revision-question-title">
+        <span class="revision-question-number">Pergunta 1</span>
+        Quais as funções das prerrogativas parlamentares?
+      </div>
+      <div class="revision-answer">
+        As prerrogativas parlamentares cumprem a função institucional de <strong>assegurar a independência orgânica do Poder Legislativo e a liberdade de atuação política dos seus membros</strong> frente a eventuais ingerências e perseguições políticas dos demais Poderes do Estado (Executivo e Judiciário) ou de grupos de pressão. Elas <strong>protegerão o mandato eletivo, e não a pessoa física do parlamentar</strong>. Por serem proteções institucionais de interesse público, as prerrogativas são <strong>irrenunciáveis</strong>, impedindo que o parlamentar abra mão delas. Dividem-se em <strong>imunidades materiais</strong> (liberdade plena de manifestação política por opiniões, palavras e votos) e <strong>imunidades formais</strong> (proteção processual contra prisões arbitrárias e andamento de processos sem a deliberação da Casa Legislativa).
+      </div>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="revision-question-box">
+      <div class="revision-question-title">
+        <span class="revision-question-number">Pergunta 2</span>
+        Como se diferencia o veto político do veto jurídico?
+      </div>
+      <div class="revision-answer">
+        O veto presidencial, exercido pelo Chefe do Poder Executivo na fase constitutiva do processo legislativo, diferencia-se de acordo com o fundamento de sua recusa:
+        <ul>
+          <li><strong>Veto Político:</strong> Ocorre quando o Presidente entende que o projeto de lei aprovado pelo Legislativo é <strong>contrário ao interesse público</strong>. O fundamento aqui é de conveniência e oportunidade política, ou seja, o Presidente avalia que a medida não é oportuna ou benéfica para a sociedade no momento, embora seja perfeitamente constitucional.</li>
+          <li><strong>Veto Jurídico:</strong> Ocorre quando o Presidente avalia que o projeto de lei aprovado é <strong>inconstitucional</strong> (viola alguma norma formal ou material da CF/88) ou ilegal. O fundamento aqui é puramente de conformidade técnica com o ordenamento constitucional.</li>
+        </ul>
+        Ambos os vetos devem ser devidamente motivados e comunicados ao Congresso Nacional em até 15 dias úteis, podendo ser rejeitados (derrubados) pela maioria absoluta do Congresso Nacional em sessão conjunta.
+      </div>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <div class="revision-question-box">
+      <div class="revision-question-title">
+        <span class="revision-question-number">Pergunta 3</span>
+        O Presidente pode ser preso por mandado judicial durante o mandato? (Dica: ver imunidade formal).
+      </div>
+      <div class="revision-answer">
+        <strong>NÃO.</strong> O Presidente da República goza do princípio da <strong>irresponsabilidade penal relativa (Art. 86, §4º)</strong> e de um regime especial protetivo. Na vigência do seu mandato presidencial, o Presidente <strong>não pode ser submetido a qualquer espécie de prisão processual ou cautelar</strong> (prisão preventiva, temporária ou prisão decorrente de mandado judicial comum). A única hipótese de prisão admitida pela doutrina constitucionalista seria após condenação definitiva transitada em julgado por crimes comuns praticados <em>in officio</em> (com nexo com a função) julgados originariamente pelo STF, com autorização prévia de 2/3 da Câmara dos Deputados. Para atos estranhos à função presidencial, o processo criminal e seu respectivo prazo prescricional permanecem <strong>suspensos</strong> até o encerramento do mandato de Chefe do Executivo.
+      </div>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <div class="revision-question-box">
+      <div class="revision-question-title">
+        <span class="revision-question-number">Pergunta 4</span>
+        Qual o papel do CNJ dentro do organograma do Judiciário?
+      </div>
+      <div class="revision-answer">
+        No organograma do Poder Judiciário (Art. 92, I-A), o Conselho Nacional de Justiça (CNJ) atua como um <strong>órgão interno de controle e coordenação administrativa, financeira e de fiscalização disciplinar</strong>. É um órgão interno, porém com controle integrado por membros externos (representantes do Ministério Público, da Advocacia e cidadãos de notável saber). O papel do CNJ <strong>NÃO inclui a função jurisdicional (o CNJ não julga processos comuns, não decide litígios judiciais, não substitui juízes no mérito de decisões)</strong>. Seu papel concentra-se em garantir a transparência da gestão do Judiciário, apurar infrações éticas e disciplinares de magistrados e servidores, definir metas de produtividade judicial e fiscalizar o cumprimento das garantias institucionais.
+      </div>
+    </div>
+
+    <!-- QUESTION 5 -->
+    <div class="revision-question-box">
+      <div class="revision-question-title">
+        <span class="revision-question-number">Pergunta 5</span>
+        Quem expede o decreto regulamentar e qual sua finalidade prática?
+      </div>
+      <div class="revision-answer">
+        O decreto regulamentar é expedido de forma <strong>exclusiva pelo Chefe do Poder Executivo</strong> (no plano federal, o Presidente da República, por força do Art. 84, IV, da CF). Sua finalidade prática é <strong>detalhar, especificar e viabilizar a fiel execução de leis federais preexistentes</strong>, fixando normas de caráter operacional e procedimental para a administração pública sem inovar de forma originária no ordenamento jurídico. A sua finalidade prática reside na necessidade de suprir conceitos indeterminados ou minúcias de alta complexidade técnica trazidos de forma genérica nas leis (como o exemplo prático de definir cientificamente o que é "droga" para a aplicação da lei de drogas ou o que constitui "arma de fogo" de uso restrito).
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 8. RESUMO RÁPIDO E DIRETO -->
+  <!-- ============================== -->
+  <section id="resumo">
+    <div class="resumo-rapido">
+      <h2>⚡ 8. Resumo Rápido e Direto</h2>
+      <ul>
+        <li><strong>Bicameralismo Federativo</strong>: Câmara representa o povo ("prato para cima", casa iniciadora em 90%); Senado representa os Estados e o DF ("prato para baixo", casa revisora).</li>
+        <li><strong>Controle Preventivo pelo Judiciário</strong>: Apenas por Mandado de Segurança impetrado por parlamentar em atividade que aponte vício no processo legislativo constitucional.</li>
+        <li><strong>Leis Complementares vs. Leis Ordinárias</strong>: Não há hierarquia. Diferem pelo quórum de aprovação (absoluta vs. relativa) e matérias atribuídas.</li>
+        <li><strong>Medidas Provisórias (MP)</strong>: Força de lei ordinária. Prazo de 60+60 dias (suspende no recesso). Tranca a pauta após 45 dias. É expressamente vedada edição de MP sobre matérias de Lei Complementar.</li>
+        <li><strong>Decretos Legislativos e Resoluções</strong>: Exclusividades do Legislativo. Não estão sujeitos a sanção ou veto do Presidente da República.</li>
+        <li><strong>Veto Teoria</strong>: Veto Político (contrário ao interesse público) vs. Veto Jurídico (inconstitucional). Derrubada exige voto de maioria absoluta do Congresso Nacional em sessão conjunta. Sanção tácita por silêncio após 15 dias úteis.</li>
+        <li><strong>Prerrogativas Parlamentares</strong>: Protegem o cargo/mandato, e não o parlamentar. Suplentes não gozam de garantias. Prisão apenas em flagrante de crime inafiançável (casa decide em 24h por maioria absoluta).</li>
+        <li><strong>Foro STF para Parlamentares</strong>: AP 937/STF restringiu o foro apenas para crimes funcionais praticados no exercício e em razão do cargo. Não se aplica a improbidade ou corréus (Súmula 245).</li>
+        <li><strong>Imunidades Estaduais e Municipais</strong>: Deputados estaduais possuem imunidades e garantias estendidas integralmente (ADI 5.823). Vereadores têm imunidade material restrita ao município e <strong>não gozam de imunidade formal ou foro processual</strong>.</li>
+        <li><strong>Acúmulo Presidencial</strong>: Chefe de Estado (representação externa) + Chefe de Governo (gestão interna).</li>
+        <li><strong>Dupla Vacância</strong>: Eleições diretas em 90 dias (se nos primeiros 2 anos) ou eleições indiretas pelo Congresso em 30 dias (se nos últimos 2 anos). Em ambos os casos os eleitos exercem mandato-tampão.</li>
+        <li><strong>Crimes de Responsabilidade (Impeachment)</strong>: Infração político-administrativa (não penal). Tipificada pela União (Súmula Vinculante 46). Julgado pelo Senado. Sanção: perda do cargo + 8 anos inabilitação (sem prisão).</li>
+        <li><strong>Irresponsabilidade Penal Relativa</strong>: Presidente não pode ser processado ou preso na vigência do mandato por crimes alheios à função.</li>
+        <li><strong>Decreto Regulamentar vs. Autônomo</strong>: Regulamentar executa lei preexistente (exemplo drogas/armas). Autônomo (Art. 84, VI) inova na CF sobre organização administrativa sem aumento de despesas/órgãos e cargos vagos.</li>
+        <li><strong>Poder Judiciário</strong>: Jurisdição típica (heterocomposição com força de coisa julgada). Quinto Constitucional (1/5 das vagas em TJ/TRF/TRT/TST para advogados e membros do MP). CNJ <strong>NÃO tem jurisdição</strong>, apenas funções administrativas e disciplinares.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="credit">Direito Constitucional II | Premium Study Material</p>
+    <p>&copy; 2026 - Produzido com foco em excelência acadêmica.</p>
+    <p style="margin-top:1rem; opacity:0.5; font-size:0.8rem;">Baseado na CF/88 e Diretrizes do Professor. Conteúdo protegido por Direitos Autorais.</p>
+  </div>
+</footer>
+
+<script src="../../portal-core.js"></script>
+</body>
+</html>
