@@ -582,6 +582,7 @@ section h2 .icon { font-size: 1.3rem; }
 }
 .card.gold h4 { color: #FDE68A; }
 .card.gold p { color: rgba(255,255,255,0.9); }
+.card.gold strong { color: #FDE68A; }
 [data-theme="dark"] .card.gold { background: linear-gradient(135deg, #451a03, #1c0a00); }
 
 /* ── Dimensões / dim-grid (DH – Gerações de Direitos) ── */
