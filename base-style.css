@@ -986,6 +986,46 @@ details.artigo .lei-seca { background: var(--box-legal-bg); color: var(--box-leg
 
   /* Hide Legacy Scroll Top on mobile (redundant with bottom nav) */
   #scroll-top { display: none !important; }
+
+  /* ── Stats Dashboard Mobile ── */
+  .stats-dashboard {
+    padding: 1.5rem 1rem;
+    margin: 2rem 0 1rem;
+    border-radius: var(--radius-md);
+  }
+  .stats-header {
+    margin-bottom: 1.5rem;
+  }
+  .stats-header h2 {
+    font-size: 1.35rem !important;
+  }
+  .stats-header p {
+    font-size: 0.85rem;
+  }
+  .stats-card {
+    padding: 1.25rem 1rem;
+  }
+  .live-number {
+    font-size: 2.8rem;
+  }
+  .live-number::after {
+    font-size: 0.9rem;
+  }
+  .mini-stats {
+    gap: 0.35rem;
+  }
+  .ms-value {
+    font-size: 1rem;
+  }
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .chart-container {
+    min-height: 160px;
+  }
 }
 
 /* ── Mobile Bottom Navigation ── */
