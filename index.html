@@ -420,6 +420,68 @@
         
     </div>
 
+    <!-- SEÇÃO DE ESTATÍSTICAS DO PORTAL (VISITANTES ONLINE & HISTÓRICO) -->
+    <section class="stats-dashboard reveal" id="statsDashboard">
+        <div class="stats-header">
+            <span class="section-label">Métricas de Acesso</span>
+            <h2>📈 Monitor de Atividade em Tempo Real</h2>
+            <p>Acompanhe a quantidade de estudantes conectados e a evolução do fluxo de acessos nas últimas 12 horas.</p>
+        </div>
+        
+        <div class="stats-grid">
+            <!-- Card de Status do Tráfego -->
+            <div class="stats-card live-card">
+                <div>
+                    <div class="live-status">
+                        <span class="pulse-dot big"></span>
+                        <span class="live-label">Ativos Agora</span>
+                    </div>
+                    <div class="live-number" id="liveVisitorCount">--</div>
+                    <p class="live-desc">Simulação de atividade simultânea em tempo real de estudantes lendo resumos no hub.</p>
+                </div>
+                
+                <div>
+                    <div class="mini-stats">
+                        <div class="mini-stat-item">
+                            <span class="ms-title">Pico de Hoje</span>
+                            <span class="ms-value" id="peakCount">--</span>
+                        </div>
+                        <div class="mini-stat-item">
+                            <span class="ms-title">Média</span>
+                            <span class="ms-value" id="avgCount">--</span>
+                        </div>
+                        <div class="mini-stat-item">
+                            <span class="ms-title">Acessos</span>
+                            <span class="ms-value" id="totalCount">--</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Painel de Controle de Simulação -->
+                    <div class="sim-controls">
+                        <span class="sim-label">Controles da Simulação:</span>
+                        <div class="sim-buttons">
+                            <button id="simJoin" title="Simular entrada de estudante">+ Entrada</button>
+                            <button id="simLeave" title="Simular saída de estudante">- Saída</button>
+                            <button id="simToggle" title="Pausar/Retomar flutuação automática">⏸️ Pausar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card de Gráfico Histórico -->
+            <div class="stats-card chart-card">
+                <div class="chart-header">
+                    <span class="chart-title">Evolução do Fluxo de Estudantes (Últimas 12 Horas)</span>
+                    <span class="chart-update-time" id="chartStatus">Atualiza em 5s</span>
+                </div>
+                
+                <div class="chart-container" id="svgChartContainer">
+                    <!-- O gráfico SVG e tooltip serão renderizados aqui dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="emptyState" class="empty-state">
         <h3>Nenhum resumo encontrado...</h3>
         <p>Tente termos diferentes ou mude de categoria.</p>
