@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Civil II – Extinção das Obrigações &amp; Responsabilidade Civil | Premium Learning</title>
+  
+  <!-- Fonts: Heading: Outfit | Body: Lora | Labels/Code: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+    }
+    
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #111827 100%); }
+    
+    /* Custom Styling for Professor's Directives to draw maximum attention */
+    .professor-focus {
+      background-color: var(--warning-bg);
+      border-left: 6px solid var(--warning);
+      border-top: 1px solid rgba(245, 158, 11, 0.2);
+      border-right: 1px solid rgba(245, 158, 11, 0.2);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .professor-focus:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -3px rgba(245, 158, 11, 0.15), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
+    }
+    
+    .professor-focus .focus-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #D97706, #B45309);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    
+    [data-theme="dark"] .professor-focus {
+      background-color: rgba(217, 119, 6, 0.08);
+      border-top: 1px solid rgba(217, 119, 6, 0.15);
+      border-right: 1px solid rgba(217, 119, 6, 0.15);
+      border-bottom: 1px solid rgba(217, 119, 6, 0.15);
+    }
+    
+    section h2 .num { 
+        font-family: 'JetBrains Mono', monospace; 
+        font-size: 1.1rem; 
+        color: white; 
+        background: var(--p-500); 
+        padding: 0.4rem 0.8rem; 
+        border-radius: 8px; 
+    }
+
+    /* Quadro da Professora — Replica visual de lousa/whiteboard */
+    .quadro-prof {
+      background: linear-gradient(145deg, #f0f7f4, #e8f4ed);
+      border: 3px solid #a8d5c2;
+      border-radius: 20px;
+      padding: 2rem 2.25rem;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8);
+      font-family: 'Lora', serif;
+    }
+
+    .quadro-prof::before {
+      content: '🖊️ Quadro da Profª Giovanna — 02/Jun/2026 · Direito Civil II';
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #2e7d52;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px dashed #a8d5c2;
+    }
+
+    .quadro-prof .qp-definicao {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #1a3d2b;
+      line-height: 1.6;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .quadro-prof .qp-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .quadro-prof .qp-col h5 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2e7d52;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .quadro-prof .qp-col ol {
+      padding-left: 1.5rem;
+      margin: 0;
+    }
+
+    .quadro-prof .qp-col ol li {
+      margin-bottom: 0.4rem;
+      color: #1a3d2b;
+      font-size: 0.95rem;
+    }
+
+    .quadro-prof .qp-col.tipos ol li {
+      color: #a00000;
+      font-weight: 600;
+    }
+
+    .quadro-prof .qp-col.tipos p {
+      color: #1a3d2b;
+      font-size: 0.88rem;
+      margin: 0.25rem 0 0.75rem 0.25rem;
+      font-style: italic;
+    }
+
+    [data-theme="dark"] .quadro-prof {
+      background: linear-gradient(145deg, #0f2a1e, #142b20);
+      border-color: #2e7d52;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    [data-theme="dark"] .quadro-prof::before { color: #5ecc8a; border-color: #2e7d52; }
+    [data-theme="dark"] .quadro-prof .qp-definicao { color: #c8f5df; }
+    [data-theme="dark"] .quadro-prof .qp-col h5 { color: #5ecc8a; }
+    [data-theme="dark"] .quadro-prof .qp-col ol li { color: #c8f5df; }
+    [data-theme="dark"] .quadro-prof .qp-col.tipos ol li { color: #ff7070; }
+    [data-theme="dark"] .quadro-prof .qp-col.tipos p { color: #a8d5c2; }
+
+    @media (max-width: 680px) {
+      .quadro-prof .qp-cols { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<header>
+  <div class="container">
+    <div class="badge">Direito Civil II</div>
+    <h1>Extinção das Obrigações &amp; Responsabilidade Civil</h1>
+    <div class="subtitle">Guia Acadêmico Completo — Teoria, Lei Seca &amp; Análise de Provas</div>
+    <div class="meta">
+      <span>📜 Arts. 346 a 388 CC/02</span>
+      <span>⚖️ Elementos do Nexo e Culpa</span>
+      <span>🛡️ CC/02 Atualizado</span>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </a>
+    <div class="nav-list">
+      <a href="#intro" class="nav-item">Teoria Geral</a>
+      <a href="#proprias" class="nav-item">Mod. Próprias</a>
+      <a href="#improprias" class="nav-item">Mod. Impróprias</a>
+      <a href="#responsabilidade" class="nav-item">Responsabilidade Civil</a>
+      <a href="#revisao" class="nav-item">Questões</a>
+      <a href="#mapa" class="nav-item">Mapa Mental</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<div class="container" style="padding-top: 3rem;">
+
+  <!-- SUMÁRIO INTERATIVO (CIVIL II LIST STYLE) -->
+  <div id="sumario">
+    <h2>📋 Sumário Interativo</h2>
+    <ol>
+      <li><a href="#intro">Teoria Geral da Extinção das Obrigações</a></li>
+      <li><a href="#proprias">Modalidades de Extinção Indireta Próprias</a>
+        <ol>
+          <li><a href="#compensacao">Compensação (Arts. 368–380 do CC)</a></li>
+          <li><a href="#confusao">Confusão (Arts. 382–384 do CC)</a></li>
+          <li><a href="#remissao">Remissão de Dívida (Arts. 385–388 do CC)</a></li>
+          <li><a href="#novacao">Novação (Arts. 360–367 do CC)</a></li>
+          <li><a href="#subrogacao">Sub-rogação (Arts. 346–351 do CC)</a></li>
+          <li><a href="#dacao">Dação em Pagamento (Arts. 356–359 do CC)</a></li>
+        </ol>
+      </li>
+      <li><a href="#improprias">Modalidades de Extinção Impróprias (Soluções Consensuais)</a></li>
+      <li><a href="#responsabilidade">Teoria Geral da Responsabilidade Civil</a>
+        <ol>
+          <li><a href="#elementos-resp">Os 4 Elementos Essenciais</a></li>
+          <li><a href="#subjetiva-objetiva">Responsabilidade Subjetiva vs. Objetiva</a></li>
+        </ol>
+      </li>
+      <li><a href="#revisao">Questões de Revisão Ativa Comentadas</a></li>
+      <li><a href="#mapa">Mapa Mental Textual Consolidado</a></li>
+      <li><a href="#resumo-rapido">Cola Mental (Quick Review)</a></li>
+    </ol>
+  </div>
+
+  <!-- ============================== -->
+  <!-- 1. TEORIA GERAL DA EXTINÇÃO -->
+  <!-- ============================== -->
+  <section id="intro" class="reveal">
+    <h2><span class="num">01</span> Teoria Geral da Extinção das Obrigações</h2>
+    
+    <div class="layer-simple">
+      Toda obrigação nasce para morrer. A morte natural da obrigação é o <strong>pagamento direto</strong>, ou seja, o devedor entrega exatamente o que prometeu e o credor fica satisfeito. No entanto, o vínculo também pode acabar sem que ocorra esse pagamento perfeito. É o que chamamos de <strong>extinção indireta</strong>.
+    </div>
+
+    <div class="layer-tech">
+      O adimplemento (cumprimento da prestação) constitui o fim natural do vínculo obrigacional. No entanto, o Código Civil reconhece que a relação obrigacional — dotada de transitoriedade inerente — pode extinguir-se por vias diversas do adimplemento direto. A doutrina classifica as causas de extinção em duas vertentes principais:
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Forma de Extinção</th>
+            <th>Ideia Central</th>
+            <th>Exemplo Prático</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Direta (Adimplemento)</strong></td>
+            <td>Ocorre o exato cumprimento da prestação originalmente devida pelo devedor ao credor.</td>
+            <td>O devedor paga os R$ 1.000,00 acordados na data de vencimento.</td>
+          </tr>
+          <tr>
+            <td><strong>Indireta (Meios Diversos)</strong></td>
+            <td>O vínculo obrigacional extingue-se através de outro fato admitido por lei, com ou sem a exata satisfação do objeto inicial.</td>
+            <td>As partes realizam uma compensação de dívidas mútuas ou uma novação.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <span class="box-label">💡 Analogia da Corda Invisível</span>
+      Imagine a obrigação como uma corda que amarra o devedor ao credor. O pagamento desata o nó suavemente (extinção direta). A novação corta a corda velha e amarra as partes com uma nova (extinção indireta). A remissão desfaz a corda porque o credor resolveu jogá-la fora (perdão). A confusão ocorre quando o devedor e o credor se fundem, e a corda amarra a pessoa a ela mesma, perdendo o sentido.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 2. MODALIDADES PRÓPRIAS -->
+  <!-- ============================== -->
+  <section id="proprias" class="reveal">
+    <h2><span class="num">02</span> Modalidades de Extinção Indireta Próprias</h2>
+    
+    <p>O Código Civil disciplina nos Arts. 346 a 388 os meios próprios de extinção das obrigações que dispensam o pagamento originário.</p>
+
+    <!-- 2.1 COMPENSAÇÃO -->
+    <h3 id="compensacao" style="margin-top: 2rem;">2.1 Compensação (Arts. 368 a 380 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      A compensação ocorre quando duas pessoas devem uma à outra ao mesmo tempo. Em vez de fazerem pagamentos cruzados (o que seria ineficiente), a lei extingue as dívidas até onde elas forem iguais. Se eu te devo R$ 100 e você me deve R$ 100, ninguém paga nada e as duas obrigações morrem.
+    </div>
+
+    <div class="layer-tech">
+      A compensação é o encontro de duas obrigações recíprocas, extinguindo-as total ou parcialmente, até o limite em que os créditos se equivalem. Exige a reciprocidade de posições de credor e devedor nos mesmos sujeitos.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 368 e 369 do Código Civil — Base Legal da Compensação <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 368.</strong> Se duas pessoas forem ao mesmo tempo credor e devedor uma da outra, as duas obrigações extinguem-se, até onde se compensarem.</p>
+        <p><strong>Art. 369.</strong> A compensação efetua-se entre dívidas líquidas, vencidas e de coisas fungíveis.</p>
+      </div>
+    </details>
+
+    <div class="important">
+      <span class="box-label">⭐ Requisitos Cumulativos da Compensação Legal</span>
+      Para que a compensação ocorra <strong>por força da lei</strong> (independente de acordo), devem estar presentes os seguintes requisitos:
+      <ol>
+        <li><strong>Liquidez das dívidas:</strong> O valor ou objeto deve ser certo, determinado e de montante definido.</li>
+        <li><strong>Vencimento das dívidas:</strong> As prestações devem ser atualmente exigíveis. Dívidas com prazo ainda não vencido não podem ser compensadas judicialmente.</li>
+        <li><strong>Fungibilidade recíproca dos objetos:</strong> As prestações devem consistir em coisas fungíveis do mesmo gênero, qualidade e quantidade. Dinheiro sempre se compensa com dinheiro. No entanto, se o contrato especificar a qualidade das coisas (ex: café tipo A), elas não se compensarão com coisas de qualidade diferente, mesmo que do mesmo gênero (Art. 370).</li>
+      </ol>
+    </div>
+
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Origens da Compensação: Legal, Voluntária e Judicial</strong>
+      <p>O professor destaca que nem toda compensação exige os requisitos rígidos do Art. 369:</p>
+      <ul>
+        <li><strong>Compensação Legal:</strong> Opera automaticamente, de pleno direito, assim que os requisitos (liquidez, vencimento e fungibilidade) são preenchidos. O juiz apenas a declara (efeito ex tunc).</li>
+        <li><strong>Compensação Voluntária (Consensual):</strong> Decorre da autonomia privada. As partes, por comum acordo, decidem compensar suas obrigações <strong>mesmo que faltem requisitos</strong>. Exemplo: compensar uma saca de arroz com uma saca de feijão, ou compensar uma dívida vencida com outra vincenda. A única restrição é a ordem pública.</li>
+        <li><strong>Compensação Judicial:</strong> Determinada pelo juiz na sentença após reconvenção ou pedido da parte em juízo, verificando o encontro de contas no processo.</li>
+      </ul>
+      <p><strong>Prazos de Favor (Art. 372):</strong> Eventuais prazos de cortesia concedidos pelo credor (ex: prorrogar informalmente o vencimento de uma parcela) <strong>não obstam</strong> a compensação legal. A obrigação continua elegível para compensação.</p>
+    </div>
+
+    <h4 style="margin-top: 1.5rem; color: var(--text-main);">Cessão de Crédito, Fiança e a Proteção de Terceiros</h4>
+    <ul>
+      <li><strong>Cessão de Crédito (Art. 377):</strong> Se o devedor for notificado da cessão e não opuser nenhuma compensação que tinha contra o cedente, ele <strong>perde o direito</strong> de compensar contra o novo credor (cessionário). Se a cessão não foi notificada, o devedor pode opor contra o cessionário a compensação do crédito que tinha contra o cedente antes da cessão.</li>
+      <li><strong>Regra da Fiança (Art. 371):</strong> O devedor principal <strong>não pode</strong> compensar sua dívida com crédito que o fiador tem contra o credor. No entanto, o <strong>fiador pode</strong> compensar sua dívida acessória com crédito que o devedor principal tem perante o credor. Protege-se o fiador (garante).</li>
+      <li><strong>Lugares Distintos (Art. 378):</strong> Dívidas pagáveis em comarcas ou locais diferentes não se compensam sem a dedução das despesas necessárias para a remessa de valores ao local do cumprimento.</li>
+    </ul>
+
+    <div class="pitfall">
+      <span class="box-label">⚠️ Pegadinha de Prova: Casos de Incompensabilidade Absoluta</span>
+      O Art. 373 traz hipóteses em que a compensação é <strong>proibida</strong>, mesmo se atendidos os requisitos. O legislador protege a boa-fé e a subsistência:
+      <ol>
+        <li><strong>Dívida decorrente de furto, roubo ou esbulho (Art. 373, I):</strong> O autor do ilícito penal não pode alegar compensação para não devolver a coisa alheia.</li>
+        <li><strong>Dívida originada de comodato, depósito ou alimentos (Art. 373, II):</strong>
+          <br>→ <em>Comodato e Depósito:</em> Baseados na confiança mútua e devolução física da coisa.
+          <br>→ <em>Alimentos:</em> Têm natureza de subsistência e dignidade da pessoa humana. <strong>Pensar que se pode compensar pensão alimentícia é o erro mais punido nas provas!</strong>
+        </li>
+        <li><strong>Dívida de coisa impenhorável (Art. 373, III):</strong> Se o salário do devedor é impenhorável, o credor não pode retê-lo alegando compensação com dívida que o empregado tenha com a empresa (Súmula 608 do STJ).</li>
+        <li><strong>Prejuízo a Terceiros (Art. 380):</strong> Se o crédito foi penhorado por um terceiro e o devedor foi notificado, ele não pode mais compensar com o credor primitivo, sob pena de prejudicar o terceiro exequente.</li>
+      </ol>
+    </div>
+
+    <!-- 2.2 CONFUSÃO -->
+    <hr class="divider">
+    <h3 id="confusao" style="margin-top: 2rem;">2.2 Confusão (Arts. 382 a 384 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      A confusão ocorre quando o credor e o devedor de uma obrigação passam a ser a mesma pessoa. Ninguém pode ser credor ou devedor de si mesmo, por isso a obrigação é extinta por falta de dois polos na relação.
+    </div>
+
+    <div class="layer-tech">
+      O fenômeno da confusão extingue a relação obrigacional pela reunião das qualidades subjetivas de credor e devedor em um único sujeito, esvaziando o elemento subjetivo da obrigação.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 382 e 384 do Código Civil — Base Legal da Confusão <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 382.</strong> A confusão pode verificar-se a respeito de toda a dívida, ou só de parte dela.</p>
+        <p><strong>Art. 384.</strong> Cessando a confusão, para logo se restabelece, com todos os seus acessórios, a obrigação anterior.</p>
+      </div>
+    </details>
+
+    <div class="example">
+      <span class="box-label">📌 Exemplos Práticos</span>
+      <ul>
+        <li><strong>Sucessão Causa Mortis:</strong> Caio deve R$ 50.000,00 ao seu pai, Mário. Mário falece e deixa Caio como seu único herdeiro universal. O crédito de R$ 50.000,00 transfere-se a Caio por herança. Como Caio agora é credor do espólio e devedor da obrigação, o vínculo extingue-se por confusão.</li>
+        <li><strong>Incorporação Empresarial:</strong> A Sociedade de Aviação A deve R$ 2.000.000,00 à Sociedade de Combustíveis B. A Sociedade B incorpora integralmente a Sociedade A. O crédito e o débito consolidam-se no mesmo balanço patrimonial da empresa resultante, extinguindo a obrigação.</li>
+      </ul>
+    </div>
+
+    <div class="important">
+      <span class="box-label">⭐ Efeitos da Confusão Certa</span>
+      A confusão pode ser:
+      <ul>
+        <li><strong>Total (ou Própria):</strong> Extingue toda a dívida.</li>
+        <li><strong>Parcial (ou Imprópria):</strong> Extingue apenas parte da dívida, permanecendo o saldo remanescente sob execução (comum em sucessões onde existem outros co-herdeiros).</li>
+        <li><strong>Efeito Restaurativo (Art. 384):</strong> Se a causa que gerou a confusão for desfeita ou anulada (ex: testamento anulado por fraude), a obrigação anterior <strong>restabelece-se imediatamente com todos os seus acessórios e garantias</strong> (fiança, hipoteca).</li>
+      </ul>
+    </div>
+
+    <!-- 2.3 REMISSÃO -->
+    <hr class="divider">
+    <h3 id="remissao" style="margin-top: 2rem;">2.3 Remissão de Dívida (Arts. 385 a 388 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      Remissão é o perdão da dívida. Para extinguir a obrigação, o credor deve oferecer o perdão e o devedor deve aceitá-lo. O perdão não pode prejudicar os credores do próprio credor.
+    </div>
+
+    <div class="layer-tech">
+      A remissão é negócio jurídico bilateral que consiste na renúncia voluntária do credor ao seu direito de crédito, exigindo, contudo, a aceitação (expressa ou tácita) do devedor para aperfeiçoar-se e extinguir a obrigação.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 385 do Código Civil — Base Legal da Remissão <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 385.</strong> A remissão da dívida, aceita pelo devedor, extingue a obrigação, mas sem prejuízo de terceiro.</p>
+      </div>
+    </details>
+
+    <div class="pitfall">
+      <span class="box-label">⚠️ Pegadinha de Prova: Remissão (Perdão) vs. Remição (Resgate)</span>
+      As bancas adoram confundir o candidato com a grafia e o sentido destes institutos:
+      <ul>
+        <li><strong>Remissão (com "ss"):</strong> É o perdão da dívida regulado pelo Art. 385 do Código Civil. Tem caráter bilateral.</li>
+        <li><strong>Remição (com "ç"):</strong> Significa resgate, pagamento ou liberação de garantia. Ocorre na *remição de imóvel hipotecado* (pagar a dívida para liberar o imóvel) ou na *remição da execução* no processo civil (pagar o valor executado para resgatar os bens penhorados). <strong>Remição com "ç" implica pagamento, não perdão!</strong></li>
+      </ul>
+    </div>
+
+    <div class="important">
+      <span class="box-label">⭐ Presunções Legais de Perdão</span>
+      O Código Civil estabelece duas condutas do credor que geram presunção de remissão:
+      <ol>
+        <li><strong>Devolução Voluntária do Título de Crédito (Art. 386):</strong> A entrega física e espontânea do documento original do débito (ex: nota promissória, contrato físico) feita pelo credor ao devedor firma a presunção de perdão do débito.</li>
+        <li><strong>Devolução do Objeto Empenhado (Art. 387):</strong> A restituição voluntária do bem dado em garantia real (penhor) pelo credor ao devedor <strong>indica apenas a renúncia à garantia real</strong>, e <strong>NÃO o perdão da dívida</strong>. O devedor continua devendo o valor principal, mas a dívida passa a ser quirografária (sem garantia).</li>
+      </ol>
+    </div>
+
+    <!-- 2.4 NOVAÇÃO -->
+    <hr class="divider">
+    <h3 id="novacao" style="margin-top: 2rem;">2.4 Novação (Arts. 360 a 367 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      Novar significa criar uma obrigação nova para substituir e extinguir a antiga. A dívida anterior morre e nasce uma novinha no lugar. Para que ocorra, as antes devem manifestar explicitamente essa vontade (ânimo de novar). Se não houver essa intenção, a segunda obrigação serve apenas para confirmar a primeira.
+    </div>
+
+    <div class="layer-tech">
+      A novação é um modo de extinção de obrigação que se opera mediante a constituição de uma nova relação jurídica obrigacional que substitui e extingue a primitiva. Possui caráter liberatório em relação ao vínculo originário.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 360 e 361 do Código Civil — Base Legal da Novação <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 360.</strong> Dá-se a novação:<br>
+        I - quando o devedor contrai com o credor nova dívida para extinguir e substituir a anterior;<br>
+        II - quando novo devedor sucede ao antigo, ficando este quite com o credor;<br>
+        III - quando, em virtude de obrigação nova, outro credor é substituído ao antigo, ficando o devedor quite com este.</p>
+        <p><strong>Art. 361.</strong> Não havendo ânimo de novar, expresso ou tácito mas inequívoco, a segunda obrigação confirma simplesmente a primeira.</p>
+      </div>
+    </details>
+
+    <div class="important">
+      <span class="box-label">⭐ Requisitos Essenciais para a Novação</span>
+      Para que se configure a novação, exige-se cumulativamente:
+      <ol>
+        <li><strong>Existência de obrigação anterior válida:</strong> Não há novação sobre obrigação nula ou já extinta. Obrigações anuláveis, porém, admitem confirmação e novação (Art. 367).</li>
+        <li><strong>Criação de nova obrigação substancialmente diferente:</strong> A nova obrigação deve conter alteração no objeto, na causa jurídica ou nos sujeitos. Meras modificações acessórias (mudar o local de pagamento, conceder prazo, alterar taxa de juros) não caracterizam novação, apenas confirmação da mesma dívida.</li>
+        <li><strong>Animus Novandi (Ânimo de novar - Art. 361):</strong> A intenção de extinguir a obrigação anterior deve ser inequívoca, expressa ou tácita. Caso contrário, a nova obrigação acumula-se ou apenas confirma a anterior.</li>
+      </ol>
+    </div>
+
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Classificação e Mecanismos da Novação Subjetiva Passiva</strong>
+      <p>A novação divide-se em três grandes tipos:</p>
+      <ol>
+        <li><strong>Novação Objetiva (Real):</strong> Os sujeitos (credor e devedor) permanecem os mesmos, mas o objeto ou a causa da prestação é substancialmente alterado. Exemplo: Devedor deve R$ 10.000,00 em dinheiro e, por novação, obriga-se a entregar um lote de mercadorias para extinguir o débito pecuniário.</li>
+        <li><strong>Novação Subjetiva Ativa:</strong> Ocorre a substituição do credor. O devedor assume nova obrigação perante outro credor para extinguir a dívida que tinha com o credor originário. Exige consentimento de todos.</li>
+        <li><strong>Novação Subjetiva Passiva:</strong> Substituição do devedor. Pode ocorrer por dois métodos do Código Civil:
+          <ul>
+            <li><strong>Expromissão (Art. 362):</strong> Ocorre quando um terceiro assume a dívida e substitui o devedor primitivo, <strong>sem a anuência ou consentimento deste</strong>, por acordo direto entre o terceiro e o credor. O devedor originário é exonerado independentemente de sua vontade.</li>
+            <li><strong>Delegação:</strong> Ocorre com a participação e iniciativa do devedor original (delegante), que indica ao credor (delegatário) um novo devedor (delegado) para assumir a obrigação. Exige a anuência de todas as três partes.</li>
+          </ul>
+        </li>
+      </ol>
+      <p><strong>Insolvência do Novo Devedor (Art. 363):</strong> Se o novo devedor se tornar insolvente, o credor que o aceitou <strong>não pode exercer direito de regresso</strong> contra o devedor antigo, <strong>salvo se este agiu com má-fé</strong> ao indicar o devedor insolvente.</p>
+    </div>
+
+    <h4 style="margin-top: 1.5rem; color: var(--text-main);">Efeitos sobre Acessórios, Garantias e Coobrigados</h4>
+    <ul>
+      <li><strong>Extinção das Garantias (Art. 364):</strong> A novação da dívida principal extingue automaticamente todos os seus acessórios e garantias (fiança, hipoteca, penhor), salvo se houver acordo expresso em contrário. Se a garantia foi prestada por um terceiro (ex: hipoteca de bem de terceiro), ela só permanece se o terceiro consentir expressamente.</li>
+      <li><strong>Solidariedade Passiva (Art. 365):</strong> A novação celebrada entre o credor e apenas um dos devedores solidários exonera todos os demais co-devedores. As garantias da dívida original também desaparecem quanto aos exonerados.</li>
+      <li><strong>Exoneração do Fiador (Art. 366):</strong> Se o credor novar a obrigação principal com o devedor sem a concordância expressa do fiador, este fica <strong>totalmente desonerado</strong> da fiança.</li>
+    </ul>
+
+    <!-- 2.5 SUB-ROGAÇÃO -->
+    <hr class="divider">
+    <h3 id="subrogacao" style="margin-top: 2rem;">2.5 Sub-rogação (Arts. 346 a 351 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      Sub-rogação significa substituição de pessoas na relação jurídica. Ocorre quando uma pessoa (como um fiador ou um amigo interessado) paga a dívida do devedor original. O credor originário fica satisfeito e sai de cena, mas a dívida não morre: ela é transferida para o terceiro que fez o pagamento, que agora assume todas as garantias e direitos que o credor original tinha.
+    </div>
+
+    <div class="layer-tech">
+      A sub-rogação pessoal consiste na transferência dos direitos, ações, privilégios e garantias do credor originário em favor daquele que solver a obrigação alheia ou emprestar o valor necessário para o adimplemento.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 346 e 349 do Código Civil — Base Legal da Sub-rogação <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 346.</strong> A sub-rogação opera-se, de pleno direito, em favor:<br>
+        I - do credor que paga a dívida do devedor comum;<br>
+        II - do adquirente do imóvel hipotecado, que paga ao credor hipotecário, bem como do terceiro que efetiva o pagamento para não ser privado de direito sobre imóvel;<br>
+        III - do terceiro interessado, que paga a dívida pela qual era ou podia ser obrigado, no todo ou em parte.</p>
+        <p><strong>Art. 349.</strong> A sub-rogação transfere ao novo credor todos os direitos, ações, privilégios e garantias do primitivo, em relação à dívida, contra o devedor principal e os fiadores.</p>
+      </div>
+    </details>
+
+    <div class="important">
+      <span class="box-label">⭐ Classificação: Sub-rogação Legal e Convencional</span>
+      A sub-rogação divide-se em duas naturezas jurídicas distintas:
+      <ol>
+        <li><strong>Sub-rogação Legal (Art. 346):</strong> Opera de pleno direito, automaticamente por força da lei, nas três hipóteses taxativas do artigo. Destaca-se o <strong>terceiro interessado</strong> (inciso III): aquele que possui vínculo patrimonial com a dívida e pode ser afetado em caso de inadimplemento (ex: o fiador, o avalista, o co-devedor solidário).</li>
+        <li><strong>Sub-rogação Convencional (Art. 347):</strong> Decorre da autonomia da vontade. Ocorre quando:
+          <br>→ O credor recebe pagamento de terceiro não interessado e lhe transfere expressamente todos os seus direitos (exige manifestação concomitante ao pagamento);
+          <br>→ Terceira pessoa empresta ao devedor a quantia necessária para solver a dívida, sob condição expressa de ficar sub-rogada nos direitos do credor satisfeito (mecanismo comum de portabilidade de crédito bancário).
+        </li>
+      </ol>
+    </div>
+
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
+      <strong>Limites de Cobrança e a Regra do Credor Parcialmente Reembolsado</strong>
+      <p>O professor aponta as restrições financeiras e a ordem de preferência que costumam cair em prova:</p>
+      <ul>
+        <li><strong>Limite de Reembolso na Sub-rogação Legal (Art. 350):</strong> O sub-rogado por força de lei não pode lucrar com a operação. Ele só pode exigir do devedor original <strong>até a soma exata que desembolsou</strong> para desobrigá-lo. Se o fiador negociou com o banco e pagou R$ 7.000,00 para extinguir uma dívida de R$ 10.000,00, ele só poderá cobrar R$ 7.000,00 do devedor principal.</li>
+        <li><strong>Preferência do Credor Originário (Art. 351):</strong> Se o terceiro pagar apenas parte da dívida (sub-rogação parcial), o credor originário tem preferência sobre o sub-rogado para cobrar o saldo restante, caso os bens do devedor não bastem para saldar a conta de ambos.</li>
+      </ul>
+    </div>
+
+    <h4 style="margin: 2rem 0 1rem; text-align: center; color: var(--text-main);">Tabela Comparativa: Novação vs. Sub-rogação</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Novação (Art. 360)</th>
+            <th>Sub-rogação (Art. 346)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Efeito na Dívida</strong></td>
+            <td><strong>Extingue</strong> a obrigação antiga e <strong>cria</strong> uma nova.</td>
+            <td><strong>Mantém</strong> a mesma dívida; apenas altera a titularidade ativa.</td>
+          </tr>
+          <tr>
+            <td><strong>Garantias e Acessórios</strong></td>
+            <td><strong>Extinguem-se</strong>, salvo acordo expresso em contrário (Art. 364).</td>
+            <td><strong>Transferem-se automaticamente</strong> ao sub-rogado (Art. 349).</td>
+          </tr>
+          <tr>
+            <td><strong>Exoneração de Fiador</strong></td>
+            <td>Sim, se feita sem seu consentimento (Art. 366).</td>
+            <td>Não. O fiador passa a responder perante o sub-rogado.</td>
+          </tr>
+          <tr>
+            <td><strong>Finalidade Prática</strong></td>
+            <td>Substituir o regime obrigacional (renegociação/novos termos).</td>
+            <td>Garantir o reembolso de quem pagou dívida alheia.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2.6 DAÇÃO EM PAGAMENTO -->
+    <hr class="divider">
+    <h3 id="dacao" style="margin-top: 2rem;">2.6 Dação em Pagamento (Arts. 356 a 359 do CC/02)</h3>
+    
+    <div class="layer-simple">
+      A dação em pagamento ocorre quando o devedor propõe entregar uma coisa diferente da que deve (ex: entregar um carro para pagar uma dívida em dinheiro) e o credor aceita essa substituição como pagamento definitivo. Lembre-se: o credor não é obrigado a aceitar coisa diferente, mas se aceitar, a dívida é extinta.
+    </div>
+
+    <div class="layer-tech">
+      A dação em pagamento (*datio in solutum*) é o negócio jurídico pelo qual o credor consente em receber prestação diversa da originalmente pactuada, exonerando o devedor da obrigação.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 356 e 359 do Código Civil — Base Legal da Dação <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 356.</strong> O credor pode consentir em receber prestação diversa da que lhe é devida.</p>
+        <p><strong>Art. 359.</strong> Se o credor for evicto da coisa recebida em pagamento, restabelecer-se-á a obrigação primitiva, ficando sem efeito a quitação dada, ressalvados os direitos de terceiros de boa-fé.</p>
+      </div>
+    </details>
+
+    <div class="important">
+      <span class="box-label">⭐ Elementos e Regras Subsidiárias da Dação</span>
+      Para configurar a dação, exige-se o consentimento do credor (aliud pro alio). O Código Civil equipara a dação a outros institutos dependendo do objeto entregue:
+      <ul>
+        <li><strong>Dação com Preço Determinado (Art. 357):</strong> Se as partes fixarem preço em dinheiro à coisa dada em substituição (ex: dar um carro avaliado em R$ 30.000,00 para quitar dívida equivalente), o negócio rege-se pelas regras do contrato de <strong>compra e venda</strong>.</li>
+        <li><strong>Dação de Título de Crédito (Art. 358):</strong> Se o objeto dado for um título de crédito (ex: nota promissória ou cheque de terceiro), a dação rege-se pelas normas da <strong>cessão de crédito</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="pitfall">
+      <span class="box-label">⚠️ Pegadinha de Prova: A Evicção na Dação (Art. 359)</span>
+      A evicção ocorre quando o credor perde a propriedade da coisa recebida na dação em virtude de uma decisão judicial ou administrativa fundamentada em direito anterior de terceiro (ex: o carro dado na dação era roubado ou penhorado).
+      <br><strong>Consequência:</strong> A quitação dada pelo credor perde o efeito e <strong>a obrigação primitiva restabelece-se com todos os seus acessórios e garantias</strong> (o devedor volta a dever a quantia original).
+      <br>→ <em>Exceção importante:</em> As garantias prestadas por terceiros de boa-fé (ex: fiança dada por amigo que não sabia do problema da coisa) não se restabelecem, para proteger a boa-fé de terceiros.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 3. MODALIDADES IMPRÓPRIAS -->
+  <!-- ============================== -->
+  <section id="improprias" class="reveal">
+    <h2><span class="num">03</span> Modalidades de Extinção Impróprias</h2>
+    
+    <div class="layer-simple">
+      Nem sempre a obrigação acaba por mecanismos de adimplemento. Ela pode acabar porque as partes assinaram um acordo para desfazê-la (distrato), fizeram concessões mútuas para evitar um processo (transação) ou submeteram a questão a um árbitro ou juiz. São as chamadas modalidades impróprias ou soluções consensuais.
+    </div>
+
+    <div class="layer-tech">
+      As modalidades impróprias envolvem a resilição, a autocomposição ou a solução adjudicada do conflito obrigacional, encerrando o vínculo obrigacional por meio de manifestações de vontade ou sentenças.
+    </div>
+
+    <div class="grid2">
+      <div class="card blue">
+        <h4>Distrato (Resilição Bilateral - Art. 472)</h4>
+        <p>Acordo de vontades destinado a extinguir um contrato anterior. Deve ser feito pela mesma forma exigida pela lei para a celebração do contrato (princípio da atração das formas).</p>
+      </div>
+      <div class="card green">
+        <h4>Transação (Art. 840)</h4>
+        <p>Negócio jurídico bilateral onde as partes previnem ou terminam um litígio mediante <strong>concessões mútuas</strong>. Cada parte abre mão de uma parcela de seu direito para alcançar a paz jurídica.</p>
+      </div>
+      <div class="card purple">
+        <h4>Mecanismos Consensuais e Arbitragem</h4>
+        <ul>
+          <li><strong>Mediação e Conciliação:</strong> Auxílio de terceiros facilitadores para obter a solução negociada.</li>
+          <li><strong>Arbitragem (Lei 9.307/96):</strong> Decisão imposta por árbitro escolhido pelas partes, com força de sentença judicial.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 4. RESPONSABILIDADE CIVIL -->
+  <!-- ============================== -->
+  <section id="responsabilidade" class="reveal">
+    <h2><span class="num">04</span> Teoria Geral da Responsabilidade Civil</h2>
+    
+    <!-- QUADRO DA PROFESSORA — fonte primária -->  
+    <div class="quadro-prof">
+      <p class="qp-definicao">"Responsabilidade Civil é o dever de reparar um dano causado a outrem."</p>
+      <div class="qp-cols">
+        <div class="qp-col">
+          <h5>Elementos da Resp. Civil</h5>
+          <ol>
+            <li>Ação ou Omissão</li>
+            <li>Dano</li>
+            <li>Nexo de Causalidade (Nexo Causal)</li>
+            <li>Culpa</li>
+          </ol>
+        </div>
+        <div class="qp-col tipos">
+          <h5>Tipos de Resp. Civil</h5>
+          <ol>
+            <li>Responsabilidade objetiva
+              <p>→ Independe da análise e existência de culpa.</p>
+            </li>
+            <li>Responsabilidade subjetiva
+              <p>→ Depende da análise e existência de culpa.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer-simple">
+      A Responsabilidade Civil é o <strong>dever de reparar um dano causado a outrem</strong> (definição da Profª Giovanna). Ela nasce quando alguém, por ação ou omissão, causa prejuízo a outra pessoa. Mas atenção: nem sempre é preciso provar culpa — depende do tipo de responsabilidade.
+    </div>
+
+    <div class="layer-tech">
+      A responsabilidade civil decorre do princípio geral do direito de que ninguém deve causar dano a outrem (<em>neminem laedere</em>). Havendo violação desse dever, surge a obrigação sucessiva de indenizar o dano sofrido, restabelecendo o <em>status quo ante</em>.
+    </div>
+
+    <details class="artigo-block">
+      <summary>Art. 186, 187 e 927 do Código Civil — Base Legal da Responsabilidade <span>▼</span></summary>
+      <div class="lei-seca">
+        <p><strong>Art. 186.</strong> Aquele que, por ação ou omissão voluntária, negligência ou imprudência, violar direito e causar dano a outrem, ainda que exclusivamente moral, comete ato ilícito.</p>
+        <p><strong>Art. 187.</strong> Também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes.</p>
+        <p><strong>Art. 927.</strong> Aquele que, por ato ilícito (arts. 186 e 187), causar dano a outrem, fica obrigado a repará-lo.</p>
+        <p><em>Parágrafo único.</em> Haverá obrigação de reparar o dano, independentemente de culpa, nos casos especificados em lei, ou quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, risco para os direitos de outrem.</p>
+      </div>
+    </details>
+
+    <h3 id="elementos-resp" style="margin-top: 2rem;">4.1 Os 4 Elementos da Responsabilidade Civil</h3>
+    <p>Para que surja o dever de indenizar, a doutrina exige a presença de quatro pressupostos — conforme esquematizado pela professora no quadro:</p>
+
+    <div class="grid2">
+      <!-- Elemento 1: Conduta -->
+      <div class="card blue">
+        <h4>① Ação ou Omissão</h4>
+        <p>Conduta humana voluntária e consciente — pode ser <strong>positiva</strong> (fazer algo que causa dano) ou <strong>negativa</strong> (deixar de fazer algo que se tinha o dever de fazer).</p>
+        <p>A omissão só gera responsabilidade quando existe um <strong>dever jurídico de agir</strong>. Exemplo: o salva-vidas contratado que observa o banhista se afogando e não age.</p>
+      </div>
+
+      <!-- Elemento 2: Dano -->
+      <div class="card green">
+        <h4>② Dano</h4>
+        <p>Sem dano, <strong>não há responsabilidade civil</strong> — isso é absoluto. O dano pode ser:</p>
+        <ul>
+          <li><strong>Dano Material (Patrimonial):</strong> Danos emergentes (prejuízo efetivo sofrido) + Lucros cessantes (o que deixou de ganhar).</li>
+          <li><strong>Dano Moral (Extrapatrimonial):</strong> Lesão a direitos da personalidade — honra, nome, privacidade, integridade física.</li>
+          <li><strong>Dano Estético:</strong> Alteração física permanente na aparência (STJ reconhece como autônomo ao moral).</li>
+          <li><strong>Perda de uma Chance:</strong> Frustração de oportunidade séria e real (ex: advogado que perde prazo e o cliente perde o processo).</li>
+        </ul>
+      </div>
+
+      <!-- Elemento 3: Nexo Causal -->
+      <div class="card purple">
+        <h4>③ Nexo de Causalidade (Nexo Causal)</h4>
+        <p>O vínculo direto de causa e efeito entre a conduta e o dano. O Código Civil (Art. 403) adota a <strong>Teoria do Dano Direto e Imediato</strong> (também chamada de interrupção do nexo causal): só responde quem gerou a causa imediata e direta do dano.</p>
+        <p><strong>Causas de exclusão do nexo:</strong> caso fortuito/força maior · culpa exclusiva da vítima · fato exclusivo de terceiro.</p>
+      </div>
+
+      <!-- Elemento 4: Culpa -->
+      <div class="card gold">
+        <h4>④ Culpa</h4>
+        <p>Culpa em sentido lato abrange o <strong>dolo</strong> (intenção direta de causar o resultado) e a <strong>culpa em sentido estrito</strong>:</p>
+        <ul>
+          <li><strong>Imprudência:</strong> Ação precipitada e descuidada (ex: ultrapassar o sinal vermelho).</li>
+          <li><strong>Negligência:</strong> Omissão de cuidado exigível (ex: médico que não lê o prontuário antes da cirurgia).</li>
+          <li><strong>Imperícia:</strong> Falta de aptidão técnica no exercício de profissão ou atividade (ex: engenheiro que projeta estrutura inadequada).</li>
+        </ul>
+        <p style="margin-top:0.5rem;"><em>Atenção: a culpa é o elemento <strong>dispensável</strong> na responsabilidade objetiva.</em></p>
+      </div>
+    </div>
+
+    <h3 id="subjetiva-objetiva" style="margin-top: 3rem;">4.2 Responsabilidade Subjetiva vs. Objetiva</h3>
+
+    <div class="professor-focus">
+      <span class="focus-label">⚠️ ANOTAÇÃO DA PROFESSORA — DIRETRIZ CENTRAL</span>
+      <strong>A divisão mais cobrada em prova:</strong>
+      <p>Com base no quadro da Profª Giovanna, o critério central que divide as duas espécies é a <strong>análise e existência de culpa</strong>:</p>
+      <ul>
+        <li>✅ <strong>Responsabilidade Objetiva:</strong> <em>Independe da análise e existência de culpa.</em> Basta comprovar conduta + dano + nexo causal.</li>
+        <li>✅ <strong>Responsabilidade Subjetiva:</strong> <em>Depende da análise e existência de culpa.</em> A vítima deve provar que o agente agiu com dolo, imprudência, negligência ou imperícia.</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Responsabilidade Subjetiva (Regra Geral — Art. 186)</th>
+            <th>Responsabilidade Objetiva (Exceção — Art. 927, p. único)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Culpa</strong></td>
+            <td><strong>Depende</strong> da análise e existência de culpa. Sem culpa, não há obrigação de indenizar.</td>
+            <td><strong>Independe</strong> da análise e existência de culpa. Não é necessário provar imprudência, negligência ou imperícia.</td>
+          </tr>
+          <tr>
+            <td><strong>O que se prova</strong></td>
+            <td>Conduta ilícita + Dano + Nexo Causal + <strong>Culpa ou Dolo</strong>.</td>
+            <td>Conduta + Dano + Nexo Causal. <strong>Culpa é irrelevante.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Fundamento teórico</strong></td>
+            <td><strong>Teoria da Culpa.</strong> O dever de reparar decorre do erro moral/social de conduta do agente.</td>
+            <td><strong>Teoria do Risco.</strong> Quem exerce atividade perigosa ou lucrativa responde pelos danos que dela resultam, independentemente de culpa.</td>
+          </tr>
+          <tr>
+            <td><strong>Ônus da Prova</strong></td>
+            <td>Cabe à <strong>vítima</strong> provar a culpa do agente (imprudência, negligência ou imperícia).</td>
+            <td>Cabe ao <strong>réu</strong> provar causas excludentes do nexo (força maior, fato da vítima).</td>
+          </tr>
+          <tr>
+            <td><strong>Exemplos</strong></td>
+            <td>Acidente de trânsito entre particulares; erro médico de profissional autônomo; dano causado por ato doloso.</td>
+            <td>Danos ambientais (Lei 6.938/81); acidentes em transporte coletivo; relações de consumo (CDC); atividades de risco (Art. 927, p. único).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <span class="box-label">💡 Analogia Didática: O Motorista de Ônibus vs. o Motorista Particular</span>
+      Imagine dois acidentes de trânsito. No primeiro, um motorista particular bate em outro carro por distração (Responsabilidade Subjetiva — precisa provar negligência). No segundo, um ônibus da empresa de transporte coletivo atropela um pedestre (Responsabilidade Objetiva — a empresa já responde pelo simples fato de o acidente ter ocorrido no exercício da atividade de risco, sem necessidade de provar culpa).
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 5. QUESTÕES DE REVISÃO -->
+  <!-- ============================== -->
+  <section id="revisao" class="reveal">
+    <h2><span class="num">05</span> Questões de Revisão Ativa Comentadas</h2>
+    
+    <p style="margin-bottom: 2rem;">Responda ativamente às perguntas abaixo e expanda a solução para verificar os comentários doutrinários e a fundamentação jurídica de cada gabarito.</p>
+
+    <!-- Questão 1 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 1 — Compensação e Alimentos</div>
+      <p>Marcos possui dívida líquida e vencida de R$ 5.000,00 decorrente de empréstimo feito com Júlio. Posteriormente, Júlio é condenado a pagar a Marcos R$ 5.000,00 a título de pensão alimentícia atrasada. Júlio alega compensação para extinguir ambas as obrigações. A alegação de Júlio é juridicamente válida?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> De acordo com o Art. 373, II, do Código Civil, a compensação é expressamente proibida quando uma das dívidas se origina de alimentos. O caráter de subsistência e dignidade da pensão alimentícia impede que ela seja compensada com dívidas de natureza puramente civil/comercial. Portanto, Júlio continua obrigado a pagar a pensão, restando-lhe cobrar o empréstimo por outras vias processuais.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 2 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 2 — Remissão e Penhor</div>
+      <p>O credor de uma dívida de R$ 20.000,00 devolve voluntariamente ao devedor o veículo que este havia dado em penhor para garantir o pagamento da obrigação. Esse ato acarreta a extinção da dívida principal por remissão?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> Segundo o Art. 387 do Código Civil, a devolução voluntária do objeto empenhado (garantia real) acarreta apenas a renúncia à garantia, e <strong>não a remissão da dívida</strong>. O devedor continua devendo o valor de R$ 20.000,00, contudo a obrigação deixa de ter garantia real de penhor, passando a ser classificada como dívida quirografária.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 3 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 3 — Novação e Fiador</div>
+      <p>Bruno realiza a renegociação (novação) de um contrato de mútuo com o banco credor, alterando substancialmente o prazo e a taxa de juros, com a intenção inequívoca de substituir o contrato original. O fiador do contrato primitivo, Carlos, não participou e nem assinou o novo instrumento. Qual a situação jurídica de Carlos perante a nova obrigação?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Carlos está exonerado da fiança.</strong> Nos termos do Art. 366 do Código Civil, se a novação for feita sem o consentimento do fiador, este fica exonerado da garantia. A novação extingue a obrigação acessória original e, por não ter Carlos anuído à nova dívida, ele não pode ser responsabilizado por ela.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 4 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 4 — Novação Subjetiva e Regresso</div>
+      <p>Rogério assume voluntariamente o débito de Fabiano perante o credor Tiago, configurando novação subjetiva passiva por expromissão. Dias após a assinatura do novo contrato, Rogério torna-se insolvente. Tiago pode cobrar a dívida de Fabiano, alegando regresso?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> De acordo com o Art. 363 do Código Civil, se o novo devedor se tornar insolvente, o credor que o aceitou não tem ação regressiva contra o primeiro (Fabiano), a menos que Fabiano tenha agido de má-fé na substituição (o que não ocorreu na expromissão, onde Fabiano sequer precisou anuir).</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 5 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 5 — Sub-rogação Legal e Reembolso</div>
+      <p>Um fiador paga integralmente uma dívida de R$ 10.000,00 do devedor principal perante o credor, aproveitando-se de um desconto promocional do banco e desembolsando R$ 6.000,00. Na ação de regresso contra o devedor, o fiador pode exigir os R$ 10.000,00 originais?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> Nos termos do Art. 350 do Código Civil, na sub-rogação legal o sub-rogado não poderá exercer os direitos e as ações do credor, senão <strong>até a soma que tiver desembolsado</strong> para desobrigar o devedor. Dessa forma, o fiador só pode cobrar os R$ 6.000,00 efetivamente pagos.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 6 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 6 — Dação em Pagamento e Evicção</div>
+      <p>O credor aceita receber do devedor um terreno no valor de R$ 50.000,00 em substituição ao pagamento de uma dívida de dinheiro. Dois meses depois, uma decisão judicial declara o terreno como de propriedade de um terceiro (evicção). Quais são as consequências jurídicas imediatas para o credor?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p>Conforme o Art. 359 do Código Civil, ocorrendo a evicção da coisa recebida em dação em pagamento, <strong>restabelece-se a obrigação primitiva</strong>, ficando sem efeito a quitação dada. O credor volta a ser titular do crédito original em dinheiro, com seus acessórios. Contudo, as garantias prestadas por terceiros (como fiança de terceiros de boa-fé) não se restabelecem.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 7 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 7 — Compensação e Cessão de Crédito</div>
+      <p>André deve R$ 1.000,00 a Roberto. Roberto cede esse crédito a Gustavo. André é notificado formalmente da cessão e nada declara. Semanas depois, André tenta compensar com Gustavo uma dívida de R$ 1.000,00 que Roberto tinha com ele antes da cessão. André pode fazer isso?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> Segundo o Art. 377 do Código Civil, o devedor que, notificado da cessão, nada opõe a ela, <strong>não pode opor ao cessionário</strong> (Gustavo) a compensação que antes da cessão teria contra o cedente (Roberto). O silêncio do devedor no momento da notificação opera a perda do direito de compensar contra o novo credor.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 8 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 8 — Responsabilidade Civil e Culpa da Vítima</div>
+      <p>Um motorista trafegando regularmente dentro do limite de velocidade atropela um pedestre que saltou repentinamente de uma passarela direto em frente ao veículo, tornando impossível qualquer manobra de desvio. O motorista responderá civilmente pelo ocorrido?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> O evento decorreu de <strong>culpa exclusiva da vítima</strong>, que funciona como excludente de nexo de causalidade. Como o dano foi causado puramente pelo comportamento temerário do pedestre, rompe-se o nexo causal entre a conduta do motorista e o evento lesivo, afastando o dever de indenizar.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 9 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 9 — Responsabilidade Objetiva e Risco</div>
+      <p>Qual o fundamento legal no Código Civil de 2002 para a aplicação da responsabilidade civil objetiva fora dos casos expressamente previstos em leis extravagantes?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p>Trata-se do <strong>Art. 927, parágrafo único</strong>, do Código Civil de 2002. O dispositivo consagra a chamada <strong>Teoria do Risco</strong>, determinando que haverá a obrigação de reparar o dano, independentemente de culpa, quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, risco para os direitos de outrem.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Questão 10 -->
+    <div class="exercise reveal">
+      <div class="exercise-number">Questão 10 — Confusão e Coobrigados</div>
+      <p>Se a confusão entre credor e devedor operar-se em relação a apenas um dos devedores solidários de uma dívida de R$ 9.000,00, a obrigação inteira extingue-se?</p>
+      <details class="gabarito">
+        <summary>🔍 Ver Gabarito Comentado</summary>
+        <div class="solution">
+          <span class="box-label">Gabarito Comentado</span>
+          <p><strong>Não.</strong> De acordo com o Art. 383 do Código Civil, a confusão operada na pessoa do credor com a de um dos devedores solidários extingue a obrigação <strong>apenas até a concorrência da quota respectiva</strong> do devedor afetado. A dívida solidária remanesce no valor de R$ 6.000,00 para os demais co-devedores, descontados os R$ 3.000,00 da quota do devedor confundido.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 6. MAPA MENTAL TEXTUAL -->
+  <!-- ============================== -->
+  <section id="mapa" class="reveal">
+    <h2><span class="num">06</span> Mapa Mental Textual Consolidado</h2>
+    
+    <div class="mindmap">
+      <div class="mm-title">🗺️ Extinção das Obrigações &amp; Responsabilidade Civil</div>
+      <pre>
+EXTINÇÃO DAS OBRIGAÇÕES
+│
+├── COMPENSAÇÃO (Arts. 368–380)
+│   ├── Reciprocidade de dívidas
+│   ├── Requisitos Legais: Líquidas, Vencidas e Coisas Fungíveis
+│   └── Incompensabilidade: Alimentos, Comodato, Depósito, Furto e Coisa Impenhorável
+│
+├── CONFUSÃO (Arts. 382–384)
+│   ├── Reunião de Credor e Devedor na mesma pessoa
+│   └── Efeito restaurador: se a confusão cessar, restaura-se com acessórios
+│
+├── REMISSÃO (Arts. 385–388)
+│   ├── Perdão da dívida aceito pelo devedor (bilateral)
+│   ├── Diferença: Remissão (perdão) vs. Remição (resgate/pagamento)
+│   └── Entrega voluntária do título presume perdão; devolução do penhor NÃO
+│
+├── NOVAÇÃO (Arts. 360–367)
+│   ├── Extinção com criação de nova obrigação (substituição)
+│   ├── Requisitos: Obrigação anterior, nova obrigação e Animus Novandi
+│   ├── Subjetiva Passiva: Expromissão (sem aval do devedor) vs. Delegação
+│   └── Efeitos: exonera fiadores não anuentes e devedores solidários excluídos
+│
+├── SUB-ROGAÇÃO (Arts. 346–351)
+│   ├── Pagamento por terceiro que assume a posição do credor
+│   ├── Legal (fiador, co-devedor) vs. Convencional (acordo de partes)
+│   └── Limites: sub-rogado legal só cobra o valor que desembolsou
+│
+└── DAÇÃO EM PAGAMENTO (Arts. 356–359)
+    ├── Credor aceita objeto diferente para extinguir a dívida
+    ├── Equiparações: compra e venda (com preço) ou cessão de crédito (com título)
+    └── Evicção: se perder a coisa dada, restaura a dívida original (exclui fiador)
+
+├── CONCEITO (Profª Giovanna): "Dever de reparar um dano causado a outrem"
+│
+├── OS 4 ELEMENTOS ESSENCIAIS
+│   ├── 1. Ação ou Omissão
+│   ├── 2. Dano
+│   ├── 3. Nexo de Causalidade (Nexo Causal)
+│   └── 4. Culpa
+│
+└── TIPOS DE RESPONSABILIDADE
+    ├── Subjetiva: DEPENDE da análise e existência de culpa
+    │   └── Regra geral do Código Civil (Art. 186)
+    └── Objetiva: INDEPENDE da análise e existência de culpa
+        └── Exceção legal ou atividade de risco (Art. 927, p. único)
+      </pre>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 7. RESUMO RÁPIDO -->
+  <!-- ============================== -->
+  <section id="resumo-rapido" class="reveal">
+    <div class="quick-review">
+      <h2>⚡ Cola Mental — Extinção &amp; Responsabilidade Civil</h2>
+      <ul>
+        <li><strong>Compensação:</strong> Encontro de obrigações mútuas líquidas, vencidas e fungíveis. <strong>Nunca compensa pensão alimentícia ou comodato!</strong></li>
+        <li><strong>Confusão:</strong> Credor e devedor viram a mesma pessoa. Se for desfeita, a dívida anterior renasce com seus acessórios.</li>
+        <li><strong>Remissão:</strong> Perdão aceito pelo devedor. Devolver a garantia (penhor) não significa perdoar o débito principal.</li>
+        <li><strong>Novação:</strong> Extinção criando dívida nova. Se mudar o devedor sem o aval dele, chama-se <strong>expromissão</strong>. Fiador que não assina a novação fica livre.</li>
+        <li><strong>Sub-rogação:</strong> Substituição do credor por quem pagou a conta. O sub-rogado legal só pode cobrar o que de fato gastou.</li>
+        <li><strong>Dação em pagamento:</strong> Credor aceita receber carro em vez de dinheiro. Se o credor perder o carro na justiça (evicção), a dívida de dinheiro renasce.</li>
+        <li><strong>Responsabilidade Civil (Profª Giovanna):</strong> É o dever de reparar um dano causado a outrem. Elementos: Ação ou Omissão + Dano + Nexo Causal + Culpa.</li>
+        <li><strong>Resp. Objetiva:</strong> <em>Independe</em> da análise e existência de culpa. Basta conduta + dano + nexo.</li>
+        <li><strong>Resp. Subjetiva:</strong> <em>Depende</em> da análise e existência de culpa. Sem culpa/dolo = sem indenização.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="credit">MEU HUB DE ESTUDOS JURÍDICOS</div>
+    <p>Direito Civil II — Extinção das Obrigações &amp; Responsabilidade Civil</p>
+    <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2026 - Em conformidade com o Código Civil de 2002.</p>
+  </div>
+</footer>
+
+<script src="../../portal-core.js"></script>
+</body>
+
+</html>
+
