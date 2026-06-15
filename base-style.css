@@ -987,6 +987,17 @@ details.artigo .lei-seca { background: var(--box-legal-bg); color: var(--box-leg
   /* Hide Legacy Scroll Top on mobile (redundant with bottom nav) */
   #scroll-top { display: none !important; }
 
+  /* Disable scroll reveal animation on mobile to prevent opacity: 0 bugs (blank gaps) */
+  .reveal-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Hide online indicator on mobile so it doesn't break the navbar */
+  .online-indicator {
+    display: none !important;
+  }
+
   /* ── Stats Dashboard Mobile ── */
   .stats-dashboard {
     padding: 1.5rem 1rem;
