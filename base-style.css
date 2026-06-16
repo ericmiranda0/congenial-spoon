@@ -100,6 +100,8 @@
   --box-note-border: #4B5563;
   --box-important-bg: rgba(16, 185, 129, 0.08);
   --box-warning-bg: rgba(217, 119, 6, 0.08);
+  --box-critical-bg: rgba(239, 68, 68, 0.08);
+  --box-critical-border: rgba(239, 68, 68, 0.3);
   --box-legal-bg: #08090b;
   --neutral-50: #0F1012;
   --neutral-100: #18191B;
@@ -1811,23 +1813,13 @@ input:checked + .ml-slider:before {
   text-overflow: ellipsis;
 }
 
-/* Controles de Microlearning Sticky */
+/* Controles de Microlearning Ativos */
 .microlearning-mode .ml-controls {
-  position: sticky;
-  top: 56px; /* Altura do menu */
-  z-index: 900;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   margin-top: 0;
   margin-bottom: 2rem;
-  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s, border-color 0.3s;
-}
-
-[data-theme="dark"] .microlearning-mode .ml-controls {
-  background: rgba(15, 23, 42, 0.9);
 }
 
 /* Swiper Integration Adjustments */

@@ -673,9 +673,7 @@ function initMicrolearning() {
         }
         
         if (targetIdx !== -1) {
-            isPillMode = true;
             currentPillIndex = targetIdx;
-            localStorage.setItem('studyMode', 'pill');
             localStorage.setItem(`currentPill_${pathKey}`, currentPillIndex);
             
             // Scroll to the specific element after a short delay to allow layout to settle
@@ -913,12 +911,13 @@ function initMicrolearning() {
             }
 
             if (targetIdx !== -1) {
-                isPillMode = true;
-                localStorage.setItem('studyMode', 'pill');
-                if (!swiperInstance) {
-                    updateUI();
+                if (isPillMode) {
+                    if (!swiperInstance) updateUI();
+                    navigatePill(targetIdx);
+                } else {
+                    currentPillIndex = targetIdx;
+                    localStorage.setItem(`currentPill_${pathKey}`, currentPillIndex);
                 }
-                navigatePill(targetIdx);
                 
                 // Scroll to the specific element after transition
                 setTimeout(() => {
