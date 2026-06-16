@@ -16,32 +16,80 @@
             --p-700: #0f172a;
             --p-500: #334155;
             --header-height: 400px;
+            
+            /* Light Mode Defaults for Hero */
+            --hero-bg: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+            --hero-text: #1e293b;
+            --hero-input-bg: rgba(15, 23, 42, 0.05);
+            --hero-input-border: rgba(15, 23, 42, 0.1);
+            --hero-input-focus: rgba(15, 23, 42, 0.1);
+            --hero-input-text: #1e293b;
+            
+            --filter-btn-bg: rgba(15, 23, 42, 0.05);
+            --filter-btn-border: rgba(15, 23, 42, 0.1);
+            --filter-btn-text: #64748b;
+            --filter-btn-hover-border: rgba(15, 23, 42, 0.2);
+            --filter-btn-hover-text: #0f172a;
+            
+            --filter-btn-active-bg: #0f172a;
+            --filter-btn-active-text: white;
+            --filter-btn-active-border: #0f172a;
+        }
+
+        [data-theme="dark"] {
+            --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --hero-text: white;
+            --hero-input-bg: rgba(255,255,255,0.1);
+            --hero-input-border: rgba(255,255,255,0.2);
+            --hero-input-focus: rgba(255,255,255,0.15);
+            --hero-input-text: white;
+            
+            --filter-btn-bg: rgba(255,255,255,0.05);
+            --filter-btn-border: rgba(255,255,255,0.15);
+            --filter-btn-text: rgba(255,255,255,0.7);
+            --filter-btn-hover-border: rgba(255,255,255,0.3);
+            --filter-btn-hover-text: white;
+            
+            --filter-btn-active-bg: white;
+            --filter-btn-active-text: #0f172a;
+            --filter-btn-active-border: white;
         }
 
         .hero-hub {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            background: var(--hero-bg);
+            color: var(--hero-text);
             text-align: center;
             padding: 4rem 2rem;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
+
+        .hero-hub h1, .hero-hub .subtitle {
+            color: var(--hero-text) !important;
+        }
+
+        .hero-hub .badge {
+            background: var(--hero-input-bg);
+            border: 1px solid var(--hero-input-border);
+            color: var(--hero-text) !important;
+        }
+
 
         .search-container {
             max-width: 600px;
             margin: 2rem auto 0;
             position: relative;
-            z-index: 10;
+            z-index: 1000;
         }
 
         .search-input {
             width: 100%;
             padding: 1rem 1.5rem 1rem 3.5rem;
             border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--hero-input-border);
+            background: var(--hero-input-bg);
             backdrop-filter: blur(10px);
-            color: white;
+            color: var(--hero-input-text);
             font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
             outline: none;
@@ -49,7 +97,7 @@
         }
 
         .search-input:focus {
-            background: rgba(255,255,255,0.15);
+            background: var(--hero-input-focus);
             border-color: var(--p-500);
             box-shadow: 0 0 0 4px rgba(51, 65, 85, 0.3);
         }
@@ -75,9 +123,9 @@
         }
         
         .filter-btn {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: rgba(255,255,255,0.7);
+            background: var(--filter-btn-bg);
+            border: 1px solid var(--filter-btn-border);
+            color: var(--filter-btn-text);
             padding: 0.6rem 1.4rem;
             font-family: 'Inter', sans-serif;
             font-weight: 600;
@@ -89,23 +137,23 @@
         }
         
         .filter-btn:hover {
-            border-color: rgba(255,255,255,0.3);
-            color: white;
+            border-color: var(--filter-btn-hover-border);
+            color: var(--filter-btn-hover-text);
             transform: translateY(-2px);
         }
         
         .filter-btn.active {
-            background: white;
-            color: #0f172a;
-            border-color: white;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+            background: var(--filter-btn-active-bg);
+            color: var(--filter-btn-active-text);
+            border-color: var(--filter-btn-active-border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .subjects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
         }
 
         .subject-card {
@@ -114,7 +162,7 @@
             padding: 2.5rem;
             border: 1px solid var(--border);
             color: var(--text-main);
-            transition: var(--transition);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -123,7 +171,7 @@
         }
 
         .subject-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-premium);
         }
 
@@ -292,6 +340,7 @@
     <div class="search-container">
         <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por matéria, assunto ou tópico...">
+        <div id="searchPillResults" class="search-results-panel"></div>
     </div>
 
     <!-- Category selector tabs -->
@@ -304,7 +353,7 @@
     </div>
 
     <div style="position: absolute; top: 1rem; right: 2rem; display: flex; gap: 1rem;">
-        <button class="theme-toggle" id="themeToggle"><svg width="20" height="20" id="themeIcon"></svg></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><svg width="20" height="20" id="themeIcon"></svg></button>
     </div>
 </header>
 
@@ -506,12 +555,14 @@
     </div>
 </footer>
 
+<script src="search-index.js"></script>
 <script src="portal-core.js"></script>
 <script>
     const searchInput = document.getElementById('searchInput');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.subject-card');
     const emptyState = document.getElementById('emptyState');
+    const pillResultsPanel = document.getElementById('searchPillResults');
 
     // Filter functionality
     filterButtons.forEach(btn => {
@@ -521,29 +572,39 @@
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
-            let found = false;
-
-            cards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                
-                if (filterValue === 'all' || category === filterValue) {
-                    card.style.display = 'flex';
-                    found = true;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            emptyState.style.display = found ? 'none' : 'block';
             
-            // Clear search when changing filters for a clean UX
-            searchInput.value = '';
+            const applyFilter = () => {
+                let found = false;
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filterValue === 'all' || category === filterValue) {
+                        card.style.display = 'flex';
+                        found = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                emptyState.style.display = found ? 'none' : 'block';
+                
+                // Clear search when changing filters for a clean UX
+                searchInput.value = '';
+                if (pillResultsPanel) {
+                    pillResultsPanel.classList.remove('visible');
+                    pillResultsPanel.innerHTML = '';
+                }
+            };
+
+            if (!document.startViewTransition) {
+                applyFilter();
+            } else {
+                document.startViewTransition(() => applyFilter());
+            }
         });
     });
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase();
+        const term = e.target.value.toLowerCase().trim();
         let found = false;
         
         // Reset active filter button to "All" when searching
@@ -552,12 +613,12 @@
             document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
         }
 
+        // 1. Filter main cards (subjects)
         cards.forEach(card => {
             const title = card.querySelector('h3').textContent.toLowerCase();
             const desc = card.querySelector('p').textContent.toLowerCase();
             const tags = card.getAttribute('data-tags').toLowerCase();
             
-            // Search inside specific summary links too!
             let summaryMatch = false;
             const summaryLinks = card.querySelectorAll('.link-title');
             summaryLinks.forEach(link => {
@@ -575,7 +636,105 @@
         });
 
         emptyState.style.display = found ? 'none' : 'block';
+
+        // 2. Search inside specific pills
+        if (!pillResultsPanel) return;
+
+        if (term.length < 2) {
+            pillResultsPanel.classList.remove('visible');
+            pillResultsPanel.innerHTML = '';
+            return;
+        }
+
+        // Safety check if search index is not loaded yet
+        if (typeof window.SEARCH_INDEX === 'undefined') {
+            console.warn("SEARCH_INDEX is undefined. Trying to load dynamically...");
+            if (typeof loadSearchIndex === 'function') {
+                loadSearchIndex().then(() => {
+                    // Retry search
+                    searchInput.dispatchEvent(new Event('input'));
+                });
+            }
+            return;
+        }
+
+        const matches = [];
+        window.SEARCH_INDEX.forEach(item => {
+            if (item.title.toLowerCase().includes(term) || 
+                item.tags.toLowerCase().includes(term)) {
+                matches.push(item);
+            }
+        });
+
+        const limitedMatches = matches.slice(0, 15);
+
+        if (limitedMatches.length > 0) {
+            const groups = {};
+            limitedMatches.forEach(item => {
+                const groupKey = `${item.subject} — ${item.summaryTitle}`;
+                if (!groups[groupKey]) {
+                    groups[groupKey] = {
+                        subject: item.subject,
+                        summaryTitle: item.summaryTitle,
+                        items: []
+                    };
+                }
+                groups[groupKey].items.push(item);
+            });
+
+            let html = '';
+            for (const key in groups) {
+                const g = groups[key];
+                html += `
+                    <div class="search-results-group">
+                        <div class="search-group-title">
+                            <span>${g.summaryTitle}</span>
+                            <span class="search-group-subject">${g.subject}</span>
+                        </div>
+                `;
+                g.items.forEach(item => {
+                    html += `
+                        <a href="${item.url}#${item.id}" class="search-pill-item">
+                            <div class="search-pill-title">
+                                📌 ${item.title}
+                            </div>
+                            <div class="search-pill-excerpt">
+                                ${item.excerpt}
+                            </div>
+                        </a>
+                    `;
+                });
+                html += `</div>`;
+            }
+            pillResultsPanel.innerHTML = html;
+            pillResultsPanel.classList.add('visible');
+        } else {
+            pillResultsPanel.innerHTML = '<div style="text-align: center; color: var(--text-muted); font-size: 0.9rem; padding: 1rem;">Nenhuma pílula de conteúdo encontrada...</div>';
+            pillResultsPanel.classList.add('visible');
+        }
+    });
+
+    // Handle clicks outside the search results panel to close it
+    document.addEventListener('click', (e) => {
+        if (pillResultsPanel && !pillResultsPanel.contains(e.target) && e.target !== searchInput) {
+            pillResultsPanel.classList.remove('visible');
+        }
+    });
+
+    // Re-open panel on focus if it has valid search content
+    searchInput.addEventListener('focus', () => {
+        if (pillResultsPanel && searchInput.value.trim().length >= 2) {
+            pillResultsPanel.classList.add('visible');
+        }
+    });
+
+    // Keydown listener for Escape key to close the search panel
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && pillResultsPanel) {
+            pillResultsPanel.classList.remove('visible');
+        }
     });
 </script>
 </body>
 </html>
+

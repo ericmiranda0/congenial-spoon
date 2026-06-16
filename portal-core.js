@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initErrorReporting();
     initBottomNav();
     initVisitorStats();
+    initResponsiveTables();
+    initMicrolearning();
 });
 
 /**
@@ -59,6 +61,10 @@ function initProgressBar() {
     const progressBar = document.getElementById('progressBar');
     if (!progressBar) return;
     window.addEventListener('scroll', () => {
+        if (document.documentElement.classList.contains('microlearning-mode') && window._mlProgressOverride != null) {
+            progressBar.style.width = window._mlProgressOverride + '%';
+            return;
+        }
         const winScroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
@@ -118,13 +124,23 @@ function initScrollReveal() {
     }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 
     targets.forEach(el => {
-        // Only add animation if element is NOT already in the viewport on load
-        const rect = el.getBoundingClientRect();
-        const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-        if (!inViewport) {
-            el.classList.add('reveal-hidden');
-        }
+        el.classList.add('reveal-hidden');
         observer.observe(el);
+    });
+}
+
+/**
+ * Responsive Table Wrapper
+ * Wraps naked tables in .table-container for mobile scrolling
+ */
+function initResponsiveTables() {
+    document.querySelectorAll('table').forEach(table => {
+        if (!table.parentElement.classList.contains('table-container') && !table.parentElement.classList.contains('tabela-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('table-container');
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        }
     });
 }
 
@@ -205,7 +221,7 @@ function initErrorReporting() {
             </div>
         </div>
         
-        <a href="#" class="report-btn" id="openReport">
+        <a href="#" class="report-btn" id="openReport" aria-label="Open study report">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
                 <line x1="12" y1="9" x2="12" y2="13"></line>
@@ -592,3 +608,415 @@ function initVisitorStats() {
     });
 }
 
+/**
+ * Microlearning UI Logic
+ */
+function initMicrolearning() {
+    // Only initialize on pages with a <main> or .container that has multiple <section>s
+    const container = document.querySelector('main .container') || document.querySelector('.container');
+    if (!container) return;
+    
+    const sections = Array.from(container.querySelectorAll('section'));
+    // If fewer than 2 sections, it's not really a study pill document
+    if (sections.length < 2) return;
+
+    // Define unique key for local storage based on path
+    const pathKey = window.location.pathname;
+    
+    // Create Controls UI
+    const controlsHTML = `
+        <div class="ml-controls" id="mlControls">
+            <div class="ml-toggle-wrapper">
+                <span class="ml-toggle-label" id="mlLabelFull">Leitura Completa</span>
+                <label class="ml-toggle">
+                    <input type="checkbox" id="mlModeToggle">
+                    <span class="ml-slider"></span>
+                </label>
+                <span class="ml-toggle-label" id="mlLabelPill" style="color: var(--p-500);">Modo Pílulas</span>
+            </div>
+            <div id="mlProgressText" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: none;"></div>
+        </div>
+    `;
+    
+    // Inject controls right after the summary card, or before the first section
+    const summaryCard = container.querySelector('.summary-card');
+    if (summaryCard) {
+        summaryCard.insertAdjacentHTML('afterend', controlsHTML);
+    } else {
+        container.insertBefore(document.createRange().createContextualFragment(controlsHTML), sections[0]);
+    }
+
+    const toggleBtn = document.getElementById('mlModeToggle');
+    const progressText = document.getElementById('mlProgressText');
+    const labelFull = document.getElementById('mlLabelFull');
+    const labelPill = document.getElementById('mlLabelPill');
+    const bodyObj = document.documentElement;
+    
+    let isPillMode = localStorage.getItem('studyMode') === 'pill';
+    let currentPillIndex = parseInt(localStorage.getItem(`currentPill_${pathKey}`)) || 0;
+    let swiperInstance = null;
+
+    // Check if URL has a hash pointing to a specific section/pill
+    const hash = window.location.hash;
+    if (hash) {
+        const targetId = hash.substring(1);
+        let targetIdx = sections.findIndex(sec => sec.id === targetId);
+        
+        if (targetIdx === -1) {
+            const el = document.getElementById(targetId);
+            if (el) {
+                const parentSec = el.closest('section');
+                if (parentSec) {
+                    targetIdx = sections.findIndex(sec => sec.id === parentSec.id);
+                }
+            }
+        }
+        
+        if (targetIdx !== -1) {
+            isPillMode = true;
+            currentPillIndex = targetIdx;
+            localStorage.setItem('studyMode', 'pill');
+            localStorage.setItem(`currentPill_${pathKey}`, currentPillIndex);
+            
+            // Scroll to the specific element after a short delay to allow layout to settle
+            setTimeout(() => {
+                const el = document.getElementById(targetId);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500);
+        }
+    }
+
+    // Ensure index is in bounds
+    if (currentPillIndex >= sections.length) currentPillIndex = 0;
+
+    // Inject Navigation Buttons inside each section
+    sections.forEach((sec, idx) => {
+        const isFirst = idx === 0;
+        const isLast = idx === sections.length - 1;
+        
+        const navHTML = `
+            <div class="ml-nav-buttons">
+                <button class="ml-btn ml-prev" aria-label="Pílula anterior" ${isFirst ? 'disabled' : ''}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Anterior
+                </button>
+                <button class="ml-btn ml-next" aria-label="Próxima pílula" ${isLast ? 'disabled' : ''}>
+                    Próxima
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+        `;
+        sec.insertAdjacentHTML('beforeend', navHTML);
+
+        // Bind clicks
+        const prevBtn = sec.querySelector('.ml-prev');
+        const nextBtn = sec.querySelector('.ml-next');
+        
+        if (prevBtn) prevBtn.addEventListener('click', () => navigatePill(idx - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => navigatePill(idx + 1));
+    });
+
+    // Load CSS/JS for Swiper dynamically
+    function loadSwiperAssets() {
+        return new Promise((resolve) => {
+            if (window.Swiper) {
+                resolve();
+                return;
+            }
+            // Add Swiper CSS
+            const cssLink = document.createElement('link');
+            cssLink.rel = 'stylesheet';
+            cssLink.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+            document.head.appendChild(cssLink);
+
+            // Add Swiper JS
+            const jsScript = document.createElement('script');
+            jsScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+            jsScript.onload = () => resolve();
+            jsScript.onerror = () => {
+                console.warn("Could not load Swiper from CDN.");
+                resolve();
+            };
+            document.body.appendChild(jsScript);
+        });
+    }
+
+    function enableSwiperMode(startIndex) {
+        if (swiperInstance) return;
+
+        // Create wrapper elements for Swiper.js
+        const swiperDiv = document.createElement('div');
+        swiperDiv.className = 'swiper microlearning-slider';
+        
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.className = 'swiper-wrapper';
+        
+        const paginationDiv = document.createElement('div');
+        paginationDiv.className = 'swiper-pagination';
+        
+        swiperDiv.appendChild(wrapperDiv);
+        swiperDiv.appendChild(paginationDiv);
+        
+        // Move sections inside wrapper and add swiper slide classes
+        sections.forEach(sec => {
+            sec.classList.add('swiper-slide');
+            wrapperDiv.appendChild(sec);
+        });
+        
+        // Insert swiper element after controls
+        const controls = document.getElementById('mlControls');
+        if (controls) {
+            controls.insertAdjacentElement('afterend', swiperDiv);
+        } else {
+            container.appendChild(swiperDiv);
+        }
+        
+        loadSwiperAssets().then(() => {
+            if (!window.Swiper) return;
+            
+            swiperInstance = new window.Swiper('.microlearning-slider', {
+                threshold: 20,           // Ignores movements smaller than 20px
+                longSwipesRatio: 0.5,    // Requires dragging >50% of the width to change slides
+                longSwipesMs: 300,       // Duration required to define a "long swipe"
+                keyboard: { enabled: true },
+                autoHeight: true,        // Adapts heights dynamically to content size
+                spaceBetween: 30,
+                initialSlide: startIndex,
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true,
+                },
+                on: {
+                    slideChange: function() {
+                        currentPillIndex = this.activeIndex;
+                        localStorage.setItem(`currentPill_${pathKey}`, currentPillIndex);
+                        
+                        // Update progress UI
+                        if (progressText) {
+                            progressText.textContent = `Pílula ${currentPillIndex + 1} de ${sections.length}`;
+                        }
+                        updateProgressOverride((currentPillIndex + 1) / sections.length * 100);
+                        
+                        // Sync hash silently without triggering scroll side-effects
+                        const targetSecId = sections[currentPillIndex].id;
+                        if (targetSecId) {
+                            history.replaceState(null, null, `#${targetSecId}`);
+                        }
+                        
+                        // Scroll to controls smoothly
+                        const controlsEl = document.getElementById('mlControls');
+                        if (controlsEl) {
+                            const y = controlsEl.getBoundingClientRect().top + window.scrollY - 100;
+                            window.scrollTo({top: y, behavior: 'smooth'});
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    function disableSwiperMode() {
+        if (swiperInstance) {
+            swiperInstance.destroy(true, true);
+            swiperInstance = null;
+        }
+        
+        const swiperDiv = container.querySelector('.microlearning-slider');
+        if (swiperDiv) {
+            sections.forEach(sec => {
+                sec.classList.remove('swiper-slide');
+                // Restore default positioning styling
+                sec.style.width = '';
+                sec.style.height = '';
+                container.appendChild(sec);
+            });
+            swiperDiv.remove();
+        }
+    }
+
+    const updateUI = () => {
+        if (isPillMode) {
+            bodyObj.classList.add('microlearning-mode');
+            toggleBtn.checked = true;
+            progressText.style.display = 'block';
+            labelPill.style.color = 'var(--p-500)';
+            labelFull.style.color = 'var(--text-main)';
+            
+            enableSwiperMode(currentPillIndex);
+            
+            progressText.textContent = `Pílula ${currentPillIndex + 1} de ${sections.length}`;
+            updateProgressOverride((currentPillIndex + 1) / sections.length * 100);
+        } else {
+            bodyObj.classList.remove('microlearning-mode');
+            toggleBtn.checked = false;
+            progressText.style.display = 'none';
+            labelFull.style.color = 'var(--p-500)';
+            labelPill.style.color = 'var(--text-main)';
+            
+            disableSwiperMode();
+            
+            // Reset progress bar to scroll based
+            window.dispatchEvent(new Event('scroll'));
+        }
+    };
+
+    const navigatePill = (newIdx) => {
+        if (newIdx >= 0 && newIdx < sections.length) {
+            currentPillIndex = newIdx;
+            localStorage.setItem(`currentPill_${pathKey}`, currentPillIndex);
+            
+            if (swiperInstance) {
+                swiperInstance.slideTo(currentPillIndex);
+            } else {
+                updateUI();
+            }
+        }
+    };
+
+    toggleBtn.addEventListener('change', (e) => {
+        isPillMode = e.target.checked;
+        localStorage.setItem('studyMode', isPillMode ? 'pill' : 'full');
+        updateUI();
+    });
+
+    // Update navigation items in the pill mode (so clicking on summary goes to the correct pill)
+    const summaryLinks = container.querySelectorAll('.summary-card a, .nav-list a.nav-item');
+    summaryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#') && isPillMode) {
+                const targetId = href.substring(1);
+                const targetIdx = sections.findIndex(sec => sec.id === targetId);
+                if (targetIdx !== -1) {
+                    e.preventDefault();
+                    navigatePill(targetIdx);
+                }
+            }
+        });
+    });
+
+    // Listen for hash changes (e.g. from links or back button) to navigate between pills dynamically
+    window.addEventListener('hashchange', () => {
+        const newHash = window.location.hash;
+        if (newHash) {
+            const targetId = newHash.substring(1);
+            let targetIdx = sections.findIndex(sec => sec.id === targetId);
+            
+            if (targetIdx === -1) {
+                const el = document.getElementById(targetId);
+                if (el) {
+                    const parentSec = el.closest('section');
+                    if (parentSec) {
+                        targetIdx = sections.findIndex(sec => sec.id === parentSec.id);
+                    }
+                }
+            }
+
+            if (targetIdx !== -1) {
+                isPillMode = true;
+                localStorage.setItem('studyMode', 'pill');
+                if (!swiperInstance) {
+                    updateUI();
+                }
+                navigatePill(targetIdx);
+                
+                // Scroll to the specific element after transition
+                setTimeout(() => {
+                    const el = document.getElementById(targetId);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        }
+    });
+
+    // Load search index and process Obsidian wiki-links
+    loadSearchIndex().then(index => {
+        processWikiLinks(index);
+    });
+
+    // Initial setup
+    updateUI();
+}
+
+// Global variable to hold manual progress override
+window._mlProgressOverride = null;
+function updateProgressOverride(pct) {
+    window._mlProgressOverride = pct;
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar) progressBar.style.width = pct + '%';
+}
+
+/**
+ * Dynamic search index loader
+ */
+function loadSearchIndex() {
+    return new Promise((resolve) => {
+        if (window.SEARCH_INDEX) {
+            resolve(window.SEARCH_INDEX);
+            return;
+        }
+        const script = document.createElement('script');
+        let basePath = '';
+        const path = window.location.pathname;
+        if (path.includes('/subjects/')) {
+            basePath = '../../';
+        }
+        script.src = basePath + 'search-index.js';
+        script.onload = () => {
+            resolve(window.SEARCH_INDEX || []);
+        };
+        script.onerror = () => {
+            console.warn("Could not load search index. Check if search-index.js exists.");
+            resolve([]);
+        };
+        document.body.appendChild(script);
+    });
+}
+
+/**
+ * Renderizer of wiki-links [[pill-id]] or [[pill-id|text]]
+ */
+function processWikiLinks(searchIndex) {
+    // Only run inside subject pages
+    if (!window.location.pathname.includes('/subjects/')) return;
+    
+    const container = document.querySelector('main .container') || document.querySelector('.container');
+    if (!container) return;
+    
+    const sections = container.querySelectorAll('section');
+    if (sections.length === 0) return;
+    
+    // Map of pill IDs to objects (case insensitive)
+    const pillMap = {};
+    if (Array.isArray(searchIndex)) {
+        searchIndex.forEach(item => {
+            pillMap[item.id.toLowerCase()] = item;
+        });
+    }
+    
+    sections.forEach(sec => {
+        let html = sec.innerHTML;
+        // Match [[id]] or [[id|text]]
+        const regex = /\[\[([a-zA-Z0-9\-_]+)(?:\|([^\]]+))?\]\]/g;
+        
+        const newHtml = html.replace(regex, (match, pillId, displayText) => {
+            const key = pillId.toLowerCase();
+            const targetPill = pillMap[key];
+            const text = displayText || (targetPill ? targetPill.title : pillId);
+            
+            if (targetPill) {
+                let targetUrl = targetPill.url;
+                let basePath = '../../';
+                const finalUrl = basePath + targetUrl + "#" + targetPill.id;
+                
+                return `<a href="${finalUrl}" class="wiki-link" title="${targetPill.subject} - ${targetPill.title}">${text}</a>`;
+            } else {
+                return `<span class="wiki-link broken" style="color: var(--text-muted); border-bottom-color: var(--text-muted); opacity: 0.7;" title="Pílula '${pillId}' não encontrada">${text}</span>`;
+            }
+        });
+        
+        if (html !== newHtml) {
+            sec.innerHTML = newHtml;
+        }
+    });
+}

@@ -84,7 +84,7 @@ new_html = """
       No Direito, cuidado máximo com os termos: "Alienação" envolve a transmissão de coisas corpóreas (vender um carro). Já o vocábulo "Cessão" implica transferência (onerosa ou gratuita) de bens imateriais, intangíveis. Nós alienamos imóveis, mas cedemos créditos ou direitos autorais!
     </div>
 
-    <h4>Consentimento e Notificação (A Pegadinha Clássica)</h4>
+    <h3>Consentimento e Notificação (A Pegadinha Clássica)</h3>
     <div class="table-wrap">
       <table>
         <thead>
@@ -113,7 +113,7 @@ new_html = """
       <strong>⚠️ PEGADINHA DE CONCURSO:</strong> As bancas afirmam que "A cessão de crédito exige o consentimento do devedor sob pena de nulidade do negócio". <strong>FALSO!</strong> O consentimento é irrelevante. O que a lei exige é a <em>notificação</em> para fins de eficácia. A própria citação do devedor na ação de cobrança movida pelo cessionário já serve como notificação!
     </div>
 
-    <h4>Abrangência e Natureza</h3>
+    <h3>Abrangência e Natureza</h3>
     <p>A cessão abrange não só o valor principal, mas todos os acessórios (juros, multas, garantias, cláusula penal), conforme art. 287 do CC. Pode ser gratuita (sujeita às regras da doação) ou onerosa (sujeita às regras da compra e venda).</p>
 
   </section>
@@ -136,7 +136,7 @@ new_html = """
       Na cessão de crédito, o consentimento do devedor era dispensável porque para ele não importa a quem ele deve pagar. Mas na assunção de dívida, a situação inverte: a identidade do devedor é FATOR FUNDAMENTAL para a segurança do credor (solvabilidade, patrimônio garantidor). Você emprestaria dinheiro para o Elon Musk sabendo que amanhã ele transferiria a dívida para alguém desempregado sem patrimônio? Por isso, é <strong>imprescindível o consentimento do credor</strong> (Art. 299, CC). O silêncio do credor importa RECUSA (art. 299, parágrafo único).
     </div>
 
-    <h4>Espécies de Assunção de Dívida</h4>
+    <h3>Espécies de Assunção de Dívida</h3>
     <div class="table-wrap">
       <table>
         <thead>
@@ -171,7 +171,7 @@ new_html = """
       <div class="qp-definicao">Resumo Supremo: Comparação Transmissão</div>
       <div class="qp-cols">
         <div class="qp-col">
-          <h5>CESSÃO DE CRÉDITO</h5>
+          <h4>CESSÃO DE CRÉDITO</h4>
           <ol>
             <li>Substituição no Polo Ativo</li>
             <li>Consentimento do Cedido: <strong>Dispensável</strong></li>
@@ -180,7 +180,7 @@ new_html = """
           </ol>
         </div>
         <div class="qp-col">
-          <h5>ASSUNÇÃO DE DÍVIDA</h5>
+          <h4>ASSUNÇÃO DE DÍVIDA</h4>
           <ol>
             <li>Substituição no Polo Passivo</li>
             <li>Consentimento do Credor: <strong>Indispensável</strong></li>
