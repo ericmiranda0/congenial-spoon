@@ -327,6 +327,248 @@
             padding: 4rem;
             display: none;
         }
+
+        /* ═══════════════════════════════════════════════════════ */
+        /* MOBILE THUMBNAIL GRID + EXPAND/COLLAPSE                */
+        /* ═══════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            /* Remove all side padding/margin on mobile */
+            .hero-hub {
+                padding: 2.5rem 0.75rem 1.5rem;
+            }
+
+            .search-container {
+                padding: 0 0.5rem;
+            }
+
+            .category-filters {
+                flex-direction: column;
+                gap: 0.4rem;
+                padding: 0 0.75rem;
+                margin-top: 1.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.55rem 1rem;
+                font-size: 0.8rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Grid de miniaturas 2 colunas */
+            .subjects-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.65rem;
+                padding: 1rem 0;
+            }
+
+            /* CARD MINIATURA — estado colapsado */
+            .subject-card {
+                padding: 0;
+                border-radius: 18px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                will-change: transform, grid-column;
+            }
+
+            /* Wrapper da miniatura compacta */
+            .subject-card .mobile-thumb {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1.25rem 0.5rem;
+                text-align: center;
+                gap: 0.5rem;
+                min-height: 120px;
+            }
+
+            .subject-card .mobile-thumb .subject-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+                border-radius: 14px;
+            }
+
+            .subject-card .mobile-thumb .thumb-title {
+                font-family: 'Outfit', sans-serif;
+                font-weight: 700;
+                font-size: 0.8rem;
+                line-height: 1.3;
+                color: var(--text-main);
+            }
+
+            .subject-card .mobile-thumb .thumb-count {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.65rem;
+                font-weight: 600;
+                color: var(--text-muted);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            /* Esconde conteúdo interno original no mobile */
+            .subject-card > h3,
+            .subject-card > p,
+            .subject-card > .subject-icon,
+            .subject-card > .summary-links-list,
+            .subject-card > .card-footer {
+                display: none;
+            }
+
+            /* Painel expandido */
+            .subject-card .mobile-expand-panel {
+                display: none;
+                padding: 0 1rem 1rem;
+                opacity: 0;
+                transform: scaleY(0.95);
+                transform-origin: top center;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            /* ESTADO EXPANDIDO */
+            .subject-card.mobile-expanded {
+                grid-column: 1 / -1;
+                border-radius: 20px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+                animation: cardExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+
+            .subject-card.mobile-expanded .mobile-thumb {
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 1rem 1rem 0.75rem;
+                gap: 0.75rem;
+                min-height: unset;
+            }
+
+            .subject-card.mobile-expanded .mobile-thumb .subject-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .subject-card.mobile-expanded .mobile-thumb .thumb-title {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+
+            .subject-card.mobile-expanded .mobile-thumb .thumb-count {
+                display: none;
+            }
+
+            /* Botão de fechar */
+            .subject-card.mobile-expanded .mobile-thumb .mobile-close-btn {
+                display: flex;
+            }
+
+            .mobile-close-btn {
+                display: none;
+                margin-left: auto;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: none;
+                background: rgba(0,0,0,0.06);
+                color: var(--text-muted);
+                font-size: 1.1rem;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: var(--transition);
+                flex-shrink: 0;
+            }
+
+            [data-theme="dark"] .mobile-close-btn {
+                background: rgba(255,255,255,0.1);
+            }
+
+            .mobile-close-btn:hover {
+                background: rgba(0,0,0,0.12);
+            }
+
+            /* Mostrar painel expandido */
+            .subject-card.mobile-expanded .mobile-expand-panel {
+                display: block;
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            .mobile-expand-panel .summary-link-item {
+                padding: 0.75rem 0.85rem;
+                font-size: 0.85rem;
+                border-radius: 10px;
+            }
+
+            .mobile-expand-panel .summary-links-list {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .mobile-expand-panel .mobile-hub-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+                text-decoration: none;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.78rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                color: var(--subject-color);
+                padding: 0.6rem;
+                border-top: 1px solid var(--border);
+                transition: var(--transition);
+            }
+
+            .mobile-expand-panel .mobile-hub-link:hover {
+                opacity: 0.7;
+            }
+
+            /* Animação de expansão */
+            @keyframes cardExpand {
+                0% {
+                    transform: scale(0.96);
+                    opacity: 0.8;
+                }
+                50% {
+                    transform: scale(1.01);
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes cardCollapse {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0.96);
+                    opacity: 0.85;
+                }
+            }
+
+            .subject-card.mobile-collapsing {
+                animation: cardCollapse 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+        }
+
+        /* Desktop: esconder elementos mobile-only */
+        @media (min-width: 769px) {
+            .mobile-thumb,
+            .mobile-expand-panel,
+            .mobile-close-btn {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -364,6 +606,31 @@
         
         <!-- CONSTITUCIONAL -->
         <div class="subject-card color-constitucional" data-category="publico" data-tags="constitucional estado cpi organização poder legislativo executivo judiciario">
+            <!-- Mobile Thumbnail -->
+            <div class="mobile-thumb">
+                <div class="subject-icon">🏛️</div>
+                <span class="thumb-title">Constitucional II</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <!-- Mobile Expand Panel -->
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/constitucional/organizacao-estado-cpi.html" class="summary-link-item">
+                        <span class="link-icon">🏛️</span>
+                        <span class="link-title">Organização do Estado e CPIs</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/constitucional/poder-legislativo-executivo.html" class="summary-link-item">
+                        <span class="link-badge">novo</span>
+                        <span class="link-icon">⚡</span>
+                        <span class="link-title">Poder Legislativo &amp; Executivo</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/constitucional/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
+            <!-- Desktop (original) -->
             <div class="subject-icon">🏛️</div>
             <h3>Constitucional II</h3>
             <p>Organização do Estado, partilha de competências e Comissões Parlamentares de Inquérito (CPI).</p>
@@ -389,6 +656,28 @@
 
         <!-- CIVIL II -->
         <div class="subject-card color-civil" data-category="privado" data-tags="civil obrigaçoes contratos solidariedade dar fazer inadimplemento">
+            <div class="mobile-thumb">
+                <div class="subject-icon">⚖️</div>
+                <span class="thumb-title">Direito Civil II</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/civil-ii/teoria-geral-obrigacoes.html" class="summary-link-item">
+                        <span class="link-icon">📜</span>
+                        <span class="link-title">Teoria Geral das Obrigações</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/civil-ii/extincao-obrigacao-responsabilidade.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Transmissão &amp; Extinção das Obrigações e Responsabilidade Civil</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/civil-ii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
             <div class="subject-icon">⚖️</div>
             <h3>Direito Civil II</h3>
             <p>Teoria Geral das Obrigações, classificação das obrigações, relações e efeitos contratuais.</p>
@@ -414,6 +703,28 @@
 
         <!-- DIREITOS HUMANOS -->
         <div class="subject-card color-dh" data-category="publico" data-tags="dh direitos humanos internacional proteçao geraçoes principios tpi cij dudh pidcp pidesc interamericano incorporaçao idc">
+            <div class="mobile-thumb">
+                <div class="subject-icon">🌍</div>
+                <span class="thumb-title">Direitos Humanos</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/direitos-humanos/protecao-internacional-teoria-geral.html" class="summary-link-item">
+                        <span class="link-icon">🌍</span>
+                        <span class="link-title">Proteção Internacional &amp; Teoria Geral</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/direitos-humanos/sistemas-protecao.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Sistemas de Proteção Internacional (Aula 7)</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/direitos-humanos/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
             <div class="subject-icon">🌍</div>
             <h3>Direitos Humanos</h3>
             <p>Da evolução histórica e gerações à proteção internacional e aos sistemas regionais.</p>
@@ -439,6 +750,28 @@
 
         <!-- DIREITO DIGITAL -->
         <div class="subject-card color-digital" data-category="tecnologia" data-tags="digital lgpd internet crimes privacidade esquecimento software cibernetico economia dados freemium capitalismo">
+            <div class="mobile-thumb">
+                <div class="subject-icon">💻</div>
+                <span class="thumb-title">Direito Digital</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/direito-digital/lgpd-marco-civil-responsabilidade.html" class="summary-link-item">
+                        <span class="link-icon">💻</span>
+                        <span class="link-title">LGPD, Marco Civil e Responsabilidade</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/direito-digital/questoes-comerciais-economia-dados.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⚡</span>
+                        <span class="link-title">Questões Comerciais &amp; Economia de Dados</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/direito-digital/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
             <div class="subject-icon">💻</div>
             <h3>Direito Digital</h3>
             <p>LGPD, Marco Civil da Internet, Lei de Software, provas digitais e responsabilidade civil e penal.</p>
@@ -464,6 +797,28 @@
 
         <!-- PENAL II -->
         <div class="subject-card color-penal" data-category="criminais" data-tags="penal crime punição teoria concurso execuçao material formal continuado sursis livramento">
+            <div class="mobile-thumb">
+                <div class="subject-icon">⛓️</div>
+                <span class="thumb-title">Direito Penal II</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/penal-ii/teoria-das-penas.html" class="summary-link-item">
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Teoria das Penas e Dosimetria</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/penal-ii/concurso-execucao-efeitos-acao-punibilidade.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⛓️</span>
+                        <span class="link-title">Concurso, Execução, Efeitos, Ação &amp; Punibilidade</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/penal-ii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
             <div class="subject-icon">⛓️</div>
             <h3>Direito Penal II</h3>
             <p>Teoria Geral do Crime, culpabilidade, dosimetria e aplicação da pena, concurso de crimes e benefícios.</p>
@@ -488,6 +843,29 @@
         </div>
         <!-- PSICOLOGIA JURÍDICA -->
         <div class="subject-card color-psicologia" data-category="interdisciplinar" data-tags="psicologia familia criminologia penal avaliacao saude mental pericia alienacao">
+            <div class="mobile-thumb">
+                <div class="subject-icon">🧠</div>
+                <span class="thumb-title">Psicologia Jurídica</span>
+                <span class="thumb-count">2 resumos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+            <div class="mobile-expand-panel">
+                <div class="summary-links-list">
+                    <a href="subjects/psicologia-juridica/artigos-fundamentais.html" class="summary-link-item">
+                        <span class="link-badge" style="background: linear-gradient(135deg, #F59E0B, #D97706);">Novo</span>
+                        <span class="link-icon">📄</span>
+                        <span class="link-title">Artigos Fundamentais</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/psicologia-juridica/civil-criminologia-penal.html" class="summary-link-item">
+                        <span class="link-badge" style="background: linear-gradient(135deg, #F59E0B, #D97706);">Novo</span>
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Civil, Criminologia &amp; Penal</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <a href="subjects/psicologia-juridica/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+            </div>
             <div class="subject-icon">🧠</div>
             <h3>Psicologia Jurídica</h3>
             <p>Intersecção entre Psicologia e Direito Civil, Penal e Criminologia, avaliações periciais e saúde mental.</p>
@@ -553,18 +931,7 @@
 
                 </div>
             </div>
-            
-            <!-- Card de Gráfico Histórico -->
-            <div class="stats-card chart-card">
-                <div class="chart-header">
-                    <span class="chart-title">Evolução do Fluxo de Estudantes (Últimas 12 Horas)</span>
-                    <span class="chart-update-time" id="chartStatus">Atualiza em 5s</span>
-                </div>
-                
-                <div class="chart-container" id="svgChartContainer">
-                    <!-- O gráfico SVG e tooltip serão renderizados aqui dinamicamente -->
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -577,8 +944,8 @@
 <footer>
     <div class="container">
         <div class="credit">MEU HUB DE ESTUDOS JURÍDICOS</div>
-        <p>Sistema modular de resumos interativos otimizados para alto desempenho.</p>
-        <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2026 - Produzido com foco em excelência e aprovação.</p>
+        <p style="color: #94a3b8;">Sistema modular de resumos interativos otimizados para alto desempenho.</p>
+        <p style="margin-top: 2rem; color: #cbd5e1; opacity: 0.7;">&copy; 2026 - Produzido com foco em excelência e aprovação.</p>
     </div>
 </footer>
 
@@ -761,6 +1128,68 @@
             pillResultsPanel.classList.remove('visible');
         }
     });
+
+    // ══════════════════════════════════════════════════
+    // MOBILE EXPAND / COLLAPSE LOGIC
+    // ══════════════════════════════════════════════════
+    (function initMobileCards() {
+        const isMobile = () => window.innerWidth <= 768;
+
+        function collapseCard(card) {
+            card.classList.add('mobile-collapsing');
+            card.addEventListener('animationend', function handler() {
+                card.classList.remove('mobile-expanded', 'mobile-collapsing');
+                card.removeEventListener('animationend', handler);
+            }, { once: true });
+        }
+
+        function expandCard(card) {
+            // Collapse any currently expanded card first
+            const current = document.querySelector('.subject-card.mobile-expanded');
+            if (current && current !== card) {
+                current.classList.remove('mobile-expanded', 'mobile-collapsing');
+            }
+
+            card.classList.remove('mobile-collapsing');
+            card.classList.add('mobile-expanded');
+
+            // Smooth scroll into view
+            requestAnimationFrame(() => {
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        }
+
+        document.querySelectorAll('.subject-card').forEach(card => {
+            // Click on thumb area to expand
+            const thumb = card.querySelector('.mobile-thumb');
+            if (!thumb) return;
+
+            thumb.addEventListener('click', (e) => {
+                if (!isMobile()) return;
+
+                // If close button was clicked, collapse
+                if (e.target.closest('.mobile-close-btn')) {
+                    e.stopPropagation();
+                    collapseCard(card);
+                    return;
+                }
+
+                // Toggle expand/collapse
+                if (card.classList.contains('mobile-expanded')) {
+                    collapseCard(card);
+                } else {
+                    expandCard(card);
+                }
+            });
+
+            // Prevent link clicks from bubbling to the card toggle
+            card.querySelectorAll('.mobile-expand-panel a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            });
+        });
+    })();
 </script>
 </body>
 </html>

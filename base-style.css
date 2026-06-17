@@ -393,8 +393,8 @@ summary { padding: 1rem 1.5rem; cursor: pointer; font-family: 'Outfit', sans-ser
 .badge-gold { background: rgba(217, 119, 6, 0.1); color: #D97706; padding: 2px 8px; border-radius: 100px; font-weight: 600; font-size: 0.8rem; }
 
 /* Footer */
-footer { background: var(--neutral-900); color: var(--neutral-400); padding: 4rem 2rem; text-align: center; margin-top: 60px; }
-footer .credit { font-family: 'Outfit', sans-serif; font-weight: 700; color: white; margin-bottom: 1rem; }
+footer { background: var(--neutral-900); color: #94a3b8; padding: 4rem 2rem; text-align: center; margin-top: 60px; }
+footer .credit { font-family: 'Outfit', sans-serif; font-weight: 700; color: #e2e8f0; margin-bottom: 1rem; letter-spacing: 1px; }
 
 /* Grid Layouts */
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
@@ -931,17 +931,17 @@ details.artigo .lei-seca { background: var(--box-legal-bg); color: var(--box-leg
   }
 
   .container {
-    padding: 0 1.25rem;
+    padding: 0 0.5rem;
   }
 
   @media (max-width: 480px) {
     .container {
-      padding: 0 1rem;
+      padding: 0 0.35rem;
     }
   }
 
   header {
-    padding: 3rem 1.25rem;
+    padding: 3rem 0.5rem;
   }
 
   header .badge {
