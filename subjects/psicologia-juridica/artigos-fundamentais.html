@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigos Fundamentais | Psicologia Jurídica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    :root {
+      --p-700: #B45309;
+      --p-600: #D97706;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #B45309;
+      --subject-color: #F59E0B;
+      --subject-color-light: #FEF3C7;
+      --bg-surface: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-surface: #1e293b;
+      --border-color: #334155;
+    }
+
+    .topic-header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #78350F 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .topic-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white !important;
+    }
+
+    .topic-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .content-section:last-child {
+      border-bottom: none;
+    }
+
+    .concept-box {
+      background: var(--p-50);
+      border-left: 4px solid var(--p-500);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text-main);
+    }
+
+    [data-theme="dark"] .concept-box {
+      background: rgba(245, 158, 11, 0.1);
+    }
+
+    .concept-box h4 {
+      color: var(--p-700);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    [data-theme="dark"] .concept-box h4 {
+      color: var(--p-500);
+    }
+
+    .alert-box {
+      background: #FEF2F2;
+      border: 1px solid #F87171;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    [data-theme="dark"] .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .alert-box::before {
+      content: '⚠️ PEGADINHA DE PROVA';
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: #EF4444;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .comparison-table th {
+      background: var(--p-600);
+      color: white;
+      text-align: left;
+      padding: 1rem;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      vertical-align: top;
+    }
+
+    .practical-case {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    [data-theme="dark"] .practical-case {
+      background: #0F172A;
+      border-color: #334155;
+    }
+
+    .practical-case h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0;
+      color: #334155;
+    }
+
+    [data-theme="dark"] .practical-case h4 {
+      color: #CBD5E1;
+    }
+
+    .mind-map {
+      font-family: 'JetBrains Mono', monospace;
+      background: #1E293B;
+      color: #E2E8F0;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Hub da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#artigo1" class="nav-item">Artigo 1: Breve Histórico</a>
+        <a href="#artigo2" class="nav-item">Artigo 2: Reflexões e Panorama</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <header class="topic-header">
+    <div class="container">
+      <h1>Artigos Fundamentais</h1>
+      <p>Material de leitura obrigatória integralmente dissecado: "Um breve histórico da psicologia jurídica no Brasil" (Lago et al.) e "Reflexões sobre Psicologia Jurídica" (França).</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- ARTIGO 1 -->
+    <section id="artigo1" class="content-section">
+      <h2>1. Psicologia Jurídica no Brasil: Um Breve Histórico (Lago et al.)</h2>
+      <p>A história da atuação de psicólogos brasileiros na área da Psicologia Jurídica teve início formal na década de 1960, com o reconhecimento da profissão. Contudo, essa inserção foi gradual, iniciada muitas vezes de forma informal através de trabalhos voluntários. O artigo de Vivian de Medeiros Lago e colegas mapeia exaustivamente essa trajetória e os campos de atuação.</p>
+
+      <h3>1.1. O Início na Área Criminal e o Enfoque Médico</h3>
+      <p>Historicamente, a aproximação se deu pela necessidade de avaliar a conduta do criminoso, especialmente o doente mental delinquente. Na Antiguidade e Idade Média, a loucura era "livre". A partir do século XVII (Europa), houve exclusão e internação. No século XVIII (França), Philippe Pinel liberou os doentes das cadeias e lhes deu assistência.</p>
+      
+      <div class="concept-box">
+        <h4>O Papel do Psicodiagnóstico e a Evolução</h4>
+        <p><strong>Fase Inicial:</strong> A Psicologia servia à Psiquiatria. Havia um foco eminentemente médico. Os pacientes mais "leves" iam para os psicólogos (para compreensão descritiva da personalidade) e os de maior severidade para a psiquiatria.</p>
+        <p><strong>A "Era do Testólogo":</strong> O psicólogo era visto apenas como aplicador de testes. Os psicodiagnósticos eram usados como instrumentos matematicamente comprováveis para orientar juízes e promotores. Hoje, os testes são apenas um dos recursos; a avaliação visa encontrar respostas focadas para problemas legais específicos.</p>
+      </div>
+
+      <div class="alert-box">
+        A prova pode afirmar que "A psicologia jurídica nasceu no Brasil de forma institucionalizada e voltada para a mediação familiar". <strong>FALSO.</strong> O texto deixa claro: iniciou-se na área <strong>criminal</strong>, muitas vezes de maneira <strong>informal (trabalhos voluntários)</strong> e o foco inicial era fortemente <strong>avaliativo/psicodiagnóstico</strong> subordinado ao modelo médico. A mediação familiar só ganhou força muito tempo depois. Outro marco oficial foi a <strong>Lei de Execução Penal (LEP - 1984)</strong>, que reconheceu legalmente o psicólogo nas prisões.
+      </div>
+
+      <h3>1.2. A Expansão para o Direito Civil (Família e Infância)</h3>
+      <p>Embora a gênese seja o Direito Penal, o campo de maior expansão até os dias atuais é o Direito Civil. Em São Paulo (1979), a entrada no Tribunal de Justiça foi voluntária com famílias carentes, ocorrendo o primeiro concurso público só em 1985.</p>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Área do Direito</th>
+            <th>Focos Principais de Atuação (Segundo o Artigo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Direito de Família</strong></td>
+            <td>Separação e divórcio (geralmente litigiosos; psicólogo como mediador ou avaliador pericial da dinâmica), Regulamentação de visitas (avaliações e sugestões para minorar conflitos), Disputa de guarda (perícias para avaliar qual genitor tem melhores condições, falsas acusações de abuso e alienação parental).</td>
+          </tr>
+          <tr>
+            <td><strong>Direito da Criança e Adolescente (ECA)</strong></td>
+            <td>Juizado da Infância e Juventude (antigo Juizado de Menores). Processos de adoção (assessoria antes e depois; estudo psicossocial essencial para prevenir "devolução"), Destituição do poder familiar (perda irrevogável de direitos sobre o filho; decisão gravíssima que requer parecer técnico) e Adolescentes Infratores (medidas socioeducativas, aplicação da Justiça Restaurativa).</td>
+          </tr>
+          <tr>
+            <td><strong>Direito Cível (Geral)</strong></td>
+            <td>Indenizações por dano psíquico (sequelas na esfera emocional gerando efeitos traumáticos organizacionais; cuidado redobrado com simulações) e Interdição (avaliação de incapacidade por enfermidade ou deficiência mental para os atos da vida civil).</td>
+          </tr>
+          <tr>
+            <td><strong>Direito Penal e Execução</strong></td>
+            <td>Peritos de sanidade mental/discernimento. Trabalho em presídios (limitado pela superpopulação; elaboração de avaliações para benefícios, embora a Lei 10.792/03 tenha retirado a obrigatoriedade oficial do exame criminológico para benefícios, na prática o MP ainda exige) e Institutos Psiquiátricos Forenses (IPF).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>1.3. Áreas Emergentes Listadas no Artigo</h3>
+      <ul>
+        <li><strong>Vitimologia:</strong> Foco no comportamento e personalidade da <em>vítima</em>. Averigua se a vítima estimulou o crime (cumplicidade ativa/passiva), previne novos danos e presta assistência à reparação.</li>
+        <li><strong>Psicologia do Testemunho:</strong> Avaliação da veracidade. Estudo do <em>fenômeno das falsas memórias</em> (o cérebro armazena/recorda coisas que não ocorreram devido à contaminação de perguntas sugestivas ou repetição).</li>
+        <li><strong>Depoimento sem Dano:</strong> Criação originária no Rio Grande do Sul. Protege psicologicamente crianças/adolescentes vítimas de abuso, evitando que o ambiente opressivo do tribunal agrave o trauma. Exige empatia, acolhimento e escuta treinada por psicólogo ou assistente social.</li>
+      </ul>
+
+      <div class="practical-case">
+        <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Caso Concreto da Prova</h4>
+        <p><strong>A Situação:</strong> "Mário sofreu um grave acidente no ambiente de trabalho devido a falhas de segurança da empresa. Ele não sofreu amputações físicas, mas desenvolveu pânico crônico de maquinário e incapacidade de retornar à fábrica. Ele processa a empresa no âmbito trabalhista."</p>
+        <p><strong>Interpretação pelo Artigo:</strong> Este é um caso típico do <strong>Direito do Trabalho</strong> onde o psicólogo atuará como perito para verificar a existência de um <strong>Dano Psíquico</strong>. A perícia buscará estabelecer o <em>nexo causal</em> entre as condições de trabalho e a repercussão na saúde mental do indivíduo, traduzindo para o juiz se o sofrimento psicológico justifica aposentadoria ou indenização, cuidando para rastrear eventuais manipulações (simulação).</p>
+      </div>
+
+    </section>
+
+    <!-- ARTIGO 2 -->
+    <section id="artigo2" class="content-section">
+      <h2>2. Reflexões sobre Psicologia Jurídica (Fátima França)</h2>
+      <p>O artigo de Fátima França tem um teor profundamente epistemológico e crítico. Ela questiona <em>"o que é a psicologia jurídica"</em> e levanta os dilemas éticos da subordinação da psicologia ao direito.</p>
+
+      <h3>2.1. Nomenclaturas e Definições</h3>
+      <p>A autora prefere o termo <strong>Psicologia Jurídica</strong> em vez de Psicologia Forense. "Forense" refere-se ao foro, ao tribunal. "Jurídica" abrange não apenas os processos que ocorrem dentro do fórum, mas todos os comportamentos e subjetividades que tangenciam o Direito e os preceitos legais da sociedade.</p>
+      
+      <p>O texto traz a definição de <strong>Juan H. del Popolo</strong>: <em>"É o estudo sob a perspectiva psicológica das condutas complexas e significativas de forma atual ou potencial para o jurídico..."</em>. Porém, Fátima França não se contenta em dizer que a psicologia jurídica estuda apenas "comportamentos". Ela insere a visão da subjetividade.</p>
+
+      <div class="concept-box">
+        <h4>Crítica à Visão Positivista (Atenção para Provas Discursivas)</h4>
+        <p>O Direito tradicionalmente possui uma expectativa <strong>positivista</strong>: ele quer que a Psicologia pegue um recorte parcial (o comportamento isolado ou o laudo pericial) e use isso como se fosse a <em>verdade absoluta</em> sobre o indivíduo. A autora alerta que as perícias são <strong>recortes limitados</strong>. Se um indivíduo comete um crime, o laudo não deve estender essa "marca criminosa" como a totalidade de sua existência.</p>
+        <p>Para a autora, apoiada em Michel Foucault, a Psicologia Jurídica deve estudar também <strong>como as práticas jurídicas e judiciárias determinam a subjetividade</strong>. Exemplo literal da autora: o encarceramento não gera apenas "comportamentos de prisão", mas cria uma nova forma de pensar e sentir nas pessoas presas. A prisão marca a subjetividade do egresso.</p>
+      </div>
+
+      <h3>2.2. Relações entre Psicologia e Direito (Popolo)</h3>
+      <p>Popolo define duas formas de relacionamento entre essas ciências:</p>
+      <ol>
+        <li><strong>Modelo de Subordinação:</strong> A psicologia atende passivamente à demanda do direito. Funciona como um simples assessor (auxiliar do médico/psiquiatra ou "testólogo" do juiz). É uma posição paralisante. Fátima alerta: "O psicólogo não pode responder a todas as perguntas que o direito joga no seu colo".</li>
+        <li><strong>Modelo de Complementaridade:</strong> (O desejável). A Psicologia atua como ciência autônoma, dialogando de igual para igual. Não responde só "se o réu é louco", mas traz o contexto histórico, biológico, de personalidade e social (multifatorismo) para a mesa.</li>
+      </ol>
+
+      <div class="alert-box">
+        Questão comum: "Segundo Fátima França, o Estatuto da Criança e do Adolescente (ECA) manteve a figura jurídica do 'menor' intacta". <strong>FALSO.</strong> A autora destaca explicitamente que o termo <strong>"Menor"</strong> foi forjado na Ditadura para segregar e estigmatizar crianças em risco (vistas como carentes/problema). O ECA muda o paradigma: a criança deixa de ser o "menor objeto de intervenção" e passa a ser <strong>sujeito de direitos</strong>.
+      </div>
+
+      <h3>2.3. Panorama Brasileiro e Classificações (Congresso de 1999)</h3>
+      <p>França dividiu as atuações listadas no III Congresso Ibero-Americano (1999) em setores Tradicionais e Recentes. <strong>Isso tem altíssima chance de cair!</strong></p>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Setores MAIS Tradicionais</th>
+            <th>Setores MAIS Recentes / Inovadores</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul>
+                <li><strong>Psicologia Criminal e Penitenciária:</strong> Estudos do crime, laudos, atuação com agentes prisionais, egressos e medidas alternativas.</li>
+                <li><strong>Infância e Juventude / Família:</strong> Guarda, adoção, separação, conselhos tutelares, medidas socioeducativas.</li>
+                <li><strong>Psicologia e Direito Civil:</strong> Interdições, laudos de acidente de trabalho.</li>
+                <li><strong>Psicologia Policial/Militar:</strong> Seleção e treinamento nas academias.</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li><strong>Autópsia Psicológica:</strong> (MUITO COBRADO!) É uma avaliação retrospectiva mediante informações de terceiros (amigos, familiares) para desenhar o perfil psicológico de alguém que já morreu (ex: suicídio vs homicídio).</li>
+                <li><strong>Mediação:</strong> Terceiro imparcial que devolve às partes o poder e a autodeterminação para resolver o conflito sem a caneta do juiz.</li>
+                <li><strong>Proteção a Testemunhas:</strong> Apoio emocional em programas governamentais.</li>
+                <li><strong>Estudos sobre os Magistrados:</strong> Pesquisas sobre como os juízes tomam decisões, seleção de magistrados.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mind-map">MAPA MENTAL TEXTUAL: ARTIGOS
+
+Psicologia Jurídica (Brasil)
+ ├── Histórico (Lago)
+ │    ├── Início (1960): Criminal, Voluntário, Modelo Médico/Psicodiagnóstico.
+ │    ├── Expansão: Direito Civil, Família, Varas da Infância (ECA).
+ │    └── Hoje: Inúmeras interfaces (Vitimologia, Depoimento sem Dano, Trabalho).
+ │
+ └── Reflexões Epistemológicas (França)
+      ├── Nomenclatura: "Jurídica" > "Forense" (O primeiro é mais amplo que o tribunal).
+      ├── Objeto: Não apenas o "comportamento" ditado pela lei, mas a SUBJETIVIDADE 
+      │           (A lei e a cadeia afetam quem a pessoa é).
+      ├── Relação com Direito: 
+      │    ├── Subordinação (Ruim: psicólogo como submisso / responder o que o juiz quer).
+      │    └── Complementaridade (Ideal: ciência autônoma, visão holística/multifatorial).
+      └── Áreas Inovadoras: Autópsia Psíquica, Mediação, Estudo de Juízes, Direitos Humanos.</div>
+
+    </section>
+
+  </main>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>

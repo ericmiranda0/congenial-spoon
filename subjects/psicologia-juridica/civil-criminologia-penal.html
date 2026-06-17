@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civil, Perícia, Criminologia & Saúde Mental | Psicologia Jurídica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    :root {
+      --p-700: #B45309;
+      --p-600: #D97706;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #B45309;
+      --subject-color: #F59E0B;
+      --subject-color-light: #FEF3C7;
+      --bg-surface: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-surface: #1e293b;
+      --border-color: #334155;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #78350F 100%);
+    }
+
+    .content-section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .content-section:last-child { border-bottom: none; }
+
+    .concept-box {
+      background: var(--p-50);
+      border-left: 4px solid var(--p-500);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text-main);
+    }
+    [data-theme="dark"] .concept-box {
+      background: rgba(245, 158, 11, 0.1);
+    }
+    .concept-box h4 {
+      color: var(--p-700);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    [data-theme="dark"] .concept-box h4 { color: var(--p-500); }
+
+    .concept-box-blue {
+      background: #EFF6FF;
+      border-left: 4px solid #3B82F6;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text-main);
+    }
+    [data-theme="dark"] .concept-box-blue {
+      background: rgba(59, 130, 246, 0.1);
+    }
+    .concept-box-blue h4 {
+      color: #1D4ED8;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    [data-theme="dark"] .concept-box-blue h4 { color: #60A5FA; }
+
+    .concept-box-green {
+      background: #ECFDF5;
+      border-left: 4px solid #10B981;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text-main);
+    }
+    [data-theme="dark"] .concept-box-green {
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .concept-box-green h4 {
+      color: #047857;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    [data-theme="dark"] .concept-box-green h4 { color: #34D399; }
+
+    .alert-box {
+      background: #FEF2F2;
+      border: 1px solid #F87171;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    [data-theme="dark"] .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+    .alert-box::before {
+      content: '⚠️ PEGADINHA DE PROVA';
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: #EF4444;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .alert-box-prof {
+      background: #F5F3FF;
+      border: 1px solid #8B5CF6;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    [data-theme="dark"] .alert-box-prof {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+    .alert-box-prof::before {
+      content: '👩‍🏫 OBSERVAÇÃO DA PROFESSORA';
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: #8B5CF6;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--p-600);
+      color: white;
+      text-align: left;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      vertical-align: top;
+    }
+
+    .practical-case {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    [data-theme="dark"] .practical-case {
+      background: #0F172A;
+      border-color: #334155;
+    }
+    .practical-case h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0;
+      color: #334155;
+    }
+    [data-theme="dark"] .practical-case h4 { color: #CBD5E1; }
+
+    .mind-map {
+      font-family: 'JetBrains Mono', monospace;
+      background: #1E293B;
+      color: #E2E8F0;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .quiz-box {
+      background: var(--bg-surface);
+      border: 2px solid var(--p-500);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+    .quiz-box h4 {
+      color: var(--p-600);
+      margin-top: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    .quiz-box details {
+      margin-top: 1rem;
+    }
+    .quiz-box summary {
+      cursor: pointer;
+      color: var(--p-500);
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+    .quiz-box details[open] summary {
+      margin-bottom: 0.5rem;
+    }
+    .quiz-answer {
+      background: #ECFDF5;
+      border-radius: 6px;
+      padding: 1rem;
+      color: #065F46;
+      margin-top: 0.5rem;
+    }
+    [data-theme="dark"] .quiz-answer {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    .section-divider {
+      text-align: center;
+      padding: 3rem 0;
+      font-size: 2rem;
+      opacity: 0.3;
+      border-bottom: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Hub da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#civil" class="nav-item">Dir. Civil & Perícia</a>
+        <a href="#criminologia" class="nav-item">Criminologia</a>
+        <a href="#penal-saude" class="nav-item">Penal & Saúde Mental</a>
+        <a href="#questoes" class="nav-item">Questões</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div class="badge">Módulo Consolidado</div>
+      <h1>Dir. Civil, Perícia, Criminologia & Saúde Mental</h1>
+      <div class="subtitle">Todo o conteúdo das Aulas 12 e 13 unificado — Direito de Família, Perícia Psicológica, Escolas Criminológicas, Imputabilidade e Avaliação de Risco</div>
+      <div class="meta">
+        <span>🧠 Psicologia Jurídica</span>
+        <span>👩‍🏫 Me. Naiara Carneiro Marinho</span>
+        <span>⚠️ Alta Probabilidade de Cobrança</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- PARTE 1: DIREITO CIVIL & PERÍCIA                              -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="civil" class="content-section">
+      <h2>⚖️ Parte 1 — Psicologia Jurídica no Direito Civil</h2>
+
+      <h3 id="familia">1.1. Contribuições para o Direito de Família</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>Quando uma família entra em conflito (separação, briga pela guarda dos filhos, adoção), as emoções são tão intensas que o advogado precisa de um <em>tradutor de sentimentos</em>: o psicólogo jurídico. Ele não é terapeuta da família — é um cientista que avalia dinâmicas, personalidades e riscos para que o juiz tome a melhor decisão.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico</h4>
+        <p>No campo do Direito de Família, a Psicologia Jurídica contribui propiciando maior compreensão da <strong>personalidade dos atores envolvidos</strong>, do <strong>desenvolvimento da dinâmica familiar e social</strong> e dos <strong>novos contornos e arranjos familiares</strong> (famílias monoparentais, homoafetivas, recompostas). É neste campo que as representações sociais dos aspectos mais íntimos se expressam e emergem situações de conflito que esgotam as possibilidades de pacificação individual, necessitando de intervenção judicial e atuação interdisciplinar.</p>
+      </div>
+
+      <div class="alert-box-prof">
+        <p><strong>A professora enfatizou (Aula 12):</strong> "Caberá ao profissional do Direito, especialmente ao advogado, a delicada tarefa de <strong>transpor os sentimentos pessoais das partes para a linguagem jurídica</strong>, de modo que a queixa inicial, carregada de emoção, possa caber na técnica processual." O psicólogo contribui para que essa tradução seja fidedigna.</p>
+      </div>
+
+      <h4>Temas do Direito de Família em Interface com a Psicologia (listagem da Aula 12):</h4>
+      <ul>
+        <li>Perícia psicológica e assistência técnica;</li>
+        <li>Formação e rompimento dos vínculos familiares (casamento e divórcio);</li>
+        <li>Alienação Parental;</li>
+        <li>Reconhecimento de filhos, interdição e sucessões;</li>
+        <li>Adoção.</li>
+      </ul>
+
+      <!-- GUARDA -->
+      <h3 id="guarda">1.2. Guarda</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>Guarda é a responsabilidade legal de ter e criar o filho. Quando os pais se separam, alguém tem de ficar com a criança — e quando não se entendem, é a Justiça quem decide. O psicólogo entra para avaliar quem oferece o melhor ambiente.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico e Base Legal</h4>
+        <p><strong>Poder Familiar:</strong> Antigo "pátrio poder" — renomeado pelo Código Civil de 2002 para refletir a igualdade constitucional (art. 5º, I, CF/88). É exercido conjuntamente por pai e mãe, mesmo após separação. A constituição de nova família (novo cônjuge/companheiro) <strong>não interfere</strong> no poder familiar da família anterior.</p>
+        <p><strong>Suspensão e Perda (art. 1.638 do CC):</strong> O poder familiar pode ser <em>suspenso</em> ou <em>perdido judicialmente</em> nos casos de abuso, abandono, atos contrários à moral e bons costumes ou reincidência em faltas.</p>
+        <p><strong>Proteção Constitucional:</strong> Art. 227 da CF/88 garante à criança direito à vida, saúde, educação, dignidade e convivência familiar. Art. 136 do CP criminaliza ações que coloquem em risco vida/saúde da criança sob tutela.</p>
+      </div>
+
+      <p><strong>Atuação do Psicólogo na Guarda:</strong> Realiza <em>psicodiagnóstico</em> (entrevistas, leitura dos autos do processo, observações diretas, testes psicológicos) para analisar a dinâmica familiar, os papéis de cada membro e as interações. O objetivo é fornecer ao juiz informações técnicas para a tomada de decisão.</p>
+
+      <p><strong>Atuação do Perito:</strong> O perito é nomeado pelo juiz (art. 156 do CPC — atenção: a lei diz "será" assistido, não "poderá"). Ele é legalmente habilitado e cadastrado. Universidades e institutos também podem funcionar como peritos. Produz laudo técnico que integra os autos processuais.</p>
+
+      <p><strong>Atuação do Assistente Técnico:</strong> É o psicólogo contratado por uma das partes. Sua função principal é acompanhar e fiscalizar o trabalho do perito oficial, podendo emitir parecer divergente.</p>
+
+      <!-- ALIENAÇÃO PARENTAL -->
+      <h3 id="alienacao">1.3. Alienação Parental</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>É a "lavagem cerebral" que um genitor faz no filho contra o outro genitor. A mãe ou o pai, por raiva da separação, tenta destruir a imagem do outro na cabeça da criança.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico</h4>
+        <p>Alienação parental ocorre quando, em separações conflituosas, um genitor tenta <strong>afastar a criança do outro genitor</strong>, manipulando seus sentimentos e percepções. É regulada pela <strong>Lei 12.318/2010</strong>.</p>
+      </div>
+
+      <p><strong>Consequências Psicológicas (listadas pela professora):</strong></p>
+      <ul>
+        <li>Depressão;</li>
+        <li>Transtornos de identidade e imagem;</li>
+        <li>Tendência ao isolamento;</li>
+        <li>Abuso de substâncias;</li>
+        <li><strong>Risco de suicídio.</strong></li>
+      </ul>
+
+      <p><strong>Papel do Psicólogo Perito na Alienação Parental:</strong></p>
+      <ol>
+        <li>Alertar o juiz sobre os <strong>prejuízos concretos</strong> à criança;</li>
+        <li>Promover o <strong>equilíbrio entre as partes</strong> para proteger o desenvolvimento infantil;</li>
+        <li>Avaliar a extensão dos danos psicológicos já causados.</li>
+      </ol>
+
+      <div class="alert-box">
+        <p>A prova pode trazer: "A alienação parental pode gerar apenas desconforto emocional temporário na criança". <strong>INCORRETO.</strong> A professora listou expressamente consequências <em>graves e permanentes</em>, incluindo <strong>risco de suicídio</strong>. Memorize a lista completa.</p>
+      </div>
+
+      <!-- ADOÇÃO -->
+      <h3 id="adocao">1.4. Adoção</h3>
+
+      <div class="concept-box-blue">
+        <h4>📖 Base Legal e Conceitos-Chave</h4>
+        <ul>
+          <li><strong>ECA, art. 41:</strong> A adoção confere ao adotado <em>todos os direitos de filho</em>, inclusive os sucessórios.</li>
+          <li>Desvincula o adotado dos pais biológicos, <strong>exceto impedimentos matrimoniais</strong> (ex.: não pode casar com irmão biológico).</li>
+          <li>Exige <strong>estágio de convivência</strong>, salvo se o adotando tem até 1 ano de idade ou já vive com o adotante há tempo suficiente.</li>
+          <li><strong>Art. 48 do ECA:</strong> A adoção é <strong>irrevogável</strong>.</li>
+          <li>Destaque dado pela professora: adoções por casais homoafetivos refletem as novas formas de família protegidas pela CF.</li>
+        </ul>
+      </div>
+
+      <p><strong>Atuação do Psicólogo na Adoção:</strong> O acompanhamento psicológico é essencial antes, durante e após a colocação. O psicólogo avalia a aptidão emocional dos adotantes, facilita o período de adaptação e previne riscos de negligência, rejeição ou "devolução".</p>
+
+      <!-- DIVÓRCIO -->
+      <h3 id="divorcio">1.5. Divórcio e Separação</h3>
+
+      <p>Os processos que chegam ao psicólogo jurídico são geralmente <strong>litigiosos</strong> — as partes não conseguem concordar. O psicólogo pode atuar como:</p>
+      <ul>
+        <li><strong>Mediador:</strong> busca levar os litigantes a um acordo;</li>
+        <li><strong>Perito Avaliador:</strong> quando o juiz descarta a mediação, o psicólogo avalia a dinâmica do casal e indica caminhos para o juiz.</li>
+      </ul>
+
+      <!-- DIAGNÓSTICO x PERÍCIA -->
+      <h3 id="dx-vs-pericia">1.6. Diagnóstico Clínico × Perícia Psicológica</h3>
+
+      <div class="alert-box-prof">
+        <p><strong>Este quadro comparativo foi apresentado diretamente pela professora (Aula 12, Slide 6).</strong> Tem altíssima probabilidade de cair. Decore cada célula.</p>
+      </div>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width:35%">Critério</th>
+            <th style="width:32%">Diagnóstico Clínico (Psicodiagnóstico)</th>
+            <th style="width:33%">Perícia Psicológica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Procura</strong></td>
+            <td><strong>Espontânea</strong> — o paciente vai por vontade própria</td>
+            <td><strong>Convocação judicial</strong> — determinada pelo juiz</td>
+          </tr>
+          <tr>
+            <td><strong>Interrupção</strong></td>
+            <td>Pode ser interrompido a qualquer momento pelo paciente</td>
+            <td>Há <strong>obrigação de completar</strong> o trabalho</td>
+          </tr>
+          <tr>
+            <td><strong>Sigilo</strong></td>
+            <td><strong>Sigilo absoluto</strong> (protegido pelo CFP)</td>
+            <td>As informações <strong>integram o processo</strong> judicial (acessíveis às partes)</td>
+          </tr>
+          <tr>
+            <td><strong>Formato</strong></td>
+            <td>Flexível e subjetivo; livre organização</td>
+            <td><strong>Formal</strong>, com laudo técnico estruturado e fundamentação ética</td>
+          </tr>
+          <tr>
+            <td><strong>Vínculo</strong></td>
+            <td>Vínculo terapêutico (relação de confiança, empatia)</td>
+            <td><strong>Ausência de vínculo terapêutico</strong> — relação objetiva e imparcial</td>
+          </tr>
+          <tr>
+            <td><strong>Finalidade</strong></td>
+            <td>Finalidade <strong>terapêutica</strong> (curar, tratar)</td>
+            <td>Finalidade <strong>probatória</strong> (fornecer prova técnica ao juiz)</td>
+          </tr>
+          <tr>
+            <td><strong>Papel no processo</strong></td>
+            <td>Não contribui diretamente para decisão judicial</td>
+            <td>Ajuda na <strong>formação da convicção do juiz</strong>; verifica verdades e simulações</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="concept-box-green">
+        <h4>📐 Perícia no Código de Processo Civil (CPC) — Art. 156</h4>
+        <ul>
+          <li>O juiz <strong>"será"</strong> assistido por perito (antes dizia "poderá" — mudança importante!).</li>
+          <li>§1º: Peritos devem ser legalmente habilitados e cadastrados.</li>
+          <li>Pessoa física <em>ou jurídica</em> pode ser perita (institutos, universidades).</li>
+          <li>Cadastro exige: consulta pública, divulgação em jornais, avaliações periódicas (§2º).</li>
+          <li>§5º: Juiz pode nomear perito livremente se não houver cadastrado local.</li>
+        </ul>
+      </div>
+
+      <div class="alert-box">
+        <p>"A perícia psicológica tem finalidade terapêutica e o perito mantém sigilo absoluto sobre suas conclusões". <strong>DUPLAMENTE FALSO.</strong> A finalidade é <em>probatória</em> e as informações <em>integram o processo</em> (não há sigilo absoluto perante as partes e o juiz).</p>
+      </div>
+
+      <div class="practical-case">
+        <h4>📋 Caso Concreto 1 — Guarda e Alienação</h4>
+        <p><strong>Situação:</strong> Ana e Carlos se separaram. Carlos faz campanha para os filhos (7 e 10 anos) contra Ana, dizendo que "sua mãe não ama vocês e quer morar com outro homem". O filho mais velho começa a apresentar isolamento na escola e recusa de convivência com a mãe.</p>
+        <p><strong>Análise:</strong> Configura <strong>alienação parental</strong> (Lei 12.318/2010). O juiz solicita perícia psicológica. O perito avaliará: (1) se há campanha de desqualificação; (2) os danos psicológicos (isolamento = indício de depressão ou transtorno de imagem); (3) recomendará medidas — pode sugerir inversão da guarda ou acompanhamento psicoterapêutico para o filho.</p>
+        <p><strong>Atenção:</strong> O perito <strong>não decide</strong> — ele recomenda. Quem decide é o juiz.</p>
+      </div>
+
+    </section>
+
+    <div class="section-divider">⚖️ ─── 🕵️ ─── 🧠</div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- PARTE 2: CRIMINOLOGIA                                          -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="criminologia" class="content-section">
+      <h2>🕵️ Parte 2 — Criminologia e Escolas do Pensamento</h2>
+
+      <h3 id="positivista">2.1. Escola Positivista — Lombroso e o "Criminoso Nato"</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>Imagine alguém que acredita que dá para descobrir se uma pessoa é criminosa olhando para o formato do crânio dela. Isso é, em essência, a escola positivista de Lombroso: o crime estaria escrito no corpo.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico</h4>
+        <p><strong>Origem:</strong> Século XIX. Cesare Lombroso (1835–1909), médico italiano, publicou o <em>Tratado Antropológico Experimental do Homem Delinquente</em>.</p>
+        <p><strong>Premissas Centrais:</strong></p>
+        <ul>
+          <li><strong>Determinismo:</strong> O crime não é uma escolha livre; é determinado por fatores internos ao indivíduo.</li>
+          <li><strong>Causalismo:</strong> Existe uma causa fixa e identificável para o crime — ela reside no próprio corpo do criminoso.</li>
+          <li><strong>Atavismo:</strong> O criminoso seria um ser <em>não evoluído</em>, um retorno a características primitivas (ancestrais). Segundo Lombroso, traços físicos específicos (formato do crânio, mandíbula proeminente, assimetrias faciais) denunciariam o "criminoso nato".</li>
+        </ul>
+      </div>
+
+      <p><strong>Características da Abordagem Positivista:</strong></p>
+      <ul>
+        <li>O foco está <strong>exclusivamente no indivíduo</strong> (ignora o meio social).</li>
+        <li>Busca uma explicação <strong>biológica e determinista</strong> para o crime.</li>
+        <li>Considera o delinquente como um "tipo" identificável (biotipologia criminal).</li>
+        <li>A psicologia, nesta fase, via o indivíduo como <strong>reativo ao ambiente físico</strong>, não como um ser social e histórico.</li>
+      </ul>
+
+      <div class="concept-box-green">
+        <h4>🔍 Críticas Contemporâneas à Escola Positivista</h4>
+        <ul>
+          <li><strong>Reducionismo:</strong> Ignora fatores sociais, econômicos, culturais e subjetivos.</li>
+          <li><strong>Pseudociência:</strong> A biotipologia criminal foi refutada. Não existe correlação entre traços físicos e criminalidade.</li>
+          <li><strong>Racismo e Eugenia:</strong> Historicamente, as ideias lombrosianas foram utilizadas para justificar discriminação racial e programas eugênicos.</li>
+          <li><strong>Estigmatização:</strong> Marca permanentemente o indivíduo ("uma vez criminoso, sempre criminoso"), como alertam os artigos de Fátima França.</li>
+        </ul>
+      </div>
+
+      <h3 id="critica">2.2. Criminologia Crítica</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>Em vez de perguntar "por que <em>ele</em> cometeu o crime?", a criminologia crítica pergunta: "por que <em>esse tipo de conduta</em> é considerada crime, enquanto outras igualmente danosas não são?"</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico</h4>
+        <p><strong>Origem:</strong> Surgiu como reação direta ao positivismo, ganhando força a partir da segunda metade do séc. XX.</p>
+        <p><strong>Fundamentos Centrais (conforme slides da Aula 13):</strong></p>
+        <ul>
+          <li>O crime é visto como <strong>produto das relações sociais de produção</strong>, historicamente desiguais.</li>
+          <li>O sistema penal é <strong>seletivo, excludente e estigmatizante</strong>.</li>
+          <li>Foca no <strong>contexto social e nas estruturas de poder</strong> que moldam o comportamento criminoso.</li>
+          <li><strong>Seletividade penal:</strong> Questiona por que certas condutas e certos sujeitos são criminalizados enquanto outros (geralmente mais poderosos) não são.</li>
+        </ul>
+        <p><strong>Segundo Lourenço e Mangini (2015) — citados nos slides:</strong> Há duas grandes correntes:</p>
+        <ol>
+          <li><strong>Individualista:</strong> Foca no criminoso como único responsável.</li>
+          <li><strong>Social/Crítica:</strong> Foca no contexto social como fator determinante.</li>
+        </ol>
+      </div>
+
+      <p><strong>Papel das Instituições na Criminologia Crítica:</strong> Prisões, internações e institutos psiquiátricos forenses são vistos como <strong>instituições de exclusão</strong> que fazem parte do controle social. Elas não apenas punem — elas <em>produzem</em> o criminoso ao estigmatizá-lo, como reforçou Fátima França no artigo sobre egressos.</p>
+
+      <div class="alert-box">
+        <p>Cuidado com alternativas que afirmem: "A Criminologia Crítica busca as causas biológicas do comportamento criminoso". <strong>INCORRETO.</strong> Isso é a Escola Positivista. A Criminologia Crítica foca nas <em>estruturas sociais e nas relações de poder</em>, não no corpo do indivíduo.</p>
+      </div>
+
+      <h3 id="multifatorismo">2.3. Multifatorismo (Multifatorialismo)</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>O crime não tem uma causa única. É como uma receita com muitos ingredientes: se você só olha para um deles, não entende o prato inteiro.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico</h4>
+        <p>O multifatorismo é a abordagem intermediária na evolução do pensamento criminológico (entre o causalismo e a criminologia crítica). Considera que <strong>múltiplos fatores interagem</strong> para produzir o comportamento criminal:</p>
+        <ul>
+          <li><strong>Fatores Biológicos:</strong> Predisposições genéticas, alterações neurológicas, déficits orgânicos.</li>
+          <li><strong>Fatores Psicológicos:</strong> Traços de personalidade, traumas, transtornos, mecanismos de defesa.</li>
+          <li><strong>Fatores Sociais:</strong> Pobreza, marginalização, desagregação familiar, exclusão escolar, influência de pares.</li>
+        </ul>
+        <p>A grande contribuição: <strong>nenhum fator isolado explica o crime.</strong></p>
+      </div>
+
+      <h3 id="biopsicossocial">2.4. Modelo Biopsicossocial</h3>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico e Aplicação Prática</h4>
+        <p>Evolução do multifatorismo para a prática clínica e forense contemporânea. Compreende o ser humano em três dimensões integradas:</p>
+        <ul>
+          <li><strong>Dimensão Biológica:</strong> Genética, neuroquímica, predisposições fisiológicas.</li>
+          <li><strong>Dimensão Psicológica:</strong> Cognições, emoções, personalidade, histórico de traumas.</li>
+          <li><strong>Dimensão Social:</strong> Contexto comunitário, relações interpessoais, estrutura econômica, cultura.</li>
+        </ul>
+        <p><strong>Visão Sistêmica (slides da Aula 13):</strong> O fenômeno delitivo deve ser entendido de forma sistêmica. Deve-se observar a interação entre diferentes sistemas: família, amigos, comunidade, instituições, sistema de justiça.</p>
+      </div>
+
+      <p><strong>Analogia:</strong> Um adolescente que comete um furto não é explicado apenas pela "genética ruim" (positivismo), nem apenas pela "pobreza" (criminologia crítica simplificada), nem apenas por "trauma psicológico". É a <em>interação</em> entre uma vulnerabilidade biológica (ex.: impulsividade), um contexto emocional (ex.: negligência familiar) e um ambiente social (ex.: comunidade sem oportunidades) que produz a conduta.</p>
+
+      <!-- COMPARATIVO DAS ESCOLAS -->
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Escola Positivista</th>
+            <th>Criminologia Crítica</th>
+            <th>Multifatorismo / Biopsicossocial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Foco</strong></td>
+            <td>O indivíduo criminoso</td>
+            <td>As estruturas sociais e de poder</td>
+            <td>A interação indivíduo + meio</td>
+          </tr>
+          <tr>
+            <td><strong>Causa do Crime</strong></td>
+            <td>Biológica / determinista</td>
+            <td>Social / construção do sistema</td>
+            <td>Múltiplas causas integradas</td>
+          </tr>
+          <tr>
+            <td><strong>Expoente</strong></td>
+            <td>Cesare Lombroso</td>
+            <td>Alessandro Baratta, entre outros</td>
+            <td>Garcia-Pablos de Molina</td>
+          </tr>
+          <tr>
+            <td><strong>Visão do Criminoso</strong></td>
+            <td>"Nato" / Não evoluído</td>
+            <td>Produto da seletividade penal</td>
+            <td>Resultado de interações complexas</td>
+          </tr>
+          <tr>
+            <td><strong>Relação com Psicologia</strong></td>
+            <td>Subordinada à biologia</td>
+            <td>Questiona o uso da psicologia como ferramenta de controle</td>
+            <td>Psicologia como ciência autônoma e parceira</td>
+          </tr>
+          <tr>
+            <td><strong>Crítica Principal</strong></td>
+            <td>Reducionista, racista</td>
+            <td>Pode negligenciar fatores individuais legítimos</td>
+            <td>Complexidade pode dificultar operacionalização</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="concept-box-green">
+        <h4>📖 Definição Moderna de Criminologia (Garcia-Pablos de Molina) — Citada nos Slides</h4>
+        <p>Criminologia é uma <strong>ciência empírica e interdisciplinar</strong> que estuda: (1) o crime; (2) o infrator; (3) a vítima; (4) o controle social do comportamento criminoso. Seu objetivo é fornecer informações válidas para entender a gênese, dinâmica e variáveis do crime, além de desenvolver prevenção e intervenção eficazes.</p>
+      </div>
+
+      <div class="alert-box-prof">
+        <p><strong>Slides da Aula 13:</strong> "O crime nasce na sociedade e nela devem estar as soluções. Delinquente e vítima são partes da sociedade, não elementos isolados." — Esta frase resume a passagem do positivismo para a visão moderna.</p>
+      </div>
+
+    </section>
+
+    <div class="section-divider">🕵️ ─── 🏥 ─── ⚖️</div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- PARTE 3: DIREITO PENAL & SAÚDE MENTAL                         -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="penal-saude" class="content-section">
+      <h2>🏥 Parte 3 — Psicologia no Direito Penal & Saúde Mental</h2>
+
+      <h3 id="imputabilidade">3.1. Imputabilidade Penal</h3>
+
+      <div class="concept-box">
+        <h4>💡 Conceito Intuitivo</h4>
+        <p>Imputabilidade é a capacidade de "levar a culpa". Se você entende o que faz e pode escolher não fazer, você é imputável. Se uma doença mental impede você de entender que matar é errado, o Estado não pode te punir da mesma forma que puniria alguém saudável.</p>
+      </div>
+
+      <div class="concept-box-blue">
+        <h4>📖 Conceito Técnico e Base Legal</h4>
+        <p>A imputabilidade penal compreende <strong>dois elementos cumulativos</strong>:</p>
+        <ol>
+          <li><strong>Capacidade de compreensão:</strong> Entender o caráter <em>ilícito</em> do fato (saber que é errado/proibido).</li>
+          <li><strong>Capacidade de autodeterminação:</strong> Poder orientar sua conduta de acordo com esse entendimento (ter livre arbítrio para escolher não fazer).</li>
+        </ol>
+        <p><strong>Art. 26 do Código Penal:</strong> É isento de pena quem, por doença mental ou desenvolvimento mental incompleto ou retardado, era, <em>ao tempo da ação ou omissão</em>, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.</p>
+        <p><strong>Semi-imputabilidade (art. 26, parágrafo único):</strong> Redução de pena para quem tinha essa capacidade <em>diminuída</em> (não totalmente anulada).</p>
+      </div>
+
+      <h3 id="avaliacoes">3.2. Avaliações Psicológicas no Contexto Penal</h3>
+
+      <div class="alert-box-prof">
+        <p><strong>A professora enfatizou (Aula 13):</strong> "O papel primordial da psicologia jurídica na esfera penal <strong>não é normativo ou defensivo</strong>, mas sim <strong>avaliativo e subsidiário</strong>." O psicólogo não defende o réu nem julga — ele fornece informação técnica.</p>
+      </div>
+
+      <p><strong>Principais Objetos de Avaliação e Perícia (listagem dos slides):</strong></p>
+      <ul>
+        <li><strong>Imputabilidade:</strong> O réu, <em>no momento do crime</em>, tinha capacidade de compreensão e autodeterminação? (diagnóstico de sanidade, semi-imputabilidade ou inimputabilidade).</li>
+        <li><strong>Estado Mental do Réu:</strong> Investigação de transtornos mentais, traços de personalidade e nexo causal entre estado psíquico e conduta delituosa.</li>
+        <li><strong>Dano Psíquico à Vítima:</strong> Avaliação de sequelas emocionais/psicológicas decorrentes do crime sofrido.</li>
+        <li><strong>Credibilidade de Testemunhas:</strong> Análise da fidedignidade do testemunho (especialmente em depoimento especial de crianças e vulneráveis). Exame do impacto do trauma na memória dos fatos (falsas memórias!).</li>
+      </ul>
+
+      <h3 id="saude-mental">3.3. Saúde Mental e Violência — Tema Obrigatório</h3>
+
+      <div class="concept-box" style="border-left-color: #EF4444;">
+        <h4 style="color: #B91C1C;">🚨 Tema Considerado Obrigatório pela Professora</h4>
+        <p>A associação entre doença mental e violência é <strong>antiga e universal</strong>, mas <strong>carece de evidências consistentes</strong>. Esta crença gera <strong>estigmatização</strong> que dificulta a reintegração social dos portadores de transtornos mentais.</p>
+      </div>
+
+      <h4>Dados Apresentados nos Slides (Memorize!):</h4>
+
+      <div class="concept-box-green">
+        <h4>📊 Estudo Alemão — Haefner e Boeker (1955–1964)</h4>
+        <p><strong>Conclusão:</strong> <strong>NÃO se observou um número maior de doentes mentais entre criminosos violentos.</strong></p>
+        <p><strong>Observação importante:</strong> A idade média dos criminosos com transtorno mental era <strong>10 anos superior</strong> à dos demais, indicando que a doença mental pode <em>retardar</em> (e não precipitar) o ato violento.</p>
+      </div>
+
+      <div class="concept-box-green">
+        <h4>📊 Dados Brasileiros — População Carcerária de São Paulo</h4>
+        <ul>
+          <li>Cerca de <strong>168 mil presos</strong> no total.</li>
+          <li>Apenas <strong>1.400</strong> se enquadram no art. 26 do CP (incapacidade de entender o ato ilícito).</li>
+          <li>Isso representa apenas <strong>1,2%</strong> da população carcerária.</li>
+          <li>A maioria desses 1,2% tem <strong>transtornos de personalidade</strong>, e não psicoses graves.</li>
+        </ul>
+      </div>
+
+      <div class="alert-box-prof">
+        <p><strong>Slides da Aula 13:</strong> "A doença mental <strong>isolada</strong> não é suficiente para explicar a violência." Segundo Cohen (citado nos slides): é essencial compreender melhor a personalidade dos infratores e suas características comuns — distinguindo entre <strong>personalidades desadaptadas</strong> e <strong>transtornos mentais clínicos</strong>.</p>
+      </div>
+
+      <div class="alert-box">
+        <p>"A maioria dos crimes violentos é cometida por pessoas com transtornos mentais graves (psicoses)". <strong>INCORRETO.</strong> Os dados brasileiros mostram que apenas 1,2% da população carcerária se enquadra no art. 26 do CP, e destes, a maioria tem <em>transtornos de personalidade</em>, não psicoses. O estudo alemão também NÃO encontrou sobrerrepresentação de doentes mentais entre criminosos violentos.</p>
+      </div>
+
+      <h3 id="periculosidade-risco">3.4. Periculosidade vs. Avaliação de Fatores de Risco</h3>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width:50%">Periculosidade (Conceito Tradicional)</th>
+            <th style="width:50%">Fatores de Risco (Conceito Atual)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conceito genérico e estático: a pessoa "é" perigosa.</td>
+            <td>Conceito dinâmico e contextual: a pessoa apresenta fatores que <em>aumentam a probabilidade</em> de violência.</td>
+          </tr>
+          <tr>
+            <td>Foco no rótulo do indivíduo.</td>
+            <td>Foco na <strong>avaliação detalhada de circunstâncias</strong> pessoais e contextuais.</td>
+          </tr>
+          <tr>
+            <td>Limitação: estigmatiza; não diferencia graus; é binária ("perigoso" ou "não perigoso").</td>
+            <td>Permite intervenção graduada: identifica quais fatores são modificáveis e quais não são.</td>
+          </tr>
+          <tr>
+            <td>Pergunta: "Ele é perigoso?"</td>
+            <td>Pergunta: <strong>"Quem é o indivíduo de alto risco?"</strong> e <strong>"Quais fatores podem ser mitigados?"</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Fatores de Risco para Comportamento Violento (Listagem dos Slides):</h4>
+
+      <p><strong>Fatores Pessoais (características individuais):</strong></p>
+      <ul>
+        <li>Abuso físico, psicológico e/ou sexual sofrido;</li>
+        <li>Negligência e instabilidade emocional;</li>
+        <li>Ausência de regras, moral e supervisão positiva;</li>
+        <li>Transtornos de personalidade e impulsividade.</li>
+      </ul>
+
+      <p><strong>Fatores Contextuais (indicadores de gravidade):</strong></p>
+      <ul>
+        <li>Condutas gravíssimas prévias: homicídio, estupro, latrocínio;</li>
+        <li>Participação em facções criminosas;</li>
+        <li>Histórico de violência institucional.</li>
+      </ul>
+
+      <div class="concept-box-blue">
+        <h4>📖 A Posição de Binder (Citado nos Slides)</h4>
+        <p>A avaliação do risco de comportamento violento deve ser uma função do profissional de psiquiatria e psicologia forense. <strong>Esses profissionais não tratam de todas as pessoas "perigosas"</strong>, mas somente das que apresentam um <strong>transtorno mental com risco potencial</strong> para comportamentos violentos.</p>
+        <p><strong>ATENÇÃO:</strong> Não se deve entender como "pessoas com transtornos mentais" apenas os portadores de psicoses (alterações graves de consciência e juízo de realidade), mas <strong>principalmente</strong> os quadros de <strong>transtornos da personalidade e impulsivos</strong>.</p>
+        <p>Binder enfatiza que o profissional deve realizar um <strong>extenso levantamento de fatores de risco</strong> em três épocas: (1) <strong>Pré-delito;</strong> (2) <strong>Época do delito;</strong> (3) <strong>Pós-delito.</strong></p>
+      </div>
+
+      <div class="practical-case">
+        <h4>📋 Caso Concreto 2 — Imputabilidade e Saúde Mental</h4>
+        <p><strong>Situação:</strong> Ricardo, diagnosticado com esquizofrenia paranoide, agride gravemente um vizinho durante um surto psicótico em que acreditava estar sendo perseguido por alienígenas. A defesa alega inimputabilidade.</p>
+        <p><strong>Análise Técnica:</strong> O juiz solicita perícia psicológica e psiquiátrica. O perito deve avaliar: (1) se Ricardo tinha, <em>ao tempo da ação</em>, capacidade de <strong>compreensão</strong> do caráter ilícito (saber que agredir é errado) — durante um surto paranoide, tipicamente não; (2) capacidade de <strong>autodeterminação</strong> (poder escolher não agredir) — comprometida pelo surto. Se confirmada a inimputabilidade pelo art. 26 do CP, Ricardo será absolvido impropriamente e receberá <strong>medida de segurança</strong> (internação em IPF), não pena.</p>
+        <p><strong>Pegadinha:</strong> A prova pode perguntar se "todos os portadores de esquizofrenia são inimputáveis". <strong>NÃO.</strong> A avaliação é feita <em>no momento do crime</em>. Fora do surto, o esquizofrênico pode ser plenamente imputável.</p>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- QUESTÕES DE REVISÃO                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="questoes" class="content-section">
+      <h2>📝 Questões de Revisão Estilo Banca</h2>
+
+      <div class="quiz-box">
+        <h4>Questão 1 — Diagnóstico Clínico vs. Perícia</h4>
+        <p>Assinale a alternativa <strong>CORRETA</strong> sobre a perícia psicológica:</p>
+        <p>(A) A perícia mantém sigilo absoluto sobre as informações obtidas.</p>
+        <p>(B) A perícia pode ser interrompida a qualquer momento pelo avaliado.</p>
+        <p>(C) A perícia tem finalidade probatória e subsidia a formação do convencimento do juiz.</p>
+        <p>(D) A perícia psicológica visa estabelecer vínculo terapêutico com o réu.</p>
+        <details>
+          <summary>Clique para ver a resposta</summary>
+          <div class="quiz-answer">
+            <strong>Alternativa C.</strong> A perícia tem finalidade probatória. (A) é falsa: as informações integram o processo. (B) é falsa: há obrigação de completar. (D) é falsa: não há vínculo terapêutico.
+          </div>
+        </details>
+      </div>
+
+      <div class="quiz-box">
+        <h4>Questão 2 — Escola Positivista</h4>
+        <p>Sobre o pensamento de Cesare Lombroso, é <strong>INCORRETO</strong> afirmar:</p>
+        <p>(A) O atavismo explicaria a criminalidade como um retorno a características primitivas.</p>
+        <p>(B) O crime seria determinado por fatores exclusivamente internos ao indivíduo.</p>
+        <p>(C) Traços físicos específicos poderiam identificar o "criminoso nato".</p>
+        <p>(D) A criminologia positivista valoriza os fatores sociais e econômicos que levam ao crime.</p>
+        <details>
+          <summary>Clique para ver a resposta</summary>
+          <div class="quiz-answer">
+            <strong>Alternativa D.</strong> A escola positivista ignora fatores sociais e subjetivos. Quem valoriza fatores sociais é a Criminologia Crítica e o Multifatorismo.
+          </div>
+        </details>
+      </div>
+
+      <div class="quiz-box">
+        <h4>Questão 3 — Saúde Mental e Violência</h4>
+        <p>Com base nos dados apresentados na disciplina, analise as assertivas:</p>
+        <p>I — O estudo alemão de Haefner e Boeker demonstrou que doentes mentais estão sobrerrepresentados entre criminosos violentos.</p>
+        <p>II — No Brasil, apenas 1,2% da população carcerária de São Paulo se enquadra no art. 26 do CP.</p>
+        <p>III — A maioria dos presos enquadrados no art. 26 apresenta psicoses graves.</p>
+        <p>Está correto o que se afirma <strong>APENAS</strong> em:</p>
+        <p>(A) I. &nbsp; (B) II. &nbsp; (C) I e III. &nbsp; (D) II e III.</p>
+        <details>
+          <summary>Clique para ver a resposta</summary>
+          <div class="quiz-answer">
+            <strong>Alternativa B.</strong> Apenas II está correta. I é falsa (o estudo NÃO encontrou sobrerrepresentação). III é falsa (a maioria tem transtornos de personalidade, não psicoses graves).
+          </div>
+        </details>
+      </div>
+
+      <div class="quiz-box">
+        <h4>Questão 4 — Caso Concreto: Alienação Parental</h4>
+        <p>Maria e João estão em processo de divórcio. Maria passa a contar para o filho de 8 anos que "o papai abandonou vocês por outra mulher". A criança começa a recusar visitas ao pai. O juiz solicita perícia psicológica. Sobre este caso, é <strong>CORRETO</strong> afirmar:</p>
+        <p>(A) O psicólogo perito deve decidir com qual genitor a criança ficará.</p>
+        <p>(B) A conduta de Maria pode configurar alienação parental, com danos que incluem depressão e risco de suicídio na criança.</p>
+        <p>(C) O perito deve manter sigilo absoluto sobre suas conclusões, por se tratar de menor.</p>
+        <p>(D) A alienação parental causa apenas desconforto emocional temporário.</p>
+        <details>
+          <summary>Clique para ver a resposta</summary>
+          <div class="quiz-answer">
+            <strong>Alternativa B.</strong> (A) é falsa: o perito recomenda, quem decide é o juiz. (C) é falsa: as informações da perícia integram os autos. (D) é falsa: as consequências incluem depressão, transtornos de identidade, isolamento, abuso de substâncias e risco de suicídio.
+          </div>
+        </details>
+      </div>
+
+      <div class="quiz-box">
+        <h4>Questão 5 — Periculosidade vs. Risco</h4>
+        <p>Sobre a evolução do conceito de periculosidade para a avaliação de fatores de risco, é <strong>INCORRETO</strong> afirmar:</p>
+        <p>(A) A periculosidade é um conceito estático e binário.</p>
+        <p>(B) A avaliação de fatores de risco permite intervenção graduada sobre fatores modificáveis.</p>
+        <p>(C) Segundo Binder, os profissionais forenses devem avaliar fatores de risco em três épocas: pré-delito, delito e pós-delito.</p>
+        <p>(D) A avaliação de fatores de risco se aplica exclusivamente a portadores de psicoses graves.</p>
+        <details>
+          <summary>Clique para ver a resposta</summary>
+          <div class="quiz-answer">
+            <strong>Alternativa D.</strong> Binder enfatiza expressamente que não se deve restringir a avaliação às psicoses. Os transtornos de personalidade e impulsivos são, inclusive, os mais relevantes.
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+    <!-- MAPA MENTAL GERAL -->
+    <section class="content-section">
+      <h2>🧭 Mapa Mental Textual Consolidado</h2>
+      <div class="mind-map">PSICOLOGIA JURÍDICA — MÓDULO CONSOLIDADO
+
+├── DIREITO CIVIL (Família)
+│    ├── Guarda → Poder Familiar (art. 1.638 CC) → Perito + Assist. Técnico
+│    ├── Alienação Parental (Lei 12.318/10) → Depressão, Suicídio, Isolamento
+│    ├── Adoção → ECA art. 41 (irrevogável!) → Estágio de Convivência
+│    ├── Divórcio → Mediação ou Perícia → Psicólogo NÃO decide
+│    └── Dx Clínico vs Perícia:
+│         ├── Clínico: espontâneo, sigiloso, terapêutico, flexível
+│         └── Perícia: judicial, sem sigilo total, probatória, formal
+│
+├── CRIMINOLOGIA
+│    ├── Positivista (Lombroso) → Determinismo, Atavismo, "Criminoso Nato"
+│    │    └── Críticas: Reducionista, Racista, Pseudocientífica
+│    ├── Crítica → Seletividade Penal, Crime = Produto Social, Instituições de Exclusão
+│    ├── Multifatorismo → Bio + Psico + Social = Crime
+│    └── Biopsicossocial → Visão Sistêmica (Garcia-Pablos de Molina)
+│         └── Crime nasce na sociedade → soluções devem vir da sociedade
+│
+└── PENAL & SAÚDE MENTAL
+     ├── Imputabilidade (art. 26 CP) → Compreensão + Autodeterminação
+     ├── Avaliações: Sanidade, Dano Psíquico, Credibilidade, Falsas Memórias
+     ├── Mito: "Doente Mental = Criminoso"
+     │    ├── Haefner/Boeker: NÃO há sobrerrepresentação
+     │    └── SP: Apenas 1,2% dos presos → maioria = transtornos de personalidade
+     └── Periculosidade → Fatores de Risco (Binder)
+          ├── Pessoais: abuso, negligência, impulsividade
+          ├── Contextuais: crimes graves, facções
+          └── Avaliação em 3 tempos: pré-delito / delito / pós-delito</div>
+    </section>
+
+  </main>
+
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>

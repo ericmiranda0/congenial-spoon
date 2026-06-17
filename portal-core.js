@@ -612,6 +612,14 @@ function initVisitorStats() {
  * Microlearning UI Logic
  */
 function initMicrolearning() {
+    // ========================================
+    // MODO PÍLULAS DESATIVADO
+    // Para reativar, remova o "return;" abaixo.
+    // ========================================
+    localStorage.removeItem('studyMode');
+    document.documentElement.classList.remove('microlearning-mode');
+    return;
+
     // Only initialize on pages with a <main> or .container that has multiple <section>s
     const container = document.querySelector('main .container') || document.querySelector('.container');
     if (!container) return;
