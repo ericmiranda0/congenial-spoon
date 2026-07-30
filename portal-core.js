@@ -4,6 +4,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initMarkdownFormatting();
     initTheme();
     initProgressBar();
     initNavHighlight();
@@ -1026,4 +1027,26 @@ function processWikiLinks(searchIndex) {
             sec.innerHTML = newHtml;
         }
     });
+}
+
+/**
+ * Format Markdown (**bold**, __bold__, *italic*) across project elements
+ */
+function initMarkdownFormatting() {
+    const elements = document.querySelectorAll('p, li, span, div, h1, h2, h3, h4, h5, h6, td, th, dt, dd, blockquote, figcaption');
+    elements.forEach(el => {
+        if (el.children.length === 0 || Array.from(el.childNodes).some(n => n.nodeType === 3)) {
+            let html = el.innerHTML;
+            if (html.includes('**') || html.includes('__') || html.includes('*')) {
+                let formatted = html;
+                formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                formatted = formatted.replace(/__(.*?)__/g, '<strong>$1</strong>');
+                formatted = formatted.replace(/(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)/g, '<em>$1</em>');
+                if (el.innerHTML !== formatted) {
+                    el.innerHTML = formatted;
+                }
+            }
+        }
+    });
+    console.log("Markdown formatado com sucesso!");
 }
