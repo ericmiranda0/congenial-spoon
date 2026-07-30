@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Direito Penal II — Concurso, Execução, Efeitos, Ação &amp; Punibilidade | Premium Learning</title>
+  <title>Direito Penal II — Concurso de Crimes, Execução &amp; Benefícios | Guia Definitivo</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,68 +12,69 @@
   
   <link rel="stylesheet" href="../../base-style.css">
   <style>
-    /* Subject Specific Branding: Penal Law Crimson */
+    /* Identidade Visual Exclusiva: Tema Roxo / Violeta Imperial */
     :root {
-      --p-700: #7F1D1D;
-      --p-600: #991B1B;
-      --p-500: #EF4444;
-      --p-50: #FEF2F2;
-      --primary: #EF4444;
-      --primary-dark: #7F1D1D;
+      --p-700: #4C1D95;
+      --p-600: #6D28D9;
+      --p-500: #7C3AED;
+      --p-50: #F5F3FF;
+      --primary: #7C3AED;
+      --primary-dark: #4C1D95;
+      --accent-purple: #A855F7;
+      --accent-tint: rgba(124, 58, 237, 0.08);
+      --border-purple: rgba(124, 58, 237, 0.2);
     }
 
     header {
-      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      background: linear-gradient(135deg, var(--p-700) 0%, #2E1065 100%);
     }
 
-    /* Custom Styling for Professor's Directives to draw maximum attention */
-    .professor-focus {
-      background-color: var(--warning-bg);
-      border-left: 6px solid var(--warning);
-      border-top: 1px solid rgba(245, 158, 11, 0.2);
-      border-right: 1px solid rgba(245, 158, 11, 0.2);
-      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    /* Selos e Boxes de Destaque Acadêmico / Exames */
+    .destaque-academico {
+      background-color: var(--p-50);
+      border-left: 6px solid var(--p-500);
+      border-top: 1px solid var(--border-purple);
+      border-right: 1px solid var(--border-purple);
+      border-bottom: 1px solid var(--border-purple);
       padding: 1.75rem;
       border-radius: 16px;
       margin: 2rem 0;
       position: relative;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     
-    .professor-focus:hover {
+    .destaque-academico:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 20px -3px rgba(245, 158, 11, 0.15), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
+      box-shadow: 0 12px 20px -3px rgba(124, 58, 237, 0.15), 0 4px 6px -2px rgba(124, 58, 237, 0.05);
     }
     
-    .professor-focus .focus-label {
+    .destaque-academico .selo-destaque {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: linear-gradient(135deg, #D97706, #B45309);
+      background: linear-gradient(135deg, var(--p-600), var(--p-700));
       color: white;
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 50px;
       margin-bottom: 1rem;
     }
     
-    [data-theme="dark"] .professor-focus {
-      background-color: rgba(217, 119, 6, 0.08);
-      border-top: 1px solid rgba(217, 119, 6, 0.15);
-      border-right: 1px solid rgba(217, 119, 6, 0.15);
-      border-bottom: 1px solid rgba(217, 119, 6, 0.15);
+    [data-theme="dark"] .destaque-academico {
+      background-color: rgba(124, 58, 237, 0.1);
+      border-color: rgba(168, 85, 247, 0.25);
     }
 
-    .exam-warning-badge {
+    .badge-prova {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: linear-gradient(135deg, #DC2626, #991B1B);
+      background: linear-gradient(135deg, #7C3AED, #4C1D95);
       color: white;
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
@@ -82,8 +83,344 @@
       letter-spacing: 1px;
       padding: 6px 12px;
       border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    }
+
+    .kw {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(124, 58, 237, 0.15);
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(124, 58, 237, 0.2);
+      color: #DDD6FE;
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+
+    /* Quadros de Níveis Didáticos (3 Níveis) */
+    .nivel-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .nivel-card {
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-color, #e2e8f0);
+      border-radius: 14px;
+      padding: 1.25rem;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
+    }
+
+    .nivel-card:hover {
+      border-color: var(--p-500);
+      transform: translateY(-2px);
+    }
+
+    .nivel-card.n1 { border-top: 4px solid #3B82F6; }
+    .nivel-card.n2 { border-top: 4px solid #8B5CF6; }
+    .nivel-card.n3 { border-top: 4px solid #EC4899; }
+
+    .nivel-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .n1 .nivel-badge { background: #EFF6FF; color: #1D4ED8; }
+    .n2 .nivel-badge { background: #F5F3FF; color: #6D28D9; }
+    .n3 .nivel-badge { background: #FDF2F8; color: #BE185D; }
+
+    /* Lei Seca Interativa */
+    details.artigo-detalhado {
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-purple);
+      border-radius: 12px;
+      margin: 1rem 0;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    details.artigo-detalhado summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] details.artigo-detalhado summary {
+      color: #DDD6FE;
+    }
+
+    details.artigo-detalhado summary::-webkit-details-marker { display: none; }
+
+    details.artigo-detalhado[open] {
+      border-color: var(--p-500);
+      box-shadow: 0 8px 16px -4px rgba(124, 58, 237, 0.1);
+    }
+
+    .lei-seca-box {
+      background: var(--p-50);
+      border-left: 4px solid var(--p-500);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca-box {
+      background: rgba(124, 58, 237, 0.12);
+      color: #F3E8FF;
+    }
+
+    .btn-copiar-artigo {
+      background: var(--p-500);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .btn-copiar-artigo:hover { background: var(--p-600); }
+
+    /* Flashcards Interativos */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-surface, #ffffff);
+      border: 2px solid var(--border-purple);
+      border-radius: 14px;
+      padding: 1.5rem;
+      cursor: pointer;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flashcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--p-500);
+      box-shadow: 0 12px 20px -4px rgba(124, 58, 237, 0.15);
+    }
+
+    .flashcard .fc-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard .fc-pergunta {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-color, #1f2937);
+      line-height: 1.4;
+    }
+
+    .flashcard .fc-resposta {
+      display: none;
+      font-size: 0.92rem;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 0.85rem;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      border-left: 3px solid var(--p-500);
+      line-height: 1.5;
+    }
+
+    [data-theme="dark"] .flashcard .fc-resposta {
+      background: rgba(124, 58, 237, 0.15);
+      color: #E9D5FF;
+    }
+
+    .flashcard.revelado .fc-resposta { display: block; }
+    .flashcard.revelado .fc-dica-clique { display: none; }
+
+    .fc-dica-clique {
+      font-size: 0.75rem;
+      color: #9CA3AF;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Fluxogramas em HTML/CSS (Pure Flexbox/Grid) */
+    .flowchart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-purple);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--p-50);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--p-500);
+    }
+
+    [data-theme="dark"] .flow-step {
+      background: rgba(124, 58, 237, 0.1);
+    }
+
+    .flow-num {
+      background: var(--p-500);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: var(--p-500);
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin: -0.5rem 0;
+    }
+
+    /* Linha do Tempo (Timeline) */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-surface, #ffffff);
+    }
+
+    .timeline-date {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--p-600);
+      text-transform: uppercase;
+    }
+
+    /* Mapas Mentais HTML/CSS Pure */
+    .mindmap-tree {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 1.75rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 1.5rem 0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .mm-node-root {
+      color: #C084FC;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #7C3AED;
+      padding-bottom: 0.5rem;
+    }
+
+    .mm-node-l1 {
+      margin-left: 1.25rem;
+      color: #F472B6;
+      font-weight: 700;
+      margin-top: 0.75rem;
+    }
+
+    .mm-node-l2 {
+      margin-left: 2.75rem;
+      color: #94A3B8;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .mm-node-l2 strong { color: #38BDF8; }
+
+    /* Mnemônicos Cards */
+    .mnemonic-card {
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(168, 85, 247, 0.05));
+      border: 2px dashed var(--p-500);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .mnemonic-title {
+      font-weight: 800;
+      color: var(--p-700);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    [data-theme="dark"] .mnemonic-title { color: #DDD6FE; }
+
+    .mnemonic-letters {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--p-500);
+      letter-spacing: 2px;
+      margin: 0.5rem 0;
     }
   </style>
 </head>
@@ -96,12 +433,13 @@
   <header>
     <div class="container">
       <div class="badge">Material Didático · Direito Penal II</div>
-      <h1>Concurso, Execução, Efeitos, Ação &amp; Punibilidade</h1>
-      <div class="subtitle">Guia Consolidado — Do concurso de crimes às causas extintivas da punibilidade</div>
-      <div class="meta">
-        <span>⚖️ Arts. 69 a 119 CP</span>
-        <span>📚 Teoria Geral Completa</span>
-        <span>🛡️ Foco em Concursos &amp; Provas</span>
+      <h1>Concurso de Crimes, Execução &amp; Benefícios Penais</h1>
+      <div class="subtitle">Guia Definitivo: Da pluralidade de delitos aos efeitos da condenação e extinção da punibilidade</div>
+      <div class="meta" style="margin-top: 15px; opacity: 0.95;">
+        <span>⚖️ Arts. 69 a 120 CP</span> | 
+        <span>📚 Teoria Geral Avançada</span> | 
+        <span>🛡️ Foco Acadêmico &amp; Concursos</span> |
+        <span>⏱️ Tempo estimado: 35 min</span>
       </div>
     </div>
   </header>
@@ -117,16 +455,18 @@
       </a>
       <div class="nav-list">
         <a href="#objetivos" class="nav-item">Objetivos</a>
-        <a href="#concurso" class="nav-item">Concurso &amp; Erros</a>
-        <a href="#beneficios" class="nav-item">Benefícios</a>
-        <a href="#efeitos" class="nav-item">Efeitos</a>
-        <a href="#acao" class="nav-item">Ação Penal</a>
-        <a href="#extincao" class="nav-item">Extinção</a>
-        <a href="#prescricao" class="nav-item">Prescrição</a>
-        <a href="#mapa" class="nav-item">Mapa Mental</a>
-        <a href="#quiz" class="nav-item">Quiz</a>
+        <a href="#concurso" class="nav-item">Concurso de Crimes</a>
+        <a href="#erros" class="nav-item">Erros na Execução</a>
+        <a href="#beneficios" class="nav-item">Benefícios Penais</a>
+        <a href="#efeitos" class="nav-item">Efeitos da Condenação</a>
+        <a href="#fluxogramas" class="nav-item">Fluxogramas</a>
+        <a href="#mapamentais" class="nav-item">Mapa Mental</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#mnemonicos" class="nav-item">Mnemônicos</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+        <a href="#resumao" class="nav-item">Resumão Final</a>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Modo Escuro/Claro">
         <svg width="20" height="20" id="themeIcon"></svg>
       </button>
     </div>
@@ -137,1053 +477,669 @@
 
       <!-- SUMÁRIO INTERATIVO -->
       <div class="summary-card" id="top">
-        <h2>📋 Sumário Interativo</h2>
+        <h2>📋 Sumário Geral do Guia</h2>
         <a href="#objetivos"><span>🎯</span> Objetivos de Aprendizagem</a>
-        <a href="#concurso"><span>⛓️</span> 1. Concurso de Crimes &amp; Erros na Execução (Arts. 69-74)</a>
-        <a href="#beneficios"><span>🎁</span> 2. Benefícios Penais &amp; Limites (Arts. 75-88)</a>
-        <a href="#efeitos"><span>🛡️</span> 3. Efeitos da Condenação (Genéricos vs. Específicos)</a>
-        <a href="#acao"><span>⚖️</span> 4. Ação Penal (Espécies, Ritos e Dinâmicas Extintivas)</a>
-        <a href="#extincao"><span>⛓️</span> 5. Extinção da Punibilidade (Art. 107 do CP)</a>
-        <a href="#prescricao"><span>⚠️</span> 6. Teoria da Prescrição Penal (PPP e PPE - *Fora do Exame*)</a>
-        <a href="#mapa"><span>🧠</span> 7. Mapa Mental Consolidado</a>
-        <a href="#quiz"><span>📝</span> 8. Quiz de Revisão Ativa Comentado</a>
-        <a href="#resumao"><span>⚡</span> 9. Resumão Final (Cola Mental)</a>
+        <a href="#concurso"><span>⛓️</span> Módulo 01: Concurso de Crimes (Material, Formal &amp; Continuado)</a>
+        <a href="#erros"><span>🎯</span> Módulo 02: Erros na Execução &amp; Limites Globais de Penas</a>
+        <a href="#beneficios"><span>🎁</span> Módulo 03: Benefícios Penais (Sursis &amp; Livramento Condicional)</a>
+        <a href="#efeitos"><span>🛡️</span> Módulo 04: Efeitos da Condenação &amp; Reabilitação Penal</a>
+        <a href="#fluxogramas"><span>🔄</span> Módulo 05: Fluxogramas de Aplicação das Penas</a>
+        <a href="#mapamentais"><span>🧠</span> Módulo 06: Mapa Mental Consolidado</a>
+        <a href="#flashcards"><span>⚡</span> Módulo 07: 20 Flashcards Interativos de Revisão</a>
+        <a href="#mnemonicos"><span>🧩</span> Módulo 08: Técnicas Mnemônicas de Memorização</a>
+        <a href="#revisao"><span>📝</span> Módulo 09: Revisão Ativa Comentada (Inéditas &amp; Concursos)</a>
+        <a href="#resumao"><span>🚀</span> Módulo 10: Resumão Ultra Rápido (Cheat Sheet)</a>
       </div>
 
-      <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+      <!-- ══════════════════════════════ OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
       <section id="objetivos">
         <h2>🎯 Objetivos de Aprendizagem</h2>
-        <p>Este guia consolidado foi estruturado para que você domine integralmente os seguintes tópicos:</p>
-        <ul>
-          <li>As três espécies de <strong>concurso de crimes</strong> e seus respectivos sistemas de aplicação de penas;</li>
-          <li>A diferenciação prática entre o <strong>Erro na Execução (Aberratio Ictus)</strong> e o <strong>Resultado Diverso do Pretendido (Aberratio Criminis)</strong>;</li>
-          <li>Os requisitos legais e frações para a concessão de <strong>Sursis</strong> e de <strong>Livramento Condicional</strong>;</li>
-          <li>A distinção entre os <strong>efeitos genéricos (automáticos)</strong> e os <strong>específicos (não automáticos)</strong> da condenação e seus reflexos extrapenais, incluindo o <strong>Confisco Alargado (Art. 91-A)</strong> e as especificidades da Lei Maria da Penha;</li>
-          <li>As espécies de <strong>Ação Penal</strong> e as dinâmicas de <em>Decadência, Renúncia, Perdão</em> e <em>Perempção</em> com foco no princípio da indivisibilidade;</li>
-          <li>As hipóteses de <strong>Extinção da Punibilidade (Art. 107)</strong> e a natureza jurídica do Perdão Judicial;</li>
-          <li>Os marcos regulatórios e prazos da <strong>Prescrição da Pretensão Punitiva (PPP)</strong> e da <strong>Executória (PPE)</strong>.</li>
-        </ul>
+        <p>Ao concluir o estudo deste material estruturado, o estudante estará apto a:</p>
+        <div class="grid2">
+          <div class="card">
+            <h4>1. Distinguir as Espécies de Concurso</h4>
+            <p>Diferenciar com precisão Concurso Material, Formal Próprio, Formal Impróprio e Crime Continuado (Simples e Específico), identificando seus respectivos sistemas de cálculo de pena (Cúmulo Material vs. Exasperação).</p>
+          </div>
+          <div class="card">
+            <h4>2. Dominar a Teoria dos Erros na Execução</h4>
+            <p>Solucionar casos práticos envolvendo <em>Aberratio Ictus</em> (Art. 73) e <em>Aberratio Criminis</em> (Art. 74), diferenciando erro sobre a pessoa de erro nos meios de execução.</p>
+          </div>
+          <div class="card">
+            <h4>3. Manejar os Benefícios Penais da Execução</h4>
+            <p>Compreender os requisitos objetivos e subjetivos para a concessão do <strong>Sursis Penal</strong> (Art. 77) e do <strong>Livramento Condicional</strong> (Art. 83), dominando suas frações e hipóteses de revogação.</p>
+          </div>
+          <div class="card">
+            <h4>4. Categorizar os Efeitos da Condenação</h4>
+            <p>Classificar os efeitos da sentença condenatória penal transitada em julgado em Genéricos (automáticos) e Específicos (não-automáticos), fundamentando a perda de cargo público e bens.</p>
+          </div>
+        </div>
       </section>
 
-      <!-- ══════════════════════════════ 1. CONCURSO DE CRIMES & ERROS ══════════════════════════════ -->
-      <section class="section" id="concurso">
+      <!-- ══════════════════════════════ MÓDULO 01: CONCURSO DE CRIMES ══════════════════════════════ -->
+      <section id="concurso" class="section">
         <div class="section-label">Módulo 01</div>
-        <h2>1. Concurso de Crimes &amp; Erros na Execução (Arts. 69 a 74 do CP)</h2>
-        
-        <div class="layer-simple">
-          <p>O concurso de crimes ocorre quando uma pessoa comete dois ou mais crimes. O Direito Penal precisa decidir se soma as penas ou se aplica um aumento sobre a mais grave para evitar penas absurdamente desproporcionais.</p>
+        <h2>Concurso de Crimes: Teoria Geral e Espécies</h2>
+
+        <!-- Explicação em 3 Níveis -->
+        <h3>Explicação Aprofundada em 3 Níveis Didáticos</h3>
+        <div class="nivel-container">
+          <div class="nivel-card n1">
+            <span class="nivel-badge">Nível 1 · Simples / Didático</span>
+            <p>Imagine que o Concurso de Crimes é a matemática da punição. Se alguém comete vários crimes com várias ações, somamos as penas (Cúmulo Material). Se comete vários crimes com um único tiro ou ato, a lei dá um "desconto" e aplica apenas a pena mais grave aumentada (Exasperação), a menos que tenha agido de má-fé para acertar ambos!</p>
+          </div>
+          <div class="nivel-card n2">
+            <span class="nivel-badge">Nível 2 · Técnico / Graduação</span>
+            <p>Trata-se do fenômeno jurídico em que uma pluralidade de condutas ou de resultados típicos imputados ao mesmo agente exige a aplicação de regras específicas de unificação ou soma das penas. Divide-se em: Concurso Material (Art. 69), Concurso Formal (Art. 70) e Crime Continuado (Art. 71).</p>
+          </div>
+          <div class="nivel-card n3">
+            <span class="nivel-badge">Nível 3 · Concursos de Alto Nível</span>
+            <p>Bancas examinadoras exploram a natureza jurídica do Crime Continuado (Teoria da Ficção Jurídica adotada pelo CP vs. Teoria da Unidade Real) e a vedação do Concurso Formal Maléfico (Art. 70, parágrafo único), que impede que a exasperação resulte em pena superior ao cúmulo material simples.</p>
+          </div>
         </div>
 
-        <h3>1.1 Concurso Material (Art. 69 CP)</h3>
-        <p>Ocorre quando o agente, mediante <span class="kw">mais de uma ação ou omissão</span>, pratica dois ou mais crimes.</p>
-        
-        <details class="artigo-block">
-          <summary>Art. 69 do Código Penal — Concurso Material</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 69</strong> - Quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplicam-se cumulativamente as penas privativas de liberdade em que haja incorrido. No caso de aplicação cumulativa de penas de reclusão e de detenção, executa-se primeiro aquela.</p>
+        <!-- 1.1 Concurso Material -->
+        <h3>1.1 Concurso Material (Art. 69 do Código Penal)</h3>
+        <p>Ocorre quando o agente, mediante <span class="kw">mais de uma ação ou omissão</span>, pratica dois ou mais crimes, idênticos ou não.</p>
+
+        <details class="artigo-detalhado">
+          <summary>
+            <span>⚖️ Art. 69 do Código Penal — Concurso Material</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art69-text">
+            Art. 69 - Quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplicam-se cumulativamente as penas privativas de liberdade em que haja incorrido. No caso de aplicação cumulativa de penas de reclusão e de detenção, executa-se primeiro aquela.
+            <br><br>
+            § 1º - Na hipótese deste artigo, quando ao agente tiver sido aplicada pena privativa de liberdade, não suspensa por um dos crimes, para os demais será incabível a substituição de que trata o art. 44 deste Código.
+            <br>
+            § 2º - Quando forem aplicadas penas restritivas de direitos, o condenado cumprirá simultaneamente as que forem compatíveis entre si e sucessivamente as demais.
           </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art69-text').innerText); alert('Artigo 69 copiado!');">Copiar Artigo</button>
         </details>
 
         <div class="grid2">
-          <div class="card green">
-            <h3>Concurso Homogêneo</h3>
-            <p>Os crimes praticados pelo agente são idênticos.<br><strong>Exemplo:</strong> Praticar 4 homicídios em dias diferentes.</p>
+          <div class="card">
+            <h4>Homogêneo</h4>
+            <p>Os crimes praticados são de espécies idênticas. <em>Exemplo: Praticar três roubos em dias e locais totalmente distintos sem vínculo de continuidade.</em></p>
           </div>
-          <div class="card blue">
-            <h3>Concurso Heterogêneo</h3>
-            <p>Os crimes praticados pelo agente são diferentes.<br><strong>Exemplo:</strong> Praticar 1 homicídio e 1 estupro.</p>
+          <div class="card">
+            <h4>Heterogêneo</h4>
+            <p>Os crimes praticados são de espécies distintas. <em>Exemplo: Cometer um crime de estupro e, em seguida, praticar um crime de furto contra outra vítima.</em></p>
           </div>
         </div>
 
-        <div class="exam-tip">
-          <span class="box-label">🎯 Cai em Prova</span>
-          <strong>Sistema de Pena:</strong> Adota-se o <span class="kw">Cúmulo Material</span> (soma-se tudo). Se houver aplicação cumulativa de penas de reclusão e de detenção, a reclusão é executada em primeiro lugar.
+        <div class="destaque-academico">
+          <span class="selo-destaque">🎯 FOCO EM PROVAS &amp; EXAMES</span>
+          <p><strong>Sistema de Aplicação da Pena:</strong> Adota-se obrigatoriamente o <span class="kw">Sistema do Cúmulo Material</span> (soma-se a totalidade das penas). Havendo cumulação de pena de <strong>Reclusão</strong> e <strong>Detenção</strong>, a pena de <span class="kw">reclusão é executada em primeiro lugar</span>!</p>
         </div>
 
-        <h3>1.2 Concurso Formal (Art. 70 CP)</h3>
-        <p>Ocorre quando o agente, mediante <span class="kw">uma só conduta</span>, pratica dois ou mais crimes.</p>
+        <!-- 1.2 Concurso Formal -->
+        <h3>1.2 Concurso Formal (Art. 70 do Código Penal)</h3>
+        <p>Verifica-se quando o agente, mediante <span class="kw">uma única conduta</span> (ação ou omissão), produz dois ou mais resultados delituosos.</p>
 
-        <details class="artigo-block">
-          <summary>Art. 70 do Código Penal — Concurso Formal</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 70</strong> - Quando o agente, mediante uma só ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplica-se-lhe a mais grave das penas cabíveis ou, se iguais, somente uma delas, mas aumentada, em qualquer caso, de um sexto até metade. As penas aplicam-se, entretanto, cumulativamente, se a ação ou omissão é dolosa e os crimes concorrentes resultam de desígnios autônomos, consoante o disposto no artigo anterior.</p>
+        <details class="artigo-detalhado">
+          <summary>
+            <span>⚖️ Art. 70 do Código Penal — Concurso Formal</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art70-text">
+            Art. 70 - Quando o agente, mediante uma só ação ou omissão, pratica dois ou mais crimes, idênticos ou não, aplica-se-lhe a mais grave das penas cabíveis ou, se iguais, somente uma delas, mas aumentada, em qualquer caso, de um sexto até metade. As penas de multa, entretanto, aplicam-se distintamente e integralmente.
+            <br><br>
+            Parágrafo único - Não poderá a pena exceder a que seria aplicável segundo as regras do art. 69 deste Código.
           </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art70-text').innerText); alert('Artigo 70 copiado!');">Copiar Artigo</button>
         </details>
 
-        <div class="table-wrap">
+        <!-- Quadro Comparativo de Espécies -->
+        <h3>Quadro Comparativo: Concurso Formal Próprio vs. Impróprio</h3>
+        <div class="table-responsive">
           <table>
             <thead>
               <tr>
-                <th>Espécie</th>
-                <th>Vontade (Dolo)</th>
-                <th>Sistema de Pena</th>
+                <th>Critério</th>
+                <th>Concurso Formal Próprio (Perfeito)</th>
+                <th>Concurso Formal Impróprio (Imperfeito)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Próprio (Perfeito)</strong></td>
-                <td>Não há intenção de múltiplos resultados (ex: negligência, dolo com resultado culposo).</td>
-                <td><strong>Exasperação:</strong> Pena mais grave aumentada de <strong>1/6 até 1/2</strong>.</td>
+                <td><strong>Elemento Subjetivo</strong></td>
+                <td>Sem desígnios autônomos (ausência de intenção de produzir múltiplos crimes dolosos). Ex: imprudência ao dirigir.</td>
+                <td><span class="kw">Com desígnios autônomos</span> (o agente quer ativamente produzir todos os resultados dolosos).</td>
               </tr>
               <tr>
-                <td><strong>Impróprio (Imperfeito)</strong></td>
-                <td>Agente quer todos os resultados (existência de <strong>Desígnios Autônomos</strong>).</td>
-                <td><strong>Cúmulo Material:</strong> Somam-se as penas de forma cumulativa.</td>
+                <td><strong>Sistema de Pena</strong></td>
+                <td><strong>Exasperação:</strong> Aplica-se a pena mais grave (ou uma delas, se iguais) + aumento de <strong>1/6 até 1/2</strong>.</td>
+                <td><strong>Cúmulo Material:</strong> As penas de todos os crimes são integralmente <span class="kw">somadas</span>.</td>
+              </tr>
+              <tr>
+                <td><strong>Exceção Protetiva</strong></td>
+                <td><strong>Concurso Formal Maléfico:</strong> Se a exasperação for maior que a soma, aplica-se a soma (Art. 70, parágrafo único).</td>
+                <td>Não se aplica a regra da exasperação; somam-se diretamente todas as sanções.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3>1.3 Crime Continuado (Art. 71 CP)</h3>
-        <p>É uma <span class="kw">ficção jurídica</span> criada por razões de política criminal, onde vários crimes de mesma espécie são tratados como continuação do primeiro devido às semelhantes condições de tempo, lugar, maneira de execução e outras características comuns.</p>
-        
-        <details class="artigo-block">
-          <summary>Art. 71 do Código Penal — Crime Continuado</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 71</strong> - Quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes da mesma espécie e, pelas condições de tempo, lugar, maneira de execução e outras semelhantes, devem os subsequentes ser havidos como continuação do primeiro, aplica-se-lhe a pena de um só dos crimes, se idênticas, ou a mais grave, se diversas, aumentada, em qualquer caso, de um sexto a dois terços.</p>
+        <!-- 1.3 Crime Continuado -->
+        <h3>1.3 Crime Continuado (Art. 71 do Código Penal)</h3>
+        <p>É uma <span class="kw">ficção jurídica</span> criada por política criminal, na qual vários crimes da mesma espécie, praticados em semelhantes condições de tempo, lugar e modo de execução, são havidos como continuação do primeiro.</p>
+
+        <details class="artigo-detalhado">
+          <summary>
+            <span>⚖️ Art. 71 do Código Penal — Crime Continuado</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art71-text">
+            Art. 71 - Quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes da mesma espécie e, pelas condições de tempo, lugar, maneira de execução e outras semelhantes, devem os subseqüentes ser havidos como continuação do primeiro, aplica-se-lhe a pena de um só dos crimes, se idênticas, ou a mais grave, se diversas, aumentada, em qualquer caso, de um sexto a dois terços.
+            <br><br>
+            Parágrafo único - Nos crimes dolosos, contra vítimas diferentes, cometidos com violência ou grave ameaça à pessoa, poderá o juiz, considerando a culpabilidade, os antecedentes, a conduta social e a personalidade do agente, bem como os motivos e as circunstâncias, aumentar a pena de um só dos crimes, se idênticas, ou a mais grave, se diversas, <span class="kw">até o triplo</span>, observadas as regras do parágrafo único do art. 70 e do art. 75 deste Código.
           </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art71-text').innerText); alert('Artigo 71 copiado!');">Copiar Artigo</button>
         </details>
 
-        <div class="pitfall">
-          <span class="box-label">⚠️ Pegadinha de Prova</span>
-          No <strong>Crime Continuado Específico</strong> (parágrafo único do art. 71 - crimes dolosos contra vítimas diferentes praticados com violência ou grave ameaça), a pena de um só dos crimes se idênticas, ou a mais grave se diversas, pode ser aumentada até o <strong>triplo</strong>, respeitado o limite do art. 75 do CP!
-        </div>
-
-        <div class="important">
-          <span class="box-label">⭐ Regra de Ouro — Pena de Multa</span>
-          Conforme o <strong>Art. 72 do Código Penal</strong>, no concurso de crimes, as penas de multa são aplicadas <strong>distinta e integralmente</strong>. Ou seja, as multas <strong>sempre se somam</strong>, não se aplicando o sistema de exasperação para as penas pecuniárias.
-        </div>
-
-        <h3>1.4 Erros na Execução</h3>
-        <p>O Código Penal disciplina hipóteses em que o crime se desenvolve com erro ou desvio nos seus meios de execução física.</p>
-
-        <div class="grid2">
-          <div class="card blue">
-            <h3>Aberratio Ictus (Art. 73)</h3>
-            <p><strong>Erro no golpe/execução:</strong> O agente quer atingir A, mas, por erro na execução ou acidente, atinge B. Aplica-se a regra do art. 20, § 3º (responde como se tivesse atingido a pessoa pretendida, considerando-se suas características pessoais). Se atingir ambas as pessoas (a pretendida e a terceira), responde em concurso formal próprio.</p>
-          </div>
-          <div class="card purple">
-            <h3>Aberratio Criminis (Art. 74)</h3>
-            <p><strong>Resultado diverso do pretendido:</strong> Fora dos casos do artigo anterior, por erro na execução, ocorre resultado diferente do pretendido (quer atingir uma coisa/bem material, mas atinge uma pessoa). Responde por dolo no crime intentado (se consumado ou tentado) em concurso com culpa no resultado se o fato for previsto como crime culposo.</p>
-          </div>
+        <div class="exam-tip" style="background: #F5F3FF; border-left: 5px solid #7C3AED; padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0;">
+          <span class="box-label" style="background: #7C3AED; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 800;">⚖️ JURISPRUDÊNCIA DO STF &amp; STJ</span>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            • <strong>Súmula 711 do STF:</strong> A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência.<br>
+            • <strong>Súmula 497 do STF:</strong> Quando se tratar de crime continuado, a prescrição regula-se pela pena imposta na sentença, não se computando o acréscimo decorrente da continuidade.
+          </p>
         </div>
       </section>
 
-      <!-- ══════════════════════════════ 2. BENEFÍCIOS PENAIS & LIMITES ══════════════════════════════ -->
-      <section class="section" id="beneficios">
+      <!-- ══════════════════════════════ MÓDULO 02: ERROS NA EXECUÇÃO E LIMITES ══════════════════════════════ -->
+      <section id="erros" class="section">
         <div class="section-label">Módulo 02</div>
-        <h2>2. Benefícios Penais &amp; Limites da Pena (Arts. 75 a 88 do CP)</h2>
-
-        <div class="exam-tip">
-          <span class="box-label">🚀 Atualização Legislativa (Pacote Anticrime)</span>
-          <strong>Limite do Art. 75 CP:</strong> O tempo máximo de cumprimento das penas privativas de liberdade no Brasil foi ampliado para <strong>40 anos</strong> pela Lei 13.964/2019 (anteriormente o limite histórico era de 30 anos).
-        </div>
-
-        <h3>2.1 Sursis (Suspensão Condicional da Pena — Art. 77)</h3>
-        <div class="layer-simple">
-          <p>O Sursis suspende temporariamente a execução da pena privativa de liberdade na sentença. O condenado não vai para a prisão, desde que cumpra rigorosas condições fixadas pelo juiz durante um período de prova de 2 a 4 anos.</p>
-        </div>
-        
-        <details class="artigo-block">
-          <summary>Art. 77 do Código Penal — Requisitos do Sursis (Texto Integral)</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 77</strong> - A execução da pena privativa de liberdade, não superior a 2 (dois) anos, poderá ser suspensa, por 2 (dois) a 4 (quatro) anos, desde que:<br>
-            I - o condenado não seja reincidente em crime doloso;<br>
-            II - a culpabilidade, os antecedentes, a conduta social e personalidade do agente, bem como os motivos e as circunstâncias autorizem a concessão do benefício;<br>
-            III - Não seja indicada ou cabível a substituição prevista no art. 44 deste Código.<br><br>
-            <strong>§ 1º</strong> - A condenação anterior a pena de multa não impede a concessão do benefício.<br>
-            <strong>§ 2º</strong> - A execução da pena privativa de liberdade, não superior a quatro anos, poderá ser suspensa, por quatro a seis anos, desde que o condenado seja maior de setenta anos de idade, ou razões de saúde justifiquem a suspensão.</p>
-          </div>
-        </details>
+        <h2>Erros na Execução e Limites das Penas</h2>
 
         <div class="grid2">
-          <div class="card blue">
-            <h3>Sursis Simples (Art. 77, caput)</h3>
-            <p><strong>Pena:</strong> Não superior a <strong>2 anos</strong>.<br>
-            <strong>Período de prova:</strong> <strong>2 a 4 anos</strong>.<br>
-            <strong>Requisito negativo:</strong> Não reincidente em crime doloso.</p>
+          <div class="card" style="border-top: 4px solid var(--p-500);">
+            <h4>Aberratio Ictus (Art. 73 do CP)</h4>
+            <p><strong>Erro no Golpe / Na Execução:</strong> O agente pretende atingir a pessoa A, mas por desvio nos meios de execução atinge a pessoa B. Pune-se o agente como se tivesse atingido a pessoa pretendida (atendendo às qualidades da vítima virtual).</p>
+            <p><em>Se atingir ambas as pessoas (A e B):</em> Aplica-se a regra do <strong>Concurso Formal Próprio</strong> (Art. 70).</p>
           </div>
-          <div class="card green">
-            <h3>Sursis Etário/Humanitário (Art. 77, § 2º)</h3>
-            <p><strong>Pena:</strong> Não superior a <strong>4 anos</strong>.<br>
-            <strong>Período de prova:</strong> <strong>4 a 6 anos</strong>.<br>
-            <strong>Requisito alternativo:</strong> Condenado <strong>maior de 70 anos</strong> <em>ou</em> razões de saúde que justifiquem a suspensão.</p>
+          <div class="card" style="border-top: 4px solid var(--accent-purple);">
+            <h4>Aberratio Criminis (Art. 74 do CP)</h4>
+            <p><strong>Resultado Diverso do Pretendido:</strong> O agente pretende atingir um bem jurídico não pessoal (ex: quebrar uma vitrine com uma pedra), mas por erro na execução atinge uma pessoa (causa lesão corporal). Responde pelo resultado culposo se previsto em lei.</p>
+            <p><em>Se produzir também o resultado querido:</em> Aplica-se a regra do Concurso Formal.</p>
           </div>
         </div>
 
-        <div class="exam-tip">
-          <span class="box-label">🎯 Atenção — § 1º do Art. 77</span>
-          A condenação anterior apenas à <strong>pena de multa</strong> (sem pena privativa de liberdade) <strong>não impede</strong> a concessão do Sursis. Isso afasta a incidência da regra do reincidente, pois pena de multa não gera reincidência em crime doloso para fins deste artigo.
-        </div>
-
-        <h3>2.1.1 Condições Impostas pelo Juiz (Art. 78 do CP)</h3>
-        <p>No ato da audiência admonitória, ao conceder o Sursis, o juiz especificará as condições que o beneficiário deve cumprir durante o período de prova. O Art. 78 divide essas condições em <strong>obrigatórias (§ 1º)</strong> e <strong>facultativas (§ 2º)</strong>.</p>
-
-        <details class="artigo-block">
-          <summary>Art. 78 do Código Penal — Condições do Sursis</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 78</strong> - As condições a que fica subordinada a suspensão serão especificadas na sentença e poderão ser modificadas motivadamente pelo juiz, de ofício ou a requerimento do Ministério Público ou do condenado:<br><br>
-            <strong>§ 1º</strong> - No primeiro ano do prazo, deverá o condenado prestar serviços à comunidade (art. 46) ou submeter-se à limitação de fim de semana (art. 48).<br><br>
-            <strong>§ 2º</strong> - Se o condenado houver reparado o dano, salvo impossibilidade de fazê-lo, e se as circunstâncias do art. 59 deste Código lhe forem inteiramente favoráveis, o juiz poderá substituir a exigência do parágrafo anterior pelas seguintes condições, aplicadas cumulativamente:<br>
-            a) proibição de frequentar determinados lugares;<br>
-            b) proibição de ausentar-se da comarca onde reside, sem autorização do juiz;<br>
-            c) comparecimento pessoal e obrigatório a juízo, mensalmente, para informar e justificar suas atividades.</p>
+        <h3>Limite Máximo de Cumprimento de Penas (Art. 75 do CP)</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Redação Histórica (CP de 1940)</div>
+            <p>O tempo máximo de cumprimento das penas privativas de liberdade no Brasil era fixado em <strong>30 (trinta) anos</strong>.</p>
           </div>
-        </details>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Natureza da Condição</th>
-                <th>Dispositivo</th>
-                <th>Conteúdo</th>
-                <th>Observação</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Obrigatória (1º ano)</strong></td>
-                <td>Art. 78, § 1º</td>
-                <td>Prestação de serviços à comunidade <strong>OU</strong> limitação de fim de semana.</td>
-                <td>Aplica-se durante o <strong>primeiro ano</strong> do período de prova, sem exceção.</td>
-              </tr>
-              <tr>
-                <td><strong>Facultativa (alternativa)</strong></td>
-                <td>Art. 78, § 2º</td>
-                <td>Proibição de frequentar lugares + proibição de ausentar-se da comarca + comparecimento mensal a juízo.</td>
-                <td>Só cabe se o réu <strong>reparou o dano</strong> e as circunstâncias do art. 59 forem <strong>inteiramente favoráveis</strong>. Aplicam-se <em>cumulativamente</em>.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="professor-focus">
-          <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR</span>
-          <strong>O período de prova e as condições são distintos:</strong>
-          <ul>
-            <li>O <strong>período de prova</strong> é o prazo total de suspensão (2-4 anos no Sursis simples; 4-6 anos no etário/humanitário).</li>
-            <li>As <strong>condições do § 1º</strong> (PSC ou limitação de fim de semana) são impostas apenas no <strong>primeiro ano</strong> — funcionam como "punição inicial" que demonstra comprometimento.</li>
-            <li>Se o condenado reparou o dano e tem circunstâncias favoráveis, o juiz pode substituir as condições do § 1º pelas condições mais brandas do § 2º (proibições + comparecimento mensal), que se aplicam de forma cumulativa entre si.</li>
-          </ul>
-        </div>
-
-        <h3>2.2 Livramento Condicional (Arts. 83 a 90 do CP)</h3>
-        <div class="layer-simple">
-          <p>O Livramento Condicional é a <strong>liberdade antecipada</strong> concedida ao condenado que já cumpriu parte da pena privativa de liberdade, permitindo que ele termine o cumprimento em liberdade, sujeito a condições e vigilância. Não é perdão — é <em>cumprimento em liberdade</em>.</p>
-        </div>
-
-        <div class="layer-tech">
-          <p>Trata-se de um <strong>direito subjetivo do condenado</strong> quando preenchidos todos os requisitos legais. O juiz da execução penal não pode recusar a concessão se os requisitos estiverem satisfeitos. A competência para decidir é do <strong>Juízo da Execução</strong>, ouvido o Ministério Público.</p>
-        </div>
-
-        <details class="artigo-block">
-          <summary>Art. 83 do Código Penal — Requisitos do Livramento Condicional</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 83</strong> - O juiz poderá conceder livramento condicional ao condenado a pena privativa de liberdade igual ou superior a 2 (dois) anos, desde que:<br><br>
-            I – cumprido mais de um terço da pena se o condenado não for reincidente em crime doloso e tiver bons antecedentes;<br>
-            II – cumprida mais da metade se o condenado for reincidente em crime doloso;<br>
-            III – comprovado comportamento satisfatório durante a execução da pena, bom desempenho no trabalho que lhe foi atribuído e aptidão para prover a própria subsistência mediante trabalho honesto;<br>
-            IV – tenha reparado, salvo efetiva impossibilidade de fazê-lo, o dano causado pela infração;<br>
-            V – cumpridos mais de dois terços da pena, nos casos de condenação por crime hediondo, prática de tortura, tráfico ilícito de entorpecentes e drogas afins, tráfico de pessoas e terrorismo, se o apenado não for reincidente específico em crimes dessa natureza.<br><br>
-            <strong>Parágrafo único</strong> – Para o condenado por crime doloso, cometido com violência ou grave ameaça à pessoa, a concessão do livramento ficará também subordinada à constatação de condições pessoais que façam presumir que o liberado não voltará a delinquir.</p>
+          <div class="timeline-item">
+            <div class="timeline-date">Lei 13.964/2019 (Pacote Anticrime)</div>
+            <p>O limite máximo de cumprimento das penas privativas de liberdade foi elevado para <span class="kw">40 (quarenta) anos</span> (Art. 75, caput).</p>
           </div>
-        </details>
-
-        <h3 style="margin: 2rem 0 1rem; color: var(--text-main);">2.2.1 Requisitos Objetivos</h3>
-        <p>São os requisitos de natureza quantitativa (tempo de pena cumprida) e reparação de dano:</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Situação do Condenado</th>
-                <th>Fração Mínima</th>
-                <th>Fundamento</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Não reincidente em crime doloso + bons antecedentes</td>
-                <td><strong style="color: #10B981;">Mais de 1/3</strong></td>
-                <td>Art. 83, I</td>
-              </tr>
-              <tr>
-                <td>Reincidente em crime doloso</td>
-                <td><strong style="color: #F59E0B;">Mais de 1/2</strong></td>
-                <td>Art. 83, II</td>
-              </tr>
-              <tr>
-                <td>Crimes hediondos, tortura, tráfico, terrorismo (sem reincidência específica)</td>
-                <td><strong style="color: #EF4444;">Mais de 2/3</strong></td>
-                <td>Art. 83, V</td>
-              </tr>
-              <tr>
-                <td>Reincidente específico em crime hediondo ou equiparado</td>
-                <td><strong style="color: #7F1D1D;">Vedado (Art. 44 da Lei 11.343/06 e outros)</strong></td>
-                <td>Sem direito ao benefício</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="exam-tip">
-          <span class="box-label">🎯 Detalhe Importante — Pena Mínima para o Benefício</span>
-          O Livramento Condicional só é cabível para penas <strong>iguais ou superiores a 2 anos</strong> (Art. 83, caput). Se a pena aplicada for inferior a 2 anos, o instituto correto é o <strong>Sursis (Art. 77)</strong>. Atenção: na reunião de penas em concurso, soma-se o total para verificar o requisito de 2 anos.
-        </div>
-
-        <h3 style="margin: 2rem 0 1rem; color: var(--text-main);">2.2.2 Requisitos Subjetivos</h3>
-        <div class="grid2">
-          <div class="card green">
-            <h3>Requisito Subjetivo Geral (Art. 83, III)</h3>
-            <ul>
-              <li><strong>Comportamento satisfatório</strong> durante a execução;</li>
-              <li><strong>Bom desempenho no trabalho</strong> atribuído dentro do estabelecimento penal;</li>
-              <li><strong>Aptidão para prover a própria subsistência</strong> mediante trabalho honesto (demonstração de que tem perspectiva de emprego ou renda lícita).</li>
-            </ul>
-          </div>
-          <div class="card blue">
-            <h3>Reparação do Dano (Art. 83, IV)</h3>
-            <p>O condenado deve ter <strong>reparado o dano causado pela infração</strong>, salvo efetiva impossibilidade de fazê-lo (ex: hipossuficiência econômica comprovada).</p>
-            <p>A simples alegação de falta de recursos não é suficiente; o juiz analisa caso a caso.</p>
-          </div>
-          <div class="card purple">
-            <h3>Requisito Subjetivo Especial (Art. 83, § único)</h3>
-            <p>Para crimes dolosos cometidos com <strong>violência ou grave ameaça à pessoa</strong>, exige-se também a constatação de <strong>condições pessoais que façam presumir que o liberado não voltará a delinquir</strong> (prognóstico favorável de não reincidência).</p>
-          </div>
-        </div>
-
-        <details class="artigo-block">
-          <summary>Art. 85 do Código Penal — Condições Impostas pelo Juiz</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 85</strong> - A sentença especificará as condições a que fica subordinado o livramento.<br><br>
-            <strong>Art. 132 da LEP</strong> - Deferido o pedido, o juiz especificará as condições a que fica subordinado o livramento, podendo ainda impor ao liberado as obrigações seguintes:<br>
-            § 1º - São condições obrigatórias do livramento:<br>
-            a) obter ocupação lícita, dentro de prazo razoável, se for apto para o trabalho;<br>
-            b) comunicar periodicamente ao juiz sua ocupação;<br>
-            c) não mudar do território da comarca do Juízo da Execução, sem prévia autorização deste.<br>
-            § 2º - São condições facultativas do livramento:<br>
-            a) não mudar de residência sem comunicação ao juiz e à autoridade incumbida da observação cautelar e de proteção;<br>
-            b) recolher-se à habitação em hora fixada;<br>
-            c) não frequentar determinados lugares.</p>
-          </div>
-        </details>
-
-        <h3 style="margin: 2rem 0 1rem; color: var(--text-main);">2.2.3 Revogação do Livramento Condicional</h3>
-        <p>A revogação é a cassação do benefício, determinando o retorno do liberado ao cumprimento da pena na prisão. Divide-se em <strong>obrigatória</strong> e <strong>facultativa</strong>:</p>
-
-        <div class="grid2">
-          <div class="card" style="border-left: 4px solid #EF4444;">
-            <h3 style="color: #EF4444;">Revogação OBRIGATÓRIA (Art. 86 CP)</h3>
-            <p>O juiz <strong>deve revogar</strong> o livramento se o liberado:</p>
-            <ul>
-              <li>É <strong>condenado a pena privativa de liberdade</strong>, em sentença irrecorrível, por crime cometido durante a vigência do benefício (inciso I);</li>
-              <li>É <strong>condenado, irrecorrivelmente, por crime anterior</strong>, observado o disposto no artigo 84 (inciso II — ex: crime praticado antes da concessão, mas julgado depois).</li>
-            </ul>
-          </div>
-          <div class="card" style="border-left: 4px solid #F59E0B;">
-            <h3 style="color: #D97706;">Revogação FACULTATIVA (Art. 87 CP)</h3>
-            <p>O juiz <strong>pode revogar</strong> o livramento se o liberado:</p>
-            <ul>
-              <li>Deixa de <strong>cumprir qualquer das obrigações</strong> constantes da sentença;</li>
-              <li>É irrecorrivelmente condenado por crime ou <strong>contravenção a pena</strong> que não seja privativa de liberdade.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Aspecto</th>
-                <th>Revogação Obrigatória (Art. 86)</th>
-                <th>Revogação Facultativa (Art. 87)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Causa</strong></td>
-                <td>Nova condenação a PPL por crime durante ou anterior ao período</td>
-                <td>Descumprimento de condição ou condenação a pena não-PPL</td>
-              </tr>
-              <tr>
-                <td><strong>Discricionariedade</strong></td>
-                <td>Nenhuma — juiz é obrigado a revogar</td>
-                <td>Juiz avalia e decide motivadamente</td>
-              </tr>
-              <tr>
-                <td><strong>Efeito no tempo</strong></td>
-                <td>Não se desconta o tempo em liberdade (Art. 88)</td>
-                <td>Não se desconta o tempo em liberdade (Art. 88)</td>
-              </tr>
-              <tr>
-                <td><strong>Novo livramento?</strong></td>
-                <td>Se por crime durante o benefício: <strong>vedado</strong> novo livramento em relação à mesma pena (Art. 88)</td>
-                <td>Novo livramento pode ser concedido (se preenchidos os requisitos)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="pitfall">
-          <span class="box-label">⚠️ Pegadinha de Prova — Revogação por Crime Anterior</span>
-          Se o liberado é condenado por crime <strong>cometido antes do início do livramento</strong>, a revogação é <strong>obrigatória</strong> (Art. 86, II). O tempo passado em liberdade <strong>não é computado</strong> na pena (Art. 88), mas o saldo restante das duas penas é unificado e o condenado deve cumprir o que falta, sem que seja vedado novo livramento sobre a <em>pena anterior</em> (a vedação do Art. 88 é específica para crime praticado <em>durante</em> o benefício).
-        </div>
-
-        <details class="artigo-block">
-          <summary>Arts. 88 e 89 do Código Penal — Efeitos da Revogação e Extinção da Pena</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 88</strong> - Revogado o livramento, não poderá ser novamente concedido, e, salvo quando a revogação resulta de condenação por outro crime anterior àquele benefício, não se desconta na pena o tempo em que esteve solto o condenado.<br><br>
-            <strong>Art. 89</strong> - O juiz não poderá declarar extinta a pena enquanto não passar em julgado a sentença em processo a que responde o liberado, por crime cometido na vigência do livramento.<br><br>
-            <strong>Art. 90</strong> - Se até o seu término o livramento não é revogado, considera-se extinta a pena privativa de liberdade.</p>
-          </div>
-        </details>
-
-        <div class="important">
-          <span class="box-label">⭐ Extinção da Pena — Art. 90</span>
-          Se o período de prova (livramento) terminar <strong>sem revogação</strong>, a pena privativa de liberdade é considerada <strong>extinta de pleno direito</strong>. O juiz declara a extinção. Atenção: se ao término do período ainda houver processo pendente por crime cometido durante o livramento, o juiz <strong>não pode declarar extinta a pena</strong> (Art. 89) — aguarda o resultado desse processo.
-        </div>
-
-        <div class="professor-focus">
-          <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR — QUADRO COMPARATIVO FINAL</span>
-          <strong>Sursis × Livramento Condicional: as diferenças que caem em prova</strong>
-          <div class="table-wrap" style="margin-top: 1rem;">
-            <table>
-              <thead>
-                <tr>
-                  <th>Critério</th>
-                  <th>Sursis (Art. 77)</th>
-                  <th>Livramento Condicional (Art. 83)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Quantum de pena</strong></td>
-                  <td>Não superior a <strong>2 anos</strong> (simples) / Não superior a <strong>4 anos</strong> (etário/humanitário)</td>
-                  <td>Igual ou superior a <strong>2 anos</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>Momento</strong></td>
-                  <td>Suspende <em>antes</em> do cumprimento — o condenado <strong>não vai preso</strong></td>
-                  <td>Concedido <em>durante</em> o cumprimento — o preso já cumpriu a fração mínima</td>
-                </tr>
-                <tr>
-                  <td><strong>Período de prova</strong></td>
-                  <td>2 a 4 anos (simples) / 4 a 6 anos (etário)</td>
-                  <td>Equivale ao <strong>saldo restante</strong> da pena a ser cumprido</td>
-                </tr>
-                <tr>
-                  <td><strong>Revogação</strong></td>
-                  <td>Arts. 81 e 82 CP</td>
-                  <td>Arts. 86 e 87 CP</td>
-                </tr>
-                <tr>
-                  <td><strong>Extinção</strong></td>
-                  <td>Após o período de prova sem revogação (Art. 82, § 2º)</td>
-                  <td>Após o período de prova sem revogação (Art. 90)</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="timeline-item">
+            <div class="timeline-date">Súmula 715 do STF &amp; Unificação</div>
+            <p>A pena unificada de 40 anos serve apenas como <strong>limite de cumprimento na cela</strong>. Para efeito de concessão de benefícios penais (como progressão de regime e livramento condicional), o cálculo deve incidir sobre a <span class="kw">pena total unificada</span> (soma de todas as condenações), e não sobre o limite do Art. 75!</p>
           </div>
         </div>
       </section>
 
-
-
-      <!-- ══════════════════════════════ 3. EFEITOS DA CONDENAÇÃO ══════════════════════════════ -->
-      <section class="section" id="efeitos">
+      <!-- ══════════════════════════════ MÓDULO 03: BENEFÍCIOS PENAIS ══════════════════════════════ -->
+      <section id="beneficios" class="section">
         <div class="section-label">Módulo 03</div>
-        <h2>3. Efeitos da Condenação (Arts. 91 a 92 do CP)</h2>
+        <h2>Benefícios Penais: Sursis &amp; Livramento Condicional</h2>
 
-        <p class="intro">A sentença penal condenatória transitada em julgado não produz apenas o seu efeito principal (a imposição da pena). Ela acarreta também uma série de <strong>efeitos secundários</strong> de natureza penal (ex: reincidência, maus antecedentes) e <strong>extrapenal</strong>. O Código Penal regula especificamente os efeitos secundários extrapenais, dividindo-os em genéricos (automáticos) e específicos (não automáticos).</p>
-
-        <h3>3.1 Efeitos Genéricos Extrapenais (Art. 91 do CP)</h3>
-        <p>Estes efeitos operam de pleno direito, ou seja, são <strong>automáticos</strong>. Não precisam ser declarados expressamente pelo juiz na sentença condenatória, decorrendo imediatamente da condenação.</p>
-
-        <details class="artigo-block">
-          <summary>Art. 91 do Código Penal — Efeitos Genéricos</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 91</strong> - São efeitos da condenação:<br>
-            I - tornar certa a obrigação de indenizar o dano causado pelo crime;<br>
-            II - a perda em favor da União, ressalvado o direito do lesado ou de terceiro de boa-fé:<br>
-            a) dos instrumentos do crime, desde que consistam em coisas cujo fabrico, alienação, uso, porte ou detenção constitua fato ilícito;<br>
-            b) do produto do crime ou de qualquer bem ou valor que constitua proveito auferido pelo agente com a prática do fato criminoso.</p>
-          </div>
-        </details>
-
-        <div class="grid2">
-          <div class="card blue">
-            <h3>I — Obrigação de Indenizar o Dano</h3>
-            <p>A sentença condenatória definitiva constitui um <strong>título executivo judicial civil</strong>. A vítima não precisa discutir a culpa do agressor no juízo cível (an debeatur), bastando ingressar com ação de liquidação e execução (quantum debeatur).</p>
-            <p><strong>Art. 387, IV, do CPP:</strong> O juiz penal, ao proferir a condenação, deve fixar o valor mínimo para reparação dos danos materiais ou morais sofridos pelo ofendido, desde que haja pedido expresso da acusação ou do assistente.</p>
-          </div>
-          <div class="card green">
-            <h3>II — Perda de Bens e Valores (Confisco)</h3>
-            <p>Perdem-se em favor da União os instrumentos e o produto/proveito do crime:</p>
-            <ul>
-              <li><strong>Instrumentos do Crime:</strong> Só se perdem se forem coisas cujo fabrico, porte ou uso seja <em>ilícito por si só</em> (ex: arma com numeração raspada, moeda falsa). Instrumentos lícitos (ex: faca de cozinha, veículo comum usado no furto) devem ser devolvidos após o trânsito em julgado.</li>
-              <li><strong>Produto ou Proveito:</strong> O ganho direto (ex: dinheiro roubado) ou indireto (ex: carro comprado com o dinheiro roubado) é confiscado.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="important">
-          <span class="box-label">📌 Confisco por Equivalência (Art. 91, §§ 1º e 2º)</span>
-          Se o produto ou proveito do crime não for encontrado ou estiver localizado no exterior, o juiz pode decretar a perda de bens ou valores do patrimônio lícito do réu em <strong>valor equivalente</strong>. Medidas assecuratórias (ex: sequestro, arresto) podem recair sobre esses bens equivalentes desde a fase de investigação.
-        </div>
-
-        <h3>3.2 Confisco Alargado (Art. 91-A do CP)</h3>
-        <p>Introduzido pela Lei nº 13.964/2019 (Pacote Anticrime), o confisco alargado permite o perdimento de bens incompatíveis com os rendimentos lícitos do réu condenado por crimes de gravidade acentuada.</p>
-
-        <div class="formula">
-          <strong>Requisito de Pena:</strong> Crime ao qual a lei comine pena máxima <strong>superior a 6 (seis) anos de reclusão</strong>.
-        </div>
-
-        <p><strong>Dinâmica de Funcionamento:</strong> Decretada a condenação nessas condições, o juiz pode declarar a perda dos bens correspondentes à diferença entre o patrimônio total do réu e aquele compatível com o seu rendimento lícito.</p>
-
-        <div class="grid2">
-          <div class="card purple">
-            <h3>O que compõe o patrimônio do réu?</h3>
-            <p>A lei abrange todos os bens de sua titularidade, domínio ou benefício direto/indireto na data do crime ou recebidos posteriormente, bem como os transferidos a terceiros a título gratuito ou por valor irrisório a partir do início da atividade criminosa (Art. 91-A, § 1º).</p>
-          </div>
-          <div class="card gold">
-            <h3>Regras Processuais Estritas</h3>
-            <ul>
-              <li><strong>Inversão do Ônus:</strong> Cabe ao réu provar a origem lícita dos bens sob suspeita (Art. 91-A, § 2º).</li>
-              <li><strong>Pedido Expresso:</strong> O confisco alargado <strong>não é automático</strong>; deve ser requerido expressamente pelo Ministério Público na denúncia, com a indicação exata da diferença patrimonial apurada.</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3>3.3 Efeitos Específicos Extrapenais (Art. 92 do CP)</h3>
-        <p>Estes efeitos **não operam de forma automática**. Exigem fundamentação motivada e declaração expressa do juiz na sentença condenatória.</p>
-
-        <details class="artigo-block">
-          <summary>Art. 92 do Código Penal — Efeitos Específicos</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 92</strong> - São também efeitos da condenação:<br>
-            I - a perda de cargo, função pública ou mandato eletivo:<br>
-            a) quando aplicada pena privativa de liberdade por tempo igual ou superior a um ano, nos crimes praticados com abuso de poder ou violação de dever para com a Administração Pública;<br>
-            b) quando for aplicada pena privativa de liberdade por tempo superior a 4 (quatro) anos nos demais casos.<br>
-            II – a incapacidade para o exercício do poder familiar, da tutela ou da curatela nos crimes dolosos sujeitos à pena de reclusão cometidos contra outrem igualmente titular do mesmo poder familiar, contra filho, filha ou outro descendente, tutelado ou curatelado, bem como nos crimes cometidos contra a mulher por razões da condição do sexo feminino [...];<br>
-            III - a inabilitação para dirigir veículo, quando utilizado como meio para a prática de crime doloso.<br>
-            IV - a suspensão, pelo prazo de 180 (cento e oitenta) dias, da eficácia da inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) de estabelecimento [...] utilizado com o fim de permitir, facilitar ou ocultar a prática dos crimes [...] de receptação (art. 180 caput e § 1º).<br>
-            Parágrafo único - Os efeitos de que trata este artigo não são automáticos, devendo ser motivadamente declarados na sentença pelo juiz [...].</p>
-          </div>
-        </details>
-
-        <div class="professor-focus">
-          <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
-          <strong>Efeitos Automáticos vs. Efeitos Não Automáticos &amp; A Exceção da Lei Maria da Penha:</strong>
-          <p>O professor adora explorar a regra geral e a grande exceção legislativa criada para proteger mulheres vítimas de violência de gênero:</p>
-          <ul>
-            <li><strong>Regra Geral:</strong> Todos os efeitos específicos do Art. 92 (perda do cargo público, perda do poder familiar, inabilitação para dirigir) <strong>exigem motivação e declaração na sentença</strong> (§ 1º). Se o juiz condenar o réu e esquecer de declarar a perda do cargo na sentença, ela não ocorre.</li>
-            <li><strong>A Exceção Crítica (Art. 92, § 2º, III e § 3º):</strong> Se o crime for praticado <strong>contra a mulher por razões da condição do sexo feminino</strong> (violência doméstica/familiar e feminicídio):
-              <br>→ A perda do cargo/função pública/mandato (inciso I) e a incapacidade para exercício do poder familiar/tutela/curatela (inciso II) tornam-se **AUTOMÁTICOS** e independem de motivação do juiz na sentença.
-              <br>→ Além disso, é **vedada a nomeação, designação ou diplomação** em cargo/função pública ou mandato eletivo do trânsito em julgado até o efetivo cumprimento da pena.
-            </li>
-          </ul>
-        </div>
-
-        <div class="pitfall">
-          <span class="box-label">⚠️ Pegadinha de Prova</span>
-          <strong>Perda de Cargo Público no Abuso de Autoridade (LO vs. CP):</strong> No Código Penal, a perda de cargo exige pena igual ou superior a 1 ano (para crimes com abuso/violação). Porém, na Lei de Abuso de Autoridade (Lei nº 13.869/19), a perda do cargo é efeito da condenação específico e não automático que exige **reincidência específica** em crimes de abuso de autoridade, independentemente do quantum da pena! Fique atento para não misturar os diplomas.
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════ 4. AÇÃO PENAL ══════════════════════════════ -->
-      <section class="section" id="acao">
-        <div class="section-label">Módulo 04</div>
-        <h2>4. Ação Penal (Arts. 100 a 106 do CP)</h2>
-
-        <p class="intro">A ação penal é o direito público subjetivo de invocar a tutela jurisdicional do Estado para a aplicação do Direito Penal ao caso concreto. Ela classifica-se a partir do sujeito legitimado a propô-la.</p>
-
-        <div class="grid2">
-          <div class="card red">
-            <h3>Ação Penal Pública (Art. 100)</h3>
-            <p><strong>Legitimidade:</strong> Exclusiva do Ministério Público (MP). Inicia-se por meio da peça acusatória chamada <strong>Denúncia</strong>.</p>
-            <ul>
-              <li><strong>Pública Incondicionada:</strong> É a regra geral do Direito Penal. O MP deve agir de ofício, sem necessidade de qualquer autorização ou manifestação da vítima.</li>
-              <li><strong>Pública Condicionada:</strong> Exige uma condição de procedibilidade. Pode ser a <strong>Representação do ofendido</strong> (vítima) ou a <strong>Requisição do Ministro da Justiça</strong>.</li>
-            </ul>
-          </div>
-          <div class="card blue">
-            <h3>Ação Penal Privada (Art. 100, § 2º)</h3>
-            <p><strong>Legitimidade:</strong> Da vítima ou de seu representante legal. Inicia-se por meio da peça acusatória chamada <strong>Queixa-Crime</strong>.</p>
-            <ul>
-              <li><strong>Privada Exclusiva:</strong> Proposta pela vítima ou representante legal. Em caso de morte ou ausência judicial da vítima, o direito de queixa passa para os sucessores (Cônjuge, Ascendente, Descendente, Irmão — mnemônico <strong>C.A.D.I.</strong>).</li>
-              <li><strong>Privada Personalíssima:</strong> Só a própria vítima pode propor. Em caso de sua morte, o direito se extingue, sem transmissão. Ex: Impedimento enganoso ao casamento (Art. 236 do CP).</li>
-              <li><strong>Privada Subsidiária da Pública (Art. 100, § 3º):</strong> Ajuizada pela vítima se o MP for inerte e não oferecer a denúncia no prazo legal.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="essential">
-          <span class="box-label">⭐ Rito Crítico da Representação (Art. 102 do CP)</span>
-          A representação criminal na ação pública condicionada é <strong>irretratável depois de oferecida a denúncia pelo MP</strong>.
-          <br><em>Nota Prática:</em> Até o momento em que o Promotor assina e oferece a denúncia ao juiz (protocolo judicial), a vítima pode voltar atrás e retirar a representação (retratação). Uma vez oferecida, o Estado-acusação assume o controle integral da ação. 
-          <br><em>Exceção:</em> Na Lei Maria da Penha, a retratação da representação exige audiência judicial específica antes do recebimento da denúncia pelo juiz (Art. 16 da Lei 11.340/06).
-        </div>
-
-        <h3>4.1 Dinâmicas Extintivas da Ação Penal Privada</h3>
-        <p>A ação penal de iniciativa privada é governada pelos princípios da conveniência e da oportunidade da vítima, o que permite o surgimento de institutos de renúncia, perdão e decadência.</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Instituto</th>
-                <th>Momento Temporal</th>
-                <th>Unilateral ou Bilateral</th>
-                <th>Efeitos e Peculiaridades</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Decadência (Art. 103)</strong></td>
-                <td>Antes de iniciar a ação</td>
-                <td>Unilateral</td>
-                <td>Perda do direito de representação ou queixa pelo decurso do prazo de <strong>6 meses</strong>, contado do dia em que a vítima veio a saber quem é o autor do crime.</td>
-              </tr>
-              <tr>
-                <td><strong>Renúncia (Art. 104)</strong></td>
-                <td>Antes de iniciar a ação</td>
-                <td>Unilateral</td>
-                <td>A vítima abdica voluntariamente do direito de queixa. Pode ser <strong>expressa</strong> ou <strong>tácita</strong> (prática de ato incompatível com a vontade de acusar, como convidar o agressor para padrinho). A indenização civil não importa renúncia.</td>
-              </tr>
-              <tr>
-                <td><strong>Perdão do Ofendido (Art. 105)</strong></td>
-                <td>Após o início da ação e antes do trânsito em julgado</td>
-                <td><strong>Bilateral</strong> (exige aceitação do réu)</td>
-                <td>A vítima desiste do processo iniciado. O querelado deve ser notificado e tem o prazo de 3 dias para aceitar ou recusar (se recusar para provar inocência em julgamento, o processo segue).</td>
-              </tr>
-              <tr>
-                <td><strong>Perempção (Art. 60 CPP)</strong></td>
-                <td>Durante a tramitação da ação</td>
-                <td>Unilateral (indireta)</td>
-                <td>Perda do direito de prosseguir na ação penal privada devido ao desinteresse ou negligência da vítima (ex: deixar o processo parado por 30 dias, não pedir condenação nas alegações finais).</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="professor-focus">
-          <span class="focus-label">⚠️ DIRETRIZ DO PROFESSOR (ALTA PRIORIDADE)</span>
-          <strong>Indivisibilidade da Renúncia e do Perdão (Art. 106, I):</strong>
-          <p>O professor salienta a aplicação intransigente do **Princípio da Indivisibilidade** na ação penal privada:</p>
-          <ul>
-            <li><strong>Renúncia:</strong> A renúncia ao direito de queixa em relação a um dos autores do crime se estende (aproveita) obrigatoriamente a todos os demais coautores ou participes. O querelante não pode escolher processar apenas um dos infratores.</li>
-            <li><strong>Perdão do Ofendido:</strong> Se concedido a qualquer um dos querelados, **a todos aproveita**, desde que os demais também o aceitem. A vítima não pode perdoar apenas um réu no processo e prosseguir contra o outro.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════ 5. EXTINÇÃO DA PUNIBILIDADE ══════════════════════════════ -->
-      <section class="section" id="extincao">
-        <div class="section-label">Módulo 05</div>
-        <h2>5. Extinção da Punibilidade (Arts. 107 a 108 do CP)</h2>
-
-        <p class="intro">A punibilidade é a possibilidade jurídica de o Estado aplicar a sanção penal ao infrator. As causas de extinção da punibilidade são fatos ou atos jurídicos que eliminam o poder-dever de punir estatal. O rol do Art. 107 do Código Penal é meramente **exemplificativo** (numerus apertus), existindo outras causas espalhadas na legislação.</p>
-
-        <details class="artigo-block">
-          <summary>Art. 107 do Código Penal — Causas de Extinção</summary>
-          <div class="lei-seca">
-            <p><strong>Art. 107</strong> - Extingue-se a punibilidade:<br>
-            I – pela morte do agente;<br>
-            II – pela anistia, graça ou indulto;<br>
-            III – pela retroatividade de lei que não mais considera o fato como criminoso;<br>
-            IV – pela prescrição, decadência ou perempção;<br>
-            V – pela renúncia do direito de queixa ou pelo perdão aceito, nos crimes de ação privada;<br>
-            VI – pela retratação do agente, nos casos em que a lei a admite;<br>
-            IX – pelo perdão judicial, nos casos previstos em lei.</p>
-          </div>
-        </details>
-
-        <h3>5.1 Estudo aprofundado dos incisos</h3>
-        <div class="grid2">
-          <div class="card green">
-            <h3>I — Morte do Agente</h3>
-            <p>Decorre do princípio constitucional da pessoalidade da pena. <strong>Procedimento (Art. 62 do CPP):</strong> O juiz só declarará extinta a punibilidade mediante a apresentação da certidão de óbito original, após a oitiva obrigatória do Ministério Público. Se a certidão for falsa e o réu estiver vivo, a decisão é considerada juridicamente nula.</p>
-          </div>
-          <div class="card blue">
-            <h3>II — Clemetizações Estatais (Anistia, Graça e Indulto)</h3>
-            <ul>
-              <li><strong>Anistia:</strong> Apaga os efeitos penais do fato delituoso (geralmente crimes políticos). É concedida pelo <strong>Poder Legislativo</strong> através de lei federal editada pelo Congresso Nacional.</li>
-              <li><strong>Graça:</strong> É o perdão soberano **individual**, concedido a um condenado específico pelo <strong>Presidente da República</strong> por decreto.</li>
-              <li><strong>Indulto:</strong> É o perdão soberano **coletivo**, destinado a um grupo de sentenciados que preenchem requisitos preestabelecidos, concedido pelo <strong>Presidente da República</strong> por decreto.</li>
-            </ul>
-          </div>
-          <div class="card purple">
-            <h3>III — Abolitio Criminis</h3>
-            <p>Ocorre quando lei nova deixa de considerar o fato como criminoso (ex: revogação do crime de adultério). Tem força retroativa absoluta, extinguindo a pena e **todos os efeitos penais** da condenação (como reincidência e maus antecedentes). Permanecem válidos os efeitos extrapenais (cíveis).</p>
-          </div>
-          <div class="card gold">
-            <h3>VI — Retratação do Agente</h3>
-            <p>O agente assume o erro e retira o que disse. Só é cabível nos crimes onde a lei expressamente autoriza:</p>
-            <ul>
-              <li><strong>Calúnia e Difamação (Art. 143):</strong> Se feita integralmente **antes da sentença**, isenta o agente de pena.</li>
-              <li><strong>Falso Testemunho ou Perícia (Art. 342, § 2º):</strong> Se feita **antes da sentença no processo principal** em que ocorreu o falso.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="important">
-          <span class="box-label">⭐ Natureza Jurídica do Perdão Judicial (Art. 107, IX)</span>
-          O perdão judicial é a clemência do juiz, que deixa de aplicar a pena por razões humanitárias, nas estritas hipóteses autorizadas por lei (ex: homicídio culposo onde as consequências atingem o réu de forma devastadora, como a morte do próprio filho - Art. 121, § 5º).
-          <br><strong>Súmula 18 do STJ:</strong> A sentença concessiva do perdão judicial tem natureza declaratória da extinção da punibilidade, **não subsistindo qualquer efeito condenatório**. O réu permanece primário, sem maus antecedentes e sem obrigação cível automática derivada da sentença penal.
-        </div>
-
-        <div class="note">
-          <span class="box-label">⛓️ Autonomia das Extinções em Crimes Conexos (Art. 108)</span>
-          A extinção da punibilidade de um crime que funciona como pressuposto, elemento constitutivo ou circunstância agravante de outro <strong>não se estende a este</strong>. Nos crimes conexos (ex: furto em concurso com receptação), a extinção da punibilidade do furto não aproveita à receptação.
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════ 6. PRESCRIÇÃO PENAL ══════════════════════════════ -->
-      <section class="section" id="prescricao">
-        <div class="section-label" style="background: #DC2626; color: white;">Módulo 06 · ALERTA EXAME</div>
-        <h2>6. Teoria Geral da Prescrição Penal (Arts. 109 a 117, 119)</h2>
-        
-        <div class="exam-warning-badge">⚠️ MATÉRIA EXTRA-EXAME — NÃO CAI NA PROVA ATUAL</div>
-        
-        <div class="professor-focus" style="border-left-color: #DC2626; background-color: rgba(220, 38, 38, 0.05);">
-          <span class="focus-label" style="background: linear-gradient(135deg, #DC2626, #991B1B);">⚠️ AVISO INSTITUCIONAL IMPORTANTE</span>
-          <p>Conforme as diretrizes fornecidas no Guia da Faculdade, **o tema Prescrição NÃO será cobrado nas questões desta prova oficial**. Contudo, o assunto é de inclusão obrigatória por sua alta relevância na vida profissional e em exames de concurso. Estude este módulo de forma complementar!</p>
-        </div>
-
-        <p class="intro">A prescrição é a perda do direito de punir (jus puniendi) ou de executar a pena do Estado em razão do decurso do tempo sem atividade processual útil. O sistema penal brasileiro prevê a imprescritibilidade de apenas dois crimes (Art. 5º da CF):</p>
-        <div class="pill-group" style="margin-bottom: 2rem;">
-          <div class="pill" style="border-color: #EF4444; color: #EF4444;">Racismo (Art. 5º, XLII CF)</div>
-          <div class="pill" style="border-color: #EF4444; color: #EF4444;">Ação de grupos armados contra a ordem constitucional (Art. 5º, XLIV CF)</div>
-        </div>
-
-        <h3>6.1 Divisão Fundamental: PPP vs. PPE</h3>
-        <p>A prescrição divide-se em duas grandes espécies de acordo com a fase do processo:</p>
-
-        <div class="table-wrap">
+        <!-- Quadro Comparativo Sursis vs Livramento -->
+        <h3>Quadro Comparativo: Sursis Penal vs. Livramento Condicional</h3>
+        <div class="table-responsive">
           <table>
             <thead>
               <tr>
                 <th>Característica</th>
-                <th>Prescrição da Pretensão Punitiva (PPP)</th>
-                <th>Prescrição da Pretensão Executória (PPE)</th>
+                <th>Sursis Penal (Art. 77)</th>
+                <th>Livramento Condicional (Art. 83)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Momento do Ocorrido</strong></td>
-                <td>Ocorre **antes** do trânsito em julgado final da sentença penal.</td>
-                <td>Ocorre **após** o trânsito em julgado para ambas as partes.</td>
+                <td><strong>Natureza do Benefício</strong></td>
+                <td>Suspensão da <em>execução</em> da pena de prisão. O condenado não chega a cumprir pena no estabelecimento prisional.</td>
+                <td>Liberdade antecipada. O réu cumpre uma fração da pena na prisão e obtém a soltura sob condições.</td>
               </tr>
               <tr>
-                <td><strong>Parâmetro de Cálculo</strong></td>
-                <td>Regula-se pela **pena máxima em abstrato** (ou em concreto se houver recurso da acusação improvido).</td>
-                <td>Regula-se estritamente pela **pena aplicada em concreto** na sentença.</td>
+                <td><strong>Requisito Quanto à Pena</strong></td>
+                <td>Pena privativa de liberdade <strong>não superior a 2 anos</strong> (ou até 4 anos no Sursis Etário/Humanitário).</td>
+                <td>Pena privativa de liberdade <strong>igual ou superior a 2 anos</strong>.</td>
               </tr>
               <tr>
-                <td><strong>Efeito Extintivo</strong></td>
-                <td>Apaga **todos os efeitos da condenação** (o réu volta a ser primário e não gera antecedentes).</td>
-                <td>Apaga apenas a **execução da pena**, mantendo os efeitos penais secundários (reincidência) e cíveis.</td>
+                <td><strong>Período de Prova</strong></td>
+                <td><strong>2 a 4 anos</strong> (Sursis Simples/Especial) ou <strong>4 a 6 anos</strong> (Sursis Etário/Humanitário).</td>
+                <td>Equivale ao <strong>tempo restante</strong> da pena que faltava cumprir na prisão.</td>
+              </tr>
+              <tr>
+                <td><strong>Frações de Cumprimento</strong></td>
+                <td>Não exige cumprimento prévio de pena (concedido na própria sentença condenatória).</td>
+                <td>
+                  • <strong>+ 1/3:</strong> Primário e bons antecedentes.<br>
+                  • <strong>+ 1/2:</strong> Reincidente em crime doloso.<br>
+                  • <strong>+ 2/3:</strong> Crimes Hediondos / Equiparados.
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3>6.2 Modalidades da Prescrição da Pretensão Punitiva (PPP)</h3>
-        <ol>
-          <li><strong>Prescrição em Abstrato (PPPA - Art. 109):</strong> Ocorre antes de qualquer sentença condenatória. Calcula-se o prazo com base na pena máxima cominada em abstrato ao delito, seguindo a tabela legal:</li>
-        </ol>
+        <details class="artigo-detalhado">
+          <summary>
+            <span>⚖️ Art. 83 do Código Penal — Livramento Condicional (Texto Integral)</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art83-text">
+            Art. 83 - O juiz poderá conceder livramento condicional ao condenado a pena privativa de liberdade igual ou superior a dois anos, desde que:
+            <br>
+            I - cumprida mais de um terço da pena se o condenado não for reincidente em crime doloso e tiver bons antecedentes;
+            <br>
+            II - cumprida mais de metade se o condenado for reincidente em crime doloso;
+            <br>
+            III - comprovado: a) bom comportamento durante a execução da pena; b) não cometimento de falta grave nos últimos 12 (doze) meses; c) bom desempenho no trabalho que lhe foi atribuído; e d) aptidão para prover à própria subsistência mediante trabalho honesto;
+            <br>
+            IV - tenha reparado, salvo impossibilidade de fazê-lo, o dano causado pelo crime;
+            <br>
+            V - cumprido mais de dois terços da pena, nos casos de condenação por crime hediondo, prática da tortura, tráfico ilícito de entorpecentes e drogas afins, tráfico de pessoas e terrorismo, se o apenado não for reincidente específico em crimes dessa natureza.
+          </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art83-text').innerText); alert('Artigo 83 copiado!');">Copiar Artigo</button>
+        </details>
+      </section>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Pena Máxima Cominada ao Crime</th>
-                <th>Prazo de Prescrição (Art. 109 CP)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Superior a 12 anos</td>
-                <td><strong>20 anos</strong></td>
-              </tr>
-              <tr>
-                <td>Superior a 8 anos e não excede a 12 anos</td>
-                <td><strong>16 anos</strong></td>
-              </tr>
-              <tr>
-                <td>Superior a 4 anos e não excede a 8 anos</td>
-                <td><strong>12 anos</strong></td>
-              </tr>
-              <tr>
-                <td>Superior a 2 anos e não excede a 4 anos</td>
-                <td><strong>8 anos</strong></td>
-              </tr>
-              <tr>
-                <td>Igual a 1 ano ou, sendo superior, não excede a 2 anos</td>
-                <td><strong>4 anos</strong></td>
-              </tr>
-              <tr>
-                <td>Inferior a 1 ano</td>
-                <td><strong>3 anos</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- ══════════════════════════════ MÓDULO 04: EFEITOS DA CONDENAÇÃO ══════════════════════════════ -->
+      <section id="efeitos" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2>Efeitos da Condenação e Reabilitação Penal</h2>
 
-        <ol start="2">
-          <li><strong>Prescrição Retroativa (PPPR - Art. 110, § 1º):</strong> Ocorre após a sentença condenatória transitada em julgado para a acusação. O cálculo deixa de usar a pena máxima em abstrato e passa a usar a **pena fixada em concreto**. O prazo é contado **da sentença para trás** até a data do recebimento da denúncia/queixa.
-            <br><em>Aviso Legislativo (Lei 12.234/10):</em> A prescrição retroativa não pode ter termo inicial anterior ao recebimento da denúncia ou queixa (acabou-se com a prescrição retroativa entre a data do crime e o recebimento da denúncia).
-          </li>
-          <li><strong>Prescrição Intercorrente ou Superveniente (PPPS):</strong> Também baseia-se na **pena em concreto**, mas o prazo corre **da publicação da sentença para a frente**, até o trânsito em julgado definitivo para a defesa.</li>
-          <li><strong>Prescrição Virtual ou Antecipada (PPPV):</strong> Doutrina defendia calcular a prescrição com base em uma pena hipotética que provavelmente seria fixada ao réu primário ao final do processo, extinguindo-o imediatamente por falta de interesse de agir. 
-            <br><strong>Súmula 438 do STJ:</strong> "É inadmissível a extinção da punibilidade pela prescrição da pretensão punitiva com fundamento em pena hipotética, independentemente da existência ou sorte do processo penal." (Proibida no Brasil).
-          </li>
-        </ol>
-
-        <h3>6.3 Marcos de Interrupção da Prescrição (Art. 117 do CP)</h3>
-        <p>A interrupção "zera" o relógio da prescrição, fazendo com que o prazo comece a correr novamente do zero.</p>
         <div class="grid2">
-          <div class="card red">
-            <h3>Marcos Interruptivos da PPP</h3>
+          <div class="card" style="border-top: 4px solid var(--p-700);">
+            <h4>1. Efeitos Genéricos (Art. 91) — AUTOMÁTICOS</h4>
+            <p>Não exigem motivação expressa na sentença condenatória:</p>
             <ul>
-              <li>Recebimento da denúncia ou da queixa;</li>
-              <li>Publicação da decisão de pronúncia (no Tribunal do Júri);</li>
-              <li>Publicação da decisão confirmatória da pronúncia;</li>
-              <li>Publicação da sentença ou acórdão condenatório recorrível.</li>
+              <li>Tornar certa a obrigação de indenizar o dano causado pelo crime;</li>
+              <li>Perda em favor da União dos instrumentos do crime (desde que consistam em coisas cujo fabrico, alienação ou uso constitua fato ilícito);</li>
+              <li>Perda dos produtos ou proventos do crime.</li>
             </ul>
           </div>
-          <div class="card gold">
-            <h3>Marcos Interruptivos da PPE</h3>
+          <div class="card" style="border-top: 4px solid var(--p-500);">
+            <h4>2. Efeitos Específicos (Art. 92) — NÃO-AUTOMÁTICOS</h4>
+            <p><span class="kw">Exigem motivação declarada na sentença</span>:</p>
             <ul>
-              <li>Início ou continuação do cumprimento da pena;</li>
-              <li>Reincidência (data do cometimento do novo fato criminoso).</li>
+              <li><strong>Perda de cargo, função pública ou mandato eletivo:</strong> quando aplicada pena privativa de liberdade por tempo igual ou superior a 1 ano (nos crimes praticados com abuso de poder ou violação de dever com a administração) ou superior a 4 anos nos demais casos.</li>
+              <li><strong>Incapacidade para o exercício do poder familiar:</strong> nos crimes dolosos sujeitos à pena de reclusão cometidos contra filho, tutelado ou curatelado.</li>
+              <li><strong>Inabilitação para dirigir veículo:</strong> quando utilizado como meio para a prática de crime doloso.</li>
             </ul>
           </div>
         </div>
+      </section>
 
-        <div class="important">
-          <span class="box-label">⚡ Redução de Prazos Prescricionais (Art. 115 do CP)</span>
-          Os prazos de prescrição são **reduzidos de METADE** se o agente era:
-          <br>1. Ao tempo do crime, **menor de 21 anos**;
-          <br>2. Na data da sentença, **maior de 70 anos**.
-          <br>*(Atenção: A redução de metade por senilidade na data da sentença exige que a idade de 70 anos seja completada até o dia em que o juiz publica a sentença condenatória).*
-        </div>
+      <!-- ══════════════════════════════ MÓDULO 05: FLUXOGRAMAS ══════════════════════════════ -->
+      <section id="fluxogramas" class="section">
+        <div class="section-label">Módulo 05</div>
+        <h2>Fluxogramas Interativos de Cálculo e Aplicação</h2>
 
-        <div class="note">
-          <span class="box-label">📋 Prescrição no Concurso de Crimes (Art. 119 do CP)</span>
-          No concurso de crimes (seja material, formal ou continuado), **a extinção da punibilidade incidirá sobre a pena de cada um, isoladamente**. O juiz deve desmembrar as penas e calcular o prazo prescricional de cada crime de forma individualizada, impedindo a soma ou exasperação das penas para forçar a prescrição.
+        <h3>Cálculo de Pena no Concurso Formal (Art. 70 do CP)</h3>
+        <div class="flowchart-container">
+          <div class="flow-step">
+            <div class="flow-num">1</div>
+            <div><strong>Análise da Conduta:</strong> Foi praticada apenas 1 ação/omissão resultando em 2 ou mais crimes?</div>
+          </div>
+          <div class="flow-arrow">↓ SIM</div>
+          <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div><strong>Verificação do Dolo:</strong> Havia intenção de praticar ambos os crimes dolosos (desígnios autônomos)?</div>
+          </div>
+          <div class="flow-arrow">↓ NÃO (Concurso Formal Próprio)</div>
+          <div class="flow-step">
+            <div class="flow-num">3</div>
+            <div><strong>Aplicação da Exasperação:</strong> Escolhe-se a pena mais grave e aplica-se o aumento de 1/6 a 1/2.</div>
+          </div>
+          <div class="flow-arrow">↓ VERIFICAÇÃO DE SEGURANÇA</div>
+          <div class="flow-step">
+            <div class="flow-num">4</div>
+            <div><strong>Regra do Concurso Formal Maléfico:</strong> Se o resultado da exasperação for MAIOR que a soma simples das penas, aplica-se obrigatoriamente a soma simples (Art. 70, parágrafo único).</div>
+          </div>
         </div>
       </section>
 
-      <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
-      <section class="section" id="mapa">
-        <div class="section-label">Visão Global</div>
-        <h2>🧠 7. Mapa Mental Consolidado</h2>
-        <div class="mindmap-box">
-          <div class="mm-root">⚖️ CONCURSO, EXECUÇÃO, EFEITOS, AÇÃO &amp; PUNIBILIDADE</div>
+      <!-- ══════════════════════════════ MÓDULO 06: MAPA MENTAL ══════════════════════════════ -->
+      <section id="mapamentais" class="section">
+        <div class="section-label">Módulo 06</div>
+        <h2>Mapa Mental Consolidado em Código</h2>
+        <div class="mindmap-tree">
+          <div class="mm-node-root">⚖️ DIREITO PENAL II — CONCURSO &amp; EXECUÇÃO</div>
           
-          <div class="mm-l1">1. CONCURSO DE CRIMES</div>
-          <div class="mm-l2">Material (Art. 69) → + Condutas → CÚMULO MATERIAL (Soma-se tudo)</div>
-          <div class="mm-l2">Formal (Art. 70) → 1 Conduta → EXASPERAÇÃO (Próprio) ou CÚMULO (Impróprio com desígnios autônomos)</div>
-          <div class="mm-l2">Continuado (Art. 71) → Elo de Tempo/Lugar/Modo → AUMENTO 1/6 a 2/3 (ou até triplo se específico)</div>
-          <div class="mm-l2">Pena de Multa (Art. 72) → Aplica-se distinta e integralmente (Soma sempre)</div>
+          <div class="mm-node-l1">1. CONCURSO DE CRIMES</div>
+          <div class="mm-node-l2">• <strong>Material (Art. 69):</strong> + Condutas -> + Crimes -> CÚMULO MATERIAL (Soma-se tudo).</div>
+          <div class="mm-node-l2">• <strong>Formal Próprio (Art. 70, 1ª parte):</strong> 1 Conduta -> Sem desígnios autônomos -> EXASPERAÇÃO (1/6 a 1/2).</div>
+          <div class="mm-node-l2">• <strong>Formal Impróprio (Art. 70, in fine):</strong> 1 Conduta -> Com desígnios autônomos -> CÚMULO MATERIAL (Soma-se).</div>
+          <div class="mm-node-l2">• <strong>Crime Continuado (Art. 71):</strong> Vários crimes da mesma espécie + elo temporal/espacial -> AUMENTO (1/6 a 2/3 ou até o triplo).</div>
           
-          <div class="mm-l1">2. ERROS &amp; LIMITES</div>
-          <div class="mm-l2">Aberratio Ictus (Art. 73) → Erro no golpe → Responde pela vítima pretendida (Art. 20, §3º)</div>
-          <div class="mm-l2">Aberratio Criminis (Art. 74) → Resultado diverso → Responde por culpa se previsto</div>
-          <div class="mm-l2">Limites da Pena (Art. 75) → Limite de cumprimento carcerário unificado em 40 anos</div>
-          
-          <div class="mm-l1">3. BENEFÍCIOS PENAIS</div>
-          <div class="mm-l2">Sursis (Pena ≤ 2 anos) → Suspensão condicional antes de iniciar (2 a 4 anos prova)</div>
-          <div class="mm-l2">Livramento (Pena ≥ 2 anos) → Liberdade antecipada na execução (exige frações de 1/3, 1/2 ou 2/3)</div>
-          
-          <div class="mm-l1">4. EFEITOS DA CONDENAÇÃO</div>
-          <div class="mm-l2">Genéricos (Art. 91) → Automáticos (Reparação civil | Confisco de instrumentos ilícitos e proveitos)</div>
-          <div class="mm-l2">Alargado (Art. 91-A) → Crimes com pena > 6 anos → Confisco de patrimônio incompatível</div>
-          <div class="mm-l2">Específicos (Art. 92) → Não automáticos (Perda de cargo público | Perda do poder familiar)</div>
-          <div class="mm-l2">Exceção Feminina → Automáticos nos crimes contra mulher com violência de gênero (Maria da Penha)</div>
+          <div class="mm-node-l1">2. ERROS NA EXECUÇÃO</div>
+          <div class="mm-node-l2">• <strong>Aberratio Ictus (Art. 73):</strong> Erro no golpe -> Responde pelas qualidades da vítima pretendida.</div>
+          <div class="mm-node-l2">• <strong>Aberratio Criminis (Art. 74):</strong> Resultado diverso do pretendido -> Responde por culpa.</div>
 
-          <div class="mm-l1">5. AÇÃO PENAL</div>
-          <div class="mm-l2">Pública (Art. 100) → Denúncia → Incondicionada | Condicionada (Representação / Requisição)</div>
-          <div class="mm-l2">Privada → Queixa-Crime → Exclusiva | Personalíssima | Subsidiária da Pública</div>
-          <div class="mm-l2">Dinâmicas Extintivas → Decadência (6 meses) | Renúncia (pré-ação) | Perdão (bilateral, pós-ação) | Perempção</div>
-          <div class="mm-l2">Princípio Fundamental → Indivisibilidade (Renúncia/Perdão aproveita a todos os coautores)</div>
+          <div class="mm-node-l1">3. BENEFÍCIOS PENAIS</div>
+          <div class="mm-node-l2">• <strong>Sursis (Art. 77):</strong> Pena <= 2 anos -> Suspende a execução da pena por 2 a 4 anos.</div>
+          <div class="mm-node-l2">• <strong>Livramento Condicional (Art. 83):</strong> Pena >= 2 anos -> Liberdade antecipada (Frações: +1/3 primário, +1/2 reincidente, +2/3 hediondo).</div>
 
-          <div class="mm-l1">6. EXTINÇÃO DA PUNIBILIDADE</div>
-          <div class="mm-l2">Rol Art. 107 → Morte | Abolitio Criminis | Clemetizações (Anistia, Graça, Indulto) | Retratação | Perdão Judicial</div>
-          <div class="mm-l2">Perdão Judicial → Súmula 18 STJ: sentença meramente declaratória (sem efeitos penais ou cíveis)</div>
-          <div class="mm-l2">Conexos (Art. 108) → Extinção de um crime não aproveita ao outro conexo</div>
-
-          <div class="mm-l1" style="color:#EF4444;">7. PRESCRIÇÃO (*FORA DO EXAME*)</div>
-          <div class="mm-l2">PPP → Antes do trânsito final (Abstrata, Retroativa, Intercorrente) → Apaga a condenação e reincidência</div>
-          <div class="mm-l2">PPE → Após trânsito final → Apaga apenas a execução da pena (Mantém reincidência e efeitos civis)</div>
-          <div class="mm-l2">Art. 115 → Menor de 21 anos (fato) ou Maior de 70 anos (sentença) = Reduz prazo pela METADE</div>
+          <div class="mm-node-l1">4. EFEITOS DA CONDENAÇÃO</div>
+          <div class="mm-node-l2">• <strong>Genéricos (Art. 91):</strong> Reparar dano / Perda de bens ilícitos -> AUTOMÁTICOS.</div>
+          <div class="mm-node-l2">• <strong>Específicos (Art. 92):</strong> Perda de cargo público / CNH -> NÃO-AUTOMÁTICOS (Exigem motivação).</div>
         </div>
       </section>
 
-      <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
-      <section class="section" id="quiz">
-        <div class="section-label">Revisão Ativa</div>
-        <h2>📝 8. Quiz de Revisão Ativa Comentado</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Questões comentadas de alto rendimento para fixação do conteúdo integrado:</p>
+      <!-- ══════════════════════════════ MÓDULO 07: 20 FLASHCARDS ══════════════════════════════ -->
+      <section id="flashcards" class="section">
+        <div class="section-label">Módulo 07</div>
+        <h2>20 Flashcards Interativos de Revisão Rápida</h2>
+        <p>Clique em cada card para revelar a resposta jurídica e testar seu nível de retenção:</p>
         
-        <!-- QUESTÃO 1 -->
-        <div class="exercise">
-          <div class="exercise-number">Questão 01 · Concurso de Crimes</div>
-          <p><strong>No concurso formal impróprio (imperfeito), qual é a regra adotada para a aplicação da pena pelo juiz?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">✅ Resposta comentada</span>
-              <p>Adota-se o <strong>Sistema do Cúmulo Material</strong>. O juiz individualiza e soma as penas dos vários crimes concorrentes, pois o agente, embora tenha agido mediante uma única conduta, possuía <strong>desígnios autônomos</strong> (tinha a intenção deliberada de produzir todos os múltiplos resultados delituosos).</p>
+        <div class="flashcards-grid">
+          <!-- Flashcard 1 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #01 · Concurso Material</div>
+              <div class="fc-pergunta">Qual o sistema de pena aplicado no Concurso Material (Art. 69 do CP)?</div>
             </div>
-          </details>
+            <div class="fc-resposta"><strong>Sistema do Cúmulo Material.</strong> Somam-se integralmente as penas de todos os crimes cometidos. Se houver reclusão e detenção, executa-se primeiro a reclusão.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 2 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #02 · Concurso Formal</div>
+              <div class="fc-pergunta">Como funciona o cálculo da pena no Concurso Formal Próprio?</div>
+            </div>
+            <div class="fc-resposta"><strong>Sistema da Exasperação.</strong> Aplica-se a pena do crime mais grave (ou uma delas, se iguais), aumentada de <strong>1/6 até metade</strong>.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 3 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #03 · Concurso Formal</div>
+              <div class="fc-pergunta">O que ocorre no Concurso Formal Impróprio quando há desígnios autônomos?</div>
+            </div>
+            <div class="fc-resposta">Aplica-se a regra do <strong>Cúmulo Material</strong> (somam-se as penas), pois o agente pretendia deliberadamente alcançar todos os resultados dolosos.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 4 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #04 · Concurso Formal</div>
+              <div class="fc-pergunta">O que é a regra do Concurso Formal Maléfico (Art. 70, parágrafo único)?</div>
+            </div>
+            <div class="fc-resposta">É a garantia de que a pena decorrente da exasperação jamais poderá superar a sanção que resultaria da simples soma das penas (cúmulo material).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 5 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #05 · Crime Continuado</div>
+              <div class="fc-pergunta">Quais os requisitos objetivos para a caracterização do Crime Continuado (Art. 71)?</div>
+            </div>
+            <div class="fc-resposta">Prática de dois ou mais crimes da <strong>mesma espécie</strong> com semelhança de <strong>tempo, lugar e maneira de execução</strong>.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 6 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #06 · Crime Continuado Específico</div>
+              <div class="fc-pergunta">Qual o limite máximo de aumento no Crime Continuado Específico (Art. 71, parágrafo único)?</div>
+            </div>
+            <div class="fc-resposta">Em crimes dolosos contra vítimas diferentes com violência ou grave ameaça, o aumento pode chegar a <strong>até o triplo</strong> da pena.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 7 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #07 · Multas</div>
+              <div class="fc-pergunta">Como se aplicam as penas de multa no concurso de crimes (Art. 72)?</div>
+            </div>
+            <div class="fc-resposta">As penas de multa aplicam-se <strong>distintamente e integralmente</strong> (somam-se sempre todas as multas).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 8 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #08 · Aberratio Ictus</div>
+              <div class="fc-pergunta">Na Aberratio Ictus (Art. 73), se o agente atinge a pessoa errada, como responde?</div>
+            </div>
+            <div class="fc-resposta">Responde como se tivesse atingido a <strong>vítima pretendida</strong> (consideram-se as qualidades da vítima virtual e não da atingida).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 9 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #09 · Aberratio Criminis</div>
+              <div class="fc-pergunta">Qual a consequência jurídica do resultado diverso do pretendido (Art. 74)?</div>
+            </div>
+            <div class="fc-resposta">O agente responde pelo resultado efetivamente produzido a título de <strong>culpa</strong>, se previsto em lei como crime culposo.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 10 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #10 · Limite de Penas</div>
+              <div class="fc-pergunta">Qual o novo limite máximo de cumprimento de pena privativa de liberdade (Art. 75)?</div>
+            </div>
+            <div class="fc-resposta"><strong>40 anos</strong> (alterado pela Lei 13.964/2019 - Pacote Anticrime).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 11 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #11 · Sursis Penal</div>
+              <div class="fc-pergunta">Qual o limite máximo da pena aplicada para o deferimento do Sursis Comum (Art. 77)?</div>
+            </div>
+            <div class="fc-resposta">Pena privativa de liberdade <strong>não superior a 2 (dois) anos</strong>.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 12 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #12 · Sursis Etário</div>
+              <div class="fc-pergunta">Qual o limite de pena para concessão de Sursis a condenado maior de 70 anos?</div>
+            </div>
+            <div class="fc-resposta">Pena não superior a <strong>4 (quatro) anos</strong> (período de prova de 4 a 6 anos).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 13 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #13 · Sursis - Período de Prova</div>
+              <div class="fc-pergunta">Qual a duração do período de prova no Sursis Comum?</div>
+            </div>
+            <div class="fc-resposta">De <strong>2 a 4 anos</strong>.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 14 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #14 · Livramento Condicional</div>
+              <div class="fc-pergunta">Qual a fração de pena exigida para o réu primário e com bons antecedentes (Art. 83, I)?</div>
+            </div>
+            <div class="fc-resposta">Cumprimento de <strong>mais de 1/3 (um terço)</strong> da pena.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 15 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #15 · Livramento Condicional</div>
+              <div class="fc-pergunta">Qual a fração exigida para o condenado reincidente em crime doloso (Art. 83, II)?</div>
+            </div>
+            <div class="fc-resposta">Cumprimento de <strong>mais de 1/2 (metade)</strong> da pena.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 16 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #16 · Livramento - Crime Hediondo</div>
+              <div class="fc-pergunta">Qual a fração exigida para concessão de livramento em crimes hediondos (Art. 83, V)?</div>
+            </div>
+            <div class="fc-resposta">Cumprimento de <strong>mais de 2/3 (dois terços)</strong> da pena (desde que não seja reincidente específico).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 17 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #17 · Efeitos da Condenação</div>
+              <div class="fc-pergunta">A reparação do dano causada pelo crime é efeito automático ou específico?</div>
+            </div>
+            <div class="fc-resposta">É efeito <strong>Genérico e AUTOMÁTICO</strong> (Art. 91, I), independe de declaração expressa na sentença.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 18 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #18 · Efeitos Específicos</div>
+              <div class="fc-pergunta">A perda do cargo público decorrente de sentença penal é automática?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Trata-se de efeito específico e <strong>não-automático</strong> (Art. 92, parágrafo único), exigindo fundamentação expressa pelo juiz.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 19 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #19 · Reabilitação Penal</div>
+              <div class="fc-pergunta">Qual o prazo para requerer a reabilitação penal após a extinção da pena (Art. 94)?</div>
+            </div>
+            <div class="fc-resposta"><strong>2 (dois) anos</strong> após a extinção ou cumprimento da pena.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 20 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #20 · Súmula 715 do STF</div>
+              <div class="fc-pergunta">O limite de 40 anos (Art. 75) limita o cálculo dos benefícios da execução penal?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Os benefícios penais são calculados com base no total da pena unificada (soma real de todas as condenações).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
         </div>
-        
-        <!-- QUESTÃO 2 -->
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 08: MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <div class="section-label">Módulo 08</div>
+        <h2>Técnicas Mnemônicas de Memorização</h2>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-title">🧩 Mnemônico 01: Sistemas de Aplicação da Pena no Concurso</div>
+          <div class="mnemonic-letters">C.E.C.</div>
+          <p><strong>C</strong>úmulo Material -> Concurso Material &amp; Concurso Formal Impróprio (SOMA-SE tudo).<br>
+             <strong>E</strong>xasperação -> Concurso Formal Próprio (Mais grave + 1/6 a 1/2).<br>
+             <strong>C</strong>ontinuidade -> Crime Continuado (Mais grave + 1/6 a 2/3).</p>
+        </div>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-title">🧩 Mnemônico 02: Frações do Livramento Condicional</div>
+          <div class="mnemonic-letters">1/3 — 1/2 — 2/3</div>
+          <p>• <strong>1/3:</strong> Primário com bons antecedentes.<br>
+             • <strong>1/2:</strong> Reincidente em crime doloso.<br>
+             • <strong>2/3:</strong> Hediondos / Equiparados.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 09: REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <div class="section-label">Módulo 09</div>
+        <h2>Revisão Ativa Comentada (Inéditas &amp; Questões de Concurso)</h2>
+
+        <!-- Questão 01 Discursiva -->
         <div class="exercise">
-          <div class="exercise-number">Questão 02 · Execução Penal</div>
-          <p><strong>Qual é o prazo estabelecido para o "período de prova" (suspensão da pena) no Sursis comum?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">✅ Resposta comentada</span>
-              <p>O prazo é de <strong>2 a 4 anos</strong>. Durante esse período de prova, o condenado deve cumprir as condições determinadas pelo juiz na audiência admonitória para evitar a revogação do benefício e o consequente recolhimento à prisão.</p>
+          <p><strong>01. (Discursiva / Magistratura) Diferencie o Concurso Formal Próprio do Concurso Formal Impróprio, esclarecendo qual o sistema de aplicação da pena adotado em cada um e a garantia contida no parágrafo único do art. 70 do CP.</strong></p>
+          <details>
+            <summary>Ver resposta comentada e fundamentação</summary>
+            <div class="gabarito">
+              <strong>Resposta Gabaritada:</strong> No Concurso Formal Próprio (Art. 70, 1ª parte), o agente pratica uma única conduta sem desígnios autônomos, aplicando-se o Sistema da Exasperação (pena mais grave + 1/6 a 1/2). No Concurso Formal Impróprio (Art. 70, in fine), o agente pratica uma conduta com desígnios autônomos (vontade de alcançar múltiplos resultados dolosos), aplicando-se o Sistema do Cúmulo Material (soma das penas). O parágrafo único do Art. 70 consagra o Concurso Formal Maléfico, vedando que a exasperação resulte em pena superior à simples soma das penas.
             </div>
           </details>
         </div>
 
-        <!-- QUESTÃO 3 -->
+        <!-- Questão 02 CEBRASPE -->
         <div class="exercise">
-          <div class="exercise-number">Questão 03 · Efeitos da Condenação</div>
-          <p><strong>João, servidor público federal, é condenado por desviar verbas públicas (Peculato - Art. 312 do CP, praticado com violação de dever para com a Administração Pública) à pena privativa de liberdade de 2 anos de reclusão. O juiz individualiza a pena na sentença, fixa o regime inicial aberto, mas não faz nenhuma menção à perda do cargo público de João. Com o trânsito em julgado, a Administração Pública pode declarar João demitido de forma automática com base no efeito da sentença penal?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">❌ Resposta: Não, a perda do cargo não é automática neste caso.</span>
-              <p><strong>Comentário Técnico:</strong> Conforme o Art. 92, parágrafo único, do CP, os efeitos específicos descritos no Art. 92, inciso I (perda de cargo ou função pública) **não são automáticos**, exigindo expressa e motivada declaração do juiz na sentença condenatória. Como o juiz foi omisso, a condenação criminal transitada em julgado não opera a perda do cargo por si mesma.</p>
-              <p>Para o peculato (crime com violação de dever para com a Administração), o requisito quantitativo do Art. 92, I, 'a' (pena igual ou superior a 1 ano) foi atingido (2 anos), mas a omissão do juízo impede a execução automática. A demissão de João só poderá ocorrer mediante regular Processo Administrativo Disciplinar (PAD) instaurado pela própria Administração Pública.</p>
+          <p><strong>02. (CEBRASPE / Adaptada) Na hipótese de Aberratio Ictus com unidade de resultado (em que apenas a pessoa diversa da pretendida é atingida por erro na execução), o agente responderá pelo crime considerando-se as condições e qualidades da pessoa efetivamente atingida. (Certo / Errado)</strong></p>
+          <details>
+            <summary>Ver gabarito comentado</summary>
+            <div class="gabarito">
+              <strong>Resposta: ERRADO.</strong> Nos termos do Art. 73 do Código Penal, na Aberratio Ictus com resultado único, o agente responde como se tivesse atingido a pessoa que pretendia atingir (vítima virtual), levando-se em conta as suas qualidades e não as da pessoa atingida por erro.
             </div>
           </details>
         </div>
 
-        <!-- QUESTÃO 4 -->
+        <!-- Questão 03 FGV -->
         <div class="exercise">
-          <div class="exercise-number">Questão 04 · Ação Penal Privada</div>
-          <p><strong>Maria ingressa com queixa-crime contra Carla e Roberta pela prática do crime de injúria qualificada (ação penal privada). Após a instrução do processo, antes da prolação da sentença, Maria peticiona ao juízo concedendo o perdão do ofendido especificamente para Carla, devido à reconciliação de ambas. Roberta, contudo, manifesta ao juiz que deseja que o processo prossiga para que prove sua inocência em juízo. Quais os efeitos do perdão de Maria no processo em relação a Carla e Roberta?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">✅ Resposta: Extingue para Carla; Prossigue para Roberta.</span>
-              <p><strong>Comentário Técnico:</strong> Este caso envolve dois princípios cruciais da ação penal privada:</p>
-              <ol>
-                <li><strong>Princípio da Indivisibilidade (Art. 106, I, do CP):</strong> O perdão concedido a um dos réus (Carla) **a todos aproveita**. Portanto, o perdão de Maria estende-se automaticamente a Roberta.</li>
-                <li><strong>Princípio da Bilateralidade (Art. 106, III, do CP):</strong> O perdão do ofendido é um ato bilateral, dependendo de aceitação do querelado. Carla aceitou o perdão, o que acarreta a extinção de sua punibilidade (Art. 107, V). No entanto, Roberta **recusou expressamente o perdão** para provar sua inocência em julgamento. Como a recusa impede a eficácia do perdão, a ação penal privada prosseguirá regularmente em relação a Roberta.</li>
-              </ol>
+          <p><strong>03. (FGV / OAB) A perda do cargo ou função pública, decorrente de condenação penal transitada em julgado por crime praticado com abuso de poder, é efeito automático da condenação, dispensando fundamentação na sentença. (Certo / Errado)</strong></p>
+          <details>
+            <summary>Ver gabarito comentado</summary>
+            <div class="gabarito">
+              <strong>Resposta: ERRADO.</strong> A perda de cargo público é um efeito <strong>específico e NÃO-AUTOMÁTICO</strong> da condenação penal (Art. 92, parágrafo único do CP), necessitando obrigatoriamente de motivação e declaração expressa na sentença condenatória.
             </div>
           </details>
         </div>
 
-        <!-- QUESTÃO 5 -->
+        <!-- Questão 04 FCC -->
         <div class="exercise">
-          <div class="exercise-number">Questão 05 · Perdão Judicial</div>
-          <p><strong>A sentença judicial que concede o perdão ao réu no crime de homicídio culposo com base no Art. 121, § 5º, do CP, gera reincidência e maus antecedentes em caso de cometimento de nova infração criminal no prazo de 5 anos?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">❌ Resposta: Não gera nenhum efeito condenatório.</span>
-              <p><strong>Comentário Técnico:</strong> Conforme determina a **Súmula 18 do STJ**, a sentença que concede o perdão judicial tem natureza estritamente **declaratória da extinção da punibilidade** (não condenatória). Por essa razão, ela afasta todos os efeitos penais principais e secundários: o agente permanece primário, não adquire maus antecedentes e a decisão não serve de título para execução cível automática. O fato é tratado criminalmente como se nunca tivesse ocorrido condenação.</p>
-            </div>
-          </details>
-        </div>
-
-        <!-- QUESTÃO 6 -->
-        <div class="exercise">
-          <div class="exercise-number">Questão 06 · Ação Penal Pública</div>
-          <p><strong>Tício é vítima do crime de ameaça (crime de ação penal pública condicionada à representação). Tício comparece à delegacia e formaliza a representação contra o agressor. O inquérito é concluído e enviado ao Ministério Público. O Promotor de Justiça analisa os autos e assina a denúncia, mas, antes de enviá-la eletronicamente ao protocolo do Poder Judiciário, Tício comparece à Promotoria alegando reconciliação com o agressor e solicita a retirada da representação. É juridicamente possível obstar o oferecimento da denúncia nesse momento?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">✅ Resposta: Sim, é juridicamente possível.</span>
-              <p><strong>Comentário Técnico:</strong> Conforme determina o **Art. 102 do Código Penal** e o **Art. 25 do Código de Processo Penal**, a representação será irretratável **depois de oferecida a denúncia**. No processo eletrônico, o oferecimento da denúncia só se concretiza com o seu efetivo protocolo em juízo.</p>
-              <p>Como o Promotor apenas assinou a peça, mas ainda não a havia protocolado (oferecido) em juízo, a representação permanece retratável. A manifestação de Tício obsta o oferecimento da denúncia, gerando o arquivamento do feito e a subsequente extinção da punibilidade do agressor por decadência após o decurso do prazo de 6 meses.</p>
-            </div>
-          </details>
-        </div>
-
-        <!-- QUESTÃO 7 -->
-        <div class="exercise">
-          <div class="exercise-number">Questão 07 · Prescrição (*Fora do Exame*)</div>
-          <p><strong>Tício, com 19 anos de idade na data do fato, praticou o crime de furto qualificado (Pena máxima em abstrato: 8 anos de reclusão). Com base na tabela do Art. 109 do CP, qual é o prazo prescricional aplicável para a Prescrição da Pretensão Punitiva em Abstrato (PPPA) de Tício?</strong></p>
-          <details class="gabarito">
-            <summary>Ver resposta comentada</summary>
-            <div class="solution">
-              <span class="box-label">✅ Resposta: 6 anos.</span>
-              <p><strong>Comentário Técnico:</strong> O cálculo segue dois passos:</p>
-              <ol>
-                <li><strong>Prazo Geral (Art. 109, III):</strong> Para crimes com pena máxima superior a 4 anos e que não exceda a 8 anos (caso do furto qualificado, cuja pena máxima é 8 anos), o prazo prescricional padrão é de **12 anos**.</li>
-                <li><strong>Redutora de Menoridade (Art. 115):</strong> Como Tício era menor de 21 anos na data do fato (tinha 19 anos), o prazo de prescrição é **reduzido de metade**.</li>
-              </ol>
-              <p>Portanto, 12 anos / 2 = **6 anos** é o prazo prescricional de Tício.</p>
+          <p><strong>04. (FCC / Defensoria Pública) Quanto ao instituto do Sursis Penal (Art. 77 do CP), assinale a afirmativa correta referente ao Sursis Etário:</strong></p>
+          <p>A) Aplica-se a condenados com idade superior a 60 anos, desde que a pena seja inferior a 2 anos.<br>
+             B) Permite a suspensão da pena privativa de liberdade não superior a 4 anos para condenados maiores de 70 anos de idade.<br>
+             C) Exige cumprimento de metade da pena em regime semiaberto.<br>
+             D) Não admite revogação sob nenhuma hipótese.</p>
+          <details>
+            <summary>Ver resposta gabaritada</summary>
+            <div class="gabarito">
+              <strong>Resposta: B.</strong> O Art. 77, § 2º do CP (Sursis Etário) estabelece que a execução da pena privativa de liberdade não superior a 4 anos poderá ser suspensa por 4 a 6 anos desde que o condenado seja maior de 70 anos de idade na data da sentença.
             </div>
           </details>
         </div>
       </section>
 
-      <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
-      <section class="section" id="resumao">
-        <div class="super-box">
-          <div class="section-label">Resumão Ultra Rápido</div>
-          <h2>Cola Mental de Direito Penal II</h2>
-
-          <h3>SISTEMAS E PENAS</h3>
-          <div class="pill-group">
-            <div class="pill accent">Soma (Cúmulo): Material &amp; Formal Impróprio</div>
-            <div class="pill accent">Aumento (Exasperação): Formal Próprio &amp; Continuado</div>
-            <div class="pill accent">Multa: Soma-se sempre (Art. 72 - não exaspera)</div>
-            <div class="pill accent">Limite: 40 anos (Lei 13.964/19)</div>
-          </div>
-
-          <h3>CONDIÇÕES DA CONDENAÇÃO</h3>
-          <div class="pill-group">
-            <div class="pill">Genéricos (Art. 91) = Automáticos (reparação, confisco ilícito)</div>
-            <div class="pill">Específicos (Art. 92) = Não Automáticos (perda de cargo, poder familiar)</div>
-            <div class="pill">Alargado (Art. 91-A) = Pena > 6a (MP exige na denúncia, confisco patrimonial)</div>
-            <div class="pill">Exceção Violência Doméstica = Cargo e poder familiar caem AUTOMATICAMENTE</div>
-          </div>
-
-          <h3>AÇÃO PENAL EM PÍLULAS</h3>
-          <div class="pill-group">
-            <div class="pill">Representação: irretratável após OFERECIMENTO (Art. 102)</div>
-            <div class="pill">Indivisibilidade: renúncia/perdão aproveita a todos (Art. 106, I)</div>
-            <div class="pill">Perdão do ofendido: bilateral (exige aceitação, Art. 105)</div>
-            <div class="pill">Perempção: desídia/abandono na ação privada (Art. 60 CPP)</div>
-          </div>
-
-          <h3>EXTINÇÃO DA PUNIÇÃO</h3>
-          <div class="pill-group">
-            <div class="pill">Perdão Judicial: Súmula 18 STJ = declaratória (sem efeitos penais ou cíveis)</div>
-            <div class="pill">Abolitio Criminis: apaga crime e efeitos penais (mantém cíveis)</div>
-            <div class="pill">Conexão (Art. 108): extinção de um crime não aproveita ao outro</div>
-          </div>
-
-          <h3 style="color:#EF4444;">PRESCRIÇÃO (*NÃO CAI NA PROVA*)</h3>
-          <div class="pill-group">
-            <div class="pill" style="border-color:#EF4444; color:#EF4444;">PPP: apaga condenação e reincidência (anterior ao trânsito)</div>
-            <div class="pill" style="border-color:#EF4444; color:#EF4444;">PPE: apaga só prisão (mantém efeitos secundários)</div>
-            <div class="pill" style="border-color:#EF4444; color:#EF4444;">Súmula 438 STJ: veda prescrição virtual (hipotética)</div>
-            <div class="pill" style="border-color:#EF4444; color:#EF4444;">Art. 115: <21 anos ou >70 anos = prazo reduz pela METADE</div>
-          </div>
+      <!-- ══════════════════════════════ MÓDULO 10: RESUMÃO ULTRA RÁPIDO ══════════════════════════════ -->
+      <section id="resumao" class="section">
+        <div class="section-label">Módulo 10</div>
+        <div class="card" style="border-top: 5px solid var(--p-500); background: var(--p-50);">
+          <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Final)</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8;">
+            • <strong>Cúmulo Material (Soma):</strong> Concurso Material + Concurso Formal Impróprio.<br>
+            • <strong>Exasperação (Mais grave + Aumento):</strong> Concurso Formal Próprio (1/6 a 1/2) + Crime Continuado Simples (1/6 a 2/3).<br>
+            • <strong>Crime Continuado Específico:</strong> Crimes dolosos + vítimas diferentes + violência -> Aumento de até o <strong>TRIPLO</strong>.<br>
+            • <strong>Multa:</strong> Aplica-se sempre distintamente e integralmente em qualquer concurso (Art. 72).<br>
+            • <strong>Aberratio Ictus:</strong> Erro no golpe -> Consideram-se as qualidades da vítima pretendida (virtual).<br>
+            • <strong>Limite do Art. 75:</strong> 40 anos de prisão. Não limita o cálculo dos benefícios penais (Súmula 715 STF).<br>
+            • <strong>Sursis Penal:</strong> Pena <= 2 anos (ou 4 no etário). Suspende execução da prisão por 2 a 4 anos.<br>
+            • <strong>Livramento Condicional:</strong> Pena >= 2 anos. Frações de +1/3 (primário), +1/2 (reincidente), +2/3 (hediondo).<br>
+            • <strong>Efeitos Genéricos:</strong> Reparar dano / confisco ilícito -> AUTOMÁTICOS.<br>
+            • <strong>Efeitos Específicos:</strong> Perda de cargo / CNH -> NÃO-AUTOMÁTICOS (Exigem motivação expressa).
+          </p>
         </div>
       </section>
 
-    </div><!-- /container -->
+    </div>
   </main>
 
-  <div id="study-toolkit-bundle">
-    <script src="../../portal-core.js"></script>
-  </div>
+  <!-- Core Scripts do Portal Hub -->
+  <script src="../../portal-core.js"></script>
 </body>
-
 </html>

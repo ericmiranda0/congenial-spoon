@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Processual Civil I — Jurisdição &amp; Cooperação Internacional | Guia Definitivo</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Identidade Visual Exclusiva: Tema Azul Cobalto / Safira Real (Processual Civil) */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-blue: #3B82F6;
+      --accent-tint: rgba(37, 99, 235, 0.08);
+      --border-blue: rgba(37, 99, 235, 0.2);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+    }
+
+    /* Boxes e Selos de Destaque Acadêmico / Exames */
+    .destaque-academico {
+      background-color: var(--p-50);
+      border-left: 6px solid var(--p-500);
+      border-top: 1px solid var(--border-blue);
+      border-right: 1px solid var(--border-blue);
+      border-bottom: 1px solid var(--border-blue);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .destaque-academico:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -3px rgba(37, 99, 235, 0.15), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+    }
+    
+    .destaque-academico .selo-destaque {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--p-600), var(--p-700));
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    
+    [data-theme="dark"] .destaque-academico {
+      background-color: rgba(37, 99, 235, 0.1);
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+
+    .badge-prova {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #2563EB, #1E3A8A);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .kw {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(37, 99, 235, 0.2);
+      color: #BFDBFE;
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    /* Quadros de Níveis Didáticos (3 Níveis) */
+    .nivel-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .nivel-card {
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-color, #e2e8f0);
+      border-radius: 14px;
+      padding: 1.25rem;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
+    }
+
+    .nivel-card:hover {
+      border-color: var(--p-500);
+      transform: translateY(-2px);
+    }
+
+    .nivel-card.n1 { border-top: 4px solid #0284C7; }
+    .nivel-card.n2 { border-top: 4px solid #2563EB; }
+    .nivel-card.n3 { border-top: 4px solid #7C3AED; }
+
+    .nivel-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .n1 .nivel-badge { background: #E0F2FE; color: #0369A1; }
+    .n2 .nivel-badge { background: #EFF6FF; color: #1D4ED8; }
+    .n3 .nivel-badge { background: #F5F3FF; color: #6D28D9; }
+
+    /* Lei Seca Interativa */
+    details.artigo-detalhado {
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-blue);
+      border-radius: 12px;
+      margin: 1rem 0;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    details.artigo-detalhado summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] details.artigo-detalhado summary {
+      color: #BFDBFE;
+    }
+
+    details.artigo-detalhado summary::-webkit-details-marker { display: none; }
+
+    details.artigo-detalhado[open] {
+      border-color: var(--p-500);
+      box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.1);
+    }
+
+    .lei-seca-box {
+      background: var(--p-50);
+      border-left: 4px solid var(--p-500);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca-box {
+      background: rgba(37, 99, 235, 0.12);
+      color: #DBEAFE;
+    }
+
+    .btn-copiar-artigo {
+      background: var(--p-500);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .btn-copiar-artigo:hover { background: var(--p-600); }
+
+    /* Flashcards Interativos */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-surface, #ffffff);
+      border: 2px solid var(--border-blue);
+      border-radius: 14px;
+      padding: 1.5rem;
+      cursor: pointer;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flashcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--p-500);
+      box-shadow: 0 12px 20px -4px rgba(37, 99, 235, 0.15);
+    }
+
+    .flashcard .fc-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard .fc-pergunta {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-color, #1f2937);
+      line-height: 1.4;
+    }
+
+    .flashcard .fc-resposta {
+      display: none;
+      font-size: 0.92rem;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 0.85rem;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      border-left: 3px solid var(--p-500);
+      line-height: 1.5;
+    }
+
+    [data-theme="dark"] .flashcard .fc-resposta {
+      background: rgba(37, 99, 235, 0.15);
+      color: #DBEAFE;
+    }
+
+    .flashcard.revelado .fc-resposta { display: block; }
+    .flashcard.revelado .fc-dica-clique { display: none; }
+
+    .fc-dica-clique {
+      font-size: 0.75rem;
+      color: #9CA3AF;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Fluxogramas em HTML/CSS (Pure Flexbox/Grid) */
+    .flowchart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-surface, #ffffff);
+      border: 1px solid var(--border-blue);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--p-50);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--p-500);
+    }
+
+    [data-theme="dark"] .flow-step {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .flow-num {
+      background: var(--p-500);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: var(--p-500);
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin: -0.5rem 0;
+    }
+
+    /* Linha do Tempo (Timeline) */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-surface, #ffffff);
+    }
+
+    .timeline-date {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--p-600);
+      text-transform: uppercase;
+    }
+
+    /* Mapas Mentais HTML/CSS Pure */
+    .mindmap-tree {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 1.75rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 1.5rem 0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .mm-node-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #2563EB;
+      padding-bottom: 0.5rem;
+    }
+
+    .mm-node-l1 {
+      margin-left: 1.25rem;
+      color: #38BDF8;
+      font-weight: 700;
+      margin-top: 0.75rem;
+    }
+
+    .mm-node-l2 {
+      margin-left: 2.75rem;
+      color: #94A3B8;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .mm-node-l2 strong { color: #F472B6; }
+
+    /* Mnemônicos Cards */
+    .mnemonic-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(59, 130, 246, 0.05));
+      border: 2px dashed var(--p-500);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .mnemonic-title {
+      font-weight: 800;
+      color: var(--p-700);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    [data-theme="dark"] .mnemonic-title { color: #BFDBFE; }
+
+    .mnemonic-letters {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--p-500);
+      letter-spacing: 2px;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I</div>
+      <h1>Jurisdição &amp; Cooperação Internacional</h1>
+      <div class="subtitle">Guia Definitivo: Da teoria geral do Estado-Juiz à homologação de decisões estrangeiras no STJ</div>
+      <div class="meta" style="margin-top: 15px; opacity: 0.95;">
+        <span>⚖️ Arts. 16 a 36, 719, 960-965 CPC</span> | 
+        <span>📜 Art. 5º, XXXV &amp; Art. 105, I, "i" CF</span> | 
+        <span>🛡️ Foco Acadêmico &amp; Concursos</span> |
+        <span>⏱️ Tempo estimado: 40 min</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#conceito" class="nav-item">Conceito de Jurisdição</a>
+        <a href="#caracteristicas" class="nav-item">7 Características</a>
+        <a href="#especies" class="nav-item">Contenciosa vs Voluntária</a>
+        <a href="#internacional" class="nav-item">Jurisdição Internacional</a>
+        <a href="#homologacao" class="nav-item">Homologação no STJ</a>
+        <a href="#cooperacao" class="nav-item">Cooperação Internacional</a>
+        <a href="#fluxogramas" class="nav-item">Fluxogramas</a>
+        <a href="#mapamental" class="nav-item">Mapa Mental</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#mnemonicos" class="nav-item">Mnemônicos</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+        <a href="#resumao" class="nav-item">Resumão Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Modo Escuro/Claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div class="summary-card" id="top">
+        <h2>📋 Sumário Geral do Guia</h2>
+        <a href="#objetivos"><span>🎯</span> Objetivos de Aprendizagem</a>
+        <a href="#conceito"><span>🏛️</span> Módulo 01: Conceito e Origem da Jurisdição (Poder-Dever)</a>
+        <a href="#caracteristicas"><span>⭐</span> Módulo 02: As 7 Características Essenciais da Jurisdição</a>
+        <a href="#especies"><span>⚖️</span> Módulo 03: Espécies de Jurisdição (Contenciosa vs Voluntária)</a>
+        <a href="#internacional"><span>🌍</span> Módulo 04: Jurisdição Internacional &amp; Limites da Soberania</a>
+        <a href="#homologacao"><span>📜</span> Módulo 05: Homologação de Decisão Estrangeira no STJ (Art. 963 CPC)</a>
+        <a href="#cooperacao"><span>🤝</span> Módulo 06: Cooperação Internacional (Auxílio Direto vs Rogatória)</a>
+        <a href="#fluxogramas"><span>🔄</span> Módulo 07: Fluxogramas de Trâmite e Procedimento</a>
+        <a href="#mapamental"><span>🧠</span> Módulo 08: Mapa Mental Consolidado</a>
+        <a href="#flashcards"><span>⚡</span> Módulo 09: 20 Flashcards Interativos de Revisão</a>
+        <a href="#mnemonicos"><span>🧩</span> Módulo 10: Técnicas Mnemônicas de Memorização</a>
+        <a href="#revisao"><span>📝</span> Módulo 11: Revisão Ativa Comentada (Inéditas &amp; Concursos)</a>
+        <a href="#resumao"><span>🚀</span> Módulo 12: Resumão Ultra Rápido (Cheat Sheet Final)</a>
+      </div>
+
+      <!-- ══════════════════════════════ OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <p>Ao concluir a leitura deste material estruturado, você dominará perfeitamente:</p>
+        <div class="grid2">
+          <div class="card">
+            <h4>1. O Conceito e o "Poder-Dever"</h4>
+            <p>Compreender como o Estado transitou da autotutela primitiva para a exclusividade da pacificação social, agindo como o verdadeiro <strong>"Legislador do Caso Concreto"</strong>.</p>
+          </div>
+          <div class="card">
+            <h4>2. As 7 Características da Jurisdição</h4>
+            <p>Conceituar e explicar fundamentadamente a Substitutividade, Definitividade (Coisa Julgada), Imperatividade, Inafastabilidade (Art. 5º, XXXV da CF), Indelegabilidade, Inércia e Investidura.</p>
+          </div>
+          <div class="card">
+            <h4>3. Contenciosa vs. Voluntária</h4>
+            <p>Diferenciar a jurisdição contenciosa (solução de lide entre partes) da jurisdição voluntária / graciosa (administração pública de interesses privados, Art. 719 do CPC).</p>
+          </div>
+          <div class="card">
+            <h4>4. Homologação no STJ e Cooperação</h4>
+            <p>Dominar os requisitos do Art. 963 do CPC para validação de decisões estrangeiras no STJ, a alteração da EC 45/2004 e as modalidades de cooperação internacional (Auxílio Direto vs. Carta Rogatória).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 01: CONCEITO DE JURISDIÇÃO ══════════════════════════════ -->
+      <section id="conceito" class="section">
+        <div class="section-label">Módulo 01</div>
+        <h2>Conceito, Origem Histórica e Natureza do Poder-Dever</h2>
+
+        <!-- Explicação em 3 Níveis -->
+        <h3>Explicação Aprofundada em 3 Níveis Didáticos</h3>
+        <div class="nivel-container">
+          <div class="nivel-card n1">
+            <span class="nivel-badge">Nível 1 · Simples / Didático</span>
+            <p>Antigamente, quando duas pessoas brigavam, resolvia-se na lei do mais forte ou da esperteza (autotutela). O Estado percebeu que isso gerava injustiça e assumiu sozinho o direito de resolver as brigas. Hoje, quando há um conflito, o juiz entra em cena para aplicar a lei e dizer quem tem razão, de forma neutra e obrigatória!</p>
+          </div>
+          <div class="nivel-card n2">
+            <span class="nivel-badge">Nível 2 · Técnico / Graduação</span>
+            <p>Jurisdição (do latim <em>juris dictio</em> = dizer o direito) é a função estatal monopolística mediante a qual o Poder Judiciário, provocada a sua inércia, aplica a norma geral e abstrata contida no ordenamento jurídico ao caso concreto litigioso, pacificando os sujeitos da relação jurídica com força imperativa e definitiva.</p>
+          </div>
+          <div class="nivel-card n3">
+            <span class="nivel-badge">Nível 3 · Concursos de Alto Nível</span>
+            <p>Assenta-se no binômio <strong>Poder-Dever</strong>: o Estado detém o monopólio da sanção coercitiva (Poder), porém tem a obrigação constitucional irrenunciável de prestar a tutela jurisdicional (Dever). O Poder Judiciário atua como o <span class="kw">"Legislador do Caso Concreto"</span>, pois transforma a regra abstrata abstrata em uma norma jurídica individual e concreta imutável.</p>
+          </div>
+        </div>
+
+        <div class="destaque-academico">
+          <span class="selo-destaque">🎯 QUESTÃO CLÁSSICA DE PROVA: O JUIZ COMO LEGISLADOR DO CASO CONCRETO</span>
+          <p><strong>Questão Frequente em Exames (V ou F):</strong> O Poder Judiciário atua como "Legislador do Caso Concreto"?</p>
+          <p><strong>VERDADEIRO.</strong> Enquanto o Poder Legislativo cria normas abstratas, genéricas e impessoais para a sociedade, o Juiz, ao proferir a sentença, cria a <span class="kw">norma jurídica individualizada</span> para aquele caso específico trazido pelas partes, resolvendo a lide com força vinculante.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 02: AS 7 CARACTERÍSTICAS ══════════════════════════════ -->
+      <section id="caracteristicas" class="section">
+        <div class="section-label">Módulo 02</div>
+        <h2>As 7 Características Essenciais da Jurisdição (FOCO TOTAL)</h2>
+        <p>As características da jurisdição são o tema mais cobrado em provas acadêmicas e concursos públicos de Processo Civil. Exige-se que o aluno saiba <strong>citar, conceituar e explicitar</strong> cada uma delas:</p>
+
+        <div class="grid2">
+          <!-- 1. Substitutividade -->
+          <div class="card" style="border-top: 4px solid var(--p-500);">
+            <h4>1. Substitutividade</h4>
+            <p>O Estado-juiz <strong>substitui a vontade das partes</strong> envolvidas no conflito. As partes não podem impor sua própria solução pela força; o juiz atua em nome da sociedade para garantir a <span class="kw">imparcialidade</span> do julgamento.</p>
+          </div>
+
+          <!-- 2. Definitividade -->
+          <div class="card" style="border-top: 4px solid #7C3AED;">
+            <h4>2. Definitividade (Coisa Julgada)</h4>
+            <p>É a característica mais marcante. Apenas os atos jurisdicionais tornam-se imutáveis e indiscutíveis após o esgotamento dos recursos (<span class="kw">Coisa Julgada Material</span>). Nenhum outro Poder (Executivo ou Legislativo) pode alterar uma sentença transitada em julgado.</p>
+          </div>
+
+          <!-- 3. Imperatividade -->
+          <div class="card" style="border-top: 4px solid #0284C7;">
+            <h4>3. Imperatividade (Coercitividade)</h4>
+            <p>As decisões judiciais são obrigatórias e possuem força coativa. O juiz possui <em>poderes implícitos de coerção</em> (ex: bloqueio de valores via SisbaJud, busca e apreensão, multa diária/astreintes). <em>"Se não for cumprido por bem, será cumprido por mal."</em></p>
+          </div>
+
+          <!-- 4. Inafastabilidade -->
+          <div class="card" style="border-top: 4px solid #059669;">
+            <h4>4. Inafastabilidade (Art. 5º, XXXV da CF)</h4>
+            <p>A lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito. O juiz <strong>não pode se escusar de julgar</strong> alegando lacuna ou omissão da lei (deve aplicar analogia, costumes e princípios gerais de direito).</p>
+          </div>
+
+          <!-- 5. Indelegabilidade -->
+          <div class="card" style="border-top: 4px solid #D97706;">
+            <h4>5. Indelegabilidade</h4>
+            <p>A função jurisdicional é indelegável por decorrer do <strong>Princípio Constitucional do Juiz Natural</strong>. O órgão jurisdicional investido pela lei não pode repassar sua atribuição de julgar a outro órgão ou pessoa.</p>
+          </div>
+
+          <!-- 6. Inércia -->
+          <div class="card" style="border-top: 4px solid #DC2626;">
+            <h4>6. Inércia (Princípio do Dispositivo)</h4>
+            <p>A jurisdição não se movimenta de ofício; necessita de prévia <span class="kw">provocação do interessado</span> através do exercício do direito de ação. A inércia garante a imparcialidade do magistrado.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.25rem; border-top: 4px solid var(--p-700);">
+          <h4>7. Investidura</h4>
+          <p>A jurisdição só é validamente exercida por quem foi regular e legalmente investido no cargo de magistrado (via concurso público de provas e títulos ou quinto constitucional), cumprindo os requisitos constitucionais. A falta de investidura torna o ato juridicamente inexistente.</p>
+        </div>
+
+        <!-- Box Erro Comum / Pegadinha -->
+        <div class="pitfall" style="background: #FEF2F2; border-left: 5px solid #DC2626; padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0;">
+          <span class="box-label" style="background: #DC2626; color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800;">⚠️ PEGADINHA DE PROVA: CONCEITO INCORRETO DE INÉRCIA</span>
+          <p style="margin-top: 0.5rem;">
+            <strong>CUIDADO:</strong> Responder em avaliações acadêmicas ou provas de concurso que Inércia é "o processo ficar parado" ou "não ir para a frente" é um <strong>ERRO GRAVE</strong> que pode zerar a questão!<br>
+            <strong>CONCEITO CORRETO:</strong> Inércia significa que o Poder Judiciário <strong>depende do acionamento/provocação prévia da parte interessada</strong> para instaurar a relação processual e começar a atuar.
+          </p>
+        </div>
+
+        <details class="artigo-detalhado">
+          <summary>
+            <span>📜 Art. 5º, XXXV da Constituição Federal — Princípio da Inafastabilidade</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art5-text">
+            Art. 5º [...]
+            <br>
+            XXXV - a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito;
+          </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art5-text').innerText); alert('CF Art. 5º XXXV copiado!');">Copiar Artigo</button>
+        </details>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 03: ESPÉCIES DE JURISDIÇÃO ══════════════════════════════ -->
+      <section id="especies" class="section">
+        <div class="section-label">Módulo 03</div>
+        <h2>Espécies de Jurisdição: Contenciosa vs. Voluntária</h2>
+
+        <p>O Código de Processo Civil prevê que a jurisdição civil divide-se em contenciosa e voluntária (Art. 719). Na doutrina, discute-se se a voluntária é jurisdição autêntica ou simples administração pública de interesses privados pelo juiz.</p>
+
+        <!-- Quadro Comparativo de Jurisdição -->
+        <h3>Quadro Comparativo: Jurisdição Contenciosa vs. Jurisdição Voluntária</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Critério de Comparação</th>
+                <th>Jurisdição Contenciosa</th>
+                <th>Jurisdição Voluntária (Graciosa)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Existência de Lide (Conflito)</strong></td>
+                <td>Existe um conflito de interesses qualificado por uma pretensão resistida entre as partes.</td>
+                <td>Não há lide/conflito propriamente dito; busca-se a chancela estatal para integrar a vontade privada.</td>
+              </tr>
+              <tr>
+                <td><strong>Efeito da Sentença</strong></td>
+                <td>A sentença <strong>favorece uma parte em detrimento da outra</strong> (vencedor e vencido).</td>
+                <td>A sentença <strong>beneficia a ambos os requerentes</strong> (ex: homologação de divórcio consensual).</td>
+              </tr>
+              <tr>
+                <td><strong>Coisa Julgada Material</strong></td>
+                <td>Produz <strong>Coisa Julgada Material imutável</strong> (salvo ação rescisória).</td>
+                <td>Predomina o entendimento de que gera apenas <em>eficácia preclusiva formal</em> (pode ser revista se alteradas as circunstâncias, Art. 723, parágrafo único).</td>
+              </tr>
+              <tr>
+                <td><strong>Denominação dos Sujeitos</strong></td>
+                <td>Autor e Réu (Partes litigantes).</td>
+                <td>Requerente(s) e Interessados (Não há litígio).</td>
+              </tr>
+              <tr>
+                <td><strong>Legalidade no Julgamento</strong></td>
+                <td>O juiz está adstrito à legalidade estrita.</td>
+                <td>O juiz pode adotar em cada caso a solução que considerar mais conveniente e oportuna (juízo de equidade, Art. 723, parágrafo único).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 04: JURISDIÇÃO INTERNACIONAL & HOMOLOGAÇÃO ══════════════════════════════ -->
+      <section id="internacional" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2>Jurisdição Internacional &amp; Homologação no STJ</h2>
+
+        <h3>4.1 Soberania e Limites Internacionais</h3>
+        <p>A jurisdição é manifestação da soberania estatal. Logo, sentenças proferidas por tribunais estrangeiros são emanações de poder soberano externo. Para produzirem efeitos ou serem executadas no território brasileiro, exigem a <strong>chancela prévia da autoridade judiciária nacional</strong>.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Redação Constitucional Original (Até 2004)</div>
+            <p>A competência para homologar sentenças estrangeiras e conceder o <em>exequatur</em> às cartas rogatórias pertencia ao <strong>Supremo Tribunal Federal (STF)</strong>.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Emenda Constitucional nº 45/2004 (Reforma do Judiciário)</div>
+            <p>A competência exclusiva para homologar decisão estrangeira foi transferida para o <span class="kw">Superior Tribunal de Justiça (STJ)</span> — Art. 105, I, "i" da CF/88.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">CPC/2015 &amp; Jurisprudência do STJ (SEC 14.812-EX)</div>
+            <p>O CPC/2015 inovou: <strong>NÃO se exige mais o trânsito em julgado</strong> da decisão no país de origem para que seja homologada no Brasil! Basta que a decisão estrangeira seja <span class="kw">EFICAZ</span> no seu país de origem (admitindo-se a homologação de tutelas de urgência ou sentenças provisórias pendentes de recurso sem efeito suspensivo).</p>
+          </div>
+        </div>
+
+        <details class="artigo-detalhado">
+          <summary>
+            <span>⚖️ Art. 963 do Código Penal — Requisitos para Homologação da Decisão Estrangeira</span>
+            <span>Clique para expandir</span>
+          </summary>
+          <div class="lei-seca-box" id="art963-text">
+            Art. 963 - Constituem requisitos para a homologação da decisão estrangeira:
+            <br>
+            I - ter sido proferida por autoridade competente;
+            <br>
+            II - terem sido as partes citadas ou haver-se legalmente verificado a revelia;
+            <br>
+            III - estar firmada por decisão eficaz, segundo a lei do país em que foi proferida;
+            <br>
+            IV - não ofender a coisa julgada brasileira;
+            <br>
+            V - estar acompanhada de tradução oficial, salvo disposição em contrário contida em tratado;
+            <br>
+            VI - não conter manifesta ofensa à ordem pública.
+          </div>
+          <button class="btn-copiar-artigo" onclick="navigator.clipboard.writeText(document.getElementById('art963-text').innerText); alert('Artigo 963 copiado!');">Copiar Artigo</button>
+        </details>
+
+        <div class="exam-tip" style="background: #EFF6FF; border-left: 5px solid #2563EB; padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0;">
+          <span class="box-label" style="background: #2563EB; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 800;">⚖️ ONDE É EXECUTADA A DECISÃO HOMOLOGADA?</span>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            Após a homologação pelo STJ, a decisão estrangeira converte-se em <strong>título executivo judicial brasileiro</strong> (Art. 515, VIII do CPC).<br>
+            <strong>CUIDADO EM PROVAS:</strong> A execução não é promovida no STJ! A execução é realizada perante o <span class="kw">Juízo Federal de Primeira Instância competente</span> (via Carta de Sentença / Exequatur).
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 05: COOPERAÇÃO INTERNACIONAL ══════════════════════════════ -->
+      <section id="cooperacao" class="section">
+        <div class="section-label">Módulo 05</div>
+        <h2>Cooperação Internacional: Auxílio Direto vs. Carta Rogatória</h2>
+
+        <p>A cooperação internacional processual (Arts. 26 a 36 do CPC) se dá fundamentalmente por três mecanismos: Homologação de Sentença Estrangeira, Carta Rogatória e Auxílio Direto.</p>
+
+        <div class="grid2">
+          <div class="card" style="border-top: 4px solid #2563EB;">
+            <h4>Auxílio Direto (Arts. 28 a 34 do CPC)</h4>
+            <p>Mecanismo desburocratizado e célere no qual o pedido de cooperação é encaminhado <strong>diretamente entre as Autoridades Centrais</strong> dos países (no Brasil, a Autoridade Central é o Ministério da Justiça), <span class="kw">sem necessidade de juízo de delibação no STJ</span>.</p>
+            <p><em>Casos de Uso:</em> Obtenção de provas, prestação de informações sobre ordenamento jurídico, colheita de depoimentos voluntários.</p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid #7C3AED;">
+            <h4>Carta Rogatória (Art. 36 do CPC)</h4>
+            <p>Instrumento de comunicação interjurisdicional utilizado quando a medida solicitada envolve atos de citação, intimação ou cumprimento de decisão intersetorial coercitiva que exige prévia concessão de <span class="kw">exequatur pelo Presidente do STJ</span>.</p>
+            <p><em>Casos de Uso:</em> Citação de réu residente no exterior, penhora e atos executórios coercitivos tomados por ordem judicial.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 06: FLUXOGRAMAS ══════════════════════════════ -->
+      <section id="fluxogramas" class="section">
+        <div class="section-label">Módulo 06</div>
+        <h2>Fluxogramas Interativos de Trâmite Processual</h2>
+
+        <h3>Procedimento de Homologação de Sentença Estrangeira no STJ</h3>
+        <div class="flowchart-container">
+          <div class="flow-step">
+            <div class="flow-num">1</div>
+            <div><strong>Petição Inicial no STJ:</strong> Requerimento endereçado ao Presidente do Superior Tribunal de Justiça instruído com a decisão eficaz e tradução oficial.</div>
+          </div>
+          <div class="flow-arrow">↓ CITAÇÃO</div>
+          <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div><strong>Citação da Parte Requerida:</strong> Realizada por Carta de Ordem (no Brasil), Rogatória (no exterior) ou Edital. Prazo de contestação de 15 dias.</div>
+          </div>
+          <div class="flow-arrow">↓ ANÁLISE DE CONTESTAÇÃO</div>
+          <div class="flow-step">
+            <div class="flow-num">3</div>
+            <div><strong>Limitações da Defesa:</strong> A contestação SOMENTE pode versar sobre autenticidade, requisitos do Art. 963 ou inteligência do texto. Proibido rediscutir o mérito da causa!</div>
+          </div>
+          <div class="flow-arrow">↓ HOMOLOGAÇÃO &amp; EXECUÇÃO</div>
+          <div class="flow-step">
+            <div class="flow-num">4</div>
+            <div><strong>Decisão &amp; Cumprimento:</strong> Homologada a decisão pela Corte Especial ou Presidente do STJ, envia-se a carta de sentença à <strong>Justiça Federal de 1ª Instância</strong> para execução.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 07: MAPA MENTAL ══════════════════════════════ -->
+      <section id="mapamental" class="section">
+        <div class="section-label">Módulo 07</div>
+        <h2>Mapa Mental Consolidado em Código</h2>
+        <div class="mindmap-tree">
+          <div class="mm-node-root">🏛️ DIREITO PROCESSUAL CIVIL I — JURISDIÇÃO &amp; COOPERAÇÃO</div>
+          
+          <div class="mm-node-l1">1. JURISDIÇÃO (PODER-DEVER)</div>
+          <div class="mm-node-l2">• <strong>Conceito:</strong> Função estatal imperativa que aplica a lei abstrata ao caso concreto litigioso.</div>
+          <div class="mm-node-l2">• <strong>Papel do Juiz:</strong> Atua como o <strong>"Legislador do Caso Concreto"</strong>.</div>
+          
+          <div class="mm-node-l1">2. AS 7 CARACTERÍSTICAS ESSENCIAIS</div>
+          <div class="mm-node-l2">• <strong>Substitutividade:</strong> Juiz substitui as partes no julgamento imparcial.</div>
+          <div class="mm-node-l2">• <strong>Definitividade:</strong> Gera Coisa Julgada Material imutável.</div>
+          <div class="mm-node-l2">• <strong>Imperatividade:</strong> Força coativa e obrigatória ("cumprido por bem ou por mal").</div>
+          <div class="mm-node-l2">• <strong>Inafastabilidade:</strong> Art. 5º, XXXV CF - Não se esquiva por falta de lei.</div>
+          <div class="mm-node-l2">• <strong>Indelegabilidade:</strong> Juiz Natural não pode passar a função a terceiros.</div>
+          <div class="mm-node-l2">• <strong>Inércia:</strong> Depende de provocação prévia da parte interessada.</div>
+          <div class="mm-node-l2">• <strong>Investidura:</strong> Exige posse legal prévia no cargo de magistrado.</div>
+
+          <div class="mm-node-l1">3. ESPÉCIES DE JURISDIÇÃO</div>
+          <div class="mm-node-l2">• <strong>Contenciosa:</strong> Há lide/conflito -> Sentença beneficia um e prejudica outro.</div>
+          <div class="mm-node-l2">• <strong>Voluntária (Art. 719):</strong> Sem lide -> Administração de interesses -> Beneficia ambos.</div>
+
+          <div class="mm-node-l1">4. DECISÕES ESTRANGEIRAS &amp; COOPERAÇÃO</div>
+          <div class="mm-node-l2">• <strong>STJ (EC 45/04):</strong> Competente para homologação (Art. 105, I, "i" CF).</div>
+          <div class="mm-node-l2">• <strong>Requisito CPC/15:</strong> Basta a decisão ser <strong>EFICAZ</strong> no país de origem (não exige trânsito em julgado!).</div>
+          <div class="mm-node-l2">• <strong>Execução:</strong> Realizada na <strong>Justiça Federal de 1º Grau</strong>.</div>
+          <div class="mm-node-l2">• <strong>Auxílio Direto:</strong> Via Autoridade Central sem juízo de delibação no STJ.</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 08: 20 FLASHCARDS ══════════════════════════════ -->
+      <section id="flashcards" class="section">
+        <div class="section-label">Módulo 08</div>
+        <h2>20 Flashcards Interativos de Revisão Rápida</h2>
+        <p>Clique em cada card para revelar a resposta jurídica e testar seu nível de retenção:</p>
+        
+        <div class="flashcards-grid">
+          <!-- Flashcard 1 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #01 · Conceito</div>
+              <div class="fc-pergunta">O Poder Judiciário é considerado o "Legislador do Caso Concreto"?</div>
+            </div>
+            <div class="fc-resposta"><strong>VERDADEIRO.</strong> Enquanto o Legislativo cria a lei abstrata, o juiz cria a norma individualizada e imutável aplicável àquele conflito específico.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 2 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #02 · Substitutividade</div>
+              <div class="fc-pergunta">O que significa a característica da Substitutividade da Jurisdição?</div>
+            </div>
+            <div class="fc-resposta">Significa que o Estado-juiz <strong>substitui a vontade das partes</strong> envolvidas no conflito para proferir uma decisão imparcial.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 3 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #03 · Inércia</div>
+              <div class="fc-pergunta">Qual o conceito correto de Inércia da Jurisdição?</div>
+            </div>
+            <div class="fc-resposta">É a exigência de que a jurisdição seja **provocada previamente** pela parte interessada por meio da ação; o juiz não age de ofício para iniciar o processo.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 4 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #04 · Inafastabilidade</div>
+              <div class="fc-pergunta">O juiz pode se recusar a julgar fundamentando que a lei é omissa ou possui lacunas?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Pelo Princípio da Inafastabilidade (Art. 5º, XXXV da CF), o juiz é obrigado a julgar, utilizando a analogia, os costumes e os princípios gerais de direito.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 5 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #05 · Definitividade</div>
+              <div class="fc-pergunta">Decisões administrativas produzem a mesma definitividade da Coisa Julgada material?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Apenas as decisões judiciais produzem a definitividade imutável da **Coisa Julgada Material**.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 6 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #06 · Jurisdição Voluntária</div>
+              <div class="fc-pergunta">Na Jurisdição Voluntária, a sentença favorece apenas uma das partes?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Por não haver conflito/lide, a sentença em jurisdição voluntária pode <strong>beneficiar a ambas as partes</strong> interessadas.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 7 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #07 · Homologação</div>
+              <div class="fc-pergunta">Qual tribunal é competente para homologar sentença estrangeira no Brasil?</div>
+            </div>
+            <div class="fc-resposta">O **Superior Tribunal de Justiça (STJ)**, conforme alteração dada pela Emenda Constitucional nº 45/2004 (Art. 105, I, "i" da CF).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 8 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #08 · Trânsito em Julgado Estrangeiro</div>
+              <div class="fc-pergunta">O CPC/2015 exige o trânsito em julgado no exterior para homologar sentença no STJ?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> O Art. 963, III do CPC/2015 exige apenas que a decisão seja **EFICAZ** no país em que foi proferida (STJ SEC 14.812-EX).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 9 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #09 · Execução da Sentença Estrangeira</div>
+              <div class="fc-pergunta">Onde é executada a decisão estrangeira após a homologação pelo STJ?</div>
+            </div>
+            <div class="fc-resposta">Perante o **Juízo Federal de 1ª Instância** competente (e não no STJ).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 10 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #10 · Sem Homologação</div>
+              <div class="fc-pergunta">Qual a eficácia de uma sentença estrangeira no Brasil antes de homologada pelo STJ?</div>
+            </div>
+            <div class="fc-resposta">É **absolutamente ineficaz** no território nacional, não gerando litispendência, coisa julgada nem execução.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 11 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #11 · Auxílio Direto</div>
+              <div class="fc-pergunta">O Auxílio Direto necessita de juízo de delibação ou homologação no STJ?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> É realizado diretamente entre as Autoridades Centrais administrativas, sem intermédio de homologação no STJ.</div>
+            <div class="fc-dica-clique">Clique me para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 12 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #12 · Indelegabilidade</div>
+              <div class="fc-pergunta">Qual princípio constitucional fundamenta a indelegabilidade da jurisdição?</div>
+            </div>
+            <div class="fc-resposta">O **Princípio do Juiz Natural**, que impede a criação de tribunais de exceção ou a delegação de competência judicante a não-juízes.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 13 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #13 · Imperatividade</div>
+              <div class="fc-pergunta">O que são os poderes implícitos de coerção do magistrado na imperatividade?</div>
+            </div>
+            <div class="fc-resposta">São as ferramentas legais de apoio (bloqueio de contas, astreintes, busca e apreensão) que garantem a submissão e cumprimento forçado da decisão.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 14 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #14 · Contestação no STJ</div>
+              <div class="fc-pergunta">É possível rediscutir o mérito da decisão estrangeira durante a ação de homologação no STJ?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> A contestação no STJ restringe-se a questões formais, autenticidade, vícios de citação e ofensa à ordem pública brasileira.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 15 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #15 · Exclusividade Imobiliária</div>
+              <div class="fc-pergunta">Decisão estrangeira sobre imóvel situado no Brasil pode ser homologada pelo STJ?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> Imóveis situados no Brasil são de **competência exclusiva da Justiça Brasileira** (Art. 23, I do CPC), sendo indeferida a homologação.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 16 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #16 · Prazo de Contestação</div>
+              <div class="fc-pergunta">Qual o prazo para contestar a ação de homologação de decisão estrangeira no STJ?</div>
+            </div>
+            <div class="fc-resposta">Prazo de **15 (quinze) dias**.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 17 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #17 · Equidade na Voluntária</div>
+              <div class="fc-pergunta">O juiz é obrigado a seguir a legalidade estrita na Jurisdição Voluntária?</div>
+            </div>
+            <div class="fc-resposta"><strong>NÃO.</strong> O Art. 723, parágrafo único do CPC permite que o juiz adote a solução mais conveniente e oportuna (juízo de equidade).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 18 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #18 · Lide</div>
+              <div class="fc-pergunta">Qual a definição clássica de Lide segundo a doutrina processual?</div>
+            </div>
+            <div class="fc-resposta">Conflito de interesses qualificado por uma **pretensão resistida**.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 19 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #19 · Tradução Oficial</div>
+              <div class="fc-pergunta">A tradução juramentada da sentença estrangeira é indispensável em todos os casos?</div>
+            </div>
+            <div class="fc-resposta">É dispensada apenas quando houver **tratado internacional explícito** prevendo a dispensa de tradução juramentada (Art. 963, V do CPC).</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+
+          <!-- Flashcard 20 -->
+          <div class="flashcard" onclick="this.classList.toggle('revelado')">
+            <div>
+              <div class="fc-num">Flashcard #20 · Exequatur</div>
+              <div class="fc-pergunta">O que é o ato do "Exequatur"?</div>
+            </div>
+            <div class="fc-resposta">É a decisão pelo qual o STJ autoriza o cumprimento e execução de uma Carta Rogatória ou Decisão Estrangeira no Brasil.</div>
+            <div class="fc-dica-clique">Clique para ver a resposta</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 09: MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <div class="section-label">Módulo 09</div>
+        <h2>Técnicas Mnemônicas de Memorização</h2>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-title">🧩 Mnemônico 01: As 7 Características da Jurisdição</div>
+          <div class="mnemonic-letters">S. D. I. I. I. I. I.</div>
+          <p>• <strong>S</strong>ubstitutividade<br>
+             • <strong>D</strong>efinitividade (Coisa Julgada)<br>
+             • <strong>I</strong>mperatividade (Coerção)<br>
+             • <strong>I</strong>nafastabilidade (Art. 5º, XXXV CF)<br>
+             • <strong>I</strong>ndelegabilidade (Juiz Natural)<br>
+             • <strong>I</strong>nércia (Provocação)<br>
+             • <strong>I</strong>nvestidura (Cargo)</p>
+        </div>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-title">🧩 Mnemônico 02: Homologação no STJ — Competência &amp; Requisito</div>
+          <div class="mnemonic-letters">S T J — E F I C Á C I A</div>
+          <p>• <strong>STJ:</strong> Desde a EC 45/2004 (substituiu o STF).<br>
+             • <strong>Eficácia:</strong> O CPC/15 exige apenas que a decisão seja <em>eficaz</em> no país de origem (não exige mais o trânsito em julgado!).</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 10: REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <div class="section-label">Módulo 10</div>
+        <h2>Revisão Ativa Comentada (Inéditas &amp; Questões de Concurso)</h2>
+
+        <!-- Questão 01 Discursiva -->
+        <div class="exercise">
+          <p><strong>01. (Discursiva / Magistratura Estadual) Explique a característica da Substitutividade da Jurisdição e diferencie a atuação do Poder Judiciário como "Legislador do Caso Concreto" em relação à atuação do Poder Legislativo.</strong></p>
+          <details>
+            <summary>Ver resposta comentada e fundamentação legal</summary>
+            <div class="gabarito">
+              <strong>Resposta Gabaritada:</strong> A Substitutividade consiste na prerrogativa estatal em que o Estado-juiz substitui a vontade e a autotutela das partes na resolução do conflito, assegurando a imparcialidade da decisão. O Poder Judiciário é denominado "Legislador do Caso Concreto" porque, enquanto o Poder Legislativo elabora leis genéricas, abstratas e impessoais, o magistrado converte essa norma abstrata em uma regra jurídica individualizada, vinculante e concreta imutável para as partes litigantes.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 02 CEBRASPE -->
+        <div class="exercise">
+          <p><strong>02. (CEBRASPE / Procurador do Estado - Adaptada) De acordo com o CPC/2015 e a jurisprudência da Corte Especial do STJ, é indispensável a comprovação do trânsito em julgado da sentença estrangeira no país de origem para que seja deferido o pedido de homologação no Brasil. (Certo / Errado)</strong></p>
+          <details>
+            <summary>Ver gabarito comentado</summary>
+            <div class="gabarito">
+              <strong>Resposta: ERRADO.</strong> Nos termos do Art. 963, III do CPC/2015 e consoante decidido pela Corte Especial do STJ na SEC 14.812-EX, o CPC/2015 aboliu a exigência de trânsito em julgado formal no país de origem, bastando que a decisão estrangeira seja <strong>EFICAZ</strong> naquele território.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 03 FGV -->
+        <div class="exercise">
+          <p><strong>03. (FGV / OAB) Ao responder sobre o princípio da inércia jurisdicional em uma prova, um candidato afirmou que inércia significa a impossibilidade do processo estagnar ou parar. A afirmação do candidato está juridicamente correta? (Certo / Errado)</strong></p>
+          <details>
+            <summary>Ver gabarito comentado</summary>
+            <div class="gabarito">
+              <strong>Resposta: ERRADO.</strong> A afirmação confunde paralisação processual com inércia jurisdicional. O conceito técnico de inércia impõe que a jurisdição não se movimenta de ofício para iniciar a lide, necessitando obrigatoriamente de prévia <strong>provocação da parte interessada</strong> mediante a propositura da ação.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 04 FCC -->
+        <div class="exercise">
+          <p><strong>04. (FCC / Defensoria Pública) A competência para homologar sentença estrangeira e conceder exequatur a cartas rogatórias é do:</strong></p>
+          <p>A) Supremo Tribunal Federal, nos termos do Art. 102 da CF.<br>
+             B) Superior Tribunal de Justiça, conforme Art. 105, I, "i" da CF/88 (após EC 45/2004).<br>
+             C) Tribunal Regional Federal da 1ª Região.<br>
+             D) Ministério da Justiça, por se tratar de auxílio direto administrativo.</p>
+          <details>
+            <summary>Ver resposta gabaritada</summary>
+            <div class="gabarito">
+              <strong>Resposta: B.</strong> A EC nº 45/2004 transferiu a competência exclusiva de homologação de decisões estrangeiras do STF para o Superior Tribunal de Justiça (STJ).
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 11: RESUMÃO ULTRA RÁPIDO ══════════════════════════════ -->
+      <section id="resumao" class="section">
+        <div class="section-label">Módulo 11</div>
+        <div class="card" style="border-top: 5px solid var(--p-500); background: var(--p-50);">
+          <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Final)</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8;">
+            • <strong>Jurisdição:</strong> Função do Estado (Poder-Dever) que atua como "Legislador do Caso Concreto".<br>
+            • <strong>7 Características:</strong> Substitutividade, Definitividade, Imperatividade, Inafastabilidade (Art. 5º XXXV CF), Indelegabilidade, Inércia e Investidura.<br>
+            • <strong>Inércia da Jurisdição:</strong> Exige provocação prévia da parte (não confundir com demorar para andar).<br>
+            • <strong>Contenciosa vs Voluntária:</strong> Contenciosa tem lide e favorece um; Voluntária (Art. 719) é administração de interesses e beneficia ambos.<br>
+            • <strong>Homologação no STJ:</strong> Desde a EC 45/04. Não exige mais trânsito em julgado (basta ser EFICAZ no país de origem - Art. 963 III).<br>
+            • <strong>Execução da Sentença Estrangeira:</strong> Feita na Justiça Federal de 1ª Instância (não no STJ!).<br>
+            • <strong>Auxílio Direto:</strong> Tramita diretamente entre Autoridades Centrais (Ministério da Justiça), dispensando homologação no STJ.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Core Scripts do Portal Hub -->
+  <script src="../../portal-core.js"></script>
+</body>
+</html>
