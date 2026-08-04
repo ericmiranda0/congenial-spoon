@@ -171,7 +171,7 @@ new_html = """
       <div class="qp-definicao">Resumo Supremo: Comparação Transmissão</div>
       <div class="qp-cols">
         <div class="qp-col">
-          <h4>CESSÃO DE CRÉDITO</h4>
+          <h3>CESSÃO DE CRÉDITO</h3>
           <ol>
             <li>Substituição no Polo Ativo</li>
             <li>Consentimento do Cedido: <strong>Dispensável</strong></li>
@@ -180,7 +180,7 @@ new_html = """
           </ol>
         </div>
         <div class="qp-col">
-          <h4>ASSUNÇÃO DE DÍVIDA</h4>
+          <h3>ASSUNÇÃO DE DÍVIDA</h3>
           <ol>
             <li>Substituição no Polo Passivo</li>
             <li>Consentimento do Credor: <strong>Indispensável</strong></li>

@@ -15,8 +15,8 @@ for root, _, files in os.walk(directory):
             content = re.sub(r'</h3>', '</h3>', content)
             
             # Replace h5 with h4
-            content = re.sub(r'<h4\b', '<h3', content)
-            content = re.sub(r'</h4>', '</h3>', content)
+            content = re.sub(r'<h3\b', '<h3', content)
+            content = re.sub(r'</h3>', '</h3>', content)
             
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(content)

@@ -323,6 +323,79 @@
 
         [data-theme="dark"] .subject-icon { background: rgba(255,255,255,0.05); }
 
+        /* ═══════════════════════════════════════════════════════ */
+        /* SUB-TABS DENTRO DOS CARDS MODULARES                    */
+        /* ═══════════════════════════════════════════════════════ */
+        .subject-tabs-nav {
+            display: flex;
+            gap: 0.35rem;
+            margin-bottom: 1.25rem;
+            background: rgba(15, 23, 42, 0.04);
+            padding: 4px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .subject-tabs-nav {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .subject-tab-btn {
+            flex: 1;
+            padding: 0.45rem 0.65rem;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .subject-tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        [data-theme="dark"] .subject-tab-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .subject-tab-btn.active {
+            background: var(--bg-card);
+            color: var(--subject-color);
+            box-shadow: var(--shadow-sm);
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .subject-tab-btn.active {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeInTab 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeInTab {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .empty-state {
             text-align: center;
             padding: 4rem;
@@ -410,13 +483,15 @@
                 letter-spacing: 0.5px;
             }
 
-            /* Esconde conteúdo interno original no mobile */
+            /* Esconde conteúdo interno original (desktop) no mobile */
             .subject-card > h3,
             .subject-card > p,
             .subject-card > .subject-icon,
+            .subject-card > .subject-tabs-nav,
+            .subject-card > .tab-panel,
             .subject-card > .summary-links-list,
             .subject-card > .card-footer {
-                display: none;
+                display: none !important;
             }
 
             /* Painel expandido */
@@ -631,7 +706,7 @@
                 </div>
                 <a href="subjects/constitucional/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
             </div>
-            <!-- Desktop (original) -->
+            <!-- Desktop -->
             <div class="subject-icon">🏛️</div>
             <h3>Constitucional II</h3>
             <p>Organização do Estado, partilha de competências e Comissões Parlamentares de Inquérito (CPI).</p>
@@ -655,15 +730,63 @@
             </div>
         </div>
 
-        <!-- CIVIL II -->
-        <div class="subject-card color-civil" data-category="privado" data-tags="civil obrigaçoes contratos solidariedade dar fazer inadimplemento">
+        <!-- DIREITO CIVIL (MÓDULO UNIFICADO) -->
+        <div class="subject-card color-civil" data-category="privado" data-tags="civil civil2 civil3 obrigaçoes contratos solidariedade dar fazer inadimplemento responsabilidade">
+            <!-- Mobile Thumbnail -->
             <div class="mobile-thumb">
                 <div class="subject-icon">⚖️</div>
-                <span class="thumb-title">Direito Civil II</span>
-                <span class="thumb-count">2 resumos</span>
+                <span class="thumb-title">Direito Civil</span>
+                <span class="thumb-count">2 resumos • 2 módulos</span>
                 <button class="mobile-close-btn" aria-label="Fechar">✕</button>
             </div>
+
+            <!-- Mobile Expand Panel -->
             <div class="mobile-expand-panel">
+                <div class="subject-tabs-nav">
+                    <button class="subject-tab-btn active" data-tab="civil-2-mob">Civil II</button>
+                    <button class="subject-tab-btn" data-tab="civil-3-mob">Civil III</button>
+                </div>
+
+                <div id="civil-2-mob" class="tab-panel active">
+                    <div class="summary-links-list">
+                        <a href="subjects/civil-ii/teoria-geral-obrigacoes.html" class="summary-link-item">
+                            <span class="link-icon">📜</span>
+                            <span class="link-title">Teoria Geral das Obrigações</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="subjects/civil-ii/extincao-obrigacao-responsabilidade.html" class="summary-link-item">
+                            <span class="link-badge">Novo</span>
+                            <span class="link-icon">⚖️</span>
+                            <span class="link-title">Transmissão &amp; Extinção das Obrigações e Responsabilidade Civil</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                    <a href="subjects/civil-ii/index.html" class="mobile-hub-link">Ver Painel de Civil II →</a>
+                </div>
+
+                <div id="civil-3-mob" class="tab-panel" style="display:none;">
+                    <div class="summary-links-list">
+                        <div class="summary-link-item" style="opacity: 0.8; cursor: default;">
+                            <span class="link-badge" style="background: linear-gradient(135deg, #64748b, #475569);">Em Breve</span>
+                            <span class="link-icon">📚</span>
+                            <span class="link-title">Resumos de Direito Civil III em breve</span>
+                        </div>
+                    </div>
+                    <a href="subjects/civil-ii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="subject-icon">⚖️</div>
+            <h3>Direito Civil</h3>
+            <p>Teoria Geral das Obrigações, classificação, transmissão, extinção, responsabilidade civil e futuros contratos.</p>
+            
+            <div class="subject-tabs-nav">
+                <button class="subject-tab-btn active" data-tab="civil-2-desk">Civil II</button>
+                <button class="subject-tab-btn" data-tab="civil-3-desk">Civil III</button>
+            </div>
+
+            <div id="civil-2-desk" class="tab-panel active">
                 <div class="summary-links-list">
                     <a href="subjects/civil-ii/teoria-geral-obrigacoes.html" class="summary-link-item">
                         <span class="link-icon">📜</span>
@@ -677,28 +800,129 @@
                         <span class="link-arrow">→</span>
                     </a>
                 </div>
-                <a href="subjects/civil-ii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
-            </div>
-            <div class="subject-icon">⚖️</div>
-            <h3>Direito Civil II</h3>
-            <p>Teoria Geral das Obrigações, classificação das obrigações, relações e efeitos contratuais.</p>
-            
-            <div class="summary-links-list">
-                <a href="subjects/civil-ii/teoria-geral-obrigacoes.html" class="summary-link-item">
-                    <span class="link-icon">📜</span>
-                    <span class="link-title">Teoria Geral das Obrigações</span>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a href="subjects/civil-ii/extincao-obrigacao-responsabilidade.html" class="summary-link-item">
-                    <span class="link-badge">Novo</span>
-                    <span class="link-icon">⚖️</span>
-                    <span class="link-title">Transmissão &amp; Extinção das Obrigações e Responsabilidade Civil</span>
-                    <span class="link-arrow">→</span>
-                </a>
+
+                <div class="card-footer">
+                    <a href="subjects/civil-ii/index.html" class="subject-hub-link">Ver Painel de Civil II <span>→</span></a>
+                </div>
             </div>
 
-            <div class="card-footer">
-                <a href="subjects/civil-ii/index.html" class="subject-hub-link">Ver Painel da Matéria <span>→</span></a>
+            <div id="civil-3-desk" class="tab-panel" style="display:none;">
+                <div class="summary-links-list">
+                    <div class="summary-link-item" style="opacity: 0.8; cursor: default;">
+                        <span class="link-badge" style="background: linear-gradient(135deg, #64748b, #475569);">Em Breve</span>
+                        <span class="link-icon">📚</span>
+                        <span class="link-title">Resumos de Direito Civil III em breve</span>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Módulo em breve</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIREITO PENAL (MÓDULO UNIFICADO: PENAL II & PENAL III) -->
+        <div class="subject-card color-penal" data-category="criminais" data-tags="penal penal2 penal3 crime punição teoria concurso execuçao material formal continuado sursis livramento homicidio crimes pessoa vida simples privilegiado qualificado culposo ultraviolencia feminicidio vicaricidio suicidio infanticidio aborto">
+            <!-- Mobile Thumbnail -->
+            <div class="mobile-thumb">
+                <div class="subject-icon">⛓️</div>
+                <span class="thumb-title">Direito Penal</span>
+                <span class="thumb-count">4 resumos • 2 módulos</span>
+                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
+            </div>
+
+            <!-- Mobile Expand Panel -->
+            <div class="mobile-expand-panel">
+                <div class="subject-tabs-nav">
+                    <button class="subject-tab-btn active" data-tab="penal-2-mob">Penal II</button>
+                    <button class="subject-tab-btn" data-tab="penal-3-mob">Penal III</button>
+                </div>
+
+                <div id="penal-2-mob" class="tab-panel active">
+                    <div class="summary-links-list">
+                        <a href="subjects/penal-ii/conteudo/teoria-das-penas.html" class="summary-link-item">
+                            <span class="link-icon">⚖️</span>
+                            <span class="link-title">Teoria das Penas e Dosimetria</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="subjects/penal-ii/conteudo/concurso-execucao-efeitos-acao-punibilidade.html" class="summary-link-item">
+                            <span class="link-badge">Novo</span>
+                            <span class="link-icon">⛓️</span>
+                            <span class="link-title">Concurso, Execução, Efeitos, Ação &amp; Punibilidade</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                    <a href="subjects/penal-ii/index.html" class="mobile-hub-link">Ver Painel de Penal II →</a>
+                </div>
+
+                <div id="penal-3-mob" class="tab-panel" style="display:none;">
+                    <div class="summary-links-list">
+                        <a href="subjects/penal-iii/conteudo/crimes-contra-a-vida-homicidio.html" class="summary-link-item">
+                            <span class="link-badge">Novo</span>
+                            <span class="link-icon">⚖️</span>
+                            <span class="link-title">Crimes Contra a Vida: Homicídio</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="subjects/penal-iii/conteudo/feminicidio-vicaricidio-infanticidio-aborto.html" class="summary-link-item">
+                            <span class="link-badge">Novo</span>
+                            <span class="link-icon">⚖️</span>
+                            <span class="link-title">Feminicídio, Vicaricídio, Infanticídio e Aborto</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                    <a href="subjects/penal-iii/index.html" class="mobile-hub-link">Ver Painel de Penal III →</a>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="subject-icon">⛓️</div>
+            <h3>Direito Penal</h3>
+            <p>Teoria Geral do Crime, culpabilidade, dosimetria da pena, crimes contra a pessoa, homicídio, feminicídio e tutelas penais.</p>
+            
+            <div class="subject-tabs-nav">
+                <button class="subject-tab-btn active" data-tab="penal-2-desk">Penal II</button>
+                <button class="subject-tab-btn" data-tab="penal-3-desk">Penal III</button>
+            </div>
+
+            <div id="penal-2-desk" class="tab-panel active">
+                <div class="summary-links-list">
+                    <a href="subjects/penal-ii/conteudo/teoria-das-penas.html" class="summary-link-item">
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Teoria das Penas e Dosimetria</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/penal-ii/conteudo/concurso-execucao-efeitos-acao-punibilidade.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⛓️</span>
+                        <span class="link-title">Concurso, Execução, Efeitos, Ação &amp; Punibilidade</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="card-footer">
+                    <a href="subjects/penal-ii/index.html" class="subject-hub-link">Ver Painel de Penal II <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="penal-3-desk" class="tab-panel" style="display:none;">
+                <div class="summary-links-list">
+                    <a href="subjects/penal-iii/conteudo/crimes-contra-a-vida-homicidio.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Crimes Contra a Vida: Homicídio</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="subjects/penal-iii/conteudo/feminicidio-vicaricidio-infanticidio-aborto.html" class="summary-link-item">
+                        <span class="link-badge">Novo</span>
+                        <span class="link-icon">⚖️</span>
+                        <span class="link-title">Feminicídio, Vicaricídio, Infanticídio e Aborto</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="card-footer">
+                    <a href="subjects/penal-iii/index.html" class="subject-hub-link">Ver Painel de Penal III <span>→</span></a>
+                </div>
             </div>
         </div>
 
@@ -796,101 +1020,6 @@
             </div>
         </div>
 
-        <!-- PENAL II -->
-        <div class="subject-card color-penal" data-category="criminais" data-tags="penal crime punição teoria concurso execuçao material formal continuado sursis livramento">
-            <div class="mobile-thumb">
-                <div class="subject-icon">⛓️</div>
-                <span class="thumb-title">Direito Penal II</span>
-                <span class="thumb-count">2 resumos</span>
-                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
-            </div>
-            <div class="mobile-expand-panel">
-                <div class="summary-links-list">
-                    <a href="subjects/penal-ii/conteudo/teoria-das-penas.html" class="summary-link-item">
-                        <span class="link-icon">⚖️</span>
-                        <span class="link-title">Teoria das Penas e Dosimetria</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                    <a href="subjects/penal-ii/conteudo/concurso-execucao-efeitos-acao-punibilidade.html" class="summary-link-item">
-                        <span class="link-badge">Novo</span>
-                        <span class="link-icon">⛓️</span>
-                        <span class="link-title">Concurso, Execução, Efeitos, Ação &amp; Punibilidade</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-                <a href="subjects/penal-ii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
-            </div>
-            <div class="subject-icon">⛓️</div>
-            <h3>Direito Penal II</h3>
-            <p>Teoria Geral do Crime, culpabilidade, dosimetria e aplicação da pena, concurso de crimes e benefícios.</p>
-            
-            <div class="summary-links-list">
-                <a href="subjects/penal-ii/conteudo/teoria-das-penas.html" class="summary-link-item">
-                    <span class="link-icon">⚖️</span>
-                    <span class="link-title">Teoria das Penas e Dosimetria</span>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a href="subjects/penal-ii/conteudo/concurso-execucao-efeitos-acao-punibilidade.html" class="summary-link-item">
-                    <span class="link-badge">Novo</span>
-                    <span class="link-icon">⛓️</span>
-                    <span class="link-title">Concurso, Execução, Efeitos, Ação &amp; Punibilidade</span>
-                    <span class="link-arrow">→</span>
-                </a>
-            </div>
-
-            <div class="card-footer">
-                <a href="subjects/penal-ii/index.html" class="subject-hub-link">Ver Painel da Matéria <span>→</span></a>
-            </div>
-        </div>
-
-        <!-- PENAL III -->
-        <div class="subject-card color-penal" data-category="criminais" data-tags="penal penal3 homicidio crimes pessoa vida simples privilegiado qualificado culposo ultraviolencia feminicidio vicaricidio suicidio infanticidio aborto">
-            <div class="mobile-thumb">
-                <div class="subject-icon">🗡️</div>
-                <span class="thumb-title">Direito Penal III</span>
-                <span class="thumb-count">2 resumos</span>
-                <button class="mobile-close-btn" aria-label="Fechar">✕</button>
-            </div>
-            <div class="mobile-expand-panel">
-                <div class="summary-links-list">
-                    <a href="subjects/penal-iii/conteudo/crimes-contra-a-vida-homicidio.html" class="summary-link-item">
-                        <span class="link-badge">Novo</span>
-                        <span class="link-icon">⚖️</span>
-                        <span class="link-title">Crimes Contra a Vida: Homicídio</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                    <a href="subjects/penal-iii/conteudo/feminicidio-vicaricidio-infanticidio-aborto.html" class="summary-link-item">
-                        <span class="link-badge">Novo</span>
-                        <span class="link-icon">⚖️</span>
-                        <span class="link-title">Feminicídio, Vicaricídio, Infanticídio e Aborto</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-                <a href="subjects/penal-iii/index.html" class="mobile-hub-link">Ver Painel da Matéria →</a>
-            </div>
-            <div class="subject-icon">🗡️</div>
-            <h3>Direito Penal III</h3>
-            <p>Crimes Contra a Pessoa, Homicídio, Feminicídio autônomo (Lei 14.994/2024), Vicaricídio (Lei 15.384/2026), Suicídio, Infanticídio e Aborto.</p>
-            
-            <div class="summary-links-list">
-                <a href="subjects/penal-iii/conteudo/crimes-contra-a-vida-homicidio.html" class="summary-link-item">
-                    <span class="link-badge">Novo</span>
-                    <span class="link-icon">⚖️</span>
-                    <span class="link-title">Crimes Contra a Vida: Homicídio</span>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a href="subjects/penal-iii/conteudo/feminicidio-vicaricidio-infanticidio-aborto.html" class="summary-link-item">
-                    <span class="link-badge">Novo</span>
-                    <span class="link-icon">⚖️</span>
-                    <span class="link-title">Feminicídio, Vicaricídio, Infanticídio e Aborto</span>
-                    <span class="link-arrow">→</span>
-                </a>
-            </div>
-
-            <div class="card-footer">
-                <a href="subjects/penal-iii/index.html" class="subject-hub-link">Ver Painel da Matéria <span>→</span></a>
-            </div>
-        </div>
         <!-- PSICOLOGIA JURÍDICA -->
         <div class="subject-card color-psicologia" data-category="interdisciplinar" data-tags="psicologia familia criminologia penal avaliacao saude mental pericia alienacao">
             <div class="mobile-thumb">
@@ -1083,6 +1212,34 @@
         });
     });
 
+    // Sub-tabs switcher functionality inside cards
+    document.querySelectorAll('.subject-tabs-nav').forEach(nav => {
+        nav.addEventListener('click', (e) => {
+            const btn = e.target.closest('.subject-tab-btn');
+            if (!btn) return;
+            e.stopPropagation(); // prevent triggering parent card expand logic
+            
+            const targetTabId = btn.getAttribute('data-tab');
+            const parentScope = btn.closest('.mobile-expand-panel') || btn.closest('.subject-card');
+            if (!parentScope) return;
+
+            // Update active state for buttons in this nav
+            nav.querySelectorAll('.subject-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Switch active panel within parent scope
+            parentScope.querySelectorAll('.tab-panel').forEach(panel => {
+                if (panel.id === targetTabId) {
+                    panel.classList.add('active');
+                    panel.style.display = 'block';
+                } else {
+                    panel.classList.remove('active');
+                    panel.style.display = 'none';
+                }
+            });
+        });
+    });
+
     // Search functionality
     searchInput.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase().trim();
@@ -1094,19 +1251,39 @@
             document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
         }
 
-        // 1. Filter main cards (subjects)
+        // 1. Filter main cards (subjects) and auto-switch tab if term matches inside hidden tab
         cards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const desc = card.querySelector('p').textContent.toLowerCase();
-            const tags = card.getAttribute('data-tags').toLowerCase();
+            const titleEl = card.querySelector('h3');
+            const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+            const descEl = card.querySelector('p');
+            const desc = descEl ? descEl.textContent.toLowerCase() : '';
+            const tags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').toLowerCase() : '';
             
             let summaryMatch = false;
-            const summaryLinks = card.querySelectorAll('.link-title');
-            summaryLinks.forEach(link => {
+            let matchingTabId = null;
+
+            card.querySelectorAll('.tab-panel').forEach(panel => {
+                const links = panel.querySelectorAll('.link-title');
+                links.forEach(link => {
+                    if (link.textContent.toLowerCase().includes(term)) {
+                        summaryMatch = true;
+                        if (!matchingTabId) matchingTabId = panel.id;
+                    }
+                });
+            });
+
+            card.querySelectorAll('.summary-links-list > .summary-link-item .link-title').forEach(link => {
                 if (link.textContent.toLowerCase().includes(term)) {
                     summaryMatch = true;
                 }
             });
+
+            if (term.length >= 2 && matchingTabId) {
+                const targetBtn = card.querySelector(`.subject-tab-btn[data-tab="${matchingTabId}"]`);
+                if (targetBtn && !targetBtn.classList.contains('active')) {
+                    targetBtn.click();
+                }
+            }
 
             if (title.includes(term) || desc.includes(term) || tags.includes(term) || summaryMatch) {
                 card.style.display = 'flex';
@@ -1269,12 +1446,13 @@
                 }
             });
 
-            // Prevent link clicks from bubbling to the card toggle
-            card.querySelectorAll('.mobile-expand-panel a').forEach(link => {
-                link.addEventListener('click', (e) => {
+            // Prevent clicks inside the expanded panel (links, buttons, tabs) from bubbling to the card toggle
+            const expandPanel = card.querySelector('.mobile-expand-panel');
+            if (expandPanel) {
+                expandPanel.addEventListener('click', (e) => {
                     e.stopPropagation();
                 });
-            });
+            }
         });
     })();
 </script>
