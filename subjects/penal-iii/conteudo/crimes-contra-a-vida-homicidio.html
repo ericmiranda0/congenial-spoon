@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal III — Crimes Contra a Vida: Homicídio (Art. 121 CP) | Premium Learning</title>
+
+  <!-- Typography: Outfit, Lora, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      padding: 60px 20px 50px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
+    }
+
+    /* Polished Spacing System */
+    main {
+      padding-top: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    /* Polished Cards & Grids */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--p-500);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.blue {
+      border-top-color: #3B82F6;
+    }
+
+    /* Polished Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .artigo:hover {
+      border-color: var(--p-500);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      user-select: none;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.2rem;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.25rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #1F2937;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(239, 68, 68, 0.08);
+      color: #F3F4F6;
+    }
+
+    /* Callout Boxes */
+    .exam-tip, .pitfall {
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exam-tip {
+      background: #FFFBEB;
+      border: 1px solid #FEF3C7;
+    }
+
+    .pitfall {
+      background: #FEF2F2;
+      border: 1px solid #FEE2E2;
+    }
+
+    [data-theme="dark"] .exam-tip {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    [data-theme="dark"] .pitfall {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      color: white;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .exam-tip .box-label {
+      background: #D97706;
+    }
+
+    .pitfall .box-label {
+      background: #EF4444;
+    }
+
+    /* Polished Tables */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 1.1rem 1.25rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: rgba(239, 68, 68, 0.03);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 1.5rem;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-main);
+    }
+
+    /* Flashcards Grid */
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.75rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .flashcard:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flashcard-header {
+      font-weight: 700;
+      color: var(--p-600);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* Mindmap Box */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 2.25rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      box-shadow: var(--shadow-md);
+      border: 1px solid #1E293B;
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mm-l1 {
+      margin-left: 1.25rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .mm-l2 {
+      margin-left: 2.5rem;
+      color: #94A3B8;
+      font-size: 0.88rem;
+    }
+
+    /* Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .exercise:hover {
+      border-color: var(--p-500);
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+      color: #059669;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HERO HEADER -->
+  <header>
+    <div class="container">
+      <div class="badge badge-penal">Material Didático · Direito Penal III</div>
+      <h1>Crimes Contra a Vida: Homicídio</h1>
+      <div class="subtitle">Guia Completo — Do Homicídio Simples ao Privilegiado, Qualificado, Culposo e Inovações da Lei 15.358/2026</div>
+      <div class="meta">
+        <span>⚖️ Art. 121 do Código Penal</span>
+        <span>📚 Parte Especial</span>
+        <span>🛡️ Foco em Concursos de Alto Nível</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">Módulo 1: Simples e Privilegiado</a>
+        <a href="#modulo2" class="nav-item">Módulo 2: Qualificadoras Clássicas</a>
+        <a href="#modulo3" class="nav-item">Módulo 3: Vulneráveis &amp; Ultraviolência</a>
+        <a href="#modulo4" class="nav-item">Módulo 4: Culposo &amp; Perdão Judicial</a>
+        <a href="#comparativos" class="nav-item">Comparativos</a>
+        <a href="#mapa-mental" class="nav-item">Mapa Mental</a>
+        <a href="#revisao-ativa" class="nav-item">Revisão Ativa</a>
+        <a href="#mnemonicos" class="nav-item">Mnemônicos</a>
+        <a href="#resumao" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema escuro/claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div class="summary-card" id="top">
+        <h2>📋 Sumário Interativo</h2>
+        <a href="#objetivos"><span>🎯</span> 00. Objetivos de Aprendizagem</a>
+        <a href="#modulo1"><span>⚖️</span> 01. Homicídio Simples e Privilegiado (Art. 121, caput e § 1º)</a>
+        <a href="#modulo2"><span>🔥</span> 02. Homicídio Qualificado: Qualificadoras Subjetivas e Objetivas (§ 2º, I a VIII)</a>
+        <a href="#modulo3"><span>🛡️</span> 03. Homicídio Contra Menor, em Escolas e por Ultraviolência (§§ 2º-B, 2º-C, 2º-D)</a>
+        <a href="#modulo4"><span>⚠️</span> 04. Homicídio Culposo, Causas de Aumento e Perdão Judicial (§§ 3º a 6º)</a>
+        <a href="#comparativos"><span>📊</span> 05. Quadros Comparativos e Sistematização</a>
+        <a href="#timeline"><span>⏳</span> 06. Linha do Tempo &amp; Evolução Legislativa</a>
+        <a href="#mapa-mental"><span>🧠</span> 07. Mapa Mental em Bloco</a>
+        <a href="#revisao-ativa"><span>📝</span> 08. Revisão Ativa (Questões Inéditas &amp; Comentadas)</a>
+        <a href="#mnemonicos"><span>💡</span> 09. Mnemônicos &amp; Fórmulas de Memorização</a>
+        <a href="#resumao"><span>🚀</span> 10. Resumo Final de 1 Página (Ultra Rápido)</a>
+      </div>
+
+      <!-- ══════════════════════════════ 00. OBJETIVOS ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <p>Ao concluir o estudo deste material didático de alto nível, você estará plenamente capacitado a:</p>
+        <ul>
+          <li>Compreender a estrutura dogmática do crime de homicídio no Direito Penal brasileiro (Art. 121 CP);</li>
+          <li>Diferenciar com precisão o <strong>homicídio simples</strong>, o <strong>homicídio privilegiado</strong> (causa de diminuição de pena) e o <strong>homicídio qualificado</strong>;</li>
+          <li>Dominar as qualificadoras de ordem subjetiva e objetiva (§ 2º, I a X) e suas implicações na Hediondez (Lei 8.072/90);</li>
+          <li>Analisar as qualificadoras e majorantes mais recentes inseridas no Código Penal, inclusive as inovações relativas a menores de 14 anos, instituições de ensino e organizações ultraviolentas (Lei 15.358/2026);</li>
+          <li>Identificar os critérios de incidência do <strong>homicídio culposo</strong>, suas majorantes específicas e o cabimento do <strong>Perdão Judicial</strong> (§ 5º);</li>
+          <li>Resolver questões de provas e concursos públicos das bancas mais exigentes (CEBRASPE, FGV, FCC).</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════════ 01. MÓDULO 1 ══════════════════════════════ -->
+      <section id="modulo1" class="section">
+        <div class="section-label">Módulo 01</div>
+        <h2>Homicídio Simples e Homicídio Privilegiado (Art. 121, caput e § 1º)</h2>
+
+        <!-- Explicações Multinível -->
+        <div class="card gold">
+          <h3>💡 Nível 1: Explicação Introdutória (Linguagem Direta)</h3>
+          <p>O homicídio ocorre quando alguém tira a vida de outra pessoa. A regra geral ("matar alguém") é o homicídio simples, punido com prisão de 6 a 20 anos. Porém, se o crime for cometido por um motivo socialmente nobre (como defender a comunidade) ou de compaixão (valor moral), ou ainda em um momento de fúria incontrolável logo após ser provocado injustamente pela vítima, o juiz reduz a pena. Isso é o <strong>homicídio privilegiado</strong>.</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 15px;">
+          <h3>📘 Nível 2: Explicação Técnica (Graduação e OAB)</h3>
+          <p>O bem jurídico tutelado primário é a <strong>vida humana extrauterina</strong> (que se inicia com o parto/rompimento da bolsa amniótica). Trata-se de crime comum, de forma livre, material e instantâneo de efeitos permanentes. O § 1º do Art. 121 não cria um tipo derivado autônomo, mas sim uma <strong>causa minorante (causa de diminuição de pena)</strong> de incidência obrigatória na 3ª fase da dosimetria da pena (1/6 a 1/3).</p>
+        </div>
+
+        <div class="card" style="margin-top: 15px; border-top-color: var(--p-700);">
+          <h3>🏛️ Nível 3: Aprofundamento para Concursos de Alto Nível</h3>
+          <p><strong>Natureza Jurídica do § 1º:</strong> Apesar da nomenclatura doutrinária tradicional "homicídio privilegiado", trata-se tecnicamente de causa especial de diminuição de pena. As hipóteses são:</p>
+          <ul>
+            <li><strong>Relevante Valor Social:</strong> Motivo que atende aos interesses da coletividade (ex: matar o traidor da pátria em guerra, matar perigoso bandido que aterroriza a comunidade - <i>atenção à legítima defesa!</i>);</li>
+            <li><strong>Relevante Valor Moral:</strong> Motivo decorrente de sentimento nobre e individual (ex: eutanásia por compaixão perante sofrimento insuportável de parente);</li>
+            <li><strong>Domínio de Violenta Emoção:</strong> Requer 3 requisitos cumulativos: (a) emoção intensa (<i>domínio</i>, não mera influência); (b) provocação <i>injusta</i> da vítima; (c) reação <i>imediata</i> (imediaticidade temporária: "logo em seguida").</li>
+          </ul>
+        </div>
+
+        <!-- Lei Seca Interativa -->
+        <h3>⚖️ Lei Seca Interativa</h3>
+        <details class="artigo">
+          <summary>Artigo 121, caput e § 1º do Código Penal</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 121.</strong> Matar alguem:</p>
+            <p>Pena - <span class="kw">reclusão, de seis a vinte anos</span>.</p>
+            <p><strong>Caso de diminuição de pena</strong></p>
+            <p><strong>§ 1º</strong> Se o agente comete o crime impelido por <span class="kw">motivo de relevante valor social ou moral</span>, ou sob o <span class="kw">domínio de violenta emoção</span>, <span class="kw">logo em seguida a injusta provocação da vítima</span>, o juiz pode reduzir a pena de <span class="kw">um sexto a um terço</span>.</p>
+          </div>
+        </details>
+
+        <!-- Boxes Informativos -->
+        <div class="exam-tip">
+          <span class="box-label">🎯 Dica de Prova (STF &amp; STJ)</span>
+          <p><strong>O privilégio é DIREITO SUBJETIVO do réu:</strong> Presentes os requisitos legais do § 1º, o juiz É OBRIGADO a reduzir a pena ("o juiz pode" tem valor de "deve"). Além disso, o homicídio privilegiado <strong>NÃO É HEDIONDO</strong>.</p>
+        </div>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Pegadinha de Concurso</span>
+          <p><strong>Domínio vs. Influência de Violenta Emoção:</strong> O <i>domínio</i> de violenta emoção logo após provocação injusta é a minorante do Art. 121, § 1º (diminui a pena de 1/6 a 1/3). A mera <i>influência</i> de violenta emoção é apenas atenuante genérica do Art. 65, III, "c" do CP.</p>
+        </div>
+
+        <!-- Exemplos Práticos -->
+        <div class="grid2">
+          <div class="card">
+            <h4>📱 Exemplo Cotidiano</h4>
+            <p>Um pai, desesperado ao ver o estuprador de sua filha debochando da família minutos após o crime, perde o controle e o ataca mortalmente.</p>
+          </div>
+          <div class="card">
+            <h4>⚖️ Exemplo Jurídico/Processual</h4>
+            <p>O Conselho de Sentença reconhece a tese defensiva de privilégio moral. O juiz presidente, na 3ª fase da dosimetria, aplica a fração de redução de 1/3 fundamentando na intensidade do motivo moral.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 02. MÓDULO 2 ══════════════════════════════ -->
+      <section id="modulo2" class="section">
+        <div class="section-label">Módulo 02</div>
+        <h2>Homicídio Qualificado: Qualificadoras Subjetivas e Objetivas (§ 2º, I a VIII)</h2>
+
+        <div class="card gold">
+          <h3>💡 Nível 1: Explicação Introdutória</h3>
+          <p>O homicídio qualificado ocorre quando o crime é praticado com uma gravidade acentuada — seja pela motivação torpe/vil, pelo meio cruel utilizado (fogo, veneno, tortura) ou pelo modo de execução (emboscada, traição). A pena base salta para <strong>12 a 30 anos de reclusão</strong>, e o crime é considerado <strong>hediondo</strong>.</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 15px;">
+          <h3>📘 Nível 2: Classificação das Qualificadoras</h3>
+          <p>As qualificadoras do § 2º dividem-se em:</p>
+          <ul>
+            <li><strong>Qualificadoras Subjetivas (motivo):</strong> Incisos I (paga/recompensa/motivo torpe), II (motivo fútil), V (conexão teleológica ou consequencial com outro crime). Referem-se ao psiquismo do agente.</li>
+            <li><strong>Qualificadoras Objetivas (meios e modos de execução):</strong> Incisos III (meio insidioso/cruel/perigo comum: veneno, fogo, asfixia, tortura), IV (modo que dificulta/impossibilita a defesa: traição, emboscada, dissimulação), VIII (emprego de arma de fogo de uso restrito ou proibido).</li>
+          </ul>
+        </div>
+
+        <!-- Lei Seca Interativa -->
+        <h3>⚖️ Lei Seca Interativa</h3>
+        <details class="artigo">
+          <summary>Artigo 121, § 2º, I a VIII do Código Penal</summary>
+          <div class="lei-seca">
+            <p><strong>§ 2° Se o homicídio é cometido:</strong></p>
+            <p><strong>I -</strong> mediante <span class="kw">paga ou promessa de recompensa</span>, ou por outro <span class="kw">motivo torpe</span>;</p>
+            <p><strong>II -</strong> por <span class="kw">motivo futil</span>;</p>
+            <p><strong>III -</strong> com emprego de <span class="kw">veneno, fogo, explosivo, asfixia, tortura</span> ou outro meio insidioso ou cruel, ou de que possa resultar perigo comum;</p>
+            <p><strong>IV -</strong> à <span class="kw">traição, de emboscada, ou mediante dissimulação</span> ou outro recurso que dificulte ou torne impossivel a defesa do ofendido;</p>
+            <p><strong>V -</strong> para <span class="kw">assegurar a execução, a ocultação, a impunidade ou vantagem</span> de outro crime;</p>
+            <p><strong>VII -</strong> contra <span class="kw">autoridade ou agente</span> dos arts. 142 e 144 da CF, integrantes do sistema prisional e da Força Nacional, no exercício da função ou em decorrência dela, ou contra seu cônjuge, companheiro ou parente consanguíneo até o terceiro grau; ou contra membro do Poder Judiciário, MP, Defensoria Pública, Advocacia Pública ou oficial de justiça;</p>
+            <p><strong>VIII -</strong> com emprego de <span class="kw">arma de fogo de uso restrito ou proibido</span>:</p>
+            <p>Pena - <span class="kw">reclusão, de doze a trinta anos</span>.</p>
+          </div>
+        </details>
+
+        <!-- Doutrina & Jurisprudência Boxes -->
+        <div class="card" style="border-left: 5px solid #8B5CF6; margin: 20px 0;">
+          <h4>⚖️ Jurisprudência Fixada pelos Tribunais Superiores</h4>
+          <ul>
+            <li><strong>Incompatibilidade entre Motivo Torpe e Motivo Fútil:</strong> São mutuamente excludentes. Não é possível imputar ambas as qualificadoras motivacionais ao mesmo tempo.</li>
+            <li><strong>Possibilidade do Homicídio Qualificado-Privilegiado:</strong> É perfeitamente admitido pelo STF e STJ, DESDE QUE a qualificadora seja de natureza <strong>OBJETIVA</strong> (ex: homicídio cometido por motivo moral [privilégio] mediante emprego de asfixia [qualificadora objetiva]). <i>Importante: O homicídio qualificado-privilegiado NÃO é hediondo!</i></li>
+            <li><strong>Mandante x Torpeza na Paga:</strong> Na paga ou promessa de recompensa (homicídio mercantil), a torpeza é inerente ao mercenário (quem recebe). Em relação ao mandante, deve-se aferir a sua motivação pessoal específica.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 03. MÓDULO 3 ══════════════════════════════ -->
+      <section id="modulo3" class="section">
+        <div class="section-label">Módulo 03</div>
+        <h2>Homicídio contra Menores de 14 anos, em Escolas e por Ultraviolência (§§ 2º-B, 2º-C, 2º-D)</h2>
+
+        <div class="card gold">
+          <h3>💡 Nível 1: Explicação Introdutória</h3>
+          <p>O legislador criou qualificadoras e causas de aumento extremas para proteger populações vulneráveis e ambientes escolares, além de punir severamente crimes cometidos no contexto de milícias e facções criminosas ultraviolentas.</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 15px;">
+          <h3>📘 Nível 2: Inovações Legislativas Recentíssimas (Lei 15.358/2026)</h3>
+          <p>Além da proteção aos menores de 14 anos (qualificadora do § 2º, IX) e em instituições de ensino (§ 2º, X), o Código Penal incluiu o § 2º-D, estabelecendo pena de <strong>20 a 40 anos de reclusão</strong> para homicídios dolosos cometidos por integrantes de organizações criminosas ultraviolentas, grupos paramilitares ou milícias privadas.</p>
+        </div>
+
+        <!-- Lei Seca Interativa -->
+        <h3>⚖️ Lei Seca Interativa</h3>
+        <details class="artigo">
+          <summary>Artigo 121, §§ 2º-B, 2º-C e 2º-D do Código Penal</summary>
+          <div class="lei-seca">
+            <p><strong>§ 2º-B.</strong> A pena do homicídio contra <span class="kw">menor de 14 (quatorze) anos</span> é aumentada de:</p>
+            <p>I - <span class="kw">1/3 até a metade</span> se a vítima é pessoa com deficiência ou doença vulnerabilizante;</p>
+            <p>II - <span class="kw">2/3</span> se o autor é ascendente, padrasto/madrasta, tio, irmão, cônjuge, tutor, curador, preceptor ou empregador.</p>
+            <p>III - <span class="kw">2/3</span> se o crime for praticado em instituição de educação básica pública ou privada.</p>
+            <hr>
+            <p><strong>§ 2º-C.</strong> A pena do homicídio cometido nas dependências de <span class="kw">instituição de ensino</span> é aumentada de:</p>
+            <p>I - <span class="kw">1/3 até a metade</span> se a vítima for PcD ou com doença limitante;</p>
+            <p>II - <span class="kw">2/3</span> se o autor tem autoridade, é ascendente, preceptor, ou se é <span class="kw">professor ou funcionário da instituição</span>.</p>
+            <hr>
+            <p><strong>§ 2º-D.</strong> (Incluído pela Lei nº 15.358/2026) Se o homicídio doloso é cometido por integrante de <span class="kw">organização criminosa ultraviolenta, grupo paramilitar ou milícia privada</span>, no contexto de atuação ou para a consecução de suas condutas:</p>
+            <p>Pena - <span class="kw">reclusão, de 20 (vinte) a 40 (quarenta) anos</span>.</p>
+          </div>
+        </details>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Alerta Max de Prova</span>
+          <p><strong>Teto Máximo da Pena no Brasil:</strong> A sanção do § 2º-D (20 a 40 anos) atinge exatamente o novo limite máximo de cumprimento de pena privativa de liberdade previsto no Art. 75 do Código Penal (com redação dada pelo Pacote Anticrime, Lei 13.964/2019).</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 04. MÓDULO 4 ══════════════════════════════ -->
+      <section id="modulo4" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2>Homicídio Culposo, Causas de Aumento e Perdão Judicial (§§ 3º, 4º, 5º e 6º)</h2>
+
+        <div class="card gold">
+          <h3>💡 Nível 1: Explicação Introdutória</h3>
+          <p>No homicídio culposo, o agente não quer nem aceita o resultado morte, mas o produz por imprudência, negligência ou imperícia. A pena de detenção é de 1 a 3 anos. Se as consequências do crime afetarem o próprio autor de maneira tão devastadora que a sanção se torna inútil, o juiz concederá o <strong>Perdão Judicial</strong> e extinguirá a punibilidade.</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 15px;">
+          <h3>📘 Nível 2: Majorantes e Perdão Judicial em Detalhes</h3>
+          <p><strong>Majorantes no Culposo (+ 1/3):</strong> Inobservância de regra técnica de profissão/arte/ofício; omissão de socorro imediato; não minorar as consequências do ato; fuga para evitar prisão em flagrante.</p>
+          <p><strong>Majorantes no Doloso (+ 1/3):</strong> Crime praticado contra menor de 14 anos ou maior de 60 anos (idoso).</p>
+          <p><strong>Majorante de Milícia / Grupo de Extermínio (§ 6º):</strong> Aumento de 1/3 até metade se praticado por milícia privada sob pretexto de segurança ou grupo de extermínio.</p>
+        </div>
+
+        <!-- Lei Seca Interativa -->
+        <h3>⚖️ Lei Seca Interativa</h3>
+        <details class="artigo">
+          <summary>Artigo 121, §§ 3º, 4º, 5º e 6º do Código Penal</summary>
+          <div class="lei-seca">
+            <p><strong>Homicídio culposo</strong></p>
+            <p><strong>§ 3º</strong> Se o homicídio é culposo: Pena - <span class="kw">detenção, de um a três anos</span>.</p>
+            <p><strong>Aumento de pena</strong></p>
+            <p><strong>§ 4º</strong> No homicídio culposo, a pena é <span class="kw">aumentada de 1/3</span> se resulta de inobservância de regra técnica, ou se o agente deixa de prestar imediato socorro, não procura diminuir as consequências ou foge para evitar flagrante. Sendo doloso, aumenta-se de 1/3 se praticado contra <span class="kw">menor de 14 ou maior de 60 anos</span>.</p>
+            <p><strong>Perdão Judicial</strong></p>
+            <p><strong>§ 5º</strong> Na hipótese de homicídio culposo, o juiz poderá deixar de aplicar a pena, se as consequências da infração atingirem o próprio agente de forma tão grave que a sanção penal se torne desnecessária.</p>
+            <p><strong>§ 6º</strong> A pena é aumentada de <span class="kw">1/3 até a metade</span> se o crime for praticado por milícia privada ou grupo de extermínio.</p>
+          </div>
+        </details>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Pegadinha de Concurso: Perdão Judicial</span>
+          <p>1. O Perdão Judicial é exclusivo do homicídio <strong>CULPOSO</strong> (não cabe no doloso).<br>
+          2. A sentença que concede o perdão judicial é <strong>DECLARATÓRIA DA EXTINÇÃO DA PUNIBILIDADE</strong> (Súmula 18 do STJ), não subsistindo qualquer efeito condenatório nem reincidência!</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 05. QUADROS COMPARATIVOS ══════════════════════════════ -->
+      <section id="comparativos" class="section">
+        <h2>📊 Quadros Comparativos e Sistematização</h2>
+
+        <h3>Tabela 1: Homicídio Simples vs. Privilegiado vs. Qualificado</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Modalidade</th>
+              <th>Previsão Legal</th>
+              <th>Pena Base</th>
+              <th>Hediondez</th>
+              <th>Natureza Jurídica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Simples</strong></td>
+              <td>Art. 121, caput</td>
+              <td>6 a 20 anos (Reclusão)</td>
+              <td>Não (Salvo em atividade de grupo de extermínio)</td>
+              <td>Tipo incriminador fundamental</td>
+            </tr>
+            <tr>
+              <td><strong>Privilegiado</strong></td>
+              <td>Art. 121, § 1º</td>
+              <td>Redução de 1/6 a 1/3 na 3ª fase</td>
+              <td><strong>NUNCA HEDIONDO</strong></td>
+              <td>Causa especial de diminuição de pena</td>
+            </tr>
+            <tr>
+              <td><strong>Qualificado</strong></td>
+              <td>Art. 121, § 2º (I a X)</td>
+              <td>12 a 30 anos (20 a 40 no § 2º-D)</td>
+              <td><strong>SEMPRE HEDIONDO</strong> (Lei 8.072/90)</td>
+              <td>Tipo derivado qualificado</td>
+            </tr>
+            <tr>
+              <td><strong>Qualificado-Privilegiado</strong></td>
+              <td>Art. 121, § 1º c/c § 2º (qualif. objetiva)</td>
+              <td>Pena da qualificadora (12-30) menos 1/6 a 1/3</td>
+              <td><strong>NÃO HEDIONDO</strong></td>
+              <td>Concurso de circunstâncias no mesmo fato</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Tabela 2: Qualificadoras Subjetivas vs. Qualificadoras Objetivas</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Qualificadoras Subjetivas</th>
+              <th>Qualificadoras Objetivas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Incisos do § 2º</strong></td>
+              <td>I (Torpe/Paga), II (Fútil), V (Teleológica/Consequencial)</td>
+              <td>III (Veneno/Fogo/Tortura/Cruel), IV (Traição/Emboscada), VIII (Arma de fogo restrita/proibida)</td>
+            </tr>
+            <tr>
+              <td><strong>Comunicabilidade no Concurso de Agentes (Art. 30 CP)</strong></td>
+              <td><strong>NÃO SE COMUNICAM</strong> aos coautores/participes, salvo se estes também agirem pelo mesmo motivo.</td>
+              <td><strong>COMUNICAM-SE</strong> aos coautores se ingressaram na esfera de conhecimento (dolo) do agente.</td>
+            </tr>
+            <tr>
+              <td><strong>Compatibilidade com o Privilegio (§ 1º)</strong></td>
+              <td><strong>INCOMPATÍVEIS</strong> (não há como motivo ser nobre e torpe/fútil simultaneamente).</td>
+              <td><strong>COMPATÍVEIS</strong> (permite homicídio qualificado-privilegiado).</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════ 06. LINHA DO TEMPO ══════════════════════════════ -->
+      <section id="timeline" class="section">
+        <h2>⏳ Linha do Tempo: Evolução Legislativa do Homicídio no Brasil</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>1940: Código Penal Original (Decreto-Lei 2.848/40)</h4>
+            <p>Previsão inicial do homicídio simples, privilegiado, qualificado (I a V) e culposo com perdão judicial.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2015: Lei do Feminicídio (Lei 13.104/15) &amp; Licitação Policial (Lei 13.142/15)</h4>
+            <p>Inclusão do homicídio funcional (inciso VII - agentes de segurança pública) e do feminicídio (inciso VI).</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2019: Pacote Anticrime (Lei 13.964/19)</h4>
+            <p>Inclusão do homicídio com arma de fogo de uso restrito ou proibido (inciso VIII) e aumento do teto da pena para 40 anos (Art. 75 CP).</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2022: Lei Henry Borel (Lei 14.344/22)</h4>
+            <p>Criação da qualificadora contra menor de 14 anos (inciso IX) e majorantes severas (§ 2º-B).</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2026: Lei de Proteção Escolar e Combate ao Crime Organizado Ultraviolento (Lei 15.358/2026)</h4>
+            <p>Criação do § 2º-D (pena de 20 a 40 anos para homicídio por milícias/facções ultraviolentas) e qualificadoras/majorantes em instituições de ensino (§ 2º-C).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 07. MAPA MENTAL ══════════════════════════════ -->
+      <section id="mapa-mental" class="section">
+        <h2>🧠 Mapa Mental — Homicídio (Art. 121 CP)</h2>
+        <div class="mindmap-box">
+          <div class="mm-root">⚖️ ART. 121 - HOMICÍDIO</div>
+          
+          <div class="mm-l1">1. HOMICÍDIO SIMPLES (caput)</div>
+          <div class="mm-l2">➔ Reclusão, 6 a 20 anos</div>
+          <div class="mm-l2">➔ Regra geral | Hediondo só se atuando em grupo de extermínio</div>
+          
+          <div class="mm-l1">2. HOMICÍDIO PRIVILEGIADO (§ 1º)</div>
+          <div class="mm-l2">➔ Redução de 1/6 a 1/3 (3ª fase)</div>
+          <div class="mm-l2">➔ Relevante valor social | Relevante valor moral | Domínio de violenta emoção (logo após provocação)</div>
+          <div class="mm-l2">➔ NUNCA é hediondo | Direito subjetivo do réu</div>
+          
+          <div class="mm-l1">3. HOMICÍDIO QUALIFICADO (§ 2º)</div>
+          <div class="mm-l2">➔ Reclusão, 12 a 30 anos (20 a 40 no § 2º-D) | SEMPRE HEDIONDO</div>
+          <div class="mm-l2">➔ Subjetivas: I (Torpe/Paga), II (Fútil), V (Assegurar outro crime)</div>
+          <div class="mm-l2">➔ Objetivas: III (Veneno/Fogo/Tortura), IV (Traição/Emboscada), VIII (Arma restrita/proibida)</div>
+          <div class="mm-l2">➔ Sujeitos/Locais Especialíssimos: VII (Agentes Segurança/Justiça), IX/§2º-B (Menor 14), X/§2º-C (Escolas), §2º-D (Ultraviolência/Milícia)</div>
+          
+          <div class="mm-l1">4. HOMICÍDIO CULPOSO (§ 3º)</div>
+          <div class="mm-l2">➔ Detenção, 1 a 3 anos</div>
+          <div class="mm-l2">➔ Majorantes (§ 4º): + 1/3 (inobservância regra técnica, omissão socorro, fuga)</div>
+          <div class="mm-l2">➔ PERDÃO JUDICIAL (§ 5º): Consequências gravíssimas ao próprio agente ➔ Extingue punibilidade (Súmula 18 STJ)</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 08. REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao-ativa" class="section">
+        <h2>📝 Revisão Ativa — Questões Inéditas &amp; Comentadas</h2>
+
+        <!-- Questão 1 (CEBRASPE) -->
+        <div class="exercise">
+          <p><strong>01. (Estilo CEBRASPE — Certo/Errado)</strong> O homicídio qualificado-privilegiado é juridicamente admitido pela jurisprudência do STF e do STJ, desde que a qualificadora seja de ordem objetiva. Nesses casos, o crime perde a natureza de delito hediondo.</p>
+          <details>
+            <summary>Ver Resposta Comentada</summary>
+            <div class="gabarito">
+              <p><strong>GABARITO: CERTO.</strong></p>
+              <p><strong>Fundamentação Legal e Jurisprudencial:</strong> O STF e o STJ consolidaram o entendimento de que é possível a convivência entre o privilégio (§ 1º, de natureza subjetiva) e qualificadoras de natureza objetiva (relativas aos meios e modos de execução, como o emprego de meio cruel ou dissimulação). O homicídio qualificado-privilegiado NÃO integra o rol taxativo de crimes hediondos da Lei 8.072/90.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 2 (FGV) -->
+        <div class="exercise">
+          <p><strong>02. (Estilo FGV — Caso Prático)</strong> João, motorista de aplicativo, por imprudência ao avançar o sinal vermelho, atropela e causa a morte de seu próprio filho único de 8 anos de idade, que estava no banco traseiro. Profundamente abalado, João desenvolve quadro severo de depressão e invalidez psíquica. Considerando o caso narrado, assinale a alternativa correta:</p>
+          <p>A) João responderá por homicídio culposo com aumento de pena de 1/3 por ser o filho menor de 14 anos.<br>
+          B) O juiz poderá conceder o perdão judicial a João, extinguindo-se a punibilidade do agente.<br>
+          C) O perdão judicial concedido a João manterá os efeitos secundários da condenação e a reincidência.<br>
+          D) O perdão judicial é incabível, pois a vítima era menor de 14 anos.</p>
+          <details>
+            <summary>Ver Resposta Comentada</summary>
+            <div class="gabarito">
+              <p><strong>GABARITO: B.</strong></p>
+              <p><strong>Fundamentação Legal:</strong> Art. 121, § 5º do Código Penal. Na hipótese de homicídio culposo, o juiz pode deixar de aplicar a pena se as consequências atinjam o agente de forma gravíssima. A sentença que concede o perdão judicial é meramente declaratória da extinção da punibilidade (Súmula 18 do STJ), não gerando reincidência nem maus antecedentes (afastando a alternativa C).</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 3 (FCC) -->
+        <div class="exercise">
+          <p><strong>03. (Estilo FCC — Múltipla Escolha)</strong> Nos termos do Art. 121 do Código Penal com suas recentes atualizações, assinale a alternativa INCORRETA:</p>
+          <p>A) A causa de aumento de pena do homicídio doloso praticado contra maior de 60 anos é de 1/3.<br>
+          B) O homicídio praticado por integrante de organização criminosa ultraviolenta possui pena de reclusão de 20 a 40 anos.<br>
+          C) As qualificadoras de ordem subjetiva transmitem-se automaticamente aos coautores do delito, segundo o Art. 30 do CP.<br>
+          D) O homicídio culposo possui pena de detenção, de 1 a 3 anos.</p>
+          <details>
+            <summary>Ver Resposta Comentada</summary>
+            <div class="gabarito">
+              <p><strong>GABARITO: C (Alternativa Incorreta solicitada pelo enunciado).</strong></p>
+              <p><strong>Fundamentação Legal:</strong> Art. 30 do Código Penal. As circunstâncias de caráter pessoal (subjetivas, como os motivos torpe e fútil) NÃO SE COMUNICAM, salvo quando elementares do crime. Portanto, a afirmação de que se transmitem automaticamente está errada.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 09. MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <h2>💡 Mnemônicos &amp; Fórmulas de Memorização</h2>
+        <div class="flashcard-grid">
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Mnemônico: V.I.P. do Privilégio</div>
+            <p>Para lembrar os 3 casos do § 1º (Privilegiado):</p>
+            <p><strong>V</strong>iolenta emoção (domínio + reação imediata)<br>
+            <strong>I</strong>nteresse público (Relevante valor Social)<br>
+            <strong>P</strong>essoal nobreza (Relevante valor Moral)</p>
+          </div>
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Mnemônico: M.E.I.O.S. Cruéis</div>
+            <p>Qualificadoras Objetivas do § 2º, III:</p>
+            <p><strong>V</strong>eneno | <strong>F</strong>ogo | <strong>E</strong>xplosivo | <strong>A</strong>sfixia | <strong>T</strong>ortura<br>
+            <i>(Recorde: "VF-EAT" - Meios insidiosos ou de perigo comum)</i></p>
+          </div>
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Regra de Ouro: Privilégio x Qualificadora</div>
+            <p>• <strong>Privilégio + Qualificadora Subjetiva</strong> = ❌ IMPOSSÍVEL<br>
+            • <strong>Privilégio + Qualificadora Objetiva</strong> = ✅ POSSÍVEL (Não Hediondo!)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 10. RESUMÃO FINAL ══════════════════════════════ -->
+      <section id="resumao" class="section">
+        <div class="card gold" style="border-width: 2px;">
+          <h2>🚀 Resumão Ultra Rápido (1-Page Essential)</h2>
+          <p>• <strong>Homicídio Simples (121, caput):</strong> 6 a 20 anos de reclusão. Só é hediondo em atividade de grupo de extermínio.<br>
+          • <strong>Homicídio Privilegiado (121, § 1º):</strong> Minorante de 1/6 a 1/3. Relevante valor social, moral ou domínio de violenta emoção (logo após provocação). NÃO é hediondo.<br>
+          • <strong>Homicídio Qualificado (121, § 2º):</strong> 12 a 30 anos (20 a 40 no § 2º-D). SEMPRE HEDIONDO. Dividido em subjetivas (I, II, V) e objetivas (III, IV, VIII).<br>
+          • <strong>Homicídio Qualificado-Privilegiado:</strong> Admitido se qualificadora for OBJETIVA. Perde a hediondez.<br>
+          • <strong>Crimes Contra Menores e Escolas (§§ 2º-B e 2º-C):</strong> Qualificadoras e aumentos de pena severos (1/3 até 2/3).<br>
+          • <strong>Organizações Ultraviolentas e Milícias (§ 2º-D):</strong> Pena especial de 20 a 40 anos de reclusão.<br>
+          • <strong>Homicídio Culposo (121, § 3º):</strong> 1 a 3 anos de detenção. Majorantes de 1/3 (regra técnica, omissão, fuga).<br>
+          • <strong>Perdão Judicial (121, § 5º):</strong> Exclusivo do culposo. Atinge gravemente o próprio agente. Sentença declaratória de extinção da punibilidade (Súmula 18 STJ).</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../../portal-core.js"></script>
+</body>
+
+</html>

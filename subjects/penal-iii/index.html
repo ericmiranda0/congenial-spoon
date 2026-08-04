@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Direito Penal II | Portal de Estudos Premium</title>
+  <title>Direito Penal III | Portal de Estudos Premium</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,7 +98,13 @@
       font-weight: 600;
       color: var(--p-500);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
     }
   </style>
 </head>
@@ -110,28 +116,26 @@
 
   <header>
     <div class="container">
-      <div class="badge">Matéria Acadêmica</div>
-      <h1>Direito Penal II</h1>
-      <div class="subtitle">Selecione um dos módulos abaixo para iniciar seus estudos avançados</div>
+      <div class="badge badge-penal">Matéria · Direito Penal III</div>
+      <h1>Painel de Direito Penal III</h1>
+      <div class="subtitle">Crimes contra a pessoa, patrimônio e dignidade sexual — Resumos Teóricos e Práticos</div>
       <div class="meta">
-        <span>⚖️ Ciências Criminais</span>
-        <span>📚 2 Resumos Disponíveis</span>
-        <span>🔥 Foco em Concursos</span>
+        <span>⚖️ Código Penal - Parte Especial</span>
+        <span>📚 Foco Concursos &amp; OAB</span>
       </div>
     </div>
   </header>
 
   <nav class="main-nav">
     <div class="container">
-      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal Hub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
       </a>
       <div class="nav-list">
-        <a href="#modulos" class="nav-item active">Módulos de Estudo</a>
+        <a href="../../index.html" class="nav-item">← Voltar ao Hub Principal</a>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
         <svg width="20" height="20" id="themeIcon"></svg>
@@ -140,44 +144,36 @@
   </nav>
 
   <main>
-    <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-      <div id="modulos">
-        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; border: none;">📚 Módulos Disponíveis</h2>
-        <p style="color: var(--text-muted); margin-bottom: 3rem; font-family: 'Inter', sans-serif;">Estude os temas fundamentais de Direito Penal II divididos em guias interativos de alto rendimento:</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
-          
-          <!-- MÓDULO 1: TEORIA DAS PENAS -->
-          <a href="conteudo/teoria-das-penas.html" class="subject-card">
-            <div class="subject-icon">⚖️</div>
-            <h3>Teoria das Penas</h3>
-            <p>Fundamento histórico, teorias da pena, individualização da pena, regimes de cumprimento e dosimetria trifásica aplicada.</p>
-            <div class="card-footer">
-              <span>Estudar Módulo</span>
-              <span>→</span>
-            </div>
-          </a>
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+      <div class="subjects-grid">
 
-          <!-- MÓDULO 2: CONCURSO, EXECUÇÃO, EFEITOS, AÇÃO & PUNIBILIDADE -->
-          <a href="conteudo/concurso-execucao-efeitos-acao-punibilidade.html" class="subject-card">
-            <span class="link-badge" style="position: absolute; top: 1rem; right: 1rem; background: linear-gradient(135deg, var(--p-500), var(--p-600)); color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif;">Consolidado</span>
-            <div class="subject-icon">⛓️</div>
-            <h3>Concurso, Execução, Efeitos, Ação &amp; Punibilidade</h3>
-            <p>Concurso de crimes, aberratio ictus/criminis, limites da pena, sursis, livramento condicional, efeitos da condenação, espécies de ação penal e extinção da punibilidade.</p>
-            <div class="card-footer">
-              <span>Estudar Módulo</span>
-              <span>→</span>
-            </div>
-          </a>
+        <!-- RESUMO 1: CRIMES CONTRA A VIDA: HOMICÍDIO -->
+        <a href="conteudo/crimes-contra-a-vida-homicidio.html" class="subject-card">
+          <div class="subject-icon">🗡️</div>
+          <h3>Crimes Contra a Vida: Homicídio</h3>
+          <p>Análise dogmática do Artigo 121 do CP: homicídio simples, privilegiado, qualificadoras subjetivas e objetivas, crimes em instituições de ensino, ultraviolência (Lei 15.358/2026), homicídio culposo e perdão judicial.</p>
+          <div class="card-footer">
+            <span>Acessar Resumo Completo</span>
+            <span>→</span>
+          </div>
+        </a>
 
-        </div>
+        <!-- RESUMO 2: FEMINICÍDIO, VICARICÍDIO, INFANTICÍDIO E ABORTO -->
+        <a href="conteudo/feminicidio-vicaricidio-infanticidio-aborto.html" class="subject-card">
+          <div class="subject-icon">⚖️</div>
+          <h3>Crimes Contra a Vida II: Feminicídio, Vicaricídio &amp; Aborto</h3>
+          <p>Análise detalhada dos Arts. 121-A a 128 do CP: Feminicídio autônomo (Lei 14.994/2024), Vicaricídio (Lei 15.384/2026), Induzimento/Auxílio ao Suicídio, Infanticídio sob estado puerperal e Modalidades de Aborto com excludentes legais.</p>
+          <div class="card-footer">
+            <span>Acessar Resumo Completo</span>
+            <span>→</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </main>
 
-  <div id="study-toolkit-bundle">
-    <script src="../../portal-core.js"></script>
-  </div>
+  <script src="../../portal-core.js"></script>
 </body>
 
 </html>

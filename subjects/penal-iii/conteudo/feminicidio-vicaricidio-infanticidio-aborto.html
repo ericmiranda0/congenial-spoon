@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal III — Feminicídio, Vicaricídio, Suicídio, Infanticídio e Aborto (Arts. 121-A a 128 CP) | Premium Learning</title>
+
+  <!-- Typography: Outfit, Lora, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      padding: 60px 20px 50px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
+    }
+
+    main {
+      padding-top: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #FCA5A5;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #F87171;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--p-500);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.blue { border-top-color: #3B82F6; }
+    .card.green { border-top-color: #10B981; }
+    .card.purple { border-top-color: #8B5CF6; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin: 1.25rem 0;
+      padding: 1rem 1.25rem;
+      transition: var(--transition);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #FCA5A5;
+    }
+
+    .artigo summary::-webkit-details-marker { display: none; }
+    
+    .artigo summary::before {
+      content: "⚖️ ";
+      margin-right: 0.5rem;
+    }
+
+    .artigo summary::after {
+      content: "▼";
+      font-size: 0.8rem;
+      transition: transform 0.3s;
+      color: var(--text-muted);
+    }
+
+    .artigo[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-main);
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(127, 29, 29, 0.2);
+      color: #F3F4F6;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #FEE2E2;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      color: #FEF2F2;
+      background: #991B1B;
+    }
+
+    /* Boxes Informativos */
+    .box-info {
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      position: relative;
+      border: 1px solid transparent;
+    }
+
+    .box-info .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .exam-tip {
+      background: #FFFBEB;
+      border-color: #FEF3C7;
+      color: #92400E;
+    }
+    .exam-tip .box-label { background: #D97706; }
+    [data-theme="dark"] .exam-tip { background: rgba(217, 119, 6, 0.15); border-color: rgba(217, 119, 6, 0.3); color: #FDE68A; }
+
+    .pitfall {
+      background: #FEF2F2;
+      border-color: #FEE2E2;
+      color: #991B1B;
+    }
+    .pitfall .box-label { background: #EF4444; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.3); color: #FCA5A5; }
+
+    .jurisprudence {
+      background: #F0FDF4;
+      border-color: #DCFCE7;
+      color: #166534;
+    }
+    .jurisprudence .box-label { background: #10B981; }
+    [data-theme="dark"] .jurisprudence { background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.3); color: #6EE7B7; }
+
+    .doctrine {
+      background: #F0F9FF;
+      border-color: #E0F2FE;
+      color: #075985;
+    }
+    .doctrine .box-label { background: #0284C7; }
+    [data-theme="dark"] .doctrine { background: rgba(2, 132, 199, 0.15); border-color: rgba(2, 132, 199, 0.3); color: #7DD3FC; }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Mindmap Box */
+    .mindmap-box {
+      background: #111827;
+      color: #F9FAFB;
+      padding: 2rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #EF4444;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .mm-l1 {
+      margin-left: 1.5rem;
+      color: #F59E0B;
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+
+    .mm-l2 {
+      margin-left: 3rem;
+      color: #9CA3AF;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      background: var(--bg-card);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 1.5rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-card);
+    }
+
+    .timeline-date {
+      font-weight: 800;
+      color: var(--p-500);
+      font-size: 0.9rem;
+    }
+
+    /* Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid #10B981;
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .flashcard-header {
+      font-weight: 800;
+      color: var(--p-600);
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- ══════════════════════════════ 1. CABEÇALHO (HERO) ══════════════════════════════ -->
+  <header>
+    <div class="container">
+      <div class="badge badge-penal">Material Didático · Direito Penal III</div>
+      <h1>Crimes Contra a Vida II</h1>
+      <div class="subtitle">Feminicídio, Vicaricídio, Suicídio/Automutilação, Infanticídio e Aborto</div>
+      <div class="meta" style="margin-top: 1.25rem;">
+        <span>⚖️ Arts. 121-A a 128 do Código Penal</span>
+        <span>📚 Foco Concursos &amp; OAB</span>
+        <span>🛡️ Legislação Atualizada (Leis 14.994/2024 e 15.384/2026)</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="../../../index.html" class="nav-item">Hub Principal</a>
+        <a href="../index.html" class="nav-item">Painel Penal III</a>
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">Feminicídio</a>
+        <a href="#modulo2" class="nav-item">Vicaricídio</a>
+        <a href="#modulo3" class="nav-item">Suicídio</a>
+        <a href="#modulo4" class="nav-item">Infanticídio</a>
+        <a href="#modulo5" class="nav-item">Aborto</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- ══════════════════════════════ 2. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+      <section id="objetivos" class="section">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <p>Ao finalizar este estudo aprofundado, você estará plenamente apto a:</p>
+        <ul>
+          <li>Compreender a transformação dogmática do <strong>Feminicídio</strong> em crime autônomo (Art. 121-A do CP) com a nova pena de 20 a 40 anos (Lei 14.994/2024);</li>
+          <li>Dominar o novo tipo penal do <strong>Vicaricídio</strong> (Art. 121-B do CP - Lei 15.384/2026) e a violência por ricochete;</li>
+          <li>Analisar o crime de <strong>Induzimento, Instigação ou Auxílio ao Suicídio ou à Automutilação</strong> (Art. 122 do CP), suas causas de aumento e qualificadoras;</li>
+          <li>Diferenciar com precisão o <strong>Infanticídio</strong> (Art. 123 do CP) de institutos afins como o Homicídio e o Aborto, dominando o conceito de estado puerperal;</li>
+          <li>Distinguir as espécies de <strong>Aborto</strong> (Arts. 124 a 128 do CP), suas formas qualificadas e as excludentes de punibilidade (aborto necessário e sentimental/humanitário).</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════════ LINHA DO TEMPO LEGISLATIVA ══════════════════════════════ -->
+      <section id="linha-do-tempo" class="section">
+        <h2>⏱️ Evolução Legislativa dos Crimes Contra a Vida</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">1940 - Código Penal (Decreto-Lei 2.848)</div>
+            <p>Previsão original dos tipos de Homicídio, Suicídio (auxílio), Infanticídio e Aborto.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2015 - Lei nº 13.104/2015</div>
+            <p>Criação do Feminicídio como qualificadora do crime de homicídio (antigo art. 121, § 2º, VI).</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2019 - Lei nº 13.968/2019</div>
+            <p>Reforma do Art. 122 para punir expressamente a incitação e auxílio à <strong>automutilação</strong> e condutas via redes sociais/grupos virtuais.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024 - Lei nº 14.994/2024</div>
+            <p><strong>Autonomização do Feminicídio (Art. 121-A do CP):</strong> Elevação da pena mínima para 20 anos e máxima para 40 anos, com novas majorantes e comunicação de circunstâncias a coautores.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026 - Lei nº 15.384/2026</div>
+            <p><strong>Tipificação do Vicaricídio (Art. 121-B do CP):</strong> Criminalização específica do assassinato de dependente/parentes para causar sofrimento indireto à mulher no contexto de violência doméstica.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 3. MÓDULO 1: FEMINICÍDIO (ART. 121-A) ══════════════════════════════ -->
+      <section id="modulo1" class="section">
+        <div class="section-label" style="color: var(--p-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Módulo 01</div>
+        <h2>Feminicídio (Art. 121-A do CP)</h2>
+
+        <!-- Níveis de Explicação -->
+        <div class="card gold">
+          <h3>🌱 Nível 1 — Explicação Didática (Introdução)</h3>
+          <p>O Feminicídio não é apenas matar uma mulher. É matar uma mulher <strong>por ser mulher</strong> — ou seja, motivado por menosprezo, discriminação de gênero ou no contexto de violência doméstica. Com as recentes alterações legais, o legislador tornou o Feminicídio um crime autônomo e extremamente grave, com pena mínima de 20 anos e máxima de 40 anos de prisão.</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 1rem;">
+          <h3>⚖️ Nível 2 — Explicação Técnica (Graduação)</h3>
+          <p>Trata-se de crime <strong>comum quanto ao sujeito ativo</strong> (pode ser praticado por homem ou mulher) e <strong>próprio quanto ao sujeito passivo</strong> (exige a condição de mulher, incluindo mulher trans segundo entendimento consolidado do STJ). O elemento subjetivo é o dolo (direto ou eventual). É crime material, que se consuma com a morte da vítima, admitindo tentativa.</p>
+        </div>
+
+        <div class="card purple" style="margin-top: 1rem;">
+          <h3>🔥 Nível 3 — Explicação Aprofundada (Concursos &amp; Magistratura)</h3>
+          <p>A Lei nº 14.994/2024 retirou o Feminicídio da estrutura de qualificadora do art. 121 e criou o <strong>Art. 121-A do Código Penal</strong> como tipo autônomo. A natureza jurídica das circunstâncias do § 1º (violência doméstica ou menosprezo/discriminação) é de <strong>elementar do tipo penal</strong>. Por se tratar de elementar de caráter objetivo/subjetivo tipificado expressamente, aplica-se o <strong>§ 3º do Art. 121-A</strong>: as circunstâncias elementares do § 1º <em>comunicam-se ao coautor ou partícipe</em> (exceção expressa ao art. 30 do CP).</p>
+        </div>
+
+        <!-- Lei Seca Interativa -->
+        <details class="artigo">
+          <summary>Art. 121-A do Código Penal — Feminicídio (Lei 14.994/2024)</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 121-A.</strong> Matar mulher por razões da condição do sexo feminino:</p>
+            <p>Pena – reclusão, de <span class="kw">20 (vinte) a 40 (quarenta) anos</span>.</p>
+            <p><strong>§ 1º</strong> Considera-se que há razões da condição do sexo feminino quando o crime envolve:</p>
+            <p>I – violência doméstica e familiar;</p>
+            <p>II – menosprezo ou discriminação à condição de mulher.</p>
+            <p><strong>§ 2º</strong> A pena do feminicídio é <span class="kw">aumentada de 1/3 (um terço) até a metade</span> se o crime é praticado:</p>
+            <p>I – durante a gestação, nos 3 (três) meses posteriores ao parto ou se a vítima é a mãe ou a responsável por criança, adolescente ou pessoa com deficiência de qualquer idade;</p>
+            <p>II – contra pessoa menor de 14 (catorze) anos, maior de 60 (sessenta) anos, com deficiência ou portadora de doenças degenerativas que acarretem condição limitante ou de vulnerabilidade física ou mental;</p>
+            <p>III – na presença física ou virtual de descendente ou de ascendente da vítima;</p>
+            <p>IV – em descumprimento das medidas protetivas de urgência previstas nos incisos I, II e III do caput do art. 22 da Lei nº 11.340/2006 (Lei Maria da Penha);</p>
+            <p>V – nas circunstâncias previstas nos incisos III, IV e VIII do § 2º do art. 121 deste Código.</p>
+            <p><strong>§ 3º Coautoria:</strong> Comunicam-se ao coautor ou partícipe as circunstâncias pessoais elementares do crime previstas no § 1º deste artigo.</p>
+          </div>
+        </details>
+
+        <!-- Boxes Informativos -->
+        <div class="box-info pitfall">
+          <span class="box-label">⚠️ Erro Comum em Provas</span>
+          <strong>Atenção ao limite máximo da pena:</strong> O limite geral do art. 75 do CP é de 40 anos, e o art. 121-A fixou a pena abstrata com teto de <strong>40 anos de reclusão</strong> (a maior pena cominada no CP brasileiro ao lado do Vicaricídio). Não confunda com a pena do homicídio qualificado antigo (12 a 30 anos)!
+        </div>
+
+        <div class="box-info exam-tip">
+          <span class="box-label">💡 Dica de Prova</span>
+          <strong>Feminicídio na Presença Virtual:</strong> O § 2º, III prevê aumento de pena se praticado na presença <em>física ou virtual</em> (ex: videochamada, live em rede social) de ascendente ou descendente. Extremamente cobrado em bancas como FGV e CEBRASPE!
+        </div>
+
+        <div class="box-info jurisprudence">
+          <span class="box-label">⚖️ Jurisprudência Fixada</span>
+          <strong>Aplicação a Mulheres Trans:</strong> O Superior Tribunal de Justiça (STJ) firmou o entendimento de que a Lei Maria da Penha e a tutela do Feminicídio aplicam-se às mulheres transgênero, independentemente de cirurgia de redesignação sexual ou alteração no registro civil (HC 665.464/SP).
+        </div>
+
+        <!-- Análise Sistemática (Respostas aos questionamentos dos slides) -->
+        <h3>📋 Quadro de Classificação Dogmática do Feminicídio</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Quesito Dogmático</th>
+                <th>Resposta Legal / Doutrinária</th>
+                <th>Fundamento Jurídico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cabe crime culposo?</strong></td>
+                <td>❌ Não. O tipo exige o dolo de matar ("matar mulher por razões da condição do sexo feminino"). Homicídio culposo permanece no Art. 121, § 3º.</td>
+                <td>Art. 121-A, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Crime material ou formal?</strong></td>
+                <td><strong>Material.</strong> Exige a ocorrência do resultado naturalístico (morte da vítima).</td>
+                <td>Art. 14, I, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Admite tentativa?</strong></td>
+                <td>✅ Sim. Sendo crime plurissubsistente, é perfeitamente admissível a fração de tentativa (Art. 14, II, CP).</td>
+                <td>Art. 14, II, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Crime comum ou próprio?</strong></td>
+                <td><strong>Comum quanto ao sujeito ativo</strong> (qualquer pessoa); <strong>Próprio quanto ao sujeito passivo</strong> (exige mulher).</td>
+                <td>Art. 121-A, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Competência para julgamento?</strong></td>
+                <td><strong>Tribunal do Júri</strong> (Justiça Estadual ou Federal, se praticado contra servidora federal em serviço).</td>
+                <td>Art. 5º, XXXVIII, "d", CF/88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Exemplos Práticos -->
+        <h3>💡 Exemplos Práticos</h3>
+        <div class="grid2">
+          <div class="card">
+            <h4>Exemplo Cotidiano</h4>
+            <p>Marido inconformado com o fim do relacionamento desfere golpes de faca contra a ex-esposa em sua residência. Configura feminicídio em razão do contexto de violência doméstica e familiar.</p>
+          </div>
+          <div class="card">
+            <h4>Exemplo de Concurso</h4>
+            <p>Agente contrata um pistoleiro mediante pagamento (motivo torpe/pago) para matar sua ex-companheira enquanto esta transmitia uma live (presença virtual dos filhos). Resposta: Art. 121-A, § 2º, III e V c/c § 3º (comunica-se a coautores).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 4. MÓDULO 2: VICARICÍDIO (ART. 121-B) ══════════════════════════════ -->
+      <section id="modulo2" class="section">
+        <div class="section-label" style="color: var(--p-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Módulo 02</div>
+        <h2>Vicaricídio (Art. 121-B do CP - Lei 15.384/2026)</h2>
+
+        <div class="card gold">
+          <h3>🌱 Nível 1 — Explicação Didática (O que é "Violência por Ricochete"?)</h3>
+          <p>O <strong>Vicaricídio</strong> é a conduta de matar um filho, pai, mãe ou dependente de uma mulher com a intenção deliberada de fazer essa mulher sofrer, puni-la ou controlá-la. A agressão não é voltada fisicamente contra a mulher, mas atinge a vida de quem ela ama para produzir destruição psicológica ("violência vicária" ou por ricochete).</p>
+        </div>
+
+        <div class="card blue" style="margin-top: 1rem;">
+          <h3>⚖️ Nível 2 — Explicação Técnica</h3>
+          <p>O tipo exige elemento subjetivo do tipo específico (dolo específico ou elemento transcendente): <em>"com o fim específico de causar-lhe sofrimento, punição ou controle"</em>. Sujeito passivo direto (quem morre) é o dependente/parente; sujeito passivo indireto/reflexo é a mulher vítima de violência doméstica.</p>
+        </div>
+
+        <details class="artigo">
+          <summary>Art. 121-B do Código Penal — Vicaricídio (Lei 15.384/2026)</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 121-B.</strong> Matar descendente, ascendente, dependente, enteado ou pessoa sob guarda ou responsabilidade direta da mulher, com o fim específico de causar-lhe sofrimento, punição ou controle, no contexto de violência doméstica e familiar:</p>
+            <p>Pena – reclusão, de <span class="kw">20 (vinte) a 40 (quarenta) anos</span>.</p>
+            <p><strong>Parágrafo único.</strong> A pena do vicaricídio é <span class="kw">aumentada de 1/3 (um terço) até a metade</span> se o crime for praticado:</p>
+            <p>I – na presença da mulher a quem se pretende causar sofrimento, punição ou controle;</p>
+            <p>II – contra criança ou adolescente ou pessoa idosa ou com deficiência;</p>
+            <p>III – em descumprimento de medida protetiva de urgência.</p>
+          </div>
+        </details>
+
+        <!-- Quesitos Dogmáticos Vicaricídio -->
+        <h3>📋 Quadro Dogmático do Vicaricídio</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Quesito Dogmático</th>
+                <th>Resposta Legal / Doutrinária</th>
+                <th>Fundamento Jurídico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cabe crime culposo?</strong></td>
+                <td>❌ Não. Exige dolo direto acompanhado de finalidade específica.</td>
+                <td>Art. 121-B, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Crime material ou formal?</strong></td>
+                <td><strong>Material.</strong> Exige o resultado morte do dependente.</td>
+                <td>Art. 14, I, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Admite tentativa?</strong></td>
+                <td>✅ Sim. É perfeitamente possível tentar matar o dependente sem conseguir a consumação.</td>
+                <td>Art. 14, II, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Crime comum ou próprio?</strong></td>
+                <td><strong>Próprio.</strong> Exige contexto de violência doméstica e relação de parentesco/dependência com a mulher.</td>
+                <td>Art. 121-B, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Competência para julgamento?</strong></td>
+                <td><strong>Tribunal do Júri.</strong> Crime doloso contra a vida.</td>
+                <td>Art. 5º, XXXVIII, "d", CF/88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 5. MÓDULO 3: INDUZIMENTO E AUXÍLIO AO SUICÍDIO (ART. 122) ══════════════════════════════ -->
+      <section id="modulo3" class="section">
+        <div class="section-label" style="color: var(--p-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Módulo 03</div>
+        <h2>Induzimento, Instigação ou Auxílio a Suicídio / Automutilação (Art. 122)</h2>
+
+        <div class="card gold">
+          <h3>🌱 Nível 1 — Explicação Didática</h3>
+          <p>O Art. 122 pune três condutas distintas de participação no ato de outra pessoa destruir a própria vida ou mutilar o próprio corpo: <strong>Induzir</strong> (criar a ideia), <strong>Instigar</strong> (reforçar ideia pré-existente) ou <strong>Prestar Auxílio Material</strong> (fornecer remédio, corda, instrumento).</p>
+        </div>
+
+        <details class="artigo">
+          <summary>Art. 122 do Código Penal — Induzimento, Instigação ou Auxílio ao Suicídio / Automutilação</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 122.</strong> Induzir ou instigar alguém a suicidar-se ou a praticar automutilação ou prestar-lhe auxílio material para que o faça:</p>
+            <p>Pena – reclusão, de <span class="kw">6 (seis) meses a 2 (dois) anos</span>.</p>
+            <p><strong>§ 1º</strong> Se da automutilação ou da tentativa de suicídio resulta lesão corporal de natureza grave ou gravíssima, nos termos dos §§ 1º e 2º do art. 129 deste Código: Pena – reclusão, de 1 (um) a 3 (três) anos.</p>
+            <p><strong>§ 2º</strong> Se o suicídio se consuma ou se da automutilação resulta morte: Pena – reclusão, de 2 (dois) a 6 (seis) anos.</p>
+            <p><strong>§ 3º A pena é duplicada:</strong> I – por motivo egoístico, torpe ou fútil; II – se a vítima é menor ou tem diminuída a capacidade de resistência.</p>
+            <p><strong>§ 4º Majorante Virtual:</strong> A pena é aumentada até o dobro se realizada por meio da rede de computadores, de rede social ou transmitida em tempo real.</p>
+            <p><strong>§ 5º Líder de Grupo:</strong> Aplica-se a pena em dobro se o autor é líder, coordenador ou administrador de grupo ou comunidade virtual.</p>
+            <p><strong>§ 6º Vítima vulnerável (Menor de 14 anos ou sem discernimento) + Lesão Gravíssima:</strong> Responde por Lesão Corpórea Gravíssima (Art. 129, § 2º).</p>
+            <p><strong>§ 7º Vítima vulnerável (Menor de 14 anos ou sem discernimento) + Morte:</strong> Responde pelo crime de <strong>HOMICÍDIO (Art. 121)</strong>!</p>
+          </div>
+        </details>
+
+        <div class="box-info pitfall">
+          <span class="box-label">🎯 Pegadinha Suprema de Prova</span>
+          <strong>Menor de 14 anos instigado ao suicídio que MORRE:</strong> O agente NÃO responde pelo Art. 122 do CP! Por expressa disposição do <strong>§ 7º do Art. 122</strong>, ele responde por <strong>HOMICÍDIO (Art. 121)</strong>, pois a vítima menor de 14 anos não possui discernimento válido para deliberar sobre a própria vida!
+        </div>
+
+        <!-- Quesitos Dogmáticos Art 122 -->
+        <h3>📋 Quadro Dogmático do Art. 122</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Quesito Dogmático</th>
+                <th>Resposta Legal / Doutrinária</th>
+                <th>Fundamento Jurídico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cabe crime culposo?</strong></td>
+                <td>❌ Não. Somente existe a forma dolosa.</td>
+                <td>Art. 122, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Crime material ou formal?</strong></td>
+                <td><strong>Formal na forma simples</strong> (punível desde a conduta de induzir/instigar/auxiliar, após Lei 13.968/19); torna-se <strong>qualificado pelos resultados</strong> graves/morte.</td>
+                <td>Art. 122, caput e §§ 1º/2º</td>
+              </tr>
+              <tr>
+                <td><strong>Admite tentativa?</strong></td>
+                <td>✅ Sim, na forma de auxílio material por escrito ou condutas fracionáveis.</td>
+                <td>Art. 14, II, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Crime comum ou próprio?</strong></td>
+                <td><strong>Comum</strong> (qualquer pessoa pode ser sujeito ativo e passivo).</td>
+                <td>Art. 122, caput</td>
+              </tr>
+              <tr>
+                <td><strong>Competência para julgamento?</strong></td>
+                <td><strong>Tribunal do Júri</strong> se envolver a morte ou a intenção direcionada ao suicídio (crime doloso contra a vida).</td>
+                <td>Art. 5º, XXXVIII, "d", CF/88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 6. MÓDULO 4: INFANTICÍDIO (ART. 123) ══════════════════════════════ -->
+      <section id="modulo4" class="section">
+        <div class="section-label" style="color: var(--p-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Módulo 04</div>
+        <h2>Infanticídio (Art. 123 do CP)</h2>
+
+        <div class="card gold">
+          <h3>🌱 Nível 1 — Explicação Didática</h3>
+          <p>Infanticídio é a mãe matar o próprio filho durante o parto ou logo após, sob a alteração psicológica e fisiológica provocada pelo <strong>estado puerperal</strong>. Trata-se de um homicídio privilegiado por razões de política criminal, com pena mais branda (detenção de 2 a 6 anos).</p>
+        </div>
+
+        <div class="card purple" style="margin-top: 1rem;">
+          <h3>🔥 Nível 3 — Elementar do Estado Puerperal e Concurso de Pessoas</h3>
+          <p>O <strong>estado puerperal</strong> é a distorção psíquica e emocional vivenciada pela mãe em decorrência do parto. Por ser uma <strong>elementar do crime</strong> (art. 123 do CP), aplica-se a regra do <strong>Art. 30 do CP</strong>: as condições pessoais elementares se comunicam ao coautor ou partícipe! Logo, o terceiro (ex: parteira ou pai) que ajuda a mãe no infanticídio responde por <strong>infanticídio</strong> e não por homicídio!</p>
+        </div>
+
+        <details class="artigo">
+          <summary>Art. 123 do Código Penal — Infanticídio</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 123.</strong> Matar, <span class="kw">sob a influência do estado puerperal</span>, o próprio filho, <span class="kw">durante o parto ou logo após</span>:</p>
+            <p>Pena – detenção, de <span class="kw">2 (dois) a 6 (seis) anos</span>.</p>
+          </div>
+        </details>
+
+        <!-- Quesitos Dogmáticos Infanticídio -->
+        <h3>📋 Quadro Dogmático do Infanticídio</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Quesito Dogmático</th>
+                <th>Resposta Legal / Doutrinária</th>
+                <th>Fundamento Jurídico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cabe crime culposo?</strong></td>
+                <td>❌ Não. Inexiste previsão de infanticídio culposo. Se a mãe agir com culpa, responderá por homicídio culposo (Art. 121, § 3º).</td>
+                <td>Princípio da Tipicidade Estrita</td>
+              </tr>
+              <tr>
+                <td><strong>Crime material ou formal?</strong></td>
+                <td><strong>Material.</strong> Exige o óbito do recém-nascido ou feto em parto.</td>
+                <td>Art. 14, I, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Admite tentativa?</strong></td>
+                <td>✅ Sim. É perfeitamente possível a tentativa (ex: mãe sufoca a criança, mas a enfermeira reanima a tempo).</td>
+                <td>Art. 14, II, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Crime comum ou próprio?</strong></td>
+                <td><strong>Próprio quanto à mãe</strong> (exige estado puerperal e relação de maternidade). Comunicável a terceiros via art. 30 CP.</td>
+                <td>Arts. 123 e 30, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Competência para julgamento?</strong></td>
+                <td><strong>Tribunal do Júri.</strong> Trata-se de crime doloso contra a vida.</td>
+                <td>Art. 5º, XXXVIII, "d", CF/88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 7. MÓDULO 5: ABORTO (ARTS. 124 A 128) ══════════════════════════════ -->
+      <section id="modulo5" class="section">
+        <div class="section-label" style="color: var(--p-500); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Módulo 05</div>
+        <h2>Crimes de Aborto (Arts. 124 a 128 do CP)</h2>
+
+        <div class="card gold">
+          <h3>🌱 Nível 1 — Explicação Didática</h3>
+          <p>O aborto é a interrupção da gravidez com a consequente morte do feto (produto da concepção), seja intrauterina ou mediante expulsão prematura. O Código Penal divide o aborto em três tipos puníveis e prevê hipóteses legais de exclusão da punibilidade (aborto legal ou permitido).</p>
+        </div>
+
+        <details class="artigo">
+          <summary>Arts. 124 a 128 do Código Penal — Tipos e Excludentes de Aborto</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 124. Autoaborto ou aborto consentido:</strong> Provocar aborto em si mesma ou consentir que outrem lho provoque: Pena – detenção, de 1 (um) a 3 (três) anos.</p>
+            <p><strong>Art. 125. Aborto provocado por terceiro sem consentimento:</strong> Provocar aborto, sem o consentimento da gestante: Pena – reclusão, de 3 (três) a 10 (dez) anos.</p>
+            <p><strong>Art. 126. Aborto provocado por terceiro com consentimento:</strong> Provocar aborto com o consentimento da gestante: Pena – reclusão, de 1 (um) a 4 (quatro) anos.</p>
+            <p><em>Parágrafo único do Art. 126:</em> Aplica-se a pena do Art. 125 (sem consentimento) se a gestante é menor de 14 anos, alienada/débil mental, ou se o consentimento foi obtido mediante fraude, violência ou grave ameaça.</p>
+            <p><strong>Art. 127. Formas Qualificadas:</strong> As penas dos arts. 125 e 126 são <span class="kw">aumentadas de 1/3</span> se a gestante sofre lesão grave; e são <span class="kw">DUPLICADAS</span> se sobrevém a morte da gestante.</p>
+            <p><strong>Art. 128. Aborto Legal / Permitido (Excludentes):</strong></p>
+            <p>I – <strong>Aborto Necessário / Terapêutico:</strong> Se não há outro meio de salvar a vida da gestante (praticado por médico).</p>
+            <p>II – <strong>Aborto Sentimental / Humanitário:</strong> Se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante ou representante legal (praticado por médico).</p>
+            <p><em>(Inclusão Jurisprudencial - STF ADPF 54):</em> <strong>Anencefalia Fetal:</strong> Interrupção de gestação de feto anencéfalo é conduta atípica.</p>
+          </div>
+        </details>
+
+        <!-- Quadro Comparativo de Modalidades de Aborto -->
+        <h3>📊 Quadro Comparativo das Modalidades de Aborto</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Modalidade</th>
+                <th>Artigo CP</th>
+                <th>Sujeito Ativo</th>
+                <th>Consentimento da Vítima</th>
+                <th>Pena Cominada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Autoaborto / Consentimento</strong></td>
+                <td>Art. 124</td>
+                <td>A própria gestante</td>
+                <td>Concorda com o ato</td>
+                <td>Detenção, 1 a 3 anos</td>
+              </tr>
+              <tr>
+                <td><strong>Sem Consentimento</strong></td>
+                <td>Art. 125</td>
+                <td>Terceiro qualquer</td>
+                <td>❌ Ausente / Inválido (&lt; 14 anos, fraude)</td>
+                <td>Reclusão, 3 a 10 anos</td>
+              </tr>
+              <tr>
+                <td><strong>Com Consentimento</strong></td>
+                <td>Art. 126</td>
+                <td>Terceiro qualquer</td>
+                <td>✅ Válido (maior e capaz)</td>
+                <td>Reclusão, 1 a 4 anos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Quesitos Dogmáticos Aborto -->
+        <h3>📋 Quadro Dogmático do Aborto</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Quesito Dogmático</th>
+                <th>Resposta Legal / Doutrinária</th>
+                <th>Fundamento Jurídico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cabe crime culposo?</strong></td>
+                <td>❌ Não. O Código Penal não prevê modalidade culposa de aborto. O aborto involuntário acidental é fato atípico penalmente.</td>
+                <td>Princípio da Tipicidade Estrita</td>
+              </tr>
+              <tr>
+                <td><strong>Crime material ou formal?</strong></td>
+                <td><strong>Material.</strong> Exige a morte do produto da concepção (feto/embrião).</td>
+                <td>Art. 14, I, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Admite tentativa?</strong></td>
+                <td>✅ Sim. É plenamente possível o fracionamento do iter criminis (ex: gestante toma substância abortiva, mas é socorrida a tempo).</td>
+                <td>Art. 14, II, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Crime comum ou próprio?</strong></td>
+                <td><strong>Próprio no Art. 124</strong> (exige ser gestante); <strong>Comum nos Arts. 125 e 126</strong> (qualquer terceiro).</td>
+                <td>Arts. 124-126, CP</td>
+              </tr>
+              <tr>
+                <td><strong>Competência para julgamento?</strong></td>
+                <td><strong>Tribunal do Júri.</strong> Crimes dolosos contra a vida.</td>
+                <td>Art. 5º, XXXVIII, "d", CF/88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 8. MAPA MENTAL VISUAL ══════════════════════════════ -->
+      <section id="mapa-mental" class="section">
+        <h2>🧠 Mapa Mental — Crimes Contra a Vida (Parte II)</h2>
+        <div class="mindmap-box">
+          <div class="mm-root">⚖️ CRIMES CONTRA A VIDA (ARTS. 121-A A 128 CP)</div>
+          
+          <div class="mm-l1">1. FEMINICÍDIO (Art. 121-A - Lei 14.994/2024)</div>
+          <div class="mm-l2">├── Pena: 20 a 40 anos de reclusão (Crime Autônomo e Hediondo)</div>
+          <div class="mm-l2">├── Requisitos: Violência doméstica OU menosprezo/discriminação à mulher</div>
+          <div class="mm-l2">└── Coautoria (§ 3º): Circunstâncias elementares COMUNICAM-SE aos coautores</div>
+          
+          <div class="mm-l1">2. VICARICÍDIO (Art. 121-B - Lei 15.384/2026)</div>
+          <div class="mm-l2">├── Pena: 20 a 40 anos de reclusão</div>
+          <div class="mm-l2">└── Finalidade: Matar dependente/parente com o FIM ESPECÍFICO de punir/causar sofrimento à mulher</div>
+          
+          <div class="mm-l1">3. SUICÍDIO / AUTOMUTILAÇÃO (Art. 122)</div>
+          <div class="mm-l2">├── Condutas: Induzir, instigar ou prestar auxílio material</div>
+          <div class="mm-l2">└── ⚠️ SE VÍTIMA MENOR DE 14 ANOS + MORTE ➔ Responde por HOMICÍDIO (§ 7º)</div>
+          
+          <div class="mm-l1">4. INFANTICÍDIO (Art. 123)</div>
+          <div class="mm-l2">├── Matar o próprio filho sob estado puerperal (durante ou logo após parto)</div>
+          <div class="mm-l2">└── Coautoria (Art. 30 CP): Estado puerperal COMUNICA-SE ao coautor/partícipe</div>
+          
+          <div class="mm-l1">5. ABORTO (Arts. 124 a 128)</div>
+          <div class="mm-l2">├── Autoaborto (124) | Terceiro Sem Consentimento (125) | Terceiro Com Consentimento (126)</div>
+          <div class="mm-l2">├── Aborto Legal (128): Necessário (risco de vida) + Sentimental (estupro)</div>
+          <div class="mm-l2">└── STF ADPF 54: Anencefalia Fetal = Conduta Atípica</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 9. FLASHCARDS E MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <h2>💡 Mnemônicos &amp; Flashcards de Memorização</h2>
+        <div class="flashcard-grid">
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Mnemônico: E.L.E.M.E.N.T.A.R. do Infanticídio</div>
+            <p><strong>Estado puerperal é elementar do tipo.</strong><br>
+            Regra do Art. 30 do CP: As elementares <strong>sempre se comunicam</strong> ao coautor ou partícipe. O terceiro que ajuda a mãe puerperal responde por <strong>Infanticídio</strong>!</p>
+          </div>
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Regra dos 14 Anos (Suicídio vs Homicídio)</div>
+            <p>• Instigar pessoa capaz ao suicídio (com morte) ➔ <strong>Art. 122, § 2º (2 a 6 anos)</strong><br>
+            • Instigar menor de 14 anos ao suicídio (com morte) ➔ <strong>Art. 121 - HOMICÍDIO (6 a 20 anos)</strong>!</p>
+          </div>
+          <div class="flashcard">
+            <div class="flashcard-header">🧠 Mnemônico: V.I.C.A.R.I.A. (Vicaricídio)</div>
+            <p><strong>V</strong>iolência por <strong>I</strong>ndireção ou <strong>C</strong>ontrole: Morte do dependente para atingir e provocar <strong>A</strong>gonia/sofrimento na <strong>R</strong>elação doméstica com a mulher.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 10. REVISÃO ATIVA (QUESTÕES) ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <h2>📝 Revisão Ativa (Bancas de Concurso)</h2>
+
+        <!-- Questão 1: CEBRASPE -->
+        <div class="exercise">
+          <p><strong>01. (Estilo CEBRASPE / Inédita 2026)</strong> Pedro, inconformado com a separação de Maria, mata o filho do casal, de 5 anos de idade, com a finalidade específica de causar intenso sofrimento psíquico a Maria. Assinale a afirmativa correta quanto ao enquadramento típico da conduta de Pedro com base nas recentes alterações do Código Penal:</p>
+          <p>A) Pedro responderá por homicídio qualificado por motivo torpe (Art. 121, § 2º, I do CP).<br>
+          B) Pedro responderá pelo crime autônomo de Vicaricídio (Art. 121-B do CP), com causa de aumento de pena por ter sido praticado contra criança.<br>
+          C) Pedro responderá por feminicídio consumado contra a criança.<br>
+          D) Trata-se de infanticídio culposo em concurso com lesão corporal grave contra Maria.</p>
+          <details>
+            <summary>Ver resposta comentada e fundamentação</summary>
+            <div class="gabarito">
+              <p><strong>Gabarito: B</strong></p>
+              <p><strong>Fundamentação Legal:</strong> Trata-se da exata tipificação do <strong>Art. 121-B do CP (Vicaricídio - Lei 15.384/2026)</strong>, que pune matar descendente/dependente com o fim específico de causar sofrimento à mulher no contexto doméstico. Como a vítima era criança (5 anos), incide a majorante do parágrafo único, inciso II do Art. 121-B.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 2: FGV -->
+        <div class="exercise">
+          <p><strong>02. (Estilo FGV)</strong> Joana, logo após dar à luz a seu filho, sob comprovada e intensa influência do estado puerperal, decide tirar a vida do recém-nascido. Para tanto, pede auxílio a seu irmão Marcos, que segura as mãos da criança enquanto Joana asfixia o bebê. Sobre a responsabilidade penal de Marcos, é correto afirmar que:</p>
+          <p>A) Marcos responde por Homicídio Qualificado por se tratar de terceiro não tomado pelo estado puerperal.<br>
+          B) Marcos responde por Infanticídio em coautoria com Joana, pois o estado puerperal é elementar do crime e se comunica aos concorrentes.<br>
+          C) Marcos não responde por crime algum, pois a conduta da mãe é isenta de pena.<br>
+          D) Marcos responde por favorecimento pessoal.</p>
+          <details>
+            <summary>Ver resposta comentada e fundamentação</summary>
+            <div class="gabarito">
+              <p><strong>Gabarito: B</strong></p>
+              <p><strong>Fundamentação Legal:</strong> Art. 123 c/c Art. 30 do Código Penal. Por se tratar de circunstância de caráter pessoal que integra a própria definição do tipo (elementar do crime de infanticídio), o estado puerperal se comunica ao coautor ou partícipe.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 3: V/F -->
+        <div class="exercise">
+          <p><strong>03. (Verdadeiro ou Falso — Julgue os itens a seguir):</strong></p>
+          <p>( &nbsp; ) A instigação ao suicídio realizada via rede social transmitida em tempo real gera aumento de pena até o dobro (§ 4º do Art. 122 do CP).<br>
+          ( &nbsp; ) O aborto praticado por médico em caso de gravidez resultante de estupro depende obrigatoriamente de autorização judicial expressa.<br>
+          ( &nbsp; ) No Feminicídio (Art. 121-A do CP), a pena cominada em abstrato é de reclusão, de 20 a 40 anos.</p>
+          <details>
+            <summary>Ver resposta comentada</summary>
+            <div class="gabarito">
+              <p><strong>Gabarito: V - F - V</strong></p>
+              <p><strong>Comentário:</strong><br>
+              1. <strong>Verdadeiro:</strong> O § 4º do Art. 122 traz majorante específica para o ambiente virtual/redes sociais.<br>
+              2. <strong>Falso:</strong> O Art. 128, II do CP exige o consentimento da gestante (ou representante), mas <em>NÃO exige alvará ou autorização judicial</em>.<br>
+              3. <strong>Verdadeiro:</strong> A Lei 14.994/2024 alterou a escala penal do Feminicídio no novo Art. 121-A para 20 a 40 anos de reclusão.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 11. RESUMÃO FINAL ══════════════════════════════ -->
+      <section id="resumao" class="section">
+        <div class="card gold" style="border-width: 2px;">
+          <h2>🚀 Resumão Ultra Rápido (1-Page Essential)</h2>
+          <p>• <strong>Feminicídio (Art. 121-A):</strong> Crime autônomo. Pena de 20 a 40 anos. Exige violência doméstica ou menosprezo/discriminação à mulher. Circunstâncias elementares se comunicam aos coautores (§ 3º).<br>
+          • <strong>Vicaricídio (Art. 121-B):</strong> Morte de filho/dependente para causar sofrimento/punição à mulher em contexto de violência doméstica. Pena de 20 a 40 anos.<br>
+          • <strong>Induzimento / Auxílio ao Suicídio (Art. 122):</strong> Pune induzir, instigar ou auxiliar suicídio/automutilação. Se a vítima for menor de 14 anos ou incapaz e resultar morte ➔ <strong>HOMICÍDIO (Art. 121)</strong>.<br>
+          • <strong>Infanticídio (Art. 123):</strong> Mãe mata o próprio filho durante ou logo após o parto sob estado puerperal. Estado puerperal é elementar e se comunica ao coautor (Art. 30 CP).<br>
+          • <strong>Aborto (Arts. 124 a 126):</strong> Autoaborto (124 - detenção 1-3a); Sem consentimento (125 - reclusão 3-10a); Com consentimento (126 - reclusão 1-4a).<br>
+          • <strong>Aborto Legal (Art. 128):</strong> Necessário (salvar vida da mãe) e Sentimental/Humanitário (estupro). STF (ADPF 54): Anencefalia Fetal é fato atípico.<br>
+          • <strong>Questões Dogmáticas Comuns:</strong> Nenhum destes crimes admite modalidade culposa (exceto homicídio culposo genérico); todos são crimes materiais (exceto Art. 122 simples); todos admitem tentativa e são julgados pelo <strong>Tribunal do Júri</strong>.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../../portal-core.js"></script>
+</body>
+
+</html>
