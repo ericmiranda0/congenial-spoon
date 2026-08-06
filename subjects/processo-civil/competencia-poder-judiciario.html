@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Processual Civil I — Competência & Organograma do Poder Judiciário | Guia Completo</title>
+  
+  <!-- Fonts: Heading: Outfit | Body: Lora | Labels/Code: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Tema Visual Processual Civil: Azul Cobalto & Safira Real */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-blue: #3B82F6;
+      --accent-gold: #D4AF37;
+      --accent-tint: rgba(37, 99, 235, 0.08);
+      --border-blue: rgba(37, 99, 235, 0.2);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+    }
+
+    /* Badge e Destaque Acadêmico de Aula */
+    .destaque-academico {
+      background-color: var(--p-50);
+      border-left: 6px solid var(--p-500);
+      border-top: 1px solid var(--border-blue);
+      border-right: 1px solid var(--border-blue);
+      border-bottom: 1px solid var(--border-blue);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .destaque-academico:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -3px rgba(37, 99, 235, 0.15);
+    }
+    
+    .destaque-academico .selo-destaque {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--p-600), var(--p-700));
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    
+    [data-theme="dark"] .destaque-academico {
+      background-color: rgba(37, 99, 235, 0.1);
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+
+    .badge-prova {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #2563EB, #1E3A8A);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+
+    .kw {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      border-color: rgba(147, 197, 253, 0.3);
+    }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin: 1.25rem 0;
+      padding: 1rem 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #93C5FD;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "⚖️ Clique para Expandir";
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--p-50);
+      color: var(--p-600);
+      padding: 4px 10px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+
+    [data-theme="dark"] .artigo summary::after {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+    }
+
+    .artigo[open] summary::after {
+      content: "📖 Ocultar Texto Completo";
+      background: var(--p-600);
+      color: white;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(15, 23, 42, 0.6);
+      border-left-color: #3B82F6;
+    }
+
+    /* Boxes Informativos Especializados */
+    .info-box {
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin: 1.75rem 0;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .box-dica {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-top: 4px solid #F59E0B;
+    }
+    .box-erro {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-top: 4px solid #EF4444;
+    }
+    .box-doutrina {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-top: 4px solid #10B981;
+    }
+    .box-juris {
+      background: #F0F9FF;
+      border: 1px solid #BAE6FD;
+      border-top: 4px solid #0EA5E9;
+    }
+    .box-pegadinha {
+      background: #FAF5FF;
+      border: 1px solid #E9D5FF;
+      border-top: 4px solid #A855F7;
+    }
+
+    [data-theme="dark"] .box-dica { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); }
+    [data-theme="dark"] .box-erro { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); }
+    [data-theme="dark"] .box-doutrina { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); }
+    [data-theme="dark"] .box-juris { background: rgba(14, 165, 233, 0.1); border-color: rgba(14, 165, 233, 0.3); }
+    [data-theme="dark"] .box-pegadinha { background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.3); }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      color: white;
+    }
+    .box-dica .box-label { background: #D97706; }
+    .box-erro .box-label { background: #DC2626; }
+    .box-doutrina .box-label { background: #059669; }
+    .box-juris .box-label { background: #0284C7; }
+    .box-pegadinha .box-label { background: #9333EA; }
+
+    /* Níveis de Explicação */
+    .nivel-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+      background: var(--bg-card);
+    }
+    .nivel-1 { border-left: 5px solid #10B981; }
+    .nivel-2 { border-left: 5px solid #3B82F6; }
+    .nivel-3 { border-left: 5px solid #8B5CF6; }
+
+    .nivel-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nivel-1 .nivel-title { color: #059669; }
+    .nivel-2 .nivel-title { color: #2563EB; }
+    .nivel-3 .nivel-title { color: #7C3AED; }
+
+    /* ORGANOGRAMA DO PODER JUDICIÁRIO BRASILEIRO (HTML/CSS) */
+    .organograma-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+      overflow-x: auto;
+    }
+
+    .org-stf-top {
+      background: #1E293B;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 1.25rem 2rem;
+      border-radius: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
+      margin: 0 auto 2.5rem auto;
+      max-width: 90%;
+    }
+
+    .org-stf-top::after {
+      content: '';
+      position: absolute;
+      bottom: -2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 2.5rem;
+      background-color: #1E293B;
+    }
+
+    .org-grid-columns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .org-grid-columns::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background-color: #1E293B;
+    }
+
+    .org-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .org-col::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 1.25rem;
+      background-color: #1E293B;
+    }
+
+    .org-box-superior {
+      background: #334155;
+      color: #FFFFFF;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0.75rem;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 1.25rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .org-connector-down {
+      width: 2px;
+      height: 1.25rem;
+      background-color: #64748B;
+    }
+
+    .org-box-base {
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid #0F172A;
+      width: 100%;
+      text-align: center;
+      padding: 0.85rem 0.5rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    [data-theme="dark"] .org-box-base {
+      background: #1E293B;
+      color: #F8FAFC;
+      border-color: #475569;
+    }
+
+    .org-tag {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--p-500);
+      margin-bottom: 3px;
+    }
+
+    /* Tabelas Comparativas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.75rem 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(37, 99, 235, 0.02);
+    }
+
+    /* Questões e Exercícios */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid #10B981;
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Mnemônicos */
+    .mnemonico-card {
+      background: linear-gradient(135deg, var(--p-700), #0F172A);
+      color: white;
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mnemonico-sigla {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #FBBF24;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .org-grid-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .org-grid-columns::before {
+        display: none;
+      }
+      .org-col::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .org-grid-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I</div>
+      <h1>Competência &amp; Organograma do Judiciário</h1>
+      <div class="subtitle">Guia Avançado: Da Estrutura Constitucional do Poder Judiciário às Regras do CPC/2015</div>
+      <div class="meta" style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap; opacity: 0.95;">
+        <span>⚖️ Arts. 42 a 66 CPC/15</span>
+        <span>🏛️ Arts. 92 a 126 CF/88</span>
+        <span>🎙️ Notas &amp; Destaques de Aula do Professor</span>
+        <span>🛡️ Foco em OAB &amp; Concursos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Principal -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Hub Principal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#pratica-carreiras" class="nav-item">Prática Forense</a>
+        <a href="#organograma" class="nav-item">Organograma</a>
+        <a href="#modulo1" class="nav-item">1. Estrutura CF</a>
+        <a href="#modulo2" class="nav-item">2. Instâncias &amp; CNJ</a>
+        <a href="#modulo3" class="nav-item">3. Critérios Chiovenda</a>
+        <a href="#modulo4" class="nav-item">4. Absoluta vs Relativa</a>
+        <a href="#modulo5" class="nav-item">5. Modificações</a>
+        <a href="#modulo6" class="nav-item">6. Conflito</a>
+        <a href="#exercicios" class="nav-item">Revisão Ativa</a>
+        <a href="#resumao" class="nav-item">Resumão</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+
+    <!-- ══════════════════════════════ OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="destaque-academico">
+        <span class="selo-destaque">🎯 Objetivos de Aprendizagem</span>
+        <h2 style="margin-top: 0.5rem; color: var(--p-700);">O que você vai dominar neste resumo completo:</h2>
+        <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+          <li>A <strong>Importância Prática e Obrigação Institucional da Competência</strong> para advogados, promotores e juízes, evitando o erro fatal de endereçamento na 2ª Fase da OAB.</li>
+          <li>A <strong>Estrutura Hierárquica do Poder Judiciário Brasileiro</strong> (Arts. 92 a 126 da CF/88), a inexistência dogmática de 4ª Instância e o papel estritamente administrativo do CNJ.</li>
+          <li>O <strong>Método de Exclusão Didático</strong> para identificação do ramo judiciário (Especial vs. Comum Federal vs. Comum Estadual).</li>
+          <li>Os <strong>Três Critérios de Giuseppe Chiovenda</strong> para fixação de competência (Objetivo, Funcional e Territorial) e a diferenciação técnica indispensável entre <strong>Foro</strong> e <strong>Juízo</strong>.</li>
+          <li>A distinção dogmática entre <strong>Competência Absoluta e Competência Relativa</strong> e o impacto da <strong>Perpetuatio Jurisdictionis (Art. 43 CPC)</strong> no desmembramento de Comarcas.</li>
+          <li>A atuação prática da <strong>Competência Delegada Federal</strong> e o funcionamento dos Juizados Especiais.</li>
+          <li>Os institutos de <strong>Modificação de Competência</strong> (Conexão, Continência, Prevenção) e a solução de <strong>Conflitos de Competência</strong> no STJ e STF.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: IMPORTÂNCIA PRÁTICA E CARREIRAS ══════════════════════════════ -->
+    <section id="pratica-carreiras" class="section">
+      <div class="section-label">Visão Institucional e Forense</div>
+      <h2>💼 A Importância Prática da Competência nas Carreiras Jurídicas</h2>
+
+      <p>
+        Como o <strong>Professor</strong> enfatiza em sala de aula, enquanto o estudo da Jurisdição em abstrato parece distante da prática, o estudo da <strong>Competência</strong> é a primeira e mais vital obrigação técnica de todo operador do Direito.
+      </p>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+        <div class="card" style="border-top: 4px solid var(--p-500);">
+          <h4 style="color: var(--p-700); margin-top:0;">👨‍⚖️ Para o Advogado e a OAB</h4>
+          <p>
+            É a regra de competência que define o <strong>endereçamento da petição inicial</strong> (para qual juízo direcionar a ação).<br>
+            <span class="kw">Risco OAB 2ª Fase:</span> Errar o endereçamento da peça processual na segunda fase da OAB acarreta risco altíssimo de reprovação imediata por erro de direcionamento da peça!
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #10B981;">
+          <h4 style="color: #059669; margin-top:0;">🏛️ Para o Promotor e o Juiz</h4>
+          <p>
+            • <strong>Promotor de Justiça:</strong> Precisa saber a qual juízo endereçar denúncias, petições e Ações Civis Públicas.<br>
+            • <strong>Juiz de Direito / Federal:</strong> Precisa avaliar de imediato se possui competência para a causa ou se deve declinar de ofício (competência absoluta) ou aguardar a provocação do réu (competência relativa).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ ORGANOGRAMA DO PODER JUDICIÁRIO ══════════════════════════════ -->
+    <section id="organograma" class="section">
+      <div class="section-label">Esquema Estrutural Integrado</div>
+      <h2>🏛️ Organograma do Poder Judiciário Brasileiro</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Estrutura hierárquica baseada nos Arts. 92 a 126 da Constituição Federal de 1988, subdividindo os órgãos judiciais entre a cúpula constitucional, as Justiças Especiais e a Justiça Comum.
+      </p>
+
+      <div class="organograma-container">
+        <!-- Topo: STF -->
+        <div class="org-stf-top">
+          <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; display: block;">Guardião Máximo da CF/88 (Art. 102 CF) — 3ª Instância de Cúpula</span>
+          SUPREMO TRIBUNAL FEDERAL (STF)
+        </div>
+
+        <!-- 4 Colunas Principais -->
+        <div class="org-grid-columns">
+          
+          <!-- Coluna 1: Justiça Comum -->
+          <div class="org-col">
+            <div class="org-box-superior">
+              <span class="org-tag" style="color: #93C5FD;">Superior Tribunal</span>
+              STJ
+              <div style="font-size: 0.75rem; font-weight: normal; opacity: 0.85;">Art. 104 CF</div>
+            </div>
+            
+            <div class="org-connector-down"></div>
+            
+            <div class="org-box-base">
+              <span class="org-tag">2º Grau / Regional</span>
+              <strong>TRFs</strong> (Justiça Federal)<br>
+              <strong>TJs</strong> (Justiça Estadual)
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">1º Grau / Base</span>
+              Juízes Federais &amp;<br>
+              Juízes Estaduais
+            </div>
+          </div>
+
+          <!-- Coluna 2: Justiça Eleitoral -->
+          <div class="org-col">
+            <div class="org-box-superior">
+              <span class="org-tag" style="color: #FDE68A;">Justiça Especial</span>
+              TSE
+              <div style="font-size: 0.75rem; font-weight: normal; opacity: 0.85;">Art. 118 CF</div>
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">2º Grau / Regional</span>
+              <strong>TREs</strong><br>
+              (Tribunais Regionais Eleitorais)
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">1º Grau / Base</span>
+              Juízes Eleitorais &amp;<br>
+              Juntas Eleitorais
+            </div>
+          </div>
+
+          <!-- Coluna 3: Justiça do Trabalho -->
+          <div class="org-col">
+            <div class="org-box-superior">
+              <span class="org-tag" style="color: #86EFAC;">Justiça Especial</span>
+              TST
+              <div style="font-size: 0.75rem; font-weight: normal; opacity: 0.85;">Art. 111 CF</div>
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">2º Grau / Regional</span>
+              <strong>TRTs</strong><br>
+              (Tribunais Regionais do Trabalho)
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">1º Grau / Base</span>
+              Varas do Trabalho &amp;<br>
+              Juízes do Trabalho
+            </div>
+          </div>
+
+          <!-- Coluna 4: Justiça Militar -->
+          <div class="org-col">
+            <div class="org-box-superior">
+              <span class="org-tag" style="color: #FCA5A5;">Justiça Especial</span>
+              STM
+              <div style="font-size: 0.75rem; font-weight: normal; opacity: 0.85;">Art. 122 CF</div>
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">2º Grau / Regional</span>
+              <strong>TJM</strong> (Estados &gt; 20k mil.) /<br>
+              <strong>TJs Estaduais</strong>
+            </div>
+
+            <div class="org-connector-down"></div>
+
+            <div class="org-box-base">
+              <span class="org-tag">1º Grau / Base</span>
+              Juízes Auditores &amp;<br>
+              Conselhos de Justiça
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 01: ESTRUTURA E JURISDIÇÃO ══════════════════════════════ -->
+    <section id="modulo1" class="section">
+      <div class="section-label">Módulo 01</div>
+      <h2>Introdução à Competência e Organização Judiciária</h2>
+
+      <!-- Explicação em 3 Níveis -->
+      <div class="nivel-box nivel-1">
+        <div class="nivel-title">🌱 Nível 1: Entendendo sem "Juridiquês" (Conceito Intuitivo)</div>
+        <p>
+          A Jurisdição é o poder que o Estado tem de julgar conflitos. No entanto, um único juiz não conseguiria julgar todas as ações do país! A <strong>Competência</strong> nada mais é do que a divisão de tarefas: a lei define exatamente <em>qual juiz ou tribunal</em> tem autoridade para processar e julgar cada tipo de caso (um divórcio, um crime militar, uma dívida com a União, etc.).
+        </p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-title">📘 Nível 2: Conceito Técnico de Graduação</div>
+        <p>
+          Enquanto a jurisdição é una, abstrata e indivisível, a <strong>competência é a medida e o limite da jurisdição</strong>. A Constituição Federal estabelece a estrutura do Poder Judiciário (Arts. 92 a 126), fixando as garantias da magistratura, os órgãos componentes e a divisão entre a <strong>Justiça Especial</strong> (Trabalhista, Eleitoral e Militar) e a <strong>Justiça Comum</strong> (Federal e Estadual).
+        </p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-title">🟣 Nível 3: Foco em Concursos de Alto Nível (Dogmática &amp; Pegadinhas)</div>
+        <p>
+          A competência das Justiças Especiais é apurada primordialmente <em>ratione materiae</em> (matéria), enquanto a competência da Justiça Federal é fixada prioritariamente <em>ratione personae</em> (Art. 109, I, CF — presença da União, autarquias ou empresas públicas federais), salvo hipóteses de competência material expressa. A Justiça Estadual tem caráter <strong>residual/supletivo</strong>: julga tudo o que não for de competência das especiais nem da Federal.
+        </p>
+      </div>
+
+      <!-- Método de Exclusão do Professor -->
+      <div class="info-box box-dica">
+        <span class="box-label">💡 Método Prático por Exclusão Ensinado pelo Professor</span>
+        <p>Para saber onde protocolar a petição inicial em qualquer causa, aplique a seguinte sequência de eliminação:</p>
+        <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+          <li><strong>1º Passo (Verificar se é Justiça Especial):</strong> A matéria é Trabalhista (Art. 111 CF), Eleitoral (Art. 118 CF) ou Militar (Art. 122 CF)? Se sim, a competência é da Justiça Especializada.</li>
+          <li><strong>2º Passo (Justiça Comum):</strong> Não sendo matéria especial, a causa vai para a Justiça Comum.</li>
+          <li><strong>3º Passo (Testar a Justiça Federal):</strong> Há presença da União, Autarquia Federal (ex: INSS), Empresa Pública Federal (ex: CEF) ou Fundação Pública Federal como autor, réu, assistente ou opoente (Art. 109, I, CF)? Se sim, a competência é da Justiça Federal.</li>
+          <li><strong>4º Passo (Justiça Estadual - Residual):</strong> Se não for de competência das Justiças Especiais e nem da Justiça Federal, a competência será <strong>supletiva/residual da Justiça Estadual</strong>.</li>
+        </ol>
+      </div>
+
+      <h3>1.1 Mapeamento Constitucional das Justiças</h3>
+
+      <div class="info-box box-doutrina">
+        <span class="box-label">📚 Estrutura Constitucional dos Órgãos Judiciários</span>
+        <p>• <strong>Justiça do Trabalho (Art. 111 CF):</strong> TST + TRTs + Juízes do Trabalho.<br>
+           • <strong>Justiça Eleitoral (Art. 118 CF):</strong> TSE + TREs + Juízes Eleitorais + Juntas Eleitorais.<br>
+           • <strong>Justiça Militar (Art. 122 CF):</strong> <em>da União:</em> STM + Conselhos de Justiça (Especial e Permanente nas Auditorias); <em>dos Estados:</em> TJ ou TJM (onde o efetivo militar for &ge; 20.000 integrantes) + Juízes Auditores e Conselhos de Justiça.<br>
+           • <strong>Justiça Federal (Art. 109 CF):</strong> TRFs + Juízes Federais.<br>
+           • <strong>Justiça Estadual:</strong> Residual. Organizada pelos Estados por suas Constituições e Leis de Organização Judiciária (LOJ).
+        </p>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 109 da Constituição Federal - Competência da Justiça Federal</summary>
+        <div class="lei-seca">
+          <p>Art. 109. Aos juízes federais compete processar e julgar:<br>
+          I - as causas em que a <span class="kw">União, entidade autárquica ou empresa pública federal</span> forem interessadas na condição de autoras, rés, assistentes ou oponentes, exceto as de falência, as de acidentes de trabalho e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho;</p>
+        </div>
+      </details>
+
+      <div class="info-box box-pegadinha">
+        <span class="box-label">🎯 Pegadinha clássica de Prova (CEBRASPE / FGV)</span>
+        <strong>Sociedade de Economia Mista Federal (ex: Banco do Brasil, Petrobras):</strong> NÃO atrai a competência da Justiça Federal! Súmula 556 do STF: <em>"É competente a Justiça Comum Estadual para julgar as causas em que é parte sociedade de economia mista."</em> Empresa Pública (ex: Caixa Econômica Federal) atrai a Justiça Federal.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 02: INSTÂNCIAS, CNJ E DUPLO GRAU ══════════════════════════════ -->
+    <section id="modulo2" class="section">
+      <div class="section-label">Módulo 02</div>
+      <h2>Estrutura das Instâncias, CNJ e Duplo Grau de Jurisdição</h2>
+
+      <p>
+        O Poder Judiciário brasileiro organiza-se funcionalmente em <strong>três instâncias</strong>. O <strong>Professor</strong> enfatiza pontos fundamentais e controvérsias de aula sobre essa estrutura:
+      </p>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px;">
+        <div class="card" style="border-top: 4px solid #10B981;">
+          <h4>1ª Instância (1º Grau)</h4>
+          <p>
+            Composta por <strong>Juízes Singulares</strong> (tradicionalmente chamados na doutrina e na prática de <em>"juízes de piso"</em>).<br>
+            <em style="font-size:0.85rem; color:var(--text-muted);">Nota de Aula: Em debate recente no STJ, alguns ministros criticaram o termo "juiz de piso" por parecer pejorativo, embora continue amplamente empregado nos manuais.</em>
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #3B82F6;">
+          <h4>2ª Instância (2º Grau)</h4>
+          <p>
+            Órgãos colegiados (Tribunais: TJs e TRFs) formados por grupos de magistrados chamados <strong>Desembargadores</strong>.<br>
+            <em style="font-size:0.85rem; color:var(--text-muted);">Nota Constitucional: Na Justiça Federal, a CF chama os membros de 2º Grau de "Juízes Federais de TRF", embora recebam o tratamento social de desembargadores.</em>
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #8B5CF6;">
+          <h4>3ª Instância (3º Grau)</h4>
+          <p>
+            Composta pelos <strong>Ministros dos Tribunais Superiores</strong> (STF, STJ, TST, TSE, STM).<br>
+            <strong style="color:#7C3AED;">Atenção:</strong> Julgam os recursos vindos da 2ª instância e ações de competência originária.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box box-erro">
+        <span class="box-label">⚠️ PEGADINHA MORTAL DE PROVA: NÃO EXISTE 4ª INSTÂNCIA NO BRASIL!</span>
+        <p>O <strong>Professor</strong> alerta enfaticamente: <strong>NÃO EXISTE QUARTA INSTÂNCIA NO BRASIL!</strong></p>
+        <p>
+          Como o STF julga recursos provenientes dos demais Tribunais Superiores (STJ, TST, TSE, STM), muitos alunos leigos e candidatos desatentos deduzem erroneamente que o STF seria uma "quarta instância". O STF integra a <strong>terceira instância</strong>, posicionando-se como tribunal de cúpula com jurisdição sobre todos os outros órgãos por ser o <strong>guardião supremo da Constituição Federal (Art. 102 CF)</strong>.
+        </p>
+      </div>
+
+      <div class="info-box box-doutrina">
+        <span class="box-label">📚 O CNJ Possui Jurisdição? (Art. 92, I-A da CF)</span>
+        <p>
+          O <strong>Conselho Nacional de Justiça (CNJ)</strong> foi incluído no rol do Art. 92 da CF pela EC nº 45/2004 como órgão do Poder Judiciário. Contudo, o <strong>Professor</strong> destaca uma premissa fundamental de prova: <strong>O CNJ NÃO DETÉM JURISDIÇÃO em sentido estrito!</strong>
+        </p>
+        <p>
+          A competência do CNJ é estritamente <strong>administrativa, financeira e disciplinar</strong> (controle da atuação administrativa do Judiciário e dos deveres funcionais dos juízes). O CNJ não julga ações judiciais de cidadãos nem exerce substitutividade jurisdicional.
+        </p>
+      </div>
+
+      <div class="info-box box-juris">
+        <span class="box-label">⚖️ Debate de Aula: Duplo Grau de Jurisdição &amp; Atritos STF vs TST</span>
+        <p>
+          <strong>Existência do Duplo Grau na CF/88:</strong> O texto da Constituição Federal de 1988 não traz expressamente a cláusula "direito ao duplo grau de jurisdição" no Art. 5º. Contudo, a doutrina majoritária ensina que o duplo grau existe de forma <strong>implícita</strong> no sistema constitucional e <strong>expressa</strong> nos Tratados de Direitos Humanos dos quais o Brasil é signatário (ex: Pacto de São José da Costa Rica — CADH, Art. 8º, 2, "h").
+        </p>
+        <p>
+          <strong>Fofoca Jurídica de Aula (Tensão STF vs TST):</strong> O Professor citou os atritos contemporâneos entre o TST (órgão máximo da Justiça do Trabalho) e o STF, onde decisões trabalhistas sedimentadas são cassadas por decisões monocráticas ou turmárias do STF via Reclamação Constitucional, gerando debates sobre a autonomia especializada das cortes trabalhistas.
+        </p>
+      </div>
+
+      <div class="info-box box-pegadinha">
+        <span class="box-label">🎯 QUESTÃO DE PROVA CITADA EM AULA PELO PROFESSOR</span>
+        <p><strong>Quais órgãos do Poder Judiciário possuem jurisdição sobre TODO o território nacional?</strong></p>
+        <p>
+          Resposta: Apenas os <strong>5 Tribunais Superiores</strong>: <span class="kw">STF, STJ, TST, TSE e STM</span> (apenas 5 siglas!). Os Tribunais Regionais (TRFs, TJs, TRTs, TREs) e juízes de 1º grau possuem jurisdição limitada à sua respectiva Região, Estado ou Comarca/Subseção.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 03: CRITÉRIOS DE CHIOVENDA & FORO VS JUÍZO ══════════════════════════════ -->
+    <section id="modulo3" class="section">
+      <div class="section-label">Módulo 03</div>
+      <h2>Critérios de Chiovenda e a Diferença entre Foro e Juízo</h2>
+
+      <p>
+        O jurista italiano Giuseppe Chiovenda formulou a tripartição clássica dos critérios de fixação de competência, acolhida pelo Código de Processo Civil nos Arts. 62 e 63.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Base de Fixação</th>
+            <th>Aplicação no CPC vs. LOJ</th>
+            <th>Natureza da Regra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Objetivo</strong></td>
+            <td>Valor da Causa e Matéria discutida.</td>
+            <td><strong>NÃO HÁ exemplo no CPC para fixar foro!</strong> Usado pelas LOJs para fixar a <em>Vara/Juízo</em> dentro da comarca.</td>
+            <td>Absoluta em razão da matéria (na LOJ).</td>
+          </tr>
+          <tr>
+            <td><strong>Funcional</strong></td>
+            <td>Hierarquia (tribunais) e ligação/dependência entre processos.</td>
+            <td>Art. 676 do CPC (Embargos de Terceiro), Recursos e Ações Originárias nos Tribunais.</td>
+            <td><strong>Sempre ABSOLUTA.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Territorial</strong></td>
+            <td>Localização geográfica (Domicílio do réu, situação do imóvel).</td>
+            <td>Arts. 46 a 53 do CPC (Fixação do Foro).</td>
+            <td><strong>Regra: RELATIVA.</strong> Exceção: Imóvel (Art. 47 CPC - Absoluta).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3.1 Distinção Técnica Fundamental: FORO vs. JUÍZO</h3>
+      
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+        <div class="card" style="border-top: 4px solid var(--p-500);">
+          <h4 style="color: var(--p-700); margin-top:0;">📍 FORO (Base Territorial)</h4>
+          <p>
+            Trata-se da delimitação territorial ou recorte geográfico onde o órgão judiciário exerce sua competência.<br>
+            • Na Justiça Estadual: Equivale à <strong>Comarca</strong> (ex: Comarca de Fortaleza, Comarca do Ipu).<br>
+            • Na Justiça Federal: Equivale à <strong>Subseção Judiciária</strong> (ex: Subseção de Sobral).
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #8B5CF6;">
+          <h4 style="color: #6D28D9; margin-top:0;">🏢 JUÍZO (Unidade Judiciária)</h4>
+          <p>
+            Trata-se da unidade judiciária específica (a <strong>Vara</strong>) situada dentro daquela comarca.<br>
+            Exemplo: Na Comarca de Sobral (Foro), o juízo competente para um inventário será a <strong>Vara de Família e Sucessões (Juízo)</strong>, e não a Vara da Infância ou Cível.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box box-dica">
+        <span class="box-label">💡 Alerta do Professor sobre Leis de Organização Judiciária (LOJ)</span>
+        O CPC e leis federais indicam o <strong>FORO competente</strong> (qual comarca/cidade). A indicação do <strong>JUÍZO competente</strong> (qual a vara específica dentro da comarca) é definida pelas <strong>Leis estaduais de Organização Judiciária (LOJ)</strong>! Hoje, com o processo eletrônico (PJe), o advogado protocola a petição no foro e o sistema distribui automaticamente para o juízo competente.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 04: ABSOLUTA VS RELATIVA & COMPETÊNCIA DELEGADA ══════════════════════════════ -->
+    <section id="modulo4" class="section">
+      <div class="section-label">Módulo 04</div>
+      <h2>Competência Absoluta vs. Relativa e Competência Delegada</h2>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+        <div class="card" style="border-top: 4px solid #EF4444;">
+          <h3 style="color: #7F1D1D; margin-top:0;">🛑 Competência Absoluta</h3>
+          <p>• Fixada no interesse público (melhor funcionamento da Justiça).<br>
+             • Fundada na <strong>Matéria, Função ou Pessoa</strong>.<br>
+             • <strong>Não admite modificação</strong> nem foro de eleição.<br>
+             • Pode ser declarada <strong>de ofício</strong> pelo juiz a qualquer tempo.<br>
+             • Incompetência alegável em qualquer fase processual (Art. 64 CPC).<br>
+             • Nulos apenas os atos decisórios (aproveitam-se os demais atos).
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #3B82F6;">
+          <h3 style="color: #1E3A8A; margin-top:0;">🔄 Competência Relativa</h3>
+          <p>• Fixada no interesse privado (comodidade das partes).<br>
+             • Fundada no <strong>Território ou Valor da Causa</strong>.<br>
+             • <strong>Admite modificação</strong> por conexão, continência ou acordo (Foro de Eleição - Art. 63).<br>
+             • <strong>NÃO pode ser declarada de ofício</strong> pelo juiz (Súmula 33 STJ), salvo cláusula abusiva de eleição em contrato de adesão (Art. 63, § 4º).<br>
+             • Réu deve alegar em <strong>preliminar de contestação</strong>, sob pena de <em>prorrogação de competência</em>.
+          </p>
+        </div>
+      </div>
+
+      <h3>4.1 Competência Delegada Federal (Juiz Estadual atuando em Causa Federal)</h3>
+
+      <div class="info-box box-juris">
+        <span class="box-label">⚖️ Destaque de Aula do Professor: Competência Delegada &amp; Recurso para o TRF</span>
+        <p>
+          Em comarcas do interior que <strong>não são sede de Vara Federal</strong>, a legislação permite que o Juiz de Direito Estadual processe e julgue determinadas causas federais (como ações previdenciárias de aposentadoria contra o INSS).
+        </p>
+        <p>
+          <strong>PONTO DE PROVA INDISPENSÁVEL:</strong> Quando o juiz estadual proferir sentença no exercício dessa <em>competência delegada federal</em>, o recurso de apelação NÃO VAI para o Tribunal de Justiça Estadual! O recurso deve ser interposto para o <strong>Tribunal Regional Federal (TRF)</strong> correspondente, pois o juiz estava investido no exercício da função jurisdicional federal!
+        </p>
+      </div>
+
+      <h3>4.2 Justiça Eleitoral e Acúmulo de Jurisdição</h3>
+      <p>
+        O Professor destaca em aula uma curiosidade institucional: não existe concurso para "juiz eleitoral" de carreira. Os juízes de direito estaduais acumulam as funções eleitorais. Enquanto julgam matérias cíveis/criminais comuns, possuem jurisdição estadual (recurso ao TJ). Quando atuam como Juízes Eleitorais, exercem jurisdição federal especializada e são remunerados pela União (recurso ao TRE).
+      </p>
+
+      <details class="artigo">
+        <summary>Art. 43 do CPC - Principio da Perpetuatio Jurisdictionis</summary>
+        <div class="lei-seca">
+          <p>Art. 43. Determina-se a competência no momento do <span class="kw">registro ou da distribuição da petição inicial</span>, sendo irrelevantes as modificações do estado de fato ou de direito supervenientes, salvo quando suprimirem órgão judiciário ou alterarem a competência absoluta.</p>
+        </div>
+      </details>
+
+      <div class="info-box box-juris">
+        <span class="box-label">⚖️ Caso Prático de Aula: Desmembramento de Comarca</span>
+        <p><strong>Cenário:</strong> Uma ação ordinária corre na Comarca X. Durante o processo, a lei desmembra a região e cria a Comarca Y (onde reside o réu). O processo deve ser remetido para Y ou permanecer em X?</p>
+        <p>• <em>Posição Minoritária / Administrativa (STJ REsp 150.902/PR):</em> Determina a remessa dos autos à nova comarca Y.<br>
+           • <em>Doutrina Majoritária (Athos Gusmão Carneiro) e Jurisprudência Predominante:</em> Prevalece a <strong>PERPETUATIO JURISDICTIONIS (Art. 43 CPC)</strong>. Como o foro territorial é de competência relativa, a alteração superveniente das regras de organização judiciária é irrelevante para processos já ajuizados. O processo <strong>permanece na comarca originária X</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 05: MODIFICAÇÃO DE COMPETÊNCIA ══════════════════════════════ -->
+    <section id="modulo5" class="section">
+      <div class="section-label">Módulo 05</div>
+      <h2>Modificação de Competência (Conexão, Continência e Prevenção)</h2>
+
+      <div class="mnemonico-card">
+        <div class="mnemonico-sigla">P - R - O - C - O - N</div>
+        <p style="margin: 0; font-size: 1.05rem;">
+          Técnica de Memorização: Somente se modificam regras de competência <strong>RELATIVA</strong> (Foro)! As hipóteses de modificação são: <strong>P</strong>rorrogação, <strong>D</strong>errogação (eleição), <strong>C</strong>onexão e <strong>C</strong>ontinência.
+        </p>
+      </div>
+
+      <h3>5.1 Conexão (Art. 55 CPC)</h3>
+      <p>
+        Reputam-se conexas 2 ou mais ações quando lhes for comum o <strong>pedido ou a causa de pedir</strong>.
+      </p>
+
+      <details class="artigo">
+        <summary>Art. 55, § 1º do CPC - Reunião de Ações Conexas</summary>
+        <div class="lei-seca">
+          <p>Art. 55, § 1º. Os processos de ações conexas serão reunidos para decisão conjunta, <span class="kw">salvo se um deles já tiver sido sentenciado</span>.</p>
+        </div>
+      </details>
+
+      <div class="info-box box-erro">
+        <span class="box-label">⚠️ Erro Comum em Provas</span>
+        O juiz pode determinar a reunião de processos conexos de ofício? <strong>SIM!</strong> A reunião de ações conexas é matéria de ordem pública e pode ser ordenada pelo juiz de ofício, a requerimento das partes ou por solicitação do Ministério Público. <strong>Limite Temporal:</strong> Não se reúne se um dos processos já foi <em>sentenciado</em> (Súmula 235 do STJ).
+      </div>
+
+      <h3>5.2 Continência (Arts. 56 e 57 CPC)</h3>
+      <p>
+        Dá-se a continência quando houver identidade de partes e causa de pedir, mas o pedido de uma (ação continente), por ser mais amplo, abrange o das outras (ações contidas).
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ordem de Propositura das Ações</th>
+            <th>Consequência Processual</th>
+            <th>Fundamento Legal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ação continente (ampla) proposta <strong>DEPOIS</strong> da ação contida.</td>
+            <td><strong>REUNIÃO dos processos</strong> no juízo prevento para julgamento conjunto.</td>
+            <td>Art. 56 do CPC</td>
+          </tr>
+          <tr>
+            <td>Ação contida proposta <strong>DEPOIS</strong> da ação continente (ampla).</td>
+            <td><strong>EXTINÇÃO SEM RESOLUÇÃO DO MÉRITO</strong> da ação contida (litispendência parcial). NÃO há reunião!</td>
+            <td>Art. 57 do CPC</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.3 Prevenção (Art. 59 e Art. 286 CPC)</h3>
+      <p>
+        A prevenção fixa a competência quando mais de um juiz for abstratamente competente, registrando a atração para o primeiro juízo.
+      </p>
+
+      <details class="artigo">
+        <summary>Art. 59 do CPC - Fixação da Prevenção</summary>
+        <div class="lei-seca">
+          <p>Art. 59. O <span class="kw">registro ou a distribuição da petição inicial</span> torna prevento o juízo.</p>
+        </div>
+      </details>
+
+      <div class="info-box box-dica">
+        <span class="box-label">💡 Prevenção por Reiteração de Pedido (Art. 286, II CPC)</span>
+        Se uma ação for extinta sem resolução de mérito e o autor ajuizar nova ação idêntica (mesmo que altere parcialmente os réus ou inclua litisconsortes), a nova petição será <strong>obrigatoriamente distribuída por dependência</strong> ao juízo da primeira ação extinta! Isso evita a escolha maldosa de juiz ("forum shopping").
+      </div>
+
+      <!-- Exceção da Inércia: Remessa Necessária do Professor -->
+      <div class="info-box box-doutrina">
+        <span class="box-label">📚 Destaque de Aula do Professor: Remessa Necessária (Art. 496 CPC)</span>
+        <p>
+          Em regra, a jurisdição é inerte e os recursos são voluntários. Todavia, o Professor destaca uma exceção legal marcante em benefício do erário: a <strong>Remessa Necessária (Reexame Necessário)</strong>.
+        </p>
+        <p>
+          Se a Fazenda Pública (Município, Estado, União) for condenada em 1ª instância, o juiz é obrigado por lei a remeter os autos de ofício ao Tribunal para reexame, mesmo que o ente público não interponha recurso voluntário. Sem o duplo grau de jurisdição obrigatório, a sentença não produz efeito nem transita em julgado!
+        </p>
+      </div>
+
+      <!-- Cartas de Comunicação Processual do Professor -->
+      <div class="info-box box-dica">
+        <span class="box-label">💡 As 3 Cartas Processuais de Comunicação (Explicitação de Aula)</span>
+        <ul>
+          <li><strong>Carta Precatória:</strong> Entre juízos de mesma hierarquia localizados em comarcas/subseções distintas (ex: Juiz do Ipu solicitando citação de réu residente na comarca de Reriutaba).</li>
+          <li><strong>Carta de Ordem:</strong> Emitida por Tribunal Superior para juízo subordinado (ex: Desembargador do TJCE ordenando cumprimento de ato à juíza da comarca do interior).</li>
+          <li><strong>Carta Rogatória:</strong> Entre órgãos jurisdicionais de países soberanos distintos, dependendo de exequatur do STJ.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 06: CONFLITO DE COMPETÊNCIA ══════════════════════════════ -->
+    <section id="modulo6" class="section">
+      <div class="section-label">Módulo 06</div>
+      <h2>Conflito de Competência</h2>
+
+      <p>
+        O Conflito de Competência ocorre quando dois ou mais juízes se consideram competentes (<strong>Conflito Positivo</strong>), incompetentes (<strong>Conflito Negativo</strong>), ou quando surge controvérsia entre eles acerca da reunião/separação de processos (Art. 66 CPC).
+      </p>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="card">
+          <h4>Legitimados para Suscitar (Art. 951)</h4>
+          <p>• As Partes;<br>
+             • O Ministério Público;<br>
+             • Qualquer dos Juízes conflitantes.</p>
+        </div>
+
+        <div class="card">
+          <h4>Vedação Expressa (Art. 952)</h4>
+          <p>O réu que tiver arguido incompetência relativa <strong>não pode suscitar conflito</strong>, devendo aguardar a decisão da exceção/preliminar ou recorrer.</p>
+        </div>
+      </div>
+
+      <h3>6.1 Regras Constitucionais de Competência Julgadora</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Órgãos Conflitantes</th>
+            <th>Tribunal Competente para Julgar o Conflito</th>
+            <th>Dispositivo Constitucional</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Entre Juízes Estaduais do mesmo Estado</td>
+            <td><strong>TJ (Tribunal de Justiça do Estado)</strong></td>
+            <td>Constituição Estadual / LOJ</td>
+          </tr>
+          <tr>
+            <td>Entre Juízes Federais da mesma Região</td>
+            <td><strong>TRF (Tribunal Regional Federal)</strong></td>
+            <td>Art. 108 CF</td>
+          </tr>
+          <tr>
+            <td>Entre Juízes vinculados a Tribunais diversos (ex: Juiz Estadual vs Juiz Federal, ou Juiz do Trabalho vs Juiz Estadual)</td>
+            <td><strong>STJ (Superior Tribunal de Justiça)</strong></td>
+            <td>Art. 105, I, "d" da CF/88</td>
+          </tr>
+          <tr>
+            <td>Entre o STJ e qualquer Tribunal, ou entre Tribunais Superiores (ex: STJ vs TST)</td>
+            <td><strong>STF (Supremo Tribunal Federal)</strong></td>
+            <td>Art. 102, I, "o" da CF/88</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box box-juris">
+        <span class="box-label">⚖️ Súmula 59 do STJ</span>
+        <em>"Não cabe conflito de competência se já existe sentença transitada em julgado proferida por um dos juízes conflitantes."</em>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA (QUESTÕES) ══════════════════════════════ -->
+    <section id="exercicios" class="section">
+      <div class="section-label">Revisão Ativa &amp; Prática de Exames</div>
+      <h2>📝 Questões Gabaritadas e Comentadas</h2>
+
+      <!-- Questão Discursiva -->
+      <div class="exercise">
+        <p><strong>01. (Discursiva / Magistratura) Diferencie a competência fundada no critério objetivo daquela fundada no critério territorial segundo o Código de Processo Civil. É correto afirmar que o CPC se vale do valor da causa para indicar o foro competente? Fundamente.</strong></p>
+        <details>
+          <summary>Ver gabarito espelho comentado</summary>
+          <div class="gabarito">
+            <strong>Resposta Espelho:</strong><br>
+            Não, é INCORRETO afirmar que o CPC se vale do valor da causa para indicar o foro competente. Segundo a lição doutrinária e as regras dos Arts. 46 a 53 do CPC/15, o CPC utiliza o critério territorial para a indicação do <em>FORO</em> (comarca/subseção), enquanto o critério objetivo (matéria e valor da causa) é empregado exclusivamente pelas <strong>Leis de Organização Judiciária (LOJ)</strong> para a definição do <em>JUÍZO</em> (vara específica dentro da comarca). O critério territorial gera regras de competência relativa (salvo foros reais imobiliários do Art. 47), ao passo que as regras de organização judiciária fundadas na matéria são de competência absoluta.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão V / F baseada na Aula do Professor -->
+      <div class="exercise">
+        <p><strong>02. (Verdadeiro ou Falso — Aula do Professor) Analise a assertiva: "O Supremo Tribunal Federal (STF) constitui a 4ª Instância do Poder Judiciário brasileiro, razão pela qual lhe compete julgar recursos oriundos do STJ, TST, TSE e STM." (V / F)</strong></p>
+        <details>
+          <summary>Ver resposta e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: FALSO.</strong><br>
+            Como enfatizado pelo Professor em sala de aula, <strong>NÃO EXISTE 4ª INSTÂNCIA NO BRASIL</strong>. O STF integra a <strong>3ª Instância</strong> (Instância Superior/Cúpula) ao lado do STJ, TST, TSE e STM, sendo o órgão supremo incumbido da guarda da Constituição Federal (Art. 102 CF).
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão CEBRASPE -->
+      <div class="exercise">
+        <p><strong>03. (CEBRASPE / Procurador do Estado - Adaptada) O desmembramento superveniente de uma comarca para a criação de nova unidade judiciária modifica imediatamente a competência para o julgamento das ações relativas a réus residentes no novo município, afastando a aplicação do princípio da perpetuatio jurisdictionis. (Certo / Errado)</strong></p>
+        <details>
+          <summary>Ver resposta gabaritada</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong><br>
+            Conforme o Art. 43 do CPC/2015 e o entendimento doutrinário e jurisprudencial predominante (Athos Gusmão Carneiro / STJ), a criação de nova comarca por desmembramento constitui alteração de competência territorial relativa, sendo irrelevante para os processos já ajuizados. Prevalece o princípio da <strong>perpetuatio jurisdictionis</strong>, permanecendo a causa no juízo originário.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão FGV -->
+      <div class="exercise">
+        <p><strong>04. (FGV / OAB) Um conflito negativo de competência instaurado entre um Juiz de Direito de uma Vara Cível Estadual e um Juiz Federal da mesma cidade deve ser dirimido pelo:</strong></p>
+        <p>A) Tribunal de Justiça do Estado.<br>
+           B) Tribunal Regional Federal competente.<br>
+           C) Superior Tribunal de Justiça (STJ).<br>
+           D) Supremo Tribunal Federal (STF).</p>
+        <details>
+          <summary>Ver resposta gabaritada</summary>
+          <div class="gabarito">
+            <strong>Resposta: C (Superior Tribunal de Justiça).</strong><br>
+            Nos termos do Art. 105, I, "d", da CF/88, compete ao STJ processar e julgar originariamente os conflitos de competência entre juízes vinculados a tribunais diversos (como ocorre entre a Justiça Estadual e a Justiça Federal).
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão FCC baseada na Aula do Professor (Competência Delegada) -->
+      <div class="exercise">
+        <p><strong>05. (FCC / Adaptada - Aula do Professor) Um Juiz de Direito Estadual, no exercício de competência delegada federal por ausência de vara federal na comarca, proferiu sentença condenando o INSS a conceder benefício previdenciário. Da referida sentença, o recurso de apelação do INSS deverá ser julgado pelo:</strong></p>
+        <p>A) Tribunal de Justiça do Estado.<br>
+           B) Tribunal Regional Federal (TRF) da respectiva região.<br>
+           C) Superior Tribunal de Justiça (STJ).<br>
+           D) Juizado Especial da Fazenda Pública Estadual.</p>
+        <details>
+          <summary>Ver resposta gabaritada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B (Tribunal Regional Federal).</strong><br>
+            Conforme explicitado pelo Professor em aula, ao atuar em competência delegada federal (Art. 109, § 3º da CF), o juiz de direito estadual exerce função jurisdicional federal. Portanto, a apreciação recursal de suas sentenças compete privativamente ao <strong>Tribunal Regional Federal (TRF)</strong> correspondente.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMÃO FINAL ══════════════════════════════ -->
+    <section id="resumao" class="section">
+      <div class="section-label">Módulo de Revisão Final</div>
+      <div class="card" style="border-top: 5px solid var(--p-500); background: var(--p-50);">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Final com Aulas do Professor)</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+          • <strong>Importância Prática:</strong> Definir a competência é a 1ª tarefa do advogado (endereçamento da petição). Erro na 2ª Fase OAB causa reprovação.<br>
+          • <strong>Não existe 4ª Instância:</strong> O Judiciário tem 3 instâncias. O STF é órgão de cúpula da 3ª instância (guardião da CF/88).<br>
+          • <strong>CNJ não tem Jurisdição:</strong> Órgão do Judiciário com competência exclusivamente administrativa e disciplinar.<br>
+          • <strong>Jurisdição Nacional:</strong> Exercida apenas pelos 5 Tribunais Superiores (STF, STJ, TST, TSE, STM).<br>
+          • <strong>Método de Exclusão:</strong> 1º Especial (Trabalho, Eleitoral, Militar) &rarr; 2º Federal (presença da União/INSS/CEF) &rarr; 3º Estadual (residual).<br>
+          • <strong>Empresas Públicas vs Sociedades de Economia Mista:</strong> CEF atrai Justiça Federal. Banco do Brasil e Petrobras ficam na Justiça Estadual (Súmula 556 STF).<br>
+          • <strong>Foro vs Juízo:</strong> Foro é a base territorial (Comarca/Subseção). Juízo é a unidade/Vara (definida pelas LOJs estaduais).<br>
+          • <strong>Competência Delegada Federal:</strong> Juiz estadual que julga matéria previdenciária federal tem recurso julgado pelo TRF (e não pelo TJ).<br>
+          • <strong>Absoluta vs Relativa:</strong> Absoluta é matéria/função/pessoa (de ordem pública, alegável de ofício). Relativa é território/valor (exige preliminar na contestação sob pena de prorrogação - Súmula 33 STJ).<br>
+          • <strong>Perpetuatio Jurisdictionis (Art. 43 CPC):</strong> Desmembramento de comarca não transfere processos em andamento.<br>
+          • <strong>Remessa Necessária (Art. 496 CPC):</strong> Exceção à inércia jurisdicional que obriga o juiz a enviar a sentença ao Tribunal contra a Fazenda Pública.<br>
+          • <strong>Conflito de Competência:</strong> STJ julga conflitos entre ramos judiciais distintos (CF 105, I, d). STF julga conflitos entre Tribunais Superiores (CF 102, I, o). Súmula 59 STJ: não cabe se houver sentença transitada em julgado.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Core Scripts do Portal Hub -->
+  <script src="../../portal-core.js"></script>
+</body>
+</html>
