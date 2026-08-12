@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Civil III – Teoria Geral e Espécies de Contratos | Material Didático</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Integração com Estilos Globais e Customização Local -->
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue & Accent Gold */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 .num { 
+      font-family: 'JetBrains Mono', monospace; 
+      font-size: 1.1rem; 
+      color: white; 
+      background: var(--p-500); 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 8px; 
+      margin-right: 10px;
+    }
+
+    /* Linha do tempo / Iter Contratual */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: var(--card-bg, #ffffff);
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    .timeline-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--p-500);
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--p-700);
+      margin: 5px 0;
+    }
+
+    /* Estilo Interatividade Lei Seca */
+    .artigo {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 12px 18px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️ ";
+      margin-right: 8px;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(30, 58, 138, 0.2);
+      border-left-color: var(--p-500);
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #DBEAFE;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: #1E3A8A;
+      color: #93C5FD;
+    }
+
+    /* Explicação em 3 Níveis */
+    .levels-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 5px solid;
+    }
+
+    .level-box.lvl-1 {
+      background: #F0FDF4;
+      border-color: #22C55E;
+    }
+
+    .level-box.lvl-2 {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+    }
+
+    .level-box.lvl-3 {
+      background: #FEF2F2;
+      border-color: #EF4444;
+    }
+
+    [data-theme="dark"] .level-box.lvl-1 { background: rgba(34, 197, 94, 0.1); }
+    [data-theme="dark"] .level-box.lvl-2 { background: rgba(59, 130, 246, 0.1); }
+    [data-theme="dark"] .level-box.lvl-3 { background: rgba(239, 68, 68, 0.1); }
+
+    .level-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .lvl-1 .level-badge { background: #DCFCE7; color: #15803D; }
+    .lvl-2 .level-badge { background: #DBEAFE; color: #1E40AF; }
+    .lvl-3 .level-badge { background: #FEE2E2; color: #B91C1C; }
+
+    /* Mapas Mentais */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 25px;
+      border-radius: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: #FBBF24;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .mm-l2 {
+      margin-left: 40px;
+      color: #94A3B8;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Mnemônicos */
+    .mnemonic-card {
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .mnemonic-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FDE047;
+    }
+
+    /* Questões */
+    .exercise-box {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .gabarito-box {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F0FDF4;
+      border-left: 4px solid #16A34A;
+      border-radius: 6px;
+      color: #14532D;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .gabarito-box {
+      background: rgba(22, 163, 74, 0.15);
+      color: #86EFAC;
+    }
+
+    .q-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--p-500);
+      color: white;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Civil III</div>
+      <h1>Teoria Geral e Espécies de Contratos</h1>
+      <div class="subtitle">Guia Mestre de Estudos: Dos Princípios Fundamentais aos Contratos em Espécie no Código Civil</div>
+      <div class="meta" style="display:flex; justify-content:center; gap:20px; opacity:0.9; font-size:0.9rem; margin-top:20px; flex-wrap:wrap;">
+        <span>⚖️ CC/02: Arts. 421 a 853</span>
+        <span>📚 Teoria Geral &amp; Espécies</span>
+        <span>🛡️ Foco em Concursos &amp; OAB</span>
+        <span>🔥 Nível Avançado</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#principios" class="nav-item">Princípios</a>
+        <a href="#formacao" class="nav-item">Formação</a>
+        <a href="#classificacao" class="nav-item">Classificação</a>
+        <a href="#garantias" class="nav-item">Garantias</a>
+        <a href="#extincao" class="nav-item">Extinção</a>
+        <a href="#especies" class="nav-item">Espécies</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div id="sumario" class="card" style="margin-bottom: 40px;">
+        <h2>📋 Sumário Interativo do Módulo</h2>
+        <ol style="column-count: 2; column-gap: 30px; font-family: 'Inter', sans-serif; line-height: 2;">
+          <li><a href="#objetivos">1. Objetivos de Aprendizagem</a></li>
+          <li><a href="#iter">2. Iter Contratual (Linha do Tempo)</a></li>
+          <li><a href="#principios">3. Módulo 01: Teoria Geral &amp; Princípios Contratuais</a></li>
+          <li><a href="#formacao">4. Módulo 02: Formação e Fase Pré-Contratual</a></li>
+          <li><a href="#classificacao">5. Módulo 03: Classificação dos Contratos</a></li>
+          <li><a href="#garantias">6. Módulo 04: Vícios Redibitórios &amp; Evicção</a></li>
+          <li><a href="#extincao">7. Módulo 05: Extinção &amp; Inadimplemento Contratual</a></li>
+          <li><a href="#especies">8. Módulo 06: Principais Contratos em Espécie</a></li>
+          <li><a href="#mindmap">9. Mapa Mental Completo</a></li>
+          <li><a href="#mnemonicos">10. Mnemônicos Mestre</a></li>
+          <li><a href="#revisao">11. Revisão Ativa (Questões Comentadas)</a></li>
+          <li><a href="#cheat-sheet">12. Resumão Final (Cheat Sheet)</a></li>
+        </ol>
+      </div>
+
+      <!-- ══════════════════════════════ 1. OBJETIVOS ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <div class="card gold">
+          <p>Ao concluir o estudo deste resumo estruturado, o estudante estará apto a:</p>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>Compreender a tríplice função da <strong>Boa-Fé Objetiva</strong> (Art. 422) e a eficácia interna e externa da <strong>Função Social do Contrato</strong> (Art. 421);</li>
+            <li>Diferenciar com precisão a fase de <strong>negociações preliminares</strong>, a <strong>proposta vinculante</strong> (Art. 427) e a <strong>aceitação</strong>;</li>
+            <li>Dominar a classificação dos contratos (comutativos vs aleatórios: <em>emptio spei</em> vs <em>emptio rei speratae</em>);</li>
+            <li>Distinguir as ações edilícias (redibitória vs estimatória) e aplicar os prazos decadenciais dos <strong>vícios redibitórios</strong> e da <strong>evicção</strong>;</li>
+            <li>Aplicar as regras de <strong>extinção contratual</strong> (resolução por imprevisão - Art. 478, resilição unilateral/bilateral e exceção do contrato não cumprido - Art. 476);</li>
+            <li>Identificar as cláusulas especiais da <strong>compra e venda</strong>, regras da <strong>doação</strong> (inoficiosa e ingratidão) e distinção entre <strong>comodato e mútuo</strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 2. ITER CONTRATUAL ══════════════════════════════ -->
+      <section id="iter">
+        <h2>⏳ Iter Contratual: Linha do Tempo da Vida do Contrato</h2>
+        <p>O contrato percorre uma sequência lógica de fases jurídicas desde as tratativas iniciais até a sua extinção final:</p>
+        
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 1 · Pré-Contratual</span>
+            <div class="timeline-title">Negociações Preliminares (Punctuação)</div>
+            <p>Tratativas iniciais sem força vinculante direta de cumprimento, mas sujeitas à responsabilidade civil pré-contratual se houver violação da boa-fé objetiva (quebra de legítima expectativa / legítima confiança).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 2 · Proposta / Policiação</span>
+            <div class="timeline-title">Oferta Obrigatória (Art. 427 CC)</div>
+            <p>Declaração unilateral de vontade receptícia que vincula o proponente, contendo os elementos essenciais do negócio proposto.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 3 · Aceitação / Oblação</span>
+            <div class="timeline-title">Concordância e Formação (Art. 431 CC)</div>
+            <p>Manifestação de concordância do oblato. Entre presentes, aceitação imediata. Entre ausentes, adota-se a Teoria da Expedição (Art. 434 CC).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 4 · Execução / Cumprimento</span>
+            <div class="timeline-title">Fase Contratual Pós-Perfeição</div>
+            <p>Cumprimento das prestações pactuadas, vigência das garantias legais (Vícios Redibitórios e Evicção) e observância dos deveres anexos da boa-fé.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 5 · Extinção / Pós-Contratual</span>
+            <div class="timeline-title">Adimplemento, Resolução, Resilição ou Distrato</div>
+            <p>Término do vínculo por cumprimento regular, por inadimplemento (resolução), resilição (distrato/denúncia) ou exceção por imprevisão. Permanecem os deveres pós-contratuais de sigilo e lealdade.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 01 ══════════════════════════════ -->
+      <section id="principios" class="section">
+        <div class="section-label">Módulo 01</div>
+        <h2><span class="num">01</span>Teoria Geral &amp; Princípios Contratuais</h2>
+
+        <p>O contrato é um negócio jurídico bilateral ou plurilateral que visa criar, modificar, regular ou extinguir relações jurídicas patrimoniais. O Código Civil de 2002 consagrou a eticidade, a socialidade e a operabilidade no regime contratual.</p>
+
+        <h3>1.1 Autonomia Privada e Liberdade de Contratar</h3>
+        <p>Diferencia-se a <strong>liberdade de contratar</strong> (faculdade de optar por celebrar ou não o negócio) da <strong>liberdade contratual</strong> (liberdade de estipular o conteúdo das cláusulas).</p>
+
+        <div class="levels-container">
+          <div class="level-box lvl-1">
+            <span class="level-badge">Nível 1 · Entendimento Intuitivo</span>
+            <strong>O que significa:</strong> É o poder que você tem de decidir comprar um carro ou não, e de negociar com o vendedor o preço, a cor e a forma de pagamento, desde que respeitadas as leis.
+          </div>
+          <div class="level-box lvl-2">
+            <span class="level-badge">Nível 2 · Graduação / Técnica</span>
+            <strong>Conceito Dogmático:</strong> Trata-se da expressão da autonomia privada fundamentada na livre iniciativa constitucional (Art. 170, CF/88), limitada pelas normas de ordem pública e pelos bons costumes.
+          </div>
+          <div class="level-box lvl-3">
+            <span class="level-badge">Nível 3 · Concursos / Alto Nível</span>
+            <strong>Pegadinha de Banca / STJ:</strong> A liberdade contratual será exercida <em>em razão e nos limites da função social do contrato</em> (Redação do Art. 421 alterada pela Lei da Liberdade Econômica - Lei 13.874/2019). Nas relações interpessoais privadas, vigora a presunção de simetria e paridade contratual (Art. 421-A).
+          </div>
+        </div>
+
+        <h3>1.2 Função Social do Contrato (Art. 421 e 421-A CC)</h3>
+        <p>A função social é princípio de ordem pública que condiciona o contrato aos interesses coletivos e à dignidade da pessoa humana.</p>
+
+        <details class="artigo"> <summary>Art. 421 e 421-A do Código Civil - Função Social do Contrato</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 421.</strong> A liberdade contratual será exercida nos limites da <span class="kw">função social do contrato</span>.<br>
+            Parágrafo único. Nas relações privadas contratuais, prevalecerão o princípio da <span class="kw">intervenção mínima</span> e a <span class="kw">excepcionalidade da revisão contratual</span>.</p>
+            <p><strong>Art. 421-A.</strong> Os contratos civis e empresariais presumem-se <span class="kw">paritários e simétricos</span> até a presença de elementos concretos que justifiquem a afastabilidade dessa presunção...</p>
+          </div>
+        </details>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Eficácia Interna</h4>
+            <p>Proteção da parte vulnerável contra cláusulas abusivas, vedação ao enriquecimento sem causa e conservação do negócio.</p>
+          </div>
+          <div class="card">
+            <h4>Eficácia Externa</h4>
+            <p>Tutela de terceiros contra efeitos nocivos do contrato e proteção do contrato contra interferência indevida de terceiros (ex: <em>Enunciado 21 CJF</em>: tutela do crédito contra o terceiro cúmplice).</p>
+          </div>
+        </div>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Jurisprudência STJ</span>
+          <strong>Súmula 308 do STJ:</strong> "A hipoteca firmada entre a construtora e o agente financeiro, anterior ou posterior à celebração da promessa de compra e venda, não tem eficácia perante os adquirentes do imóvel." (Exemplo clássico da eficácia externa da função social).
+        </div>
+
+        <h3>1.3 Boa-Fé Objetiva (Art. 422 CC) e Subinstitutos</h3>
+        <p>A boa-fé objetiva é um padrão ético de conduta (dever de lealdade, honestidade e cooperação) exigido dos contratantes em todas as fases contratuais.</p>
+
+        <table class="modern-table">
+          <thead>
+            <tr>
+              <th>Subinstituto da Boa-Fé</th>
+              <th>Conceito / Significado</th>
+              <th>Exemplo Prático</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Venire contra factum proprium</strong></td>
+              <td>Vedação ao comportamento contraditório que quebra a confiança da outra parte.</td>
+              <td>Credor que aceita pagamento em atraso por anos e repentinamente exige multa por mora sem prévio aviso.</td>
+            </tr>
+            <tr>
+              <td><strong>Supressio</strong></td>
+              <td>Perda de um direito subjetivo pelo seu não exercício prolongado no tempo.</td>
+              <td>Locador que deixa de cobrar reajuste anual previsto em contrato durante 4 anos.</td>
+            </tr>
+            <tr>
+              <td><strong>Surrectio</strong></td>
+              <td>Surgimento de um direito novo em razão da prática reiterada de uma conduta.</td>
+              <td>Direito de pagar aluguel em local diverso do contratado por habitualidade tolerada.</td>
+            </tr>
+            <tr>
+              <td><strong>Tu quoque</strong></td>
+              <td>Proibição de exigir do outro o cumprimento de regra que você próprio violou.</td>
+              <td>Contratante inadimplente que exige execução de penalidade da outra parte.</td>
+            </tr>
+            <tr>
+              <td><strong>Duty to mitigate the loss</strong></td>
+              <td>Dever do credor de mitigar os seus próprios prejuízos.</td>
+              <td>Locador que não busca despejar inquilino inadimplente por anos apenas para acumular juros e multa.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 02 ══════════════════════════════ -->
+      <section id="formacao" class="section">
+        <div class="section-label">Módulo 02</div>
+        <h2><span class="num">02</span>Formação dos Contratos &amp; Fase Pré-Contratual</h2>
+
+        <h3>2.1 Proposta (Policitação) e Sua Força Vinculante</h3>
+        <p>A proposta obriga o proponente (Art. 427 CC), salvo se o contrário resultar dos termos dela, da natureza do negócio ou das circunstâncias do caso.</p>
+
+        <details class="artigo"> <summary>Art. 427 e 428 do Código Civil - Força Vinculante da Oferta</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 427.</strong> A proposta de contrato obriga o proponente, se o contrário não resultar dos termos dela, da natureza do negócio, ou das circunstâncias do caso.</p>
+            <p><strong>Art. 428.</strong> Deixa de ser obrigatória a proposta:<br>
+            I - se, feita sem prazo a pessoa presente, não foi imediatamente aceita;<br>
+            II - se, feita sem prazo a pessoa ausente, tiver decorrido tempo suficiente para chegar a resposta ao conhecimento do proponente;<br>
+            III - se, feita a pessoa ausente, não tiver sido expedida a resposta dentro do prazo dado;<br>
+            IV - se, antes dela, ou simultaneamente, chegar ao conhecimento da outra parte a retratação do proponente.</p>
+          </div>
+        </details>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Erro Comum em Provas</span>
+          Pessoas comunicando-se por <strong>telefone, WhatsApp ou videochamada</strong> são consideradas <strong>PRESENTES</strong> para fins de aceitação imediata da proposta (Art. 428, I CC)!
+        </div>
+
+        <h3>2.2 Aceitação (Oblação) e Formação entre Ausentes</h3>
+        <p>A aceitação fora do prazo ou com modificações importa <strong>nova proposta</strong> (contraproposta - Art. 431 CC).</p>
+        
+        <div class="card blue">
+          <h4>Teoria da Agnição na Modalidade Expedição (Art. 434 CC)</h4>
+          <p>Os contratos entre ausentes consideram-se concluídos no momento em que a <strong>resposta / aceitação é expedida</strong> pelo oblato, salvo se houver retratação prévia/simultânea ou se o proponente se houver obrigado a esperar resposta.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 03 ══════════════════════════════ -->
+      <section id="classificacao" class="section">
+        <div class="section-label">Módulo 03</div>
+        <h2><span class="num">03</span>Classificação dos Contratos</h2>
+
+        <p>A correta classificação contratual determina os regimes de responsabilidade, ônus probatório e garantias cabíveis.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Classificação</th>
+              <th>Critério Distintivo</th>
+              <th>Exemplo Prático</th>
+              <th>Efeito Jurídico Relevante</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Unilaterais vs Bilaterais</strong></td>
+              <td>Presença de obrigações para uma ou ambas as partes.</td>
+              <td>Doação pura (Unilateral) vs Compra e Venda (Bilateral).</td>
+              <td>Apenas nos bilaterais cabe Exceção do Contrato Não Cumprido (Art. 476).</td>
+            </tr>
+            <tr>
+              <td><strong>Onerosos vs Gratuitos</strong></td>
+              <td>Existência de benefício patrimonial correlato.</td>
+              <td>Locação (Oneroso) vs Comodato (Gratuito).</td>
+              <td>Nos gratuitos o devedor responde apenas por dolo (Art. 392).</td>
+            </tr>
+            <tr>
+              <td><strong>Comutativos vs Aleatórios</strong></td>
+              <td>Certeza e equivalência das prestações desde o início.</td>
+              <td>Compra de imóvel pronto (Comutativo) vs Seguro ou Safra futura (Aleatório).</td>
+              <td>Contratos aleatórios não aceitam revisão por lesão simples ou vícios redibitórios ordinários.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>3.1 Contratos Aleatórios: Emptio Spei vs Emptio Rei Speratae</h3>
+        <div class="grid2">
+          <div class="card">
+            <h4>Emptio Spei (Venda da Esperança - Art. 458 CC)</h4>
+            <p>O risco é a existência da coisa. O comprador paga o preço avençado mesmo que a coisa <strong>nada venha a existir</strong>, desde que não haja dolo/culpa do alienante.</p>
+          </div>
+          <div class="card">
+            <h4>Emptio Rei Speratae (Venda da Coisa Esperada - Art. 459 CC)</h4>
+            <p>O risco é a quantidade da coisa. Se a coisa existir em qualquer quantidade, o preço integral é devido. Mas se <strong>nada vier a existir</strong>, o contrato fica sem efeito e o preço é devolvido.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 04 ══════════════════════════════ -->
+      <section id="garantias" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2><span class="num">04</span>Garantias Contratuais: Vícios Redibitórios &amp; Evicção</h2>
+
+        <h3>4.1 Vícios Redibitórios (Arts. 441 a 446 CC)</h3>
+        <p>Defeitos ocultos em coisa recebida em virtude de contrato comutativo ou doação onerosa, que a tornam imprópria ao uso a que se destina ou lhe diminuem o valor.</p>
+
+        <div class="card gold">
+          <h4>Ações Edilícias Cabíveis à Escolha do Adquirente:</h4>
+          <ul>
+            <li><strong>Ação Redibitória:</strong> Rescisão/rejeição do contrato com restituição da quantia paga.</li>
+            <li><strong>Ação Estimatória (Quanti Minoris):</strong> Abatimento proporcional do preço mantendo o contrato.</li>
+          </ul>
+        </div>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Prazos Decadenciais (Art. 445 CC)</span>
+          <ul>
+            <li><strong>Bens Móveis:</strong> 30 dias contados da entrega da posse.</li>
+            <li><strong>Bens Imóveis:</strong> 1 ano contado da entrega da posse.</li>
+            <li><strong>Se o vício por sua natureza só puder ser conhecido mais tarde:</strong> O prazo é contado da ciência do vício, com limite máximo de descobrimento de <strong>180 dias para móveis</strong> e <strong>1 ano para imóveis</strong>.</li>
+          </ul>
+        </div>
+
+        <h3>4.2 Evicção (Arts. 447 a 457 CC)</h3>
+        <p>Perda total ou parcial da posse ou propriedade da coisa por força de decisão judicial ou administrativa que a atribui a terceiro por causa jurídica anterior ao contrato.</p>
+
+        <details class="artigo"> <summary>Art. 447 e 450 do Código Civil - Direitos do Evicto</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 447.</strong> Nos contratos onerosos, o alienante responde pela <span class="kw">evicção</span>. Subsiste esta garantia ainda que a aquisição se tenha realizado em hasta pública.</p>
+            <p><strong>Art. 450.</strong> Salvo estipulação em contrário, tem direito o evicto, além da restituição integral do preço ou das quantias que pagou:<br>
+            I - à indenização dos frutos que tiver sido obrigado a restituir;<br>
+            II - à indenização das despesas dos contratos e das prejuízos que diretamente resultarem da evicção;<br>
+            III - às custas judiciais e aos honorários do advogado por ele constituído.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 05 ══════════════════════════════ -->
+      <section id="extincao" class="section">
+        <div class="section-label">Módulo 05</div>
+        <h2><span class="num">05</span>Extinção dos Contratos &amp; Inadimplemento</h2>
+
+        <p>A extinção normal ocorre pelo cumprimento da obrigação (adimplemento). Quando extinto por anomalias ou vontade das partes, aplicam-se as modalidades específicas:</p>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Resolução (Inadimplemento / Imprevisão)</h4>
+            <p>Decorre da falta de cumprimento da obrigação (culposo ou involuntário por força maior) ou por onerosidade excessiva extraordinária (Art. 478 CC).</p>
+          </div>
+          <div class="card">
+            <h4>Resilição (Desfazimento Voluntário)</h4>
+            <p>Decorre da manifestação da vontade. Pode ser <strong>Bilateral (Distrato - Art. 472)</strong> ou <strong>Unilateral (Denúncia - Art. 473)</strong>.</p>
+          </div>
+        </div>
+
+        <h3>5.1 Resolução por Onerosidade Excessiva (Art. 478 CC)</h3>
+        <p>Aplica-se a Teoria da Imprevisão (cláusula <em>Rebus Sic Stantibus</em>) nos contratos de execução continuada ou diferida quando prestação torna-se excessivamente onerosa por acontecimento extraordinário e imprevisível.</p>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Dica de Ouro</span>
+          A resolução por imprevisão pode ser evitada se o réu oferecer a <strong>modificação equitativa das condições do contrato</strong> (Princípio da Conservação dos Contratos - Art. 479 CC).
+        </div>
+
+        <h3>5.2 Exceção do Contrato Não Cumprido (Art. 476 CC)</h3>
+        <p><em>Exceptio non adimpleti contractus</em>: Nos contratos bilaterais, nenhum dos contratantes, antes de cumprida a sua obrigação, pode exigir o adimplemento da do outro.</p>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 06 ══════════════════════════════ -->
+      <section id="especies" class="section">
+        <div class="section-label">Módulo 06</div>
+        <h2><span class="num">06</span>Principais Contratos em Espécie</h2>
+
+        <h3>6.1 Compra e Venda (Arts. 481 a 532 CC)</h3>
+        <p>Contrato pelo qual um dos contratantes se obriga a transferir o domínio de certa coisa, e o outro, a pagar-lhe certo preço em dinheiro.</p>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Atenção: Venda de Ascendente a Descendente (Art. 496 CC)</span>
+          É <strong>ANULÁVEL</strong> a venda de ascendente a descendente sem o consentimento expresso dos outros descendentes e do cônjuge do alienante. Prazo decadencial de <strong>2 anos</strong> para anular (Art. 179 CC).
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Retrovenda (Art. 505 CC)</h4>
+            <p>Cláusula em imóveis onde o vendedor reserva-se o direito de recobrar o imóvel no prazo máximo de <strong>3 anos</strong>, restituindo o preço e benfeitorias.</p>
+          </div>
+          <div class="card">
+            <h4>Preempção / Preferência (Art. 513 CC)</h4>
+            <p>Obrigação do comprador de oferecer a coisa ao vendedor caso decida vendê-la a terceiros. Prazo máximo do direito de preferência: 180 dias (móveis) / 2 anos (imóveis).</p>
+          </div>
+        </div>
+
+        <h3>6.2 Doação (Arts. 538 a 564 CC)</h3>
+        <p>Contrato em que uma pessoa, por liberalidade, transfere do seu patrimônio bens ou vantagens para o de outra.</p>
+        <ul>
+          <li><strong>Doação Inoficiosa (Art. 549 CC):</strong> É NULA a doação na parte que exceder a metade dos bens que o doador poderia dispor em testamento no momento da doação (legítima dos herdeiros necessários).</li>
+          <li><strong>Revogação por Ingratidão (Art. 555 CC):</strong> Hipóteses taxativas de atentado contra a vida, injúria grave, calúnia ou recusa de alimentos ao doador. Prazo decadencial de 1 ano (Art. 559 CC).</li>
+        </ul>
+
+        <h3>6.3 Empréstimo: Comodato vs Mútuo</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Comodato (Art. 579 CC)</th>
+              <th>Mútuo (Art. 586 CC)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Objeto</strong></td>
+              <td>Coisa Infungível (uso).</td>
+              <td>Coisa Fungível (consumo).</td>
+            </tr>
+            <tr>
+              <td><strong>Transferência de Domínio</strong></td>
+              <td>Não transfere a propriedade (apenas a posse direta).</td>
+              <td>Transfere a propriedade do bem ao mutuatário.</td>
+            </tr>
+            <tr>
+              <td><strong>Restituição</strong></td>
+              <td>A própria coisa emprestada.</td>
+              <td>Outra coisa do mesmo gênero, qualidade e quantidade.</td>
+            </tr>
+            <tr>
+              <td><strong>Gratuidade / Onerosidade</strong></td>
+              <td>Essencialmente Gratuito.</td>
+              <td>Gratuito ou Oneroso (Mútuo Feneratício com juros).</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+      <section id="mindmap" class="section">
+        <h2>🧠 Mapa Mental - Estrutura dos Contratos</h2>
+        <div class="mindmap-box">
+          <div class="mm-root">⚖️ TEORIA GERAL E ESPÉCIES DE CONTRATOS</div>
+          <div class="mm-l1">PRINCÍPIOS FUNDAMENTAIS</div>
+          <div class="mm-l2">├─ Autonomia Privada (Liberdade x Limites da Função Social - Art. 421)</div>
+          <div class="mm-l2">├─ Função Social (Eficácia Interna &amp; Externa - Súmula 308 STJ)</div>
+          <div class="mm-l2">└─ Boa-Fé Objetiva (Venire, Supressio, Surrectio, Tu Quoque, Duty to mitigate)</div>
+          <div class="mm-l1">FORMAÇÃO &amp; GARANTIAS</div>
+          <div class="mm-l2">├─ Proposta (Vinculante - Art. 427) vs Aceitação (Teoria da Expedição)</div>
+          <div class="mm-l2">├─ Vícios Redibitórios (Ações Edilícias: Redibitória x Estimatória / Prazos 30d/1ano)</div>
+          <div class="mm-l2">└─ Evicção (Perda judicial/adm - Direitos do Evicto - Art. 450)</div>
+          <div class="mm-l1">EXTINÇÃO &amp; INADIMPLEMENTO</div>
+          <div class="mm-l2">├─ Resolução (Por Culpa ou Onerosidade Excessiva - Teoria da Imprevisão Art. 478)</div>
+          <div class="mm-l2">├─ Resilição (Distrato Art. 472 x Unilateral Art. 473)</div>
+          <div class="mm-l2">└─ Exceptio non adimpleti contractus (Art. 476)</div>
+          <div class="mm-l1">CONTRATOS EM ESPÉCIE</div>
+          <div class="mm-l2">├─ Compra e Venda (Venda a Descendente Anulável x Retrovenda x Preempção)</div>
+          <div class="mm-l2">├─ Doação (Inoficiosa Nula x Revogação por Ingratidão Prazo 1 ano)</div>
+          <div class="mm-l2">└─ Empréstimo (Comodato = Uso/Infungível x Mútuo = Consumo/Fungível)</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <h2>💡 Mnemônicos &amp; Macetes Mestre</h2>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-tag">FUN-BO-PRO</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Tríplice Pilar dos Princípios Contratuais do CC/02:</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>FUN:</strong> FUNção Social do Contrato (Art. 421)</li>
+            <li><strong>BO:</strong> BOa-fé Objetiva (Art. 422)</li>
+            <li><strong>PRO:</strong> PRObidade e Ética Contratual</li>
+          </ul>
+        </div>
+
+        <div class="mnemonic-card" style="background: linear-gradient(135deg, #064E3B 0%, #10B981 100%);">
+          <div class="mnemonic-tag" style="color: #A7F3D0;">RED-EST</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Ações Edilícias nos Vícios Redibitórios:</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>RED:</strong> Ação REDibitória (Devolve o bem e pega o dinheiro de volta)</li>
+            <li><strong>EST:</strong> Ação ESTimatória / Quanti Minoris (Fica com o bem e exige abatimento no preço)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <h2>📝 Revisão Ativa (Questões Práticas)</h2>
+
+        <!-- Questão 1: Discursiva -->
+        <div class="exercise-box">
+          <p><span class="q-badge">DISCURSIVA</span> <strong>01. Explique a diferença entre a Eficácia Interna e a Eficácia Externa do princípio da Função Social do Contrato (Art. 421 CC), citando um exemplo jurisprudencial aplicável.</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Resposta Esperada:</strong> A eficácia interna da função social opera entre as próprias partes contratantes, vedando cláusulas abusivas, garantindo o equilíbrio contratual e a dignidade humana. Já a eficácia externa projeta os efeitos do contrato perante a sociedade e terceiros, impedindo que o contrato cause prejuízos a terceiros estranhos à lide ou protegendo o contrato contra interferências indevidas de terceiros (terceiro cúmplice). Exemplo clássico da eficácia externa é a <strong>Súmula 308 do STJ</strong>, pela qual a hipoteca entre construtora e banco não atinge os terceiros adquirentes das unidades imobiliárias.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 2: V ou F -->
+        <div class="exercise-box">
+          <p><span class="q-badge">V / F</span> <strong>02. (Julgue os itens a seguir com V ou F):</strong></p>
+          <p>a) ( ) A doação inoficiosa é anulável no prazo decadencial de dois anos.<br>
+          b) ( ) Na proposta feita sem prazo a pessoa ausente por e-mail ou correspondência, adota-se a Teoria da Expedição para considerar formado o contrato.<br>
+          c) ( ) O comodato é o empréstimo de bem fungível que transfere a propriedade ao comodatário.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Gabarito: F - V - F</strong><br>
+              <em>Justificativa:</em><br>
+              a) <strong>FALSO.</strong> A doação inoficiosa é <strong>NULA</strong> (Art. 549 CC) na parte que excede a legítima.<br>
+              b) <strong>VERDADEIRO.</strong> Entre ausentes adota-se a Teoria da Agnição/Expedição (Art. 434 CC).<br>
+              c) <strong>FALSO.</strong> O comodato é empréstimo de bem <strong>INFUNGÍVEL</strong> (uso) e não transfere a propriedade. Quem transfere a propriedade de bem fungível é o <strong>mútuo</strong> (Art. 586 CC).
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 3: CEBRASPE -->
+        <div class="exercise-box">
+          <p><span class="q-badge">CEBRASPE</span> <strong>03. (Adaptada/CEBRASPE) Em relação à teoria dos contratos, julgue o item: A venda de imóvel de ascendente para descendente sem a anuência dos demais descendentes é nula de pleno direito por afronta à legítima dos herdeiros necessários.</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Item ERRADO.</strong> Nos termos do Art. 496 do Código Civil, a venda de ascendente para descendente sem anuência expressa dos demais descendentes e do cônjuge é <strong>ANULÁVEL</strong> (e não nula de pleno direito), sujeitando-se ao prazo decadencial de 2 anos (Art. 179 CC e Súmula 494 STF).
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 4: FGV / FCC -->
+        <div class="exercise-box">
+          <p><span class="q-badge">FGV / FCC</span> <strong>04. Carlos adquiriu de João um veículo usado. Após 20 dias de uso normal, o motor apresentou um defeito oculto grave pré-existente à alienação, que inviabilizou o funcionamento do automóvel. Diante dessa situação hipotecada no Código Civil, assinale a alternativa correta:</strong></p>
+          <p>A) Carlos perdeu o direito de reclamar, pois o prazo decadencial é de 15 dias.<br>
+          B) Carlos poderá ajuizar Ação Redibitória para enjeitar a coisa ou Ação Estimatória para obter abatimento no preço, no prazo decadencial de 30 dias contados da entrega.<br>
+          C) Trata-se de hipótese de evicção, cabendo apenas indenização por perdas e danos.<br>
+          D) O alienante só responderá pelo vício se tiver agido com dolo provado.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Alternativa Correta: B.</strong><br>
+              Trata-se de vício redibitório (defeito oculto em bem móvel). O adquirente dispõe das ações edilícias (redibitória ou estimatória) no prazo decadencial de 30 dias contados da entrega da posse da coisa móvel (Art. 445 CC). O alienante responde pelo vício oculto independentemente de ter conhecimento dele (Art. 443 CC).
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+      <section id="cheat-sheet" class="section">
+        <div class="card gold">
+          <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+          <ul style="line-height: 1.9; font-size: 1rem;">
+            <li>• <strong>Função Social (Art. 421):</strong> Limite da liberdade contratual. Prevalece a intervenção mínima e excepcionalidade da revisão (Lei 13.874/19).</li>
+            <li>• <strong>Boa-Fé Objetiva (Art. 422):</strong> Dever de conduta. Subinstitutos: <em>Venire</em> (vedação a conduta contraditória), <em>Supressio</em> (perda do direito pelo tempo), <em>Surrectio</em> (surgimento de direito), <em>Duty to mitigate</em>.</li>
+            <li>• <strong>Proposta (Art. 427):</strong> Obrigatória. Entre ausentes, aceitação aperfeiçoa-se na <strong>expedição</strong> (Teoria da Agnição).</li>
+            <li>• <strong>Vícios Redibitórios (Art. 441):</strong> Defeito oculto. Ações Edilícias: Redibitória (rejeição) ou Estimatória (abatimento). Prazos: 30 dias (móvel) e 1 ano (imóvel).</li>
+            <li>• <strong>Evicção (Art. 447):</strong> Perda da coisa por decisão judicial/adm com causa anterior. Alienante responde pelo preço + frutos + despesas + custas (Art. 450).</li>
+            <li>• <strong>Resolução (Art. 478):</strong> Por inadimplemento ou onerosidade excessiva (Teoria da Imprevisão / Rebus Sic Stantibus).</li>
+            <li>• <strong>Exceptio non adimpleti contractus (Art. 476):</strong> Nos bilaterais, nenhum contratante exige a prestação do outro sem ter cumprido a sua.</li>
+            <li>• <strong>Venda Ascendente a Descendente (Art. 496):</strong> ANULÁVEL (prazo de 2 anos).</li>
+            <li>• <strong>Doação Inoficiosa (Art. 549):</strong> NULA no que exceder a legítima (50%).</li>
+            <li>• <strong>Empréstimos:</strong> Comodato = Uso / Infungível / Posse | Mútuo = Consumo / Fungível / Transfere Propriedade.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PORTAL CORE JS SCRIPT -->
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>

@@ -145,16 +145,18 @@ def extract_summary_data(filepath):
     subject_names = {
         "constitucional": "Constitucional II",
         "civil-ii": "Direito Civil II",
+        "civil-iii": "Direito Civil III",
         "direito-digital": "Direito Digital",
         "direitos-humanos": "Direitos Humanos",
-        "penal-ii": "Direito Penal II"
+        "penal-ii": "Direito Penal II",
+        "penal-iii": "Direito Penal III"
     }
     subject_name = subject_names.get(subject_dir, subject_dir.replace('-', ' ').capitalize())
     
     relative_url = f"subjects/{subject_dir}/{parts[-1]}"
     
-    # If the file has no sections, or it's an index.html of penal-ii (which is just a portal)
-    if not parser.sections or (subject_dir == "penal-ii" and parts[-1] == "index.html"):
+    # If the file has no sections, or it's an index.html of penal-ii/civil-iii (which is just a portal)
+    if not parser.sections or parts[-1] == "index.html":
         print(f"Skipping {filepath} (no study pill sections found or is index)")
         return None
         

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Civil III – Formação, Celebração e Extinção dos Contratos | Material Didático</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Integração com Estilos Globais e Customização Local -->
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue & Accent Gold */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 .num { 
+      font-family: 'JetBrains Mono', monospace; 
+      font-size: 1.1rem; 
+      color: white; 
+      background: var(--p-500); 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 8px; 
+      margin-right: 10px;
+    }
+
+    /* Linha do tempo / Iter Contratual */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: var(--card-bg, #ffffff);
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    .timeline-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--p-500);
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--p-700);
+      margin: 5px 0;
+    }
+
+    /* Estilo Interatividade Lei Seca */
+    .artigo {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 12px 18px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️ ";
+      margin-right: 8px;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(30, 58, 138, 0.2);
+      border-left-color: var(--p-500);
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #DBEAFE;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: #1E3A8A;
+      color: #93C5FD;
+    }
+
+    /* Explicação em 3 Níveis */
+    .levels-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 5px solid;
+    }
+
+    .level-box.lvl-1 {
+      background: #F0FDF4;
+      border-color: #22C55E;
+    }
+
+    .level-box.lvl-2 {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+    }
+
+    .level-box.lvl-3 {
+      background: #FEF2F2;
+      border-color: #EF4444;
+    }
+
+    [data-theme="dark"] .level-box.lvl-1 { background: rgba(34, 197, 94, 0.1); }
+    [data-theme="dark"] .level-box.lvl-2 { background: rgba(59, 130, 246, 0.1); }
+    [data-theme="dark"] .level-box.lvl-3 { background: rgba(239, 68, 68, 0.1); }
+
+    .level-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .lvl-1 .level-badge { background: #DCFCE7; color: #15803D; }
+    .lvl-2 .level-badge { background: #DBEAFE; color: #1E40AF; }
+    .lvl-3 .level-badge { background: #FEE2E2; color: #B91C1C; }
+
+    /* Mapas Mentais */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 25px;
+      border-radius: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: #FBBF24;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .mm-l2 {
+      margin-left: 40px;
+      color: #94A3B8;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Mnemônicos */
+    .mnemonic-card {
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .mnemonic-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FDE047;
+    }
+
+    /* Questões */
+    .exercise-box {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .gabarito-box {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F0FDF4;
+      border-left: 4px solid #16A34A;
+      border-radius: 6px;
+      color: #14532D;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .gabarito-box {
+      background: rgba(22, 163, 74, 0.15);
+      color: #86EFAC;
+    }
+
+    .q-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--p-500);
+      color: white;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Civil III</div>
+      <h1>Formação, Celebração e Extinção dos Contratos</h1>
+      <div class="subtitle">Guia Mestre de Estudos: Do Iter Pré-Contratual às Modalidades de Extinção Normal e Anormal no Código Civil</div>
+      <div class="meta" style="display:flex; justify-content:center; gap:20px; opacity:0.9; font-size:0.9rem; margin-top:20px; flex-wrap:wrap;">
+        <span>⚖️ CC/02: Arts. 427 a 435, 472 a 475 | LINDB Art. 9º</span>
+        <span>📚 Teoria Geral dos Contratos</span>
+        <span>🛡️ Foco em Concursos &amp; OAB</span>
+        <span>🔥 Nível Avançado</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#fases" class="nav-item">Fases Contratuais</a>
+        <a href="#proposta" class="nav-item">Proposta &amp; Aceite</a>
+        <a href="#teorias" class="nav-item">Teorias da Formação</a>
+        <a href="#lugar" class="nav-item">Comunicação &amp; Lugar</a>
+        <a href="#extincao-normal" class="nav-item">Extinção Normal</a>
+        <a href="#extincao-anormal" class="nav-item">Extinção Anormal</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div id="sumario" class="card" style="margin-bottom: 40px;">
+        <h2>📋 Sumário Interativo do Módulo</h2>
+        <ol style="column-count: 2; column-gap: 30px; font-family: 'Inter', sans-serif; line-height: 2;">
+          <li><a href="#objetivos">1. Objetivos de Aprendizagem</a></li>
+          <li><a href="#iter">2. Linha do Tempo do Iter Contratual</a></li>
+          <li><a href="#fases">3. Módulo 01: Fases da Formação Contratual &amp; Boa-Fé</a></li>
+          <li><a href="#proposta">4. Módulo 02: A Proposta (Policitação) e Seus Efeitos</a></li>
+          <li><a href="#teorias">5. Módulo 03: Teorias da Formação (Cognição vs Agnição)</a></li>
+          <li><a href="#lugar">6. Módulo 04: Comunicação &amp; Lugar de Celebração</a></li>
+          <li><a href="#extincao-normal">7. Módulo 05: Extinção Normal (Adimplemento &amp; Termo)</a></li>
+          <li><a href="#extincao-anormal">8. Módulo 06: Extinção Anormal (Resilição, Resolução, Morte)</a></li>
+          <li><a href="#mindmap">9. Mapa Mental Completo</a></li>
+          <li><a href="#mnemonicos">10. Mnemônicos Mestre</a></li>
+          <li><a href="#revisao">11. Revisão Ativa (Questões Comentadas)</a></li>
+          <li><a href="#cheat-sheet">12. Resumão Final (Cheat Sheet)</a></li>
+        </ol>
+      </div>
+
+      <!-- ══════════════════════════════ 1. OBJETIVOS ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <div class="card gold">
+          <p>Ao concluir a leitura deste resumo estruturado, o estudante estará capacitado a:</p>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>Identificar com precisão as <strong>quatro fases contratuais</strong> (sondagem, negociações preliminares, contratual e pós-contratual);</li>
+            <li>Reconhecer a incidência transversal da <strong>Boa-Fé Objetiva</strong> (Art. 422 CC) e os requisitos da responsabilidade pré-contratual (<em>culpa in contrahendo</em>);</li>
+            <li>Aplicar a disciplina jurídica da <strong>proposta vinculante</strong> (Art. 427 CC) e as hipóteses legais de perda da obrigatoriedade (Art. 428 CC);</li>
+            <li>Diferenciar as <strong>Teorias da Cognição e da Agnição</strong> (declaração, expedição e recepção), aplicando a <strong>Teoria da Expedição</strong> para contratos entre ausentes (Art. 434 CC);</li>
+            <li>Determinar a lei e o <strong>lugar de celebração</strong> dos contratos domésticos (Art. 435 CC) e internacionais (Art. 9º, §2º da LINDB);</li>
+            <li>Distinguir as modalidades de <strong>extinção normal</strong> (cumprimento e termo) e <strong>anormal</strong> (vícios originários, resilição/distrato no Art. 472 CC, resolução culposa/involuntária e morte).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 2. LINHA DO TEMPO ══════════════════════════════ -->
+      <section id="iter">
+        <h2>⏳ Linha do Tempo do Iter Contratual</h2>
+        <p>A vida jurídica do contrato desenrola-se através das seguintes fases fundamentais:</p>
+        
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 1 · Sondagem</span>
+            <div class="timeline-title">Manifestação Inicial de Vontade</div>
+            <p>Sondagem de mercado e intenção preliminar não vinculante de contratar.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 2 · Negociações Preliminares</span>
+            <div class="timeline-title">Punctuação &amp; Proposta (Art. 427 CC)</div>
+            <p>Elaboração de minuta, ofertas e debate de cláusulas. Exige boa-fé objetiva sob pena de responsabilidade pré-contratual (<em>culpa in contrahendo</em>).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 3 · Aceitação &amp; Celebração</span>
+            <div class="timeline-title">Conclusão do Contrato (Art. 434 CC)</div>
+            <p>Aceitação do oblato sem modificações. Entre ausentes, aperfeiçoa-se no envio da resposta (Teoria da Expedição).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 4 · Fase Contratual</span>
+            <div class="timeline-title">Vigência &amp; Cumprimento das Cláusulas</div>
+            <p>Nascimento do vínculo obrigacional. Execução das prestações devidas pelas partes.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 5 · Fase Pós-Contratual</span>
+            <div class="timeline-title">Deveres Residuais da Boa-Fé</div>
+            <p>Subsistência de deveres de proteção, segredo/sigilo contratual e assistência pós-cumprimento.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Fase 6 · Extinção</span>
+            <div class="timeline-title">Adimplemento, Distrato ou Resolução</div>
+            <p>Extinção normal (cumprimento/termo) ou anormal (resilição unilateral/distrato, resolução por descumprimento ou força maior).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 01 ══════════════════════════════ -->
+      <section id="fases" class="section">
+        <div class="section-label">Módulo 01</div>
+        <h2><span class="num">01</span>Fases da Formação Contratual &amp; Boa-Fé Objetiva</h2>
+
+        <h3>1.1 As 4 Fases da Formação</h3>
+        <ol>
+          <li><strong>Sondagem:</strong> Contato inicial e sondagem de interesse.</li>
+          <li><strong>Negociações Preliminares (Punctuação):</strong> Fase pré-contratual em que as partes discutem os termos, realizam minutas e alinham interesses. Não vincula ao cumprimento do contrato final, mas impõe o dever de lealdade.</li>
+          <li><strong>Contratual:</strong> Acordo de vontades que dá nascimento ao contrato e inicia a vigência de suas obrigações.</li>
+          <li><strong>Pós-Contratual:</strong> Subsistência de deveres anexos decorrentes da boa-fé objetiva (garantias, dever de sigilo, não concorrência).</li>
+        </ol>
+
+        <div class="levels-container">
+          <div class="level-box lvl-1">
+            <span class="level-badge">Nível 1 · Entendimento Intuitivo</span>
+            <strong>O que significa:</strong> É como um casamento: primeiro vem o flerte (sondagem), depois o namoro e noivado (negociações preliminares), o casamento formal (fase contratual) e o respeito mútuo constante mesmo após anos (pós-contratual).
+          </div>
+          <div class="level-box lvl-2">
+            <span class="level-badge">Nível 2 · Graduação / Técnica</span>
+            <strong>Conceito Dogmático:</strong> O princípio da boa-fé objetiva (Art. 422 CC) possui eficácia transversal e atua em todas as 4 fases. A quebra injustificada de legítimas expectativas na fase pré-contratual gera o dever de indenizar com base na responsabilidade civil pré-contratual (<em>culpa in contrahendo</em> - Art. 187 CC).
+          </div>
+          <div class="level-box lvl-3">
+            <span class="level-badge">Nível 3 · Concursos / Alto Nível</span>
+            <strong>STJ / Enunciado 25 CJF:</strong> "O Art. 422 do Código Civil não delimita a aplicação da boa-fé ao momento da celebração e da execução do contrato, devendo ser observado também nas fases pré e pós-contratual."
+          </div>
+        </div>
+
+        <details class="artigo"> <summary>Art. 187 e 422 do Código Civil - Boa-Fé Transversal</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 187.</strong> Também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela <span class="kw">boa-fé ou pelos bons costumes</span>.</p>
+            <p><strong>Art. 422.</strong> Os contratantes são obrigados a guardar, assim na conclusão do contrato, como em sua execução, os princípios de <span class="kw">probidade e boa-fé</span>.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 02 ══════════════════════════════ -->
+      <section id="proposta" class="section">
+        <div class="section-label">Módulo 02</div>
+        <h2><span class="num">02</span>A Proposta (Policitação) e Seus Efeitos</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Proponente (Policitante)</h4>
+            <p>Aquele que formula e envia a proposta contratual com todos os elementos essenciais (preço, quantidade, forma e prazos).</p>
+          </div>
+          <div class="card">
+            <h4>Oblato (Aceitante)</h4>
+            <p>Aquele a quem a proposta é dirigida. Suas respostas podem ser: <strong>Aceitação</strong> (forma o contrato), <strong>Recusa</strong> (extingue a oferta) ou <strong>Contraproposta</strong> (retorna às negociações - Art. 431 CC).</p>
+          </div>
+        </div>
+
+        <h3>2.1 Força Vinculante e Perda da Obrigatoriedade (Arts. 427 e 428 CC)</h3>
+
+        <details class="artigo"> <summary>Art. 427 e 428 do Código Civil - Disciplina da Oferta</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 427.</strong> A proposta de contrato <span class="kw">obriga o proponente</span>, se o contrário não resultar dos termos dela, da natureza do negócio, ou das circunstâncias do caso.</p>
+            <p><strong>Art. 428.</strong> Deixa de ser obrigatória a proposta:<br>
+            I - se, feita <span class="kw">sem prazo a pessoa presente</span>, não foi imediatamente aceita (inclui telefone, WhatsApp ou videochamada);<br>
+            II - se, feita <span class="kw">sem prazo a pessoa ausente</span>, tiver decorrido tempo suficiente para chegar a resposta;<br>
+            III - se, feita a pessoa ausente, não tiver sido expedida a resposta dentro do prazo dado;<br>
+            IV - se, antes dela, ou simultaneamente, chegar ao conhecimento da outra parte a <span class="kw">retratação do proponente</span>.</p>
+          </div>
+        </details>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Contraproposta (Art. 431 CC)</span>
+          A aceitação fora do prazo, ou com adições, restrições ou modificações, <strong>importa nova proposta (contraproposta)</strong>. O oblato passa a ser o proponente da nova oferta!
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 03 ══════════════════════════════ -->
+      <section id="teorias" class="section">
+        <div class="section-label">Módulo 03</div>
+        <h2><span class="num">03</span>Teorias da Formação dos Contratos</h2>
+
+        <p>Quando o aceite passa a vincular as partes e faz nascer o contrato?</p>
+
+        <table class="modern-table">
+          <thead>
+            <tr>
+              <th>Teoria</th>
+              <th>Momento Exato da Formação do Contrato</th>
+              <th>Status no Código Civil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Teoria da Cognição</strong></td>
+              <td>Ocorre no momento em que o proponente <strong>toma conhecimento efetivo / lê</strong> a resposta positiva do oblato.</td>
+              <td>Não adotada como regra geral por gerar incerteza ao oblato.</td>
+            </tr>
+            <tr>
+              <td><strong>Teoria da Agnição (Declaração)</strong></td>
+              <td>Ocorre no instante em que o oblato <strong>escreve ou declara</strong> o seu aceite (ex: redige a carta/e-mail).</td>
+              <td>Fase interna inicial.</td>
+            </tr>
+            <tr>
+              <td><strong>Teoria da Agnição (Expedição)</strong></td>
+              <td>Ocorre no momento em que a aceitação é <strong>expedida / enviada</strong> (ex: envia a mensagem, e-mail ou posta a carta).</td>
+              <td><strong>REGRA GERAL PARA AUSENTES (Art. 434 CC)</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Teoria da Agnição (Recepção)</strong></td>
+              <td>Ocorre quando a aceitação <strong>chega ao endereço / caixa de entrada</strong> do proponente, mesmo sem ter sido lida.</td>
+              <td><strong>REGRA PARA PRESENTES (Art. 428, I)</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <details class="artigo"> <summary>Art. 434 do Código Civil - Adopção da Teoria da Expedição</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 434.</strong> Os contratos entre ausentes consideram-se concluídos desde que a <span class="kw">aceitação é expedida</span>, exceto:<br>
+            I - no caso do artigo antecedente (retratação prévia/simultânea);<br>
+            II - se o proponente se houver obrigado a esperar resposta;<br>
+            III - se ela não chegar no prazo convencionado.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 04 ══════════════════════════════ -->
+      <section id="lugar" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2><span class="num">04</span>Comunicação e Lugar de Celebração</h2>
+
+        <div class="grid2">
+          <div class="card gold">
+            <h4>Entre Presentes</h4>
+            <p>Há <strong>simultaneidade de comunicação</strong> (presença física, telefone, videochamada, chat em tempo real). Exige aceitação imediata sob pena de perda da obrigatoriedade da proposta.</p>
+          </div>
+          <div class="card blue">
+            <h4>Entre Ausentes</h4>
+            <p><strong>Não há simultaneidade</strong> (e-mail, correspondência postal, mensagem enviada com intervalo de tempo). Aplica-se a Teoria da Expedição (Art. 434 CC).</p>
+          </div>
+        </div>
+
+        <h3>4.1 Regras de Lugar de Celebração</h3>
+        <ul>
+          <li><strong>Contrato Doméstico (Art. 435 CC):</strong> Considera-se celebrado no <strong>lugar em que foi proposta a oferta</strong>.</li>
+          <li><strong>Contrato Internacional (Art. 9º, §2º da LINDB):</strong> A obrigação resultante do contrato reputa-se constituída no <strong>lugar em que residir o proponente</strong>.</li>
+          <li><strong>Domicílio Contratual / Foro de Eleição (Art. 78 CC):</strong> As partes podem estipular domicílio de eleição para o exercício e cumprimento dos direitos contratuais.</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 05 ══════════════════════════════ -->
+      <section id="extincao-normal" class="section">
+        <div class="section-label">Módulo 05</div>
+        <h2><span class="num">05</span>Extinção Normal dos Contratos</h2>
+
+        <p>A extinção normal é o caminho natural do contrato quando ele atinge a sua finalidade social e econômica.</p>
+
+        <div class="card gold">
+          <h4>Hipóteses de Extinção Normal:</h4>
+          <ul>
+            <li><strong>Cumprimento Regular (Adimplemento):</strong> O devedor executa a prestação devida e recebe a devida quitação (termo de quitação / recibo).</li>
+            <li><strong>Término do Prazo Contratual (Advento do Termo):</strong> Nos contratos por prazo determinado (ex: locação de 12 meses), o advento do termo final extingue o vínculo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 06 ══════════════════════════════ -->
+      <section id="extincao-anormal" class="section">
+        <div class="section-label">Módulo 06</div>
+        <h2><span class="num">06</span>Extinção Anormal dos Contratos</h2>
+
+        <p>Ocorre quando o contrato é interrompido por defeito originário ou causa superveniente.</p>
+
+        <h3>6.1 Extinção Pré-Contratual (Anulabilidade / Nulidade)</h3>
+        <p>Contrato extinto decorrente de vícios de consentimento ou defeitos no ato de celebração (incapacidade absoluta, erro, dolo, coação, estado de perigo, lesão ou simulação).</p>
+
+        <h3>6.2 Resilição (Arts. 472 e 473 CC) - Desfazimento Voluntário</h3>
+
+        <details class="artigo"> <summary>Art. 472 e 473 do Código Civil - Distrato e Resilição Unilateral</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 472.</strong> O distrato faz-se pela <span class="kw">mesma forma exigida para o contrato</span>.</p>
+            <p><strong>Art. 473.</strong> A resilição unilateral, nos casos em que a lei expressa ou implicitamente o permita, opera mediante <span class="kw">denúncia notificada</span> à outra parte.</p>
+          </div>
+        </details>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Resilição Bilateral (Distrato - Art. 472 CC)</h4>
+            <p>Acordo de vontades entre as partes para dissolver o contrato. <strong>Regra de Ouro: Exige obrigatoriamente a mesma forma exigida para o contrato originário!</strong></p>
+          </div>
+          <div class="card">
+            <h4>Resilição Unilateral (Denúncia - Art. 473 CC)</h4>
+            <p>Desfazimento por vontade de apenas uma das partes quando a lei ou a natureza do contrato autorizar (ex: denúncia em contrato por prazo indeterminado).</p>
+          </div>
+        </div>
+
+        <h3>6.3 Resolução (Arts. 234, 393 e 475 CC) - Inadimplemento</h3>
+        <ul>
+          <li><strong>Resolução Sem Culpa (Caso Fortuito ou Força Maior - Art. 393 CC):</strong> Ocorre descumprimento por fato externo imprevisto e inevitável. O contrato é resolvido, havendo a devolução de quantias pagas sem imputação de perdas e danos.</li>
+          <li><strong>Resolução Culposa / Rescisão (Art. 475 CC):</strong> Ocorre descumprimento imputável a uma das partes com dolo ou culpa. A parte lesada pode exigir o cumprimento forçado ou a resolução do contrato, <strong>em ambos os casos com direito à indenização por perdas e danos</strong>.</li>
+        </ul>
+
+        <h3>6.4 Morte do Contratante</h3>
+        <p>A morte extingue obrigações de caráter <strong>personalíssimo (intuitu personae)</strong>. Nas obrigações patrimoniais fungíveis, a obrigação transmite-se aos herdeiros nos limites da herança (Art. 1.792 CC).</p>
+      </section>
+
+      <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+      <section id="mindmap" class="section">
+        <h2>🧠 Mapa Mental - Formação e Extinção Contratual</h2>
+        <div class="mindmap-box">
+          <div class="mm-root">⚖️ FORMAÇÃO, CELEBRAÇÃO E EXTINÇÃO DOS CONTRATOS</div>
+          <div class="mm-l1">FASES DA FORMAÇÃO</div>
+          <div class="mm-l2">├─ 1) Sondagem (Manifestação preliminar)</div>
+          <div class="mm-l2">├─ 2) Negociações Preliminares / Punctuação (Boa-fé / Culpa in contrahendo - Art. 187)</div>
+          <div class="mm-l2">├─ 3) Contratual (Nascimento da obrigação / Acordo de vontades)</div>
+          <div class="mm-l2">└─ 4) Pós-Contratual (Garantias, Sigilo e deveres anexos)</div>
+          <div class="mm-l1">PROPOSTA &amp; ACEITE</div>
+          <div class="mm-l2">├─ Proposta (Vinculante - Art. 427) vs Contraproposta (Art. 431)</div>
+          <div class="mm-l2">├─ Presentes: Comunicação imediata (Vídeo/Tel) -> Aceite imediato</div>
+          <div class="mm-l2">└─ Ausentes: Teoria da Agnição na modalidade EXPEDIÇÃO (Art. 434)</div>
+          <div class="mm-l1">LUGAR DE CELEBRAÇÃO</div>
+          <div class="mm-l2">├─ Doméstico: Lugar onde foi proposta (Art. 435 CC)</div>
+          <div class="mm-l2">└─ Internacional: Domicílio do proponente (Art. 9º §2º LINDB)</div>
+          <div class="mm-l1">MODALIDADES DE EXTINÇÃO</div>
+          <div class="mm-l2">├─ NORMAL: Cumprimento regular (Adimplemento) ou Término do prazo</div>
+          <div class="mm-l2">└─ ANORMAL:</div>
+          <div class="mm-l2">    ├─ Pré-contratual (Vícios / Anulabilidade)</div>
+          <div class="mm-l2">    ├─ Resilição / Distrato (Bilateral Art. 472 - Simetria de forma)</div>
+          <div class="mm-l2">    ├─ Resolução sem culpa (Força maior / Sem perdas e danos)</div>
+          <div class="mm-l2">    ├─ Resolução por culpa (Inadimplemento Art. 475 + Perdas e Danos)</div>
+          <div class="mm-l2">    └─ Morte (Extingue contratos personalíssimos)</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <h2>💡 Mnemônicos &amp; Macetes Mestre</h2>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-tag">AG-EX-RE</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Teorias de Formação Contratual entre Ausentes:</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>AG-EX:</strong> AGnição por EXPEDIÇÃO = Regra Geral do CC (Art. 434) para Contratos entre Ausentes. O envio vincula!</li>
+            <li><strong>RE:</strong> RECEPÇÃO = Regra para Comunicação Direta entre Presentes (Art. 428, I).</li>
+          </ul>
+        </div>
+
+        <div class="mnemonic-card" style="background: linear-gradient(135deg, #064E3B 0%, #10B981 100%);">
+          <div class="mnemonic-tag" style="color: #A7F3D0;">DIS-FORMA</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Simetria de Forma no Distrato (Art. 472 CC):</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>DIS-FORMA:</strong> O DISTRATO exige obrigatoriamente a mesma FORMA exigida por lei para o contrato! Se o contrato exigia escritura pública, o distrato exige escritura pública!</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <h2>📝 Revisão Ativa (Questões Práticas)</h2>
+
+        <!-- Questão 1: Discursiva -->
+        <div class="exercise-box">
+          <p><span class="q-badge">DISCURSIVA</span> <strong>01. Explique a incidência da Boa-Fé Objetiva na fase pré-contratual e fundamente a responsabilidade civil por "culpa in contrahendo".</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Resposta Esperada:</strong> A boa-fé objetiva (Art. 422 CC) projeta seus efeitos desde a fase das negociações preliminares (fase pré-contratual). Se uma das partes romper injustificadamente as tratativas após gerar na outra a legítima expectativa de celebração do contrato (provocando despesas e investimentos), cometerá ato ilícito por abuso de direito (Art. 187 CC). Essa responsabilidade pré-contratual (<em>culpa in contrahendo</em>) impõe o dever de indenizar os prejuízos decorrentes do interesse contratual negativo (danos emergentes decorrentes das negociações).
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 2: V ou F -->
+        <div class="exercise-box">
+          <p><span class="q-badge">V / F</span> <strong>02. (Julgue os itens a seguir com V ou F):</strong></p>
+          <p>a) ( ) A comunicação de proposta sem prazo realizada por chamada de vídeo por WhatsApp é considerada entre ausentes.<br>
+          b) ( ) Para os contratos entre ausentes, o Código Civil brasileiro adotou expressamente a Teoria da Expedição como regra geral.<br>
+          c) ( ) O distrato (resilição bilateral) pode ser celebrado por instrumento particular mesmo que o contrato originário tenha sido obrigatoriamente feito por escritura pública.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Gabarito: F - V - F</strong><br>
+              <em>Justificativa:</em><br>
+              a) <strong>FALSO.</strong> Meios de comunicação instantânea (videochamadas, telefone, chat síncrono) configuram comunicação <strong>entre presentes</strong> (Art. 428, I CC).<br>
+              b) <strong>VERDADEIRO.</strong> Nos termos do Art. 434 do CC, adota-se a Teoria da Agnição na modalidade Expedição.<br>
+              c) <strong>FALSO.</strong> Pelo princípio da simetria das formas (Art. 472 CC), o distrato deve ter a <strong>mesma forma exigida para o contrato</strong>.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 3: CEBRASPE -->
+        <div class="exercise-box">
+          <p><span class="q-badge">CEBRASPE</span> <strong>03. (Adaptada/CEBRASPE) Em relação ao lugar de celebração dos contratos, assinale como Certo ou Errado o item: Um contrato celebrado entre uma empresa sediada no Brasil e uma empresa sediada na Argentina considera-se constituído, segundo as regras de Direito Internacional Privado da LINDB, no local da residência ou domicílio do proponente.</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Item CERTO.</strong> Conforme o Art. 9º, § 2º, da Lei de Introdução às Normas do Direito Brasileiro (LINDB), a obrigação resultante do contrato reputa-se constituída no lugar em que residir o proponente.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 4: FGV / FCC -->
+        <div class="exercise-box">
+          <p><span class="q-badge">FGV / FCC</span> <strong>04. Mariana enviou uma proposta por e-mail a Lucas para venda de um maquinário industrial por R$ 200.000,00. Lucas respondeu ao e-mail aceitando a compra, mas condicionando o pagamento ao parcelamento em 10 vezes sem juros. Diante da legislação civil:</strong></p>
+          <p>A) O contrato está perfeito e acabado, pois houve aceitação formal.<br>
+          B) A resposta de Lucas não vincula Mariana e importa nova proposta (contraproposta), nos termos do Art. 431 do Código Civil.<br>
+          C) Houve resolução culposa da oferta por parte de Lucas.<br>
+          D) Aplica-se a Teoria da Cognição, aguardando-se a leitura por Mariana.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Alternativa Correta: B.</strong><br>
+              A aceitação com modificações, adições ou restrições importa <strong>nova proposta (contraproposta)</strong>, nos termos expressos do Art. 431 do Código Civil. O contrato só se formará se Mariana aceitar a nova oferta formulada por Lucas.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+      <section id="cheat-sheet" class="section">
+        <div class="card gold">
+          <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+          <ul style="line-height: 1.9; font-size: 1rem;">
+            <li>• <strong>4 Fases Contratuais:</strong> Sondagem $\rightarrow$ Negociações Preliminares $\rightarrow$ Contratual $\rightarrow$ Pós-Contratual. Boa-fé incide em todas (Art. 422).</li>
+            <li>• <strong>Culpa in contrahendo (Art. 187):</strong> Responsabilidade civil por deslealdade ou quebra de expectativa na fase pré-contratual.</li>
+            <li>• <strong>Proposta (Art. 427):</strong> É obrigatória. Perde obrigatoriedade se feita sem prazo a presente e não aceita no ato (Art. 428, I).</li>
+            <li>• <strong>Contraproposta (Art. 431):</strong> Aceite com modificação = nova proposta.</li>
+            <li>• <strong>Teoria da Expedição (Art. 434):</strong> Regra geral do CC para contratos entre ausentes. O contrato aperfeiçoa-se no envio da aceitação.</li>
+            <li>• <strong>Lugar do Contrato:</strong> Doméstico = onde foi proposta (Art. 435 CC). Internacional = domicílio do proponente (Art. 9º, §2º LINDB).</li>
+            <li>• <strong>Extinção Normal:</strong> Cumprimento regular (adimplemento) ou advento do termo final.</li>
+            <li>• <strong>Distrato (Art. 472):</strong> Resilição bilateral. Exige a mesma forma do contrato originário!</li>
+            <li>• <strong>Resolução sem Culpa (Art. 393):</strong> Força maior / caso fortuito. Devolve parcelas sem perdas e danos.</li>
+            <li>• <strong>Resolução Culposa (Art. 475):</strong> Inadimplemento com culpa/dolo. Gera direito a resolução + perdas e danos.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PORTAL CORE JS SCRIPT -->
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>

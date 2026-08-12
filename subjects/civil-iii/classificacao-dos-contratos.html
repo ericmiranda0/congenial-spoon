@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Civil III – Classificação dos Contratos | Material Didático</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Integração com Estilos Globais e Customização Local -->
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue & Accent Gold */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 .num { 
+      font-family: 'JetBrains Mono', monospace; 
+      font-size: 1.1rem; 
+      color: white; 
+      background: var(--p-500); 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 8px; 
+      margin-right: 10px;
+    }
+
+    /* Linha do tempo / Iter Classificatório */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: var(--card-bg, #ffffff);
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    .timeline-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--p-500);
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--p-700);
+      margin: 5px 0;
+    }
+
+    /* Estilo Interatividade Lei Seca */
+    .artigo {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 12px 18px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️ ";
+      margin-right: 8px;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(30, 58, 138, 0.2);
+      border-left-color: var(--p-500);
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #DBEAFE;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: #1E3A8A;
+      color: #93C5FD;
+    }
+
+    /* Explicação em 3 Níveis */
+    .levels-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 5px solid;
+    }
+
+    .level-box.lvl-1 {
+      background: #F0FDF4;
+      border-color: #22C55E;
+    }
+
+    .level-box.lvl-2 {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+    }
+
+    .level-box.lvl-3 {
+      background: #FEF2F2;
+      border-color: #EF4444;
+    }
+
+    [data-theme="dark"] .level-box.lvl-1 { background: rgba(34, 197, 94, 0.1); }
+    [data-theme="dark"] .level-box.lvl-2 { background: rgba(59, 130, 246, 0.1); }
+    [data-theme="dark"] .level-box.lvl-3 { background: rgba(239, 68, 68, 0.1); }
+
+    .level-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .lvl-1 .level-badge { background: #DCFCE7; color: #15803D; }
+    .lvl-2 .level-badge { background: #DBEAFE; color: #1E40AF; }
+    .lvl-3 .level-badge { background: #FEE2E2; color: #B91C1C; }
+
+    /* Mapas Mentais */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 25px;
+      border-radius: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: #FBBF24;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .mm-l2 {
+      margin-left: 40px;
+      color: #94A3B8;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Mnemônicos */
+    .mnemonic-card {
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .mnemonic-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FDE047;
+    }
+
+    /* Questões */
+    .exercise-box {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .gabarito-box {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F0FDF4;
+      border-left: 4px solid #16A34A;
+      border-radius: 6px;
+      color: #14532D;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .gabarito-box {
+      background: rgba(22, 163, 74, 0.15);
+      color: #86EFAC;
+    }
+
+    .q-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--p-500);
+      color: white;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Civil III</div>
+      <h1>Classificação dos Contratos</h1>
+      <div class="subtitle">Guia Mestre de Estudos: Do Crivo Dogmático às Modalidades Especiais do Código Civil</div>
+      <div class="meta" style="display:flex; justify-content:center; gap:20px; opacity:0.9; font-size:0.9rem; margin-top:20px; flex-wrap:wrap;">
+        <span>⚖️ CC/02: Arts. 423 a 461</span>
+        <span>📚 Teoria Geral dos Contratos</span>
+        <span>🛡️ Foco em Concursos &amp; OAB</span>
+        <span>🔥 Nível Avançado</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#direitos-deveres" class="nav-item">Direitos &amp; Deveres</a>
+        <a href="#vantagens" class="nav-item">Vantagens</a>
+        <a href="#risco" class="nav-item">Comutativos x Aleatórios</a>
+        <a href="#forma" class="nav-item">Forma &amp; Solenidade</a>
+        <a href="#tempo" class="nav-item">Dependência &amp; Tempo</a>
+        <a href="#adesao" class="nav-item">Típicos &amp; Adesão</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+      <!-- SUMÁRIO INTERATIVO -->
+      <div id="sumario" class="card" style="margin-bottom: 40px;">
+        <h2>📋 Sumário Interativo do Módulo</h2>
+        <ol style="column-count: 2; column-gap: 30px; font-family: 'Inter', sans-serif; line-height: 2;">
+          <li><a href="#objetivos">1. Objetivos de Aprendizagem</a></li>
+          <li><a href="#crivo">2. Crivo Classificatório dos Contratos (Linha do Tempo)</a></li>
+          <li><a href="#direitos-deveres">3. Módulo 01: Quanto aos Direitos e Deveres das Partes</a></li>
+          <li><a href="#vantagens">4. Módulo 02: Quanto às Vantagens Patrimoniais</a></li>
+          <li><a href="#risco">5. Módulo 03: Comutativos vs Aleatórios (Emptio Spei e Rei Speratae)</a></li>
+          <li><a href="#forma">6. Módulo 04: Quanto à Forma e Solenidade</a></li>
+          <li><a href="#tempo">7. Módulo 05: Quanto à Dependência e ao Tempo de Execução</a></li>
+          <li><a href="#adesao">8. Módulo 06: Contratos Típicos, Atípicos e de Adesão</a></li>
+          <li><a href="#mindmap">9. Mapa Mental Completo</a></li>
+          <li><a href="#mnemonicos">10. Mnemônicos Mestre</a></li>
+          <li><a href="#revisao">11. Revisão Ativa (Questões Comentadas)</a></li>
+          <li><a href="#cheat-sheet">12. Resumão Final (Cheat Sheet)</a></li>
+        </ol>
+      </div>
+
+      <!-- ══════════════════════════════ 1. OBJETIVOS ══════════════════════════════ -->
+      <section id="objetivos">
+        <h2>🎯 Objetivos de Aprendizagem</h2>
+        <div class="card gold">
+          <p>Ao concluir o estudo deste resumo estruturado sobre Classificação dos Contratos, você dominará:</p>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>A distinção técnica entre contratos <strong>unilaterais, bilaterais (sinalagmáticos) e plurilaterais</strong>;</li>
+            <li>As consequências jurídicas da classificação quanto aos benefícios patrimoniais (contratos <strong>gratuitos vs onerosos</strong>, responsabilidade por dolo/culpa no Art. 392 CC e regra de interpretação do Art. 114 CC);</li>
+            <li>O enquadramento dos contratos aleatórios (diferenciando <strong><em>Emptio Spei</em></strong> - Art. 458 CC, <strong><em>Emptio Rei Speratae</em></strong> - Art. 459 CC e <strong>Coisa Exposta a Risco</strong> - Art. 460 CC);</li>
+            <li>Os requisitos formais: contratos <strong>consensuais, solenes/formais e reais</strong> (que exigem a <em>traditio</em> para o aperfeiçoamento);</li>
+            <li>A incidência da Teoria da Imprevisão (Art. 478 CC) apenas nos contratos de <strong>execução continuada ou diferida</strong>;</li>
+            <li>As regras protetivas dos <strong>contratos de adesão</strong> (Arts. 423 e 424 CC: interpretação <em>contra proferentem</em> e nulidade de renúncia de direitos).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ 2. CRIVO CLASSIFICATÓRIO ══════════════════════════════ -->
+      <section id="crivo">
+        <h2>⏳ Crivo Classificatório dos Contratos</h2>
+        <p>Para enquadrar juridicamente qualquer contrato, deve-se aplicar o seguinte roteiro de testes sequenciais:</p>
+        
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <span class="timeline-step">Teste 1 · Obrigações</span>
+            <div class="timeline-title">Unilateral, Bilateral ou Plurilateral?</div>
+            <p>Verifica-se se apenas uma parte assume deveres prestacionais (ex: doação pura) ou se há deveres recíprocos e interdependentes (sinalagma - ex: compra e venda).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Teste 2 · Vantagem Patrimonial</span>
+            <div class="timeline-title">Gratuito (Benéfico) ou Oneroso?</div>
+            <p>Avalia-se se há sacrifício patrimonial para ambas as partes ou vantagem apenas para uma delas. Define a regra do Art. 392 (dolo x culpa) e Art. 114 (interpretação estrita).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Teste 3 · Incerteza do Risco</span>
+            <div class="timeline-title">Comutativo ou Aleatório?</div>
+            <p>Se as prestações são certas e equivalentes desde o início, é comutativo. Se dependem de evento futuro e incerto, é aleatório (com regras especiais de <em>Emptio Spei</em> ou <em>Rei Speratae</em>).</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Teste 4 · Perfeição &amp; Forma</span>
+            <div class="timeline-title">Consensual, Solene ou Real?</div>
+            <p>Exige apenas o acordo de vontades (consensual), exige escritura pública/forma especial por lei (solene) ou necessita da efetiva entrega da coisa (real)?</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-step">Teste 5 · Eficácia Temporal</span>
+            <div class="timeline-title">Instantâneo, Diferido ou de Trato Sucessivo?</div>
+            <p>Cumpre-se no ato, em momento futuro único ou mediante prestações periódicas e continuadas ao longo do tempo? (Gera reflexos na Teoria da Imprevisão do Art. 478 CC).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 01 ══════════════════════════════ -->
+      <section id="direitos-deveres" class="section">
+        <div class="section-label">Módulo 01</div>
+        <h2><span class="num">01</span>Quanto aos Direitos e Deveres das Partes</h2>
+
+        <p>Essa classificação leva em conta a distribuição dos deveres prestacionais entre os contratantes no momento da celebração do negócio.</p>
+
+        <h3>1.1 Contratos Unilaterais, Bilaterais e Plurilaterais</h3>
+
+        <div class="levels-container">
+          <div class="level-box lvl-1">
+            <span class="level-badge">Nível 1 · Entendimento Intuitivo</span>
+            <strong>O que significa:</strong> No contrato unilateral, só uma pessoa promete fazer algo (ex: na doação de um presente). No bilateral, os dois trocam obrigações (eu lhe dou a chave do carro e você me entrega o dinheiro). No plurilateral, várias pessoas entram com recursos para o mesmo objetivo (uma sociedade de 5 sócios).
+          </div>
+          <div class="level-box lvl-2">
+            <span class="level-badge">Nível 2 · Graduação / Técnica</span>
+            <strong>Conceito Dogmático:</strong> Contratos bilaterais são também chamados de <em>sinalagmáticos</em> por possuírem reciprocidade e interdependência entre as obrigações (sinalagma genético e funcional). São os únicos sujeitos à <strong>Exceção do Contrato Não Cumprido</strong> (Art. 476 CC) e à <strong>Cláusula Resolutiva Tácita</strong> (Art. 475 CC).
+          </div>
+          <div class="level-box lvl-3">
+            <span class="level-badge">Nível 3 · Concursos / Alto Nível</span>
+            <strong>Pegadinha de Prova / STJ:</strong> Não confunda <em>Negócio Jurídico Unilateral</em> (que se aperfeiçoa com uma só manifestação de vontade, ex: testamento) com <em>Contrato Unilateral</em> (que exige duas vontades para nascer, mas gera obrigações para apenas um dos polos, ex: Mútuo e Comodato).
+          </div>
+        </div>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Contratos Bilaterais Imperfeitos</span>
+          São aqueles que nascem unilaterais, mas no decorrer da execução surge uma obrigação eventual para a outra parte (ex: no comodato, o comodante ter que indenizar benfeitorias necessárias extraordinárias feitas pelo comodatário). <strong>Não se transformam em bilaterais genuínos!</strong>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 02 ══════════════════════════════ -->
+      <section id="vantagens" class="section">
+        <div class="section-label">Módulo 02</div>
+        <h2><span class="num">02</span>Quanto às Vantagens Patrimoniais</h2>
+
+        <h3>2.1 Contratos Gratuitos (Benéficos) vs Onerosos</h3>
+        <p>Analisa-se se há patrimonialidade proporcional trocada entre os contratantes.</p>
+
+        <details class="artigo"> <summary>Art. 114 e 392 do Código Civil - Regras dos Contratos Gratuitos</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 114.</strong> Os negócios jurídicos benéficos e a renúncia interpretam-se <span class="kw">estritamente</span>.</p>
+            <p><strong>Art. 392.</strong> Nos contratos benéficos, responde por simples culpa o contratante a quem o contrato aproveite, respondendo <span class="kw">somente por dolo</span> aquele a quem o negócio não favorecer. Nos contratos onerosos, responde cada uma das partes por culpa, salvo as exceções previstas em lei.</p>
+          </div>
+        </details>
+
+        <table class="modern-table">
+          <thead>
+            <tr>
+              <th>Efeito Jurídico</th>
+              <th>Contratos Gratuitos (Benéficos)</th>
+              <th>Contratos Onerosos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Regra de Interpretação</strong></td>
+              <td>Estrita / Restritiva (Art. 114 CC). Sem ampliações.</td>
+              <td>Extensiva segundo a boa-fé e uso do local (Art. 113 CC).</td>
+            </tr>
+            <tr>
+              <td><strong>Grau de Culpabilidade (Art. 392 CC)</strong></td>
+              <td>Quem não ganha nada só responde por <strong>Dolo</strong>. Quem ganha responde por simples culpa.</td>
+              <td>Ambas as partes respondem por <strong>Culpa em qualquer grau</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Vícios Redibitórios &amp; Evicção</strong></td>
+              <td>Em regra NÃO se aplicam (salvo doação onerosa ou com encargo).</td>
+              <td>APLICAM-SE de pleno direito por garantia legal (Arts. 441 e 447 CC).</td>
+            </tr>
+            <tr>
+              <td><strong>Ação Pauliana (Fraude contra Credores)</strong></td>
+              <td>Basta o prejuízo (<em>eventus damni</em>). Presume-se a fraude no ato gratuito.</td>
+              <td>Exige má-fé do terceiro adquirente (<em>consilium fraudis</em>) se notória a insolvência.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 03 ══════════════════════════════ -->
+      <section id="risco" class="section">
+        <div class="section-label">Módulo 03</div>
+        <h2><span class="num">03</span>Comutativos vs Aleatórios</h2>
+
+        <p>Essa subclassificação dos contratos onerosos afere a certeza quanto à existência e extensão da prestação.</p>
+
+        <h3>3.1 Contratos Comutativos</h3>
+        <p>Prestações conhecidas, certas e equivalentes desde o momento da celebração (ex: Compra e venda de carro seminovo com preço estipulado).</p>
+
+        <h3>3.2 Contratos Aleatórios</h3>
+        <p>A prestação de uma ou de ambas as partes depende de um acontecimento incerto e futuro, assumindo-se o risco da aleatoriedade.</p>
+
+        <details class="artigo"> <summary>Art. 458, 459 e 460 do Código Civil - Espécies de Contratos Aleatórios</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 458. (Emptio Spei)</strong> Se o contrato for aleatório, por dizer respeito a <span class="kw">coisas futuras, cujo risco de nada virem a existir assuma o adquirente</span>, terá o alienante direito a todo o preço, desde que de sua parte não tenha havido dolo ou culpa...</p>
+            <p><strong>Art. 459. (Emptio Rei Speratae)</strong> Se for aleatório, por se referir a coisas futuras, tomando o adquirente a si o risco de <span class="kw">virem em qualquer quantidade</span>, terá direito o alienante a todo o preço, desde que de sua parte não venha a haver culpa, ainda que a coisa venha a existir em quantidade inferior à esperada... Parágrafo único. Mas, se da coisa nada vier a existir, <span class="kw">alienação não haverá</span>, e o alienante restituirá o preço recebido.</p>
+            <p><strong>Art. 460. (Coisa Exposta a Risco)</strong> Se for aleatório, por se referir a coisas existentes, mas <span class="kw">expostas a risco</span>, assumido pelo adquirente, terá o alienante direito ao preço cobrado, embora a coisa já não existisse, no todo ou em parte, no dia da conclusão do contrato.</p>
+          </div>
+        </details>
+
+        <div class="grid2">
+          <div class="card gold">
+            <h4>Emptio Spei (Venda da Esperança - Art. 458)</h4>
+            <p>O risco recai sobre a <strong>própria existência da coisa</strong>. Exemplo: Comprar toda a produção da rede de um pescador por R$ 500 antes de ele lançar a rede ao mar. Se não vier nenhum peixe, o preço de R$ 500 é devido integralmente!</p>
+          </div>
+          <div class="card blue">
+            <h4>Emptio Rei Speratae (Venda da Coisa Esperada - Art. 459)</h4>
+            <p>O risco recai sobre a <strong>quantidade da coisa futura</strong>. Exemplo: Comprar a safra de soja de uma fazenda. Se colher apenas 1 saca (quantidade inferior), o preço integral é devido. Mas se a geada destruir tudo e <strong>nada vier a existir</strong>, o contrato é desfeito e o preço é devolvido!</p>
+          </div>
+        </div>
+
+        <div class="exam-tip">
+          <span class="box-label">🎯 Pegadinha de Prova</span>
+          Na hipótese do <strong>Art. 460 (Coisa Exposta a Risco)</strong>, se o adquirente provar que o alienante <strong>já sabia da perda prévia da coisa</strong> (ex: sabia que o navio afundara antes da venda), o contrato poderá ser anulado por dolo/má-fé!
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 04 ══════════════════════════════ -->
+      <section id="forma" class="section">
+        <div class="section-label">Módulo 04</div>
+        <h2><span class="num">04</span>Quanto à Forma e Solenidade</h2>
+
+        <h3>4.1 Consensuais, Solenes (Formais) e Reais</h3>
+        
+        <table class="modern-table">
+          <thead>
+            <tr>
+              <th>Classificação</th>
+              <th>Requisito de Perfeição</th>
+              <th>Exemplos Clássicos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Consensuais (Não-Solenes)</strong></td>
+              <td>Aperfeiçoam-se pelo simples acordo de vontades (Princípio do Consensualismo - Art. 107 CC). Não exigem forma especial.</td>
+              <td>Compra e venda de bens móveis, locação, prestação de serviços.</td>
+            </tr>
+            <tr>
+              <td><strong>Solenes (Formais)</strong></td>
+              <td>Exigem forma especial prescrita em lei sob pena de nulidade absoluta (Art. 108 e Art. 166, V CC).</td>
+              <td>Compra e venda de imóvel de valor superior a 30 salários mínimos (exige Escritura Pública - Art. 108 CC).</td>
+            </tr>
+            <tr>
+              <td><strong>Reais</strong></td>
+              <td>Exigem a efetiva entrega da coisa (<em>traditio</em>) para a constituição e formação do contrato. Antes da entrega há apenas promessa.</td>
+              <td>Comodato (Art. 579 CC), Mútuo (Art. 586 CC), Depósito (Art. 627 CC) e Penhor.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 05 ══════════════════════════════ -->
+      <section id="tempo" class="section">
+        <div class="section-label">Módulo 05</div>
+        <h2><span class="num">05</span>Quanto à Dependência e ao Tempo de Execução</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <h4>Principais vs Acessórios</h4>
+            <p>O contrato principal existe de forma autônoma e independente. O contrato acessório depende da existência do principal para ter eficácia (ex: Fiança, Hipoteca, Penhor). Vigora o princípio: <strong>A sorte do acessório segue a do principal</strong> (nulo o principal, nula a fiança).</p>
+          </div>
+          <div class="card">
+            <h4>Execução Instantânea, Diferida e Continuada</h4>
+            <p><strong>Instantânea:</strong> Cumpre-se imediatamente em um só ato (ex: compra e venda à vista).<br>
+            <strong>Diferida:</strong> Cumpre-se em um único ato no futuro (ex: pagamento em cheque pré-datado).<br>
+            <strong>Trato Sucessivo / Continuada:</strong> Cumpre-se em prestações periódicas repetidas no tempo (ex: locação). <em>Relevância: Aceita revisão por onerosidade excessiva extraordinária (Art. 478 CC)</em>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MÓDULO 06 ══════════════════════════════ -->
+      <section id="adesao" class="section">
+        <div class="section-label">Módulo 06</div>
+        <h2><span class="num">06</span>Contratos Típicos, Atípicos e de Adesão</h2>
+
+        <h3>6.1 Contratos Típicos e Atípicos (Art. 425 CC)</h3>
+        <p>É lícito às partes estipular contratos atípicos, observadas as normas gerais fixadas no Código Civil.</p>
+
+        <h3>6.2 Contratos de Adesão (Arts. 423 e 424 CC)</h3>
+        <p>São aqueles em que as cláusulas são estruturadas unilateralmente por uma das partes (predisponente), sem que a outra (aderente) possa discutir ou modificar seu conteúdo.</p>
+
+        <details class="artigo"> <summary>Art. 423 e 424 do Código Civil - Regras dos Contratos de Adesão</summary>
+          <div class="lei-seca">
+            <p><strong>Art. 423.</strong> Quando houver no contrato de adesão cláusulas ambíguas ou contraditórias, dever-se-á adotar a interpretação <span class="kw">mais favorável ao aderente</span>.</p>
+            <p><strong>Art. 424.</strong> Nos contratos de adesão, são <span class="kw">nulas as cláusulas</span> que estipulem a renúncia antecipada do aderente a direito resultante da natureza do negócio.</p>
+          </div>
+        </details>
+
+        <div class="pitfall">
+          <span class="box-label">⚠️ Regra Mestre de Prova</span>
+          A interpretação <strong>contra proferentem</strong> (mais favorável ao aderente - Art. 423 CC) aplica-se obrigatoriamente a qualquer contrato de adesão, seja ele civil, empresarial ou de consumo!
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+      <section id="mindmap" class="section">
+        <h2>🧠 Mapa Mental - Classificação Geral dos Contratos</h2>
+        <div class="mindmap-box">
+          <div class="mm-root">⚖️ CLASSIFICAÇÃO DOS CONTRATOS NO CÓDIGO CIVIL</div>
+          <div class="mm-l1">QUANTO ÀS OBRIGAÇÕES</div>
+          <div class="mm-l2">├─ Unilateral (1 devedor - ex: Doação pura, Comodato, Mútuo)</div>
+          <div class="mm-l2">├─ Bilateral / Sinalagmático (Obrigações recíprocas - ex: Compra e Venda / Art. 476 Exceção)</div>
+          <div class="mm-l2">└─ Plurilateral (Interesses convergentes - ex: Sociedade, Consórcio)</div>
+          <div class="mm-l1">QUANTO À VANTAGEM PATRIMONIAL</div>
+          <div class="mm-l2">├─ Gratuito / Benéfico (Interpretação estrita Art. 114 / Responsabilidade por Dolo Art. 392)</div>
+          <div class="mm-l2">└─ Oneroso (Prestações recíprocas / Responsabilidade por Culpa / Incidem Vícios e Evicção)</div>
+          <div class="mm-l1">QUANTO AO RISCO (ONEROSOS)</div>
+          <div class="mm-l2">├─ Comutativo (Certo, determinado e equivalente desde a origem)</div>
+          <div class="mm-l2">└─ Aleatório (Incerteza do evento futuro)</div>
+          <div class="mm-l2">    ├─ Emptio Spei (Risco da existência - Art. 458)</div>
+          <div class="mm-l2">    ├─ Emptio Rei Speratae (Risco da quantidade - Art. 459)</div>
+          <div class="mm-l2">    └─ Coisa Exposta a Risco (Art. 460)</div>
+          <div class="mm-l1">QUANTO À PERFEIÇÃO &amp; FORMA</div>
+          <div class="mm-l2">├─ Consensual (Mero consentimento Art. 107)</div>
+          <div class="mm-l2">├─ Solene / Formal (Escritura pública / Forma em lei Art. 108)</div>
+          <div class="mm-l2">└─ Real (Exige a entrega da coisa / Traditio - Comodato, Mútuo, Depósito)</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+      <section id="mnemonicos" class="section">
+        <h2>💡 Mnemônicos &amp; Macetes Mestre</h2>
+
+        <div class="mnemonic-card">
+          <div class="mnemonic-tag">SPEI x REI</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Diferença prática de Contratos Aleatórios:</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>Emptio SPEI:</strong> Risco de ver a <strong>ESPERANÇA</strong> frustrada (existência total). Se não vier nada, paga tudo!</li>
+            <li><strong>Emptio REI Speratae:</strong> Risco da quantidade da <strong>COISA</strong>. Se nada vier a existir, o contrato é NULO e o dinheiro volta!</li>
+          </ul>
+        </div>
+
+        <div class="mnemonic-card" style="background: linear-gradient(135deg, #064E3B 0%, #10B981 100%);">
+          <div class="mnemonic-tag" style="color: #A7F3D0;">AD-FAVOR</div>
+          <p style="margin-top:8px; font-size:1.05rem;"><strong>Regra de Ouro dos Contratos de Adesão (Art. 423 CC):</strong></p>
+          <ul style="margin-top:5px; margin-left:20px;">
+            <li><strong>AD-FAVOR:</strong> Dúvida ou ambiguidade em contrato de ADesão interpreta-se sempre a FAVOR do ADerente (contra proferentem)!</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+      <section id="revisao" class="section">
+        <h2>📝 Revisão Ativa (Questões Práticas)</h2>
+
+        <!-- Questão 1: Discursiva -->
+        <div class="exercise-box">
+          <p><span class="q-badge">DISCURSIVA</span> <strong>01. Diferencie contrato unilateral de negócio jurídico unilateral, citando um exemplo de cada instituto.</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Resposta Esperada:</strong> O negócio jurídico unilateral aperfeiçoa-se com a manifestação de vontade de apenas um único polo emitente (ex: testamento ou promessa de recompensa). Já o contrato unilateral é um negócio jurídico bilateral quanto à sua formação (exige o encontro de duas manifestações de vontade para nascer), porém unilateral quanto aos seus efeitos, pois gera obrigações prestacionais para apenas uma das partes contratantes (ex: doação pura ou contrato de mútuo).
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 2: V ou F -->
+        <div class="exercise-box">
+          <p><span class="q-badge">V / F</span> <strong>02. (Julgue os itens a seguir com V ou F):</strong></p>
+          <p>a) ( ) Nos contratos benéficos/gratuitos, a parte que não aufere vantagem patrimonial responde por qualquer grau de culpa leve.<br>
+          b) ( ) Na Emptio Spei, o alienante terá direito ao preço integral avençado mesmo que a coisa futura nada venha a existir, desde que não tenha agido com dolo ou culpa.<br>
+          c) ( ) O contrato de comodato é classificado como contrato consensual, pois aperfeiçoa-se pela mera assinatura do instrumento escrito.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver gabarito comentado</summary>
+            <div class="gabarito-box">
+              <strong>Gabarito: F - V - F</strong><br>
+              <em>Justificativa:</em><br>
+              a) <strong>FALSO.</strong> Nos termos do Art. 392 do CC, a parte que não aufere benefício nos contratos benéficos responde <strong>apenas por dolo</strong>.<br>
+              b) <strong>VERDADEIRO.</strong> Na Emptio Spei (Art. 458 CC), o risco é da própria existência da coisa.<br>
+              c) <strong>FALSO.</strong> O comodato é contrato <strong>REAL</strong> (Art. 579 CC), que só se perfaz com a efetiva entrega (*traditio*) da coisa.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 3: CEBRASPE -->
+        <div class="exercise-box">
+          <p><span class="q-badge">CEBRASPE</span> <strong>03. (Adaptada/CEBRASPE) No tocante aos contratos de adesão regidos pelo Código Civil, julgue o item a seguir: É válida a cláusula contratual em que o aderente renuncia previamente ao direito de indenização por benfeitorias necessárias decorrente da natureza do negócio.</strong></p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Item ERRADO.</strong> Conforme o Art. 424 do Código Civil, nos contratos de adesão são <strong>nulas de pleno direito</strong> as cláusulas que estipulem a renúncia antecipada do aderente a direito resultante da natureza do negócio.
+            </div>
+          </details>
+        </div>
+
+        <!-- Questão 4: FGV / FCC -->
+        <div class="exercise-box">
+          <p><span class="q-badge">FGV / FCC</span> <strong>04. Determinada fazendeira celebrou contrato de compra e venda de safra futura de laranjas, estipulando que o comprador pagaria o valor fixo de R$ 100.000,00 independentemente da quantidade colhida, assumindo o risco sobre a quantidade da safra. Contudo, em virtude de uma praga imprevisível, a fazenda colheu apenas 5% da quantidade estimada. Considerando as regras dos contratos aleatórios no Código Civil:</strong></p>
+          <p>A) O contrato é nulo de pleno direito por falta de objeto e o preço deve ser devolvido integralmente.<br>
+          B) Trata-se de Emptio Rei Speratae (Art. 459 CC); existindo qualquer quantidade, o preço integral de R$ 100.000,00 é devido à vendedora, sem direito a abatimento.<br>
+          C) Trata-se de vício redibitório que autoriza a redução proporcional do preço na ação estimatória.<br>
+          D) O comprador poderá resolver o contrato por exceção do contrato não cumprido.</p>
+          <details>
+            <summary style="cursor:pointer; color:var(--p-700); font-weight:700; margin-top:10px;">Ver resposta comentada</summary>
+            <div class="gabarito-box">
+              <strong>Alternativa Correta: B.</strong><br>
+              Trata-se do contrato aleatório na modalidade <em>Emptio Rei Speratae</em> (Art. 459 CC), onde o risco assumido é relativo à quantidade da coisa futura. Desde que venha a existir qualquer quantidade (no caso, 5%) e não haja culpa do alienante, a vendedora tem direito a receber a totalidade do preço pactuado.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+      <section id="cheat-sheet" class="section">
+        <div class="card gold">
+          <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+          <ul style="line-height: 1.9; font-size: 1rem;">
+            <li>• <strong>Unilateral vs Bilateral:</strong> Olhar os deveres no momento da celebração. Sinalagmáticos acionam Art. 476 (Exceção de contrato não cumprido).</li>
+            <li>• <strong>Gratuitos (Art. 392):</strong> Quem não ganha nada responde só por <strong>Dolo</strong>. Interpretação estrita (Art. 114).</li>
+            <li>• <strong>Onerosos:</strong> Respondem por culpa. Têm garantia implícita de Vícios Redibitórios e Evicção.</li>
+            <li>• <strong>Emptio Spei (Art. 458):</strong> Risco da existência. Se nada existir, o preço ainda é devido!</li>
+            <li>• <strong>Emptio Rei Speratae (Art. 459):</strong> Risco da quantidade. Se nada vier a existir, a alienação não vigora e devolve-se o preço!</li>
+            <li>• <strong>Contratos Reais:</strong> Exigem entrega (*traditio*) para nascer (ex: Comodato, Mútuo, Depósito).</li>
+            <li>• <strong>Contratos Solenes (Art. 108):</strong> Exigem escritura pública para imóveis > 30 salários mínimos.</li>
+            <li>• <strong>Trato Sucessivo:</strong> Prestações continuadas no tempo. Sujeitos à revisão por onerosidade excessiva (Art. 478).</li>
+            <li>• <strong>Adesão (Art. 423 e 424):</strong> Interpretação <em>contra proferentem</em> (favorável ao aderente). Nula renúncia prévia a direitos.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PORTAL CORE JS SCRIPT -->
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>
