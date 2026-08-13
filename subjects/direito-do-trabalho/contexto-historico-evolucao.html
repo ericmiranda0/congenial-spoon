@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito do Trabalho – Contexto Histórico, Modos de Produção e Direitos Humanos | Material Didático Premium</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Arquivo Base do Portal -->
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Labor Law Amber / Copper / Dark Slate */
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1c130b 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 800px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.8rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 { color: var(--p-500); }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 { color: #f59e0b; }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: #f59e0b;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(120, 53, 15, 0.08);
+      border-color: #78350F;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #d97706; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: var(--p-700); }
+    [data-theme="dark"] .level-3 .level-title { color: #f59e0b; }
+
+    /* Lei Seca & Tratados Interativos */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .artigo summary { color: var(--p-500); }
+    .artigo summary::-webkit-details-marker { display: none; }
+
+    .artigo summary::after {
+      content: '➕';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .artigo[open] summary::after { content: '➖'; }
+
+    .lei-seca {
+      background: var(--p-50);
+      color: #1f2937;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
+
+    /* Cards e Grids */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--p-500);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.teal { border-top-color: var(--accent-teal); }
+    .card.dark { border-top-color: var(--p-700); }
+
+    /* Boxes Informativos */
+    .box-info {
+      position: relative;
+      padding: 22px 25px 20px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -13px;
+      left: 20px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: #d97706; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doctrine {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doctrine .box-label { background: #16a34a; }
+
+    .jurisprudence {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #075985;
+    }
+    .jurisprudence .box-label { background: #0284c7; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #fef3c7; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: #fee2e2; }
+    [data-theme="dark"] .doctrine { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: #bbf7d0; }
+    [data-theme="dark"] .jurisprudence { background: rgba(2, 132, 199, 0.1); border-color: rgba(2, 132, 199, 0.2); color: #bae6fd; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.93rem;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-card);
+    }
+
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--p-600);
+      font-size: 0.9rem;
+    }
+
+    [data-theme="dark"] .timeline-date { color: var(--p-500); }
+
+    /* Mind Map */
+    .mindmap-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    .mm-l3 {
+      margin-left: 70px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    /* Mnemônicos */
+    .mnemonic-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(13, 148, 136, 0.15) 100%);
+      border: 2px dashed var(--p-500);
+      padding: 22px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .mnemonic-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--p-700);
+      letter-spacing: 3px;
+    }
+
+    [data-theme="dark"] .mnemonic-title { color: #fbbf24; }
+
+    /* Exercícios */
+    .exercise {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .gabarito {
+      margin-top: 12px;
+      padding: 14px;
+      background: rgba(13, 148, 136, 0.1);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    /* Flashcards */
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 20px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .flashcard-front {
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      margin-bottom: 10px;
+    }
+
+    [data-theme="dark"] .flashcard-front { color: var(--p-500); }
+  </style>
+</head>
+
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="badge">Material Didático · Direito do Trabalho I</div>
+      <h1>Contexto Histórico, Modos de Produção e Direitos Humanos no Trabalho</h1>
+      <div class="subtitle">Guia Mestre de Estudos: Do Período Pré-Industrial às Causas de Emergência do Ramo, Taylorismo, Constitucionalismo Social e a CF/88</div>
+      <div class="meta">
+        <span>⚖️ Art. 1º, IV &amp; Art. 6º CF/88</span> | <span>🌍 Art. 23 DUDH</span> | <span>🛡️ Foco em Concursos de Alto Nível</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container" style="padding:0;">
+      <a href="index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#conceito-trabalho" class="nav-item">Conceito de Trabalho</a>
+        <a href="#causas" class="nav-item">Causas de Surgimento</a>
+        <a href="#organizacao" class="nav-item">Modos de Produção</a>
+        <a href="#taylorismo" class="nav-item">Taylorismo</a>
+        <a href="#marcos-legais" class="nav-item">Marcos Constitucionais</a>
+        <a href="#direitos-humanos" class="nav-item">Direitos Humanos &amp; CF/88</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 1. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="section-label">Seção 01</div>
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao finalizar a leitura deste material especializado, você dominará:</p>
+      <ul>
+        <li><strong>A Ontologia do Trabalho Humano:</strong> Definir as três características essenciais do trabalho (intencionalidade, idealização e capacidade de transformação da natureza) e sua evolução no Período Pré-Industrial (escravidão, servidão e corporações).</li>
+        <li><strong>As Três Causas Formadoras:</strong> Explicar detalhadamente a causa econômica (Revolução Industrial), a causa política (transição do Estado Liberal ao Estado Social) e a causa jurídica (reivindicação por tutela coletiva e contratual).</li>
+        <li><strong>A Evolução das Organizações de Produção:</strong> Mapear a transição da Organização Artesanal para a Organização Mercadológica e Manufatureira (1776).</li>
+        <li><strong>A Organização Científica do Trabalho (Taylorismo - 1911):</strong> Compreender o processo de expropriação sistemática do saber operário e a substituição do critério individual por métodos racionais de produtividade.</li>
+        <li><strong>O Constitucionalismo Social e Direitos Humanos:</strong> Conhecer os marcos das Constituições do México (1917) e Weimar (1919), a criação da OIT, da CLT (1943), o Art. 23 da DUDH e a proteção constitucional brasileira (Arts. 1º, IV e 6º da CF/88).</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 2. O CONCEITO DE TRABALHO HUMANO E PERÍODO PRÉ-INDUSTRIAL ══════════════════════════════ -->
+    <section id="conceito-trabalho">
+      <div class="section-label">Módulo 01</div>
+      <h2>Conceito de Trabalho Humano e o Período Pré-Industrial</h2>
+      
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">🌱 Nível 1: Explicação Direta / Intuição</div>
+          Diferente dos animais, que agem por puro instinto, o ser humano antes de construir uma mesa ou uma casa projeta mentalmente a imagem do objeto em sua cabeça. O trabalho humano é precisamente essa capacidade de imaginar primeiro e transformar o mundo físico depois.
+        </div>
+
+        <div class="level-box level-2">
+          <div class="level-title">🎓 Nível 2: Explicação Técnica de Graduação</div>
+          O trabalho humano é ontologicamente definido por três atributos indissociáveis:
+          <ul>
+            <li><strong>Intencional:</strong> Direcionado a um fim consciente e deliberado;</li>
+            <li><strong>Idealizado:</strong> Preexistente no plano mental e abstrato antes de sua materialização;</li>
+            <li><strong>Transformador da Natureza:</strong> Modifica a realidade física e social ao seu redor.</li>
+          </ul>
+        </div>
+
+        <div class="level-box level-3">
+          <div class="level-title">⚖️ Nível 3: Explicação Aprofundada para Concursos de Alto Nível</div>
+          No <strong>Período Pré-Industrial</strong>, o trabalho humano esteve submetido a três modalidades de vinculação fática e jurídica:
+          <ol style="margin-top: 5px;">
+            <li><strong>Escravidão:</strong> Vinculação do homem ao trabalho alienado (o próprio ser humano figura como objeto de propriedade de outrem, desprovido de personalidade jurídica);</li>
+            <li><strong>Servidão:</strong> Vinculação do homem à terra (sistema feudal em que o servo está juridicamente preso ao solo e devoto de obrigações ao senhor feudal);</li>
+            <li><strong>Corporações de Ofício:</strong> Vinculação do homem à profissão (associações medievais corporativas de mestres, oficiais e aprendizes que monopolizavam e regulavam rigorosamente a produção artesanal).</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Quadro Comparativo do Período Pré-Industrial -->
+      <h3>Quadro Comparativo: Formas Pré-Industriais de Trabalho</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Modalidade</th>
+            <th>Vínculo Jurídico-Social</th>
+            <th>Status do Trabalhador</th>
+            <th>Retribuição / Objetivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Escravidão</strong></td>
+            <td>Posse / Propriedade de outrem</td>
+            <td>Coisa / Objeto (Sem direitos)</td>
+            <td>Mera subsistência compulsória</td>
+          </tr>
+          <tr>
+            <td><strong>Servidão</strong></td>
+            <td>Fixação à terra feudal</td>
+            <td>Servo adstrito ao solo</td>
+            <td>Proteção senhorial e fração da colheita</td>
+          </tr>
+          <tr>
+            <td><strong>Corporações de Ofício</strong></td>
+            <td>Hierarquia corporativa (Mestre/Aprendiz)</td>
+            <td>Monopólio estamental da profissão</td>
+            <td>Aprendizado e corporativismo urbano</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ 3. AS TRÊS CAUSAS DE SURGIMENTO DO DIREITO DO TRABALHO ══════════════════════════════ -->
+    <section id="causas">
+      <div class="section-label">Módulo 02</div>
+      <h2>As Três Causas Fundamentais do Surgimento do Direito do Trabalho</h2>
+      <p>O surgimento do Direito do Trabalho como ramo autônomo do Direito não foi fruto de mera concessão estatal, mas o resultado da convergência de três determinantes históricas:</p>
+
+      <div class="grid3">
+        <div class="card dark">
+          <h4>1. Causa Econômica</h4>
+          <p><strong>A Revolução Industrial:</strong> Introdução da máquina a vapor, substituição da força humana pela mecânica, concentração fabril e produção em massa de mercadorias.</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Causa Política</h4>
+          <p><strong>Transformação do Estado:</strong> Transição do <em>Estado Liberal</em> (pós-Revolução Francesa, absenteísta e cego às desigualdades) para o <em>Estado Social</em> (intervencionista na autonomia privada para proteger os vulneráveis).</p>
+        </div>
+        <div class="card teal">
+          <h4>3. Causa Jurídica</h4>
+          <p><strong>Reivindicação Trabalhista:</strong> Luta pelo direito de união operária (sindicalismo), direito de greve e formalização do contrato individual e coletivo de trabalho com estipulações mínimas compulsórias.</p>
+        </div>
+      </div>
+
+      <div class="exam-tip">
+        <span class="box-label">🎯 Cobrança em Concursos</span>
+        <strong>A Farsa da Igualdade Formal Liberal:</strong> O Direito Civil do século XIX tratava a locação de serviços como um contrato comum fundado no <em>dogma da autonomia da vontade</em>. A causa política do Direito do Trabalho foi exatamente reconhecer que a liberdade contratual absoluta entre um milionário dono da fábrica e um trabalhador faminto resultava em escravidão disfarçada de contrato.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. EVOLUÇÃO DOS MODOS DE ORGANIZAÇÃO DO TRABALHO ══════════════════════════════ -->
+    <section id="organizacao">
+      <div class="section-label">Módulo 03</div>
+      <h2>A Evolução das Formas de Organização da Produção</h2>
+      <p>A organização da atividade produtiva passou por três modelos históricos distintos até culminar no sistema fabril moderno:</p>
+
+      <div class="level-container">
+        <!-- Artesanal -->
+        <div class="level-box level-1">
+          <div class="level-title">1. Organização Artesanal</div>
+          <p>O artesão trabalha a matéria-prima com <strong>instrumentos e conhecimentos próprios</strong>. Ele detém a visão global da obra e utiliza diretamente sua criatividade pessoal em cada etapa do produto.</p>
+        </div>
+
+        <!-- Mercadológica -->
+        <div class="level-box level-2">
+          <div class="level-title">2. Organização Mercadológica</div>
+          <p>Criação de um sistema inicial de produção em escala voltado ao comércio e ao mercado consumidor. Surgem desafios logísticos e comerciais de distribuição que superam a escala do artesão isolado.</p>
+        </div>
+
+        <!-- Manufatura -->
+        <div class="level-box level-3">
+          <div class="level-title">3. Manufatura (Consolidação a partir de 1776)</div>
+          <p>Reunião de uma <strong>maior quantidade de operários trabalhando ao mesmo tempo e no mesmo local físico</strong>, sob o comando social, organizacional e político de um comerciante de capital. <span class="kw">Observação Histórica Crucial:</span> Nesse primeiro momento manufatureiro (1776), o comando do comerciante ainda não era um comando técnico, mas eminentemente político e financeiro.</p>
+        </div>
+      </div>
+
+      <h3>Fatores Propulsores do Desenvolvimento da Manufatura</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>Condições Socioeconômicas Favoráveis</h4>
+          <ul>
+            <li><strong>Acúmulo Primitivo de Capital:</strong> Concentração de riquezas nas mãos de comerciantes;</li>
+            <li><strong>Mão de Obra Assalariada Abundante:</strong> Massa de camponeses expulsos dos feudos (cercamento dos campos);</li>
+            <li><strong>Artesãos com Baixa Demanda:</strong> Incapacidade de competir com os preços do mercado corporativo.</li>
+          </ul>
+        </div>
+        <div class="card gold">
+          <h4>Transformação Interna no Processo Produtivo</h4>
+          <ul>
+            <li><strong>Divisão Técnica do Trabalho:</strong> Fracionamento da confecção em etapas elementares;</li>
+            <li><strong>Parcialização dos Processos:</strong> O operário deixa de fazer o produto inteiro e passa a repetir uma única tarefa;</li>
+            <li><strong>Supervisão e Direção:</strong> Criação de cargos de gerência para fiscalizar a produção.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. TAYLORISMO E A REVOLUÇÃO INDUSTRIAL ══════════════════════════════ -->
+    <section id="taylorismo">
+      <div class="section-label">Módulo 04</div>
+      <h2>Revolução Industrial e o Taylorismo (EUA - 1911)</h2>
+      <p>Com o avanço da Revolução Industrial, a busca pela eficiência máxima levou à criação da <strong>Organização Científica do Trabalho</strong> idealizada por Frederick Winslow Taylor em 1911.</p>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ O Ponto Chave do Taylorismo</span>
+        <strong>A Expropriação Sistemática do Saber Operário:</strong> Antes do Taylorismo, o operário retinha o conhecimento prático de como fabricar a peça e ditava o seu próprio ritmo de trabalho (gerando o chamado "tempo de cera" ou folga intencional). A solução do Taylorismo foi retirar todo o conhecimento da mão do trabalhador e transferi-lo exclusivamente para o setor de engenharia/gerência.
+      </div>
+
+      <h3>Pilares da Organização Científica do Trabalho (Taylorismo)</h3>
+      <div class="grid3">
+        <div class="card teal">
+          <h4>1. Coleta do Saber</h4>
+          <p>A gerência estuda, mede e registra cada gesto, movimento e hábito empírico praticado pelos trabalhadores na fábrica.</p>
+        </div>
+        <div class="card teal">
+          <h4>2. Formatação do "The Best Way"</h4>
+          <p>Desenvolvimento científico da "única maneira certa" de executar cada tarefa, eliminando qualquer gesto inútil.</p>
+        </div>
+        <div class="card teal">
+          <h4>3. Treinamento Fracionado</h4>
+          <p>Treinamento compulsório do operário para executar repetitivamente uma fração hiperespecífica do processo.</p>
+        </div>
+      </div>
+
+      <div class="doctrine">
+        <span class="box-label">📚 Transição Dogmática Fundamental</span>
+        O Taylorismo promoveu a <strong>substituição radical do critério individual do trabalhador por métodos racionais e padronizados de produtividade</strong>. É exatamente dentro desse ambiente de extrema desumanização, subordinação técnica e rigidez produtiva que nasce a imperiosa necessidade do Direito do Trabalho como freio protetivo estatal.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. MARCOS CONSTITUCIONAIS E INTERNACIONAIS ══════════════════════════════ -->
+    <section id="marcos-legais">
+      <div class="section-label">Módulo 05</div>
+      <h2>Marcos Constitucionais e Institucionais do Direito do Trabalho</h2>
+      <p>A consolidação normativa dos direitos trabalhistas no mundo e no Brasil transcorreu através de marcos históricos indispensáveis para provas e concursos:</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">1917 – CONSTITUIÇÃO MEXICANA (ART. 123)</div>
+          <h3>Primeira Carta Constitucional Trabalhista do Mundo</h3>
+          <p>Consagrou pioneiramente em nível constitucional: jornada máxima de 8 horas diárias, jornada noturna de 7 horas, proibição do trabalho de menores de 12 anos, limitação da jornada do menor de 16 anos a 6 horas, descanso semanal remunerado, salário mínimo, igualdade salarial sem distinção de sexo, direito de sindicalização, direito de greve e indenização por dispensa imotivada.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1919 – CONSTITUIÇÃO DE WEIMAR (ALEMANHA)</div>
+          <h3>Consolidação dos Direitos Fundamentais Sociais na Europa</h3>
+          <p>Estabeleceu a proteção constitucional ao trabalho e à seguridade social, consolidando a doutrina do Constitucionalismo Social na Europa do pós-Primeira Guerra Mundial.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1919 – CRIAÇÃO DA OIT (ORGANIZAÇÃO INTERNACIONAL DO TRABALHO)</div>
+          <h3>Internacionalização Protetiva do Trabalho</h3>
+          <p>Criada pelo Tratado de Versalhes como agência das Nações Unidas dedicada a promover a justiça social e aprovar convenções internacionais de proteção ao trabalho.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1939 – CRIAÇÃO DA JUSTIÇA DO TRABALHO NO BRASIL</div>
+          <h3>Institucionalização da Jurisdição Trabalhista Nacional</h3>
+          <p>Criada pelo Decreto-Lei nº 1.237/1939 durante o Estado Novo, sendo posteriormente instalada oficialmente em 1941 e integrada ao Poder Judiciário pela CF de 1946.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1943 – OUTORGA DA CLT (CONSOLIDAÇÃO DAS LEIS DO TRABALHO)</div>
+          <h3>Unificação das Leis Trabalhistas Brasileiras</h3>
+          <p>Assinada por Getúlio Vargas através do Decreto-Lei nº 5.452/1943, reunindo a dispersa legislação trabalhista pátria em um texto sistemático.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 7. DIREITOS HUMANOS E O ORDENAMENTO CONSTITUCIONAL BRASILEIRO ══════════════════════════════ -->
+    <section id="direitos-humanos">
+      <div class="section-label">Módulo 06</div>
+      <h2>O Trabalho como Direito Humano e Valor Constitucional Estruturante</h2>
+
+      <h3>1. O Trabalho na Declaração Universal dos Direitos Humanos (DUDH - 1948)</h3>
+      <p>O trabalho é consagrado internacionalmente como um <strong>Direito Humano Fundamental</strong> conforme o artigo 23 da DUDH:</p>
+
+      <details class="artigo" open>
+        <summary>📜 Artigo 23 da Declaração Universal dos Direitos Humanos (1948)</summary>
+        <div class="lei-seca">
+          <p><strong>Artigo 23:</strong></p>
+          <p>1. Toda a pessoa tem <span class="kw">direito ao trabalho</span>, à livre escolha do trabalho, a condições equitativas e satisfatórias de trabalho e à proteção contra o desemprego.</p>
+          <p>2. Todos têm direito, sem discriminação alguma, a <span class="kw">salário igual por trabalho igual</span>.</p>
+          <p>3. Quem trabalha tem direito a uma <span class="kw">remuneração equitativa e satisfatória</span>, que lhe permita e à sua família uma existência conforme com a dignidade humana, e completada, se possível, por todos os outros meios de proteção social.</p>
+          <p>4. Toda a pessoa tem o direito de <span class="kw">fundar com outras pessoas sindicatos e de se filiar em sindicatos</span> para defesa dos seus interesses.</p>
+        </div>
+      </details>
+
+      <h3>2. O Trabalho na Constituição Federal Brasileira de 1988</h3>
+      <p>A Carta Magna de 1988 colocou o trabalho no ápice do ordenamento jurídico brasileiro como fundamento do próprio Estado Democrático de Direito:</p>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 1º, Inciso IV da CF/88 - Fundamento da República</summary>
+        <div class="lei-seca">
+          <p>Art. 1º A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:</p>
+          <p>[...] IV - <span class="kw">os valores sociais do trabalho e da livre iniciativa</span>;</p>
+          <p><em>Comentário Didático:</em> A Constituição adotou o modelo de Economia Social de Mercado, colocando em pé de igualdade fundada na dignidade humana os valores sociais do trabalho e a livre iniciativa empresarial.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 6º da CF/88 - Direito Fundamental Social</summary>
+        <div class="lei-seca">
+          <p>Art. 6º São <span class="kw">direitos sociais</span> a educação, a saúde, a alimentação, <span class="kw">o trabalho</span>, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados, na forma desta Constituição.</p>
+          <p>Parágrafo único. Todo brasileiro em situação de vulnerabilidade social terá direito a uma renda básica familiar, garantida pelo poder público em programa permanente de transferência de renda, cujas normas e requisitos de acesso serão determinados em lei, observada a legislação fiscal e orçamentária.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 8. MAPA MENTAL ══════════════════════════════ -->
+    <section>
+      <div class="section-label">Seção 07</div>
+      <h2>🧠 Mapa Mental - Estrutura Histórico-Dogmática do Trabalho</h2>
+      <div class="mindmap-box">
+        <div class="mm-root">⚙️ CONTEXTO HISTÓRICO E DOGMÁTICA DO TRABALHO</div>
+        
+        <div class="mm-l1">1. ONTOLOGIA DO TRABALHO HUMANO</div>
+        <div class="mm-l2">├─ Atributos: Intencional | Idealizado | Transformador da Natureza</div>
+        <div class="mm-l2">└─ Pré-Industrial: Escravidão (Posse) | Servidão (Terra) | Corporações (Profissão)</div>
+
+        <div class="mm-l1">2. TRÊS CAUSAS DE EMERGÊNCIA DO RAMO</div>
+        <div class="mm-l2">├─ Econômica ➔ Revolução Industrial (Máquina a vapor e produção em massa)</div>
+        <div class="mm-l2">├─ Política ➔ Estado Liberal (Absenteísta) ➔ Estado Social (Intervencionista)</div>
+        <div class="mm-l2">└─ Jurídica ➔ Reivindicação sindical operária e contrato protetivo</div>
+
+        <div class="mm-l1">3. MODOS DE ORGANIZAÇÃO PRODUTIVA</div>
+        <div class="mm-l2">├─ Artesanal ➔ Ferramentas próprias e visão global</div>
+        <div class="mm-l2">├─ Manufatura (1776) ➔ Concentração operária + comando político do comerciante</div>
+        <div class="mm-l2">└─ Taylorismo (1911) ➔ Expropriação do saber operário + The Best Way + Produtividade Racional</div>
+
+        <div class="mm-l1">4. EVOLUÇÃO NORMATIVA &amp; DIREITOS HUMANOS</div>
+        <div class="mm-l2">├─ CF México 1917 (Art. 123) ➔ 1ª Carta Trabalhista do Mundo (8h, Salário Mínimo, Greve)</div>
+        <div class="mm-l2">├─ CF Weimar 1919 &amp; OIT 1919 ➔ Constitucionalismo Social e Agência Internacional</div>
+        <div class="mm-l2">├─ Brasil: Justiça do Trabalho (1939) | CLT (1943 por Getúlio Vargas)</div>
+        <div class="mm-l2">└─ Proteção Atual: Art. 23 DUDH (1948) | Arts. 1º, IV e 6º da CF/88</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 9. MNEMÔNICOS E TÉCNICAS DE MEMORIZAÇÃO ══════════════════════════════ -->
+    <section>
+      <div class="section-label">Seção 08</div>
+      <h2>💡 Mnemônicos Mestres para Provas</h2>
+
+      <div class="mnemonic-box">
+        <div class="mnemonic-title">MNEMÔNICO: "E-P-J"</div>
+        <p style="margin-top: 10px; font-weight: 600;">As Três Causas do Surgimento do Direito do Trabalho:</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0;">
+          <strong>E</strong>conômica (Rev. Industrial) &nbsp;|&nbsp; 
+          <strong>P</strong>olítica (Estado Social) &nbsp;|&nbsp; 
+          <strong>J</strong>urídica (Luta Sindical)
+        </p>
+      </div>
+
+      <div class="mnemonic-box" style="border-color: #0d9488;">
+        <div class="mnemonic-title" style="color: #0d9488;">MNEMÔNICO: "I-I-T"</div>
+        <p style="margin-top: 10px; font-weight: 600;">Atributos Ontológicos do Trabalho Humano:</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0;">
+          <strong>I</strong>ntencional &nbsp;|&nbsp; 
+          <strong>I</strong>dealizado &nbsp;|&nbsp; 
+          <strong>T</strong>ransformador da Natureza
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 10. FLASHCARDS INTERATIVOS ══════════════════════════════ -->
+    <section>
+      <div class="section-label">Seção 09</div>
+      <h2>🎴 Flashcards de Fixação Rápida</h2>
+      
+      <div class="flashcard-grid">
+        <div class="flashcard">
+          <div class="flashcard-front">Qual a diferença entre Escravidão e Servidão?</div>
+          <div class="flashcard-back" style="font-size: 0.9rem; color: var(--text-muted);">Na escravidão o homem é propriedade (objeto). Na servidão ele está vinculado fática e juridicamente à terra feudal.</div>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-front">Qual foi a solução central do Taylorismo (1911)?</div>
+          <div class="flashcard-back" style="font-size: 0.9rem; color: var(--text-muted);">A expropriação sistemática do saber operário e a transferência do controle do processo produtivo para a gerência ("The Best Way").</div>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-front">Qual artigo da CF/88 consagra os Valores Sociais do Trabalho?</div>
+          <div class="flashcard-back" style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; color: #d97706;">Artigo 1º, inciso IV da CF/88 (Fundamento da República Federativa do Brasil).</div>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-front">O que estabeleceu o Art. 123 da Constituição Mexicana de 1917?</div>
+          <div class="flashcard-back" style="font-size: 0.9rem; color: var(--text-muted);">Foi o 1º texto constitucional do mundo a consagrar a jornada de 8h, salário mínimo, greve, descanso semanal e igualdade salarial.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 11. REVISÃO ATIVA (QUESTÕES MULTIFORMADAS) ══════════════════════════════ -->
+    <section id="revisao">
+      <div class="section-label">Seção 10</div>
+      <h2>📝 Bateria de Questões Comentadas (Revisão Ativa)</h2>
+
+      <!-- QUESTÃO 1: DISCURSIVA -->
+      <div class="exercise">
+        <p><strong>01. (Questão Discursiva - Magistratura do Trabalho / MPT)</strong> Analise a transição da Organização Artesanal para a Manufatura e o posterior Taylorismo, destacando como o processo de expropriação do saber operário impulsionou a intervenção estatal e o nascimento do Direito do Trabalho.</p>
+        <details>
+          <summary>Ver Espelho de Resposta Comentado</summary>
+          <div class="gabarito">
+            <p><strong>Espelho de Correção:</strong></p>
+            <ol>
+              <li><strong>Do Artesanato à Manufatura:</strong> No artesanato, o trabalhador detinha os instrumentos e a visão global da obra. Na manufatura (1776), ocorre a reunião de operários em um mesmo espaço sob o comando político/financeiro do comerciante, fracionando o processo.</li>
+              <li><strong>O Taylorismo (1911) e a Expropriação:</strong> O Taylorismo elimina a autonomia do operário ao expropriar de forma sistemática o seu saber empírico. A gerência coleta esse conhecimento, formula a "única maneira certa" (<em>The Best Way</em>) e passa a ditar o ritmo de produção.</li>
+              <li><strong>Reflexo no Direito do Trabalho:</strong> Essa desumanização e sujeição absoluta do trabalhador provaram a falácia da "liberdade contratual" do Direito Civil Liberal, exigindo a intervenção do Estado Social para editar normas cogentes e tutelar a dignidade humana do operário.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 2: CEBRASPE -->
+      <div class="exercise">
+        <p><strong>02. (Estilo CEBRASPE - Certo / Errado)</strong> A causa política do surgimento do Direito do Trabalho fundamentou-se na manutenção do Estado Liberal absenteísta, o qual preconizava que a autonomia privada e a livre negociação individual eram suficientes para assegurar a justiça contratual entre empregado e empregador.</p>
+        <details>
+          <summary>Ver Gabarito Comentado</summary>
+          <div class="gabarito">
+            <p><strong>GABARITO: ERRADO.</strong></p>
+            <p><strong>Fundamentação:</strong> A causa política do surgimento do Direito do Trabalho foi exatamente a <strong>transformação do Estado Liberal em Estado Social</strong>. O Estado Liberal absenteísta gerou graves injustiças sociais ao ignorar a desigualdade fática entre as partes, tornando indispensável a intervenção estatal reguladora na autonomia da relação de emprego.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 3: FGV / FCC -->
+      <div class="exercise">
+        <p><strong>03. (Estilo FGV / FCC - Múltipla Escolha)</strong> No tocante aos marcos constitucionais e internacionais dos direitos trabalhistas, assinale a afirmativa correta:</p>
+        <p>
+          (A) A Constituição de Weimar de 1919 foi o primeiro texto no mundo a constitucionalizar direitos trabalhistas como a jornada de 8h.<br>
+          (B) A Declaração Universal dos Direitos Humanos (1948), em seu Artigo 23, veda expressamente a sindicalização de trabalhadores assalariados.<br>
+          (C) A Constituição Mexicana de 1917 pioneiramente inseriu em nível constitucional a jornada diária máxima de 8h, salário mínimo e o direito de greve.<br>
+          (D) A CLT foi promulgada em 1988 conjuntamente com a nova Carta Constitucional brasileira.
+        </p>
+        <details>
+          <summary>Ver Gabarito Comentado</summary>
+          <div class="gabarito">
+            <p><strong>GABARITO: C.</strong></p>
+            <p><strong>Análise das Alternativas:</strong></p>
+            <ul>
+              <li><strong>(A) Incorreta:</strong> A primeira Constituição a consagrar direitos trabalhistas como a jornada de 8h foi a Constituição Mexicana de 1917 (Art. 123). Weimar veio em 1919.</li>
+              <li><strong>(B) Incorreta:</strong> O Art. 23, item 4 da DUDH garante expressamente o direito de fundar e se filiar a sindicatos.</li>
+              <li><strong>(C) CORRETA:</strong> A Constituição Mexicana de 1917 é o marco precursor do constitucionalismo social trabalhista.</li>
+              <li><strong>(D) Incorreta:</strong> A CLT foi outorgada em 1943 (Decreto-Lei 5.452) por Getúlio Vargas durante o Estado Novo.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 12. RESUMO FINAL DE 1 PÁGINA (CHEAT SHEET) ══════════════════════════════ -->
+    <section>
+      <div class="card gold">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+        <ul style="line-height: 1.8;">
+          <li>• <strong>Atributos do Trabalho:</strong> Intencional, Idealizado e Transformador da Natureza.</li>
+          <li>• <strong>Período Pré-Industrial:</strong> Escravidão (Homem como coisa/posse) ➔ Servidão (Vinculação à terra feudal) ➔ Corporações de Ofício (Monopólio da profissão).</li>
+          <li>• <strong>Três Causas de Emergência:</strong> Econômica (Rev. Industrial), Política (Transição do Estado Liberal ao Estado Social) e Jurídica (Luta coletiva sindical).</li>
+          <li>• <strong>Manufatura (1776):</strong> Reunião de operários sob comando político/financeiro do comerciante + divisão técnica do trabalho + parcialização das tarefas.</li>
+          <li>• <strong>Taylorismo (1911):</strong> Expropriação do saber operário ➔ Gerência cria o <em>The Best Way</em> ➔ Substituição do critério individual por métodos racionais de produtividade.</li>
+          <li>• <strong>Constituição do México (1917 - Art. 123):</strong> 1ª no mundo a constitucionalizar a jornada de 8h, 7h noturnas, descanso semanal, salário mínimo, igualdade salarial e greve.</li>
+          <li>• <strong>Weimar (1919) &amp; OIT (1919):</strong> Constitucionalismo Social Europeu e agência internacional (Tratado de Versalhes).</li>
+          <li>• <strong>Brasil:</strong> Justiça do Trabalho criada em 1939 | CLT outorgada em 1943 (Getúlio Vargas).</li>
+          <li>• <strong>Art. 23 DUDH (1948):</strong> Direito ao trabalho, igualdade salarial, remuneração digna e livre sindicalização.</li>
+          <li>• <strong>CF/88:</strong> Valores sociais do trabalho como fundamento da República (Art. 1º, IV) e Trabalho como direito social fundamental (Art. 6º).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="credit">MEU HUB DE ESTUDOS JURÍDICOS</div>
+      <p style="color: #94a3b8;">Sistema modular de resumos interativos otimizados para alto desempenho.</p>
+      <p style="margin-top: 2rem; color: #cbd5e1; opacity: 0.7;">&copy; 2026 - Produzido com foco em excelência e aprovação.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>

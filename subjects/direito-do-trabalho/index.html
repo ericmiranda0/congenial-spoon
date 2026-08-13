@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito do Trabalho | Portal de Estudos Premium</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Labor Law Amber / Teal */
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --subject-color: #F59E0B;
+      --subject-color-light: #FFFBEB;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1F1911 100%);
+    }
+
+    .subject-card {
+      text-decoration: none;
+      color: var(--text-main);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .subject-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-premium);
+    }
+
+    .subject-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 6px;
+      background: var(--p-500);
+    }
+
+    .subject-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--p-50);
+      color: var(--p-500);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    [data-theme="dark"] .subject-icon {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .subject-card:hover .subject-icon {
+      transform: rotate(-5deg) scale(1.1);
+    }
+
+    .subject-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subject-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="badge">Matéria Acadêmica</div>
+      <h1>Direito do Trabalho</h1>
+      <div class="subtitle">Introdução Histórica, Conceitos, Modos de Produção, Autonomia, Taylorismo, Direitos Humanos e Princípios Fundamentais</div>
+      <div class="meta">
+        <span>⚖️ Direito Social &amp; Especializado</span>
+        <span>📚 2 Resumos Disponíveis</span>
+        <span>🔥 Foco em Concursos e OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#modulos" class="nav-item active">Módulos de Estudo</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+      <div id="modulos">
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; border: none;">📚 Módulos de Estudo</h2>
+        <p style="color: var(--text-muted); margin-bottom: 3rem; font-family: 'Inter', sans-serif;">Todo o material didático, evolução histórica, jurisprudência do TST, direitos humanos e princípios transcritos na íntegra para máxima retenção de conteúdo.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+          
+          <!-- RESUMO 1: INTRODUÇÃO E PRINCÍPIOS -->
+          <a href="introducao-principios-direito-do-trabalho.html" class="subject-card">
+            <div class="subject-icon">⚒️</div>
+            <h3>Introdução Histórica, Conceitos &amp; Princípios do Direito do Trabalho</h3>
+            <p>Evolução histórica (1802 a 1919), crise e transformações contemporâneas (flexibilização, precarização e uberização), autonomia, definições (subjetivista, objetivista e mista), e o Princípio da Proteção com suas vertentes (*In Dubio Pro Operario*, exceções e jurisprudência do TST).</p>
+            <div class="card-footer">
+              <span>Acessar Resumo 01</span>
+              <span>→</span>
+            </div>
+          </a>
+
+          <!-- RESUMO 2: CONTEXTO HISTÓRICO & MODOS DE PRODUÇÃO -->
+          <a href="contexto-historico-evolucao.html" class="subject-card">
+            <div class="subject-icon">📜</div>
+            <h3>Contexto Histórico, Modos de Produção &amp; Direitos Humanos</h3>
+            <p>Conceito ontológico de trabalho, escravidão, servidão e corporações de ofício, causas de emergência (econômica, política e jurídica), artesanato, manufatura (1776), Taylorismo (1911), Constituições do México (1917) e Weimar (1919), OIT, CLT (1943), Art. 23 da DUDH e Arts. 1º, IV e 6º da CF/88.</p>
+            <div class="card-footer">
+              <span>Acessar Resumo 02</span>
+              <span>→</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="credit">MEU HUB DE ESTUDOS JURÍDICOS</div>
+      <p style="color: #94a3b8;">Sistema modular de resumos interativos otimizados para alto desempenho.</p>
+      <p style="margin-top: 2rem; color: #cbd5e1; opacity: 0.7;">&copy; 2026 - Produzido com foco em excelência e aprovação.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+</html>
