@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Da Ordem Social e Seguridade Social | Direito Constitucional</title>
+  
+  <!-- Fonts: Heading: Outfit | Body: Lora / Inter | Code/Labels: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Constitutional Emerald */
+    :root {
+      --p-700: #064E3B;
+      --p-600: #065F46;
+      --p-500: #10B981;
+      --p-50: #ECFDF5;
+      --primary: #10B981;
+      --primary-dark: #064E3B;
+      --accent-gold: #D4AF37;
+    }
+    
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #022C22 100%); }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    [data-theme="dark"] .kw {
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 14px 18px;
+      transition: all 0.3s ease;
+    }
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    [data-theme="dark"] .artigo summary {
+      color: #6EE7B7;
+    }
+    .artigo summary::-webkit-details-marker { display: none; }
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.1rem;
+    }
+    .lei-seca {
+      background: rgba(16, 185, 129, 0.04);
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .level-box {
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      border-left: 5px solid;
+    }
+    .level-1 {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1E3A8A;
+    }
+    .level-2 {
+      background: #F0FDF4;
+      border-color: #10B981;
+      color: #064E3B;
+    }
+    .level-3 {
+      background: #FEF2F2;
+      border-color: #EF4444;
+      color: #7F1D1D;
+    }
+    [data-theme="dark"] .level-1 { background: rgba(59, 130, 246, 0.1); color: #93C5FD; }
+    [data-theme="dark"] .level-2 { background: rgba(16, 185, 129, 0.1); color: #A7F3D0; }
+    [data-theme="dark"] .level-3 { background: rgba(239, 68, 68, 0.1); color: #FCA5A5; }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+      .grid2 { grid-template-columns: 1fr; }
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    @media (max-width: 900px) {
+      .grid3 { grid-template-columns: 1fr; }
+    }
+
+    .card-triad {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+    .card-triad:hover { transform: translateY(-4px); }
+    .card-triad.saude { border-top: 5px solid #10B981; }
+    .card-triad.assistencia { border-top: 5px solid #F59E0B; }
+    .card-triad.previdencia { border-top: 5px solid #3B82F6; }
+
+    .exam-tip, .pitfall, .doctrine-box, .juris-box, .attention-box, .summary-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+    .exam-tip { background: #FFFBEB; border-color: #FCD34D; color: #78350F; }
+    .pitfall { background: #FEF2F2; border-color: #FCA5A5; color: #7F1D1D; }
+    .doctrine-box { background: #F5F3FF; border-color: #C4B5FD; color: #4C1D95; }
+    .juris-box { background: #ECFEFF; border-color: #67E8F9; color: #164E63; }
+    .attention-box { background: #FFF7ED; border-color: #FDBA74; color: #7C2D12; }
+    .summary-box { background: #ECFDF5; border-color: #6EE7B7; color: #064E3B; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: #FDE68A; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #FCA5A5; }
+    [data-theme="dark"] .doctrine-box { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3); color: #DDD6FE; }
+    [data-theme="dark"] .juris-box { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.3); color: #A5F3FC; }
+    [data-theme="dark"] .attention-box { background: rgba(249, 115, 22, 0.1); border-color: rgba(249, 115, 22, 0.3); color: #FFEDD5; }
+    [data-theme="dark"] .summary-box { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #A7F3D0; }
+
+    .box-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+    .exam-tip .box-badge { background: #F59E0B; color: white; }
+    .pitfall .box-badge { background: #EF4444; color: white; }
+    .doctrine-box .box-badge { background: #8B5CF6; color: white; }
+    .juris-box .box-badge { background: #06B6D4; color: white; }
+    .attention-box .box-badge { background: #F97316; color: white; }
+    .summary-box .box-badge { background: #10B981; color: white; }
+
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+      margin: 30px 0;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 25px;
+      border-left: 3px solid var(--p-500);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--p-500);
+    }
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--p-500);
+      font-size: 0.9rem;
+    }
+
+    .mnemonico-card {
+      background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+      color: #F9FAFB;
+      padding: 25px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mnemonico-letter {
+      color: #10B981;
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+      margin: 25px 0;
+    }
+    .flashcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .flashcard:hover { transform: translateY(-4px); border-color: var(--p-500); }
+
+    table.custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    table.custom-table th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+    table.custom-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<header>
+  <div class="container">
+    <div class="badge">Material Didático · Direito Constitucional III</div>
+    <h1>Da Ordem Social e Seguridade Social</h1>
+    <div class="subtitle">Análise Exaustiva dos Artigos 193 a 204 da CF/88 — Da Primazia do Trabalho ao Tripé da Seguridade</div>
+    <div class="meta" style="margin-top: 15px;">
+      <span>⚖️ Arts. 6º, 193 a 204 CF/88</span>
+      <span>📚 Leis 8.212/91, 8.213/91 e 8.742/93 (LOAS)</span>
+      <span>🎯 Foco em Concursos de Alto Nível &amp; OAB</span>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+    </a>
+    <div class="nav-list">
+      <a href="#objetivos" class="nav-item">Objetivos</a>
+      <a href="#modulo1" class="nav-item">Ordem Social</a>
+      <a href="#modulo2" class="nav-item">Tripé da Seguridade</a>
+      <a href="#modulo3" class="nav-item">Princípios</a>
+      <a href="#lei-seca" class="nav-item">Lei Seca</a>
+      <a href="#comparativos" class="nav-item">Quadros</a>
+      <a href="#exercicios" class="nav-item">Revisão Ativa</a>
+      <a href="#mapa" class="nav-item">Mapa Mental</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema Claro/Escuro">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <!-- SUMÁRIO INTERATIVO -->
+  <div class="summary-card" id="top">
+    <h2>📋 Sumário Interativo de Navegação</h2>
+    <a href="#objetivos"><span>🎯</span> 1. Objetivos de Aprendizagem</a>
+    <a href="#modulo1"><span>🏛️</span> 2. Módulo 01: Direitos Sociais e Fundamentos da Ordem Social (Art. 193 CF)</a>
+    <a href="#modulo2"><span>🛡️</span> 3. Módulo 02: A Seguridade Social e o Tripé Constitucional (Art. 194 CF)</a>
+    <a href="#modulo3"><span>⚖️</span> 4. Módulo 03: Princípios Orientadores da Seguridade Social</a>
+    <a href="#lei-seca"><span>📖</span> 5. Transcrição Interativa da Lei Seca (CF/88)</a>
+    <a href="#comparativos"><span>📊</span> 6. Quadros Comparativos Modernos</a>
+    <a href="#exemplos-3d"><span>💡</span> 7. Exemplos Práticos em 3 Dimensões</a>
+    <a href="#timeline"><span>⏳</span> 8. Linha do Tempo e Evolução Normativa</a>
+    <a href="#mnemonicos"><span>🧠</span> 9. Mnemônicos e Técnicas de Memorização</a>
+    <a href="#exercicios"><span>📝</span> 10. Revisão Ativa (Questões Comentadas)</a>
+    <a href="#flashcards"><span>⚡</span> 11. Flashcards de Fixação Rápida</a>
+    <a href="#mapa"><span>🌳</span> 12. Mapa Mental Hierárquico</a>
+    <a href="#resumo-final"><span>🚀</span> 13. Resumo Ultra Simplificado (Cheat Sheet)</a>
+  </div>
+
+  <!-- ============================== -->
+  <!-- 1. OBJETIVOS DE APRENDIZAGEM -->
+  <!-- ============================== -->
+  <section id="objetivos">
+    <h2>🎯 1. Objetivos de Aprendizagem</h2>
+    <p>Ao concluir o estudo aprofundado deste material, o estudante e candidato dominará as seguintes competências:</p>
+    <ul>
+      <li>Diferenciar com precisão técnica <strong>direitos negativos (civis/políticos)</strong> de <strong>direitos positivos (sociais)</strong> e situar o Titulo VIII da CF/88 no ordenamento constitucional;</li>
+      <li>Compreender o <strong>Art. 193 da CF/88</strong>, identificando o <em>primado do trabalho</em> como motor social, a <em>justiça social</em> e o <em>bem-estar</em> como objetivos finais, e a obrigatoriedade da <strong>participação popular</strong> nas políticas públicas;</li>
+      <li>Conceituar <strong>Seguridade Social (Art. 194 CF)</strong> como garantia estatal contra <em>contingências sociais</em>, dominando a distinção entre a Seguridade e os demais Direitos Sociais do Art. 6º;</li>
+      <li>Analisar em detalhes a <strong>regra de ouro do custeio e contributividade</strong> no Tripé Constitucional: a gratuidade universal da Saúde, o acesso condicionado à necessidade na Assistência Social, e a natureza estritamente contributiva da Previdência Social;</li>
+      <li>Distinguir para a prática jurídica o <strong>Benefício de Prestação Continuada (BPC/LOAS)</strong> da <strong>aposentadoria previdenciária</strong>, abordando precariedade, viabilidade de acumulação e a figura do <em>segurado facultativo de baixa renda</em>;</li>
+      <li>Dissecara todos os <strong>princípios expressos e implícitos da Seguridade Social</strong> (Art. 194, parágrafo único), dominando os aspectos objetivo e subjetivo da Universalidade, o papel da Seletividade perante a Reserva do Possível, a Equidade no custeio e as regras do Art. 195 (noventena, custeio prévio e certidão negativa).</li>
+    </ul>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 2. MÓDULO 01: ORDEM SOCIAL -->
+  <!-- ============================== -->
+  <section id="modulo1" class="section">
+    <div class="section-label">Módulo 01</div>
+    <h2>Direitos Sociais e os Fundamentos da Ordem Social</h2>
+
+    <p>O <strong>Título VIII da Constituição Federal de 1988 (Da Ordem Social)</strong> representa o compromisso dogmático do Estado Brasileiro em concretizar a promessa de igualdade material contida nos Direitos Sociais do Artigo 6º.</p>
+
+    <h3>1.1 Direitos Negativos vs. Direitos Positivos</h3>
+    <p>Para compreender a Ordem Social, é imperativo distinguir a natureza jurídica dos direitos fundamentais envolvidos:</p>
+
+    <div class="grid2">
+      <div class="card-triad previdencia">
+        <h4>🚫 Direitos Negativos (1ª Geração / Liberdade)</h4>
+        <p>Exigem do Estado um dever de <strong>abstenção ou não intervenção</strong> (ex: direito de propriedade, liberdade de expressão, vida). O cidadão exige que o Poder Público não invada sua esfera individual de autonomia.</p>
+      </div>
+      <div class="card-triad saude">
+        <h4>🤲 Direitos Positivos (2ª Geração / Igualdade)</h4>
+        <p>Exigem do Estado uma <strong>prestação fática e atrativa (atuar positivo)</strong> mediante oferta de serviços públicos (ex: saúde, educação, assistência). Enquadram-se como Direitos Sociais (Art. 6º CF).</p>
+      </div>
+    </div>
+
+    <h3>1.2 Explicação em 3 Níveis: O Artigo 193 da CF/88</h3>
+
+    <div class="level-box level-1">
+      <strong>🌱 Nível 1 — Leigo / Linguagem Direta:</strong>
+      <p>Imagine que a Constituição faz uma promessa para a sociedade no Artigo 6º dizendo que todos têm direito a ter saúde, moradia, trabalho e educação. O Artigo 193 é o manual de instruções onde o Governo diz como vai organizar a casa para entregar essa promessa: colocando o trabalho como a base de tudo e buscando fazer com que todos vivam bem e com justiça. Além disso, o Governo não pode decidir tudo sozinho; a população tem o direito de palpitar e fiscalizar onde o dinheiro da saúde e da educação está sendo gasto.</p>
+    </div>
+
+    <div class="level-box level-2">
+      <strong>🎓 Nível 2 — Graduação / Dogmática Técnica:</strong>
+      <p>O Art. 193 da CF/88 é a norma principiológica inaugural da Ordem Social. Estabelece como <em>base/primado</em> o trabalho (fator de dignificação humana e motor socioeconômico) e como <em>objetivos centrais</em> o bem-estar e a justiça social. No parágrafo único, consagra a diretriz da <strong>democracia participativa nas políticas sociais</strong>: incumbe ao Estado o planejamento, contudo assegurando a participação direta da sociedade nos processos de formulação, monitoramento, controle e avaliação por meio de instrumentos colegiados (conselhos, conferências e audiências públicas).</p>
+    </div>
+
+    <div class="level-box level-3">
+      <strong>⚖️ Nível 3 — Concursos de Alto Nível / Prática Avançada:</strong>
+      <p>A jurisprudência do STF entende que a participação popular na gestão das políticas sociais é norma de eficácia plena e vetor interpretativo obrigatório. Normas municipais ou estaduais que vedem ou restrinjam indevidamente a fiscalização comunitária ou suprimam conselhos paritários incorrem em <strong>inconstitucionalidade material</strong> por afronta ao parágrafo único do Art. 193 da CF/88. Ademais, o primado do trabalho dialoga diretamente com os fundamentos da República (Art. 1º, IV - valores sociais do trabalho e da livre iniciativa) e com a Ordem Econômica (Art. 170 caput).</p>
+    </div>
+
+    <div class="attention-box">
+      <span class="box-badge">📝 Atenção em Prova</span>
+      <strong>Proibição de Exclusão da Sociedade:</strong> Se uma questão de concurso apresentar um caso em que o Poder Executivo edita decreto assumindo 100% da gestão de políticas de saúde ou assistência, proibindo a interferência de entidades civis sob o pretexto de "eficiência orçamentária", a medida será <strong>INCONSTITUCIONAL</strong> por contrariar o parágrafo único do Art. 193 da CF/88.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 3. MÓDULO 02: TRIPÉ DA SEGURIDADE -->
+  <!-- ============================== -->
+  <section id="modulo2" class="section">
+    <div class="section-label">Módulo 02</div>
+    <h2>A Seguridade Social e o Tripé Constitucional (Art. 194)</h2>
+
+    <p>A <strong>Seguridade Social</strong> é conceituada no Art. 194 da CF/88 como um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à <strong>Saúde, à Previdência e à Assistência Social</strong>.</p>
+
+    <div class="doctrine-box">
+      <span class="box-badge">📚 Analogia Didática: O Seguro Estatal</span>
+      O termo "Seguridade" deriva da ideia de <strong>seguro público coletivo</strong>. O Estado atua como a entidade seguradora e a sociedade como segurada. Diante de uma <strong>contingência social</strong> (doença, invalidez, morte, velhice, desemprego involuntário ou situação de miserabilidade), o sistema de seguridade é acionado para socorrer e amparar o indivíduo em situação de vulnerabilidade/hipossuficiência.
+    </div>
+
+    <h3>2.1 O Tripé da Seguridade Social: Regra de Ouro do Custeio</h3>
+    <p>Embora o Art. 6º da CF mencione diversos direitos sociais (educação, moradia, lazer, transporte, segurança, etc.), a <strong>Seguridade Social abrange EXCLUSIVAMENTE três áreas específicas (Tripé Constitucional)</strong>, cada uma com regramento próprio quanto ao custeio e ao público beneficiário:</p>
+
+    <div class="grid3">
+      <div class="card-triad saude">
+        <h3>🏥 1. Saúde</h3>
+        <p><strong>Acesso:</strong> Universal e Igualitário (Art. 196 CF).</p>
+        <p><strong>Custeio Direto:</strong> <span class="kw">NÃO exige contribuição direta prévia</span>.</p>
+        <p><strong>Público:</strong> Toda e qualquer pessoa (brasileiros e estrangeiros residentes ou em trânsito).</p>
+        <p><strong>Financiamento:</strong> Indireto, através dos impostos e orçamento geral da sociedade.</p>
+      </div>
+
+      <div class="card-triad assistencia">
+        <h3>🤝 2. Assistência Social</h3>
+        <p><strong>Acesso:</strong> Condicionado à comprovação de necessidade (Art. 203 CF).</p>
+        <p><strong>Custeio Direto:</strong> <span class="kw">NÃO exige contribuição direta prévia</span>.</p>
+        <p><strong>Público:</strong> Aos hipossuficientes / miseráveis que dela necessitarem.</p>
+        <p><strong>Exemplo Marcante:</strong> Benefício de Prestação Continuada (BPC/LOAS).</p>
+      </div>
+
+      <div class="card-triad previdencia">
+        <h3>🛡️ 3. Previdência Social</h3>
+        <p><strong>Acesso:</strong> Caráter contributivo e filiação obrigatória/facultativa (Art. 201 CF).</p>
+        <p><strong>Custeio Direto:</strong> <span class="kw">EXIGE CONTRIBUIÇÃO DIRETA PRÉVIA</span>.</p>
+        <p><strong>Público:</strong> Apenas aos segurados contribuintes e seus dependentes.</p>
+        <p><strong>Benefícios:</strong> Aposentadorias, auxílio-por-incapacidade, pensão por morte.</p>
+      </div>
+    </div>
+
+    <div class="pitfall">
+      <span class="box-badge">⚠️ Erro Comum em Concursos e OAB</span>
+      <strong>Pegadinha Clássica:</strong> Afirmar que a Seguridade Social garante <em>todos</em> os direitos sociais do Artigo 6º. <strong>ERRADO!</strong> A Seguridade Social financia e organiza tão somente o <strong>PAS (Previdência, Assistência e Saúde)</strong>. Direitos como educação, moradia e transporte possuem capítulos e orçamentos próprios no texto constitucional, não integrando a seguridade social propriamente dita.
+    </div>
+
+    <h3>2.2 Distinção Prática Crucial: BPC/LOAS vs. Aposentadoria Previdenciária</h3>
+    <p>Na prática da advocacia e nas bancas examinadoras, confunde-se frequentemente o benefício assistencial com a aposentadoria. Veja as diferenças determinantes:</p>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Critério de Comparação</th>
+          <th>Benefício Assistencial (BPC / LOAS - Art. 20)</th>
+          <th>Aposentadoria Previdenciária (Art. 201 CF)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ramo Jurídico</strong></td>
+          <td>Assistência Social (Não Contributiva)</td>
+          <td>Previdência Social (Contributiva)</td>
+        </tr>
+        <tr>
+          <td><strong>Exigência de Pagamento</strong></td>
+          <td><span class="kw">Nenhuma contribuição prévia exigida</span></td>
+          <td>Exige tempo mínimo de contribuição e carência</td>
+        </tr>
+        <tr>
+          <td><strong>Organização / Gestão</strong></td>
+          <td>Administrado pelo INSS (mas custeado pelo Tesouro)</td>
+          <td>Gerido e mantido pelo RGPS / INSS ou RPPS</td>
+        </tr>
+        <tr>
+          <td><strong>Incorporação ao Patrimônio</strong></td>
+          <td><strong>NÃO se incorpora definitivamente</strong> (precário/transitório enquanto persistir a miserabilidade)</td>
+          <td><strong>Direito Adquirido Definitivo</strong> (incorporado ao patrimônio do segurado)</td>
+        </tr>
+        <tr>
+          <td><strong>13º Salário (Abono Anual)</strong></td>
+          <td>Não dá direito a 13º salário (salvo previsão legal específica temporária)</td>
+          <td>Garantia constitucional de 13º salário (Art. 201, § 6º)</td>
+        </tr>
+        <tr>
+          <td><strong>Pensão por Morte aos Herdeiros</strong></td>
+          <td>Não deixa pensão por morte após o falecimento do beneficiário</td>
+          <td>Gera direito à pensão por morte aos dependentes habilitados</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-tip">
+      <span class="box-badge">💡 Dica de Prova &amp; Advocacia</span>
+      <strong>Segurado Facultativo de Baixa Renda (Art. 201, § 12 CF / Art. 21, § 2º, II, "b" Lei 8.212/91):</strong> Pessoas sem renda própria que se dediquem exclusivamente ao trabalho doméstico no âmbito de sua residência, pertencentes a famílias de baixa renda (inscritas no CadÚnico), podem contribuir para a Previdência Social com a alíquota reduzida de <strong>5% do salário mínimo</strong>. Isso permite a transição da proteção assistencial para a cobertura previdenciária definitiva!
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 4. MÓDULO 03: PRINCÍPIOS DA SEGURIDADE -->
+  <!-- ============================== -->
+  <section id="modulo3" class="section">
+    <div class="section-label">Módulo 03</div>
+    <h2>Princípios Orientadores da Seguridade Social</h2>
+
+    <p>Os princípios expressos no parágrafo único do Art. 194 da CF/88 possuem <strong>caráter impositivo e vinculante</strong> para o legislador e para o Poder Executivo, funcionando como ordens diretas para a estruturação do sistema de proteção social.</p>
+
+    <h3>3.1 Universalidade da Cobertura e do Atendimento (Inciso I)</h3>
+    <p>O princípio da Universalidade possui uma vertente dupla estrutural:</p>
+
+    <div class="grid2">
+      <div class="level-box level-2">
+        <strong>🎯 Aspecto Objetivo (Universalidade da Cobertura):</strong>
+        <p>Diz respeito aos <em>fatos/riscos</em>. O sistema deve buscar cobrir o maior número possível de <strong>contingências sociais</strong> (invalidez, velhice, morte, doença, maternidade, desemprego, vulnerabilidade econômica).</p>
+      </div>
+      <div class="level-box level-1">
+        <strong>👤 Aspecto Subjetivo (Universalidade do Atendimento):</strong>
+        <p>Diz respeito aos <em>sujeitos/pessoas</em>. O sistema deve alcançar <strong>todas as pessoas</strong> que necessitarem de proteção no território nacional (nacionais e estrangeiros).</p>
+      </div>
+    </div>
+
+    <p><strong>Gradação nos Ramos:</strong> A Saúde é a expressão máxima da universalidade (atende a todos indistintamente). A Assistência é universal no campo dos necessitados. A Previdência tem a universalidade mitigada pela contributividade, mas expandida pela figura do <em>segurado facultativo</em>.</p>
+
+    <h3>3.2 Uniformidade e Equivalência entre Populações Urbanas e Rurais (Inciso II)</h3>
+    <p>Visou corrigir a severa discriminação histórica pré-88, na qual os trabalhadores rurais recebiam benefícios irrisórios (ex: aposentadoria rurícola limitada a meio salário mínimo). Estabeleceu a <strong>igualdade material e isonomia</strong> de eventos cobertos (uniformidade) e de valores e prestações (equivalência) entre o meio urbano e o campo.</p>
+
+    <h3>3.3 Seletividade e Distributividade na Prestação (Inciso III)</h3>
+    
+    <div class="pitfall">
+      <span class="box-badge">⚠️ O Freio da Universalidade (Reserva do Possível)</span>
+      Como não existe dinheiro infinito e o Estado não pode imprimir moeda de forma desenfreada (sob risco de descontrole inflacionário), a <strong>Seletividade funciona como um limitador/mitigador da Universalidade</strong>.
+    </div>
+
+    <ul>
+      <li><strong>Seletividade:</strong> O legislador escolhe (seleciona) quais contingências sociais são mais urgentes e prioritárias para receber atendimento pleno diante da escassez orçamentária (ex: o SUS atende cirurgias reparadoras e de alto risco, mas não financia procedimentos puramente estéticos).</li>
+      <li><strong>Distributividade:</strong> Diretriz de justiça social e distribuição equitativa de renda. Coleta-se recurso de toda a sociedade para aplicar prioritariamente na população de menor renda e maior grau de vulnerabilidade.</li>
+    </ul>
+
+    <h3>3.4 Irredutibilidade do Valor dos Benefícios (Inciso IV)</h3>
+    <p>Funciona como garantia contra o retrocesso social. Impede a redução do <strong>valor nominal</strong> dos benefícios da seguridade social. No âmbito da <strong>Previdência Social</strong>, a CF/88 vai além e garante a preservação do <strong>valor REAL</strong> mediante reajustes periódicos (Art. 201, § 4º).</p>
+
+    <h3>3.5 Equidade na Forma de Participação no Custeio (Inciso V)</h3>
+    <p>Derivação do princípio da capacidade contributiva (Art. 145, § 1º). Exige que quem possui maior capacidade econômica pague alíquotas mais elevadas, enquanto os de menor capacidade econômica sejam onerados com alíquotas reduzidas (ex: tabela progressiva de contribuição introduzida pela EC 103/2019).</p>
+
+    <h3>3.6 Diversidade da Base de Financiamento (Inciso VI)</h3>
+    <p>Para garantir a higidez financeira e a solvibilidade atuarial do sistema contra crises em setores específicos, a seguridade social é custeada por toda a sociedade de forma direta e indireta, mediante recursos dos orçamentos da União, Estados, DF, Municípios e das contribuições sociais do Art. 195 (sobre a folha de pagamentos, receita/faturamento, lucro e concursos de prognósticos).</p>
+
+    <div class="juris-box">
+      <span class="box-badge">⚖️ Jurisprudência e Regras Constitucionais do Custeio (Art. 195)</span>
+      <ul>
+        <li><strong>Princípio da Noventena / Anterioridade Mitigada (Art. 195, § 6º):</strong> As contribuições sociais para a seguridade só podem ser cobradas após 90 dias da publicação da lei que as instituiu ou modificou, sem sujeição à anterioridade anual.</li>
+        <li><strong>Regra da Contrapartida / Custeio Prévio (Art. 195, § 5º):</strong> Nenhum benefício ou serviço da seguridade social pode ser criado, majorado ou estendido sem a correspondente fonte de custeio total.</li>
+        <li><strong>Certidão Negativa de Débito (Art. 195, § 3º):</strong> A pessoa jurídica em débito com a seguridade social não pode contratar com o Poder Público nem receber benefícios ou incentivos fiscais/creditícios.</li>
+      </ul>
+    </div>
+
+    <h3>3.7 Gestão Quadripartite Democrática e Descentralizada (Inciso VII)</h3>
+    <p>Administração descentralizada com participação popular paritária nos órgãos colegiados por meio da <strong>Gestão Quadripartite</strong>: representantes dos <strong>Trabalhadores, Empregadores, Aposentados e do Governo</strong> (ex: Conselho Nacional de Previdência Social - CNPS, CNAS e CNS).</p>
+
+    <h3>3.8 Princípio Implícito da Solidariedade</h3>
+    <p>O sistema de seguridade social brasileiro fundamenta-se na solidariedade intergeracional (Art. 3º, I CF). A geração presente de trabalhadores ativos contribui para custear os benefícios da geração atual de aposentados e pensionistas.</p>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 5. LEI SECA INTERATIVA -->
+  <!-- ============================== -->
+  <section id="lei-seca" class="section">
+    <h2>📖 Transcrição Interativa da Lei Seca (CF/88)</h2>
+    <p>Clique sobre os artigos abaixo para expandir a fundamentação legal ipsis litteris com termos destacados e explicações didáticas:</p>
+
+    <details class="artigo">
+      <summary>Art. 6º da CF/88 — Direitos Sociais Fundamentais</summary>
+      <div class="lei-seca">
+        <p><strong>Art. 6º</strong> São direitos sociais a <span class="kw">educação</span>, a <span class="kw">saúde</span>, a <span class="kw">alimentação</span>, o <span class="kw">trabalho</span>, a <span class="kw">moradia</span>, o <span class="kw">transporte</span>, o <span class="kw">lazer</span>, a <span class="kw">segurança</span>, a <span class="kw">previdência social</span>, a <span class="kw">proteção à maternidade e à infância</span>, a <span class="kw">assistência aos desamparados</span>, na forma desta Constituição.</p>
+        <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
+        <p><em>Comentário Didático:</em> Trata-se do rol de direitos fundamentais de 2ª geração que demandam prestações positivas estatais. Note que a Seguridade abrange apenas três deles: Saúde, Previdência e Assistência.</p>
+      </div>
+    </details>
+
+    <details class="artigo">
+      <summary>Art. 193 da CF/88 — A Base da Ordem Social</summary>
+      <div class="lei-seca">
+        <p><strong>Art. 193.</strong> A ordem social tem como base o <span class="kw">primado do trabalho</span>, e como objetivo o <span class="kw">bem-estar e a justiça sociais</span>.</p>
+        <p><strong>Parágrafo único.</strong> O Estado exercerá a função de <span class="kw">planejamento das políticas sociais</span>, assegurada, na forma da lei, a <span class="kw">participação da sociedade</span> nos processos de formulação, de monitoramento, de controle e de avaliação dessas políticas.</p>
+        <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
+        <p><em>Comentário Didático:</em> O parágrafo único torna inconstitucional a exclusão da comunidade e das entidades civis da formulação e controle das diretrizes sociais.</p>
+      </div>
+    </details>
+
+    <details class="artigo">
+      <summary>Art. 194 da CF/88 — Conceito e Princípios da Seguridade Social</summary>
+      <div class="lei-seca">
+        <p><strong>Art. 194.</strong> A seguridade social compreende um <span class="kw">conjunto integrado de ações</span> de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à <span class="kw">saúde, à previdência e à assistência social</span>.</p>
+        <p><strong>Parágrafo único.</strong> Compete ao Poder Público, nos termos da lei, organizar a seguridade social com base nos seguintes objetivos:</p>
+        <p>I - <span class="kw">universalidade da cobertura e do atendimento</span>;</p>
+        <p>II - <span class="kw">uniformidade e equivalência</span> dos benefícios e serviços às populações urbanas e rurais;</p>
+        <p>III - <span class="kw">seletividade e distributividade</span> na prestação dos benefícios e serviços;</p>
+        <p>IV - <span class="kw">irredutibilidade do valor</span> dos benefícios;</p>
+        <p>V - <span class="kw">equidade na forma de participação no custeio</span>;</p>
+        <p>VI - <span class="kw">diversidade da base de financiamento</span> [...]</p>
+        <p>VII - <span class="kw">caráter democrático e descentralizado</span> da administração, mediante <span class="kw">gestão quadripartite</span>, com participação dos trabalhadores, dos empregadores, dos aposentados e do Governo nos órgãos colegiados.</p>
+      </div>
+    </details>
+
+    <details class="artigo">
+      <summary>Art. 195, §§ 3º, 5º e 6º da CF/88 — Vedações e Princípios do Custeio</summary>
+      <div class="lei-seca">
+        <p><strong>§ 3º</strong> A pessoa jurídica em débito com o sistema da seguridade social [...] <span class="kw">não poderá contratar com o Poder Público</span> nem dele receber benefícios ou incentivos fiscais ou creditícios.</p>
+        <p><strong>§ 5º</strong> <span class="kw">Nenhum benefício ou serviço</span> da seguridade social poderá ser criado, majorado ou estendido <span class="kw">sem a correspondente fonte de custeio total</span> (Regra da Contrapartida).</p>
+        <p><strong>§ 6º</strong> As contribuições sociais [...] só poderão ser exigidas após <span class="kw">decorridos noventa dias</span> da data da publicação da lei que as houver instituído ou modificado (Princípio da Noventena).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 6. QUADROS COMPARATIVOS MODERNOS -->
+  <!-- ============================== -->
+  <section id="comparativos" class="section">
+    <h2>📊 Quadros Comparativos Modernos</h2>
+
+    <h3>Comparativo Geral dos Ramos da Seguridade Social</h3>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Dimensão</th>
+          <th>Saúde (Arts. 196-200 CF)</th>
+          <th>Assistência Social (Arts. 203-204)</th>
+          <th>Previdência Social (Arts. 201-202)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Caráter Contributivo</strong></td>
+          <td>Não contributiva</td>
+          <td>Não contributiva</td>
+          <td><span class="kw">Estritamente Contributiva</span></td>
+        </tr>
+        <tr>
+          <td><strong>Público-Alvo</strong></td>
+          <td>Todos (Universalidade Ampla)</td>
+          <td>Somente a quem necessitar</td>
+        </tr>
+        <tr>
+          <td><strong>Direito Adquirido?</strong></td>
+          <td>Atendimento conforme demanda</td>
+          <td>Não gera direito adquirido (precário)</td>
+          <td>Gera Direito Adquirido apurado</td>
+        </tr>
+        <tr>
+          <td><strong>Expressão do Princípio</strong></td>
+          <td>Máxima Universalidade de Atendimento</td>
+          <td>Seletividade e Distributividade Renda</td>
+          <td>Equidade no custeio e contributividade</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 7. EXEMPLOS PRÁTICOS EM 3D -->
+  <!-- ============================== -->
+  <section id="exemplos-3d" class="section">
+    <h2>💡 Exemplos Práticos em 3 Dimensões</h2>
+
+    <div class="grid3">
+      <div class="card-triad saude">
+        <h4>🏡 1. Cotidiano</h4>
+        <p>Um turista estrangeiro sofre um acidente de trânsito em São Paulo. Ele é socorrido pelo SAMU e atendido no pronto-socorro do SUS sem pagar nada. Aplicação imediata da <strong>Universalidade do Atendimento na Saúde</strong>.</p>
+      </div>
+
+      <div class="card-triad assistencia">
+        <h4>⚖️ 2. Jurídico Formal</h4>
+        <p>Um idoso de 68 anos em estado de miserabilidade requer o BPC/LOAS. Ganhando na loteria meses depois, a União cancela o benefício por ausência do requisito de necessidade. Demonstra a <strong>precariedade do benefício assistencial</strong>.</p>
+      </div>
+
+      <div class="card-triad previdencia">
+        <h4>📝 3. Prova de Concurso</h4>
+        <p>Questão cobra a validade de lei federal que aumenta alíquota de contribuição previdenciária cobrando-a 30 dias após a publicação. Resposta: Inconstitucional por violar o <strong>Princípio da Noventena (Art. 195, § 6º)</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 8. LINHA DO TEMPO HISTÓRICA -->
+  <!-- ============================== -->
+  <section id="timeline" class="section">
+    <h2>⏳ Linha do Tempo e Evolução Normativa da Seguridade</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">1923 — Eloy Chaves</div>
+        <p>Decreto 4.682/23 cria as Caixas de Aposentadoria e Pensões (CAPs) para ferroviários. Marco inicial da previdência no Brasil.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1934 — CF de 1934</div>
+        <p>Primeira Constituição brasileira a consagrar o termo "Previdência" e instituir a tríplice forma de custeio (Estado, Empregador e Empregado).</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1988 — CF de 1988</div>
+        <p>Inovação revolucionária: criação do conceito unificado de <strong>SEGURIDADE SOCIAL</strong> (Ordem Social - Título VIII), unificando Saúde, Assistência e Previdência sob princípios da universalidade e gestão quadripartite.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2019 — Emenda Constitucional 103/2019</div>
+        <p>Reforma da Previdência: altera regras de elegibilidade, institui alíquotas progressivas (Equidade no Custeio) e reformula a Previdência Social.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 9. MNEMÔNICOS DE FIXAÇÃO -->
+  <!-- ============================== -->
+  <section id="mnemonicos" class="section">
+    <h2>🧠 Mnemônicos e Técnicas de Memorização</h2>
+
+    <div class="mnemonico-card">
+      <h3>💊 Mnemônico 01: O TRIPÉ DA SEGURIDADE = P.A.S.</h3>
+      <p><span class="mnemonico-letter">P</span> - Previdência Social (Contributiva)</p>
+      <p><span class="mnemonico-letter">A</span> - Assistência Social (Para quem precisa)</p>
+      <p><span class="mnemonico-letter">S</span> - Saúde (Para todos / Gratuita)</p>
+    </div>
+
+    <div class="mnemonico-card">
+      <h3>🏛️ Mnemônico 02: PRINCÍPIOS DO ART. 194 = U.N.I.S.E.D.I.</h3>
+      <p><span class="mnemonico-letter">U</span> - Universalidade da cobertura e atendimento</p>
+      <p><span class="mnemonico-letter">N</span> - Uniformidade e equivalência (Urbano/Rural)</p>
+      <p><span class="mnemonico-letter">I</span> - Irredutibilidade do valor dos benefícios</p>
+      <p><span class="mnemonico-letter">S</span> - Seletividade e distributividade</p>
+      <p><span class="mnemonico-letter">E</span> - Equidade na participação do custeio</p>
+      <p><span class="mnemonico-letter">D</span> - Diversidade da base de financiamento</p>
+      <p><span class="mnemonico-letter">I</span> - Integração Democrática (Gestão Quadripartite)</p>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 10. REVISÃO ATIVA (QUESTÕES) -->
+  <!-- ============================== -->
+  <section id="exercicios" class="section">
+    <h2>📝 Revisão Ativa — Questões Comentadas</h2>
+
+    <div class="exercise">
+      <p><strong>01. (Discursiva / Magistratura)</strong> Explique como o Princípio da Seletividade atua em relação ao Princípio da Universalidade da Cobertura no âmbito da Seguridade Social, citando a justificativa orçamentária constitucional.</p>
+      <details class="artigo">
+        <summary>Ver Espelho de Resposta</summary>
+        <div class="gabarito">
+          <strong>Resposta Esperada:</strong> O candidato deve esclarecer que a Universalidade (Art. 194, I) representa a meta ideal do Estado em cobrir todas as contingências sociais e atender a toda a população. Todavia, em virtude da limitação dos recursos financeiros públicos (princípio da reserva do possível e impedimento de emissão desordenada de moeda por risco inflacionário), a Seletividade (Art. 194, III) atua como um freio/limitador da universalidade. Por meio da seletividade, o legislador estabelece critérios objetivos para selecionar os riscos mais graves e urgentes e a população mais necessitada a ser priorizada na concessão de serviços e benefícios.
+        </div>
+      </details>
+    </div>
+
+    <div class="exercise">
+      <p><strong>02. (CEBRASPE / Certo ou Errado)</strong> A Seguridade Social abrange a totalidade dos direitos sociais previstos no Artigo 6º da Constituição Federal, garantindo automaticamente moradia, transporte e alimentação aos cidadãos.</p>
+      <details class="artigo">
+        <summary>Ver Gabarito Comentado</summary>
+        <div class="gabarito">
+          <strong>Gabarito: ERRADO.</strong><br>
+          <em>Fundamentação:</em> A Seguridade Social (Art. 194 CF) compreende exclusivamente as ações destinadas a assegurar os direitos à Saúde, Previdência e Assistência Social (Tripé PAS). Moradia, transporte e alimentação são direitos sociais do Art. 6º, mas possuem regramentos e orçamentos orçamentários próprios fora do sistema de seguridade social.
+        </div>
+      </details>
+    </div>
+
+    <div class="exercise">
+      <p><strong>03. (FGV / Múltipla Escolha)</strong> Determinada Medida Provisória criou um novo benefício de auxílio pecuniário na Seguridade Social sem apontar no texto a indicação da correspondente receita para o seu custeio total. À luz do Art. 195, § 5º da CF/88, essa norma é:</p>
+      <p>a) Válida, pois o Poder Executivo possui discricionariedade orçamentária.<br>
+      b) Inconstitucional por afronta ao Princípio da Contrapartida ou do Custeio Prévio.<br>
+      c) Válida, desde que o benefício seja concedido por no máximo 90 dias.<br>
+      d) Inconstitucional por violar a anterioridade noventena.</p>
+      <details class="artigo">
+        <summary>Ver Gabarito Comentado</summary>
+        <div class="gabarito">
+          <strong>Gabarito: Opção B.</strong><br>
+          <em>Fundamentação:</em> Segundo o Art. 195, § 5º da CF/88 (Regra da Contrapartida), nenhum benefício ou serviço da seguridade social pode ser criado, majorado ou estendido sem a correspondente fonte de custeio total.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 11. FLASHCARDS INTERATIVOS -->
+  <!-- ============================== -->
+  <section id="flashcards" class="section">
+    <h2>⚡ Flashcards de Fixação Rápida</h2>
+    <div class="flashcards-grid">
+      <div class="flashcard">
+        <strong>Frente:</strong> Qual o primado e os objetivos da Ordem Social (Art. 193)?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> Primado do Trabalho; Objetivos: Bem-estar e Justiça Sociais.</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> O BPC/LOAS exige contribuição prévia ao INSS?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> NÃO. Trata-se de benefício assistencial não contributivo (Art. 203, V CF).</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> Qual o prazo do Princípio da Noventena (Art. 195, § 6º)?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> 90 dias a contar da publicação da lei para exigência de contribuição social.</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> O que significa a Gestão Quadripartite (Art. 194, VII)?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> Participação nos órgãos colegiados de Trabalhadores, Empregadores, Aposentados e Governo.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 12. MAPA MENTAL HIERÁRQUICO -->
+  <!-- ============================== -->
+  <section id="mapa" class="section">
+    <h2>🧠 Mapa Mental Hierárquico</h2>
+    <div class="mindmap-box">
+      <span class="mm-root">🏛️ ORDEM SOCIAL &amp; SEGURIDADE SOCIAL (CF/88)</span>
+
+      <span class="mm-l1">📍 ORDEM SOCIAL (Art. 193)</span>
+      <span class="mm-l2">→ Base / Primado: TRABALHO</span>
+      <span class="mm-l2">→ Objetivos: BEM-ESTAR + JUSTIÇA SOCIAL</span>
+      <span class="mm-l2">→ Parágrafo Único: Planejamento Estatal + Participação da Sociedade</span>
+
+      <span class="mm-l1">🛡️ SEGURIDADE SOCIAL (Art. 194) — O TRIPÉ (PAS)</span>
+      <span class="mm-l2">→ 1. SAÚDE: Universal, Gratuita, Sem contribuição direta (Arts. 196-200)</span>
+      <span class="mm-l2">→ 2. ASSISTÊNCIA SOCIAL: Para quem precisa, Gratuita, Não contributiva (Arts. 203-204)</span>
+      <span class="mm-l3">↳ BPC/LOAS: Precário, sem 13º/pensão, destinado a idosos/deficientes miseráveis</span>
+      <span class="mm-l2">→ 3. PREVIDÊNCIA SOCIAL: Estritamente CONTRIBUTIVA, filiação obrigatória/facultativa (Art. 201)</span>
+      <span class="mm-l3">↳ Segurado Facultativo Baixa Renda (alíquota 5% CadÚnico)</span>
+
+      <span class="mm-l1">⚖️ PRINCÍPIOS EXPRESSOS (Art. 194, Parágrafo Único)</span>
+      <span class="mm-l2">→ Universalidade: Cobertura (Objetivo = contingências) + Atendimento (Subjetivo = pessoas)</span>
+      <span class="mm-l2">→ Uniformidade e Equivalência: Isonomia entre Trabalhadores Urbanos e Rurais</span>
+      <span class="mm-l2">→ Seletividade e Distributividade: Freio orçamentário à Universalidade + Distribuição de renda</span>
+      <span class="mm-l2">→ Irredutibilidade: Valor Nominal (Seguridade) e Valor Real (Previdência)</span>
+      <span class="mm-l2">→ Equidade no Custeio: Capacidade contributiva (alíquotas progressivas)</span>
+      <span class="mm-l2">→ Diversidade no Financiamento: Múltiplas fontes orçamentárias (Art. 195)</span>
+      <span class="mm-l2">→ Gestão Quadripartite: Trabalhadores + Empregadores + Aposentados + Governo</span>
+
+      <span class="mm-l1">💵 REGRAS CONSTITUCIONAIS DO CUSTEIO (Art. 195)</span>
+      <span class="mm-l2">→ Contrapartida / Custeio Prévio (§ 5º): Sem benefício novo sem fonte total</span>
+      <span class="mm-l2">→ Noventena / Anterioridade Mitigada (§ 6º): 90 dias para vigência de contribuição</span>
+      <span class="mm-l2">→ CND (§ 3º): Empresa em débito não contrata com o Poder Público</span>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 13. RESUMO ULTRA SIMPLIFICADO -->
+  <!-- ============================== -->
+  <section id="resumo-final" class="section">
+    <div class="summary-box">
+      <span class="box-badge">🚀 Resumo Ultra Rápido (Cheat Sheet)</span>
+      <ul>
+        <li><strong>Ordem Social (Art. 193):</strong> Primado do trabalho, bem-estar e justiça social. Obriga a participação popular no planejamento e controle das políticas públicas.</li>
+        <li><strong>Seguridade Social = P.A.S.:</strong> Previdência (Contributiva), Assistência (Para quem precisa) e Saúde (Para todos). Não abrange todos os direitos sociais do Art. 6º.</li>
+        <li><strong>Saúde &amp; Assistência:</strong> NÃO exigem contribuição direta prévia. <strong>Previdência:</strong> EXIGE contribuição direta prévia.</li>
+        <li><strong>BPC/LOAS vs. Aposentadoria:</strong> BPC é assistencial, não exige contribuição, não deixa pensão por morte, não paga 13º e é precário (não gera direito adquirido). Aposentadoria é previdenciária e gera direito adquirido definitivo.</li>
+        <li><strong>Universalidade:</strong> Cobertura (Objetivo/Fatos) + Atendimento (Subjetivo/Pessoas).</li>
+        <li><strong>Seletividade:</strong> Limita a universalidade devido à limitação orçamentária e vedação ao descontrole inflacionário. Seleciona o que é prioritário.</li>
+        <li><strong>Art. 195 CF:</strong> Regra da Contrapartida (Custeio prévio - § 5º), Noventena (Anterioridade de 90 dias - § 6º) e Vedação de contrato a empresas em débito (CND - § 3º).</li>
+        <li><strong>Gestão Quadripartite:</strong> Governo + Trabalhadores + Empregadores + Aposentados.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container" style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+    <p><strong>Direito Constitucional III — Material de Estudo Autônomo e de Alto Nível</strong></p>
+    <p>&copy; 2026 - Desenvolvido estritamente com base na CF/88 e na jurisprudência consolidada do STF.</p>
+  </div>
+</footer>
+
+<script src="../../portal-core.js"></script>
+</body>
+</html>

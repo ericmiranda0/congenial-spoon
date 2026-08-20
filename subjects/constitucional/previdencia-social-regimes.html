@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previdência Social: Regimes, Regras Constitucionais e Concessões (Arts. 201 e 202 CF) | Direito Constitucional III</title>
+  
+  <!-- Fonts: Heading: Outfit | Body: Lora / Inter | Code/Labels: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Constitutional Emerald */
+    :root {
+      --p-700: #064E3B;
+      --p-600: #065F46;
+      --p-500: #10B981;
+      --p-50: #ECFDF5;
+      --primary: #10B981;
+      --primary-dark: #064E3B;
+      --accent-gold: #D4AF37;
+    }
+    
+    header { background: linear-gradient(135deg, var(--p-700) 0%, #022C22 100%); }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    [data-theme="dark"] .kw {
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 14px 18px;
+      transition: all 0.3s ease;
+    }
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    [data-theme="dark"] .artigo summary {
+      color: #6EE7B7;
+    }
+    .artigo summary::-webkit-details-marker { display: none; }
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.1rem;
+    }
+    .lei-seca {
+      background: rgba(16, 185, 129, 0.04);
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .level-box {
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      border-left: 5px solid;
+    }
+    .level-1 {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1E3A8A;
+    }
+    .level-2 {
+      background: #F0FDF4;
+      border-color: #10B981;
+      color: #064E3B;
+    }
+    .level-3 {
+      background: #FEF2F2;
+      border-color: #EF4444;
+      color: #7F1D1D;
+    }
+    [data-theme="dark"] .level-1 { background: rgba(59, 130, 246, 0.1); color: #93C5FD; }
+    [data-theme="dark"] .level-2 { background: rgba(16, 185, 129, 0.1); color: #A7F3D0; }
+    [data-theme="dark"] .level-3 { background: rgba(239, 68, 68, 0.1); color: #FCA5A5; }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+      .grid2 { grid-template-columns: 1fr; }
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    @media (max-width: 900px) {
+      .grid3 { grid-template-columns: 1fr; }
+    }
+
+    .card-triad {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+    .card-triad:hover { transform: translateY(-4px); }
+    .card-triad.rgps { border-top: 5px solid #10B981; }
+    .card-triad.rpps { border-top: 5px solid #3B82F6; }
+    .card-triad.rpc { border-top: 5px solid #F59E0B; }
+
+    .exam-tip, .pitfall, .doctrine-box, .juris-box, .attention-box, .summary-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+    .exam-tip { background: #FFFBEB; border-color: #FCD34D; color: #78350F; }
+    .pitfall { background: #FEF2F2; border-color: #FCA5A5; color: #7F1D1D; }
+    .doctrine-box { background: #F5F3FF; border-color: #C4B5FD; color: #4C1D95; }
+    .juris-box { background: #ECFEFF; border-color: #67E8F9; color: #164E63; }
+    .attention-box { background: #FFF7ED; border-color: #FDBA74; color: #7C2D12; }
+    .summary-box { background: #ECFDF5; border-color: #6EE7B7; color: #064E3B; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: #FDE68A; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #FCA5A5; }
+    [data-theme="dark"] .doctrine-box { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3); color: #DDD6FE; }
+    [data-theme="dark"] .juris-box { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.3); color: #A5F3FC; }
+    [data-theme="dark"] .attention-box { background: rgba(249, 115, 22, 0.1); border-color: rgba(249, 115, 22, 0.3); color: #FFEDD5; }
+    [data-theme="dark"] .summary-box { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #A7F3D0; }
+
+    .box-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+    .exam-tip .box-badge { background: #F59E0B; color: white; }
+    .pitfall .box-badge { background: #EF4444; color: white; }
+    .doctrine-box .box-badge { background: #8B5CF6; color: white; }
+    .juris-box .box-badge { background: #06B6D4; color: white; }
+    .attention-box .box-badge { background: #F97316; color: white; }
+    .summary-box .box-badge { background: #10B981; color: white; }
+
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+      margin: 30px 0;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 25px;
+      border-left: 3px solid var(--p-500);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--p-500);
+    }
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--p-500);
+      font-size: 0.9rem;
+    }
+
+    .mnemonico-card {
+      background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+      color: #F9FAFB;
+      padding: 25px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mnemonico-letter {
+      color: #10B981;
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+      margin: 25px 0;
+    }
+    .flashcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .flashcard:hover { transform: translateY(-4px); border-color: var(--p-500); }
+
+    table.custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    table.custom-table th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+    table.custom-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<header>
+  <div class="container">
+    <div class="badge">Material Didático · Direito Constitucional III</div>
+    <h1>Previdência Social: Regimes, Regras Constitucionais e Concessões</h1>
+    <div class="subtitle">Guia Acadêmico e Prático Exaustivo dos Artigos 201 e 202 da CF/88 — RGPS, RPPS, Previdência Complementar, Balizas de Custeio e Contagem Recíproca</div>
+    <div class="meta" style="margin-top: 15px;">
+      <span>⚖️ Arts. 40, 201 e 202 da CF/88</span>
+      <span>📚 Leis 8.212/91, 8.213/91 e LCs 108 e 109/2001</span>
+      <span>🎯 Foco em Concursos de Alto Nível &amp; OAB</span>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+    </a>
+    <div class="nav-list">
+      <a href="#objetivos" class="nav-item">Objetivos</a>
+      <a href="#modulo1" class="nav-item">Regimes Previdenciários</a>
+      <a href="#modulo2" class="nav-item">RGPS Comentado (Art. 201)</a>
+      <a href="#modulo3" class="nav-item">Previdência Privada (Art. 202)</a>
+      <a href="#regras-conexao" class="nav-item">Vínculos &amp; Teto</a>
+      <a href="#lei-seca" class="nav-item">Lei Seca</a>
+      <a href="#comparativos" class="nav-item">Quadros</a>
+      <a href="#exercicios" class="nav-item">Revisão Ativa</a>
+      <a href="#mapa" class="nav-item">Mapa Mental</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema Claro/Escuro">
+      <svg width="20" height="20" id="themeIcon"></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <!-- SUMÁRIO INTERATIVO -->
+  <div class="summary-card" id="top">
+    <h2>📋 Sumário Interativo de Navegação</h2>
+    <a href="#objetivos"><span>🎯</span> 1. Objetivos de Aprendizagem</a>
+    <a href="#modulo1"><span>🏛️</span> 2. Módulo 01: Os Três Regimes da Previdência Social (RGPS, RPPS e RPC)</a>
+    <a href="#modulo1-balizas"><span>📊</span> 2.2 Balizas de Contribuição e Equiparação de Limites (Art. 40, § 2º)</a>
+    <a href="#modulo1-subsidiariedade"><span>🔄</span> 2.3 Aplicação Subsidiária do RGPS ao RPPS (Art. 40, § 12)</a>
+    <a href="#modulo2"><span>📖</span> 3. Módulo 02: Análise Detalhada do Art. 201 da CF/88 (RGPS e Regras Gerais)</a>
+    <a href="#modulo3"><span>🤝</span> 4. Módulo 03: Previdência Complementar Privada (Art. 202 da CF/88)</a>
+    <a href="#modulo3-classificacao"><span>🏛️</span> 4.2 Classificação Quadripartite (Pública, Privada, Aberta, Fechada) e Papel do INSS</a>
+    <a href="#regras-conexao"><span>🔄</span> 5. Módulo 04: Regras Práticas de Conexão, Vínculos e Acúmulo de Aposentadorias</a>
+    <a href="#lei-seca"><span>📖</span> 6. Transcrição Interativa da Lei Seca (Arts. 201 e 202 da CF/88)</a>
+    <a href="#comparativos"><span>📊</span> 7. Quadros Comparativos Modernos</a>
+    <a href="#exemplos-3d"><span>💡</span> 8. Exemplos Práticos em 3 Dimensões</a>
+    <a href="#timeline"><span>⏳</span> 9. Linha do Tempo e Evolução Reformista</a>
+    <a href="#mnemonicos"><span>🧠</span> 10. Mnemônicos e Técnicas de Memorização</a>
+    <a href="#exercicios"><span>📝</span> 11. Revisão Ativa (Questões Comentadas)</a>
+    <a href="#flashcards"><span>⚡</span> 12. Flashcards de Fixação Rápida</a>
+    <a href="#mapa"><span>🌳</span> 13. Mapa Mental Hierárquico</a>
+    <a href="#resumo-final"><span>🚀</span> 14. Resumo Ultra Simplificado (Cheat Sheet)</a>
+  </div>
+
+  <!-- ============================== -->
+  <!-- 1. OBJETIVOS DE APRENDIZAGEM -->
+  <!-- ============================== -->
+  <section id="objetivos">
+    <h2>🎯 1. Objetivos de Aprendizagem</h2>
+    <p>Ao concluir a leitura e o estudo deste material didático, o candidato e estudante dominará com perfeição técnica as seguintes competências:</p>
+    <ul>
+      <li>Diferenciar com absoluta segurança os <strong>três regimes previdenciários constitucionais</strong>: RGPS (Art. 201), RPPS (Art. 40) e Previdência Complementar (Art. 202);</li>
+      <li>Compreender o funcionamento da <strong>baliza contributiva (Piso de 1 Salário Mínimo e Teto do RGPS)</strong> e a regra da simetria no cálculo das alíquotas do trabalhador e do servidor;</li>
+      <li>Entender a regra da <strong>Aplicação Subsidiária/Residual do RGPS ao RPPS (Art. 40, § 12 CF)</strong> mediante a analogia da dieta nutricional;</li>
+      <li>Desmistificar o mito de que "concurso público equivale a RPPS", compreendendo exatamente quem se filia ao RGPS (empregados públicos de empresas públicas e sociedades de economia mista, comissionados, políticos, autônomos, celetistas e concursados de municípios sem RPPS);</li>
+      <li>Dominar as características constitutivas do RGPS: <strong>Caráter Contributivo</strong>, <strong>Filiação Obrigatória</strong> e <strong>Equilíbrio Financeiro e Atuarial</strong>;</li>
+      <li>Conhecer a atribuição institucional: o <strong>INSS</strong> é autarquia gestora de benefícios do RGPS, enquanto a <strong>Receita Federal</strong> fiscaliza/arrecada o custeio. <span class="kw">O INSS NÃO fornece Previdência Complementar</span>;</li>
+      <li>Conhecer todas as <strong>contingências e benefícios protegidos pelo Art. 201</strong> (incapacidade, velhice, maternidade, desemprego involuntário/período de graça, salário-família, auxílio-reclusão para baixa renda e pensão por morte);</li>
+      <li>Analisar o <strong>Sistema Especial de Inclusão Previdenciária de Baixa Renda (alíquota de 5%)</strong> (§§ 12 e 13) e a <strong>Contagem Recíproca com Compensação Financeira</strong> entre regimes (§§ 9º e 9º-A);</li>
+      <li>Compreender a <strong>Previdência Complementar (Art. 202)</strong> e sua classificação quadripartite: Pública vs. Privada e Aberta (EAPC / Bancos / Qualquer pessoa) vs. Fechada (EFPC / Fundos de Pensão / Grupo restrito), bem como o teto do aporte público patrocinador (paridade 1:1 - § 3º);</li>
+      <li>Aplicar as duas Regras de Ouro: <em>"Cada atividade laboral gera um vínculo"</em> e <em>"Só é possível UMA única aposentadoria por regime previdenciário"</em>.</li>
+    </ul>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 2. MÓDULO 01: REGIMES PREVIDENCIÁRIOS -->
+  <!-- ============================== -->
+  <section id="modulo1" class="section">
+    <div class="section-label">Módulo 01</div>
+    <h2>Os Três Regimes da Previdência Social no Brasil</h2>
+
+    <p>O ordenamento jurídico brasileiro estruturou a Previdência Social em <strong>três regimes distintos</strong>, com naturezas jurídicas, públicos-alvo e formas de financiamento bem delimitados:</p>
+
+    <div class="grid3">
+      <div class="card-triad rgps">
+        <h3>🏢 1. Regime Geral (RGPS)</h3>
+        <p><strong>Fundamento:</strong> Art. 201 da CF/88.</p>
+        <p><strong>Natureza:</strong> Público, contributivo e de filiação obrigatória.</p>
+        <p><strong>Público:</strong> Trabalhadores da iniciativa privada (CLT), autônomos, empregados públicos (empresas públicas / sociedades de economia mista), comissionados e estatutários de entes sem RPPS.</p>
+        <p><strong>Gestão:</strong> Administrado pelo <strong>INSS</strong> (Autarquia / Entidade) e custeio arrecadado pela <strong>Receita Federal</strong> (Órgão da União).</p>
+      </div>
+
+      <div class="card-triad rpps">
+        <h3>🏛️ 2. Regime Próprio (RPPS)</h3>
+        <p><strong>Fundamento:</strong> Art. 40 da CF/88.</p>
+        <p><strong>Natureza:</strong> Público, contributivo e solidário.</p>
+        <p><strong>Público:</strong> Servidores públicos estatutários titulares de <strong>cargo efetivo</strong> na Administração Direta, Autárquica e Fundacional de Direito Público.</p>
+        <p><strong>Requisito:</strong> O ente federativo (União, Estado, DF ou Município) precisa ter instituído seu próprio RPPS por lei.</p>
+      </div>
+
+      <div class="card-triad rpc">
+        <h3>🤝 3. Regime Complementar (RPC)</h3>
+        <p><strong>Fundamento:</strong> Art. 202 da CF/88.</p>
+        <p><strong>Natureza:</strong> Privado/Autônomo e de filiação <span class="kw">ESTRITAMENTE FACULTATIVA</span>.</p>
+        <p><strong>Público:</strong> Quem deseja suplementar sua renda futura para além do teto do RGPS/RPPS.</p>
+        <p><strong>Sistema:</strong> Capitalização (reservas financeiras individuais/coletivas).</p>
+      </div>
+    </div>
+
+    <h3>2.1 Explicação em 3 Níveis: A Estrutura dos Regimes</h3>
+
+    <div class="level-box level-1">
+      <strong>🌱 Nível 1 — Leigo / Linguagem Direta:</strong>
+      <p>Pense na previdência como três "caixas de aposentadoria" diferentes. A primeira caixa (RGPS) é para a imensa maioria dos trabalhadores (quem tem carteira assinada, trabalha por conta ou é funcionário de empresas como Banco do Brasil e Petrobras). A segunda caixa (RPPS) é guardada exclusivamente para quem passou em concurso público para um cargo efetivo de juiz, professor de universidade ou auditor, onde o Governo tem seu próprio sistema. A terceira caixa (Previdência Complementar) é opcional: é um plano de previdência privada onde você só coloca dinheiro se quiser garantir uma renda maior no futuro para não depender apenas do teto da aposentadoria pública.</p>
+    </div>
+
+    <div class="level-box level-2">
+      <strong>🎓 Nível 2 — Graduação / Dogmática Técnica:</strong>
+      <p>O sistema previdenciário constitucional é norteado pela dicotomia entre previdência pública obrigatória e previdência privada facultativa. O RGPS (Art. 201) atua como regime residual e universal de proteção aos trabalhadores sob regime privado. O RPPS (Art. 40) vincula estritamente os servidores públicos estatutários de provimento efetivo, exigindo lei do ente federado instituidor e respeitando os tetos e sub-tetos remuneratórios. Já a Previdência Complementar (Art. 202) é regida pelo Direito Privado, de caráter voluntário, operando por regime de capitalização atuarial autônomo sem vinculação ao contrato de trabalho (§ 2º).</p>
+    </div>
+
+    <div class="level-box level-3">
+      <strong>⚖️ Nível 3 — Concursos de Alto Nível / Prática Avançada:</strong>
+      <p>A Emenda Constitucional 103/2019 promoveu uma profunda convergência principiológica entre o RPPS e o RGPS. O Art. 40, § 2º fixou que os proventos de aposentadoria do RPPS não podem ser inferiores ao piso do RGPS (salário mínimo) nem superiores ao limite máximo (teto) do RGPS. Para que um servidor do RPPS perceba proventos acima do teto do RGPS, o ente federativo deve compulsoriamente instituir seu Regime de Previdência Complementar (Art. 40, §§ 14 a 16). Além disso, o Art. 40, § 12 determina a <strong>aplicação residual/subsidiária imperativa das regras do RGPS ao RPPS</strong> no que couber.</p>
+    </div>
+
+    <!-- SEÇÃO DEDICADA 2.2: BALIZAS DE CONTRIBUIÇÃO -->
+    <h3 id="modulo1-balizas">2.2 Balizas de Contribuição e Equiparação de Limites (Art. 40, § 2º CF)</h3>
+    <p>Por força da Emenda Constitucional 103/2019 e do Art. 40, § 2º da CF/88, os limites financeiros de contribuição e de concessão de benefícios do RPPS foram <strong>rigorosamente equiparados aos limites do RGPS</strong>. Essa baliza orçamentária opera entre dois limites extremos:</p>
+
+    <div class="grid2">
+      <div class="card-triad rgps">
+        <h4>🔻 Limite Mínimo (Piso de 1 Salário Mínimo)</h4>
+        <p>Nenhuma contribuição e nenhum benefício que substitua o salário de contribuição (aposentadoria, auxílio por incapacidade temporária, pensão por morte) pode ter valor inferior a <strong>1 (um) salário mínimo</strong> (Art. 201, § 2º). Se em um determinado mês o trabalhador auferir renda inferior ao salário mínimo (ex: trabalho parcial/intermitente), ele deve efetuar o recolhimento complementar para que o mês seja computado para carência e tempo de aposentadoria.</p>
+      </div>
+      <div class="card-triad rpps">
+        <h4>🔺 Limite Máximo (Teto Constitucional do RGPS)</h4>
+        <p>A base de cálculo da contribuição do trabalhador/servidor e o valor do benefício público pago pelo RGPS/RPPS são limitados ao <strong>teto máximo da previdência social</strong> (atualizado anualmente). Se um profissional ganha R$ 20.000,00 ou R$ 500.000,00 mensais (como no exemplo didático do apresentador de TV / Faustão), a alíquota de contribuição previdenciária incidirá <strong>stricto sensu apenas até o teto estipulado</strong> (ex: R$ 8.000,00).</p>
+      </div>
+    </div>
+
+    <div class="exam-tip">
+      <span class="box-badge">💡 A Razão Jurídica do Teto de Contribuição</span>
+      <strong>Por que a contribuição do trabalhador não incide sobre todo o salário super-alto?</strong><br>
+      A sistemática atuarial fundamenta-se no <em>Princípio da Simetria e da Equidade no Custeio</em>: como o benefício máximo que a Previdência Social pública (RGPS ou RPPS) pagará na aposentadoria está travado no teto constitucional (ex: R$ 8.000,00), a base de cálculo da contribuição obrigatória do trabalhador também fica limitada a esse exato teto. Ele não pode ser compelido a pagar contribuição previdenciária pública obrigatória sobre a parcela de renda (ex: R$ 492.000,00) que o sistema estatal jamais lhe devolverá na aposentadoria!<br>
+      <em>Atenção:</em> Esta limitação de teto refere-se à contribuição do trabalhador/servidor. A contribuição patronal das empresas sobre a folha salarial obedece a regras fiscais específicas do Art. 195, I, sem o teto do RGPS.
+    </div>
+
+    <!-- SEÇÃO DEDICADA 2.3: SUBSIDIARIEDADE DO RGPS NO RPPS -->
+    <h3 id="modulo1-subsidiariedade">2.3 Aplicação Subsidiária/Residual das Regras do RGPS ao RPPS (Art. 40, § 12 CF)</h3>
+    <p>O Artigo 40, § 12 da Constituição Federal estabelece que: <em>"Além do disposto neste artigo, serão aplicados ao regime próprio de previdência social, no que couber, os requisitos e critérios estabelecidos para o Regime Geral de Previdência Social."</em></p>
+
+    <div class="doctrine-box">
+      <span class="box-badge">📚 Entendendo a Subsidiariedade (A Analogia da Dieta)</span>
+      <strong>Como funciona a aplicação subsidiária na prática?</strong><br>
+      Imagine uma pessoa que recebeu uma nova dieta nutricional personalizada para seu regime de treino (o RPPS). O médico orienta: <em>"Siga as regras da sua nova dieta. Contudo, se o cardápio do jantar estiver omisso na nova dieta, você pode consultar o cardápio da sua dieta antiga geral (o RGPS) e repetir a janta, desde que o alimento seja compatível e não lhe cause alergia."</em><br>
+      Na Previdência Social ocorre exatamente o mesmo:
+      <ol>
+        <li>O gestor do RPPS deve verificar primeiro se o estatuto do regime próprio do ente público possui regra específica para o caso.</li>
+        <li>Se houver **omissão ou lacuna normativa** no RPPS, recorre-se subsidiariamente (residualmente) à regra correspondente prevista no RGPS.</li>
+        <li>A regra do RGPS só será aplicada no RPPS se for **compatível** com o regime jurídico estatutário ("no que couber"). Se for incompatível com o serviço público, a norma não é importada.</li>
+      </ol>
+    </div>
+
+    <div class="pitfall">
+      <span class="box-badge">⚠️ Desmistificando a Pegadinha: "Concurso = RPPS?"</span>
+      <strong>Cuidado Absoluto em Provas:</strong> Ser aprovado em concurso público <strong>NÃO SIGNIFICA</strong> estar no RPPS! 
+      <ul>
+        <li>Concursados de Empresas Públicas e Sociedades de Economia Mista (ex: Caixa Econômica, Banco do Brasil, Petrobras, Correios) possuem <em>emprego público</em> (CLT) \(\rightarrow\) <strong>Filiam-se ao RGPS</strong>.</li>
+        <li>Cargos exclusivamente em comissão e agentes políticos (ex: vereadores, prefeitos) \(\rightarrow\) <strong>Filiam-se ao RGPS</strong> (Art. 40, § 13).</li>
+        <li>Servidores estatutários efetivos de Municípios que <em>não</em> instituíram RPPS por lei \(\rightarrow\) <strong>Filiam-se ao RGPS</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 3. MÓDULO 02: RGPS COMENTADO -->
+  <!-- ============================== -->
+  <section id="modulo2" class="section">
+    <div class="section-label">Módulo 02</div>
+    <h2>Análise Detalhada do Artigo 201 da CF/88 (RGPS)</h2>
+
+    <p>O Artigo 201 da CF/88 estabelece o núcleo normativo do <strong>Regime Geral de Previdência Social (RGPS)</strong>, fundamentado em três pilares fundamentais: <strong>Caráter Contributivo</strong>, <strong>Filiação Obrigatória</strong> e <strong>Equilíbrio Financeiro e Atuarial</strong>.</p>
+
+    <h3>3.1 Estrutura Institucional: INSS vs. Receita Federal</h3>
+    <div class="grid2">
+      <div class="level-box level-2">
+        <strong>🏛️ INSS (Instituto Nacional do Seguro Social) — ENTIDADE / AUTARQUIA:</strong>
+        <p>Possui personalidade jurídica própria de Direito Público, autonomia administrativa e financeira. Incumbe ao INSS a **gestão operacional dos benefícios e serviços previdenciários** (concessão de aposentadorias, auxílios, perícia médica e atendimento ao segurado).</p>
+      </div>
+      <div class="level-box level-1">
+        <strong>🏢 RECEITA FEDERAL DO BRASIL — ÓRGÃO DA UNIÃO:</strong>
+        <p>Não possui personalidade jurídica própria (integra a administração direta da União). Incumbe à Receita Federal a **arrecadação, fiscalização, cobrança e normatização tributária das contribuições sociais** destinadas ao custeio da previdência social (Lei 11.457/2007).</p>
+      </div>
+    </div>
+
+    <h3>3.2 Contingências Protegidas e Benefícios Expressos (Art. 201, I a V)</h3>
+    <p>O texto constitucional divide a cobertura em contingências sociais protegidas e indicação expressa de benefícios:</p>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Inciso (Art. 201)</th>
+          <th>Tipo de Cobertura</th>
+          <th>Detalhamento e Nuances Didáticas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Inciso I</strong></td>
+          <td>Contingência: Incapacidade temporária/permanente e Idade avançada</td>
+          <td>Garante o antigo auxílio-doença (incapacidade temporária), aposentadoria por invalidez (incapacidade permanente) e aposentadoria por idade.</td>
+        </tr>
+        <tr>
+          <td><strong>Inciso II</strong></td>
+          <td>Contingência: Proteção à maternidade (gestante)</td>
+          <td>O foco constitucional é a <strong>proteção à criança e ao recém-nascido</strong>. Por isso, a jurisprudência e a lei admitem o pagamento de salário-maternidade ao pai em hipóteses de falecimento da mãe no parto ou adoção.</td>
+        </tr>
+        <tr>
+          <td><strong>Inciso III</strong></td>
+          <td>Contingência: Desemprego involuntário</td>
+          <td><em>Atenção:</em> O seguro-desemprego não é benefício previdenciário direto do RGPS (é custeado pelo FAT - Art. 239). O Inciso III garante o <strong>Período de Graça</strong> (manutenção da qualidade de segurado sem contribuir por 12 a 36 meses).</td>
+        </tr>
+        <tr>
+          <td><strong>Inciso IV</strong></td>
+          <td>Benefício: Salário-família e Auxílio-reclusão</td>
+          <td>Benefícios previstos expressamente <strong>APENAS para os dependentes dos segurados de baixa renda</strong> (critério aferido pela renda do segurado preso/trabalhador, e não dos dependentes - STF RE 587.365).</td>
+        </tr>
+        <tr>
+          <td><strong>Inciso V</strong></td>
+          <td>Benefício: Pensão por morte</td>
+          <td>Devida aos dependentes do segurado (homem ou mulher), estendida ao cônjuge, companheiro(a) ou companheiro de união estável homoafetiva.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3.3 Análise dos Parágrafos do Art. 201 (Dispositivos Críticos de Prova)</h3>
+
+    <div class="doctrine-box">
+      <span class="box-badge">📚 1. Regra Geral de Vedação de Critérios Diferenciados (§ 1º)</span>
+      É proibido criar regras de aposentadoria diferenciadas por categoria ou profissão. <strong>Exceções Constitucionais autorizadas via Lei Complementar:</strong>
+      <ul>
+        <li><strong>Pessoas com Deficiência (PCD):</strong> Submetidas a prévia avaliação biopsicossocial multiprofissional.</li>
+        <li><strong>Agentes Nocivos:</strong> Atividades exercidas sob efetiva exposição a agentes químicos, físicos e biológicos prejudiciais à saúde (vedada a caracterização por simples categoria profissional ou ocupação).</li>
+      </ul>
+    </div>
+
+    <div class="exam-tip">
+      <span class="box-badge">💡 2. Piso do Salário Mínimo (§ 2º)</span>
+      Nenhum benefício que <strong>substitua o salário de contribuição ou rendimento do trabalho</strong> (ex: aposentadorias, auxílio por incapacidade temporária, pensão por morte) pode ter valor mensal inferior ao salário mínimo.<br>
+      <em>Cuidado:</em> Benefícios que não substituem renda (ex: salário-família ou auxílio-acidente que tem caráter indenizatório) podem ter valor inferior ao salário mínimo. Além disso, descontos legais ou consignados que reduzam a parcela líquida recebida não violam o § 2º.
+    </div>
+
+    <div class="juris-box">
+      <span class="box-badge">⚖️ 3. Irredutibilidade Real e Reajustamento (§ 4º)</span>
+      Enquanto a Seguridade Social em geral garante a irredutibilidade <em>nominal</em> (Art. 194, IV), a Previdência Social garante expressamente a <strong>Irredutibilidade REAL</strong> (§ 4º), assegurando reajustes periódicos definidos em lei para preservar o poder de compra contra os efeitos corrosivos da inflação.
+    </div>
+
+    <div class="attention-box">
+      <span class="box-badge">📝 4. Vedação de Segurado Facultativo para Participante de RPPS (§ 5º)</span>
+      O participante de RPPS <strong>NÃO pode se filiar ao RGPS como segurado facultativo</strong> por conta daquela mesma atividade. Se o servidor quiser contribuir para o RGPS, precisará exercer uma segunda atividade laboral real na iniciativa privada como segurado obrigatório (ex: advogado ou professor privado nas horas vagas).
+    </div>
+
+    <h3>3.4 Contagem Recíproca e Compensação Financeira (§§ 9º e 9º-A)</h3>
+    <p>A <strong>Contagem Recíproca</strong> é o direito constitucional do trabalhador de somar os tempos de contribuição prestados no RGPS, no RPPS e no Serviço Militar para fins de concessão de uma única aposentadoria.</p>
+
+    <div class="level-box level-2">
+      <strong>🔄 Como funciona a Compensação Financeira entre os Regimes?</strong>
+      <p>Se João trabalhou 10 anos recolhendo para o RGPS (INSS) e depois trabalhou 15 anos como servidor efetivo no RPPS da União, ele pode levar a sua Certidão de Tempo de Contribuição (CTC) do RGPS para o RPPS. O RPPS concederá a aposentadoria unificada. Contudo, para evitar prejuízo atuarial, o RGPS (regime de origem) deverá fazer a <strong>compensação financeira</strong> repassando ao RPPS (regime de destino) o montante das contribuições arrecadadas no período anterior.</p>
+    </div>
+
+    <div class="pitfall">
+      <span class="box-badge">⚠️ Proibição de Tempo Fictício (§ 14)</span>
+      É expressamente vedada no Brasil a contagem de <strong>tempo de contribuição fictício</strong> (isto é, tempo sem efetiva contribuição ou sem prestação real de serviço averbada por lei). Exemplo: lei ordinária que conceda 2 anos de contribuição fictícia para cada ano trabalhado é inconstitucional.
+    </div>
+
+    <h3>3.5 Sistema Especial de Inclusão Previdenciária (§§ 12 e 13)</h3>
+    <p>Criado para promover a justiça social e retirar da informalidade a população vulnerável. O sistema estabelece alíquotas diferenciadas e reduzidas de contribuição (atualmente <strong>5% do salário mínimo</strong>) para:</p>
+    <ul>
+      <li>Trabalhadores informais de baixa renda;</li>
+      <li>Pessoas sem renda própria que se dediquem exclusivamente ao trabalho doméstico no âmbito de sua residência (dona de casa), desde que pertencentes a famílias de baixa renda inscritas no CadÚnico.</li>
+    </ul>
+    <p><em>Contrapartida:</em> Os benefícios concedidos por este sistema especial terão valor estritamente limitado ao <strong>piso de 1 (um) salário mínimo</strong> (§ 13).</p>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 4. MÓDULO 03: PREVIDÊNCIA COMPLEMENTAR -->
+  <!-- ============================== -->
+  <section id="modulo3" class="section">
+    <div class="section-label">Módulo 03</div>
+    <h2>Previdência Complementar Privada (Artigo 202 da CF/88)</h2>
+
+    <p>O Art. 202 da CF/88 disciplina o <strong>Regime de Previdência Complementar (RPC)</strong>. Trata-se de um sistema autônomo, faculdade individual do trabalhador, operado por entidades públicas ou privadas sob o regime de capitalização.</p>
+
+    <div class="attention-box" style="background:#EFF6FF; border-color:#3B82F6; color:#1E3A8A;">
+      <span class="box-badge" style="background:#3B82F6; color:white;">⚠️ O INSS NÃO Fornece Previdência Complementar!</span>
+      <strong>Clarificação Categórica para Concursos:</strong> O INSS é uma autarquia pública que administra <em>exclusivamente</em> o regime básico obrigatório (RGPS). <strong>O INSS NUNCA opera, fornece ou vende planos de previdência complementar.</strong> A fiscalização da previdência privada cabe à <strong>PREVIC</strong> (para entidades fechadas/fundos de pensão) e à <strong>SUSEP</strong> (para entidades abertas/seguradoras bancárias).
+    </div>
+
+    <h3>4.1 O "Gargalo" do Teto e a Solução Facultativa</h3>
+    <p>Se um profissional aufere remuneração de R$ 16.000,00 (ex: Analista do TRT / Promotor) ou R$ 500.000,00 (ex: apresentador de TV / executivo), a sua contribuição previdenciária obrigatória e o seu benefício básico no RGPS/RPPS estarão limitados ao teto (ex: R$ 8.000,00). Ao se aposentar, ele sofrerá uma queda abrupta em seu padrão de vida.<br>
+    O Regime Complementar surge exatamente para preencher essa lacuna: o trabalhador decide facultativamente investir sobre a parcela excedente de sua renda (ex: contribuindo sobre os R$ 8.000,00 que excedem o teto) para obter um **segundo benefício complementar** quando se inativar.</p>
+
+    <!-- SEÇÃO DEDICADA 4.2: CLASSIFICAÇÃO QUADRIPARTITE DA PREVIDÊNCIA PRIVADA -->
+    <h3 id="modulo3-classificacao">4.2 Classificação Quadripartite da Previdência Complementar</h3>
+    <p>A previdência privada complementar desdobra-se em quatro classificações fundamentais cruzadas:</p>
+
+    <div class="grid2">
+      <div class="card-triad rpc">
+        <h4>1. Pública vs. Privada</h4>
+        <p><strong>Pública:</strong> Destinada a servidores públicos participantes de RPPS (ex: Funpresp - Fundação de Previdência Complementar do Servidor Público Federal).<br>
+        <strong>Privada:</strong> Destinada aos trabalhadores da iniciativa privada (RGPS).</p>
+      </div>
+
+      <div class="card-triad rpc">
+        <h4>2. Aberta (EAPC) vs. Fechada (EFPC / Fundo de Pensão)</h4>
+        <p><strong>Aberta (EAPC):</strong> Entidades abertas lucrativas (operadas por bancos/seguradoras - PGBL/VGBL). Qualquer pessoa física pode contratar, <span class="kw">mesmo sem exercer atividade laboral</span> (ex: estudante, herdeiro, dona de casa).<br>
+        <strong>Fechada (EFPC):</strong> Entidades sem fins lucrativos (Fundos de Pensão). Destinadas exclusivamente a um <span class="kw">grupo restrito de participantes</span> (servidores de um órgão específico, empregados de uma empresa ou membros de uma associação profissional).</p>
+      </div>
+    </div>
+
+    <h3>4.3 Proteções Constitucionais da Previdência Complementar (§§ 1º a 6º)</h3>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Parágrafo (Art. 202)</th>
+          <th>Regra Constitucional</th>
+          <th>Aplicação Prática e Interpretação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>§ 1º</strong></td>
+          <td>Direito à Informação e Transparência</td>
+          <td>As entidades de previdência privada devem garantir aos participantes acesso pleno a todas as informações de gestão e relatórios atuariais do plano.</td>
+        </tr>
+        <tr>
+          <td><strong>§ 2º</strong></td>
+          <td>Não Integração ao Contrato de Trabalho e Salário</td>
+          <td>As contribuições do empregador/patrocinador ao plano de previdência complementar <strong>NÃO integram o contrato de trabalho nem a remuneração</strong> dos trabalhadores para fins trabalhistas ou previdenciários.</td>
+        </tr>
+        <tr>
+          <td><strong>§ 3º</strong></td>
+          <td>Vedação de Aporte Público Desproporcional</td>
+          <td>O Poder Público (União, Estados, DF, Municípios) só pode repassar dinheiro a entidades privadas como <strong>patrocinador</strong> de plano de seus servidores, e sua contribuição normal <span class="kw">NUNCA poderá exceder a contribuição do próprio segurado</span> (paridade 1:1).</td>
+        </tr>
+        <tr>
+          <td><strong>§ 6º</strong></td>
+          <td>Gestão Colegiada e Requisitos dos Dirigentes</td>
+          <td>Exige lei complementar fixando requisitos técnicos de qualificação para os diretores dos fundos de pensão públicos e garantindo a participação paritária dos beneficiários nas instâncias deliberativas.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 5. MÓDULO 04: REGRAS PRÁTICAS DE VÍNCULOS -->
+  <!-- ============================== -->
+  <section id="regras-conexao" class="section">
+    <div class="section-label">Módulo 04</div>
+    <h2>Regras Práticas de Conexão, Vínculos e Acúmulo de Aposentadorias</h2>
+
+    <p>Para resolver casos práticos de concursos e da advocacia, o estudante deve aplicar <strong>duas Regras de Ouro inafastáveis</strong>:</p>
+
+    <div class="mnemonico-card">
+      <h3>📌 REGRA DE OURO 01: "Cada atividade laboral gera um vínculo previdenciário específico."</h3>
+      <p>Se o indivíduo exerce três atividades profissionais distintas permitidas por lei, ele terá três vínculos previdenciários paralelos (recolhendo contribuições em cada um deles).</p>
+    </div>
+
+    <div class="mnemonico-card">
+      <h3>📌 REGRA DE OURO 02: "Só é possível UMA única aposentadoria por regime previdenciário."</h3>
+      <p>Você <strong>NUNCA</strong> poderá se aposentar duas vezes dentro do mesmo regime (ex: duas aposentadorias no RGPS). Para acumular aposentadorias de forma lícita, elas devem provir de <strong>regimes previdenciários DIFERENTES</strong> ou de RPPS distintos decorrentes da acumulação constitucional de cargos (Art. 37, XVI CF).</p>
+    </div>
+
+    <h3>5.1 Estudo de Caso Prático: Acúmulo Triplo de Aposentadorias</h3>
+    <div class="doctrine-box">
+      <span class="box-badge">📚 Exemplo Prático de Acúmulo Lícito</span>
+      Considere o caso do Professor João:
+      <ul>
+        <li><strong>Vínculo 1 (RGPS):</strong> Leciona de carteira assinada em uma faculdade privada à noite \(\rightarrow\) Aposenta-se pelo RGPS (INSS).</li>
+        <li><strong>Vínculo 2 (RPPS Estadual):</strong> Aprovado em concurso público como Professor de História da Universidade Estadual \(\rightarrow\) Aposenta-se pelo RPPS do Estado.</li>
+        <li><strong>Vínculo 3 (RPPS Federal):</strong> Aprovado em concurso como Professor da Universidade Federal (UFC) em horário compatível \(\rightarrow\) Aposenta-se pelo RPPS da União.</li>
+      </ul>
+      <em>Conclusão Jurídica:</em> João receberá <strong>três aposentadorias de forma 100% legal</strong>, pois provêm de três vínculos de atividades acumuláveis (Art. 37, XVI, "a") pertencentes a regimes previdenciários distintos (um RGPS, um RPPS Estadual e um RPPS Federal)! Se ele ainda contratar um plano de previdência complementar privada, terá uma 4ª fonte de renda.
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 6. LEI SECA INTERATIVA -->
+  <!-- ============================== -->
+  <section id="lei-seca" class="section">
+    <h2>📖 Transcrição Interativa da Lei Seca (CF/88)</h2>
+    <p>Clique para expandir o texto constitucional integral dos Arts. 201 e 202 com palavras-chave destacadas:</p>
+
+    <details class="artigo">
+      <summary>Art. 201 da CF/88 — Regime Geral de Previdência Social (RGPS)</summary>
+      <div class="lei-seca">
+        <p><strong>Art. 201.</strong> A previdência social será organizada sob a forma do <span class="kw">Regime Geral de Previdência Social</span>, de <span class="kw">caráter contributivo e de filiação obrigatória</span>, observados critérios que preservem o <span class="kw">equilíbrio financeiro e atuarial</span>, e atenderá, na forma da lei, a:</p>
+        <p>I - cobertura de eventos de <span class="kw">incapacidade temporária ou permanente</span> para o trabalho e <span class="kw">idade avançada</span>;</p>
+        <p>II - <span class="kw">proteção à maternidade</span>, especialmente à gestante;</p>
+        <p>III - proteção ao trabalhador em situação de <span class="kw">desemprego involuntário</span>;</p>
+        <p>IV - <span class="kw">salário-família e auxílio-reclusão</span> aos dependentes dos segurados de <span class="kw">baixa renda</span>;</p>
+        <p>V - <span class="kw">pensão por morte</span> do segurado, homem ou mulher, ao cônjuge ou companheiro e dependentes [...]</p>
+        <p><strong>§ 1º</strong> É vedada a adoção de requisitos ou critérios diferenciados [...] ressalvada, nos termos de <span class="kw">lei complementar</span>, a possibilidade de previsão de idade e tempo de contribuição diferentes [...] para segurados: I - com deficiência [...] II - cujas atividades sejam exercidas sob exposição a agentes químicos, físicos e biológicos [...]</p>
+        <p><strong>§ 2º</strong> Nenhum benefício que substitua o salário de contribuição [...] terá valor mensal <span class="kw">inferior ao salário mínimo</span>.</p>
+        <p><strong>§ 4º</strong> É assegurado o reajustamento dos benefícios para preservar-lhes, em caráter permanente, o <span class="kw">valor real</span> [...]</p>
+        <p><strong>§ 5º</strong> É vedada a filiação ao RGPS, na qualidade de segurado facultativo, de pessoa participante de regime próprio [...]</p>
+        <p><strong>§ 9º</strong> Para fins de aposentadoria, será assegurada a <span class="kw">contagem recíproca</span> do tempo de contribuição entre o RGPS e os RPPS [...] com compensação financeira.</p>
+        <p><strong>§ 12.</strong> A lei instituirá sistema especial de inclusão previdenciária, com <span class="kw">alíquotas diferenciadas (5%)</span>, para atender trabalhadores de baixa renda e aqueles sem renda própria dedicados ao trabalho doméstico (CadÚnico).</p>
+      </div>
+    </details>
+
+    <details class="artigo">
+      <summary>Art. 202 da CF/88 — Previdência Complementar Privada</summary>
+      <div class="lei-seca">
+        <p><strong>Art. 202.</strong> O regime de previdência privada, de <span class="kw">caráter complementar</span> e organizado de forma autônoma em relação ao RGPS, será <span class="kw">facultativo</span>, baseado na constituição de reservas [...] e regulado por <span class="kw">lei complementar</span>.</p>
+        <p><strong>§ 1º</strong> A lei complementar [...] garantirá aos participantes o pleno acesso às informações relativas à gestão de seus planos.</p>
+        <p><strong>§ 2º</strong> As contribuições do empregador [...] <span class="kw">não integram o contrato de trabalho</span> dos participantes, assim como não integram a remuneração [...]</p>
+        <p><strong>§ 3º</strong> É vedado o aporte de recursos a entidade de previdência privada pelos entes públicos [...] salvo na qualidade de patrocinador, situação na qual sua contribuição normal <span class="kw">não poderá ultrapassar a do segurado</span>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 7. QUADROS COMPARATIVOS MODERNOS -->
+  <!-- ============================== -->
+  <section id="comparativos" class="section">
+    <h2>📊 Quadros Comparativos Modernos</h2>
+
+    <h3>1. Comparativo Geral dos Três Regimes Previdenciários</h3>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Critério de Análise</th>
+          <th>RGPS (Art. 201 CF)</th>
+          <th>RPPS (Art. 40 CF)</th>
+          <th>RPC (Art. 202 CF)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Filiação / Adesão</strong></td>
+          <td>Obrigatória por lei</td>
+          <td>Obrigatória por lei</td>
+          <td><span class="kw">Estritamente Facultativa</span></td>
+        </tr>
+        <tr>
+          <td><strong>Público Alvo</strong></td>
+          <td>Trabalhadores CLT, autônomos e empregados públicos</td>
+          <td>Servidores estatutários de cargo efetivo</td>
+          <td>Qualquer pessoa (Aberto) ou grupo restrito (Fechado)</td>
+        </tr>
+        <tr>
+          <td><strong>Piso e Teto</strong></td>
+          <td>Piso de 1 Salário Mínimo / Teto Constitucional</td>
+          <td>Equiparado ao Piso e Teto do RGPS (Art. 40, § 2º)</td>
+          <td>Sem teto legal (definido pelo plano contratado)</td>
+        </tr>
+        <tr>
+          <td><strong>Entidade Gestora / Órgão</strong></td>
+          <td>INSS (Benefícios) + Receita Federal (Custeio)</td>
+          <td>Unidade Gestora do RPPS de cada ente público</td>
+          <td>PREVIC (Fechados/Fundos) e SUSEP (Abertos/Bancos)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2. Comparativo: Entidades Abertas (EAPC) vs. Entidades Fechadas (EFPC / Fundos)</h3>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Entidades Abertas (EAPC / PGBL - VGBL)</th>
+          <th>Entidades Fechadas (EFPC / Fundos de Pensão)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Natureza Jurídica</strong></td>
+          <td>Sociedades anônimas comerciais com fins lucrativos</td>
+          <td>Fundações sem fins lucrativos (Fundos de Pensão)</td>
+        </tr>
+        <tr>
+          <td><strong>Quem pode contratar?</strong></td>
+          <td><span class="kw">Qualquer pessoa física</span> (mesmo sem trabalhar)</td>
+          <td>Exclusivamente participantes de um grupo/patrocinador específico</td>
+        </tr>
+        <tr>
+          <td><strong>Órgão Fiscalizador</strong></td>
+          <td>SUSEP (Superintendência de Seguros Privados)</td>
+          <td>PREVIC (Superintendência Nacional de Previdência Complementar)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 8. EXEMPLOS PRÁTICOS EM 3D -->
+  <!-- ============================== -->
+  <section id="exemplos-3d" class="section">
+    <h2>💡 Exemplos Práticos em 3 Dimensões</h2>
+
+    <div class="grid3">
+      <div class="card-triad rgps">
+        <h4>🏡 1. Cotidiano</h4>
+        <p>Um executivo que ganha R$ 50.000,00 por mês no setor privado tem sua contribuição ao INSS travada no teto de R$ 8.000,00. Ele decide contratar um plano VGBL em seu banco para receber R$ 30.000,00 adicionais na aposentadoria. Aplicação da <strong>Previdência Complementar Aberta (Art. 202 CF)</strong>.</p>
+      </div>
+
+      <div class="card-triad rpps">
+        <h4>⚖️ 2. Jurídico Formal</h4>
+        <p>Servidor ocupante de cargo efetivo tenta se filiar ao RGPS como segurado facultativo para obter aposentadoria dupla sem exercer outra atividade. O INSS indefere com base no <strong>Art. 201, § 5º da CF/88</strong>.</p>
+      </div>
+
+      <div class="card-triad rpc">
+        <h4>📝 3. Prova de Concurso</h4>
+        <p>Questão pergunta se o Estado pode contribuir com 70% do plano de previdência complementar de seus servidores, enquanto estes pagam 30%. Resposta: Inconstitucional por violar a <strong>paridade do Art. 202, § 3º</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 9. LINHA DO TEMPO REFORMISTA -->
+  <!-- ============================== -->
+  <section id="timeline" class="section">
+    <h2>⏳ Linha do Tempo das Reformas no Art. 201 e 202</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">1998 — Emenda Constitucional nº 20/98</div>
+        <p>Primeira grande reforma previdenciária. Fixou o caráter contributivo e atuarial, instituiu o sistema de previdência complementar e introduziu a regra de não integração trabalhista (Art. 202, § 2º).</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2008 — Lei Complementar 123/2006 &amp; EC 41/03</div>
+        <p>Criação do Sistema Simplificado de Inclusão Previdenciária de Baixa Renda e consolidação da previdência complementar dos servidores públicos (Funpresp).</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2019 — Emenda Constitucional nº 103/2019</div>
+        <p>Reforma da Previdência: alterou idades mínimas (65H / 62M no RGPS), extinguiu a aposentadoria por tempo de contribuição pura, vedou a contagem de tempo fictício (§ 14), equiparou os limites do RPPS ao RGPS (Art. 40, § 2º) e impôs a instituição de RPC a todos os entes federados com RPPS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 10. MNEMÔNICOS DE FIXAÇÃO -->
+  <!-- ============================== -->
+  <section id="mnemonicos" class="section">
+    <h2>🧠 Mnemônicos e Técnicas de Memorização</h2>
+
+    <div class="mnemonico-card">
+      <h3>🛡️ Mnemônico 01: PILARES DO RGPS = C.F.E.</h3>
+      <p><span class="mnemonico-letter">C</span> - Caráter Contributivo</p>
+      <p><span class="mnemonico-letter">F</span> - Filiação Obrigatória</p>
+      <p><span class="mnemonico-letter">E</span> - Equilíbrio Financeiro e Atuarial</p>
+    </div>
+
+    <div class="mnemonico-card">
+      <h3>🤝 Mnemônico 02: PREVIDÊNCIA COMPLEMENTAR = F.A.C.I.L.</h3>
+      <p><span class="mnemonico-letter">F</span> - Facultativo</p>
+      <p><span class="mnemonico-letter">A</span> - Autônomo em relação ao RGPS</p>
+      <p><span class="mnemonico-letter">C</span> - Capitalização (reservas financeiras)</p>
+      <p><span class="mnemonico-letter">I</span> - Informação e transparência garantidas (§ 1º)</p>
+      <p><span class="mnemonico-letter">L</span> - Lei Complementar reguladora</p>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 11. REVISÃO ATIVA (QUESTÕES) -->
+  <!-- ============================== -->
+  <section id="exercicios" class="section">
+    <h2>📝 Revisão Ativa — Questões Comentadas</h2>
+
+    <div class="exercise">
+      <p><strong>01. (Discursiva / Procuradoria)</strong> Explique por que a contribuição previdenciária obrigatória do trabalhador possui teto máximo de incidência no RGPS e no RPPS, relacionando essa limitação ao princípio da simetria atuarial do custeio.</p>
+      <details class="artigo">
+        <summary>Ver Espelho de Resposta</summary>
+        <div class="gabarito">
+          <strong>Resposta Esperada:</strong> O candidato deve esclarecer que a contribuição previdenciária pública tem caráter retributivo e atuarial. Como o valor máximo do benefício substitutivo pago pelo RGPS/RPPS está limitado ao teto constitucional (Art. 40, § 2º e Art. 201 da CF/88), a base de incidência da contribuição do trabalhador/servidor também fica limitada a esse teto. Impedir o desconto sobre o excedente decorre do princípio da vedação ao enriquecimento sem causa do Estado, pois o segurado não pode ser compelido a custear um valor sobre o qual não receberá retribuição direta em proventos de aposentadoria.
+        </div>
+      </details>
+    </div>
+
+    <div class="exercise">
+      <p><strong>02. (CEBRASPE / Certo ou Errado)</strong> O INSS é a autarquia responsável por conceder benefícios do RGPS e por comercializar planos abertos de previdência complementar para a população em geral.</p>
+      <details class="artigo">
+        <summary>Ver Gabarito Comentado</summary>
+        <div class="gabarito">
+          <strong>Gabarito: ERRADO.</strong><br>
+          <em>Fundamentação:</em> O INSS atua exclusivamente na gestão e concessão dos benefícios do Regime Geral de Previdência Social (RGPS - regime básico público obrigatório). O INSS não comercializa nem administra planos de previdência privada complementar. A previdência complementar aberta é operada por entidades abertas (EAPC / seguradoras bancárias) fiscalizadas pela SUSEP.
+        </div>
+      </details>
+    </div>
+
+    <div class="exercise">
+      <p><strong>03. (FGV / Múltipla Escolha)</strong> Na omissão do estatuto de um RPPS municipal quanto a determinado requisito de concessão de auxílio, o gestor local deve:</p>
+      <p>a) Negar o benefício por falta de previsão legal expressa e proibição de analogia.<br>
+      b) Aplicar subsidiariamente as regras do RGPS, no que couber, por força do Art. 40, § 12 da CF/88.<br>
+      c) Criar uma regra nova por decreto executivo discricionário.<br>
+      d) Requerer autorização prévia ao Ministério da Fazenda para cada caso concreto.</p>
+      <details class="artigo">
+        <summary>Ver Gabarito Comentado</summary>
+        <div class="gabarito">
+          <strong>Gabarito: Opção B.</strong><br>
+          <em>Fundamentação:</em> O Artigo 40, § 12 da Constituição Federal estabelece expressamente a aplicação subsidiária (residual) dos requisitos e critérios do RGPS ao RPPS no que couber.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 12. FLASHCARDS INTERATIVOS -->
+  <!-- ============================== -->
+  <section id="flashcards" class="section">
+    <h2>⚡ Flashcards de Fixação Rápida</h2>
+    <div class="flashcards-grid">
+      <div class="flashcard">
+        <strong>Frente:</strong> O INSS vende ou administra previdência privada complementar?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> NÃO. O INSS cuida exclusivamente do RGPS público obrigatório. A previdência complementar privada é fiscalizada pela PREVIC ou SUSEP.</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> O que acontece se a norma do RPPS for omissa sobre um benefício?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> Aplicam-se subsidiariamente as regras do RGPS no que couber (Art. 40, § 12 CF).</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> Quem pode contratar previdência complementar aberta (EAPC)?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> Qualquer pessoa física, mesmo que não exerça atividade laboral (ex: estudantes, herdeiros, donas de casa).</p></details>
+      </div>
+      <div class="flashcard">
+        <strong>Frente:</strong> A contribuição patronal pública pode ser maior que a do servidor no RPC?
+        <details><summary>Ver Verso</summary><p><strong>Verso:</strong> NÃO. O Art. 202, § 3º proíbe contribuição do patrocinador público superior à do segurado (paridade 1:1).</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 13. MAPA MENTAL HIERÁRQUICO -->
+  <!-- ============================== -->
+  <section id="mapa" class="section">
+    <h2>🧠 Mapa Mental Hierárquico</h2>
+    <div class="mindmap-box">
+      <span class="mm-root">🏛️ PREVIDÊNCIA SOCIAL NA CF/88 (ARTS. 201 E 202)</span>
+
+      <span class="mm-l1">🏢 1. REGIME GERAL (RGPS - Art. 201)</span>
+      <span class="mm-l2">→ Pilares: Caráter Contributivo + Filiação Obrigatória + Equilíbrio Atuarial</span>
+      <span class="mm-l2">→ Gestão: INSS (Autarquia / Benefícios) + Receita Federal (Órgão / Custeio)</span>
+      <span class="mm-l2">→ Coberturas: Incapacidade, Velhice, Maternidade, Desemprego (Período de Graça)</span>
+      <span class="mm-l2">→ Benefícios Específicos: Salário-Família e Auxílio-Reclusão (SÓ BAIXA RENDA)</span>
+      <span class="mm-l2">→ Regras Especiais:</span>
+      <span class="mm-l3">↳ Vedada regra diferenciada salvo PCD e Agentes Nocivos por LC (§ 1º)</span>
+      <span class="mm-l3">↳ Piso de 1 Salário Mínimo para substitutivos de renda (§ 2º)</span>
+      <span class="mm-l3">↳ Reajuste pelo VALOR REAL (§ 4º)</span>
+      <span class="mm-l3">↳ Vedado segurado facultativo para participante de RPPS (§ 5º)</span>
+      <span class="mm-l3">↳ Contagem Recíproca + Compensação Financeira entre regimes (§§ 9º e 9º-A)</span>
+      <span class="mm-l3">↳ Inclusão Previdenciária de Baixa Renda (5% mínimo / CadÚnico) (§§ 12-13)</span>
+      <span class="mm-l3">↳ Vedado tempo fictício (§ 14)</span>
+
+      <span class="mm-l1">🏛️ 2. REGIME PRÓPRIO (RPPS - Art. 40)</span>
+      <span class="mm-l2">→ Exclusivo para Servidores Estatutários Titulares de CARGO EFETIVO</span>
+      <span class="mm-l2">→ Exige lei do ente instituidor (União, Estados, DF, Municípios)</span>
+      <span class="mm-l2">→ Equiparação de Limites Mínimos e Máximos ao RGPS (Art. 40, § 2º)</span>
+      <span class="mm-l2">→ Contribuição de Ativos, Inativos/Aposentados e Pensionistas</span>
+      <span class="mm-l2">→ Aplicação residual/subsidiária das regras do RGPS ao RPPS (Art. 40, § 12)</span>
+
+      <span class="mm-l1">🤝 3. PREVIDÊNCIA COMPLEMENTAR (RPC - Art. 202)</span>
+      <span class="mm-l2">→ Caráter FACULTATIVO e Autônomo em relação ao RGPS</span>
+      <span class="mm-l2">→ Sistema de Capitalização (formação de reservas reais)</span>
+      <span class="mm-l2">→ Classificação: Pública vs. Privada e Aberta (EAPC / SUSEP) vs. Fechada (EFPC / PREVIC)</span>
+      <span class="mm-l2">→ Não integra o contrato de trabalho nem a remuneração (§ 2º)</span>
+      <span class="mm-l2">→ Aporte do patrocinador público NUNCA maior que o do segurado (§ 3º)</span>
+      <span class="mm-l2">→ INSS NÃO fornece previdência complementar!</span>
+
+      <span class="mm-l1">📌 4. REGRAS DE CONEXÃO E ACÚMULO</span>
+      <span class="mm-l2">→ "Cada atividade laboral gera um vínculo"</span>
+      <span class="mm-l2">→ "Só é possível UMA aposentadoria por regime previdenciário"</span>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 14. RESUMO ULTRA SIMPLIFICADO -->
+  <!-- ============================== -->
+  <section id="resumo-final" class="section">
+    <div class="summary-box">
+      <span class="box-badge">🚀 Resumo Ultra Rápido (Cheat Sheet)</span>
+      <ul>
+        <li><strong>Três Regimes:</strong> RGPS (Art. 201, geral/obrigatório), RPPS (Art. 40, servidores efetivos) e RPC (Art. 202, complementar/facultativo).</li>
+        <li><strong>Concurso não é RPPS:</strong> Empregados de empresas públicas/sociedades de economia mista (Caixa, BB, Petrobras), comissionados e políticos estão no <strong>RGPS</strong>.</li>
+        <li><strong>Baliza do Teto:</strong> A contribuição do trabalhador/servidor e o benefício no RGPS/RPPS são limitados ao teto constitucional (Art. 40, § 2º e Art. 201). O trabalhador não paga contribuição obrigatória sobre o valor excedente do salário.</li>
+        <li><strong>Subsidiariedade ao RPPS:</strong> O RPPS aplica subsidiariamente as regras do RGPS em caso de omissão normativa, se compatíveis (Art. 40, § 12 CF).</li>
+        <li><strong>RGPS Pilares:</strong> Contributivo, filiação obrigatória e equilíbrio financeiro/atuarial. Administrado pelo INSS (entidade/autarquia) e Receita Federal (órgão/custeio). <strong>O INSS NÃO opera previdência complementar.</strong></li>
+        <li><strong>Benefícios de Baixa Renda:</strong> Salário-família e Auxílio-reclusão dependem da baixa renda do segurado (Art. 201, IV).</li>
+        <li><strong>Piso e Reajuste:</strong> Piso constitucional de 1 Salário Mínimo (§ 2º) e reajuste pelo valor REAL (§ 4º).</li>
+        <li><strong>Proibições:</strong> Vedado segurado facultativo no RGPS para quem tem RPPS (§ 5º) e vedado tempo fictício (§ 14).</li>
+        <li><strong>Baixa Renda (5%):</strong> Sistema especial de inclusão para informais e donas de casa do CadÚnico (§ 12).</li>
+        <li><strong>Previdência Privada (Art. 202):</strong> Facultativa, autônoma, por capitalização. Classificada em Aberta (EAPC / SUSEP / Qualquer pessoa) e Fechada (EFPC / PREVIC / Grupo restrito). Aporte público como patrocinador limitado à contribuição do segurado (paridade 1:1 - § 3º).</li>
+        <li><strong>Regra de Ouro:</strong> 1 atividade = 1 vínculo. Máximo de 1 aposentadoria POR REGIME PREVIDENCIÁRIO.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container" style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+    <p><strong>Direito Constitucional III — Material de Estudo Autônomo e de Alto Nível</strong></p>
+    <p>&copy; 2026 - Desenvolvido estritamente com base na CF/88 e na jurisprudência consolidada do STF.</p>
+  </div>
+</footer>
+
+<script src="../../portal-core.js"></script>
+</body>
+</html>
