@@ -149,7 +149,8 @@ def extract_summary_data(filepath):
         "direito-digital": "Direito Digital",
         "direitos-humanos": "Direitos Humanos",
         "penal-ii": "Direito Penal II",
-        "penal-iii": "Direito Penal III"
+        "penal-iii": "Direito Penal III",
+        "processo-civil": "Direito Processual Civil I"
     }
     subject_name = subject_names.get(subject_dir, subject_dir.replace('-', ' ').capitalize())
     

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoria da Ação, Condições, Elementos e Defesa | Processo Civil I</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Processo Civil Theme Palette: Deep Cobalt Blue & Royal Indigo */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-400: #60A5FA;
+      --p-100: #DBEAFE;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.75rem;
+      margin: 15px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-top: 15px;
+    }
+
+    .meta span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Index Nav */
+    .nav-summary {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] .nav-summary {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .nav-summary h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      margin-top: 0;
+      border-bottom: 2px solid var(--p-500);
+      padding-bottom: 10px;
+    }
+
+    [data-theme="dark"] .nav-summary h3 {
+      color: var(--p-400);
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .nav-grid a {
+      color: var(--p-600);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--p-50);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    [data-theme="dark"] .nav-grid a {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--p-400);
+    }
+
+    .nav-grid a:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateX(4px);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      border-left: 6px solid var(--p-500);
+      padding-left: 18px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-size: 1.85rem;
+      font-weight: 800;
+    }
+
+    [data-theme="dark"] h2 {
+      color: var(--p-400);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      margin-top: 35px;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #93C5FD;
+    }
+
+    h4 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      margin-top: 25px;
+      font-size: 1.15rem;
+    }
+
+    [data-theme="dark"] h4 {
+      color: #E2E8F0;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 1.2px;
+      margin-bottom: -10px;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      font-size: 1.02rem;
+      color: var(--text-main, #1F2937);
+      margin-bottom: 1.2rem;
+    }
+
+    [data-theme="dark"] p {
+      color: #CBD5E1;
+    }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 16px 20px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    [data-theme="dark"] .artigo {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 1.05rem;
+      outline: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: var(--p-400);
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(37, 99, 235, 0.1);
+      color: #E2E8F0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-100);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      color: #60A5FA;
+      background: rgba(37, 99, 235, 0.25);
+    }
+
+    /* Cards & Layout */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid var(--p-500);
+      border-left: 1px solid #E2E8F0;
+      border-right: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    [data-theme="dark"] .card {
+      background: #1E293B;
+      border-color: #334155;
+      border-top-color: var(--p-500);
+    }
+
+    .card.gold {
+      border-top-color: var(--accent-gold);
+    }
+
+    .card.dark-box {
+      border-top-color: #0F172A;
+      background: #0F172A;
+      color: white;
+    }
+
+    .card.dark-box p {
+      color: #94A3B8;
+    }
+
+    /* Level Explanations Cards */
+    .level-block {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    [data-theme="dark"] .level-block {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .level-header {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .level-1 { background: #E0F2FE; color: #0369A1; }
+    .level-2 { background: #DBEAFE; color: #1D4ED8; }
+    .level-3 { background: #FEF3C7; color: #B45309; }
+
+    [data-theme="dark"] .level-1 { background: rgba(3, 105, 161, 0.25); color: #7DD3FC; }
+    [data-theme="dark"] .level-2 { background: rgba(29, 78, 216, 0.25); color: #93C5FD; }
+    [data-theme="dark"] .level-3 { background: rgba(180, 83, 9, 0.25); color: #FDE68A; }
+
+    /* Info Boxes */
+    .info-box {
+      padding: 20px;
+      border-radius: 12px;
+      margin: 22px 0;
+      position: relative;
+      border-left: 5px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      color: white;
+      padding: 2px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .dica-prova {
+      background: #FFFBEB;
+      border-color: #F59E0B;
+    }
+    .dica-prova .box-label { background: #F59E0B; }
+
+    .erro-comum {
+      background: #FEF2F2;
+      border-color: #EF4444;
+    }
+    .erro-comum .box-label { background: #EF4444; }
+
+    .doutrina {
+      background: #EFF6FF;
+      border-color: #2563EB;
+    }
+    .doutrina .box-label { background: #2563EB; }
+
+    .jurisprudencia {
+      background: #F0FDF4;
+      border-color: #10B981;
+    }
+    .jurisprudencia .box-label { background: #10B981; }
+
+    .atencao {
+      background: #FFF7ED;
+      border-color: #EA580C;
+    }
+    .atencao .box-label { background: #EA580C; }
+
+    .pegadinha {
+      background: #FAF5FF;
+      border-color: #9333EA;
+    }
+    .pegadinha .box-label { background: #9333EA; }
+
+    [data-theme="dark"] .info-box { background: #1E293B; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] table {
+      background: #1E293B;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] td {
+      border-bottom-color: #334155;
+    }
+
+    /* Mindmaps */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: #F59E0B;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+
+    .mm-l3 {
+      margin-left: 65px;
+      color: #CBD5E1;
+      font-size: 0.85rem;
+    }
+
+    /* Flowcharts & Timelines */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 1px solid #E2E8F0;
+      position: relative;
+    }
+
+    [data-theme="dark"] .timeline-item {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    /* Exercises */
+    .exercise {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    [data-theme="dark"] .exercise {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .gabarito {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F0FDF4;
+      border-radius: 8px;
+      color: #166534;
+      font-weight: 600;
+      border-left: 4px solid #10B981;
+    }
+
+    [data-theme="dark"] .gabarito {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    /* Flashcards */
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    [data-theme="dark"] .flashcard {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .flashcard summary {
+      font-weight: 700;
+      color: var(--p-700);
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    [data-theme="dark"] .flashcard summary {
+      color: var(--p-400);
+    }
+
+    .flashcard-back {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #E2E8F0;
+      font-size: 0.95rem;
+    }
+
+    /* High-contrast Mnemonicos Pill Badges */
+    .mnemonico-box, .mnemonico-card {
+      background: #0F172A !important;
+      color: #F8FAFC !important;
+      padding: 1.75rem 2rem;
+      border-radius: 16px;
+      margin: 1.75rem 0;
+      border: 2px solid var(--p-500);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+    }
+    .mnemonico-title, .mnemonico-sigla {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #FACC15 !important;
+      background: rgba(250, 204, 21, 0.12);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      padding: 6px 18px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .mnemonico-letter {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #0F172A !important;
+      background: #FACC15 !important;
+      padding: 2px 9px;
+      border-radius: 6px;
+      margin-right: 5px;
+      border: 1px solid #EAB308;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    /* Summary Final */
+    .cheat-sheet {
+      background: var(--p-50);
+      border: 2px solid var(--p-500);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+
+    [data-theme="dark"] .cheat-sheet {
+      background: rgba(30, 58, 138, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I</div>
+      <h1>Teoria da Ação, Condições, Elementos e Defesa</h1>
+      <div class="subtitle">Tratado Completo: Da relação jurídica trilateral aos 4 Institutos Fundamentais, Teorias da Ação (Liebman/Escola Paulista), Verificação (Asserção vs. Concreto), Elementos da Ação (Substanciação) e Exceções vs. Objeções</div>
+      <div class="meta">
+        <span>⚖️ Arts. 17, 18, 319, 322, 324 e 485, VI do CPC/2015</span>
+        <span>📚 Teoria Geral do Processo</span>
+        <span>🛡️ Foco em Concursos de Alto Nível &amp; OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ SUMÁRIO INTERATIVO ══════════════════════════════ -->
+    <nav class="nav-summary">
+      <h3>📍 Navegação Rápida no Conteúdo Mestre</h3>
+      <div class="nav-grid">
+        <a href="#objetivos">🎯 Objetivos de Aprendizagem</a>
+        <a href="#modulo1">Módulo 01: Introdução &amp; Relação Trilateral</a>
+        <a href="#modulo2">Módulo 02: Teorias da Ação (Concretista a Liebman)</a>
+        <a href="#modulo3">Módulo 03: Conceito de Mérito &amp; Extinção</a>
+        <a href="#modulo4">Módulo 04: Cognição vs. Execução</a>
+        <a href="#modulo5">Módulo 05: Ação em Sentido Amplo vs. Estrito</a>
+        <a href="#modulo6">Módulo 06: As Condições da Ação &amp; Teoria da Asserção</a>
+        <a href="#modulo7">Módulo 07: Legitimidade Ordinária vs. Extraordinária</a>
+        <a href="#modulo8">Módulo 08: Substituição Processual &amp; Assistência</a>
+        <a href="#modulo9">Módulo 09: Os Elementos da Ação</a>
+        <a href="#modulo10">Módulo 10: O Pedido e suas Espécies</a>
+        <a href="#modulo11">Módulo 11: Causa de Pedir &amp; Teoria da Substanciação</a>
+        <a href="#modulo12">Módulo 12: O Direito de Defesa (Exceção vs. Objeção)</a>
+        <a href="#lei-seca">⚖️ Lei Seca Interativa</a>
+        <a href="#comparativos">📊 Quadros Comparativos</a>
+        <a href="#fluxograma">⏳ Linha do Tempo &amp; Fluxograma</a>
+        <a href="#mapa-mental">🧠 Mapa Mental Visual</a>
+        <a href="#mnemonicos">💡 Mnemônicos &amp; Fixação</a>
+        <a href="#revisao-ativa">📝 Revisão Ativa (Questões)</a>
+        <a href="#flashcards">🎴 Flashcards de Fixação</a>
+        <a href="#resumo-final">🚀 Resumo Final (Cheat Sheet)</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════ OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <div class="card gold">
+        <p>Ao concluir a leitura aprofundada deste material, você dominará com precisão absoluta:</p>
+        <ul>
+          <li>A diferença entre a relação de Direito Material (bilateral) e a <strong>relação de Direito Processual (trilateral: autor, juiz e réu)</strong>;</li>
+          <li>A natureza do Direito de Ação como um <strong>direito subjetivo público exercido CONTRA O ESTADO</strong> para afastar a inércia da jurisdição;</li>
+          <li>Os <strong>4 Institutos Fundamentais do Processo Civil</strong>: Jurisdição, Ação, Processo e Exceção/Defesa;</li>
+          <li>As correntes doutrinárias da Ação (Concretista, Abstratista Pura e <strong>Abstratista Eclética de Enrico Tullio Liebman</strong>);</li>
+          <li>As duas formas de aferição das condições da ação: <strong>Teoria da Asserção (da Afirmação)</strong> acolhida no Brasil vs. Teoria do Exame em Concreto;</li>
+          <li>Os <strong>3 Elementos da Ação (Partes, Pedido e Causa de Pedir)</strong> como "carteira de identidade" da demanda para fins de Litispendência, Coisa Julgada, Conexão e Continência;</li>
+          <li>A divisão do Pedido em <strong>Imediato (provimento)</strong> e <strong>Mediato (bem da vida)</strong>, suas exigências de certeza e determinação, e as 3 hipóteses legais de <strong>Pedido Genérico / Ilíquido (Art. 324, § 1º CPC)</strong>;</li>
+          <li>A <strong>Teoria da Substanciação</strong> adotada no Brasil (onde os Fatos vinculam o juiz) em contraste com a Teoria da Individuação, fundamentada nos brocardos <em>iura novit curia</em> e <em>da mihi factum, dabo tibi ius</em>;</li>
+          <li>A distinção crucial entre <strong>Objeções (matérias de ordem pública, cognoscíveis de ofício e inprecluíveis)</strong> e <strong>Exceções em Sentido Estrito (matérias privadas, dependentes de provocação e sujeitas à preclusão)</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 01: RELAÇÃO TRILATERAL E FUNDAMENTOS ══════════════════════════════ -->
+    <section id="modulo1">
+      <div class="section-label">Módulo 01</div>
+      <h2>Introdução ao Direito de Ação, Relação Trilateral e os 4 Institutos Fundamentais</h2>
+
+      <div class="level-block">
+        <span class="level-header level-1">Nível 1 · Conceito Prático e Cotidiano</span>
+        <p>No dia a dia, quando duas pessoas fazem um negócio (como a venda de um carro), temos apenas duas partes: o vendedor e o comprador. Se tudo der certo, o contrato acaba. Mas se um achar que foi prejudicado, ele não pode resolver o problema à força (justiça com as próprias mãos é proibida). Ele precisa chamar o Estado para intervir. Ao acionar o Poder Judiciário, cria-se uma nova relação que envolve três pessoas: o <strong>Autor</strong> (quem pede), o <strong>Juiz</strong> (quem decide em nome do Estado) e o <strong>Réu</strong> (quem se defende). O direito de ação é justamente a chave que liga a máquina pública.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-header level-2">Nível 2 · Dogmática Processual e Relação Trilateral</span>
+        <p>A Ciência Processual Civil autonomizou-se a partir da distinção entre a relação jurídica material e a relação jurídica processual:</p>
+        <ul>
+          <li><strong>Relação Jurídica de Direito Material:</strong> Possui natureza <em>bilateral</em> (sujeito ativo e sujeito passivo). Exemplo: Comprador e Vendedor no contrato de compra e venda. Se satisfeita a obrigação, extingue-se a relação sem intervenção estatal.</li>
+          <li><strong>Relação Jurídica de Direito Processual:</strong> Possui natureza <em>trilateral / angularizada</em> (Autor, Juiz e Réu). Desenvolve-se em um procedimento regulado pela lei processual até a sentença final.</li>
+        </ul>
+        <p>A <strong>Jurisdição</strong> é o poder-dever atribuído ao Estado para resolver os conflitos sociais, pacificando a sociedade. Como regra geral, a jurisdição é <strong>inerte</strong> (<em>nemo iudex sine actore / ne procedat iudex ex officio</em>). Para romper com essa inércia, surge a <strong>Ação</strong>.</p>
+
+        <h4>O Direito de Ação como Direito Subjetivo Público:</h4>
+        <p>A doutrina conceitua o Direito de Ação como um <strong>direito subjetivo público exercido CONTRA O ESTADO</strong>:</p>
+        <ol>
+          <li><strong>É Subjetivo:</strong> Porque constitui uma faculdade do titular lesado (ele pode decidir ir a juízo ou conformar-se).</li>
+          <li><strong>É Público:</strong> Porque a relação se estabelece com o Estado-Juiz, titular da função jurisdicional.</li>
+          <li><strong>É exercido CONTRA O ESTADO:</strong> O direito de ação não é dirigido contra a parte contrária (o réu), mas sim contra o Estado, visando obrigá-lo a prestar a tutela jurisdicional prometida na Constituição. O termo "Ação" contrapõe-se ao termo "Inércia".</li>
+        </ol>
+      </div>
+
+      <div class="level-block">
+        <span class="level-header level-3">Nível 3 · Concursos de Alto Nível &amp; Estrutura Fundamental</span>
+        <p><strong>Os 4 Institutos Fundamentais do Processo Civil:</strong> Toda a dogmática processual clássica estrutura-se em quatro pilares indissociáveis:</p>
+        <ol>
+          <li><strong>Jurisdição:</strong> O poder estatal de aplicar o direito ao caso concreto de forma definitiva.</li>
+          <li><strong>Ação:</strong> O direito subjetivo público de provocar a jurisdição inerte.</li>
+          <li><strong>Processo:</strong> O instrumento de desenvolvimento da relação jurídica processual regulada pelo procedimento.</li>
+          <li><strong>Exceção (Defesa):</strong> O direito do réu de contrapor-se à pretensão do autor sob o manto do contraditório e da ampla defesa.</li>
+        </ol>
+      </div>
+
+      <div class="info-box doutrina">
+        <span class="box-label">📚 Doutrina Teórica</span>
+        <strong>A Inafastabilidade da Jurisdição (Art. 5º, XXXV da CF/88):</strong> Como o Estado monopolizou a solução dos conflitos (proibindo a autotutela, salvo exceções legais como legítima defesa e desforço possessório imediato), ele assume como contrapartida o <strong>poder-dever inafastável</strong> de proferir uma resposta fundamentada a toda pretensão que lhe for apresentada.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 02: TEORIAS DA AÇÃO ══════════════════════════════ -->
+    <section id="modulo2">
+      <div class="section-label">Módulo 02</div>
+      <h2>Teorias da Ação: Evolução Histórica e a Teoria Abstratista Eclética de Liebman</h2>
+
+      <div class="level-block">
+        <span class="level-header level-1">Nível 1 · Intuição Histórica</span>
+        <p>No passado, havia quem achasse que só existia direito de ação se a pessoa ganhasse o processo no final. Outros diziam que o direito de ação era um cheque em branco para pedir qualquer coisa sem regra nenhuma. A solução perfeita veio com Liebman: a ação é o direito de receber uma resposta de mérito (procedente ou improcedente), desde que preenchidas certas exigências formais chamadas condições da ação.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-header level-2">Nível 2 · Dogmática e Correntes Doutrinárias</span>
+        <p>O debate histórico sobre a autonomia do direito de ação desdobrou-se em três grandes teorias:</p>
+
+        <h4>1. Teorias Concretistas (Savigny, Muther, Wach):</h4>
+        <p>Não distinguiam com clareza o direito material do direito de ação. Sustentavam que o direito de ação só existia se o autor fosse o titular do direito material alegado e tivesse razão. Para os concretistas, só haveria ação se ao final o juiz proferisse uma <strong>sentença de procedência</strong>. Se a sentença fosse de improcedência ou sem resolução do mérito, entendiam que o autor jamais exercera o direito de ação.</p>
+
+        <h4>2. Teorias Abstratistas Puras (Windscheid, Degenkolb):</h4>
+        <p>No extremo oposto, defendiam a autonomia absoluta da ação. Para os abstratistas puros, o direito de ação existia independentemente de qualquer resultado (procedência, improcedência ou extinção sem resolução do mérito). Confundiam o direito de ação em sentido estrito com o mero direito de acesso à justiça (provocação da jurisdição).</p>
+
+        <h4>3. Teoria Abstratista Eclética (Enrico Tullio Liebman):</h4>
+        <p>Formulada pelo jurista italiano Enrico Tullio Liebman (fundador da <strong>Escola Paulista do Processo Civil</strong> durante seu período no Brasil na década de 1940), tornou-se a teoria acolhida pelo ordenamento brasileiro. Liebman estabeleceu que o direito de ação em sentido estrito é o <strong>direito a uma resposta de mérito</strong> (uma decisão que acolha ou rejeite a pretensão), subordinado ao preenchimento das <em>condições da ação</em>.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-header level-3">Nível 3 · Foco em Exames Oficiais</span>
+        <p><strong>Atenção para Provas:</strong> As teorias Concretista e Abstratista Pura possuem valor <em>estritamente histórico e acadêmico</em>. Nenhuma delas é aplicada no Brasil. O CPC/2015 consagrou categoricamente a <strong>Teoria Abstratista Eclética</strong> nos Arts. 17 e 485, VI. Liebman originalmente previa 3 condições (legitimidade, interesse e possibilidade jurídica), mas no CPC/2015 a possibilidade jurídica foi reabsorvida pelo interesse de agir.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 03: CONCEITO DE MÉRITO ══════════════════════════════ -->
+    <section id="modulo3">
+      <div class="section-label">Módulo 03</div>
+      <h2>O Conceito de Mérito e a Extinção Processual</h2>
+
+      <p>Em Processo Civil, a palavra <strong>Mérito</strong> é empregada como sinônimo de <strong>pretensão inicial</strong> — aquilo que o autor pede ou postula no processo (a <em>res in iudicium deducta</em>).</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>✅ Extinção COM Resolução do Mérito (Art. 487 CPC)</h3>
+          <p>O magistrado examinou e decidiu o pedido do autor (acolhendo ou rejeitando a pretensão).</p>
+          <ul>
+            <li><strong>Coisa Julgada:</strong> Produz <strong>Coisa Julgada Material</strong> (autoridade de imutabilidade e indiscutibilidade do conteúdo).</li>
+            <li><strong>Efeito:</strong> Impede a propositura de nova ação com o mesmo objeto em qualquer tribunal.</li>
+          </ul>
+        </div>
+
+        <div class="card gold">
+          <h3>❌ Extinção SEM Resolução do Mérito (Art. 485 CPC)</h3>
+          <p>O processo é encerrado prematuramente por vícios formais ou ausência das condições da ação (carência de ação), sem que o juiz leia ou analise o pedido principal.</p>
+          <ul>
+            <li><strong>Coisa Julgada:</strong> Produz apenas <strong>Coisa Julgada Formal</strong> (endoprocessual).</li>
+            <li><strong>Efeito:</strong> Não impede que o autor ajuíze uma nova demanda com o mesmo objeto, desde que corrija o vício sanável.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-box atencao">
+        <span class="box-label">📝 Terminologia Técnica Exigida pela Doutrina</span>
+        <ol>
+          <li><strong>Ação vs. Pedido:</strong> É incorreto afirmar que "a ação foi julgada procedente ou improcedente". A ação existe ou não (o autor a tem ou dela é carecedor). O que é julgado procedente ou improcedente é o <strong>PEDIDO</strong>.</li>
+          <li><strong>Ajuizar Demanda vs. Propor Ação:</strong> Ao protocolar a petição inicial, não se sabe se o autor possui o direito de ação em sentido estrito (depende do preenchimento das condições que a sentença aferirá). O termo técnico perfeito é <strong>ajuizar a demanda</strong> (veicular a pretensão).</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 04: COGNIÇÃO VS EXECUÇÃO ══════════════════════════════ -->
+    <section id="modulo4">
+      <div class="section-label">Módulo 04</div>
+      <h2>Fases Processuais: Processo de Conhecimento vs. Processo de Execução</h2>
+
+      <p>A Teoria Abstratista Eclética exige, para a caracterização do direito de ação, uma <strong>resposta de mérito</strong>, e não necessariamente uma <em>sentença de mérito</em>. Esse conceito é fundamental para compreender a diferença entre os tipos de processo:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Processo / Fase de Conhecimento (Cognição)</th>
+            <th>Processo de Execução / Cumprimento de Sentença</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pretensão (Mérito)</strong></td>
+            <td>Que o juiz diga quem tem razão, declarando qual o direito aplicável ao caso.</td>
+            <td>Que o juiz satisfaça o direito do credor já reconhecido ou constante de título executivo.</td>
+          </tr>
+          <tr>
+            <td><strong>Desenvolvimento Procedimental</strong></td>
+            <td>Petição Inicial → Contestação → Réplica → Fase Instrutória → Sentença.</td>
+            <td>Intimação para Pagamento → Impugnação → Atos Expropriatórios e Satisfativos.</td>
+          </tr>
+          <tr>
+            <td><strong>Resposta de Mérito</strong></td>
+            <td><strong>Sentença</strong> com resolução de mérito (procedência ou improcedência).</td>
+            <td><strong>Prática de Atos Concretos e Atos Satisfativos</strong> (penhoras, avaliações, leilões, bloqueios SISBAJUD e pagamentos).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box dica-prova">
+        <span class="box-label">💡 Dica de Prova de Concurso</span>
+        <strong>Fase de Cognição:</strong> A fase de conhecimento é frequentemente chamada de <strong>Fase de Cognição</strong> nas provas examinadoras. Ambas as expressões são sinônimas e corretas!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 05: SENTIDO AMPLO VS ESTRITO ══════════════════════════════ -->
+    <section id="modulo5">
+      <div class="section-label">Módulo 05</div>
+      <h2>Direito de Ação em Sentido Amplo vs. Sentido Estrito</h2>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>🌐 Sentido Amplo (Nível Constitucional)</h3>
+          <p>É o direito de **acesso à justiça** (Art. 5º, XXXV da CF/88). É o direito de provocar o Judiciário inerte e receber uma decisão fundamentada, por mais descabida que seja a petição inicial.</p>
+          <ul>
+            <li><strong>Natureza:</strong> Incondicional, irrestrito e absoluto.</li>
+            <li><strong>Aferição:</strong> Não exige o preenchimento de nenhuma condição.</li>
+          </ul>
+        </div>
+
+        <div class="card gold">
+          <h3>🎯 Sentido Estrito (Nível Processual)</h3>
+          <p>É o direito de obter do Estado uma efetiva **resposta de mérito** (decisão de procedência ou improcedência).</p>
+          <ul>
+            <li><strong>Natureza:</strong> Condicionado ao preenchimento das Condições da Ação.</li>
+            <li><strong>Carência:</strong> Se não preenchidos os requisitos, o autor é carecedor de ação em sentido estrito.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 06: CONDIÇÕES DA AÇÃO E TEORIA DA ASSERÇÃO ══════════════════════════════ -->
+    <section id="modulo6">
+      <div class="section-label">Módulo 06</div>
+      <h2>As Condições da Ação no CPC/2015 e as Teorias de Verificação</h2>
+
+      <p>Nos termos do <strong>Artigo 17 do CPC/2015</strong>, para postular em juízo é necessário ter <strong>Legitimidade e Interesse de Agir</strong>. A possibilidade jurídica do pedido foi suprimida como condição autônoma, sendo absorvida pelo interesse de agir.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>1. Legitimidade ad causam</h4>
+          <p>Pertinência subjetiva da demanda. É a correspondência entre as partes da relação processual (autor/réu) e os titulares da relação de direito material afirmada.</p>
+        </div>
+
+        <div class="card">
+          <h4>2. Interesse de Agir</h4>
+          <p>Binômio <strong>Necessidade + Adequação</strong> (e Utilidade):</p>
+          <ul>
+            <li><strong>Necessidade:</strong> A tutela jurisdicional é a única via indispensável para alcançar o bem da vida. (Ex: não há interesse em cobrar dívida antes do vencimento).</li>
+            <li><strong>Adequação:</strong> O meio processual escolhido deve ser apto a produzir o resultado pretendido.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-box erro-comum">
+        <span class="box-label">⚠️ Perda Superveniente do Interesse de Agir</span>
+        Ocorre quando a demanda era necessária ao ser ajuizada, mas fato posterior retirou a necessidade da tutela (ex: banco que exibe voluntariamente o documento antes do julgamento, perda do objeto). Gera extinção sem resolução de mérito (Art. 485, VI).
+      </div>
+
+      <h3>Maneiras de Verificar o Preenchimento das Condições da Ação</h3>
+      <p>A doutrina divergiu sobre como o magistrado deve checar o preenchimento das condições da ação:</p>
+
+      <div class="level-block">
+        <span class="level-header level-2">Teoria da Asserção (da Afirmação / prospettivamente) — PREDOMINANTE NO BRASIL</span>
+        <p>Defendida fortemente pelo STJ e pela doutrina maioritária. O exame das condições da ação deve ser feito <strong>em abstrato, considerando verdadeiras as alegações contidas na petição inicial</strong>. Se o juiz precisar analisar as provas em concreto produzidas no processo para saber se o autor tem legitimidade ou interesse, a matéria terá virado <strong>MÉRITO</strong>, devendo a sentença ser de procedência ou improcedência (Art. 487), e não de extincão por carência (Art. 485).</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-header level-1">Teoria do Exame em Concreto</span>
+        <p>Corrente minoritária que sustenta que o juiz deve analisar as condições da ação considerando tudo o que ficou apurado pelas provas no curso do processo, e não apenas o afirmado na inicial.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 07: LEGITIMIDADE ORDINÁRIA VS EXTRAORDINÁRIA ══════════════════════════════ -->
+    <section id="modulo7">
+      <div class="section-label">Módulo 07</div>
+      <h2>Legitimidade Ordinária vs. Extraordinária (Substituição Processual - Art. 18 CPC)</h2>
+
+      <p>O <strong>Artigo 18 do CPC</strong> estabelece a regra da legitimidade ordinária e a exceção da legitimidade extraordinária:</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>👤 Legitimidade Ordinária (Regra)</h3>
+          <p>A parte vai a juízo pleitear <strong>direito próprio em nome próprio</strong>. É a regra geral do ordenamento jurídico (99% dos processos).</p>
+        </div>
+
+        <div class="card gold">
+          <h3>⚡ Legitimidade Extraordinária (Exceção)</h3>
+          <p>Também chamada de <strong>Substituição Processual</strong>. Ocorre quando a lei autoriza alguém a pleitear <strong>direito alheio em nome próprio</strong>.</p>
+          <p><em>Exemplos:</em> Ministério Público pleiteando alimentos para incapacitada; Sindicato defendendo a categoria; Associações autorizadas; Síndico defendendo o condomínio.</p>
+        </div>
+      </div>
+
+      <div class="info-box pegadinha">
+        <span class="box-label">🎯 Representação vs. Substituição Processual</span>
+        <ul>
+          <li><strong>Representação (Não é substituição):</strong> A mãe atua em nome do filho incapaz. A parte é a <em>própria criança</em> (direito próprio em nome próprio, apenas representada).</li>
+          <li><strong>Substituição Processual:</strong> O Ministério Público ou o Sindicato atua como <em>parte formal</em> no processo em seu próprio nome para defender o direito do substituído.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 08: COISA JULGADA NA SUBSTITUIÇÃO ══════════════════════════════ -->
+    <section id="modulo8">
+      <div class="section-label">Módulo 08</div>
+      <h2>A Coisa Julgada na Substituição Processual e Assistência Litisconsorcial</h2>
+
+      <div class="card dark-box">
+        <h3 style="color:#60A5FA;">Personagens da Legitimidade Extraordinária:</h3>
+        <ul>
+          <li><strong>Substituto Processual:</strong> É quem figura como parte na relação processual (em nome próprio), embora não seja o titular do direito.</li>
+          <li><strong>Substituído Processual:</strong> É o titular real do direito material discutido, que <em>não figura como parte no processo</em>.</li>
+        </ul>
+      </div>
+
+      <div class="info-box pegadinha">
+        <span class="box-label">🎯 A Regra de Ouro da Coisa Julgada</span>
+        <strong>Questão de Prova:</strong> Na legitimidade extraordinária, o substituído é parte no processo? Ele é atingido pela Coisa Julgada?<br>
+        <strong>Resposta:</strong> O substituído <strong>NÃO É PARTE no processo</strong>, mas <strong>É ATINGIDO DIRETAMENTE PELOS EFEITOS DA COISA JULGADA</strong>!
+      </div>
+
+      <div class="info-box doutrina">
+        <span class="box-label">📚 Assistência Litisconsorcial (Art. 18, Parágrafo Único do CPC)</span>
+        Como o substituído não é parte formal, mas sofrerá diretamente os impactos da coisa julgada, a lei autoriza que ele ingresse no processo a qualquer momento como <strong>Assistente Litisconsorcial</strong> para auxiliar o substituto.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 09: OS ELEMENTOS DA AÇÃO ══════════════════════════════ -->
+    <section id="modulo9">
+      <div class="section-label">Módulo 09</div>
+      <h2>Os Elementos da Ação: A "Carteira de Identidade" da Demanda</h2>
+
+      <p>Os <strong>Elementos da Ação</strong> são os três componentes que servem para identificar e individualizar a demanda, permitindo ao magistrado comparar duas ações para verificar se há <em>litispendência</em>, <em>coisa julgada</em>, <em>conexão</em> ou <em>continência</em>.</p>
+
+      <div class="mindmap-box" style="background: #1E293B;">
+        <div style="color:#60A5FA; font-weight:800; font-size:1.2rem;">🆔 TRINCAS DOS ELEMENTOS DA AÇÃO</div>
+        <div style="margin-left:20px; color:#F59E0B; font-weight:700;">1. PARTES ➔ Autor (quem pede) e Réu (em face de quem se pede)</div>
+        <div style="margin-left:20px; color:#10B981; font-weight:700;">2. PEDIDO ➔ Imediato (provimento) + Mediato (bem da vida)</div>
+        <div style="margin-left:20px; color:#EC4899; font-weight:700;">3. CAUSA DE PEDIR ➔ Fatos (específicos) + Fundamentos Jurídicos (norma)</div>
+      </div>
+
+      <div class="info-box dica-prova">
+        <span class="box-label">💡 Adstrição e Julgamento Extra/Ultra Petita</span>
+        O juiz está rigorosamente adstrito aos elementos da ação indicados na petição inicial (Princípio da Congruência / Adstrição - Arts. 141 e 492 CPC). Se o juiz conceder objeto diferente (<em>extra petita</em>) ou em quantidade superior (<em>ultra petita</em>), a sentença será nula!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 10: O PEDIDO E SUAS ESPÉCIES ══════════════════════════════ -->
+    <section id="modulo10">
+      <div class="section-label">Módulo 10</div>
+      <h2>O Pedido e suas Espécies: Pedido Imediato, Mediato e Hipóteses de Pedido Genérico</h2>
+
+      <p>O Pedido desdobra-se obrigatoriamente em duas dimensões complementares:</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>1. Pedido Imediato</h4>
+          <p>É o <strong>provimento jurisdicional</strong> postulado (o tipo de sentença que se aguarda do juiz). Ex: condenação, declaração, constituição/desconstituição de relação jurídica, ou ato executivo satisfativo.</p>
+        </div>
+
+        <div class="card">
+          <h4>2. Pedido Mediato</h4>
+          <p>É o <strong>bem da vida</strong> almejado no plano prático. Ex: a quantia em dinheiro, o imóvel a ser despejado, a entrega do veículo.</p>
+        </div>
+      </div>
+
+      <h3>Requisitos do Pedido (Arts. 322 e 324 do CPC)</h3>
+      <p>Em regra, o pedido deve ser <strong>Certo</strong> (objeto individualizado) e <strong>Determinado</strong> (líquido / quantificado).</p>
+
+      <h4>Exceções: As 3 Hipóteses de Pedido Genérico / Ilíquido (Art. 324, § 1º CPC):</h4>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>I - Ações Universais:</strong> Quando não se puder individuar os bens demandados de início (ex: petição de herança, partilha de universalidade de patrimônio).
+        </div>
+        <div class="timeline-item">
+          <strong>II - Impossibilidade de determinar desde logo as consequências do ato/fato:</strong> Exemplo típico de acidente de trânsito em que a vítima passa por cirurgias e tratamentos contínuos, não podendo quantificar o dano no momento do ajuizamento.
+        </div>
+        <div class="timeline-item">
+          <strong>III - Quando a determinação depender de ato a ser praticado pelo réu:</strong> Exemplo de ação de prestação de contas, em que o saldo só é descoberto após o réu apresentar a documentação.
+        </div>
+      </div>
+
+      <div class="info-box atencao">
+        <span class="box-label">📝 Pedidos Alternativos do Direito Material vs. Identidade Processual</span>
+        Se o Código Civil der ao comprador de mercadoria com vício redibitório duas opções alternativas — rescindir o contrato (Ação Redibitória) ou pedir abatimento no preço (Ação Quanti Minoris) —, escolhida uma via, o autor <strong>NÃO pode ajuizar a outra em outro juízo</strong>. Embora os pedidos sejam materialmente diferentes, do ponto de vista processual são equivalentes. O ajuizamento da segunda gera <strong>Litispendência ou Coisa Julgada</strong>!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 11: CAUSA DE PEDIR E SUBSTANCIAÇÃO ══════════════════════════════ -->
+    <section id="modulo11">
+      <div class="section-label">Módulo 11</div>
+      <h2>Causa de Pedir e a Teoria da Substanciação</h2>
+
+      <p>Conforme o <strong>Art. 319, III do CPC</strong>, a petição inicial deve indicar os <strong>fatos e os fundamentos jurídicos</strong> do pedido.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>1. Os Fatos (Causa Remota)</h4>
+          <p>Acontecimentos concretos e específicos ocorridos no mundo real. É do fato que o réu se defende e é o fato que vincula o juiz no julgamento!</p>
+        </div>
+
+        <div class="card">
+          <h4>2. Fundamentos Jurídicos (Causa Próxima)</h4>
+          <p>Enquadramento normativo abstrato (o direito aplicável). Não se confunde com "fundamento legal" (indicação do artigo de lei), que é dispensável na petição inicial.</p>
+        </div>
+      </div>
+
+      <h3>Teoria da Substanciação (Adotada no Brasil) vs. Teoria da Individuação</h3>
+      <p>O ordenamento jurídico brasileiro adotou categoricamente a <strong>Teoria da Substanciação</strong>:</p>
+
+      <ul>
+        <li><strong>Teoria da Substanciação (Brasil):</strong> A essência da causa de pedir são os <strong>FATOS</strong>. São os fatos narrados que delimitam a demanda e vinculam o juiz. O juiz conhece o direito (<em>iura novit curia / da mihi factum, dabo tibi ius</em>) e pode alterar o enquadramento jurídico sem incorrer em sentença <em>extra petita</em>!</li>
+        <li><strong>Teoria da Individuação (Não adotada):</strong> Sustentava que o enquadramento jurídico indicado na inicial é que vincularia o juiz.</li>
+      </ul>
+
+      <div class="info-box erro-comum">
+        <span class="box-label">⚠️ Exemplo Prático de Substanciação</span>
+        Um passageiro de ônibus sofre lesões em um acidente e pede indenização alegando responsabilidade subjetiva (culpa do motorista). O juiz pode julgar procedente com base na responsabilidade objetiva do transportador (Art. 37, § 6º CF) sem incorrer em sentença <em>extra petita</em>, pois o <strong>fato (o acidente no ônibus)</strong> foi devidamente narrado na inicial! Porém, se o juiz condenar por outro fato não narrado, a sentença será nula!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 12: O DIREITO DE DEFESA ══════════════════════════════ -->
+    <section id="modulo12">
+      <div class="section-label">Módulo 12</div>
+      <h2>O Direito de Defesa: Exceção em Sentido Amplo vs. Sentido Estrito e Objeções</h2>
+
+      <p>Assim como a ação é a garantia de acesso à justiça, a <strong>Exceção (Defesa)</strong> constitui o 4º instituto fundamental do processo civil, assegurando o contraditório e a ampla defesa (Art. 5º, LV da CF/88).</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>🛡️ Exceção em Sentido Amplo</h3>
+          <p>É o direito geral de defesa do réu de contrapor-se à pretensão inicial por todos os meios legítimos admitidos no direito.</p>
+        </div>
+
+        <div class="card gold">
+          <h3>⚡ Objeção vs. Exceção em Sentido Estrito</h3>
+          <p>Classificação interna das defesas do réu:</p>
+          <ul>
+            <li><strong>Objeções (Ordem Pública):</strong> Defesas de interesse público (ex: incompetência absoluta, falta das condições da ação, decadência legal). Podem ser conhecidas <strong>de ofício pelo juiz</strong> e <strong>JAMAIS PRECLUEM</strong>.</li>
+            <li><strong>Exceções em Sentido Estrito (Ordem Privada):</strong> Defesas de interesse exclusivo do réu (ex: incompetência relativa, pagamento, convenção de foro). <strong>NÃO podem ser conhecidas de ofício</strong> e <strong>PRECLUEM</strong> se não alegadas na contestação.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ LEI SECA INTERATIVA ══════════════════════════════ -->
+    <section id="lei-seca">
+      <h2>⚖️ Lei Seca Interativa (CPC/2015)</h2>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 17 do CPC/2015 - Condições da Ação</summary>
+        <div class="lei-seca">
+          <p>Art. 17. Para postular em juízo é necessário ter <span class="kw">interesse</span> e <span class="kw">legitimidade</span>.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 18 do CPC/2015 - Legitimidade e Substituição Processual</summary>
+        <div class="lei-seca">
+          <p>Art. 18. Ninguém poderá pleitear <span class="kw">direito alheio em nome próprio</span>, salvo quando autorizado pelo ordenamento jurídico.</p>
+          <p>Parágrafo único. Havendo substituição processual, o substituído poderá intervir como <span class="kw">assistente litisconsorcial</span>.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 319, inc. III do CPC/2015 - Requisitos da Petição Inicial e Causa de Pedir</summary>
+        <div class="lei-seca">
+          <p>Art. 319. A petição inicial indicará:</p>
+          <p>III - os <span class="kw">fatos e os fundamentos jurídicos</span> do pedido; (Teoria da Substanciação)</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 324, § 1º do CPC/2015 - Hipóteses de Pedido Genérico</summary>
+        <div class="lei-seca">
+          <p>Art. 324. O pedido deve ser determinado.</p>
+          <p>§ 1º É lícito, porém, formular <span class="kw">pedido genérico</span>:</p>
+          <p>I - nas ações universais, se o autor não puder individuar os bens demandados;</p>
+          <p>II - quando não for possível determinar, desde logo, as consequências do ato ou do fato;</p>
+          <p>III - quando a determinação do valor da condenação depender de ato que deva ser praticado pelo réu.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ QUADROS COMPARATIVOS ══════════════════════════════ -->
+    <section id="comparativos">
+      <h2>📊 Quadros Comparativos Mestre</h2>
+
+      <h3>1. Pedido Imediato vs. Pedido Mediato</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Espécie de Pedido</th>
+            <th>Definição</th>
+            <th>Exemplo Prático</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pedido Imediato</strong></td>
+            <td>O provimento jurisdicional postulado ao juiz.</td>
+            <td>Sentença de Condenação, Declaração ou Desconstituição.</td>
+          </tr>
+          <tr>
+            <td><strong>Pedido Mediato</strong></td>
+            <td>O bem da vida almejado no plano material.</td>
+            <td>A quantia de R$ 50.000,00 ou a entrega do imóvel.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. Objeções vs. Exceções em Sentido Estrito</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Objeções (Ordem Pública)</th>
+            <th>Exceções em Sentido Estrito (Ordem Privada)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Interesse Protegido</strong></td>
+            <td>Público / Funcionamento do Judiciário.</td>
+            <td>Exclusivo das partes.</td>
+          </tr>
+          <tr>
+            <td><strong>Cognição pelo Juiz</strong></td>
+            <td>Conhecíveis <strong>de ofício</strong>.</td>
+            <td>Dependem de provocação da parte.</td>
+          </tr>
+          <tr>
+            <td><strong>Preclusão</strong></td>
+            <td><strong>NÃO PRECLUEM</strong> (podem ser alegadas a qualquer tempo).</td>
+            <td><strong>PRECLUEM</strong> se não alegadas na primeira oportunidade (contestação).</td>
+          </tr>
+          <tr>
+            <td><strong>Exemplos</strong></td>
+            <td>Incompetência absoluta, ausência das condições da ação, decadência legal.</td>
+            <td>Incompetência relativa, pagamento, convenção de foro.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ FLUXOGRAMA & LINHA DO TEMPO ══════════════════════════════ -->
+    <section id="fluxograma">
+      <h2>⏳ Linha do Tempo e Fluxograma Procedural</h2>
+
+      <h3>Fluxograma dos Elementos da Ação e Adstrição da Sentença</h3>
+      <div class="mindmap-box" style="background:#1E293B; border-left:4px solid #3B82F6;">
+        <div style="color:#60A5FA; font-weight:bold;">PETIÇÃO INICIAL (Fixação dos Elementos)</div>
+        <div style="margin-left:20px; color:#94A3B8;">↓</div>
+        <div style="margin-left:20px; color:#F59E0B;">Partes + Pedido (Imediato/Mediato) + Causa de Pedir (FATOS + Fundamentos)</div>
+        <div style="margin-left:40px; color:#94A3B8;">↓</div>
+        <div style="margin-left:40px; color:#FDE047;">Teoria da Substanciação: Somente os FATOS vinculam a cognição do Juiz</div>
+        <div style="margin-left:60px; color:#94A3B8;">↓</div>
+        <div style="margin-left:60px; color:#10B981;">SENTENÇA FINAL ➔ Respeito estrito aos Fatos e ao Pedido (Adstrição / Congruência)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapa-mental">
+      <h2>🧠 Mapa Mental Visual (Estrutura Completa da Ação)</h2>
+
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ SISTEMA DA AÇÃO &amp; DEFESA NO CPC/2015</div>
+
+        <div class="mm-l1">1. OS 4 INSTITUTOS FUNDAMENTAIS</div>
+        <div class="mm-l2">├─ Jurisdição (Inerte / Poder-Dever)</div>
+        <div class="mm-l2">├─ Ação (Direito Subjetivo Público CONTRA O ESTADO)</div>
+        <div class="mm-l2">├─ Processo (Procedimento em contraditório trilateral)</div>
+        <div class="mm-l2">└─ Exceção (Direito de Defesa / Objeções vs Exceções em Sentido Estrito)</div>
+
+        <div class="mm-l1">2. TEORIA DA AÇÃO &amp; ASSERÇÃO</div>
+        <div class="mm-l2">├─ Teoria Eclética de Liebman (Ação = Direito a resposta de mérito)</div>
+        <div class="mm-l2">└─ Teoria da Asserção (Exame em abstrato pelas alegações da inicial)</div>
+
+        <div class="mm-l1">3. ELEMENTOS DA AÇÃO (CARTEIRA DE IDENTIDADE)</div>
+        <div class="mm-l2">├─ Partes (Autor e Réu / Interessados na voluntária)</div>
+        <div class="mm-l2">├─ Pedido (Imediato = provimento | Mediato = bem da vida)</div>
+        <div class="mm-l2">└─ Causa de Pedir (FATOS vinculam o juiz ➔ Teoria da Substanciação)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+    <section id="mnemonicos">
+      <h2>💡 Mnemônicos e Técnicas de Fixação</h2>
+
+      <div class="mnemonico-box">
+        <div class="mnemonico-title">L - I</div>
+        <p><span class="mnemonico-letter">L</span>egitimidade + <span class="mnemonico-letter">I</span>nteresse de Agir</p>
+        <p style="font-size:0.92rem; color:#94A3B8; margin-top:8px;">As únicas 2 Condições da Ação vigentes no CPC/2015 (Escola Paulista de Liebman)</p>
+      </div>
+
+      <div class="mnemonico-box">
+        <div class="mnemonico-title">S - N - P - A - C</div>
+        <p><span class="mnemonico-letter">S</span>ubstituído <span class="mnemonico-letter">N</span>ão é <span class="mnemonico-letter">P</span>arte, mas é <span class="mnemonico-letter">A</span>tingido pela <span class="mnemonico-letter">C</span>oisa julgada!</p>
+        <p style="font-size:0.92rem; color:#94A3B8; margin-top:8px;">Regra de ouro da eficácia da sentença na legitimidade extraordinária (Art. 18 CPC)</p>
+      </div>
+
+      <div class="mnemonico-box">
+        <div class="mnemonico-title">P - P - C</div>
+        <p><span class="mnemonico-letter">P</span>artes + <span class="mnemonico-letter">P</span>edido + <span class="mnemonico-letter">C</span>ausa de Pedir</p>
+        <p style="font-size:0.92rem; color:#94A3B8; margin-top:8px;">Os 3 Elementos da Ação que identificam litispendência, coisa julgada e conexão</p>
+      </div>
+
+      <div class="mnemonico-box">
+        <div class="mnemonico-title">O - B - J</div>
+        <p><span class="mnemonico-letter">O</span>rdem Pública + <span class="mnemonico-letter">B</span>usca de Ofício + <span class="mnemonico-letter">J</span>amais Preclui!</p>
+        <p style="font-size:0.92rem; color:#94A3B8; margin-top:8px;">Regra das Objeções de Ordem Pública no Direito Processual Civil</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA (QUESTÕES) ══════════════════════════════ -->
+    <section id="revisao-ativa">
+      <h2>📝 Revisão Ativa (Sistema de Questões com Gabarito Oculto)</h2>
+
+      <div class="exercise">
+        <p><strong>01. (Questão Discursiva - Prova da Faculdade / Concurso)</strong><br>
+        Explique a diferença entre a Teoria da Substanciação e a Teoria da Individuação na causa de pedir, esclarecendo qual foi adotada pelo CPC/2015 e qual seu impacto no julgamento da causa pelo magistrado.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> O CPC/2015 adotou a <strong>Teoria da Substanciação</strong> (Art. 319, III). Por essa teoria, o elemento essencial e vinculante da causa de pedir são os <strong>FATOS</strong> (acontecimentos concretos), e não os fundamentos jurídicos. O juiz conhece o direito (<em>iura novit curia</em>) e pode dar enquadramento jurídico diverso do alegado pelo autor sem incorrer em julgamento <em>extra petita</em>, desde que se limite rigorosamente aos fatos descritos na petição inicial.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>02. (Questão Estilo CEBRASPE - Certo/Errado)</strong><br>
+        Segundo a Teoria da Asserção, predominante no Superior Tribunal de Justiça, as condições da ação devem ser aferidas pelo magistrado em concreto, com base no conjunto probatório produzido na instrução processual.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong> Para a Teoria da Asserção (da Afirmação), as condições da ação devem ser examinadas <strong>em abstrato</strong>, considerando-se verdadeiras as alegações contidas na petição inicial. Se a verificação depender da produção ou análise de provas em concreto no curso do processo, a matéria passa a ser de <strong>MÉRITO</strong> (implicando sentença de procedência ou improcedência do Art. 487).
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>03. (Questão Estilo FGV - Múltipla Escolha)</strong><br>
+        A respeito das hipóteses em que o CPC/2015 admite a formulação de pedido genérico (Art. 324, § 1º), assinale a afirmativa correta:</p>
+        <ul>
+          <li>A) É permitido pedido genérico em qualquer ação de cobrança de dívida pecuniária simples.</li>
+          <li>B) É lícito pedido genérico nas ações universais, quando o autor não puder individuar os bens demandados na inicial.</li>
+          <li>C) O pedido genérico dispensa a posterior liquidação da sentença no processo de conhecimento.</li>
+          <li>D) É vedado pedido genérico mesmo quando a quantificação do valor depender de ato a ser praticado pelo réu.</li>
+        </ul>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B.</strong> O Art. 324, § 1º, I do CPC autoriza expressamente o pedido genérico nas ações universais (ex: petição de herança), quando o autor não puder individuar os bens desde logo.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FLASHCARDS ══════════════════════════════ -->
+    <section id="flashcards">
+      <h2>🎴 Flashcards Interativos de Memorização</h2>
+
+      <div class="flashcard-grid">
+        <details class="flashcard">
+          <summary>❓ Quais são os 3 Elementos da Ação?</summary>
+          <div class="flashcard-back">
+            <strong>Partes</strong> (Autor e Réu), <strong>Pedido</strong> (Imediato e Mediato) e <strong>Causa de Pedir</strong> (Fatos e Fundamentos Jurídicos).
+          </div>
+        </details>
+
+        <details class="flashcard">
+          <summary>❓ O que é o Pedido Imediato e o Pedido Mediato?</summary>
+          <div class="flashcard-back">
+            <strong>Imediato:</strong> O provimento jurisdicional pretendido (condenatório, declaratório, constitutivo).<br>
+            <strong>Mediato:</strong> O bem da vida almejado (a quantia, o imóvel, a coisa).
+          </div>
+        </details>
+
+        <details class="flashcard">
+          <summary>❓ O que diferencia uma Objeção de uma Exceção em Sentido Estrito?</summary>
+          <div class="flashcard-back">
+            <strong>Objeção:</strong> Matéria de ordem pública, o juiz conhece de ofício e JAMAIS preclui.<br>
+            <strong>Exceção em Sentido Estrito:</strong> Matéria privada, depende de alegação do réu e PRECLUE.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+    <section id="resumo-final">
+      <div class="cheat-sheet">
+        <h2>🚀 Resumo Final Ultra Rápido (Cheat Sheet Mestre)</h2>
+        <ul>
+          <li>• <strong>4 Institutos Fundamentais:</strong> Jurisdição, Ação, Processo e Exceção.</li>
+          <li>• <strong>Ação:</strong> Direito subjetivo público exercido CONTRA O ESTADO para afastar a inércia jurisdicional.</li>
+          <li>• <strong>Teoria da Ação:</strong> Abstratista Eclética de Liebman (Ação = Direito a resposta de mérito).</li>
+          <li>• <strong>Verificação (Asserção):</strong> As condições da ação são aferidas em abstrato pelas alegações da petição inicial.</li>
+          <li>• <strong>Condições da Ação (Art. 17 CPC):</strong> (1) Legitimidade <em>ad causam</em>; (2) Interesse de Agir (Necessidade + Adequação).</li>
+          <li>• <strong>Substituição Processual (Art. 18 CPC):</strong> Substituto é parte; Substituído NÃO é parte, mas É ATINGIDO pela Coisa Julgada.</li>
+          <li>• <strong>3 Elementos da Ação:</strong> Partes, Pedido (Imediato/Mediato) e Causa de Pedir (Fatos/Fundamentos).</li>
+          <li>• <strong>Teoria da Substanciação:</strong> Os FATOS delimitam a causa de pedir e vinculam o juiz na sentença.</li>
+          <li>• <strong>Defesa do Réu:</strong> Objeções (Ordem Pública / Ofício / Não precluem) vs. Exceções em Sentido Estrito (Ordem Privada / Provocação / Precluem).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>
