@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evicção | Direito Civil III | Material Didático Premium</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Integração com Estilos Globais do Portal -->
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue & Accent Gold */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-main, #f8fafc);
+      color: var(--text-main, #1e293b);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 15px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Lora', serif;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .meta span {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Navegação Interna */
+    .summary-nav {
+      background: var(--card-bg, #ffffff);
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin: 30px 0;
+      box-shadow: var(--shadow-sm, 0 4px 6px -1px rgba(0,0,0,0.05));
+      border: 1px solid var(--border, #e5e7eb);
+    }
+
+    .summary-nav h3 {
+      margin-top: 0;
+      color: var(--p-700);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-nav ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .summary-nav a {
+      color: var(--p-600);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: var(--p-50);
+    }
+
+    .summary-nav a:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateX(4px);
+    }
+
+    /* Seções e Títulos */
+    .section {
+      margin: 40px 0;
+      padding-top: 10px;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 30px;
+      font-size: 1.35rem;
+    }
+
+    h4 {
+      color: var(--text-main);
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    /* Níveis de Explicação */
+    .level-box {
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+      border-left: 4px solid;
+    }
+
+    .level-1 {
+      background: #f0fdf4;
+      border-color: #22c55e;
+      color: #14532d;
+    }
+
+    .level-2 {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #1e3a8a;
+    }
+
+    .level-3 {
+      background: #faf5ff;
+      border-color: #a855f7;
+      color: #581c87;
+    }
+
+    .level-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .level-1 .level-badge { background: #dcfce7; color: #15803d; }
+    .level-2 .level-badge { background: #dbeafe; color: #1d4ed8; }
+    .level-3 .level-badge { background: #f3e8ff; color: #7e22ce; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 14px 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.05rem;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "▼";
+      font-size: 0.8rem;
+      color: var(--p-500);
+      transition: transform 0.3s ease;
+    }
+
+    .artigo[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lei-seca {
+      background: #fdf8f6;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 14px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .lei-comentario {
+      margin-top: 12px;
+      padding: 12px 15px;
+      background: #f8fafc;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #475569;
+      border: 1px dashed #cbd5e1;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #dbeafe;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Cards e Grid Layout */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--card-bg, #ffffff);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      border-top: 4px solid var(--p-500);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.green { border-top-color: #10B981; }
+    .card.purple { border-top-color: #8B5CF6; }
+    .card.red { border-top-color: #EF4444; }
+
+    /* Boxes Informativos */
+    .info-box {
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: var(--accent-gold); }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doutrina-box {
+      background: #f5f3ff;
+      border-color: #ddd6fe;
+      color: #5b21b6;
+    }
+    .doutrina-box .box-label { background: #8b5cf6; }
+
+    .juris-box {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .juris-box .box-label { background: #10b981; }
+
+    .attention-box {
+      background: #fff7ed;
+      border-color: #ffedd5;
+      color: #9a3412;
+    }
+    .attention-box .box-label { background: #f97316; }
+
+    /* Tabelas Comparativas */
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg, #ffffff);
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border, #e5e7eb);
+    }
+
+    tr:nth-child(even) {
+      background: var(--p-50);
+    }
+
+    /* Linha do Tempo CSS */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: var(--card-bg, #ffffff);
+      padding: 18px 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 24px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    .timeline-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--p-500);
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--p-700);
+      margin: 5px 0;
+    }
+
+    /* Mapa Mental JetBrains Mono */
+    .mindmap-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60a5fa;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 10px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 14px;
+      font-size: 1.05rem;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      margin-top: 6px;
+    }
+
+    .mm-l3 {
+      margin-left: 70px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    /* Mnemônicos */
+    .mnemonico-box {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin: 25px 0;
+    }
+
+    .mnemonico-letter {
+      background: var(--accent-gold);
+      color: #0f172a;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      margin-right: 4px;
+    }
+
+    /* Exercícios e Revisão Ativa */
+    .exercise-box {
+      background: var(--card-bg, #ffffff);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border, #e5e7eb);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .q-badge {
+      background: var(--p-500);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+
+    .gabarito-box {
+      margin-top: 14px;
+      padding: 15px;
+      background: #f0fdf4;
+      border-radius: 8px;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      font-size: 0.95rem;
+    }
+
+    /* Flashcards */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .flashcard-q {
+      font-weight: 700;
+      color: var(--p-700);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    /* Dark Mode Adjustments */
+    [data-theme="dark"] .artigo,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .exercise-box,
+    [data-theme="dark"] .flashcard,
+    [data-theme="dark"] .summary-nav,
+    [data-theme="dark"] .timeline-item {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    [data-theme="dark"] tr:nth-child(even) {
+      background: #1e293b;
+    }
+
+    [data-theme="dark"] td {
+      border-bottom-color: #334155;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- ══════════════════════════════ HERO SECTION ══════════════════════════════ -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Civil III</div>
+      <h1>Evicção</h1>
+      <div class="subtitle">Guia Avançado: Perda da Coisa por Motivo Jurídico Anterior, Garantias, Benfeitorias e Aspectos Processuais</div>
+      <div class="meta">
+        <span>⚖️ Arts. 447 a 457 do Código Civil | Art. 125 CPC/15</span>
+        <span>📚 Teoria Geral dos Contratos</span>
+        <span>🛡️ Foco em OAB &amp; Concursos Públicos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR (MAIN NAV BAR) -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">Conceito &amp; Sequela</a>
+        <a href="#modulo2" class="nav-item">Garantias (Art. 450)</a>
+        <a href="#modulo3" class="nav-item">Exclusão &amp; Risco</a>
+        <a href="#modulo4" class="nav-item">Benfeitorias</a>
+        <a href="#modulo5" class="nav-item">Processual &amp; Casos Especiais</a>
+        <a href="#exercicios" class="nav-item">Revisão Ativa</a>
+        <a href="#cheat-sheet" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ SUMÁRIO INTERATIVO ══════════════════════════════ -->
+    <nav class="summary-nav">
+      <h3>🔍 Sumário do Módulo</h3>
+      <ul>
+        <li><a href="#objetivos">🎯 Objetivos de Aprendizagem</a></li>
+        <li><a href="#modulo1">📌 Módulo 01: Conceito, Sujeitos &amp; Sequela</a></li>
+        <li><a href="#modulo2">⚖️ Módulo 02: Garantias do Evicto &amp; Art. 450</a></li>
+        <li><a href="#modulo3">🛡️ Módulo 03: Cláusula de Exclusão &amp; Risco</a></li>
+        <li><a href="#modulo4">🛠️ Módulo 04: Deteriorações, Benfeitorias &amp; Evicção Parcial</a></li>
+        <li><a href="#modulo5">📂 Módulo 05: Via Processual, Prescrição &amp; Casos Especiais</a></li>
+        <li><a href="#fluxograma">⏳ Linha do Tempo da Evicção</a></li>
+        <li><a href="#mapamental">🧠 Mapa Mental Visual</a></li>
+        <li><a href="#mnemonicos">💡 Mnemônicos &amp; Macetes</a></li>
+        <li><a href="#exercicios">📝 Revisão Ativa (Questões)</a></li>
+        <li><a href="#flashcards">⚡ Flashcards de Fixação</a></li>
+        <li><a href="#cheat-sheet">🚀 Resumão de Véspera</a></li>
+      </ul>
+    </nav>
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos" class="section">
+      <div class="section-label">Introdução Didática</div>
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao finalizar o estudo deste material estruturado, você dominará:</p>
+      <ul>
+        <li>O conceito de <strong>evicção</strong> e a identificação do instituto nas alienações <em>a non domino</em>;</li>
+        <li>Os papéis jurídicos exatos do <strong>Evicto</strong>, <strong>Alienante</strong> e <strong>Evictor</strong>, bem como a relação entre evicção e o <strong>Direito de Sequela</strong>;</li>
+        <li>Todas as verbas devidas ao evicto previstas no <strong>Art. 450 do Código Civil</strong> (preço da época da evicção, frutos, despesas contratuais, prejuízos, custas e honorários);</li>
+        <li>A eficácia da <strong>cláusula de exclusão da evicção</strong> e os requisitos para isenção total do alienante (informação + assunção expressa do risco - Art. 449);</li>
+        <li>As regras de <strong>deterioração da coisa</strong> (Art. 451 e 452), indenização de <strong>benfeitorias</strong> (Art. 453 e 454) e opções na <strong>evicção parcial</strong> (Art. 455);</li>
+        <li>A dinâmica processual da <strong>Denunciação da Lide</strong> (Art. 125, I e §2º do CPC) e o prazo prescricional de <strong>3 anos</strong> (Art. 206, §3º, V do CC);</li>
+        <li>A matriz de <strong>situações especiais</strong>: dação em pagamento, integralização de capital social e sucessões.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. MÓDULO 01 ══════════════════════════════ -->
+    <section id="modulo1" class="section">
+      <div class="section-label">Módulo 01</div>
+      <h2>Conceito, Sujeitos, Natureza Jurídica e Direito de Sequela</h2>
+
+      <div class="level-box level-1">
+        <span class="level-badge">Nível 1 · Explicação Intuitiva</span>
+        <p>Imagine que você comprou um carro de João. Meses depois, uma pessoa chamada Pedro aparece com um mandado judicial provando que o carro era dele e tinha sido roubado anos atrás. O juiz manda você entregar o carro a Pedro. A perda desse carro por uma ordem judicial baseada em um direito anterior é a <strong>evicção</strong>. Como você agiu de boa-fé e pagou pelo bem, a lei obriga João (o vendedor) a devolver seu dinheiro e pagar todos os seus prejuízos.</p>
+      </div>
+
+      <div class="level-box level-2">
+        <span class="level-badge">Nível 2 · Explicação Técnica (Graduação)</span>
+        <p>A evicção consiste na perda total ou parcial da posse ou da propriedade de um bem transferido em <strong>contrato oneroso</strong> ou em hasta pública (Art. 447 CC), decorrente de uma decisão judicial ou ato administrativo que acolhe direito anterior de terceiro. A garantia visa proteger o adquirente contra a alienação <em>a non domino</em> (venda realizada por quem não era dono ou não tinha poderes para alienar).</p>
+      </div>
+
+      <div class="level-box level-3">
+        <span class="level-badge">Nível 3 · Foco em Concursos de Alto Nível</span>
+        <p>A evicção é a <strong>consequência prática do exercício do direito de sequela</strong> pelo terceiro titular do direito real. O direito real de propriedade persegue a coisa onde quer que ela se encontre (eficácia <em>erga omnes</em>). Quando o evictor exerce a sequela contra o adquirente, este sofre a evicção e passa a ter direito regressivo automático contra o alienante baseado no dever de garantia contratual implícito.</p>
+      </div>
+
+      <!-- Doutrina Pertinente -->
+      <div class="info-box doutrina-box">
+        <span class="box-label">📚 Doutrina Relevante</span>
+        <p><strong>Pablo Stolze Gagliano:</strong> <em>"Consiste a evicção na perda, pelo adquirente (evicto), da posse ou propriedade da coisa transferida, por força de uma sentença judicial ou ato administrativo que reconheceu o direito anterior de terceiro, denominado evictor. Note-se que a sua previsão legal decorre especialmente da necessidade de se resguardar o adquirente de uma eventual alienação a non domino."</em></p>
+        <p><strong>Carlos Roberto Gonçalves:</strong> <em>"Evicção é a perda da coisa em virtude de sentença judicial, que a atribui a outrem por causa jurídica preexistente ao contrato. Todo alienante é obrigado não só a entregar ao adquirente a coisa alienada, como também a garantir-lhe o uso e gozo (evincere est vincendo in judicio aliquid auferre)."</em></p>
+      </div>
+
+      <h3>1.1 Os Sujeitos da Evicção</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sujeito</th>
+              <th>Definição Dogmática</th>
+              <th>Exemplo Prático</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>EVICTO</strong></td>
+              <td>Adquirente (comprador) que sofre a perda total ou parcial da coisa.</td>
+              <td>Comprador do imóvel que perde a propriedade em ação reivindicatória.</td>
+            </tr>
+            <tr>
+              <td><strong>ALIENANTE</strong></td>
+              <td>Transmitente (vendedor) que transferiu o bem e responde pela garantia de evicção.</td>
+              <td>Vendedor que alienou o bem que não lhe pertencia.</td>
+            </tr>
+            <tr>
+              <td><strong>EVICTOR</strong></td>
+              <td>Terceiro verdadeiro titular do direito anterior (proprietário ou titular de direito real).</td>
+              <td>Verdadeiro proprietário que ajuíza a ação e recupera a coisa.</td>
+            </tr>
+            <tr>
+              <td><strong>COISA EVICTA</strong></td>
+              <td>O bem (evencido) cuja posse/propriedade é retirada do adquirente.</td>
+              <td>O imóvel, veículo ou terreno objeto da perda judicial.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Lei Seca Interativa Art. 447 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 447 do Código Civil - Abrangência dos Contratos Onerosos e Hasta Pública</summary>
+        <div class="lei-seca">
+          <p>Art. 447. Nos <span class="kw">contratos onerosos</span>, o alienante responde pela evicção. Subsiste esta garantia ainda que a aquisição se tenha realizado em <span class="kw">hasta pública</span>.</p>
+        </div>
+        <div class="lei-comentario">
+          💡 <strong>Pontos de Atenção para Provas:</strong><br>
+          1. <strong>Contratos Onerosos:</strong> A garantia é legal e inerente aos negócios onerosos (compra e venda, permuta, dação).<br>
+          2. <strong>Hasta Pública:</strong> Se a pessoa arremata um bem em leilão judicial e sofre evicção, a garantia SUBSISTE (o arrematante pode voltar-se contra o executado ou credor).<br>
+          3. <strong>Doações Puras (Gratuitas):</strong> NÃO geram responsabilidade por evicção (salvo doações onerosas ou com encargo).
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 2. MÓDULO 02 ══════════════════════════════ -->
+    <section id="modulo2" class="section">
+      <div class="section-label">Módulo 02</div>
+      <h2>Direitos do Evicto e Reparação Integral (Art. 450 CC)</h2>
+
+      <p>O Art. 450 do Código Civil estabelece o princípio da <strong>reparação integral do evicto</strong>. Salvo estipulação em contrário, o comprador que perde o bem tem direito ao ressarcimento de quatro grandes rubricas financeiras:</p>
+
+      <div class="grid2">
+        <div class="card blue">
+          <h4>1. Restituição Integral do Preço</h4>
+          <p>Devolução do valor pago pelo bem. <strong>REGRA DE OURO (§ único):</strong> O valor a ser restituído é o <strong>valor da coisa NA ÉPOCA EM QUE SE EVENCEU</strong> (e não o preço histórico pago no passado!).</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Frutos Restituídos (Inciso I)</h4>
+          <p>Indenização dos frutos (aluguéis, safras, rendimentos) que o evicto tiver sido obrigado a devolver ao terceiro evictor.</p>
+        </div>
+        <div class="card green">
+          <h4>3. Despesas do Contrato e Prejuízos (Inciso II)</h4>
+          <p>Ressarcimento de impostos pagos (ITBI), custas de escritura, registro em cartório, taxas e prejuízos diretos.</p>
+        </div>
+        <div class="card purple">
+          <h4>4. Custas e Honorários Advocatícios (Inciso III)</h4>
+          <p>Reembolso das custas processuais da ação judicial movida pelo evictor e dos honorários do advogado contratado pelo evicto.</p>
+        </div>
+      </div>
+
+      <!-- Lei Seca Interativa Art. 450 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 450 do Código Civil - Extensão da Indenização Devida ao Evicto</summary>
+        <div class="lei-seca">
+          <p>Art. 450. Salvo estipulação em contrário, tem direito o evicto, além da restituição integral do preço ou das quantias que pagou:</p>
+          <p>I - à indenização dos <span class="kw">frutos que tiver sido obrigado a restituir</span>;</p>
+          <p>II - à indenização pelas <span class="kw">despesas dos contratos</span> e pelos prejuízos que diretamente resultarem da evicção;</p>
+          <p>III - às <span class="kw">custas judiciais e aos honorários do advogado</span> por ele constituído.</p>
+          <p>Parágrafo único. O preço, seja a evicção total ou parcial, será o do <span class="kw">valor da coisa, na época em que se evenceu</span>, e proporcional ao desfalque sofrido, no caso de evicção parcial.</p>
+        </div>
+        <div class="lei-comentario">
+          🎯 <strong>Exemplo de Aplicação Prática:</strong><br>
+          João comprou um carro por R$ 50.000 em 2020. Em 2025, perde o veículo por evicção. Se em 2025 o valor de mercado do carro subiu para R$ 70.000, é exatamente R$ 70.000 que a alienante Maria terá que devolver! Se a alienante estava de má-fé, responderá adicionalmente por perdas e danos gerais.
+        </div>
+      </details>
+
+      <div class="info-box exam-tip">
+        <span class="box-label">🎯 Dica de OAB / Concursos</span>
+        O valor da coisa para fins de restituição é apurado no momento da <strong>consumação da evicção</strong> (trânsito em julgado/perda do bem), garantindo a atualização integral do patrimônio do adquirente!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. MÓDULO 03 ══════════════════════════════ -->
+    <section id="modulo3" class="section">
+      <div class="section-label">Módulo 03</div>
+      <h2>Cláusulas Contratuais de Garantia e a Regra do Art. 449 CC</h2>
+
+      <p>As partes possuem autonomia privada para alterar a extensão da garantia legal contra a evicção (Art. 448 CC):</p>
+      <ul>
+        <li><strong>Cláusula de Reforço:</strong> Amplia o dever do alienante (ex: prevê multa penal adicional).</li>
+        <li><strong>Cláusula de Redução:</strong> Limita os danos indenizáveis (ex: exclui honorários).</li>
+        <li><strong>Cláusula de Exclusão (<em>non praestanda evictione</em>):</strong> Retira a responsabilidade do alienante.</li>
+      </ul>
+
+      <h3>3.1 A Regra de Proteção do Art. 449 CC</h3>
+      <p>A simples existência de uma cláusula de exclusão da evicção no contrato <strong>NÃO isenta totalmente</strong> o alienante do dever de restituir o preço pago!</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Situação do Adquirente (Evicto)</th>
+              <th>Cláusula de Exclusão no Contrato?</th>
+              <th>Direito à Devolução do Preço?</th>
+              <th>Direito às Demais Indenizações (Incissos Art. 450)?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Não sabia do risco</strong> de evicção</td>
+              <td>SIM</td>
+              <td>✅ <strong>RECEBE o preço pago</strong></td>
+              <td>❌ Não recebe despesas/frutos</td>
+            </tr>
+            <tr>
+              <td><strong>Sabia do risco, mas NÃO o assumiu</strong> expressamente</td>
+              <td>SIM</td>
+              <td>✅ <strong>RECEBE o preço pago</strong></td>
+              <td>❌ Não recebe despesas/frutos</td>
+            </tr>
+            <tr>
+              <td><strong>Sabia do risco E O ASSUMIU expressamente</strong> (contrato aleatório)</td>
+              <td>SIM</td>
+              <td>❌ <strong>NÃO RECEBE NADA</strong> (Isenção Total)</td>
+              <td>❌ Não recebe nada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Lei Seca Interativa Art. 448, 449 e 457 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 448 do Código Civil - Modificação Contratual da Garantia</summary>
+        <div class="lei-seca">
+          <p>Art. 448. Podem as partes, por cláusula expressa, <span class="kw">reforçar, diminuir ou excluir</span> a responsabilidade pela evicção.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 449 do Código Civil - Eficácia Limítrofe da Cláusula de Exclusão</summary>
+        <div class="lei-seca">
+          <p>Art. 449. Não obstante a cláusula que exclui a garantia contra a evicção, se esta se der, <span class="kw">tem direito o evicto a receber o preço</span> que pagou pela coisa evicta, se <span class="kw">não soube do risco</span> da evicção, ou, dele informado, <span class="kw">não o assumiu</span>.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 457 do Código Civil - Adquirente Cientificado do Risco ou Litígio</summary>
+        <div class="lei-seca">
+          <p>Art. 457. <span class="kw">Não pode o adquirente demandar pela evicção</span>, se sabia que a coisa era alheia ou litigiosa.</p>
+        </div>
+        <div class="lei-comentario">
+          ⚠️ <strong>Princípio da Boa-Fé Objetiva:</strong> Se o comprador sabia expressamente que o bem era de terceiro ou estava sendo disputado na Justiça (coisa litigiosa) e comprou mesmo assim, ele assumiu o risco da atividade e não pode alegar evicção contra o vendedor!
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 4. MÓDULO 04 ══════════════════════════════ -->
+    <section id="modulo4" class="section">
+      <div class="section-label">Módulo 04</div>
+      <h2>Deteriorações, Benfeitorias e Evicção Parcial</h2>
+
+      <h3>4.1 Deteriorações da Coisa (Arts. 451 e 452 CC)</h3>
+      <ul>
+        <li><strong>Regra Geral (Art. 451):</strong> A obrigação do alienante de indenizar subsiste <strong>ainda que a coisa esteja deteriorada</strong>. Exceção: Dolo do adquirente (se o comprador danificou o bem de má-fé para prejudicar o vendedor).</li>
+        <li><strong>Abatimento de Vantagens (Art. 452):</strong> Se o adquirente obteve lucros/vantagens econômicas com a deterioração do bem (ex: vendeu peças do carro ou tirou proveito de estragos) e não foi condenado a indenizar o terceiro evictor por isso, o valor desse proveito será descontado da restituição paga pelo alienante.</li>
+      </ul>
+
+      <h3>4.2 Benfeitorias na Evicção (Arts. 453 e 454 CC)</h3>
+      <div class="grid2">
+        <div class="card green">
+          <h4>Benfeitorias Feitas pelo Evicto (Art. 453)</h4>
+          <p>Se o comprador fez benfeitorias necessárias ou úteis e elas <strong>não forem pagas pelo evictor</strong> (terceiro), o alienante (vendedor) terá o dever de indenizá-las ao evicto.</p>
+        </div>
+        <div class="card purple">
+          <h4>Benfeitorias Feitas pelo Alienante (Art. 454)</h4>
+          <p>Se o vendedor tinha feito benfeitorias e elas foram <strong>pagas/abonadas pelo evictor ao comprador</strong>, o valor dessas benfeitorias será abatido da restituição devida pelo vendedor ao comprador.</p>
+        </div>
+      </div>
+
+      <h3>4.3 Evicção Parcial (Art. 455 CC)</h3>
+      <p>Ocorre quando o adquirente perde apenas uma fração do bem ou de seus direitos:</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Gravidade do Desfalque</th>
+              <th>Direitos do Evicto</th>
+              <th>Exemplo Prático</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Parcial, mas CONSIDERÁVEL</strong></td>
+              <td>Opção entre: 1) <strong>Rescisão total do contrato</strong> (com devolução integral) OU 2) <strong>Restituição proporcional</strong> da parte perdida.</td>
+              <td>Perda de 200 m² de um terreno total de 1.000 m² (20% da área).</td>
+            </tr>
+            <tr>
+              <td><strong>Parcial e NÃO CONSIDERÁVEL</strong></td>
+              <td>Caberá <strong>SOMENTE indenização proporcional</strong> (sem direito a rescindir o contrato).</td>
+              <td>Perda de 1 m² em um terreno de 1.000 m² (faixa irrisória).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Lei Seca Interativa Arts. 451 a 455 -->
+      <details class="artigo">
+        <summary>⚖️ Arts. 451 a 455 do Código Civil - Deteriorações, Benfeitorias e Evicção Parcial</summary>
+        <div class="lei-seca">
+          <p>Art. 451. Subsiste para o alienante esta obrigação, ainda que a coisa alienada esteja <span class="kw">deteriorada</span>, exceto havendo <span class="kw">dolo do adquirente</span>.</p>
+          <p>Art. 452. Se o adquirente tiver <span class="kw">auferido vantagens das deteriorações</span>, e não tiver sido condenado a indenizá-las, o valor das vantagens <span class="kw">será deduzido</span> da quantia que lhe houver de dar o alienante.</p>
+          <p>Art. 453. As <span class="kw">benfeitorias necessárias ou úteis</span>, não abonadas ao que sofreu a evicção, serão pagas pelo alienante.</p>
+          <p>Art. 454. Se as benfeitorias abonadas ao que sofreu a evicção tiverem sido feitas pelo alienante, o valor delas será <span class="kw">levado em conta na restituição</span> devida.</p>
+          <p>Art. 455. Se parcial, mas <span class="kw">considerável</span>, for a evicção, poderá o evicto optar entre a <span class="kw">rescisão do contrato e a restituição da parte do preço</span> correspondente ao desfalque sofrido. Se <span class="kw">não for considerável</span>, caberá somente direito a indenização.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 5. MÓDULO 05 ══════════════════════════════ -->
+    <section id="modulo5" class="section">
+      <div class="section-label">Módulo 05</div>
+      <h2>Via Processual, Prescrição e Matriz de Situações Especiais</h2>
+
+      <h3>5.1 Aspectos Processuais: Denunciação da Lide (CPC Art. 125, I e §2º)</h3>
+      <p>Quando o terceiro (evictor) ajuíza ação reivindicatória contra o adquirente (evicto), este pode exercer a <strong>Denunciação da Lide</strong> para trazer o alienante ao processo:</p>
+      <ul>
+        <li><strong>Facultatividade (NCPC/15):</strong> A denunciação da lide no CPC/2015 é <strong>FACULTATIVA</strong>. A não denunciação da lide na ação promovida pelo evictor NÃO acarreta a perda do direito material à indenização por evicção, que poderá ser cobrada em ação autônoma de regresso.</li>
+        <li><strong>Denunciação Sucessiva (§2º):</strong> O alienante denunciado pode denunciar o alienante anterior, permitindo percorrer toda a cadeia dominial até o responsável primitivo.</li>
+      </ul>
+
+      <h3>5.2 Prazo Prescricional da Ação Indenizatória</h3>
+      <div class="info-box juris-box">
+        <span class="box-label">⚖️ Prescrição - 3 Anos (Art. 206, §3º, V CC)</span>
+        O prazo prescricional para o evicto cobrar os prejuízos do alienante é de <strong>3 (três) anos</strong>. O termo inicial (<em>actio nata</em>) é a data do <strong>trânsito em julgado</strong> da decisão judicial ou do <strong>efetivo desapossamento</strong> do bem. Não corre a prescrição enquanto a coisa não for definitivamente perdida!
+      </div>
+
+      <h3>5.3 Matriz Exaustiva de Situações Especiais do Texto Fonte</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Situação / Instituto Jurídico</th>
+              <th>Quem Responde / Devedor</th>
+              <th>Detalhes Dogmáticos e Efeitos Jurídicos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dação em Pagamento</strong> (Credor sofre evicção do bem dado)</td>
+              <td>Alienante / Devedor original</td>
+              <td>A dívida original <strong>restabelece-se (ressuscita)</strong>, pois o credor não recebeu o pagamento devido. <strong>Atenção: O FIADOR FICA LIBERADO</strong>, pois sua obrigação extinguira-se com a quitação e não renasce pela evicção!</td>
+            </tr>
+            <tr>
+              <td><strong>Integralização de Capital em Sociedade</strong> (Sócio entrega bem evicto)</td>
+              <td>Sócio integralizador</td>
+              <td>O sócio que integralizou suas cotas/ações utilizando bem que veio a sofrer evicção responde perante a sociedade, devendo indenizá-la ou integralizar em dinheiro.</td>
+            </tr>
+            <tr>
+              <td><strong>Sucessão Causa Mortis</strong> (Bem originário do <em>de cujus</em> é evicto)</td>
+              <td>Ninguém</td>
+              <td>Se o falecido deixou um bem que não era dele e sofreu evicção perante a herança, os herdeiros não têm direito de cobrar indenização de ninguém (ausência de contraprestação onerosa prévia).</td>
+            </tr>
+            <tr>
+              <td><strong>Sucessão Causa Mortis</strong> (Herdeiros alienam bem herdado e comprador sofre evicção)</td>
+              <td>Herdeiros que alienaram o bem</td>
+              <td>Se os herdeiros venderam o bem recebido e o terceiro comprador sofre a evicção, os herdeiros vendedores respondem pessoalmente perante o comprador evicto.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ LINHA DO TEMPO / FLUXOGRAMA ══════════════════════════════ -->
+    <section id="fluxograma" class="section">
+      <div class="section-label">Esquema Procedimental</div>
+      <h2>⏳ Linha do Tempo e Iter Procedimental da Evicção</h2>
+
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 01 · Transmissão Onerosa</div>
+          <div class="timeline-title">Celebração do Contrato e Tradição</div>
+          <p>O alienante transfere a posse ou propriedade da coisa ao adquirente em negócio oneroso. A garantia de evicção nasce implicitamente.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 02 · Ação Reivindicatória do Terceiro</div>
+          <div class="timeline-title">Citação do Adquirente pelo Terceiro (Evictor)</div>
+          <p>O terceiro evictor ajuíza ação provando direito real anterior sobre a coisa e exige a restituição do bem.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 03 · Intervenção de Terceiros (Facultativa)</div>
+          <div class="timeline-title">Denunciação da Lide (Art. 125, I CPC)</div>
+          <p>Na contestação, o evicto pode denunciar a lide ao alienante para que este venha defender o domínio ou ser condenado no regresso.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 04 · Efetiva Perda do Bem &amp; Prescrição</div>
+          <div class="timeline-title">Trânsito em Julgado / Desapossamento (Prazo de 3 Anos)</div>
+          <p>Com a perda definitiva da coisa, nasce a pretensão indenizatória regressiva do evicto contra o alienante (prazo prescricional de 3 anos - Art. 206, §3º, V CC).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapamental" class="section">
+      <div class="section-label">Estrutura Visual Hierárquica</div>
+      <h2>🧠 Mapa Mental - Síntese Global da Evicção</h2>
+
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ EVICÇÃO (ARTS. 447 A 457 CC &amp; ART. 125 CPC)</div>
+        
+        <div class="mm-l1">1. ELEMENTOS DIDÁTICOS</div>
+        <div class="mm-l2">├─ Perda da coisa por decisão judicial ou ato administrativo (vício anterior)</div>
+        <div class="mm-l2">├─ Consequência prática do DIREITO DE SEQUELA do verdadeiro proprietário</div>
+        <div class="mm-l2">└─ Aplicabilidade: Contratos Onerosos e Hasta Pública (NÃO doação pura!)</div>
+        
+        <div class="mm-l1">2. VERBAS REPARATÓRIAS (ART. 450)</div>
+        <div class="mm-l2">├─ Restituição do preço (Valor da coisa NA ÉPOCA em que se evenceu)</div>
+        <div class="mm-l2">├─ Frutos restituídos ao terceiro + Despesas do contrato (ITBI, cartório)</div>
+        <div class="mm-l2">└─ Custas judiciais e honorários advocatícios do patrono do evicto</div>
+
+        <div class="mm-l1">3. AUTONOMIA PRIVADA &amp; CLÁUSULAS (ARTS. 448/449)</div>
+        <div class="mm-l2">├─ Exclusão total exigida: Ciência prévia + Assunção expressa do risco</div>
+        <div class="mm-l2">└─ Sem ciência/assunção: Evicto ainda recebe o preço base (Art. 449)</div>
+
+        <div class="mm-l1">4. EVICÇÃO PARCIAL (ART. 455)</div>
+        <div class="mm-l2">├─ Considerável ────► Opção entre Rescisão Total OU Abatimento proporcional</div>
+        <div class="mm-l2">└─ Não considerável ► Somente indenização proporcional (sem rescisão)</div>
+
+        <div class="mm-l1">5. PROCESSUAL &amp; SITUAÇÕES ESPECIAIS</div>
+        <div class="mm-l2">├─ Denunciação da Lide (Art. 125 CPC): Facultativa (não impede ação autônoma)</div>
+        <div class="mm-l2">├─ Prescrição: 3 Anos do trânsito em julgado (Art. 206, §3º, V CC)</div>
+        <div class="mm-l2">└─ Dação em Pagamento: Dívida restabelece-se; Fiador FICA LIBERADO!</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+    <section id="mnemonicos" class="section">
+      <div class="section-label">Memorização Rápida</div>
+      <h2>💡 Mnemônicos e Técnicas de Fixação</h2>
+
+      <div class="mnemonico-box">
+        <h3>Mnemônico 1: Verbas devidas ao Evicto — <span class="mnemonico-letter">P</span>.<span class="mnemonico-letter">F</span>.<span class="mnemonico-letter">D</span>.<span class="mnemonico-letter">C</span>.</h3>
+        <p><span class="mnemonico-letter">P</span><strong>reço da Época:</strong> Valor do bem na época da evicção (§ único).<br>
+        <span class="mnemonico-letter">F</span><strong>rutos:</strong> Indenização dos frutos devolvidos ao terceiro (Inc. I).<br>
+        <span class="mnemonico-letter">D</span><strong>espesas:</strong> Escritura, ITBI e prejuízos diretos (Inc. II).<br>
+        <span class="mnemonico-letter">C</span><strong>ustas e Honorários:</strong> Custas do processo e honorários advocatícios (Inc. III).</p>
+      </div>
+
+      <div class="mnemonico-box" style="background: linear-gradient(135deg, #78350f 0%, #451a03 100%);">
+        <h3>Mnemônico 2: Efeitos na Dação em Pagamento — <span class="mnemonico-letter">D</span>.<span class="mnemonico-letter">F</span>.</h3>
+        <p><span class="mnemonico-letter">D</span><strong>ívida Voltou:</strong> A dívida principal é restabelecida perante o devedor.<br>
+        <span class="mnemonico-letter">F</span><strong>iador Livre:</strong> O fiador NÃO volta a responder (fica liberado da fiança!).</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="exercicios" class="section">
+      <div class="section-label">Testes e Prática Didática</div>
+      <h2>📝 Revisão Ativa (Questões Comentadas)</h2>
+
+      <!-- Questão 1: CEBRASPE -->
+      <div class="exercise-box">
+        <p><span class="q-badge">CEBRASPE</span> <strong>01. (Adaptada/CEBRASPE) Em contrato de compra e venda comutativo, a estipulação de cláusula que exclui a responsabilidade pela evicção isenta o alienante da obrigação de restituir o preço pago, ainda que o adquirente não soubesse do risco da evicção. Julgue como Certo ou Errado.</strong></p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Item ERRADO.</strong><br>
+            <em>Fundamentação (Art. 449 do CC):</em> A cláusula de exclusão da garantia NÃO impede o direito de receber a devolução do preço pago se o adquirente não conhecia o risco ou se, informado, não o assumiu expressamente. Para a isenção total, exige-se informação prévia do risco E assunção expressa pelo comprador.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 2: FGV -->
+      <div class="exercise-box">
+        <p><span class="q-badge">FGV</span> <strong>02. Marcos adquiriu de Renato um imóvel por R$ 200.000 em 2021. Em 2026, Marcos sofreu evicção por sentença definitiva proferida em ação movida por Felipe (verdadeiro dono). Na data do trânsito em julgado da sentença (2026), o imóvel estava avaliado em R$ 350.000. De acordo com o Código Civil, a quantia devida por Renato a título de devolução do preço é:</strong></p>
+        <p>A) R$ 200.000, pois corresponde ao valor histórico efetivamente pago.<br>
+        B) R$ 350.000, pois o preço será o do valor da coisa na época em que se evenceu.<br>
+        C) R$ 150.000, apurado pela diferença da valorização.<br>
+        D) Isenta de devolução, pois a aquisição já contava com mais de 3 anos.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Alternativa Correta: B.</strong><br>
+            <em>Fundamentação (Art. 450, parágrafo único do CC):</em> O preço, seja a evicção total ou parcial, será o do <strong>valor da coisa na época em que se evenceu</strong>. Como a evicção se consumou em 2026 com o bem avaliado em R$ 350.000, este é o valor exato a ser restituído.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 3: FCC -->
+      <div class="exercise-box">
+        <p><span class="q-badge">FCC</span> <strong>03. Em uma relação jurídica de dação em pagamento, o credor aceitou um veículo oferecido pelo devedor para quitar uma dívida garantida por fiança prestada por terceiro. Meses depois, o credor perdeu o veículo por sentença judicial em favor de terceiro titular de direito anterior (evicção). Assinale a alternativa correta:</strong></p>
+        <p>A) A dação em pagamento permanece hígida, devendo o credor buscar ressarcimento em perdas e danos sem alterar a dívida.<br>
+        B) Restabelece-se a obrigação primitiva do devedor, inclusive mantendo-se a garantia do fiador original.<br>
+        C) Restabelece-se a obrigação primitiva do devedor, mas o fiador fica liberado da garantia.<br>
+        D) O fiador responde pelo valor do veículo evicto.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Alternativa Correta: C.</strong><br>
+            <em>Fundamentação Legal (Art. 359 do CC):</em> Se o credor for evicto da coisa recebida em pagamento, restabelecer-se-á a obrigação primitiva, <strong>ficando sem efeito a quitação dada, ressalvados os direitos de terceiros (o fiador fica liberado)</strong>.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 4: V ou F -->
+      <div class="exercise-box">
+        <p><span class="q-badge">V / F</span> <strong>04. (Julgue as afirmativas com V ou F):</strong></p>
+        <p>a) ( ) A garantia contra a evicção não subsiste nas arrematações efetuadas em hasta pública (leilão judicial).<br>
+        b) ( ) A falta de denunciação da lide no processo promovido pelo evictor impede o ajuizamento de ação autônoma de indenização contra o alienante.<br>
+        c) ( ) O prazo prescricional para o evicto pleitear indenização do alienante é de 3 anos, contado do trânsito em julgado da decisão que decretou a evicção.</p>
+        <details>
+          <summary>Ver gabarito comentado</summary>
+          <div class="gabarito-box">
+            <strong>Gabarito: F - F - V</strong><br>
+            <em>Justificativas:</em><br>
+            a) <strong>FALSO.</strong> Conforme o Art. 447 do CC, a garantia subsiste ainda que a aquisição se tenha realizado em hasta pública.<br>
+            b) <strong>FALSO.</strong> No CPC/2015 a denunciação da lide é facultativa; sua ausência não retira o direito à ação regressiva autônoma.<br>
+            c) <strong>VERDADEIRO.</strong> Aplica-se a prescrição trienal (Art. 206, §3º, V CC) com termo inicial na perda definitiva do bem.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 5: Discursiva -->
+      <div class="exercise-box">
+        <p><span class="q-badge">Discursiva</span> <strong>05. (Questão Prática) Explique o que ocorre com as benfeitorias necessárias e úteis realizadas pelo adquirente (evicto) ao sofrer a evicção do imóvel, considerando as regras do Código Civil.</strong></p>
+        <details>
+          <summary>Ver espelho de resposta</summary>
+          <div class="gabarito-box">
+            <strong>Espelho de Resposta Oficial:</strong><br>
+            De acordo com o Art. 453 do Código Civil, as benfeitorias necessárias ou úteis realizadas pelo evicto devem ser indenizadas primariamente pelo evictor (terceiro reivindicante). Contudo, caso essas benfeitorias não sejam abonadas/pagas pelo evictor ao evicto, surge a responsabilidade subsidiária do alienante (vendedor), que terá o dever de pagar o valor das referidas benfeitorias ao comprador evicto. Por outro lado, se o alienante tiver feito benfeitorias e estas foram pagas pelo evictor ao evicto, tal valor será abatido da restituição devida pelo alienante (Art. 454 CC).
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FLASHCARDS ══════════════════════════════ -->
+    <section id="flashcards" class="section">
+      <div class="section-label">Fixação Rápida</div>
+      <h2>⚡ Flashcards de Memória Instantânea</h2>
+
+      <div class="flashcards-grid">
+        <div class="flashcard">
+          <div class="flashcard-q">❓ Evicção aplica-se em doação pura e simples?</div>
+          <p><strong>Resposta:</strong> NÃO! Aplica-se apenas aos contratos onerosos (Art. 447 CC) e doações com encargo/onerosas.</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ O que exige a isenção TOTAL de indenizar com cláusula de exclusão?</div>
+          <p><strong>Resposta:</strong> Exige que o adquirente soubesse do risco E o tivesse assumido expressamente (Art. 449 CC).</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ Qual o prazo de prescrição para cobrar a evicção em juízo?</div>
+          <p><strong>Resposta:</strong> 3 (três) anos, contados a partir da perda definitiva da coisa (Art. 206, §3º, V CC).</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ O fiador volta a responder se o credor for evicto de bem em dação?</div>
+          <p><strong>Resposta:</strong> NÃO! A dívida com o devedor renasce, mas o fiador fica exonerado/liberado (Art. 359 CC).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL (CHEAT SHEET) ══════════════════════════════ -->
+    <section id="cheat-sheet" class="section">
+      <div class="card gold">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+        <ul style="line-height: 1.9; font-size: 1rem;">
+          <li>• <strong>Conceito (Art. 447):</strong> Perda da coisa adquirida em contrato oneroso por decisão judicial/administrativa que reconhece direito anterior de terceiro (evictor).</li>
+          <li>• <strong>Direito de Sequela:</strong> A evicção é a consequência prática do exercício do direito real de sequela pelo verdadeiro proprietário.</li>
+          <li>• <strong>Hasta Pública (Art. 447):</strong> A arrematação em leilão judicial TAMBÉM possui garantia de evicção.</li>
+          <li>• <strong>Verbas Devidas (Art. 450):</strong> Devolução do preço (valor da coisa NA ÉPOCA da evicção), frutos restituídos, despesas do contrato/prejuízos, custas e honorários advocatícios.</li>
+          <li>• <strong>Cláusula de Exclusão (Art. 449):</strong> Sem ciência + assunção do risco $\rightarrow$ o evicto ainda recebe o preço pago. Isenção total só se foi informado E assumiu o risco.</li>
+          <li>• <strong>Coisa Litigiosa (Art. 457):</strong> Se o comprador sabia que a coisa era alheia ou litigiosa, NÃO pode demandar pela evicção.</li>
+          <li>• <strong>Deterioração (Art. 451/452):</strong> Alienante responde mesmo se deteriorada (salvo dolo do comprador). Abate-se lucros auferidos com os estragos.</li>
+          <li>• <strong>Evicção Parcial (Art. 455):</strong> Se considerável $\rightarrow$ opção entre rescisão ou abatimento. Se não considerável $\rightarrow$ apenas indenização proporcional.</li>
+          <li>• <strong>Denunciação da Lide (Art. 125 CPC):</strong> É facultativa. Ausência de denunciação não perde o direito à ação autônoma de regresso.</li>
+          <li>• <strong>Prescrição (Art. 206, §3º, V CC):</strong> 3 anos do trânsito em julgado / perda do bem.</li>
+          <li>• <strong>Dação em Pagamento (Art. 359 CC):</strong> Restabelece a dívida original com o devedor; o fiador FICA LIBERADO.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PORTAL CORE JS SCRIPT INTEGRATION -->
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>

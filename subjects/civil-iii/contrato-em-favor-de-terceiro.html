@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contratos em Relacionamento com Terceiros | Direito Civil III | Material Didático Premium</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Integração com Estilos Globais do Portal -->
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Civil Royal Blue & Accent Gold */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-main, #f8fafc);
+      color: var(--text-main, #1e293b);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 15px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 850px;
+      margin: 0 auto;
+      font-family: 'Lora', serif;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .meta span {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Navegação Interna */
+    .summary-nav {
+      background: var(--card-bg, #ffffff);
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin: 30px 0;
+      box-shadow: var(--shadow-sm, 0 4px 6px -1px rgba(0,0,0,0.05));
+      border: 1px solid var(--border, #e5e7eb);
+    }
+
+    .summary-nav h3 {
+      margin-top: 0;
+      color: var(--p-700);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-nav ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .summary-nav a {
+      color: var(--p-600);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: var(--p-50);
+    }
+
+    .summary-nav a:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateX(4px);
+    }
+
+    /* Seções e Títulos */
+    .section {
+      margin: 40px 0;
+      padding-top: 10px;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 30px;
+      font-size: 1.35rem;
+    }
+
+    h4 {
+      color: var(--text-main);
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    /* Níveis de Explicação */
+    .level-box {
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+      border-left: 4px solid;
+    }
+
+    .level-1 {
+      background: #f0fdf4;
+      border-color: #22c55e;
+      color: #14532d;
+    }
+
+    .level-2 {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #1e3a8a;
+    }
+
+    .level-3 {
+      background: #faf5ff;
+      border-color: #a855f7;
+      color: #581c87;
+    }
+
+    .level-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .level-1 .level-badge { background: #dcfce7; color: #15803d; }
+    .level-2 .level-badge { background: #dbeafe; color: #1d4ed8; }
+    .level-3 .level-badge { background: #f3e8ff; color: #7e22ce; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 14px 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.05rem;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "▼";
+      font-size: 0.8rem;
+      color: var(--p-500);
+      transition: transform 0.3s ease;
+    }
+
+    .artigo[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lei-seca {
+      background: #fdf8f6;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 14px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .lei-comentario {
+      margin-top: 12px;
+      padding: 12px 15px;
+      background: #f8fafc;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #475569;
+      border: 1px dashed #cbd5e1;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #dbeafe;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Cards e Grid Layout */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--card-bg, #ffffff);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      border-top: 4px solid var(--p-500);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.green { border-top-color: #10B981; }
+    .card.purple { border-top-color: #8B5CF6; }
+    .card.red { border-top-color: #EF4444; }
+
+    /* Boxes Informativos */
+    .info-box {
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: var(--accent-gold); }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doutrina-box {
+      background: #f5f3ff;
+      border-color: #ddd6fe;
+      color: #5b21b6;
+    }
+    .doutrina-box .box-label { background: #8b5cf6; }
+
+    .juris-box {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .juris-box .box-label { background: #10b981; }
+
+    .attention-box {
+      background: #fff7ed;
+      border-color: #ffedd5;
+      color: #9a3412;
+    }
+    .attention-box .box-label { background: #f97316; }
+
+    /* Tabelas Comparativas */
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg, #ffffff);
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border, #e5e7eb);
+    }
+
+    tr:nth-child(even) {
+      background: var(--p-50);
+    }
+
+    /* Linha do Tempo CSS */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: var(--card-bg, #ffffff);
+      padding: 18px 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border, #e5e7eb);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 24px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    .timeline-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--p-500);
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--p-700);
+      margin: 5px 0;
+    }
+
+    /* Mapa Mental JetBrains Mono */
+    .mindmap-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60a5fa;
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 10px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 14px;
+      font-size: 1.05rem;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      margin-top: 6px;
+    }
+
+    .mm-l3 {
+      margin-left: 70px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    /* Mnemônicos */
+    .mnemonico-box {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin: 25px 0;
+    }
+
+    .mnemonico-letter {
+      background: var(--accent-gold);
+      color: #0f172a;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      margin-right: 4px;
+    }
+
+    /* Exercícios e Revisão Ativa */
+    .exercise-box {
+      background: var(--card-bg, #ffffff);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border, #e5e7eb);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .q-badge {
+      background: var(--p-500);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+
+    .gabarito-box {
+      margin-top: 14px;
+      padding: 15px;
+      background: #f0fdf4;
+      border-radius: 8px;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      font-size: 0.95rem;
+    }
+
+    /* Flashcards */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .flashcard-q {
+      font-weight: 700;
+      color: var(--p-700);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    /* Dark Mode Adjustments */
+    [data-theme="dark"] .artigo,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .exercise-box,
+    [data-theme="dark"] .flashcard,
+    [data-theme="dark"] .summary-nav,
+    [data-theme="dark"] .timeline-item {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    [data-theme="dark"] tr:nth-child(even) {
+      background: #1e293b;
+    }
+
+    [data-theme="dark"] td {
+      border-bottom-color: #334155;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- ══════════════════════════════ HERO SECTION ══════════════════════════════ -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Civil III</div>
+      <h1>Contratos em Favor e por Ato de Terceiros</h1>
+      <div class="subtitle">Guia Avançado: Estipulação em Favor de Terceiro, Promessa de Fato de Terceiro e Contrato com Pessoa a Declarar</div>
+      <div class="meta">
+        <span>⚖️ Arts. 436 a 440 e 467 a 471 do Código Civil</span>
+        <span>📚 Teoria Geral dos Contratos</span>
+        <span>🛡️ Foco em OAB &amp; Concursos Públicos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR (MAIN NAV BAR) -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">Estipulação em Favor de Terceiro</a>
+        <a href="#modulo2" class="nav-item">Promessa de Fato de Terceiro</a>
+        <a href="#modulo3" class="nav-item">Pessoa a Declarar</a>
+        <a href="#comparativo" class="nav-item">Quadro Comparativo</a>
+        <a href="#exercicios" class="nav-item">Revisão Ativa</a>
+        <a href="#cheat-sheet" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ SUMÁRIO INTERATIVO ══════════════════════════════ -->
+    <nav class="summary-nav">
+      <h3>🔍 Sumário do Módulo</h3>
+      <ul>
+        <li><a href="#objetivos">🎯 Objetivos de Aprendizagem</a></li>
+        <li><a href="#modulo1">🎁 Módulo 01: Estipulação em Favor de Terceiro (Arts. 436-438)</a></li>
+        <li><a href="#modulo2">🤝 Módulo 02: Promessa de Fato de Terceiro (Arts. 439-440)</a></li>
+        <li><a href="#modulo3">🎭 Módulo 03: Contrato com Pessoa a Declarar (Arts. 467-471)</a></li>
+        <li><a href="#comparativo">📊 Quadro Comparativo dos Três Institutos</a></li>
+        <li><a href="#fluxograma">⏳ Linha do Tempo &amp; Procedimento</a></li>
+        <li><a href="#mapamental">🧠 Mapa Mental Visual</a></li>
+        <li><a href="#mnemonicos">💡 Mnemônicos &amp; Macetes</a></li>
+        <li><a href="#exercicios">📝 Revisão Ativa (Questões Comentadas)</a></li>
+        <li><a href="#flashcards">⚡ Flashcards de Fixação</a></li>
+        <li><a href="#cheat-sheet">🚀 Resumão de Véspera</a></li>
+      </ul>
+    </nav>
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos" class="section">
+      <div class="section-label">Introdução Didática</div>
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao concluir o estudo deste módulo estruturado, você estará plenamente preparado para:</p>
+      <ul>
+        <li>Compreender as exceções ao <strong>Princípio da Relatividade dos Efeitos Contratuais</strong> no Direito Civil brasileiro;</li>
+        <li>Distinguir a dinâmica dos papéis jurídicos do <strong>Estipulante (A)</strong>, <strong>Promitente (B)</strong> e <strong>Beneficiário (C)</strong> na Estipulação em Favor de Terceiro;</li>
+        <li>Dominar as regras de <strong>irretratabilidade</strong> (Art. 437) e a faculdade de <strong>substituição do terceiro</strong> por ato <em>inter vivos</em> ou testamento (Art. 438);</li>
+        <li>Manejar a <strong>Promessa de Fato de Terceiro</strong>, a responsabilidade por perdas e danos (Art. 439), a <strong>exceção conjugal</strong> (parágrafo único) e a <strong>exoneração</strong> pela aceitação direta (Art. 440);</li>
+        <li>Aplicar o regime do <strong>Contrato com Pessoa a Declarar</strong> (Arts. 467 a 471), o prazo de 5 dias para nomeação, a exigência de simetria de forma e o efeito retroativo <em>ex tunc</em>;</li>
+        <li>Identificar as hipóteses em que o contrato produz efeitos <strong>exclusivamente entre os contratantes originários</strong> (ausência de indicação, recusa, incapacidade ou insolvência).</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. MÓDULO 01 ══════════════════════════════ -->
+    <section id="modulo1" class="section">
+      <div class="section-label">Módulo 01</div>
+      <h2>Estipulação em Favor de Terceiro (Arts. 436 a 438 CC)</h2>
+
+      <div class="level-box level-1">
+        <span class="level-badge">Nível 1 · Explicação Intuitiva</span>
+        <p>Imagine que um pai contrata um seguro de vida com uma seguradora, estabelecendo que, em caso de sua morte, o dinheiro da indenização será pago ao seu filho. O pai é o <strong>estipulante</strong>, a seguradora é a <strong>promitente</strong> e o filho é o <strong>terceiro beneficiário</strong>. O filho recebe a vantagem financeira sem ter assinado o contrato nem pago nada.</p>
+      </div>
+
+      <div class="level-box level-2">
+        <span class="level-badge">Nível 2 · Explicação Técnica (Graduação)</span>
+        <p>A estipulação em favor de terceiro ocorre quando duas partes (estipulante A e promitente B) convencionam em contrato que a prestação resultante do ajuste reverterá em benefício de um terceiro (C), alheio à formação do vínculo contratual. A capacidade jurídica é exigida <strong>apenas do estipulante e do promitente</strong>; o beneficiário pode ser qualquer pessoa (capaz ou incapaz, determinada ou determinável, e até nascituro).</p>
+      </div>
+
+      <div class="level-box level-3">
+        <span class="level-badge">Nível 3 · Foco em Concursos de Alto Nível</span>
+        <p>Configura nítida exceção ao postulado da relatividade dos contratos (<em>res inter alios acta</em>). A atribuição patrimonial ao terceiro nasce diretamente do contrato original. Pontos de alta cobrança: <strong>1) Legitimidade Concorrente:</strong> tanto o estipulante quanto o terceiro podem exigir a obrigação (Art. 436). <strong>2) Trava da Exoneração:</strong> se o contrato atribui ao terceiro o direito de reclamar a execução, o estipulante perde o poder de exonerar unilateralmente o devedor (Art. 437).</p>
+      </div>
+
+      <!-- Doutrina Pertinente -->
+      <div class="info-box doutrina-box">
+        <span class="box-label">📚 Doutrina Relevante</span>
+        <p><strong>Carlos Roberto Gonçalves:</strong> <em>"Dá-se a estipulação em favor de terceiro, pois, quando, no contrato celebrado entre duas pessoas, denominadas estipulante e promitente, convenciona-se que a vantagem resultante do ajuste reverterá em benefício de terceira pessoa, alheia à formação do vínculo contratual. Nela, como se vê, figuram três personagens: o estipulante, o promitente e o beneficiário, este último estranho à convenção. Por conseguinte, a capacidade só é exigida dos dois primeiros, pois qualquer pessoa pode ser contemplada com a estipulação, seja ou não capaz."</em></p>
+      </div>
+
+      <h3>1.1 Requisitos e Funcionamento dos Arts. 436 a 438 do CC</h3>
+
+      <div class="grid2">
+        <div class="card blue">
+          <h4>Exigibilidade da Prestação (Art. 436)</h4>
+          <p>O <strong>estipulante (A)</strong> tem legitimidade para exigir que o <strong>promitente (B)</strong> cumpra a prestação. O <strong>terceiro (C)</strong> também pode exigi-la, mas fica estritamente sujeito às cláusulas e condições contratuais pactuadas.</p>
+        </div>
+        <div class="card gold">
+          <h4>Vedação da Exoneração (Art. 437)</h4>
+          <p>Se o contrato conferiu ao terceiro o direito de exigir a execução, o estipulante <strong>NÃO pode exonerar o devedor sozinho</strong>. O direito do terceiro torna-se protegido contra a desistência unilateral do estipulante.</p>
+        </div>
+      </div>
+
+      <div class="card purple" style="margin-top:20px;">
+        <h4>Substituição do Beneficiário (Art. 438)</h4>
+        <p>O estipulante pode reservar-se o direito de <strong>substituir o terceiro indicado</strong> a qualquer tempo antes do cumprimento, <strong>independente da concordância</strong> do devedor ou do terceiro primitivo! A substituição pode ser feita por ato <em>inter vivos</em> (declaração em vida) ou por disposição de última vontade (testamento - Parágrafo único).</p>
+      </div>
+
+      <!-- Lei Seca Interativa Arts. 436 a 438 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 436 do Código Civil - Legitimidade para Exigir a Prestação</summary>
+        <div class="lei-seca">
+          <p>Art. 436. O que estipula em favor de terceiro pode exigir o cumprimento da obrigação.</p>
+          <p>Parágrafo único. Ao terceiro, em favor de quem se estipulou a obrigação, <span class="kw">também é permitido exigi-la</span>, ficando, todavia, <span class="kw">sujeito às condições e normas do contrato</span>, se a ele anuir, e o estipulante não o inovar nos termos do art. 438.</p>
+        </div>
+        <div class="lei-comentario">
+          💡 <strong>Exemplo do Texto Fonte:</strong> Uma empresa (A) contrata uma editora (B) para imprimir e entregar 500 exemplares de um manual a uma ONG (C). A empresa estipulante pode exigir da editora a entrega; a ONG beneficiária também poderá exigir a entrega, observadas as especificações do contrato.
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 437 do Código Civil - Proibição de Exoneração Unilateral do Devedor</summary>
+        <div class="lei-seca">
+          <p>Art. 437. Se ao terceiro, em favor de quem se fez o contrato, se deixar o direito de reclamar-lhe a execução, <span class="kw">não poderá o estipulante exonerar o devedor</span>.</p>
+        </div>
+        <div class="lei-comentario">
+          💡 <strong>Exemplo do Texto Fonte:</strong> João (A) contrata uma construtora (B) para que construa uma rampa de acessibilidade no imóvel de sua amiga Ana (C), e expressamente confere a Ana o direito de exigir a obra. João não poderá, depois, exonerar a construtora dessa obrigação sem o consentimento de Ana.
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 438 do Código Civil - Substituição do Beneficiário</summary>
+        <div class="lei-seca">
+          <p>Art. 438. O estipulante pode reservar-se o direito de <span class="kw">substituir o terceiro designado</span> no contrato, independentemente da sua anuência e da do outro contratante.</p>
+          <p>Parágrafo único. A substituição pode ser feita por <span class="kw">ato entre vivos ou por disposição de última vontade</span>.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 2. MÓDULO 02 ══════════════════════════════ -->
+    <section id="modulo2" class="section">
+      <div class="section-label">Módulo 02</div>
+      <h2>Promessa de Fato de Terceiro (Arts. 439 a 440 CC)</h2>
+
+      <div class="level-box level-1">
+        <span class="level-badge">Nível 1 · Explicação Intuitiva</span>
+        <p>Imagine que um empresário artístico (A) promete a um contratante (C) que um cantor famoso (B) fará um show em seu evento. O cantor não assinou nada ainda. Se o cantor B se recusar a fazer o show, o empresário A terá que pagar indenização por perdas e danos a C, pois prometeu algo de uma pessoa que não estava obrigada.</p>
+      </div>
+
+      <div class="level-box level-2">
+        <span class="level-badge">Nível 2 · Explicação Técnica (Graduação)</span>
+        <p>Na Promessa de Fato de Terceiro (contrato por outrem), o promitente (A) assume perante o credor/beneficiário (C) a obrigação de resultado de obter a prestação ou conduta de um terceiro (B). Como ninguém pode vincular um terceiro sem sua manifestação de vontade, a obrigação do promitente é uma <strong>obrigação de garantia</strong>. Se o terceiro não aceitar ou não executar, o promitente responde por <strong>perdas e danos</strong> (Art. 439 CC).</p>
+      </div>
+
+      <div class="level-box level-3">
+        <span class="level-badge">Nível 3 · Foco em Concursos de Alto Nível</span>
+        <p>Diferença fundamental: na estipulação em favor de terceiro o terceiro ganha um benefício; na promessa de fato de terceiro, promete-se uma prestação a ser cumprida pelo terceiro. Exceções e liberação: <strong>1) Exceção Conjugal (Art. 439, parágrafo único):</strong> afasta a indenização se o terceiro for cônjuge do promitente, dependendo de sua outorga, e a indenização for recair sobre bens comuns/dele. <strong>2) Exoneração por Aceitação Direta (Art. 440):</strong> se o terceiro concorda expressamente e assume a obrigação, o promitente fica desvinculado. Se o terceiro descumprir depois de ter assumido, responde sozinho perante o credor!</p>
+      </div>
+
+      <!-- Doutrina Pertinente -->
+      <div class="info-box doutrina-box">
+        <span class="box-label">📚 Doutrina Relevante</span>
+        <p><strong>Carlos Roberto Gonçalves:</strong> <em>"Trata-se do denominado contrato por outrem ou promessa de fato de terceiro. O único vinculado é o que promete, assumindo obrigação de fazer que, não sendo executada, resolve-se em perdas e danos. Isto porque ninguém pode vincular terceiro a uma obrigação. As obrigações têm como fonte somente a própria manifestação da vontade do devedor, a lei ou eventual ato ilícito por ele praticado."</em></p>
+      </div>
+
+      <!-- Lei Seca Interativa Arts. 439 e 440 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 439 do Código Civil - Responsabilidade do Promitente por Perdas e Danos</summary>
+        <div class="lei-seca">
+          <p>Art. 439. Aquele que tiver prometido fato de terceiro <span class="kw">responderá por perdas e danos</span>, quando este o não executar.</p>
+          <p>Parágrafo único. Tal responsabilidade <span class="kw">não existirá se o terceiro for o cônjuge do promitente</span>, dependendo da sua anuência o ato a ser praticado, e desde que, pelo regime do casamento, a indenização, de algum modo, venha a recair sobre os seus bens.</p>
+        </div>
+        <div class="lei-comentario">
+          💡 <strong>Exemplo do Texto Fonte:</strong> Uma ONG (A) contrata uma empresa de alimentação (B) para fornecer 100 refeições a famílias carentes (C) mediante vales. A ONG anuncia os vales aos beneficiários; se ao chegar no local a empresa estiver fechada e não entregar o alimento, a ONG (A) responde por perdas e danos a quem ficou sem a refeição.
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 440 do Código Civil - Exoneração do Promitente pela Anuência do Terceiro</summary>
+        <div class="lei-seca">
+          <p>Art. 440. <span class="kw">Nenhuma obrigação haverá</span> para quem se comprometer por outrem, se este, <span class="kw">depois de se ter obrigado</span>, faltar à prestação.</p>
+        </div>
+        <div class="lei-comentario">
+          ⚠️ <strong>Pegadinha Clássica:</strong> Se o terceiro (B) aceita a promessa e assume a obrigação contratualmente perante o credor (C), a dívida de garantia de A está cumprida! Se B inadimplir posteriormente, C deve processar B diretamente; A está completamente exonerado de responsabilidade.
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 3. MÓDULO 03 ══════════════════════════════ -->
+    <section id="modulo3" class="section">
+      <div class="section-label">Módulo 03</div>
+      <h2>Contrato com Pessoa a Declarar (Arts. 467 a 471 CC)</h2>
+
+      <div class="level-box level-1">
+        <span class="level-badge">Nível 1 · Explicação Intuitiva</span>
+        <p>Imagine que um empresário quer comprar um terreno sem revelar sua identidade para evitar que o vendedor aumente o preço. Ele manda um representante assinar o contrato contendo uma cláusula dizendo: "Em 5 dias indicarei quem é o verdadeiro comprador". Uma vez indicado o empresário e aceita a indicação, o contrato funciona retroativamente como se ele tivesse comprado desde o primeiro dia.</p>
+      </div>
+
+      <div class="level-box level-2">
+        <span class="level-badge">Nível 2 · Explicação Técnica (Graduação)</span>
+        <p>Inovação do Código Civil de 2002 (Arts. 467 a 471), o Contrato com Pessoa a Declarar (cláusula <em>pro amico</em> ou <em>electio amici</em>) permite que um dos contraentes (A) reserve a faculdade de indicar a pessoa (C) que adquirirá os direitos e assumirá as obrigações contratuais em seu lugar perante o contratado (B). A indicação deve ser comunicada em <strong>5 dias</strong> (salvo prazo diverso) e a aceitação exige a <strong>mesma forma do contrato</strong> (Art. 468).</p>
+      </div>
+
+      <div class="level-box level-3">
+        <span class="level-badge">Nível 3 · Foco em Concursos de Alto Nível</span>
+        <p>Natureza jurídica: contrato sob condição resolutiva para o nomeante e condição suspensiva para o nomeado. Uma vez aperfeiçoada a nomeação (<em>electio</em>), o indicado entra na relação jurídica com <strong>efeitos retroativos (<em>ex tunc</em>)</strong> desde a data da celebração originária (Art. 469). Hipóteses de ineficácia da nomeação: se a indicação recair em pessoa <strong>incapaz</strong> ou <strong>insolvente</strong> no momento da indicação, ou se houver recusa, o contrato produzirá seus efeitos <strong>EXCLUSIVAMENTE entre os contratantes originários (Arts. 470 e 471)</strong>.</p>
+      </div>
+
+      <!-- Doutrina Pertinente -->
+      <div class="info-box doutrina-box">
+        <span class="box-label">📚 Doutrina Relevante</span>
+        <p><strong>Carlos Roberto Gonçalves:</strong> <em>"A disciplina do contrato com pessoa a declarar, ou nomear, é uma das inovações do Código Civil de 2002, regulado nos arts. 467 a 471. Nessa modalidade, um dos contraentes pode reservar-se o direito de indicar outra pessoa para, em seu lugar, adquirir os direitos e assumir as obrigações dele decorrentes (CC, art. 467)."</em></p>
+      </div>
+
+      <!-- Lei Seca Interativa Arts. 467 a 471 -->
+      <details class="artigo">
+        <summary>⚖️ Art. 467 do Código Civil - Reserva da Faculdade de Indicação</summary>
+        <div class="lei-seca">
+          <p>Art. 467. No momento da conclusão do contrato, pode uma das partes reservar-se a <span class="kw">faculdade de indicar a pessoa</span> que deve adquirir os direitos e assumir as obrigações dele decorrentes.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 468 do Código Civil - Prazo de 5 Dias e Simetria de Formas</summary>
+        <div class="lei-seca">
+          <p>Art. 468. Essa indicação deve ser comunicada à outra parte no <span class="kw">prazo de cinco dias</span> da conclusão do contrato, se outro não tiver sido estipulado.</p>
+          <p>Parágrafo único. A aceitação da pessoa nomeada não será eficaz se não se revestir da <span class="kw">mesma forma que as partes usaram</span> para o contrato.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 469 do Código Civil - Efeitos Retroativos (Ex Tunc) da Nomeação</summary>
+        <div class="lei-seca">
+          <p>Art. 469. A pessoa, nomeada de conformidade com os artigos antecedentes, adquire os direitos e assume as obrigações decorrentes do contrato, <span class="kw">a partir do momento em que este foi celebrado</span>.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Arts. 470 e 471 do Código Civil - Eficácia restrita aos Contratantes Originários</summary>
+        <div class="lei-seca">
+          <p>Art. 470. O contrato será eficaz <span class="kw">somente entre os contratantes originários</span>:</p>
+          <p>I - se não houver indicação de pessoa, ou se o nomeado se recusar a aceitá-la;</p>
+          <p>II - se a pessoa nomeada era <span class="kw">insolvente</span>, e a outra pessoa o desconhecia no momento da indicação.</p>
+          <p>Art. 471. Se a pessoa a nomear era <span class="kw">incapaz ou insolvente</span> no momento da nomeação, o contrato produzirá seus efeitos entre os contratantes originários.</p>
+        </div>
+        <div class="lei-comentario">
+          💡 <strong>Resumo das Vedações:</strong> O sistema protege a outra parte contratante. Se o nomeado for insolvente (desconhecido da outra parte) ou incapaz, o negócio NÃO se transfere a ele, permanecendo vinculado o contratante originário!
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ QUADRO COMPARATIVO ══════════════════════════════ -->
+    <section id="comparativo" class="section">
+      <div class="section-label">Matriz Sintética</div>
+      <h2>📊 Quadro Comparativo dos Três Institutos Contratuais</h2>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto / Instituto</th>
+              <th>Estipulação em Favor de Terceiro (Arts. 436-438)</th>
+              <th>Promessa de Fato de Terceiro (Arts. 439-440)</th>
+              <th>Contrato com Pessoa a Declarar (Arts. 467-471)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Objeto do Negócio</strong></td>
+              <td>Atribui uma <strong>vantagem / benefício</strong> gratuito a um terceiro.</td>
+              <td>Promete a <strong>atuação / prestação</strong> a ser cumprida por um terceiro.</td>
+              <td>Reserva a faculdade de <strong>substituir o próprio contratante</strong> por terceiro.</td>
+            </tr>
+            <tr>
+              <td><strong>Papel do Terceiro</strong></td>
+              <td>É o Beneficiário (C). Não assume dívidas.</td>
+              <td>É o Devedor/Executante (B). Deve concordar em agir.</td>
+              <td>É o Nomeado (C). Assume a posição contratual inteira.</td>
+            </tr>
+            <tr>
+              <td><strong>Consequência do Descumprimento</strong></td>
+              <td>Estipulante ou Terceiro podem exigir execução forçada do promitente.</td>
+              <td>Promitente responde por <strong>perdas e danos</strong> (salvo exceção conjugal ou se o terceiro assumir).</td>
+              <td>Efeitos permanecem <strong>apenas entre contratantes originários</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Prazo Legal Específico</strong></td>
+              <td>Não há prazo decadencial rígido (segue prazos do contrato).</td>
+              <td>Não há prazo rígido (exige aceitação).</td>
+              <td><strong>5 dias</strong> da conclusão (salvo estipulação em contrário) - Art. 468.</td>
+            </tr>
+            <tr>
+              <td><strong>Exigência de Forma</strong></td>
+              <td>Livre, conforme o contrato principal.</td>
+              <td>Livre. Exige anuência conjugal em hipóteses específicas.</td>
+              <td>Aceitação exige a <strong>mesma forma</strong> usada no contrato (Art. 468, par. único).</td>
+            </tr>
+            <tr>
+              <td><strong>Efeito Temporal da Subrogação</strong></td>
+              <td>Vigorante a partir da aceitação/estipulação.</td>
+              <td>Se o terceiro aceitar, exonera o promitente para o futuro (Art. 440).</td>
+              <td>Efeito retroativo <strong>EX TUNC</strong> (desde a celebração originária - Art. 469).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ LINHA DO TEMPO / FLUXOGRAMA ══════════════════════════════ -->
+    <section id="fluxograma" class="section">
+      <div class="section-label">Esquema Temporal</div>
+      <h2>⏳ Linha do Tempo: Iter do Contrato com Pessoa a Declarar</h2>
+
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 01 · Celebração Originária</div>
+          <div class="timeline-title">Assinatura com Cláusula Pro Amico (Art. 467)</div>
+          <p>O contratante originário (A) celebra o contrato com o contratado (B), inserindo a reserva expressa de nomear terceiro posteriormente.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 02 · Prazo Legal / Convencional</div>
+          <div class="timeline-title">Decurso do Prazo de 5 Dias (Art. 468)</div>
+          <p>Inicia-se a contagem do prazo de 5 dias corridos (ou o prazo contratual estipulado) para realizar a indicação formal do terceiro (C).</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 03 · Notificação e Simetria de Forma</div>
+          <div class="timeline-title">Comunicação e Aceitação por Escrito (Art. 468, Parágrafo Único)</div>
+          <p>A nomeação é comunicada a B acompanhada da aceitação expressa de C, que deve observar rigorosamente a mesma forma do contrato originário.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">Passo 04 · Eficácia Retroativa</div>
+          <div class="timeline-title">Entrada de C com Efeitos Ex Tunc (Art. 469)</div>
+          <p>Com a aceitação válida, C assume a posição contratual inteira com efeitos retroativos à data da celebração originária. Se houver recusa, insolvência ou incapacidade, o contrato fica válido apenas entre A e B (Arts. 470/471).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapamental" class="section">
+      <div class="section-label">Estrutura Visual Hierárquica</div>
+      <h2>🧠 Mapa Mental - Contratos e Terceiros</h2>
+
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ CONTRATOS EM RELAÇÃO A TERCEIROS (ARTS. 436-440 &amp; 467-471 CC)</div>
+        
+        <div class="mm-l1">1. ESTIPULAÇÃO EM FAVOR DE TERCEIRO (ARTS. 436-438)</div>
+        <div class="mm-l2">├─ Estipulante (A) + Promitente (B) contratam benefício para Terceiro (C)</div>
+        <div class="mm-l2">├─ Legitimidade Concorrente: A e C podem exigir a prestação (Art. 436)</div>
+        <div class="mm-l2">├─ Vedação de Exoneração: Se C tem direito de exigir, A não pode exonerar B (Art. 437)</div>
+        <div class="mm-l2">└─ Substituição: A pode trocar C a qualquer tempo por ato inter vivos ou testamento (Art. 438)</div>
+        
+        <div class="mm-l1">2. PROMESSA DE FATO DE TERCEIRO (ARTS. 439-440)</div>
+        <div class="mm-l2">├─ Promitente (A) promete a (C) que Terceiro (B) cumprirá um fato</div>
+        <div class="mm-l2">├─ Inadimplemento de B ──► A responde por PERDAS E DANOS (Art. 439)</div>
+        <div class="mm-l2">├─ Exceção Conjugal ──────► Cônjuge sem anuência + impacto nos bens comuns (Art. 439, par. único)</div>
+        <div class="mm-l2">└─ Exoneração de A ───────► Se B concordar e se obrigar formalmente (Art. 440)</div>
+
+        <div class="mm-l1">3. CONTRATO COM PESSOA A DECLARAR (ARTS. 467-471)</div>
+        <div class="mm-l2">├─ Faculdade de indicar o verdadeiro contratante ulteriormente (Art. 467)</div>
+        <div class="mm-l2">├─ Prazo de 5 Dias + Simetria de Formas para a aceitação (Art. 468)</div>
+        <div class="mm-l2">├─ Efeito Retroativo EX TUNC (Art. 469)</div>
+        <div class="mm-l2">└─ Ineficácia / Manutenção entre Originários: Se recusa, incapacidade ou insolvência (Arts. 470/471)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+    <section id="mnemonicos" class="section">
+      <div class="section-label">Memorização Rápida</div>
+      <h2>💡 Mnemônicos e Técnicas de Fixação</h2>
+
+      <div class="mnemonico-box">
+        <h3>Mnemônico 1: Regras do Contrato com Pessoa a Declarar — <span class="mnemonico-letter">C</span>.<span class="mnemonico-letter">I</span>.<span class="mnemonico-letter">N</span>.<span class="mnemonico-letter">C</span>.<span class="mnemonico-letter">O</span>.</h3>
+        <p><span class="mnemonico-letter">C</span><strong>inco dias:</strong> Prazo legal padrão para indicação (Art. 468).<br>
+        <span class="mnemonico-letter">I</span><strong>gual forma:</strong> Aceitação deve ter a mesma forma do contrato.<br>
+        <span class="mnemonico-letter">N</span><strong>omeação aceite:</strong> Gera efeito retroativo <em>ex tunc</em> (Art. 469).<br>
+        <span class="mnemonico-letter">C</span><strong>apaz e Solvente:</strong> Se incapaz/insolvente, o contrato fica só entre os originários.<br>
+        <span class="mnemonico-letter">O</span><strong>riginários respondem:</strong> Se recusa ou não indicação (Art. 470).</p>
+      </div>
+
+      <div class="mnemonico-box" style="background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);">
+        <h3>Mnemônico 2: Promessa de Fato de Terceiro — <span class="mnemonico-letter">P</span>.<span class="mnemonico-letter">E</span>.<span class="mnemonico-letter">R</span>.<span class="mnemonico-letter">D</span>.<span class="mnemonico-letter">A</span>.</h3>
+        <p><span class="mnemonico-letter">P</span><strong>rometeu fato alheio?</strong> Assume obrigação de garantia.<br>
+        <span class="mnemonico-letter">E</span><strong>xecução negada pelo terceiro?</strong> Responde por perdas e danos!<br>
+        <span class="mnemonico-letter">R</span><strong>enúncia / Exoneração:</strong> Ocorre se o terceiro aceitar e se obrigar diretamente (Art. 440).<br>
+        <span class="mnemonico-letter">D</span><strong>ispensada indenização:</strong> Na exceção conjugal (Art. 439, parágrafo único).<br>
+        <span class="mnemonico-letter">A</span><strong>ceitação posterior do terceiro:</strong> Desvincula o promitente inicial.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="exercicios" class="section">
+      <div class="section-label">Testes e Prática Didática</div>
+      <h2>📝 Revisão Ativa (Questões Comentadas)</h2>
+
+      <!-- Questão 1: CEBRASPE -->
+      <div class="exercise-box">
+        <p><span class="q-badge">CEBRASPE</span> <strong>01. (Adaptada/CEBRASPE) Na estipulação em favor de terceiro, se o contrato conferir ao beneficiário o direito de reclamar a execução da prestação, o estipulante ainda assim poderá exonerar o devedor unilateralmente a qualquer tempo. Julgue como Certo ou Errado.</strong></p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Item ERRADO.</strong><br>
+            <em>Fundamentação (Art. 437 do CC):</em> Se ao terceiro se deixar o direito de reclamar a execução da obrigação, o estipulante NÃO poderá exonerar o devedor sem a anuência do beneficiário.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 2: FGV -->
+      <div class="exercise-box">
+        <p><span class="q-badge">FGV</span> <strong>02. Bruno celebrou contrato de compra e venda de um automóvel com Carlos. No contrato, constou cláusula "com pessoa a declarar", reservando a Bruno a faculdade de indicar o comprador definitivo. Nenhuma das partes estipulou prazo específico para a indicação. Diante das regras do Código Civil:</strong></p>
+        <p>A) A indicação deve ser comunicada a Carlos no prazo de 15 dias corridos.<br>
+        B) A indicação deve ser comunicada a Carlos no prazo de 5 dias da conclusão do contrato.<br>
+        C) O contrato é nulo por conter cláusula potestativa pura.<br>
+        D) A aceitação do nomeado pode ser verbal mesmo se o contrato for por escritura pública.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Alternativa Correta: B.</strong><br>
+            <em>Fundamentação (Art. 468 do CC):</em> A indicação da pessoa a declarar deve ser comunicada à outra parte no prazo legal supletivo de 5 (cinco) dias da conclusão do contrato, caso outro prazo não tenha sido estipulado pelas partes.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 3: FCC -->
+      <div class="exercise-box">
+        <p><span class="q-badge">FCC</span> <strong>03. Daniel prometeu a Eduardo que um famoso pintor (Fernando) realizaria o retrato da família de Eduardo. Fernando recusou-se a realizar a pintura. Diante da disciplina da Promessa de Fato de Terceiro no Código Civil:</strong></p>
+        <p>A) Fernando responderá por perdas e danos perante Eduardo, pois seu nome foi citado.<br>
+        B) Daniel responderá por perdas e danos perante Eduardo por descumprimento da promessa.<br>
+        C) O contrato é nulo por impossibilidade jurídica do objeto.<br>
+        D) Daniel e Fernando responderão solidariamente por perdas e danos.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito-box">
+            <strong>Alternativa Correta: B.</strong><br>
+            <em>Fundamentação (Art. 439 do CC):</em> Aquele que tiver prometido fato de terceiro responderá por perdas e danos quando este o não executar. Como Fernando não se obrigou previamente, a responsabilidade exclusiva pelo inadimplemento recai sobre Daniel.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 4: V ou F -->
+      <div class="exercise-box">
+        <p><span class="q-badge">V / F</span> <strong>04. (Julgue as afirmativas com V ou F):</strong></p>
+        <p>a) ( ) Na estipulação em favor de terceiro, a capacidade jurídica é exigida tanto dos contratantes quanto do beneficiário contemplado.<br>
+        b) ( ) Na promessa de fato de terceiro, se o terceiro, após ter concordado e se obrigado, faltar à prestação, o promitente originário fica exonerado de responsabilidade.<br>
+        c) ( ) No contrato com pessoa a declarar, a aceitação do nomeado gera efeitos retroativos (ex tunc) a partir do momento da celebração do contrato.</p>
+        <details>
+          <summary>Ver gabarito comentado</summary>
+          <div class="gabarito-box">
+            <strong>Gabarito: F - V - V</strong><br>
+            <em>Justificativas:</em><br>
+            a) <strong>FALSO.</strong> A capacidade só é exigida do estipulante e do promitente. O terceiro beneficiário pode ser incapaz ou até nascituro.<br>
+            b) <strong>VERDADEIRO.</strong> Conforme o Art. 440 do CC, se o terceiro se obrigou e depois faltou à prestação, exonera-se o promitente.<br>
+            c) <strong>VERDADEIRO.</strong> Conforme o Art. 469 do CC, a nomeação válida retroage à data da celebração originária (*ex tunc*).
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 5: Discursiva -->
+      <div class="exercise-box">
+        <p><span class="q-badge">Discursiva</span> <strong>05. (Questão Prática) O que ocorre com o Contrato com Pessoa a Declarar se a pessoa indicada for incapaz ou insolvente no momento da nomeação, e a outra parte desconhecia tal fato? Fundamente no Código Civil.</strong></p>
+        <details>
+          <summary>Ver espelho de resposta</summary>
+          <div class="gabarito-box">
+            <strong>Espelho de Resposta Oficial:</strong><br>
+            Nos termos dos Arts. 470, inciso II, e 471 do Código Civil, se a pessoa nomeada era incapaz ou insolvente no momento da nomeação (e a insolvência era desconhecida da outra parte), a indicação NÃO produzirá efeitos em relação ao terceiro nomeado. Em tais hipóteses, o contrato permanecerá perfeitamente eficaz e válido <strong>exclusivamente entre os contratantes originários</strong>, resguardando a segurança jurídica da contraparte.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FLASHCARDS ══════════════════════════════ -->
+    <section id="flashcards" class="section">
+      <div class="section-label">Fixação Rápida</div>
+      <h2>⚡ Flashcards de Memória Instantânea</h2>
+
+      <div class="flashcards-grid">
+        <div class="flashcard">
+          <div class="flashcard-q">❓ O estipulante pode substituir o terceiro sem a concordância dele?</div>
+          <p><strong>Resposta:</strong> SIM! O estipulante pode substituir o beneficiário por ato <em>inter vivos</em> ou testamento sem anuência de ninguém (Art. 438 CC).</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ Qual o prazo legal supletivo no Contrato com Pessoa a Declarar?</div>
+          <p><strong>Resposta:</strong> 5 (cinco) dias da conclusão do contrato para comunicar a indicação (Art. 468 CC).</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ Qual a exigência formal para a aceitação da pessoa nomeada?</div>
+          <p><strong>Resposta:</strong> Deve revestir-se obrigatoriamente da MESMA FORMA que as partes usaram para o contrato (Art. 468, parágrafo único CC).</p>
+        </div>
+
+        <div class="flashcard">
+          <div class="flashcard-q">❓ Se o terceiro prometido concordar e não cumprir, quem responde?</div>
+          <p><strong>Resposta:</strong> O terceiro responde sozinho. O promitente inicial fica completamente exonerado (Art. 440 CC).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL (CHEAT SHEET) ══════════════════════════════ -->
+    <section id="cheat-sheet" class="section">
+      <div class="card gold">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet de Véspera)</h2>
+        <ul style="line-height: 1.9; font-size: 1rem;">
+          <li>• <strong>Estipulação em Favor de Terceiro (Arts. 436-438):</strong> A contrata B para beneficiar C. Legitimidade para exigir: A e C. Capacidade exigida apenas de A e B.</li>
+          <li>• <strong>Vedação de Exoneração (Art. 437):</strong> Se C tem o direito de exigir no contrato, A não pode exonerar B sem anuência de C.</li>
+          <li>• <strong>Substituição do Beneficiário (Art. 438):</strong> A pode trocar C por declaração em vida ou testamento sem anuência do devedor ou de C.</li>
+          <li>• <strong>Promessa de Fato de Terceiro (Arts. 439-440):</strong> A promete que B agirá para C. Se B não agir, A responde por PERDAS E DANOS.</li>
+          <li>• <strong>Exceção Conjugal (Art. 439, par. ú.):</strong> Sem perdas e danos se o terceiro for cônjuge sem outorga e o dano afetar bens comuns.</li>
+          <li>• <strong>Exoneração do Promitente (Art. 440):</strong> Se B concordou e assumiu a obrigação, A fica exonerado mesmo que B descumpra depois.</li>
+          <li>• <strong>Contrato com Pessoa a Declarar (Arts. 467-471):</strong> A contrata com B reservando-se o direito de nomear C (cláusula <em>pro amico</em>).</li>
+          <li>• <strong>Prazo &amp; Forma (Art. 468):</strong> 5 dias para indicar. Aceitação exige a MESMA FORMA do contrato originário.</li>
+          <li>• <strong>Efeito Retroativo (Art. 469):</strong> Aceitação de C retroage à data da celebração originária (<em>ex tunc</em>).</li>
+          <li>• <strong>Eficácia Originária (Arts. 470/471):</strong> Se não indicar, se C recusar, ou se C for incapaz ou insolvente $\rightarrow$ o contrato vale APENAS entre A e B.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PORTAL CORE JS SCRIPT INTEGRATION -->
+  <div id="study-toolkit-bundle">
+    <script src="../../portal-core.js"></script>
+  </div>
+</body>
+
+</html>

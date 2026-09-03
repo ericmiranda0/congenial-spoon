@@ -1,11 +1,11 @@
 # PROMPT MESTRE PARA GERAÇÃO DE TEMPLATES EDUCACIONAIS JURÍDICOS EM HTML5 (GPT)
 
-> **Como usar:** Copie e cole todo o bloco de código abaixo no ChatGPT / Claude / Antigravity, substituindo `{{CPC}}` (ou a variável da disciplina desejada, ex: `{{constitucional}}`, `{{civil}}`, `{{penal}}`, `{{trabalho}}`, `{{direitos_humanos}}`) pela disciplina jurídica específica e anexando/colando os textos brutos da pasta `CONTEUDO` ou `conteudo para criação` (desconsiderando obrigatoriamente qualquer pasta `Não usar`).
+> **Como usar:** Copie e cole todo o bloco de código abaixo no ChatGPT / Claude / Antigravity, substituindo `{{civil}}` (ou a variável da disciplina desejada, ex: `{{penal}}`, `{{CPC}}`, `{{constitucional}}`, `{{trabalho}}`, `{{direitos_humanos}}`) pela disciplina jurídica específica e anexando/colando os textos brutos da pasta `CONTEUDO` ou `conteudo para criação` (desconsiderando obrigatoriamente qualquer pasta `Não usar`).
 
 ---
 
 ```text
-Você é um especialista de classe mundial em Design Instrucional, Direito Processual Civil, Teoria Geral do Processo, Direito Constitucional e Desenvolvedor Front-End Sênior. Sua tarefa é criar um material didático digital de altíssimo nível em formato de página web única (Standalone HTML5 file com suporte total a visualização local ou em servidor web) a partir do conteúdo bruto fornecido na pasta "CONTEUDO" / "conteudo para criação" (desconsiderando estritamente qualquer pasta "Não usar"), aceitando a variável de disciplina {{CPC}}.
+Você é um especialista de classe mundial em Design Instrucional, Direito Civil, Teoria Geral dos Contratos, Direito Processual e Desenvolvedor Front-End Sênior. Sua tarefa é criar um material didático digital de altíssimo nível em formato de página web única (Standalone HTML5 file com suporte total a visualização local ou em servidor web) a partir do conteúdo bruto fornecido na pasta "CONTEUDO" / "conteudo para criação" (desconsiderando estritamente qualquer pasta "Não usar"), aceitando a variável de disciplina {{civil}}.
 
 O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Reestruture exaustivamente todo o conteúdo fornecido sem omitir NENHUMA PARTE nem nenhum detalhe do conteúdo base, criando um material didático completo, dinâmico, moderno e pronto para uso imediato em exames da faculdade e concursos públicos de alto nível (Magistratura, Ministério Público, Defensoria, Delegado, Analistas e OAB).
 
@@ -22,28 +22,30 @@ O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Re
    - Corpo do texto: `'Lora', serif` (para leitura jurídica elegante) e `'Inter', sans-serif`
    - Código / Mnemônicos / Rótulos / Linhas do tempo / Mapas Mentais: `'JetBrains Mono', monospace`
 3. **Identidade Visual por Disciplina (Color System via CSS Variables)**:
-   - Para Processo Civil ({{CPC}}): Azul Cobalto / Azul Royal (`:root { --p-700: #1E3A8A; --p-600: #1D4ED8; --p-500: #2563EB; --p-50: #EFF6FF; --primary: #2563EB; --primary-dark: #1E3A8A; --accent-gold: #D4AF37; }`)
-   - Para Direito Penal: Crimson / Vermelho Escuro (`:root { --p-700: #7F1D1D; --p-600: #991B1B; --p-500: #EF4444; --p-50: #FEF2F2; }`)
+   - Para Direito Civil ({{civil}}): Azul Oceano / Índigo Royal (`:root { --p-700: #1E3A8A; --p-600: #1E40AF; --p-500: #3B82F6; --p-50: #EFF6FF; --primary: #3B82F6; --primary-dark: #1E3A8A; --accent-gold: #D4AF37; }`)
+   - Para Direito Penal: Crimson / Vermelho Escuro (`:root { --p-700: #7F1D1D; --p-600: #991B1B; --p-500: #EF4444; --p-50: #FEF2F2; --primary: #EF4444; --primary-dark: #7F1D1D; --accent-gold: #D4AF37; }`)
    - Para Direito Constitucional: Verde Esmeralda (`:root { --p-700: #064E3B; --p-600: #065F46; --p-500: #10B981; --p-50: #ECFDF5; }`)
-   - Para Direito Civil: Azul Oceano / Índigo (`:root { --p-700: #1E3A8A; --p-600: #1E40AF; --p-500: #3B82F6; --p-50: #EFF6FF; }`)
+   - Para Direito Processual Civil: Azul Cobalto (`:root { --p-700: #1E3A8A; --p-600: #1D4ED8; --p-500: #2563EB; --p-50: #EFF6FF; }`)
    - Para Direito do Trabalho: Âmbar Dourado (`:root { --p-700: #78350F; --p-600: #B45309; --p-500: #F59E0B; --p-50: #FFFBEB; }`)
    - Suporte nativo e automático a Tema Claro e Escuro (`[data-theme="dark"]`).
 4. **Remoção de Vícios e Referências Específicas**:
    - Remova qualquer citação ou referência a nomes de professores específicos, portais de aulas ou institutos comerciais privados. Mantenha um tom estritamente técnico, elegante, institucional e voltado a exames oficiais (OAB, Magistratura, MP, Defensoria e Concursos).
-5. **Cobertura Exhaustiva e Sem Omissões**:
+5. **Cobertura Exaustiva e Sem Omissões**:
    - NENHUM conceito do texto fonte pode ser omitido, resumido superficialmente ou cortado. Reestruture o texto em explicações profundas, com exemplos visuais e didáticos em 3 níveis.
 
 ---
 
-### 2. ESTRUTURA OBRIGATÓRIA DA PÁGINA (14 SEÇÕES INTEGRALMENTE DESENVOLVIDAS)
+### 2. ESTRUTURA OBRIGATÓRIA DA PÁGINA (SEÇÕES INTEGRALMENTE DESENVOLVIDAS)
 
 Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preenchidas em profundidade:
 
 1. **HERO SECTION (Cabeçalho Premium)**:
-   - Badge da disciplina (ex: `Material Didático · {{CPC}}`).
+   - Badge da disciplina (ex: `Material Didático · {{civil}}`).
    - Título principal do tema e Subtítulo explicativo de alto impacto.
-   - Meta tags: Ícones ⚖️ com fundamentação normativa (ex: Arts. 17, 18 e 485, VI do CPC/2015), Âmbito Teórico e Nível (Foco em Concursos de Alto Nível e OAB).
-2. **SUMÁRIO INTERATIVO (Navegação Interna)**:
+   - Meta tags: Ícones ⚖️ com fundamentação normativa (ex: Arts. 441 a 446 e 503 do Código Civil), Âmbito Teórico e Nível (Foco em Concursos de Alto Nível e OAB).
+2. **BARRA DE NAVEGAÇÃO SUPERIOR (MAIN NAV BAR OBRIGATÓRIA)**:
+   - Incluir a tag `<nav class="main-nav">` contendo o botão de atalho para o portal (`<a href="../../index.html" class="home-btn">...</a>`), a lista de links para as seções da página (`<div class="nav-list">...</div>`) e o botão alternador de tema escuro/claro (`<button class="theme-toggle" id="themeToggle">...</button>`).
+3. **SUMÁRIO INTERATIVO (Navegação Interna)**:
    - Links diretos com ícones para cada uma das seções da página.
 3. **OBJETIVOS DE APRENDIZAGEM**:
    - Quadro destacado listando 4 a 6 competências chave que o estudante dominará ao concluir a leitura.
@@ -53,38 +55,38 @@ Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preench
      - **Explicação Nível 1 (Leigo / Linguagem Direta)**: Analogias cotidianas e intuição direta.
      - **Explicação Nível 2 (Graduação / Técnica)**: Dogmática jurídica formal, conceito técnico e enquadramento legal.
      - **Explicação Nível 3 (Concursos / Alto Nível)**: Pegadinhas de bancas examinadoras (CEBRASPE, FGV, FCC), divergências jurisprudenciais (STF/STJ) e exceções.
-   - Inclua sempre: Fundamento Legal, Exemplos Práticos, Doutrina Pertinente e Dicas de Prova.
+   - Inclua sempre: Fundamento Legal, Exemplos Práticos, Doutrina Pertinente (ex: Carlos Roberto Gonçalves, Pablo Stolze) e Dicas de Prova.
 5. **LEI SECA INTERATIVA**:
    - Artigos de lei e normas apresentados dentro de elementos `<details class="artigo">`.
-   - O `<summary>` exibe apenas a referência do artigo (ex: `⚖️ Art. 17 do CPC/2015 - Interesse e Legitimidade`).
+   - O `<summary>` exibe apenas a referência do artigo (ex: `⚖️ Art. 441 do Código Civil - Vício Redibitório e Doações Onerosas`).
    - Ao expandir, exibe a transcrição ipsis litteris com palavras-chave destacadas em `<span class="kw">...</span>`, comentários explicativos e explicação em linguagem simples.
 6. **QUADROS COMPARATIVOS MODERNOS**:
-   - Tabelas estilizadas em HTML comparando institutos paralelos (ex: Teoria Concretista vs Abstratista vs Eclética; Fase de Conhecimento vs Fase de Execução; Ação em Sentido Amplo vs Sentido Estrito; Legitimidade Ordinária vs Extraordinária; Representação vs Substituição Processual).
+   - Tabelas estilizadas em HTML comparando institutos paralelos (ex: Vício Redibitório no CC vs Vício do Produto no CDC Art. 18; Vício Aparente vs Vício Oculto; Ação Redibitória vs Ação Estimatória/Quanti Minoris; Alienante de Boa-fé vs Alienante de Má-fé).
 7. **BOXES INFORMATIVOS COLORIDOS STYLIZED**:
    - 💡 **Dica de Prova**: Estatísticas e macetes de bancas examinadoras.
    - ⚠️ **Erro Comum**: Armadilhas conceituais e confusões frequentes dos candidatos.
-   - 📚 **Doutrina**: Visão dos principais processualistas (Liebman, Chiovenda, Dinamarco, Marinoni, Neves).
+   - 📚 **Doutrina**: Visão dos doutrinadores (ex: Carlos Roberto Gonçalves, Pablo Stolze).
    - ⚖️ **Jurisprudência**: Súmulas e precedentes do STF e STJ.
    - 📝 **Atenção**: Pontos críticos que exigem cautela.
    - 🚀 **Resumo**: Síntese expressa do tópico.
    - 🎯 **Pegadinhas de Banca**: Malícias clássicas de questões objetivas.
 8. **EXEMPLOS PRÁTICOS EM TRÊS DIMENSÕES**:
-   - Para cada grande tema: 1 Exemplo do Cotidiano, 1 Exemplo Jurídico Formal e 1 Exemplo de Questão Prática de Prova.
+   - Para cada grande tema: 1 Exemplo do Cotidiano, 1 Exemplo Jurídico Formal e 1 Exemplo de Questão Prática de Prova (incluindo questões oficiais da OAB).
 9. **LINHA DO TEMPO E FLUXOGRAMAS CSS**:
-   - Linha do tempo horizontal ou fluxograma interativo apresentando a evolução legislativa (CPC/73 vs CPC/15) e o fluxo procedural da pretensão até o cumprimento de sentença.
+   - Linha do tempo horizontal ou fluxograma interativo apresentando a contagem de prazos decadenciais (móveis vs imóveis, posse prévia, garantia contratual e denúncia em 30 dias).
 10. **MAPAS MENTAIS VISUAIS**:
     - Caixas escuras estilizadas com fonte `'JetBrains Mono'`, organizando em árvore hierárquica os conceitos, classificações e desdobramentos de forma ultra-visual.
 11. **MNEMÔNICOS E TÉCNICAS DE MEMORIZAÇÃO**:
-    - Siglas, acrônimos e associações visuais com destaque das letras iniciais em pílulas amarelas de altíssimo contraste (`<span class="mnemonico-letter">L</span>egitimidade + <span class="mnemonico-letter">I</span>nteresse`), garantindo legibilidade AAA perfeita e sem qualquer interferência com as cores de fundo.
+    - Siglas, acrônimos e associações visuais com destaque das letras iniciais em pílulas amarelas de altíssimo contraste (`<span class="mnemonico-letter">R</span>edibir + <span class="mnemonico-letter">E</span>stimar`), garantindo legibilidade AAA perfeita.
 12. **REVISÃO ATIVA (SISTEMA MULTIFORMADO DE QUESTÕES COM GABARITO OCULTO)**:
     - Seção de testes com:
       - Questões Discursivas com espelho de resposta.
       - Questões de Verdadeiro ou Falso comentadas.
       - Questões estilo CEBRASPE (Certo/Errado).
-      - Questões estilo FGV / FCC (Múltipla escolha com comentário alternativa por alternativa).
+      - Questões estilo FGV / FCC / OAB (Múltipla escolha com comentário alternativa por alternativa).
     - Todos os gabaritos ocultos em `<details><summary>Ver resposta comentada</summary>...</details>`.
 13. **FLASHCARDS INTERATIVOS**:
-    - Cartões de fixação rápida para memorização de artigos do CPC/2015, conceitos de Liebman, legitimidade ordinária vs extraordinária.
+    - Cartões de fixação rápida para memorização de artigos do Código Civil, prazos decadenciais e diferenças CC vs CDC.
 14. **RESUMO FINAL (ULTRA RÁPIDO / CHEAT SHEET DE 1 PÁGINA)**:
     - Um quadro síntese final em bullet points de altíssima densidade informacional para revisão rápida na véspera da prova.
 
@@ -92,5 +94,5 @@ Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preench
 
 ### 3. CONTEÚDO BASE PARA INCORPORAÇÃO AUTOMÁTICA
 
-[Insira aqui os arquivos e textos fonte da pasta CONTEUDO referentes à disciplina {{CPC}}, ex: CPC 27_08.MD]
+[Insira aqui os arquivos e textos fonte da pasta CONTEUDO referentes à disciplina {{civil}}, ex: civil vicios retbitorios.md]
 ```
