@@ -1127,6 +1127,11 @@ function initPdfExport() {
                     </p>
 
                     <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptLeiSeca" checked>
+                        <span>📖 Transcrição Interativa da Lei Seca (CF/88, CC, CPC, CP)</span>
+                    </label>
+
+                    <label class="pdf-option-label">
                         <input type="checkbox" id="pdfOptMnemonicos" checked>
                         <span>💡 Mnemônicos e Técnicas de Memorização</span>
                     </label>
@@ -1202,6 +1207,7 @@ function initPdfExport() {
 
     // Helper: Find and toggle DOM elements for optional sections
     const applySectionFilters = () => {
+        const incLeiSeca = document.getElementById('pdfOptLeiSeca')?.checked;
         const incMnemonicos = document.getElementById('pdfOptMnemonicos')?.checked;
         const incFlashcards = document.getElementById('pdfOptFlashcards')?.checked;
         const incMapaMental = document.getElementById('pdfOptMapaMental')?.checked;
@@ -1214,6 +1220,13 @@ function initPdfExport() {
             const id = (el.id || '').toLowerCase();
             const className = (el.className || '').toLowerCase();
             const headingText = (el.querySelector('h1, h2, h3, h4, summary')?.textContent || '').toLowerCase();
+
+            // Lei Seca
+            if (!incLeiSeca) {
+                if (id.includes('lei-seca') || id.includes('legis') || className.includes('lei-seca') || className.includes('artigo') || headingText.includes('lei seca') || headingText.includes('transcrição interativa da lei seca')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
 
             // Mnemônicos
             if (!incMnemonicos) {
