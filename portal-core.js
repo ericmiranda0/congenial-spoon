@@ -16,7 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initVisitorStats();
     initResponsiveTables();
     initMicrolearning();
+    initTextToSpeechLoader();
+    initPdfExport();
 });
+
+/**
+ * Local Neural Text-to-Speech (Kokoro.js + WebGPU) Integration
+ */
+function initTextToSpeechLoader() {
+    if (document.getElementById('tts-root')) return;
+    
+    const script = document.createElement('script');
+    
+    // Derive exact relative path to root from portal-core.js script tag
+    const coreScript = document.querySelector('script[src*="portal-core.js"]');
+    let prefix = '';
+    if (coreScript) {
+        const src = coreScript.getAttribute('src');
+        prefix = src.replace('portal-core.js', '');
+    }
+    
+    script.src = prefix + 'dist/tts-bundle.iife.js';
+    document.head.appendChild(script);
+}
 
 /**
  * Theme Management (Dark/Light Mode)
@@ -1050,3 +1072,276 @@ function initMarkdownFormatting() {
     });
     console.log("Markdown formatado com sucesso!");
 }
+
+/**
+ * PDF Export Feature (A4 Format with customizable section filters and clean layout)
+ */
+function initPdfExport() {
+    // Avoid duplicate initialization
+    if (document.getElementById('openPdfModal')) return;
+
+    // 1. Inject PDF Button in Header or Navigation
+    const pdfBtnHTML = `
+        <button class="pdf-export-btn" id="openPdfModal" aria-label="Baixar PDF" title="Baixar Resumo em PDF (A4)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <polyline points="9 15 12 18 15 15"></polyline>
+            </svg>
+            <span>Baixar PDF</span>
+        </button>
+    `;
+
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.insertAdjacentHTML('beforebegin', pdfBtnHTML);
+    } else {
+        const headerContainer = document.querySelector('header .container') || document.querySelector('header') || document.body;
+        headerContainer.insertAdjacentHTML('afterbegin', pdfBtnHTML);
+    }
+
+    // 2. Inject Modal Overlay HTML
+    const pdfModalHTML = `
+        <div class="modal-overlay" id="pdfModalOverlay">
+            <div class="report-modal pdf-modal">
+                <button class="modal-close" id="closePdfModal" aria-label="Fechar">&times;</button>
+                <div class="pdf-modal-header">
+                    <div class="pdf-modal-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="12" y1="18" x2="12" y2="12"/>
+                            <polyline points="9 15 12 18 15 15"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.25rem;">Baixar Resumo em PDF</h3>
+                        <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--text-muted);">Formato A4 pronto para impressão ou estudo</p>
+                    </div>
+                </div>
+
+                <div class="pdf-options-container" style="margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.6rem;">
+                    <p style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--p-700); margin-bottom: 0.25rem;">
+                        Seções a incluir no PDF final:
+                    </p>
+
+                    <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptMnemonicos" checked>
+                        <span>💡 Mnemônicos e Técnicas de Memorização</span>
+                    </label>
+
+                    <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptFlashcards" checked>
+                        <span>🎴 Flashcards de Fixação Rápida</span>
+                    </label>
+
+                    <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptMapaMental" checked>
+                        <span>🧠 Mapa Mental Hierárquico</span>
+                    </label>
+
+                    <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptCheatSheet" checked>
+                        <span>📑 Resumo Ultra Rápido (Cheat Sheet)</span>
+                    </label>
+
+                    <label class="pdf-option-label">
+                        <input type="checkbox" id="pdfOptRevisaoAtiva" checked>
+                        <span>🎯 Revisão Ativa — Questões Comentadas</span>
+                    </label>
+                </div>
+
+                <div class="pdf-modal-actions" style="display: flex; flex-direction: column; gap: 0.6rem;">
+                    <button type="button" class="modal-submit" id="generatePdfBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span id="generatePdfBtnText">Gerar e Baixar PDF (A4)</span>
+                    </button>
+
+                    <button type="button" class="pdf-secondary-btn" id="printBrowserBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.75rem; border-radius: var(--radius-sm); color: var(--text-main); font-weight: 600; cursor: pointer;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        <span>Imprimir via Navegador</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', pdfModalHTML);
+
+    const overlay = document.getElementById('pdfModalOverlay');
+    const btnOpen = document.getElementById('openPdfModal');
+    const btnClose = document.getElementById('closePdfModal');
+    const btnGenerate = document.getElementById('generatePdfBtn');
+    const btnPrint = document.getElementById('printBrowserBtn');
+
+    const toggleModal = (e) => {
+        if (e) e.preventDefault();
+        overlay.classList.toggle('active');
+        document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    };
+
+    if (btnOpen) btnOpen.addEventListener('click', toggleModal);
+    if (btnClose) btnClose.addEventListener('click', toggleModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) toggleModal(); });
+
+    // Helper: Dynamic html2pdf loader
+    const loadHtml2Pdf = () => {
+        return new Promise((resolve, reject) => {
+            if (window.html2pdf) {
+                resolve(window.html2pdf);
+                return;
+            }
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+            script.onload = () => resolve(window.html2pdf);
+            script.onerror = () => reject(new Error('Falha ao carregar biblioteca html2pdf.js'));
+            document.body.appendChild(script);
+        });
+    };
+
+    // Helper: Find and toggle DOM elements for optional sections
+    const applySectionFilters = () => {
+        const incMnemonicos = document.getElementById('pdfOptMnemonicos')?.checked;
+        const incFlashcards = document.getElementById('pdfOptFlashcards')?.checked;
+        const incMapaMental = document.getElementById('pdfOptMapaMental')?.checked;
+        const incCheatSheet = document.getElementById('pdfOptCheatSheet')?.checked;
+        const incRevisaoAtiva = document.getElementById('pdfOptRevisaoAtiva')?.checked;
+
+        const allElements = document.querySelectorAll('section, div, details, .card');
+        
+        allElements.forEach(el => {
+            const id = (el.id || '').toLowerCase();
+            const className = (el.className || '').toLowerCase();
+            const headingText = (el.querySelector('h1, h2, h3, h4, summary')?.textContent || '').toLowerCase();
+
+            // Mnemônicos
+            if (!incMnemonicos) {
+                if (id.includes('mnemonico') || className.includes('mnemonico') || headingText.includes('mnemônic') || headingText.includes('técnicas de memorização')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
+
+            // Flashcards
+            if (!incFlashcards) {
+                if (id.includes('flashcard') || className.includes('flashcard') || headingText.includes('flashcard') || headingText.includes('fixação rápida')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
+
+            // Mapa Mental
+            if (!incMapaMental) {
+                if (id.includes('mapa-mental') || id.includes('mapamental') || className.includes('mapa-mental') || className.includes('mindmap') || headingText.includes('mapa mental')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
+
+            // Cheat Sheet / Resumo Ultra Rápido
+            if (!incCheatSheet) {
+                if (id.includes('cheat-sheet') || id.includes('cheatsheet') || className.includes('cheat-sheet') || className.includes('quick-review') || headingText.includes('cheat sheet') || headingText.includes('resumo ultra rápido') || headingText.includes('revisão rápida')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
+
+            // Revisão Ativa / Questões
+            if (!incRevisaoAtiva) {
+                if (id.includes('revisao-ativa') || id.includes('questoes') || id.includes('quiz') || className.includes('revisao-ativa') || className.includes('questoes') || className.includes('gabarito') || headingText.includes('revisão ativa') || headingText.includes('questões') || headingText.includes('quiz')) {
+                    el.classList.add('pdf-excluded');
+                }
+            }
+        });
+    };
+
+    // Helper: Prepare DOM (expand details, set printing classes)
+    const prepareDOMForPDF = () => {
+        const detailsState = [];
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach((det, idx) => {
+            detailsState[idx] = det.open;
+            det.open = true;
+        });
+
+        const savedTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.body.classList.add('is-generating-pdf');
+
+        applySectionFilters();
+
+        return { detailsState, savedTheme };
+    };
+
+    // Helper: Restore DOM to normal
+    const restoreDOMAfterPDF = (prepData) => {
+        if (!prepData) return;
+        
+        document.body.classList.remove('is-generating-pdf');
+        document.documentElement.setAttribute('data-theme', prepData.savedTheme);
+
+        document.querySelectorAll('.pdf-excluded').forEach(el => el.classList.remove('pdf-excluded'));
+
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach((det, idx) => {
+            if (prepData.detailsState && prepData.detailsState[idx] !== undefined) {
+                det.open = prepData.detailsState[idx];
+            }
+        });
+    };
+
+    // Main PDF Generation Handler
+    if (btnGenerate) {
+        btnGenerate.addEventListener('click', async () => {
+            const btnText = document.getElementById('generatePdfBtnText');
+            const originalText = btnText ? btnText.textContent : 'Gerar e Baixar PDF (A4)';
+            if (btnText) btnText.textContent = 'Gerando PDF... Aguarde';
+            btnGenerate.disabled = true;
+
+            const prepData = prepareDOMForPDF();
+
+            try {
+                const html2pdfLib = await loadHtml2Pdf();
+                
+                const element = document.querySelector('main .container') || document.querySelector('.container') || document.body;
+                const pageTitle = document.title.replace(/[^a-zA-Z0-9-_\s]/g, '').trim() || 'Resumo';
+
+                const opt = {
+                    margin:       [10, 10, 10, 10],
+                    filename:     `${pageTitle}.pdf`,
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true, logging: false },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak:    { 
+                        mode: ['css', 'legacy'],
+                        avoid: ['p', 'li', 'tr', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', '.card', '.professor-focus', '.quadro-prof', '.mnemonico-box', '.flashcard', '.gabarito-box', 'details']
+                    }
+                };
+
+                await html2pdfLib().set(opt).from(element).save();
+            } catch (err) {
+                console.warn('html2pdf falhou ou offline, acionando impressão nativa:', err);
+                window.print();
+            } finally {
+                restoreDOMAfterPDF(prepData);
+                if (btnText) btnText.textContent = originalText;
+                btnGenerate.disabled = false;
+                toggleModal();
+            }
+        });
+    }
+
+    // Print Browser Handler
+    if (btnPrint) {
+        btnPrint.addEventListener('click', () => {
+            toggleModal();
+            const prepData = prepareDOMForPDF();
+            
+            setTimeout(() => {
+                window.print();
+                setTimeout(() => {
+                    restoreDOMAfterPDF(prepData);
+                }, 1000);
+            }, 300);
+        });
+    }
+}
+
+

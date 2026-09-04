@@ -313,7 +313,28 @@ section.visible, .section.visible { opacity: 1 !important; transform: translateY
 .note, .important, .essential, .warning, .exam-tip, .pitfall, .common-error, .highlight, .example, .complementary {
   border-radius: var(--radius-md); padding: 1.75rem; margin: 2rem 0; border-left: 6px solid; box-shadow: var(--shadow-sm); position: relative; background: var(--bg-card); transition: var(--transition);
 }
-.box-label { font-family: 'Inter', sans-serif; text-transform: uppercase; font-weight: 800; font-size: 0.75rem; letter-spacing: 1.5px; display: block; margin-bottom: 1rem; opacity: 0.9; }
+.box-label { 
+  font-family: 'Outfit', 'Inter', sans-serif; 
+  text-transform: uppercase; 
+  font-weight: 800; 
+  font-size: 0.75rem; 
+  letter-spacing: 0.5px; 
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem; 
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  box-sizing: border-box;
+  line-height: 1.4;
+  opacity: 0.95; 
+}
 
 .note { background: var(--box-note-bg); border-color: var(--box-note-border); }
 .important, .essential, .highlight { background: var(--box-important-bg); border-color: var(--box-important-border); }
@@ -950,6 +971,17 @@ details.artigo .lei-seca { background: var(--box-legal-bg); color: var(--box-leg
 
   .container {
     padding: 0 0.5rem;
+  }
+
+  .box-label {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: inline-flex !important;
+    margin-bottom: 0.75rem !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
   }
 
   @media (max-width: 480px) {
@@ -1926,4 +1958,239 @@ input:checked + .ml-slider:before {
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
   line-height: 1.2;
 }
+
+/* ==========================================================================
+   PDF EXPORT & PRINT STYLING (A4 PDF GENERATOR)
+   ========================================================================== */
+
+.pdf-export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--p-600, #1E40AF), var(--p-500, #3B82F6));
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full, 50px);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  transition: all 0.2s ease;
+  margin-right: 0.75rem;
+  line-height: 1;
+}
+
+.pdf-export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+  background: linear-gradient(135deg, var(--p-700, #1E3A8A), var(--p-600, #1E40AF));
+}
+
+.pdf-export-btn svg {
+  flex-shrink: 0;
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pdf-modal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--p-50, #EFF6FF);
+  color: var(--p-600, #1E40AF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .pdf-modal-icon {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--p-500, #3B82F6);
+}
+
+.pdf-option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--neutral-50, #F8FAFC);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 10px);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+[data-theme="dark"] .pdf-option-label {
+  background: var(--bg-card);
+}
+
+.pdf-option-label:hover {
+  border-color: var(--p-500);
+  background: var(--p-50);
+}
+
+[data-theme="dark"] .pdf-option-label:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.pdf-option-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--p-600, #1E40AF);
+  cursor: pointer;
+}
+
+/* State during PDF generation and print */
+body.is-generating-pdf .summary-card,
+body.is-generating-pdf header,
+body.is-generating-pdf nav,
+body.is-generating-pdf .bottom-nav,
+body.is-generating-pdf .report-btn,
+body.is-generating-pdf #scroll-top,
+body.is-generating-pdf .theme-toggle,
+body.is-generating-pdf .online-indicator,
+body.is-generating-pdf #tts-root,
+body.is-generating-pdf .modal-overlay,
+body.is-generating-pdf .ml-controls,
+body.is-generating-pdf .pdf-export-btn,
+body.is-generating-pdf .pdf-excluded,
+body.is-generating-pdf .ml-nav-buttons {
+  display: none !important;
+}
+
+body.is-generating-pdf .reveal-hidden,
+body.is-generating-pdf .reveal-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
+
+body.is-generating-pdf details {
+  display: block !important;
+}
+
+body.is-generating-pdf details > * {
+  display: block !important;
+}
+
+body.is-generating-pdf .gabarito,
+body.is-generating-pdf .gabarito-box,
+body.is-generating-pdf .lei-seca,
+body.is-generating-pdf .lei-comentario,
+body.is-generating-pdf .flashcard-back {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body.is-generating-pdf p,
+body.is-generating-pdf li,
+body.is-generating-pdf tr,
+body.is-generating-pdf blockquote,
+body.is-generating-pdf h1,
+body.is-generating-pdf h2,
+body.is-generating-pdf h3,
+body.is-generating-pdf h4,
+body.is-generating-pdf h5,
+body.is-generating-pdf h6 {
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm 12mm 15mm 12mm;
+  }
+  
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+  
+  header, 
+  nav,
+  .bottom-nav, 
+  .report-btn, 
+  #scroll-top, 
+  .theme-toggle, 
+  .online-indicator, 
+  #tts-root, 
+  .modal-overlay, 
+  .ml-controls, 
+  .pdf-export-btn, 
+  .summary-card, 
+  .pdf-excluded,
+  .ml-nav-buttons {
+    display: none !important;
+  }
+  
+  .reveal-hidden, 
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
+  }
+  
+  details {
+    display: block !important;
+  }
+  
+  details > * {
+    display: block !important;
+  }
+  
+  .gabarito, 
+  .gabarito-box, 
+  .lei-seca, 
+  .lei-comentario, 
+  .flashcard-back {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Prevent isolating sections onto separate pages */
+  section {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Prevent text line cutting / letter slicing across pages */
+  p, li, tr, blockquote, h1, h2, h3, h4, h5, h6,
+  .flashcard, 
+  .mnemonico-box, 
+  .gabarito-box, 
+  .professor-focus, 
+  .quadro-prof {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+}
+
+
+
 

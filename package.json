@@ -1,0 +1,36 @@
+{
+  "name": "resumos-da-faculdade",
+  "version": "1.0.0",
+  "description": "Este repositório contém uma coleção de resumos didáticos e polidos de diversos ramos do Direito, organizados em uma interface web moderna, interativa e de alta performance.",
+  "main": "portal-core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmiranda0/congenial-spoon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ericmiranda0/congenial-spoon/issues"
+  },
+  "homepage": "https://github.com/ericmiranda0/congenial-spoon#readme",
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "kokoro-js": "^1.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vite-plugin-css-injected-by-js": "^5.0.2"
+  }
+}
