@@ -1153,14 +1153,14 @@ function initPdfExport() {
                 </div>
 
                 <div class="pdf-modal-actions" style="display: flex; flex-direction: column; gap: 0.6rem;">
-                    <button type="button" class="modal-submit" id="generatePdfBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span id="generatePdfBtnText">Gerar e Baixar PDF (A4)</span>
+                    <button type="button" class="modal-submit" id="printBrowserBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        <span>Imprimir / Salvar em PDF via Navegador (Recomendado)</span>
                     </button>
 
-                    <button type="button" class="pdf-secondary-btn" id="printBrowserBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.75rem; border-radius: var(--radius-sm); color: var(--text-main); font-weight: 600; cursor: pointer;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-                        <span>Imprimir via Navegador</span>
+                    <button type="button" class="pdf-secondary-btn" id="generatePdfBtn" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.75rem; border-radius: var(--radius-sm); color: var(--text-main); font-weight: 600; cursor: pointer;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span id="generatePdfBtnText">Download Direto Alternativo (JS PDF)</span>
                     </button>
                 </div>
             </div>
