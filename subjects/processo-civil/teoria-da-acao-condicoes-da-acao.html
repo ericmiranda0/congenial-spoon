@@ -636,10 +636,162 @@
     [data-theme="dark"] .cheat-sheet {
       background: rgba(30, 58, 138, 0.2);
     }
+
+    /* Header & Navbar Fixes */
+    header {
+      border-radius: 0;
+    }
+
+    /* Barra de Progresso Top */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 3000;
+      background: transparent;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--p-500), var(--p-400), #F59E0B);
+      width: 0%;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Navigation Bar (Sticky Header Nav) */
+    nav.main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-bottom: 1px solid #E2E8F0;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] nav.main-nav {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom-color: #334155;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    nav.main-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 16px;
+      gap: 12px;
+      max-width: 1140px;
+    }
+
+    .home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--p-50);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--p-700);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .home-btn {
+      background: rgba(37, 99, 235, 0.15);
+      border-color: rgba(96, 165, 250, 0.3);
+      color: var(--p-400);
+    }
+
+    .home-btn:hover {
+      background: var(--p-500);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      flex: 1;
+      padding: 4px 0;
+    }
+
+    .nav-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: #64748B;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] .nav-item {
+      color: #94A3B8;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      color: var(--p-700);
+      background: var(--p-50);
+    }
+
+    [data-theme="dark"] .nav-item:hover, [data-theme="dark"] .nav-item.active {
+      color: var(--p-400);
+      background: rgba(37, 99, 235, 0.2);
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--p-50);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--p-700);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .theme-toggle {
+      background: rgba(37, 99, 235, 0.15);
+      border-color: rgba(96, 165, 250, 0.3);
+      color: #FACC15;
+    }
+
+    .theme-toggle:hover {
+      background: var(--p-500);
+      color: white;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
 <body>
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
   <header>
     <div class="container">
       <div class="badge">Material Didático · Direito Processual Civil I</div>
@@ -653,7 +805,37 @@
     </div>
   </header>
 
-  <main class="container">
+  <!-- Navegação Principal Sticky Bar -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Hub Principal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">1. Relação Trilateral</a>
+        <a href="#modulo2" class="nav-item">2. Teorias da Ação</a>
+        <a href="#modulo3" class="nav-item">3. Mérito &amp; Extinção</a>
+        <a href="#modulo6" class="nav-item">6. Condições &amp; Asserção</a>
+        <a href="#modulo7" class="nav-item">7. Legitimidade</a>
+        <a href="#modulo8" class="nav-item">8. Substituição &amp; Coisa Julgada</a>
+        <a href="#modulo9" class="nav-item">9. Elementos da Ação</a>
+        <a href="#modulo10" class="nav-item">10. O Pedido &amp; Nulidades</a>
+        <a href="#modulo11" class="nav-item">11. Causa de Pedir</a>
+        <a href="#modulo12" class="nav-item">12. Defesa &amp; Objeções</a>
+        <a href="#revisao-ativa" class="nav-item">Revisão Ativa (13 Q)</a>
+        <a href="#resumo-final" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema" title="Alternar Tema Escuro/Claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 2rem;">
 
     <!-- ══════════════════════════════ SUMÁRIO INTERATIVO ══════════════════════════════ -->
     <nav class="nav-summary">
@@ -1030,6 +1212,17 @@
         </div>
       </div>
 
+      <div class="info-box pegadinha">
+        <span class="box-label">🎯 Nulidades de Sentença e Princípio da Congruência (Arts. 141 e 492 CPC)</span>
+        <p>Ao proferir a sentença, o juiz deve ficar estritamente adstrito ao que foi pedido pelo autor. O descumprimento gera três tipos clássicos de vícios:</p>
+        <ul>
+          <li><strong>Sentença Extrapetita (Nula):</strong> O juiz concede provimento de natureza <em>diferente</em> da pedida (ex: autor pede Danos Materiais e o juiz concede Danos Morais). É manifestamente nula.</li>
+          <li><strong>Sentença Ultrapetita (Nula Parcialmente):</b> O juiz concede o que foi pedido, mas <em>ultrapassa o limite quantitativo</em> (ex: autor pede R$ 10.000 e o juiz concede R$ 50.000).</li>
+          <li><strong>Sentença Citrapetita / Infrapetita (Omissa):</b> O juiz <em>silencia e deixa de julgar</em> um dos pedidos formulados na inicial (ex: autor pede itens A e B, e o juiz só decide sobre A).</li>
+        </ul>
+        <p><strong>💡 Como corrigir a Sentença Citrapetita?</strong> Por se tratar de um vício de omissão, a parte não precisa recorrer imediatamente ao Tribunal; deve opor <strong>Embargos de Declaração</strong> (Art. 1.022 do CPC) perante o próprio magistrado prolator para que ele sane a omissão!</p>
+      </div>
+
       <div class="info-box atencao">
         <span class="box-label">📝 Pedidos Alternativos do Direito Material vs. Identidade Processual</span>
         Se o Código Civil der ao comprador de mercadoria com vício redibitório duas opções alternativas — rescindir o contrato (Ação Redibitória) ou pedir abatimento no preço (Ação Quanti Minoris) —, escolhida uma via, o autor <strong>NÃO pode ajuizar a outra em outro juízo</strong>. Embora os pedidos sejam materialmente diferentes, do ponto de vista processual são equivalentes. O ajuizamento da segunda gera <strong>Litispendência ou Coisa Julgada</strong>!
@@ -1301,6 +1494,142 @@
           <summary>Ver resposta comentada</summary>
           <div class="gabarito">
             <strong>Resposta: B.</strong> O Art. 324, § 1º, I do CPC autoriza expressamente o pedido genérico nas ações universais (ex: petição de herança), quando o autor não puder individuar os bens desde logo.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>04. (Questão Discursiva - Substituição Processual e Coisa Julgada)</strong><br>
+        Na legitimidade extraordinária (substituição processual), o substituído é considerado parte na relação processual? Caso não seja parte, ele sofrerá os efeitos da coisa julgada? Explique como a legislação processual (Art. 18 do CPC) permite a sua participação no processo.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Não. Na legitimidade extraordinária, o substituído <strong>NÃO é parte no processo</strong>; a parte em sentido formal é exclusivamente o substituto processual (aquele que pleiteia direito alheio em nome próprio). Contudo, por ser o titular do direito material, o substituído <strong>é diretamente atingido pelos efeitos materiais da Coisa Julgada</strong>. Para defender seus interesses, o Art. 18, parágrafo único do CPC, autoriza que o substituído intervenha no processo como <strong>Assistente Litisconsorcial</strong> do substituto.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>05. (Questão Estilo VUNESP - Casos Práticos do Professor)</strong><br>
+        Em ação pleiteando a exibição de contrato bancário ajuizada por um cliente em face de uma instituição financeira, o réu, após ser citado, efetua espontaneamente a juntada do documento antes que o juiz profira qualquer decisão condenatória. Diante desse fato superveniente, o magistrado deverá:</p>
+        <ul>
+          <li>A) Julgar o pedido procedente com resolução de mérito, pois o direito do autor foi reconhecido.</li>
+          <li>B) Extinguir o processo sem resolução do mérito por carência superveniente do interesse de agir (perda do objeto), nos termos do Art. 485, VI do CPC.</li>
+          <li>C) Declarar a nulidade da citação e remeter os autos ao tribunal de justiça.</li>
+          <li>D) Julgar o pedido improcedente, aplicando pena de litigância de má-fé ao autor.</li>
+        </ul>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B.</strong> Como ensinado pelo professor, a entrega espontânea do documento faz cessar a necessidade da tutela jurisdicional, gerando a carência superveniente do interesse de agir devido à perda do objeto, o que acarreta a extinção sem resolução do mérito (Art. 485, VI, CPC).
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>06. (Questão Estilo CEBRASPE - Certo/Errado)</strong><br>
+        (   ) Certo   (   ) Errado<br>
+        Caso o magistrado profira uma sentença citrapetita (omissa quanto a um dos pedidos formulados na petição inicial), a parte prejudicada deve interpor apelação ao Tribunal de Justiça, sendo vedado o manuseio de embargos de declaração perante o juízo prolator.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong> A sentença citrapetita padece de vício de omissão. O remédio processual correto e imediato é a oposição de <strong>Embargos de Declaração</strong> (Art. 1.022 do CPC) perante o próprio magistrado que proferiu a sentença, para que ele sane a omissão e aprecie o pedido omitido.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>07. (Questão Discursiva - Nulidades da Sentença)</strong><br>
+        Diferencie a sentença <em>extrapetita</em> da sentença <em>ultrapetita</em> à luz do Princípio da Congruência / Adstrição (Arts. 141 e 492 do CPC), indicando a consequência jurídica de cada vício.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> A sentença <strong>extrapetita</strong> ocorre quando o juiz entrega provimento de natureza ou objeto qualitativamente diverso do que foi postulado (ex: concede danos morais quando só foram pedidos danos materiais); é nula por completo. A sentença <strong>ultrapetita</strong> ocorre quando o juiz atende ao pedido formulado, mas excede o limite quantitativo postulado (ex: autor pede R$ 10.000,00 e o juiz concede R$ 50.000,00); é nula no excesso, cabendo ao Tribunal adequar a condenação ao limite postulado.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>08. (Questão Estilo FGV - Vício Redibitório e Identidade de Ações)</strong><br>
+        Um comprador adquire um veículo que apresenta vício redibitório (defeito oculto) e ajuíza Ação Redibitória visando à rescisão do contrato e à devolução do valor pago. Temendo eventual improcedência, o comprador ajuíza, em outro juízo, Ação Estimatória (quanti minoris) para pedir o abatimento proporcional do preço. Diante dessa situação, o juiz da segunda causa deverá reconhecer:</p>
+        <ul>
+          <li>A) Legitimidade extraordinária e prosseguir com ambos os processos.</li>
+          <li>B) Litispendência ou Coisa Julgada, pois embora os pedidos materiais sejam formalmente diversos, do ponto de vista processual são equivalentes para a solução da lide.</li>
+          <li>C) Conexão com reunião obrigatória para julgamento conjunto no STJ.</li>
+          <li>D) Ausência de jurisdição do Poder Judiciário por se tratar de matéria puramente contratual.</li>
+        </ul>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B.</strong> Como explicado no áudio do professor, as vias da Ação Redibitória e da Ação Estimatória são alternativas de direito material. Escolhida uma das vias, há preclusão lógica e renúncia à outra. Do ponto de vista processual, são equivalentes, gerando litispendência ou coisa julgada se ajuizadas separadamente.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>09. (Questão Discursiva - Exceção da Prova de Lei Local)</strong><br>
+        Um advogado ajuizou ação ordinária contra um município pleiteando o pagamento de anuênios previstos no Estatuto dos Servidores Municipais. O autor indicou os fatos e fundamentou o pedido, mas não transcreveu o texto nem juntou cópia da lei municipal. O juiz determinou a emenda à inicial. Pergunta-se: O magistrado agiu corretamente? Explique a diferença entre fundamento legal geral e a prova de lei local (Art. 376 do CPC).</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Sim, o magistrado agiu corretamente. Embora o juiz conheça o direito nacional geral e abstrato (<em>iura novit curia</em>), o <strong>Art. 376 do CPC</strong> estabelece que a parte que alegar direito municipal, estadual, estrangeiro ou consuetudinário provar-lhe-á o teor e a vigência, se assim o juiz determinar. Como o juiz não tem obrigação de conhecer a legislação de cada município, o autor deve provar o texto e a vigência da lei local.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>10. (Questão Estilo CEBRASPE - Dever de Emenda à Inicial)</strong><br>
+        (   ) Certo   (   ) Errado<br>
+        Caso a petição inicial apresente defeitos ou irregularidades que dificultem o julgamento do mérito (como pedidos contraditórios ou fatos mal narrados), o magistrado não pode extinguir o processo sumariamente; deve conceder ao autor o prazo de 15 (quinze) dias para emendá-la, indicando com precisão o que deve ser corrigido.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: CERTO.</strong> O Art. 321 do CPC consagra o Princípio da Primazia do Julgamento do Mérito. O magistrado tem o dever de prevenção e saneamento: deve assinalar prazo de 15 dias e apontar com precisão o vício a ser sanado antes de eventual indeferimento.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>11. (Questão Estilo FGV - Identidade da Ação e Alteração de Fundamentos)</strong><br>
+        Durante o trâmite de uma ação indenizatória, o autor apresentou petição requerendo a alteração dos fundamentos jurídicos do pedido, mantendo inalterados as partes, o pedido e a narrativa dos fatos. Diante do Princípio da Congruência e das regras de identificação da ação, é correto afirmar que:</p>
+        <ul>
+          <li>A) Houve alteração da ação, o que exige o consentimento expresso do réu se feito após a citação.</li>
+          <li>B) Não houve alteração da ação, pois a ação é identificada pelas Partes, pelo Pedido e pelos Fatos (Teoria da Substanciação), não vinculando os fundamentos jurídicos a cognição do juiz.</li>
+          <li>C) O processo deve ser extinto sem resolução de mérito por inépcia superveniente.</li>
+          <li>D) O juiz fica obrigado a proferir sentença declaratória de improcedência.</li>
+        </ul>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B.</strong> Como ensinado na aula, os fundamentos jurídicos não vinculam o juiz e não servem para identificar a ação. A alteração isolada dos fundamentos jurídicos não modifica a demanda.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>12. (Questão Discursiva - Legitimidade Passiva e Defesa do Réu)</strong><br>
+        A legitimidade <em>ad causam</em> como condição da ação aplica-se somente à parte autora? Como o réu deve proceder caso seja demandado em ação na qual não possui nenhuma relação com o direito material discutido? Cite o momento processual e a consequência da acolhida dessa tese pelo juiz.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Não. A legitimidade analisa-se sob a perspectiva de <strong>ambas as partes</strong> (ativa e passiva). O réu demandado indevidamente deve arguir sua <strong>ilegitimidade passiva</strong> em sede de <strong>preliminar de contestação</strong> (matéria de ordem pública/objeção). Se acolhida pelo juiz, o réu ilegítimo será excluído do processo com extinção sem resolução do mérito em relação a ele (Art. 485, VI do CPC).
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <p><strong>13. (Questão Estilo VUNESP - Objeções de Ordem Pública vs Exceções)</strong><br>
+        Sobre as defesas do réu no Processo Civil, assinale a alternativa que indica corretamente uma característica exclusiva das <strong>Objeções (Defesas de Ordem Pública)</strong> em contraponto às Exceções em Sentido Estrito:</p>
+        <ul>
+          <li>A) Devem ser obrigatoriamente alegadas na primeira oportunidade, sob pena de preclusão absoluta.</li>
+          <li>B) Podem ser conhecidas de ofício pelo magistrado em qualquer tempo e grau de jurisdição, não sujeitando-se à preclusão.</li>
+          <li>C) Exigem a concordância expressa do autor para serem acolhidas pelo juiz.</li>
+          <li>D) Aplicam-se exclusivamente às ações possessórias e petitórias.</li>
+        </ul>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: B.</strong> As objeções de ordem pública (ex: incompetência absoluta, falta das condições da ação, decadência legal) podem ser apreciadas de ofício pelo juiz e não precluem durante o trâmite processual.
           </div>
         </details>
       </div>
