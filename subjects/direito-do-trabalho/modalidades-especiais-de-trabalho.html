@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades Especiais de Trabalho & Trabalho do Presidiário | Material Didático Premium</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Arquivo Base do Portal -->
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Labor Law Amber / Copper / Teal */
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1c130b 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    /* Navigation Bar */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(120, 53, 15, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 25px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--p-500);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .home-btn {
+      color: white;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .home-btn:hover {
+      color: var(--p-500);
+      transform: translateX(-3px);
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-list a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-list a:hover {
+      color: var(--p-500);
+    }
+
+    .theme-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Section Styling */
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.8rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 {
+      color: var(--p-500);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #f59e0b;
+    }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: #f59e0b;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(120, 53, 15, 0.08);
+      border-color: #78350F;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #b45309; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: #78350F; }
+
+    [data-theme="dark"] .level-1 .level-title { color: #f59e0b; }
+    [data-theme="dark"] .level-3 .level-title { color: #f59e0b; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--p-700);
+      padding: 15px 20px;
+      background: rgba(245, 158, 11, 0.05);
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: var(--p-500);
+      background: rgba(245, 158, 11, 0.1);
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "▼";
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+    }
+
+    .artigo[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lei-seca {
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(15, 23, 42, 0.4);
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #9a3412;
+      background: #ffedd5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    [data-theme="dark"] .kw {
+      color: #f97316;
+      background: rgba(249, 115, 22, 0.2);
+    }
+
+    /* Boxes de Destaque */
+    .box-info {
+      padding: 22px;
+      border-radius: 12px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #78350f;
+    }
+    .exam-tip .box-label { background: #d97706; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #dc2626; }
+
+    .prof-note {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #14532d;
+    }
+    .prof-note .box-label { background: #16a34a; }
+
+    .doutrina-box {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doutrina-box .box-label { background: #16a34a; }
+
+    .juris-box {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #075985;
+    }
+    .juris-box .box-label { background: #0284c7; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(217, 119, 6, 0.15); border-color: rgba(217, 119, 6, 0.3); color: #fde68a; }
+    [data-theme="dark"] .pitfall { background: rgba(220, 38, 38, 0.15); border-color: rgba(220, 38, 38, 0.3); color: #fecaca; }
+    [data-theme="dark"] .prof-note { background: rgba(22, 163, 74, 0.15); border-color: rgba(22, 163, 74, 0.3); color: #86efac; }
+    [data-theme="dark"] .doutrina-box { background: rgba(22, 163, 74, 0.15); border-color: rgba(22, 163, 74, 0.3); color: #bbf7d0; }
+    [data-theme="dark"] .juris-box { background: rgba(2, 132, 199, 0.15); border-color: rgba(2, 132, 199, 0.3); color: #bae6fd; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    th {
+      background: linear-gradient(135deg, var(--p-700), var(--p-600));
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.93rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Mindmaps */
+    .mindmap-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      border: 1px solid #334155;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    .mm-l3 {
+      margin-left: 70px;
+      color: #38bdf8;
+      font-size: 0.86rem;
+    }
+
+    /* Flowcharts CSS */
+    .flow-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(245, 158, 11, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 15px 20px;
+      border-radius: 12px;
+    }
+
+    .flow-badge {
+      background: var(--p-500);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      flex-shrink: 0;
+    }
+
+    /* Exercícios */
+    .exercise {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .exercise-title {
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .gabarito {
+      margin-top: 12px;
+      padding: 12px 16px;
+      background: rgba(13, 148, 136, 0.1);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      color: var(--accent-teal);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="badge">Material Didático · Direito do Trabalho</div>
+      <h1>Modalidades Especiais de Trabalho &amp; Trabalho do Presidiário</h1>
+      <div class="subtitle">Análise Aprofundada com Destaques de Aula: Trabalho Eventual, Autônomo, Avulso, Voluntário, Estágio (Lei 11.788/08) e Trabalho do Preso (LEP - Lei 7.210/84)</div>
+      <div class="meta">
+        <span>⚖️ CF/88, Leis 12.023/09, 12.815/13, 9.608/98, 11.788/08 e LEP 7.210/84</span>
+        <span>📚 Módulo 07 (Edição Aprofundada)</span>
+        <span>🛡️ Foco em OAB e Concursos de Alto Nível</span>
+      </div>
+    </div>
+  </header>
+
+    <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#eventual" class="nav-item">Eventual</a>
+        <a href="#autonomo" class="nav-item">Autônomo</a>
+        <a href="#avulso" class="nav-item">Avulso</a>
+        <a href="#voluntario" class="nav-item">Voluntário</a>
+        <a href="#estagio" class="nav-item">Estágio</a>
+        <a href="#presidiario" class="nav-item">Trabalho do Preso</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="section-label">Introdução</div>
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao finalizar este estudo exaustivo, você dominará:</p>
+      <ul>
+        <li>As <strong>três teorias explicativas do Trabalho Eventual</strong> (Evento, Fins do Empreendimento e Fixação Jurídica);</li>
+        <li>As características marcantes do <strong>Trabalho Autônomo</strong> e suas exceções dogmáticas (professores, cláusula de infungibilidade);</li>
+        <li>O regramento do <strong>Trabalho Avulso Não Portuário</strong> (Lei 12.023/2009) e <strong>Portuário</strong> (Lei 12.815/2013 - OGMO, Operador Portuário e responsabilidade solidária);</li>
+        <li>A disciplina jurídica do <strong>Trabalho Voluntário</strong> (Lei 9.608/1998), Termo de Adesão, distribuição do ônus probatório no TST e ressarcimento de despesas;</li>
+        <li><strong>Aprofundamento Completo do Estágio (Lei 11.788/2008) conforme Destaques do Professor</strong>: Duração máxima de 2 anos (e a exceção para PCD - Art. 11), recesso de 30 dias (Art. 13), jornadas diárias/semanais (4h/20h, 6h/30h e 40h), <span class="kw">redução de jornada de 50% em semanas de avaliação (Art. 10, § 2º)</span>, quem pode conceder (incluindo profissionais liberais de nível superior - Art. 9º), limite de 10 estagiários por supervisor e relatórios semestrais;</li>
+        <li><strong>Regime Jurídico do Trabalho do Presidiário (LEP - Lei 7.210/1984)</strong>: A inexistência expressa de vínculo empregatício celetista (Art. 28, § 2º) e a garantia de remuneração mínima não inferior a <span class="kw">3/4 (três quartos) do salário mínimo</span> (Art. 29).</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. TRABALHO EVENTUAL ══════════════════════════════ -->
+    <section id="eventual">
+      <div class="section-label">Módulo 01</div>
+      <h2>1. Trabalho Eventual: Teorias &amp; Distinção da Habitualidade</h2>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">💡 Nível 1: Entendimento Direto</div>
+          <p>O <strong>trabalhador eventual</strong> é aquele chamado para resolver um problema esporádico ou fortuito. Pense no bombeiro hidráulico que vai consertar um vazamento repentino na sua casa ou no técnico muito especializado que passa de 1 semana a 1 mês instalando um aparelho de ar-condicionado na empresa. Ele não faz parte da rotina duradoura do tomador.</p>
+        </div>
+        <div class="level-box level-2">
+          <div class="level-title">⚖️ Nível 2: Dogmática &amp; As 3 Teorias Explicativas</div>
+          <p>A CLT exige a <em>não eventualidade</em> (habitualidade) no Art. 3º para configurar o vínculo de emprego. A doutrina construiu três grandes teorias para definir o que é o trabalho eventual:</p>
+          <ul>
+            <li><strong>a) Teoria do Evento:</strong> O trabalho é eventual se vinculado a um episódio pontual, específico e de curta duração (ex: conserto emergencial por bombeiro hidráulico ou técnico muito especializado de 1 semana ou 1 mês).</li>
+            <li><strong>b) Teoria dos Fins do Empreendimento:</strong> O trabalho é eventual quando prestado em atividades estranhas aos fins normais e essenciais da empresa (diferença entre atividade-meio e atividade-fim).</li>
+            <li><strong>c) Teoria da Fixação Jurídica:</strong> Considera-se eventual o trabalhador que não se fixa a um único tomador de serviços, prestando serviços a múltiplos tomadores no mercado (ex: técnico de ar-condicionado com vários clientes), onde algo impede múltiplos vínculos CLT.</li>
+          </ul>
+        </div>
+        <div class="level-box level-3">
+          <div class="level-title">🛡️ Nível 3: Foco em Concursos &amp; Exame de Ordem</div>
+          <p><strong>Subordinação no Trabalho Eventual:</strong> O trabalho eventual PODE conter ordens e diretrizes (subordinação)? SIM! O trabalhador eventual pode atuar sob ordens diretas durante as poucas horas ou dias em que atua (ex: horário de início e fim da reforma emergencial), mas a ausência de permanência temporal/fixação impede a configuração do vínculo de emprego do Art. 3º da CLT.</p>
+        </div>
+      </div>
+
+      <div class="box-info pitfall">
+        <span class="box-label">⚠️ Pegadinha de Banca</span>
+        <strong>Falta de Habitualidade vs. Subordinação:</strong> Não confunda trabalho eventual com trabalho sem subordinação! O eventual pode ser subordinado, mas não é habitual.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. TRABALHO AUTÔNOMO ══════════════════════════════ -->
+    <section id="autonomo">
+      <div class="section-label">Módulo 02</div>
+      <h2>2. Trabalho Autônomo: Autonomia, Riscos &amp; Exceções</h2>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">💡 Nível 1: Entendimento Direto</div>
+          <p>O <strong>trabalhador autônomo</strong> é o "dono do seu próprio trabalho". Ele assume os riscos da atividade econômica (alteridade invertida), tem liberdade de recusa de serviços, estipula seus horários e tem liberdade de se fazer substituir por ajudantes contratados livremente.</p>
+        </div>
+        <div class="level-box level-2">
+          <div class="level-title">⚖️ Nível 2: Elementos Caracterizadores &amp; Exceções</div>
+          <p>Principais traços do trabalho autônomo:</p>
+          <ul>
+            <li><strong>Flexibilidade de Horários &amp; Ausência de Fiscalização Direta:</strong> O tomador busca o resultado final. <em>Exceção:</em> Professores autônomos ou conferencistas que possuem horário fixado de aula devido à natureza do serviço prestado.</li>
+            <li><strong>Liberdade de Recusa:</strong> O autônomo tem a faculdade de aceitar ou rejeitar demandas do tomador sem sanções disciplinares.</li>
+            <li><strong>Ajudantes Contratados Livremente &amp; Fungibilidade:</strong> Em regra, o autônomo pode ser substituído por auxiliares (ex: motorista de transporte escolar). <em>Exceção:</em> Contratação com cláusula expressa de <strong>infungibilidade</strong> (prestação personalíssima).</li>
+            <li><strong>Assunção dos Riscos da Atividade Econômica:</strong> Riscos financeiros e operacionais pertencem ao autônomo.</li>
+          </ul>
+        </div>
+        <div class="level-box level-3">
+          <div class="level-title">🛡️ Nível 3: Reforma Trabalhista (Art. 442-B da CLT)</div>
+          <p>A Lei 13.467/2017 incluiu o Art. 442-B na CLT, prevendo que a contratação do autônomo cumpridas as formalidades afasta a qualidade de empregado, <strong>ainda que haja exclusividade e continuidade</strong>. Contudo, demonstrada subordinação jurídica real, aplica-se o Art. 9º da CLT (Nulidade e Primazia da Realidade).</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Empregado (Art. 3º CLT)</th>
+            <th>Trabalhador Autônomo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Subordinação Jurídica</strong></td>
+            <td>Presente (ordens, poder disciplinar e fiscalizatório)</td>
+            <td>Ausente (autonomia técnica e operacional)</td>
+          </tr>
+          <tr>
+            <td><strong>Riscos da Atividade</strong></td>
+            <td>Do Empregador (Princípio da Alteridade - Art. 2º)</td>
+            <td>Do Próprio Trabalhador Autônomo</td>
+          </tr>
+          <tr>
+            <td><strong>Fungibilidade</strong></td>
+            <td>Infungível (Pessoalidade obrigatória)</td>
+            <td>Fungível em regra (salvo cláusula de infungibilidade)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ 3. TRABALHO AVULSO ══════════════════════════════ -->
+    <section id="avulso">
+      <div class="section-label">Módulo 03</div>
+      <h2>3. Trabalho Avulso: Proteção Constitucional, Avulso Não Portuário &amp; Portuário</h2>
+
+      <div class="box-info doutrina-box">
+        <span class="box-label">📜 Mandamento Constitucional</span>
+        <details class="artigo" open>
+          <summary>⚖️ Art. 7º, XXXIV da Constituição Federal de 1988</summary>
+          <div class="lei-seca">
+            Art. 7º São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social:<br>
+            [...] <span class="kw">XXXIV - igualdade de direitos entre o trabalhador com vínculo empregatício permanente e o trabalhador avulso.</span>
+          </div>
+        </details>
+      </div>
+
+      <h3>3.1 Trabalhador Avulso Não Portuário (Lei 12.023/2009)</h3>
+      <p>A Lei 12.023/2009 regula a movimentação de mercadorias em geral exercida por trabalhadores avulsos em áreas urbanas ou rurais sem vínculo empregatício, mediante intermediação obrigatória do sindicato por Acordo ou Convenção Coletiva.</p>
+
+      <details class="artigo">
+        <summary>⚖️ Arts. 1º e 2º da Lei 12.023/2009 - Atividades &amp; Intermediação</summary>
+        <div class="lei-seca">
+          <strong>Art. 1º</strong> As atividades de movimentação de mercadorias em geral exercidas por trabalhadores avulsos [...] são aquelas desenvolvidas em áreas urbanas ou rurais sem vínculo empregatício, <span class="kw">mediante intermediação obrigatória do sindicato da categoria</span>, por meio de Acordo ou Convenção Coletiva de Trabalho.<br><br>
+          <strong>Art. 2º</strong> São atividades da movimentação de mercadorias em geral:<br>
+          I – cargas e descargas de mercadorias a granel e ensacados, costura, pesagem, embalagem, enlonamento, ensaque, arrasto, posicionamento, acomodação, reordenamento, reparação da carga, amostragem, arrumação, remoção, classificação, empilhamento, transporte com empilhadeiras, paletização, ova e desova de vagões, carga e descarga em feiras livres e abastecimento de lenha em secadores e caldeiras;<br>
+          II – operações de equipamentos de carga e descarga;<br>
+          III – pré-limpeza e limpeza em locais necessários à viabilidade das operações.
+        </div>
+      </details>
+
+      <div class="flow-container">
+        <div class="flow-step">
+          <div class="flow-badge">1</div>
+          <div><strong>Tomador de Serviço:</strong> Solicita mão de obra e repassa a remuneração ao Sindicato.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-badge">2</div>
+          <div><strong>Sindicato da Categoria:</strong> Elabora escala de trabalho em rodízio, divulga, emite comprovantes e zela por normas de segurança.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-badge">3</div>
+          <div><strong>Repasse Financeiro:</strong> O pagamento ao trabalhador avulso ocorre em até <span class="kw">72 horas úteis</span> após a prestação do serviço. Tomador e Sindicato têm responsabilidade solidária.</div>
+        </div>
+      </div>
+
+      <h3>3.2 Trabalhador Avulso Portuário (Lei 12.815/2013 - Lei dos Portos)</h3>
+      <p>Nos portos organizados, o trabalho é realizado por trabalhadores com vínculo ou avulsos registrados no <strong>OGMO (Órgão Gestor de Mão de Obra)</strong>.</p>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 40 da Lei 12.815/2013 - As 6 Atividades Portuárias</summary>
+        <div class="lei-seca">
+          <strong>Art. 40.</strong> O trabalho portuário compreende:<br>
+          I - <strong>capatazia:</strong> movimentação de mercadorias nas instalações dentro do porto;<br>
+          II - <strong>estiva:</strong> movimentação de mercadorias nos conveses ou porões das embarcações;<br>
+          III - <strong>conferência de carga:</strong> contagem de volumes, pesagem e conferência de manifesto;<br>
+          IV - <strong>conserto de carga:</strong> reparo e restauração de embalagens;<br>
+          V - <strong>vigilância de embarcações:</strong> fiscalização de entrada/saída nos portalós e rampas;<br>
+          VI - <strong>bloco:</strong> limpeza e conservação de embarcações (batimento de ferrugem, pintura).
+        </div>
+      </details>
+
+      <div class="mindmap-box">
+        <div class="mm-root">🚢 FLUXO DO TRABALHO PORTUÁRIO AVULSO</div>
+        <div class="mm-l1">NAVIO</div>
+        <div class="mm-l2">↳ Requisita serviços ao Operador Portuário</div>
+        <div class="mm-l1">OPERADOR PORTUÁRIO (Art. 2º, XIII)</div>
+        <div class="mm-l2">↳ Requisita trabalhadores ao OGMO com 24h de antecedência</div>
+        <div class="mm-l1">OGMO - ÓRGÃO GESTOR DE MÃO DE OBRA (Art. 32)</div>
+        <div class="mm-l2">↳ Mantém cadastro/registro exclusivo, escala rodízio e repassa remuneração/encargos</div>
+        <div class="mm-l1">TRABALHADOR PORTUÁRIO AVULSO</div>
+        <div class="mm-l2">↳ Executa Capatazia, Estiva, Conferência, Conserto, Vigilância ou Bloco</div>
+        <div class="mm-l3">⚡ RESPONSABILIDADE SOLIDÁRIA: Operador Portuário e OGMO respondem solidariamente</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. TRABALHO VOLUNTÁRIO ══════════════════════════════ -->
+    <section id="voluntario">
+      <div class="section-label">Módulo 04</div>
+      <h2>4. Trabalho Voluntário (Lei 9.608/1998): Requisitos &amp; Distribuição do Ônus da Prova</h2>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">💡 Nível 1: Entendimento Direto</div>
+          <p>O <strong>serviço voluntário</strong> é atividade não remunerada prestada por pessoa física a entidade pública ou instituição privada sem fins lucrativos (cívicos, culturais, educacionais, científicos, recreativos, assistência social ou trabalho religioso).</p>
+        </div>
+        <div class="level-box level-2">
+          <div class="level-title">⚖️ Nível 2: Termo de Adesão &amp; Ressarcimento de Despesas</div>
+          <p>Exige a celebração formal do <span class="kw">Termo de Adesão</span> (Art. 2º da Lei 9.608/98), contendo objeto e condições. O voluntário pode ser <strong>ressarcido pelas despesas</strong> comprovadamente realizadas e expressamente autorizadas (Art. 3º), sem que isso descaracterize a voluntariedade.</p>
+        </div>
+        <div class="level-box level-3">
+          <div class="level-title">🛡️ Nível 3: Jurisprudência do TST &amp; Ônus da Prova</div>
+          <p>Alegado o vínculo empregatício, se o réu contesta alegando trabalho voluntário (fato impeditivo) e junta o <strong>Termo de Adesão assinado</strong>, ele se desincumbe do ônus probatório (Arts. 818 CLT e 373 CPC). O ônus de comprovar a fraude ou desvirtuamento <strong>permanece com o reclamante</strong> (TST-AIRR-10740-35.2010.5.04.0000).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. ESTÁGIO APROFUNDADO ══════════════════════════════ -->
+    <section id="estagio">
+      <div class="section-label">Módulo 05 · Destaques do Professor</div>
+      <h2>5. Estágio Supervisionado (Lei 11.788/2008): Aprofundamento Exaustivo</h2>
+
+      <div class="box-info prof-note">
+        <span class="box-label">📌 Destaque de Aula do Professor</span>
+        <strong>Pontos de Alta Frequência em Prova:</strong> Fique atento às regras de jornada, limites de duração por concedente, direito a recesso remunerado, quem pode oferecer estágio (incluindo profissionais liberais) e a regra especial de redução de jornada em período de prova!
+      </div>
+
+      <h3>5.1 Duração Máxima &amp; Exceção para PCD (Art. 11)</h3>
+      <p>A duração do estágio na mesma parte concedente <strong>não poderá exceder a 2 (dois) anos</strong>.</p>
+
+      <div class="box-info exam-tip">
+        <span class="box-label">🎯 Exceção de Prova - PCD</span>
+        <strong>Estagiários com Deficiência (Art. 11 da Lei 11.788/2008):</strong> A limitação temporal de 2 anos <strong>NÃO SE APLICA aos estagiários portadores de deficiência (PCD)</strong>! Eles podem estagiar no mesmo local por prazo superior a 2 anos enquanto mantiverem o vínculo com a instituição de ensino.
+      </div>
+
+      <h3>5.2 Recesso Remunerado / Férias do Estagiário (Art. 13)</h3>
+      <p>É assegurado ao estagiário, sempre que o estágio tenha duração igual ou superior a 1 ano, período de <strong>recesso de 30 (trinta) dias</strong>, a ser gozado preferencialmente durante as férias escolares.</p>
+      <ul>
+        <li>Se o estágio for remunerado por bolsa ou outra forma de contraprestação, o recesso <strong>deve ser remunerado</strong>.</li>
+        <li>Os dias de recesso serão concedidos de maneira <strong>proporcional</strong> nos casos de o estágio durar menos de 1 ano.</li>
+      </ul>
+
+      <h3>5.3 Limites de Jornada &amp; Redução de 50% em Semanas de Avaliação (Art. 10)</h3>
+      <p>A jornada de atividade em estágio será definida no TCE, devendo ser compatível com as atividades escolares e não ultrapassar:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Modalidade do Educando</th>
+            <th>Jornada Máxima Diária</th>
+            <th>Jornada Máxima Semanal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Educação Especial &amp; Anos Finais do Ensino Fundamental (EJA)</strong></td>
+            <td><strong>4 horas/dia</strong></td>
+            <td><strong>20 horas/semana</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Ensino Superior, Nível Médio Regular &amp; Educação Profissional</strong></td>
+            <td><strong>6 horas/dia</strong></td>
+            <td><strong>30 horas/semana</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Cursos que alternam Teoria e Prática (Sem aulas presenciais)</strong></td>
+            <td><strong>Até 8 horas/dia (§ 1º)</strong></td>
+            <td><strong>Até 40 horas/semana (§ 1º)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="box-info pitfall">
+        <span class="box-label">⚠️ Regra de Ouro - Semanas de Avaliação (Art. 10, § 2º)</span>
+        <strong>Redução de 50% da Carga Horária:</strong> Se a instituição de ensino adotar verificações de aprendizagem periódicas ou finais (semana de provas), a carga horária do estágio <span class="kw">será reduzida pelo menos à METADE</span>, estipulada no termo de compromisso, para garantir o bom desempenho do estudante. A instituição de ensino deve comunicar à concedente as datas das provas no início do período letivo (Art. 7º, VII).
+      </div>
+
+      <h3>5.4 Quem Pode Conceder Estágio &amp; Limites de Supervisão (Arts. 8º e 9º)</h3>
+      <p>Podem conceder estágio:</p>
+      <ul>
+        <li>Pessoas jurídicas de direito privado;</li>
+        <li>Órgãos da administração pública direta, autárquica e fundacional de qualquer dos Poderes (União, Estados, DF e Municípios);</li>
+        <li><strong>Profissionais Liberais de Nível Superior:</strong> Devidamente registrados em seus respectivos conselhos de fiscalização profissional (ex: advogados, médicos, engenheiros, dentistas).</li>
+      </ul>
+
+      <div class="box-info doutrina-box">
+        <span class="box-label">📊 Limite de Supervisão Simultânea (Art. 9º, III)</span>
+        A concedente deve indicar funcionário de seu quadro com formação ou experiência na área para orientar e supervisionar no máximo <span class="kw">até 10 (dez) estagiários simultaneamente</span>. Além disso, a concedente deve enviar à instituição de ensino relatório de atividades com periodicidade mínima de <strong>6 meses</strong>, com vista obrigatória ao estagiário (Art. 9º, VII).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. TRABALHO DO PRESIDIÁRIO ══════════════════════════════ -->
+    <section id="presidiario">
+      <div class="section-label">Módulo 06 · Conteúdo Adicionado do Professor</div>
+      <h2>6. Regime de Trabalho do Presidiário (LEP - Lei 7.210/1984)</h2>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">💡 Nível 1: Entendimento Direto</div>
+          <p>O trabalho do preso condenado é considerado pela legislação brasileira como um <strong>dever social e condição de dignidade humana</strong>, com finalidade educativa e produtiva. Ele visa preparar o apenado para a reinserção social e evitar a ociosidade dentro dos estabelecimentos prisionais.</p>
+        </div>
+        <div class="level-box level-2">
+          <div class="level-title">⚖️ Nível 2: Inexistência de Vínculo CLT &amp; Remuneração Mínima (LEP)</div>
+          <p>A Lei de Execução Penal (Lei 7.210/1984) estabelece regras rígidas para a prestação de trabalho do presidiário:</p>
+          <details class="artigo" open>
+            <summary>⚖️ Arts. 28 e 29 da Lei 7.210/1984 (LEP) - Trabalho do Condenado</summary>
+            <div class="lei-seca">
+              <strong>Art. 28.</strong> O trabalho do condenado, como dever social e condição de dignidade humana, terá finalidade educativa e produtiva.<br>
+              § 1º Aplicam-se à organização e aos métodos de trabalho as precauções relativas à segurança e à higiene.<br>
+              <span class="kw">§ 2º O trabalho do preso NÃO está sujeito ao regime da Consolidação das Leis do Trabalho (CLT).</span><br><br>
+              <strong>Art. 29.</strong> O trabalho do preso será remunerado, mediante prévia tabela, <span class="kw">não podendo ser inferior a 3/4 (três quartos) do salário mínimo</span>.
+            </div>
+          </details>
+        </div>
+        <div class="level-box level-3">
+          <div class="level-title">🛡️ Nível 3: Dogmática &amp; Pegadinhas de Concursos de Alto Nível</div>
+          <p><strong>Pontos Críticos em Provas da OAB e Concursos:</strong></p>
+          <ol>
+            <li><strong>Ausência de Vínculo Empregatício:</strong> Por disposição expressa do Art. 28, § 2º da LEP, o trabalho do preso <strong>NÃO gera contrato de trabalho celetista</strong>, nem direito a FGTS, aviso prévio, seguro-desemprego ou 13º salário celetista.</li>
+            <li><strong>Piso Remuneratório Especial:</strong> O trabalho do preso DEVE ser remunerado, mas a LEP autoriza piso diferenciado: <strong>não pode ser inferior a 3/4 (75%) do salário mínimo</strong>. A tentativa de equiparar ao salário mínimo integral com base na CLT é rejeitada pela jurisprudência pacífica dos Tribunais Superiores (STF/STJ/TST).</li>
+            <li><strong>Higiene e Segurança:</strong> Embora não haja vínculo CLT, o Art. 28, § 1º determina a aplicação obrigatória das normas de segurança e higiene do trabalho.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="box-info pitfall">
+        <span class="box-label">⚠️ Pegadinha de Prova - Preso vs. CLT</span>
+        <strong>Cuidado:</strong> Se uma questão de concurso afirmar que "o presidiário que presta serviços dentro do presídio faz jus aos direitos da CLT e ao salário mínimo integral", a assertiva estará <strong>ERRADA</strong>! O trabalho do preso não se submete à CLT (Art. 28, § 2º LEP) e seu piso salarial legal é de <strong>3/4 do salário mínimo</strong> (Art. 29 LEP).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="revisao">
+      <div class="section-label">Fixação</div>
+      <h2>📝 Revisão Ativa &amp; Questões de Concurso</h2>
+
+      <div class="exercise">
+        <div class="exercise-title">01. (CEBRASPE / MPT - Adaptada) O trabalho prestado por preso condenado em cumprimento de pena gera vínculo empregatício regido pela CLT, sendo devido o pagamento de salário mínimo integral. A assertiva está Certa ou Errada?</div>
+        <details>
+          <summary>Ver Resposta Comentada</summary>
+          <div class="gabarito">
+            <strong>ERRADA.</strong> Conforme os Arts. 28, § 2º e 29 da Lei 7.210/1984 (LEP), o trabalho do preso NÃO está sujeito ao regime da CLT e sua remuneração mínima legal é de 3/4 (três quartos) do salário mínimo.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-title">02. (FGV / OAB) Um estagiário de Direito portador de deficiência (PCD) completou 2 anos de estágio na mesma empresa concedente. A empresa pretende renovar o estágio por mais 1 ano. Isso é legalmente permitido?</div>
+        <details>
+          <summary>Ver Resposta Comentada</summary>
+          <div class="gabarito">
+            <strong>SIM.</strong> De acordo com o Art. 11 da Lei 11.788/2008, o limite máximo de 2 anos de estágio na mesma concedente NÃO SE APLICA aos estagiários portadores de deficiência (PCD), permitindo a renovação.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-title">03. (FCC / TRT) Nos dias de avaliações acadêmicas periódicas, qual deve ser a carga horária do estagiário de ensino superior?</div>
+        <details>
+          <summary>Ver Resposta Comentada</summary>
+          <div class="gabarito">
+            <strong>Resposta: Reduzida pelo menos à metade.</strong> Segundo o Art. 10, § 2º da Lei 11.788/2008, nos períodos de verificação de aprendizagem, a carga horária do estágio será reduzida pelo menos à metade para garantir o desempenho escolar do estudante.
+          </div>
+        </details>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-title">04. (CEBRASPE / Magistratura) Profissionais liberais de nível superior devidamente registrados em seus conselhos de classe podem figurar como parte concedente de estágio. A assertiva está Certa ou Errada?</div>
+        <details>
+          <summary>Ver Resposta Comentada</summary>
+          <div class="gabarito">
+            <strong>CERTA.</strong> Nos termos do Art. 9º, caput da Lei 11.788/2008, profissionais liberais de nível superior registrados em conselhos profissionais (ex: advogados, engenheiros) podem oferecer estágio diretamente.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+    <section>
+      <div class="section-label">Síntese Expressa</div>
+      <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Atualizado)</h2>
+      <div class="box-info exam-tip" style="background: rgba(245, 158, 11, 0.1); border-color: var(--p-500);">
+        <ul>
+          <li><strong>Eventual:</strong> Sem habitualidade. Explicado pelas Teorias do Evento, Fins do Empreendimento e Fixação Jurídica. Pode ter subordinação.</li>
+          <li><strong>Autônomo:</strong> Sem subordinação. Riscos próprios. Art. 442-B CLT autoriza exclusividade e continuidade. Exceções: professores (horário fixo) e infungibilidade contratual.</li>
+          <li><strong>Avulso:</strong> Igualdade constitucional (Art. 7º, XXXIV CF). Intermediação do Sindicato (Não Portuário - Lei 12.023/09, repasse em 72h úteis) ou OGMO (Portuário - Lei 12.815/13, capatazia, estiva, conferência, conserto, vigilância, bloco). Responsabilidade solidária.</li>
+          <li><strong>Voluntário:</strong> Lei 9.608/98. Exige Termo de Adesão. Ressarcimento de despesas autorizado não gera salário. Termo juntado transfere o ônus da prova de fraude ao autor.</li>
+          <li><strong>Estágio (Aprofundado):</strong> Lei 11.788/08. Max 2 anos (exceto PCD - Art. 11). Recesso 30 dias se >= 1 ano (Art. 13). Jornadas 4h/20h ou 6h/30h. <span class="kw">Semana de Prova = Carga reduzida à metade (Art. 10, § 2º)</span>. Profissionais liberais de nível superior podem conceder. Max 10 estagiários por supervisor (Art. 9º, III). Relatório semestral. Descumprimento = VÍNCULO CLT AUTOMÁTICO.</li>
+          <li><strong>Trabalho do Presidiário:</strong> Lei 7.210/84 (LEP). Dever social e educativo. <span class="kw">NÃO SUJEITO À CLT (Art. 28, § 2º)</span>. Piso salarial legal: <span class="kw">não inferior a 3/4 do Salário Mínimo</span> (Art. 29). Respeito a normas de segurança e higiene.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+      <p>MEU HUB DE ESTUDOS JURÍDICOS &copy; 2026 - Módulo 07: Modalidades Especiais de Trabalho &amp; Trabalho do Presidiário</p>
+    </div>
+  </footer>
+
+  <!-- Script Interativo do Portal -->
+  <script src="../../portal-core.js"></script>
+</body>
+</html>

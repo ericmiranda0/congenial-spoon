@@ -2055,7 +2055,10 @@ input:checked + .ml-slider:before {
 
 /* State during PDF generation and print */
 body.is-generating-pdf .summary-card,
-body.is-generating-pdf header,
+body.is-generating-pdf #sumario,
+body.is-generating-pdf [id*="sumario"],
+body.is-generating-pdf .sumario,
+body.is-generating-pdf .table-of-contents,
 body.is-generating-pdf nav,
 body.is-generating-pdf .bottom-nav,
 body.is-generating-pdf .report-btn,
@@ -2069,6 +2072,43 @@ body.is-generating-pdf .pdf-export-btn,
 body.is-generating-pdf .pdf-excluded,
 body.is-generating-pdf .ml-nav-buttons {
   display: none !important;
+}
+
+body.is-generating-pdf header {
+  display: block !important;
+  background: #ffffff !important;
+  color: #0F172A !important;
+  padding: 24px 20px !important;
+  border-bottom: 3px solid var(--p-500, #3B82F6) !important;
+  margin-bottom: 25px !important;
+  text-align: left !important;
+  box-shadow: none !important;
+}
+
+body.is-generating-pdf header h1 {
+  color: var(--p-700, #1E3A8A) !important;
+  font-size: 22pt !important;
+  margin-bottom: 6px !important;
+  text-align: left !important;
+}
+
+body.is-generating-pdf header .subtitle {
+  color: #334155 !important;
+  font-size: 11pt !important;
+  text-align: left !important;
+}
+
+body.is-generating-pdf header .badge {
+  border: 1px solid var(--p-500, #3B82F6) !important;
+  color: var(--p-700, #1E3A8A) !important;
+  background: #EFF6FF !important;
+  display: inline-block !important;
+}
+
+body.is-generating-pdf header .meta {
+  color: #475569 !important;
+  font-size: 9.5pt !important;
+  justify-content: flex-start !important;
 }
 
 body.is-generating-pdf .reveal-hidden,
@@ -2114,17 +2154,16 @@ body.is-generating-pdf h6 {
 @media print {
   @page {
     size: A4 portrait;
-    margin: 15mm 12mm 15mm 12mm;
+    margin: 12mm 10mm 12mm 10mm;
   }
   
   body {
     background: #ffffff !important;
     color: #000000 !important;
-    font-size: 11pt !important;
+    font-size: 10.5pt !important;
     line-height: 1.5 !important;
   }
   
-  header, 
   nav,
   .bottom-nav, 
   .report-btn, 
@@ -2136,9 +2175,49 @@ body.is-generating-pdf h6 {
   .ml-controls, 
   .pdf-export-btn, 
   .summary-card, 
+  #sumario,
+  [id*="sumario"],
+  .sumario,
+  .table-of-contents,
   .pdf-excluded,
   .ml-nav-buttons {
     display: none !important;
+  }
+
+  header {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 15px 0 !important;
+    border-bottom: 2px solid #1E3A8A !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+  }
+
+  header h1 {
+    color: #1E3A8A !important;
+    font-size: 20pt !important;
+    margin-bottom: 4px !important;
+    text-align: left !important;
+  }
+
+  header .subtitle {
+    color: #333333 !important;
+    font-size: 10.5pt !important;
+    text-align: left !important;
+  }
+
+  header .badge {
+    border: 1px solid #1E3A8A !important;
+    color: #1E3A8A !important;
+    background: #EFF6FF !important;
+    display: inline-block !important;
+  }
+
+  header .meta {
+    color: #555555 !important;
+    font-size: 9pt !important;
+    justify-content: flex-start !important;
   }
   
   .reveal-hidden, 
@@ -2190,6 +2269,24 @@ body.is-generating-pdf h6 {
     page-break-after: avoid !important;
   }
 }
+
+/* ── Absolute Priority for Excluded PDF Sections ── */
+body.is-generating-pdf .pdf-excluded,
+body.is-generating-pdf .pdf-excluded *,
+.pdf-excluded,
+.pdf-excluded * {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+}
+
+
 
 
 

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoria Geral dos Contratos no Código Civil | Material Didático Premium</title>
+  
+  <!-- Google Fonts OBRIGATÓRIAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Arquivo Base do Portal -->
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    /* Subject Specific Branding: Civil Law Royal Blue / Indigo */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1E40AF;
+      --p-500: #3B82F6;
+      --p-50: #EFF6FF;
+      --primary: #3B82F6;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    /* Navigation Bar */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(30, 58, 138, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 25px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--p-500);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .home-btn {
+      color: white;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .home-btn:hover {
+      color: var(--p-500);
+      transform: translateX(-3px);
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-list a:hover {
+      color: var(--p-500);
+    }
+
+    .theme-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Section Styling */
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.8rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 {
+      color: var(--p-500);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #60a5fa;
+    }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(59, 130, 246, 0.08);
+      border-color: #3b82f6;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(30, 58, 138, 0.08);
+      border-color: #1e3a8a;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: #3b82f6;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #2563eb; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: #1e3a8a; }
+
+    [data-theme="dark"] .level-1 .level-title { color: #60a5fa; }
+    [data-theme="dark"] .level-3 .level-title { color: #60a5fa; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--p-700);
+      padding: 15px 20px;
+      background: rgba(59, 130, 246, 0.05);
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: var(--p-500);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "▼";
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+    }
+
+    .artigo[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lei-seca {
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(15, 23, 42, 0.4);
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #1e40af;
+      background: #dbeafe;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    [data-theme="dark"] .kw {
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Boxes de Destaque */
+    .box-info {
+      padding: 22px;
+      border-radius: 12px;
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid;
+    }
+
+    .box-label {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+    }
+
+    .exam-tip {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1e3a8a;
+    }
+    .exam-tip .box-label { background: #2563eb; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #dc2626; }
+
+    .doutrina-box {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doutrina-box .box-label { background: #16a34a; }
+
+    .juris-box {
+      background: #fdf4ff;
+      border-color: #f5d0fe;
+      color: #701a75;
+    }
+    .juris-box .box-label { background: #a21caf; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(37, 99, 235, 0.15); border-color: rgba(37, 99, 235, 0.3); color: #bfdbfe; }
+    [data-theme="dark"] .pitfall { background: rgba(220, 38, 38, 0.15); border-color: rgba(220, 38, 38, 0.3); color: #fecaca; }
+    [data-theme="dark"] .doutrina-box { background: rgba(22, 163, 74, 0.15); border-color: rgba(22, 163, 74, 0.3); color: #bbf7d0; }
+    [data-theme="dark"] .juris-box { background: rgba(162, 28, 175, 0.15); border-color: rgba(162, 28, 175, 0.3); color: #f5d0fe; }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 18px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    tr:nth-child(even) {
+      background: rgba(0,0,0,0.015);
+    }
+
+    [data-theme="dark"] tr:nth-child(even) {
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* Mindmap Box */
+    .mindmap-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      border: 1px solid #334155;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+      line-height: 1.8;
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #475569;
+      padding-bottom: 10px;
+    }
+
+    .mm-l1 {
+      color: #38bdf8;
+      font-weight: 700;
+      margin-top: 12px;
+      margin-left: 15px;
+    }
+
+    .mm-l2 {
+      color: #cbd5e1;
+      margin-left: 35px;
+      font-size: 0.92rem;
+    }
+
+    .mm-l3 {
+      color: #94a3b8;
+      margin-left: 55px;
+      font-size: 0.85rem;
+    }
+
+    /* Exercises */
+    .exercise {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+
+    .gabarito {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(13, 148, 136, 0.08);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* Mnemonics */
+    .mnemonic-pill {
+      display: inline-block;
+      background: var(--p-500);
+      color: #ffffff;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 1px;
+      margin-right: 8px;
+    }
+
+    .card.gold {
+      border-top: 4px solid var(--accent-gold);
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <nav class="main-nav">
+    <a href="../../index.html" class="home-btn">
+      <span>←</span> Voltar ao Hub Central
+    </a>
+    <ul class="nav-list">
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#modulo1">Modulo 01: Conceito & Princípios</a></li>
+      <li><a href="#modulo2">Modulo 02: Classificação (17 Tipos)</a></li>
+      <li><a href="#modulo3">Modulo 03: Formação & Extinção</a></li>
+      <li><a href="#modulo4">Modulo 04: Vícios & Evicção</a></li>
+      <li><a href="#modulo5">Modulo 05: Terceiros</a></li>
+      <li><a href="#mapamental">Mapa Mental</a></li>
+      <li><a href="#revisao">Revisão Ativa</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" onclick="togglePortalTheme()">🌓 Tema Escuro</button>
+  </nav>
+
+  <!-- HEADER / HERO -->
+  <header>
+    <div class="header-content">
+      <div class="badge">Material Didático Premium · Direito Civil III</div>
+      <h1>Teoria Geral dos Contratos no Código Civil</h1>
+      <div class="subtitle">Conceito, Princípios Fundamentais, Classificação Exaustiva, Formação, Extinção, Vícios Redibitórios, Evicção e Contratos Envolvendo Terceiros (Arts. 421 a 480 CC)</div>
+      <div class="meta">
+        <span>⚖️ Arts. 421 a 480 do Código Civil</span> | 
+        <span>📚 Teoria Geral do Negócio Jurídico Bilateral</span> | 
+        <span>🛡️ Foco em Concursos & OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="section-label">Plano de Estudo</div>
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao concluir a leitura e estudo deste material didático, você dominará:</p>
+      <ul>
+        <li>O conceito, natureza jurídica e os 9 princípios contratuais modernos (Autonomia da Vontade, <em>Pacta Sunt Servanda</em>, Função Social, Boa-Fé Objetiva, Paridade, Simetria e Intervenção Mínima).</li>
+        <li>As 8 figuras reativas decorrentes da Boa-Fé Objetiva (<em>Surrectio, Supressio, Tu Quoque, Venire contra factum proprium, Exceptio doli, Duty to mitigate the loss, Substantial performance</em> e Inalegabilidade de vícios).</li>
+        <li>Os 17 critérios de classificação dos contratos (Típicos, Comutativos, Aleatórios, Adesão, Reais, Solenes, etc.).</li>
+        <li>As 4 fases da formação contratual, propostas, prazos, culpa <em>in contrahendo</em> e as teorias da expedição e recepção.</li>
+        <li>As regras de extinção normal e anormal (Resilição/Distrato, Resolução involuntária e Rescisão por culpa).</li>
+        <li>O regime jurídico dos Vícios Redibitórios (Arts. 441 a 446 CC) e da Evicção (Arts. 447 a 457 CC) com as Ações Edilícias e Denunciação da Lide.</li>
+        <li>Os três institutos de terceiros: Estipulação em Favor de Terceiro, Promessa de Fato de Terceiro e Contrato com Pessoa a Declarar.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. CONCEITO E PRINCÍPIOS CONTRATUAIS ══════════════════════════════ -->
+    <section id="modulo1">
+      <div class="section-label">Módulo 01</div>
+      <h2>Conceito, Elementos e Princípios Contratuais Fundamentais</h2>
+
+      <div class="level-container">
+        <!-- Nível 1 -->
+        <div class="level-box level-1">
+          <div class="level-title">💡 Nível 1: Entendimento Direto (Para Iniciantes)</div>
+          <p>O contrato é um acordo de vontades entre duas ou mais pessoas para criar, alterar ou extinguir direitos patrimoniais (dinheiro, bens, serviços). É a ferramenta mais comum da sociedade: desde comprar um pão na padaria até alugar um apartamento ou assinar um serviço de streaming.</p>
+        </div>
+
+        <!-- Nível 2 -->
+        <div class="level-box level-2">
+          <div class="level-title">🎓 Nível 2: Explicação Técnica de Graduação</div>
+          <p>O contrato é a espécie mais importante de negócio jurídico bilateral ou plurilateral (Arts. 421 a 480 do CC/02). Requer a manifestação livre de vontade, a presença de sujeitos capazes e legítimos, objeto lícito, possível, determinado ou determinável e forma livre (salvo quando a lei exigir forma solene, Art. 104 do CC).</p>
+        </div>
+
+        <!-- Nível 3 -->
+        <div class="level-box level-3">
+          <div class="level-title">🛡️ Nível 3: Aprofundamento para Concursos de Alto Nível & OAB</div>
+          <p>A doutrina contemporânea (Stolze, Tartuce, Gagliano) analisa os contratos sob o prisma do <strong>Constitucionalismo Civil-Constitucional</strong>, onde a autonomia privada é balizada pela <strong>Função Social do Contrato (Art. 421 CC)</strong> e pela <strong>Boa-Fé Objetiva (Art. 422 CC)</strong>. A Lei da Liberdade Econômica (Lei 13.874/2019) reforçou o Princípio da Paridade e Simetria nos contratos empresariais (Art. 421-A CC) e a Intervenção Mínima do Estado.</p>
+        </div>
+      </div>
+
+      <!-- DOUTRINA CITADA -->
+      <div class="box-info doutrina-box">
+        <span class="box-label">📚 Doutrina de Referência</span>
+        <em>"O contrato é um negócio jurídico por meio do qual as partes declarantes, limitadas pelos princípios da função social e da boa-fé objetiva, autodisciplinam os efeitos patrimoniais que pretendem atingir, segundo a autonomia das suas próprias vontades."</em> (Pablo Stolze Gagliano e Rodolfo Pamplona Filho).
+      </div>
+
+      <!-- PRINCÍPIOS CONTRATUAIS -->
+      <h3>Os 9 Princípios Contratuais do Código Civil</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Princípio</th>
+              <th>Base Legal</th>
+              <th>Conceito Chave</th>
+              <th>Implicação Prática</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Autonomia da Vontade</strong></td>
+              <td>Art. 421 CC</td>
+              <td>Liberdade de contratar ou não, escolher com quem e definir o conteúdo.</td>
+              <td>Limitada pela lei, ordem pública e função social. Proibida <em>vota corvina</em> (Art. 426).</td>
+            </tr>
+            <tr>
+              <td><strong>Obrigatoriedade (Pacta Sunt Servanda)</strong></td>
+              <td>Art. 391 CC</td>
+              <td>O contrato faz lei entre as partes e deve ser cumprido rigorosamente.</td>
+              <td>Gera responsabilidade patrimonial. Mitigada pela imprevisão e exceção do contrato não cumprido.</td>
+            </tr>
+            <tr>
+              <td><strong>Relatividade dos Efeitos</strong></td>
+              <td>Doutrina / CC</td>
+              <td>Efeitos restritos às partes contratantes (<em>inter partes</em>).</td>
+              <td>Em regra não vincula terceiros (exceções: estipulação em favor de terceiro).</td>
+            </tr>
+            <tr>
+              <td><strong>Função Social do Contrato</strong></td>
+              <td>Art. 421 CC</td>
+              <td>O contrato deve promover o bem-estar social e não prejudicar a coletividade.</td>
+              <td>Limita a liberdade contratual. Modifica a interpretação e combate abusos.</td>
+            </tr>
+            <tr>
+              <td><strong>Boa-Fé Objetiva</strong></td>
+              <td>Art. 422 CC</td>
+              <td>Padrão ético de conduta, probidade, lealdade e cooperação mútua.</td>
+              <td>Gera deveres anexos (informação, proteção, lealdade e confiança).</td>
+            </tr>
+            <tr>
+              <td><strong>Paridade</strong></td>
+              <td>Art. 421-A CC</td>
+              <td>Presunção de igualdade na determinação do conteúdo contratual.</td>
+              <td>Evita presunção automática de adesão em contratos empresariais.</td>
+            </tr>
+            <tr>
+              <td><strong>Simetria</strong></td>
+              <td>Art. 421-A CC</td>
+              <td>Equivalência entre as obrigações e direitos assumidos pelas partes.</td>
+              <td>Garante contratos equilibrados entre partes com poder equivalente.</td>
+            </tr>
+            <tr>
+              <td><strong>Intervenção Mínima</strong></td>
+              <td>Art. 421, p.ú. CC</td>
+              <td>O Estado só deve intervir nos contratos em caráter de <em>ultima ratio</em>.</td>
+              <td>Preserva a autonomia privada e a segurança jurídica negocial.</td>
+            </tr>
+            <tr>
+              <td><strong>Excepcionalidade da Revisão</strong></td>
+              <td>Art. 421, p.ú. CC</td>
+              <td>A revisão judicial só ocorre em fatos imprevisíveis/onerosidade excessiva.</td>
+              <td>Impede alterações unilaterais ou revisões banais.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BOA-FÉ OBJETIVA E SUAS FIGURAS REATIVAS -->
+      <h3>Boa-Fé Objetiva (Art. 422 CC) e Suas 8 Figuras Reativas</h3>
+
+      <p>Diferente da boa-fé subjetiva (estado psicológico "eu não sabia"), a <strong>boa-fé objetiva</strong> é uma norma de conduta ativa que impõe lealdade, cooperação e proteção durante todas as fases (pré, contratual e pós-contratual).</p>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+        <div class="card gold">
+          <h4>1. Surrectio</h4>
+          <p>Surgimento de um novo direito pelo cumprimento iterativo a maior sem oposição do credor ao longo do tempo.</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Supressio</h4>
+          <p>Perda de uma faculdade contratual pelo não exercício prolongado, gerando legítima expectativa de renúncia.</p>
+        </div>
+        <div class="card gold">
+          <h4>3. Tu Quoque</h4>
+          <p>Vedação a que uma parte exija da outra um comportamento que ela própria descumpriu ("você também não fez").</p>
+        </div>
+        <div class="card gold">
+          <h4>4. Venire Contra Factum Proprium</h4>
+          <p>Proibição do comportamento contraditório que quebra a confiança legítima despertada na outra parte.</p>
+        </div>
+        <div class="card gold">
+          <h4>5. Exceptio Doli (Exceção do Dolo)</h4>
+          <p>Defesa contra o exercício abusivo ou doloso de um direito contratual pela contraparte.</p>
+        </div>
+        <div class="card gold">
+          <h4>6. Duty to Mitigate the Loss</h4>
+          <p>Dever do credor lesado de tomar medidas razoáveis para conter e mitigar o próprio prejuízo.</p>
+        </div>
+        <div class="card gold">
+          <h4>7. Substantial Performance</h4>
+          <p>Teoria do Adimplemento Substancial: se o devedor cumpriu quase a totalidade, veda-se a rescisão drástica do contrato.</p>
+        </div>
+        <div class="card gold">
+          <h4>8. Inalegabilidade de Vícios Formais</h4>
+          <p>Prevalência da intenção real e da confiança negocial sobre formalidades ocultas abusivas em entrelinhas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. CLASSIFICAÇÃO EXAUSTIVA DOS CONTRATOS ══════════════════════════════ -->
+    <section id="modulo2">
+      <div class="section-label">Módulo 02</div>
+      <h2>Classificação Exaustiva dos Contratos (17 Critérios)</h2>
+
+      <p>A classificação dogmática agrupa os contratos segundo suas peculiaridades jurídicas e econômicas:</p>
+
+      <ol style="line-height: 2;">
+        <li><strong>Quanto à Previsão Legal:</strong> Típicos (previstos em lei) vs. Atípicos (admitidos pela autonomia privada).</li>
+        <li><strong>Quanto à Titulação:</strong> Nominados (possuem nome legal específico) vs. Inominados.</li>
+        <li><strong>Quanto aos Efeitos:</strong> Unilaterais (prestação para apenas uma parte, ex: doação pura) vs. Bilaterais/Sinalagmáticos (prestações recíprocas).</li>
+        <li><strong>Quanto à Contraprestação:</strong> Onerosos (sacrifício patrimonial mútuo) vs. Gratuitos (benefício para apenas uma parte).</li>
+        <li><strong>Quanto aos Sujeitos:</strong> Unilateral (vedado autocontrato Art. 117 CC) vs. Bilateral vs. Plurilateral.</li>
+        <li><strong>Quanto à Certeza do Objeto:</strong> Comutativos (prestações certas e equivalentes) vs. Aleatórios (objeto incerto: <em>Emptio Spei</em> - venda da esperança; <em>Emptio Rei Speratae</em> - venda da coisa esperada).</li>
+        <li><strong>Quanto à Elaboração:</strong> Paritários (cláusulas negociadas conjuntamente) vs. De Adesão (cláusulas rígidas pré-fixadas - Art. 423 CC: <em>in dubio pro aderente</em>).</li>
+        <li><strong>Quanto à Forma:</strong> Formais/Solenes (exigem escritura pública, etc.) vs. Informais/Não Solenes.</li>
+        <li><strong>Quanto ao Aperfeiçoamento:</strong> Consensuais (nascem do mero acordo de vontades) vs. Reais (exigem a entrega física da coisa/tradição, ex: mútuo, comodato).</li>
+        <li><strong>Quanto à Pessoalidade:</strong> Pessoais/Infungíveis (obrigação personalíssima) vs. Impessoais/Fungíveis.</li>
+        <li><strong>Quanto à Execução:</strong> Instantâneos, Diferidos, Periódicos, Fracionados, Continuados e de Trato Sucessivo.</li>
+        <li><strong>Quanto à Finalidade:</strong> Preliminares (minuta/compromisso de contratar no futuro) vs. Definitivos.</li>
+        <li><strong>Quanto ao Objeto:</strong> Patrimoniais vs. Não Patrimoniais.</li>
+        <li><strong>Quanto ao Meio:</strong> Físicos vs. Virtuais/Digitais.</li>
+        <li><strong>Quanto à Simetria:</strong> Simétricos vs. Assimétricos.</li>
+        <li><strong>Quanto à Reciprocidade:</strong> Principais (subsistem por si) vs. Acessórios (garantias, fiança).</li>
+        <li><strong>Quanto aos Ramos:</strong> Civil, Empresarial, Administrativo, Consumerista e Internacional.</li>
+      </ol>
+    </section>
+
+    <!-- ══════════════════════════════ 3. FORMAÇÃO E EXTINÇÃO DOS CONTRATOS ══════════════════════════════ -->
+    <section id="modulo3">
+      <div class="section-label">Módulo 03</div>
+      <h2>Formação e Extinção dos Contratos (Arts. 427 a 435 / 472 a 480 CC)</h2>
+
+      <h3>As 4 Fases da Formação Contratual</h3>
+      <div class="mindmap-box">
+        <div class="mm-root">🔄 CICLO DE VIDA DO CONTRATO</div>
+        <div class="mm-l1">1. FASE DE SONDAGEM</div>
+        <div class="mm-l2">└── Manifestação inicial de interesse e convite a negociar.</div>
+        <div class="mm-l1">2. NEGOCIAÇÕES PRELIMINARES (PUNCTUAÇÃO)</div>
+        <div class="mm-l2">└── Proposta e discussão de minuta. Gera responsabilidade por má-fé (Culpa in contrahendo).</div>
+        <div class="mm-l1">3. FASE CONTRATUAL (OFERTA & ACEITAÇÃO)</div>
+        <div class="mm-l2">└── Acordo de vontades. Proposta obriga o proponente (Art. 427 CC). Nascem os deveres contratuais.</div>
+        <div class="mm-l1">4. FASE PÓS-CONTRATUAL</div>
+        <div class="mm-l2">└── Deveres residuais de garantia, sigilo e não concorrência desleal.</div>
+      </div>
+
+      <!-- TEORIAS DA FORMAÇÃO -->
+      <h3>Teorias da Formação Contratual (Presentes vs. Ausentes)</h3>
+      <ul>
+        <li><strong>Entre Presentes (Comunicação Simultânea):</strong> Aplica-se a <em>Teoria da Recepção</em> (aceite imediato).</li>
+        <li><strong>Entre Ausentes (Sem Comunicação Simultânea - E-mail/Carta):</strong> Aplica-se a <em>Teoria da Expedição</em> (Art. 434 do CC: o contrato considera-se concluído no momento em que a aceitação é expedida).</li>
+        <li><strong>Lugar da Celebração (Art. 435 CC):</strong> Considera-se celebrado no lugar em que foi proposta a oferta. Nos contratos internacionais, vigora a lei do domicílio do proponente (Art. 9º, § 2º da LINDB).</li>
+      </ul>
+
+      <!-- EXTINÇÃO DOS CONTRATOS -->
+      <h3>Extinção dos Contratos: Normal vs. Anormal</h3>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+        <div class="card">
+          <h4>Extinção Normal</h4>
+          <p>Ocorre pelo cumprimento integral da obrigação ou pelo decurso do prazo pactuado sem intercorrências.</p>
+        </div>
+        <div class="card">
+          <h4>Resilição (Arts. 472/473 CC)</h4>
+          <p>Desfazimento por vontade das partes. Pode ser <strong>Bilateral (Distrato)</strong> ou <strong>Unilateral (Denúncia)</strong>. O distrato exige a mesma forma do contrato.</p>
+        </div>
+        <div class="card">
+          <h4>Resolução (Sem Culpa)</h4>
+          <p>Extinção por inexecução involuntária decorrente de caso fortuito ou força maior (Arts. 234/393 CC) ou por onerosidade excessiva (Art. 478 CC).</p>
+        </div>
+        <div class="card">
+          <h4>Rescisão (Com Culpa)</h4>
+          <p>Extinção provocada pelo inadimplemento culposo de uma das partes (Art. 475 CC), gerando direito a perdas e danos e cláusula penal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. VÍCIOS REDIBITÓRIOS E EVICÇÃO ══════════════════════════════ -->
+    <section id="modulo4">
+      <div class="section-label">Módulo 04</div>
+      <h2>Vícios Redibitórios (Arts. 441-446) e Evicção (Arts. 447-457)</h2>
+
+      <!-- VÍCIOS REDIBITÓRIOS -->
+      <h3>1. Vícios Redibitórios (Arts. 441 a 446 do CC)</h3>
+      <p>É o defeito oculto da coisa recebida em virtude de contrato comutativo (ou doação onerosa) que a torna imprópria ao uso a que se destina ou lhe diminui sensivelmente o valor.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Vício Redibitório (Código Civil)</th>
+              <th>Vício do Produto (CDC)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Regime Legal</strong></td>
+              <td>Código Civil (Arts. 441-446)</td>
+              <td>Código de Defesa do Consumidor (Arts. 18-26)</td>
+            </tr>
+            <tr>
+              <td><strong>Relação Jurídica</strong></td>
+              <td>Contratos civis e empresariais onerosos</td>
+              <td>Relação de consumo (Fornecedor x Consumidor)</td>
+            </tr>
+            <tr>
+              <td><strong>Prazo (Bens Móveis)</strong></td>
+              <td>30 dias da entrega (ou 180 dias para revelar)</td>
+              <td>30 dias (não durável) / 90 dias (durável)</td>
+            </tr>
+            <tr>
+              <td><strong>Prazo (Bens Imóveis)</strong></td>
+              <td>1 ano a contar da entrega efetiva</td>
+              <td>90 dias a contar da ciência do vício oculto</td>
+            </tr>
+            <tr>
+              <td><strong>Ações Cabíveis</strong></td>
+              <td>Ações Edilícias (Redibitória ou Estimatória)</td>
+              <td>Substituição, Restituição ou Abatimento (Art. 18)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EVICÇÃO -->
+      <h3>2. Da Evicção (Arts. 447 a 457 do CC)</h3>
+      <p>Consiste na perda total ou parcial da posse ou propriedade do bem transferido em contrato oneroso, decorrente de decisão judicial ou ato administrativo que reconhece direito anterior de terceiro (<strong>Evictor</strong>).</p>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 15px 0;">
+        <div class="card">
+          <h4>Partes na Evicção</h4>
+          <p><strong>Evicto:</strong> Comprador que perde o bem.<br>
+          <strong>Alienante:</strong> Vendedor que deve indenizar.<br>
+          <strong>Evictor:</strong> Terceiro titular do direito real anterior.</p>
+        </div>
+        <div class="card">
+          <h4>Direitos Indenizatórios (Art. 450 CC)</h4>
+          <p> Restituição integral do preço na época em que evenceu.<br>
+           Frutos que foi obrigado a devolver.<br>
+           Despesas contratuais, ITBI, custas e honorários advocatícios.</p>
+        </div>
+      </div>
+
+      <div class="box-info juris-box">
+        <span class="box-label">⚖️ Processualística da Evicção</span>
+        <strong>Denunciação da Lide (Art. 125, I e § 2º do CPC):</strong> O evicto pode denunciar a lide ao alienante na própria ação movida pelo evictor para garantir seu direito de regresso. Admite-se a denunciação sucessiva ao alienante anterior. O prazo prescricional da ação de evicção é de <strong>3 anos</strong> contados da perda definitiva da coisa.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. CONTRATOS ENVOLVENDO TERCEIROS ══════════════════════════════ -->
+    <section id="modulo5">
+      <div class="section-label">Módulo 05</div>
+      <h2>Contratos Envolvendo Terceiros (Arts. 436 a 440 / 467 a 471 CC)</h2>
+
+      <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 20px 0;">
+        <div class="card gold">
+          <h4>1. Estipulação em Favor de Terceiro (Arts. 436-438)</h4>
+          <p>O Estipulante (A) contrata com o Promitente (B) para beneficiar o Terceiro (C). Tanto A quanto C podem exigir a prestação. O Estipulante pode substituir C por ato <em>inter vivos</em> ou testamento (Art. 438).</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Promessa de Fato de Terceiro (Arts. 439-440)</h4>
+          <p>O Promitente (A) promete ao Beneficiário (C) que um Terceiro (B) executará uma prestação. Se B não cumprir, A responde por perdas e danos. Exceção: cônjuge (Art. 439, p.ú.).</p>
+        </div>
+        <div class="card gold">
+          <h4>3. Contrato com Pessoa a Declarar (Arts. 467-471)</h4>
+          <p>Uma parte reserva o direito de indicar posteriormente a pessoa que assumirá os direitos e deveres. Prazo de 5 dias para nomeação (Art. 468). Aceite produz efeito retroativo <em>ex tunc</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPA MENTAL VISUAL ══════════════════════════════ -->
+    <section id="mapamental">
+      <div class="section-label">Esquema Gráfico</div>
+      <h2>🧠 Mapa Mental - Teoria Geral dos Contratos</h2>
+
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ TEORIA GERAL DOS CONTRATOS (ARTS. 421 A 480 CC)</div>
+        <div class="mm-l1">├── PRINCÍPIOS FUNDAMENTAIS</div>
+        <div class="mm-l2">│   ├── Autonomia Privada & Pacta Sunt Servanda</div>
+        <div class="mm-l2">│   ├── Função Social (Art. 421) & Boa-Fé Objetiva (Art. 422)</div>
+        <div class="mm-l2">│   └── Paridade, Simetria & Intervenção Mínima (Art. 421-A)</div>
+        <div class="mm-l1">├── FIGURAS DA BOA-FÉ OBJETIVA</div>
+        <div class="mm-l2">│   ├── Surrectio / Supressio / Tu Quoque / Venire Contra Factum Proprium</div>
+        <div class="mm-l2">│   └── Duty to Mitigate Loss / Substantial Performance</div>
+        <div class="mm-l1">├── GARANTIAS CONTRATUAIS</div>
+        <div class="mm-l2">│   ├── Vícios Redibitórios (Arts. 441-446) -> Ações Edilícias</div>
+        <div class="mm-l2">│   └── Evicção (Arts. 447-457) -> Perda da coisa por decisão judicial</div>
+        <div class="mm-l1">└── CONTRATOS COM TERCEIROS</div>
+        <div class="mm-l2">    ├── Estipulação em Favor de Terceiro (Arts. 436-438)</div>
+        <div class="mm-l2">    ├── Promessa de Fato de Terceiro (Arts. 439-440)</div>
+        <div class="mm-l2">    └── Contrato com Pessoa a Declarar (Arts. 467-471)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA (QUESTÕES COMENTADAS) ══════════════════════════════ -->
+    <section id="revisao">
+      <div class="section-label">Fixação de Conteúdo</div>
+      <h2>📝 Revisão Ativa & Questões Oficiais</h2>
+
+      <!-- Q1 OAB -->
+      <div class="exercise">
+        <p><strong>01. (Questão Oficial OAB - Vícios Redibitórios)</strong> André, mediante contrato escrito, comprou o carro de passeio de seu vizinho, Bernardo. Duas semanas depois, enquanto André o conduzia por uma das principais avenidas da cidade, o veículo quebrou por causa de um defeito não aparente na mangueira do radiador.<br>
+        Para pretender indenização por perdas e danos em desfavor de Bernardo pelo ocorrido, André deve provar:</p>
+        <p>
+          A) a existência de cláusula expressa no contrato de garantia contra vícios ocultos.<br>
+          B) a preexistência do defeito, mesmo que desconhecido por Bernardo.<br>
+          C) a preexistência do defeito e que Bernardo tinha conhecimento dele.<br>
+          D) a preexistência do defeito, que Bernardo tinha conhecimento dele e a existência de cláusula no contrato de garantia.
+        </p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>GABARITO: C.</strong><br>
+            <strong>Fundamentação:</strong> Nos termos do Art. 443 do Código Civil, a devolução do valor pago acrescida de <strong>perdas e danos</strong> exige a comprovação de que o alienante tinha conhecimento prévio do vício oculto (má-fé). Se o alienante não conhecia o vício, restituirá apenas o valor recebido e as despesas do contrato.
+          </div>
+        </details>
+      </div>
+
+      <!-- Q2 Discursiva -->
+      <div class="exercise">
+        <p><strong>02. (Discursiva Avançada - Magistratura/MP)</strong> Explique a diferença entre <em>Surrectio</em>, <em>Supressio</em> e a Teoria do Adimplemento Substancial (<em>Substantial Performance</em>), apontando a fundamentação jurídica no Código Civil.</p>
+        <details>
+          <summary>Ver resposta comentada</summary>
+          <div class="gabarito">
+            <strong>Espelho de Resposta:</strong><br>
+            1. <strong>Supressio:</strong> Perda de um direito ou faculdade contratual em virtude do seu não exercício prolongado no tempo, criando na contraparte a justa expectativa de que não seria mais exigido.<br>
+            2. <strong>Surrectio:</strong> Surgimento correlato de um novo direito em favor da contraparte decorrente da prática reiterada a maior aceita sem oposição.<br>
+            3. <strong>Adimplemento Substancial:</strong> Impede a resolução drástica do contrato quando o devedor cumpriu parte essencial e quase a totalidade da obrigação, restando apenas o direito de cobrar a parcela faltante por vias menos gravosas (Art. 422 do CC).
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+    <section>
+      <div class="card gold">
+        <h2>🚀 Resumão Ultra-Rápido (Cheat Sheet de Véspera)</h2>
+        <ul>
+          <li><strong>Princípios Basilares:</strong> Função Social (Art. 421 CC) e Boa-Fé Objetiva (Art. 422 CC) limitam a Autonomia Privada.</li>
+          <li><strong>Lei da Liberdade Econômica:</strong> Presunção de paridade/simetria (Art. 421-A) e intervenção mínima do Estado.</li>
+          <li><strong>Boa-Fé Objetiva:</strong> Proíbe o comportamento contraditório (<em>Venire contra factum proprium</em>) e exige o dever de mitigar prejuízos.</li>
+          <li><strong>Exceção do Contrato Não Cumprido:</strong> Art. 476 do CC. Ninguém pode exigir cumprimento sem ter cumprido a sua parte.</li>
+          <li><strong>Vícios Redibitórios:</strong> Defeito oculto. Prazo de 30 dias (móveis) ou 1 ano (imóveis). Se alienante sabia = perdas e danos (Art. 443 CC).</li>
+          <li><strong>Evicção:</strong> Perda do bem por sentença judicial em favor do evictor. Indenização cobre preço da época, frutos, ITBI e honorários (Art. 450 CC).</li>
+          <li><strong>Estipulação em Favor de Terceiro:</strong> Art. 436 CC. Tanto o estipulante quanto o terceiro beneficiário podem exigir o cumprimento.</li>
+          <li><strong>Pessoa a Declarar:</strong> Indicação no prazo legal de 5 dias (Art. 468 CC). Efeitos retroagem à data do contrato (Art. 469 CC).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <div class="credit">MEU HUB DE ESTUDOS JURÍDICOS</div>
+      <p style="color: #94a3b8;">Sistema modular de resumos interativos otimizados para alto desempenho em Concursos e OAB.</p>
+      <p style="margin-top: 1.5rem; color: #cbd5e1; opacity: 0.7;">&copy; 2026 - Produzido com foco em excelência e aprovação.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>

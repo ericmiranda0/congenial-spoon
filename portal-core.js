@@ -1207,58 +1207,71 @@ function initPdfExport() {
 
     // Helper: Find and toggle DOM elements for optional sections
     const applySectionFilters = () => {
-        const incLeiSeca = document.getElementById('pdfOptLeiSeca')?.checked;
-        const incMnemonicos = document.getElementById('pdfOptMnemonicos')?.checked;
-        const incFlashcards = document.getElementById('pdfOptFlashcards')?.checked;
-        const incMapaMental = document.getElementById('pdfOptMapaMental')?.checked;
-        const incCheatSheet = document.getElementById('pdfOptCheatSheet')?.checked;
-        const incRevisaoAtiva = document.getElementById('pdfOptRevisaoAtiva')?.checked;
+        const incLeiSeca = document.getElementById('pdfOptLeiSeca')?.checked ?? true;
+        const incMnemonicos = document.getElementById('pdfOptMnemonicos')?.checked ?? true;
+        const incFlashcards = document.getElementById('pdfOptFlashcards')?.checked ?? true;
+        const incMapaMental = document.getElementById('pdfOptMapaMental')?.checked ?? true;
+        const incCheatSheet = document.getElementById('pdfOptCheatSheet')?.checked ?? true;
+        const incRevisaoAtiva = document.getElementById('pdfOptRevisaoAtiva')?.checked ?? true;
 
-        const allElements = document.querySelectorAll('section, div, details, .card');
+        // Clear existing exclusions first
+        document.querySelectorAll('.pdf-excluded').forEach(el => el.classList.remove('pdf-excluded'));
+
+        const targets = document.querySelectorAll('section, div, details, article, .card, .mnemonico-box, .mnemonico-card, .flashcard, .flashcards-grid, .gabarito-box, .lei-seca, .mindmap, .mindmap-box');
         
-        allElements.forEach(el => {
+        targets.forEach(el => {
             const id = (el.id || '').toLowerCase();
             const className = (el.className || '').toLowerCase();
-            const headingText = (el.querySelector('h1, h2, h3, h4, summary')?.textContent || '').toLowerCase();
+            const headingText = (el.querySelector('h1, h2, h3, h4, h5, h6, summary')?.textContent || '').toLowerCase();
 
-            // Lei Seca
+            // 1. Lei Seca
             if (!incLeiSeca) {
-                if (id.includes('lei-seca') || id.includes('legis') || className.includes('lei-seca') || className.includes('artigo') || headingText.includes('lei seca') || headingText.includes('transcrição interativa da lei seca')) {
+                if (className.includes('lei-seca') || className.includes('artigo') || className.includes('transcricao') ||
+                    id.includes('lei-seca') || id.includes('legis') || id.includes('artigo') ||
+                    headingText.includes('lei seca') || headingText.includes('transcrição') || headingText.includes('legislação')) {
                     el.classList.add('pdf-excluded');
                 }
             }
 
-            // Mnemônicos
+            // 2. Mnemônicos
             if (!incMnemonicos) {
-                if (id.includes('mnemonico') || className.includes('mnemonico') || headingText.includes('mnemônic') || headingText.includes('técnicas de memorização')) {
+                if (className.includes('mnemonico') || id.includes('mnemonico') || id.includes('memorizacao') ||
+                    headingText.includes('mnemônic') || headingText.includes('memorização') || headingText.includes('técnicas de memorização')) {
                     el.classList.add('pdf-excluded');
                 }
             }
 
-            // Flashcards
+            // 3. Flashcards
             if (!incFlashcards) {
-                if (id.includes('flashcard') || className.includes('flashcard') || headingText.includes('flashcard') || headingText.includes('fixação rápida')) {
+                if (className.includes('flashcard') || id.includes('flashcard') ||
+                    headingText.includes('flashcard') || headingText.includes('fixação rápida')) {
                     el.classList.add('pdf-excluded');
                 }
             }
 
-            // Mapa Mental
+            // 4. Mapa Mental
             if (!incMapaMental) {
-                if (id.includes('mapa-mental') || id.includes('mapamental') || className.includes('mapa-mental') || className.includes('mindmap') || headingText.includes('mapa mental')) {
+                if (className.includes('mindmap') || className.includes('mapa-mental') ||
+                    id.includes('mindmap') || id.includes('mapa-mental') || id.includes('mapamental') ||
+                    headingText.includes('mapa mental') || headingText.includes('mapa conceitual')) {
                     el.classList.add('pdf-excluded');
                 }
             }
 
-            // Cheat Sheet / Resumo Ultra Rápido
+            // 5. Cheat Sheet / Resumo Ultra Rápido
             if (!incCheatSheet) {
-                if (id.includes('cheat-sheet') || id.includes('cheatsheet') || className.includes('cheat-sheet') || className.includes('quick-review') || headingText.includes('cheat sheet') || headingText.includes('resumo ultra rápido') || headingText.includes('revisão rápida')) {
+                if (className.includes('cheat-sheet') || className.includes('cheatsheet') || className.includes('quick-review') ||
+                    id.includes('cheat-sheet') || id.includes('cheatsheet') || id.includes('quick-review') || id.includes('resumo-rapido') ||
+                    headingText.includes('cheat sheet') || headingText.includes('resumo ultra rápido') || headingText.includes('revisão rápida') || headingText.includes('resumo expresso')) {
                     el.classList.add('pdf-excluded');
                 }
             }
 
-            // Revisão Ativa / Questões
+            // 6. Revisão Ativa / Questões / Gabaritos
             if (!incRevisaoAtiva) {
-                if (id.includes('revisao-ativa') || id.includes('questoes') || id.includes('quiz') || className.includes('revisao-ativa') || className.includes('questoes') || className.includes('gabarito') || headingText.includes('revisão ativa') || headingText.includes('questões') || headingText.includes('quiz')) {
+                if (className.includes('gabarito') || className.includes('revisao-ativa') || className.includes('questoes') ||
+                    id.includes('revisao') || id.includes('questoes') || id.includes('quiz') || id.includes('gabarito') ||
+                    headingText.includes('revisão ativa') || headingText.includes('questões') || headingText.includes('gabarito') || headingText.includes('exercícios') || headingText.includes('quiz')) {
                     el.classList.add('pdf-excluded');
                 }
             }
@@ -1277,6 +1290,11 @@ function initPdfExport() {
         const savedTheme = document.documentElement.getAttribute('data-theme') || 'light';
         document.documentElement.setAttribute('data-theme', 'light');
         document.body.classList.add('is-generating-pdf');
+
+        // Always exclude Sumário / Index cards
+        document.querySelectorAll('.summary-card, #sumario, [id*="sumario"], .sumario, .table-of-contents, .card-summary').forEach(el => {
+            el.classList.add('pdf-excluded');
+        });
 
         applySectionFilters();
 
@@ -1300,6 +1318,21 @@ function initPdfExport() {
         });
     };
 
+    // Global print listeners for native Ctrl+P / Browser Print
+    let activePrintPrep = null;
+    window.addEventListener('beforeprint', () => {
+        if (!activePrintPrep) {
+            activePrintPrep = prepareDOMForPDF();
+        }
+    });
+
+    window.addEventListener('afterprint', () => {
+        if (activePrintPrep) {
+            restoreDOMAfterPDF(activePrintPrep);
+            activePrintPrep = null;
+        }
+    });
+
     // Main PDF Generation Handler
     if (btnGenerate) {
         btnGenerate.addEventListener('click', async () => {
@@ -1313,7 +1346,7 @@ function initPdfExport() {
             try {
                 const html2pdfLib = await loadHtml2Pdf();
                 
-                const element = document.querySelector('main .container') || document.querySelector('.container') || document.body;
+                const element = document.body;
                 const pageTitle = document.title.replace(/[^a-zA-Z0-9-_\s]/g, '').trim() || 'Resumo';
 
                 const opt = {
@@ -1345,16 +1378,15 @@ function initPdfExport() {
     if (btnPrint) {
         btnPrint.addEventListener('click', () => {
             toggleModal();
-            const prepData = prepareDOMForPDF();
-            
+            if (!activePrintPrep) {
+                activePrintPrep = prepareDOMForPDF();
+            }
             setTimeout(() => {
                 window.print();
-                setTimeout(() => {
-                    restoreDOMAfterPDF(prepData);
-                }, 1000);
-            }, 300);
+            }, 200);
         });
     }
 }
+
 
 
