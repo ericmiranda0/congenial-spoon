@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito do Trabalho – Fundamentos, História, Fontes &amp; Princípios | Resumo Consolidado 01</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1c130b 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.85rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 { color: var(--p-500); }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 { color: #f59e0b; }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: #f59e0b;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(120, 53, 15, 0.08);
+      border-color: #78350F;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #d97706; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: var(--p-700); }
+    [data-theme="dark"] .level-3 .level-title { color: #f59e0b; }
+
+    /* Lei Seca & Artigos */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .artigo summary { color: var(--p-500); }
+    .artigo summary::-webkit-details-marker { display: none; }
+
+    .artigo summary::after {
+      content: '➕';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .artigo[open] summary::after { content: '➖'; }
+
+    .lei-seca {
+      background: var(--p-50);
+      color: #1f2937;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
+
+    /* Cards e Grids */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--p-500);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.teal { border-top-color: var(--accent-teal); }
+    .card.dark { border-top-color: var(--p-700); }
+
+    /* Boxes Informativos */
+    .box-info {
+      position: relative;
+      padding: 22px 25px 20px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid;
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: #d97706; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doctrine {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doctrine .box-label { background: #16a34a; }
+
+    .jurisprudence {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #075985;
+    }
+    .jurisprudence .box-label { background: #0284c7; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #fef3c7; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: #fee2e2; }
+    [data-theme="dark"] .doctrine { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: #bbf7d0; }
+    [data-theme="dark"] .jurisprudence { background: rgba(2, 132, 199, 0.1); border-color: rgba(2, 132, 199, 0.2); color: #bae6fd; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.93rem;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-card);
+    }
+
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--p-600);
+      font-size: 0.9rem;
+    }
+
+    [data-theme="dark"] .timeline-date { color: var(--p-500); }
+
+    /* Questions and Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .gabarito {
+      margin-top: 12px;
+      padding: 14px;
+      background: rgba(13, 148, 136, 0.1);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="badge">Resumo Consolidado 01 · Direito do Trabalho I</div>
+      <h1>Fundamentos Históricos, Modos de Produção, Fontes &amp; Princípios Fundamentais</h1>
+      <div class="subtitle">Síntese Integral e Profunda: Ontologia do Trabalho, Revolução Industrial, Taylorismo, Fases Históricas, Fontes Materiais e Formais, Art. 8º da CLT, Hierarquia Dinâmica e os 6 Princípios Essenciais</div>
+      <div class="meta">
+        <span>⚖️ Arts. 8º, 9º, 468, 611-A CLT</span> | <span>📜 Arts. 1º, IV e 7º CF/88</span> | <span>🎯 Foco em Revisão de Prova e Concursos</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <div class="nav-list">
+        <a href="#ontologia-historica" class="nav-item">Ontologia &amp; História</a>
+        <a href="#modos-producao-taylorismo" class="nav-item">Modos de Produção</a>
+        <a href="#constitucionalismo-direitos-humanos" class="nav-item">Direitos Humanos</a>
+        <a href="#fases-autonomia-conceito" class="nav-item">Fases &amp; Conceito</a>
+        <a href="#fontes-art8-clt" class="nav-item">Fontes &amp; Art. 8º CLT</a>
+        <a href="#hierarquia-fontes" class="nav-item">Hierarquia Dinâmica</a>
+        <a href="#principios-fundamentais" class="nav-item">Princípios do DT</a>
+        <a href="#questoes-fixacao" class="nav-item">Questões de Prova</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 1. ONTOLOGIA E CONTEXTO HISTÓRICO ══════════════════════════════ -->
+    <section id="ontologia-historica">
+      <div class="section-label">Parte I · Fundamentos</div>
+      <h2>1. Ontologia do Trabalho Humano &amp; Período Pré-Industrial</h2>
+      
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">🌱 Nível 1: Compreensão Direta</div>
+          Diferente dos animais, que agem guiados por instinto biológico de sobrevivência, o ser humano é capaz de conceber uma ideia abstrata na mente (idealização), ter a vontade de produzi-la (intencionalidade) e transformar conscientemente o meio ambiente físico (transformação da natureza).
+        </div>
+
+        <div class="level-box level-2">
+          <div class="level-title">🎓 Nível 2: Tríplice Característica Ontológica</div>
+          O trabalho humano é ontologicamente estruturado sobre 3 pilares cumulativos:
+          <ul>
+            <li><strong>Intencional:</strong> Decorre de ato voluntário, consciente e teleológico (orientado a um fim determinado);</li>
+            <li><strong>Idealizado:</strong> É concebido no plano do pensamento e do intelecto antes de sua realização material (ex.: o arquiteto que projeta o edifício mentalmente);</li>
+            <li><strong>Transformador da Natureza:</strong> Altera o meio fático e cria cultura, bens, serviços e novas realidades sociais.</li>
+          </ul>
+        </div>
+
+        <div class="level-box level-3">
+          <div class="level-title">⚖️ Nível 3: Formas Pré-Industriais de Vinculação do Homem ao Trabalho</div>
+          Antes da Revolução Industrial e do surgimento do trabalho assalariado livre, o homem esteve subjugado a três modalidades históricas de trabalho:
+          <ol>
+            <li><strong>Escravidão (Trabalho Alienado):</strong> O trabalhador é desprovido de personalidade jurídica, configurando mera <em>res</em> (coisa/objeto de direito real e propriedade alheia);</li>
+            <li><strong>Servidão (Vinculação à Terra):</strong> No regime feudal, o servo está juridicamente adstrito ao solo, prestando corveia e talha ao senhor feudal em troca de proteção física e parcela da produção;</li>
+            <li><strong>Corporações de Ofício (Vinculação à Profissão):</strong> Associações medievais urbanas estruturadas em estamentos rígidos (Mestre, Companheiro/Oficial e Aprendiz), detentoras do monopólio da técnica e da produção artesanal.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="exam-tip">
+        <span class="box-label">🎯 Destaque de Prova · O Significado de Tripalium</span>
+        Etimologicamente, a palavra <em>trabalho</em> deriva do latim tardio <strong>tripalium</strong> (instrumento de tortura composto por três estacas de madeira). Historicamente, o trabalho foi concebido como castigo e sofrimento, transmutando-se no Estado Social contemporâneo em direito humano fundamental e valor estruturante da dignidade da pessoa humana (Art. 1º, IV da CF/88).
+      </div>
+
+      <h3>As Três Causas Formadoras do Direito do Trabalho</h3>
+      <p>O ramo trabalhista emergiu como resposta institucional indispensável diante da confluência de 3 fatores decisivos:</p>
+      
+      <div class="grid3">
+        <div class="card dark">
+          <h4>1. Causa Econômica</h4>
+          <p><strong>A Revolução Industrial:</strong> Invenção da máquina a vapor, substituição da manufatura manual pela maquinaria pesada, êxodo rural maciço, concentração operária nos centros urbanos e produção massificada.</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Causa Política</h4>
+          <p><strong>Transição do Estado Liberal ao Estado Social:</strong> O colapso do dogma da <em>igualdade formal</em> pós-Revolução Francesa. O Estado abandona o absenteísmo e passa a intervir na autonomia da vontade para tutelar a parte vulnerável.</p>
+        </div>
+        <div class="card teal">
+          <h4>3. Causa Jurídica</h4>
+          <p><strong>Reivindicação Operária e Tutela Coletiva:</strong> Conquista do direito de reunião e sindicalização, nascimento do direito de greve e imposição de normas cogentes inderrogáveis pela vontade individual.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. MODOS DE PRODUÇÃO E TAYLORISMO ══════════════════════════════ -->
+    <section id="modos-producao-taylorismo">
+      <div class="section-label">Parte II · Evolução Produtiva</div>
+      <h2>2. A Evolução dos Modos de Produção &amp; o Taylorismo (1911)</h2>
+
+      <p>A conformação do contrato de trabalho moderno acompanha a evolução das estruturas produtivas:</p>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">1. Organização Artesanal</div>
+          O artesão é dono dos meios de produção, ferramentas e matérias-primas. Detém a visão integral do processo criativo e técnico da obra, determinando seu próprio ritmo.
+        </div>
+
+        <div class="level-box level-2">
+          <div class="level-title">2. Organização Mercadológica</div>
+          Aparecimento do comércio em larga escala e dos intermediários mercantis. Criação de rotas comerciais e divisão primária entre quem produz e quem comercializa.
+        </div>
+
+        <div class="level-box level-3">
+          <div class="level-title">3. Manufatura (Consolidação em 1776)</div>
+          Reunião de um grande contingente de operários trabalhando simultaneamente no mesmo espaço físico, sob o comando social, organizacional e político de um detentor de capital. <span class="kw">Atenção Histórica:</span> Em 1776, o comando do comerciante ainda não era estritamente técnico, mas organizacional e disciplinar. Fatores determinantes: acúmulo de capital, mão de obra assalariada vinda dos feudos cercados e decadência dos artesãos.
+        </div>
+      </div>
+
+      <h3>A Revolução Industrial e o Taylorismo (EUA - 1911)</h3>
+      <p>Com a obra <em>Princípios de Administração Científica</em> de Frederick Winslow Taylor (1911), instala-se o paradigma da <strong>Organização Científica do Trabalho</strong>.</p>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ Conceito Crucial para Prova · Expropriação do Saber Operário</span>
+        Antes de Taylor, o operário detinha o monopólio do "como fazer" (<em>know-how</em> empírico), controlando o ritmo da fábrica e gerando a chamada "folga intencional" ou "tempo de cera". O Taylorismo teve como objetivo central a <strong>expropriação sistemática do saber operário</strong>: transferir todo o conhecimento produtivo para o setor de gerência e planejamento.
+      </div>
+
+      <div class="grid3">
+        <div class="card teal">
+          <h4>1. Coleta do Saber</h4>
+          <p>Mapeamento, cronometragem e registro milimétrico de cada movimento humano na linha de produção.</p>
+        </div>
+        <div class="card teal">
+          <h4>2. O "The Best Way"</h4>
+          <p>Desenvolvimento da forma ótima e única para executar cada gesto produtivo, extirpando movimentos desnecessários.</p>
+        </div>
+        <div class="card teal">
+          <h4>3. Treinamento Hiperespecífico</h4>
+          <p>Treinamento compulsório do trabalhador para a repetição exaustiva de uma minúscula fração do processo fabril.</p>
+        </div>
+      </div>
+
+      <div class="doctrine">
+        <span class="box-label">📚 Conclusão Dogmática</span>
+        O Taylorismo consagrou a <strong>substituição do critério individual do trabalhador por métodos racionais de produtividade máxima</strong>. Esse cenário de extrema subordinação técnica e desumanização fez surgir o Direito do Trabalho como instrumento civilizatório indispensável para estipular patamares mínimos de proteção à vida e higidez física do operário.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. CONSTITUCIONALISMO E DIREITOS HUMANOS ══════════════════════════════ -->
+    <section id="constitucionalismo-direitos-humanos">
+      <div class="section-label">Parte III · Constitucionalismo Social</div>
+      <h2>3. Constitucionalismo Social, Direitos Humanos &amp; a Ordem Constitucional Brasileira</h2>
+
+      <p>A elevação dos direitos trabalhistas à categoria de normas constitucionais e internacionais fundamentais marca a transição civilizatória do século XX:</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">1917 – CONSTITUIÇÃO MEXICANA (ART. 123)</div>
+          <h3>Primeira Constituição Social do Mundo</h3>
+          <p>Pioneira mundial a consagrar direitos trabalhistas no texto magno: jornada máxima de 8 horas, jornada noturna de 7 horas, proibição do trabalho de menores de 12 anos, limitação a 6 horas para menores de 16 anos, descanso semanal remunerado, salário mínimo, igualdade salarial, direito de greve, sindicalização e indenização por dispensa.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1919 – CONSTITUIÇÃO DE WEIMAR (ALEMANHA)</div>
+          <h3>Consolidação dos Direitos Fundamentais Sociais na Europa</h3>
+          <p>Institucionalizou a ordem econômica subordinada aos princípios da justiça social e da existência digna humana, estabelecendo a cogência dos direitos sociais.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1919 – CRIAÇÃO DA OIT (ORGANIZAÇÃO INTERNACIONAL DO TRABALHO)</div>
+          <h3>Internacionalização dos Direitos Trabalhistas</h3>
+          <p>Fundada pelo Tratado de Versalhes sob o lema basilar de que <em>"a paz universal e duradoura só pode fundar-se com base na justiça social"</em> e que <em>"o trabalho não é uma mercadoria"</em>.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1939/1941 – JUSTIÇA DO TRABALHO NO BRASIL</div>
+          <h3>Institucionalização da Jurisdição Especializada</h3>
+          <p>Criada no Estado Novo pelo Decreto-Lei nº 1.237/1939, instalada em 1941 e integrada definitivamente ao Poder Judiciário pela Constituição de 1946.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">1943 – OUTORGA DA CLT (DECRETO-LEI Nº 5.452/1943)</div>
+          <h3>Sistematização e Unificação da Legislação Trabalhista Nacional</h3>
+          <p>Sancionada por Getúlio Vargas, reunindo as leis esparsas e estruturando a espinha dorsal do Direito Individual, Coletivo e Processual do Trabalho no Brasil.</p>
+        </div>
+      </div>
+
+      <h3>O Trabalho na Declaração Universal dos Direitos Humanos (DUDH - 1948)</h3>
+      <div class="artigo">
+        <details open>
+          <summary>📜 Artigo 23 da DUDH (1948) – O Trabalho como Direito Humano Universal</summary>
+          <div class="lei-seca">
+            1. Toda a pessoa tem direito ao <span class="kw">trabalho</span>, à <span class="kw">livre escolha do trabalho</span>, a <span class="kw">condições equitativas e satisfatórias de trabalho</span> e à <span class="kw">proteção contra o desemprego</span>.<br>
+            2. Todos têm direito, <span class="kw">sem discriminação alguma</span>, a <span class="kw">salário igual por trabalho igual</span>.<br>
+            3. Quem trabalha tem direito a uma <span class="kw">remuneração equitativa e satisfatória</span>, que lhe permita e à sua família uma existência conforme com a dignidade humana, complementada, se possível, por outros meios de proteção social.<br>
+            4. Toda a pessoa tem o direito de <span class="kw">fundar sindicatos</span> e de se filiar em sindicatos para defesa dos seus interesses.
+          </div>
+        </details>
+      </div>
+
+      <h3>O Trabalho na Constituição da República Federativa do Brasil de 1988</h3>
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Fundamento da República (Art. 1º, IV, CF/88)</h4>
+          <p>A CF/88 elegeu como fundamentos inafastáveis do Estado Democrático de Direito a <strong>dignidade da pessoa humana (inciso III)</strong> e <strong>os valores sociais do trabalho e da livre iniciativa (inciso IV)</strong>. O trabalho e a livre iniciativa coexistem em harmonia axiológica.</p>
+        </div>
+        <div class="card gold">
+          <h4>Direito Social Fundamental (Art. 6º, CF/88)</h4>
+          <p>O trabalho é categorizado no rol dos <strong>Direitos Sociais Fundamentais</strong> (Art. 6º, caput), ao lado da saúde, educação, previdência social e moradia, exigindo prestações positivas estatais de proteção e garantia.</p>
+        </div>
+      </div>
+
+      <div class="doctrine">
+        <span class="box-label">🎭 A Consciência Operária e a Reflexão Crítica</span>
+        Nos debates doutrinários e no poema clássico <em>"O Operário em Construção"</em> de Vinicius de Moraes, evidencia-se a virada de consciência: <em>"o operário faz a coisa e a coisa faz o operário"</em>. O trabalhador, isolado, é hipossuficiente; contudo, ao tomar consciência da centralidade do seu trabalho nos processos produtivos e ao unir-se coletivamente, constrói poder de negociação e conquista tutela jurídica.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. FASES HISTÓRICAS E CONCEITO DO DT ══════════════════════════════ -->
+    <section id="fases-autonomia-conceito">
+      <div class="section-label">Parte IV · Fases &amp; Autonomia</div>
+      <h2>4. As Fases Históricas, Autonomia &amp; Definição do Direito do Trabalho</h2>
+
+      <h3>As 3 Fases Históricas da Evolução do Direito do Trabalho</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Fase Histórica</th>
+            <th>Período Temporal</th>
+            <th>Principais Acontecimentos e Diplomas</th>
+            <th>Características Centrais</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Fase de Formação (Manifestações Incipientes)</strong></td>
+            <td>1802 – 1848</td>
+            <td><strong>Peel's Act (1802)</strong> na Inglaterra (Moral and Health Act); leis esparsas na Europa.</td>
+            <td>Caráter puramente humanitário e tutelar emergencial; foco na proteção de crianças e mulheres; ausência de consciência e união sindical organizada.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Fase de Intensificação</strong></td>
+            <td>1848 – 1890</td>
+            <td><strong>Manifesto Comunista (1848)</strong>, Revolução Francesa de 1848, Movimento Cartista Britânico (1846-1848).</td>
+            <td>Emergência da luta de classes; os trabalhadores passam a exigir a intervenção do Estado; ampliação da regulamentação fabril.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Fase de Consolidação</strong></td>
+            <td>1890 – 1919</td>
+            <td>Encíclica Papal <em>Rerum Novarum</em> (1891), Constituição do México (1917), Constituição de Weimar (1919) e Criação da OIT (1919).</td>
+            <td>Constitucionalização e internacionalização dos direitos trabalhistas; reconhecimento pleno da autonomia científica do Direito do Trabalho.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Conceito e Correntes Doutrinárias do Direito do Trabalho</h3>
+      <p>A doutrina divide a definição do Direito do Trabalho em 3 grandes correntes conceituais:</p>
+      <div class="grid3">
+        <div class="card">
+          <h4>1. Teoria Subjetivista</h4>
+          <p>Define o Direito do Trabalho em função dos seus <strong>sujeitos</strong> (foco exclusivo na pessoa do trabalhador/trabalhador subordinado).</p>
+        </div>
+        <div class="card teal">
+          <h4>2. Teoria Objetivista</h4>
+          <p>Define o ramo pelo seu <strong>objeto</strong> (foco na prestação da energia de trabalho e na matéria de produção econômica).</p>
+        </div>
+        <div class="card gold">
+          <h4>3. Teoria Mista ou Complexa (Majoritária)</h4>
+          <p>Define o ramo como o <em>complexo de princípios, regras e institutos que regem as relações individuais e coletivas de trabalho subordinado e situações assemelhadas, visando à melhoria da condição social do trabalhador</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. FONTES DO DIREITO DO TRABALHO E ART. 8º DA CLT ══════════════════════════════ -->
+    <section id="fontes-art8-clt">
+      <div class="section-label">Parte V · Teoria das Fontes</div>
+      <h2>5. Fontes do Direito do Trabalho &amp; o Sistema de Integração do Art. 8º da CLT</h2>
+
+      <h3>Distinção entre Fontes Materiais e Fontes Formais</h3>
+      <p>Segundo a lição clássica de <strong>Eduardo García Máynez</strong>, <em>"as fontes formais são como o leito do rio, ou canal, por onde correm e manifestam-se as fontes materiais"</em>.</p>
+
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Fontes Materiais (Fatos Subjacentes)</h4>
+          <p>São os fenômenos históricos, econômicos, políticos, sociais, científicos e religiosos que pressionam a sociedade e dão origem às reivindicações jurídicas. Exemplo: Pandemia de COVID-19 gerando o teletrabalho; Convenções da OIT ainda não ratificadas; inflação exigindo reajuste salarial.</p>
+        </div>
+        <div class="card gold">
+          <h4>Fontes Formais (Exteriorização Positiva)</h4>
+          <p>São os veículos normativos pelos quais o Direito se exterioriza com força cogente e obrigatória. Subdividem-se em:</p>
+          <ul>
+            <li><strong>Fontes Formais Heterônomas:</strong> Produzidas por um agente externo aos destinatários da regra (Estado / Terceiro). Ex.: Constituição, Leis ordinárias/complementares, Medidas Provisórias, Decretos, Sentenças Normativas em dissídios coletivos e Tratados ratificados.</li>
+            <li><strong>Fontes Formais Autônomas:</strong> Produzidas com a participação direta e imediata dos próprios sujeitos da relação jurídica. Ex.: Convenções Coletivas de Trabalho (CCT), Acordos Coletivos de Trabalho (ACT), Regulamento Interno da Empresa, Usos e Costumes e o próprio Contrato Individual de Trabalho.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>O Artigo 8º da CLT e a Reforma Trabalhista (Lei nº 13.467/2017)</h3>
+      <p>O Art. 8º da CLT estabelece as regras de interpretação, integração e aplicação do Direito do Trabalho brasileiro:</p>
+
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Artigo 8º da CLT (Com as Alterações da Lei nº 13.467/2017)</summary>
+          <div class="lei-seca">
+            <strong>Art. 8º</strong> - As autoridades administrativas e a Justiça do Trabalho, na falta de disposições legais ou contratuais, decidirão, conforme o caso, pela <span class="kw">jurisprudência</span>, por <span class="kw">analogia</span>, por <span class="kw">equidade</span> e outros princípios e normas gerais de direito, principalmente do direito do trabalho, e, ainda, de acordo com os <span class="kw">usos e costumes</span>, o <span class="kw">direito comparado</span>, mas sempre de maneira que nenhum interesse de classe ou particular prevaleça sobre o interesse público.<br><br>
+            <strong>§ 1º</strong> O <span class="kw">direito comum será fonte subsidiária</span> do direito do trabalho.<br><br>
+            <strong>§ 2º</strong> <span class="kw">Súmulas e outros enunciados de jurisprudência</span> editados pelo Tribunal Superior do Trabalho e pelos Tribunais Regionais do Trabalho <span class="kw">não poderão restringir direitos legalmente previstos nem criar obrigações que não estejam previstas em lei</span>.<br><br>
+            <strong>§ 3º</strong> No exame de convenção coletiva ou acordo coletivo de trabalho, a Justiça do Trabalho analisará exclusivamente a <span class="kw">conformidade dos elementos essenciais do negócio jurídico</span>, respeitado o disposto no art. 104 da Lei no 10.406, de 10 de janeiro de 2002 (Código Civil), e balizará sua atuação pelo <span class="kw">princípio da intervenção mínima na autonomia da vontade coletiva</span>.
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-tip">
+        <span class="box-label">🎯 Ponto Crítico de Prova · Limitações da Reforma Trabalhista (§§ 2º e 3º)</span>
+        <strong>1. Limitação ao Poder Jurisprudencial (§ 2º):</strong> O TST e os TRTs estão legalmente proibidos de criar obrigações pecuniárias ou restringir direitos por meio de súmulas sem lastro estrito em lei.<br>
+        <strong>2. Princípio da Intervenção Mínima na Vontade Coletiva (§ 3º):</strong> A Justiça do Trabalho não pode julgar a justiça ou injustiça das cláusulas coletivas, devendo limitar-se a analisar os requisitos formais de validade do negócio jurídico (agente capaz, objeto lícito e forma prescrita em lei - Art. 104 do Código Civil).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. HIERARQUIA DAS FONTES E LÓGICA DINÂMICA ══════════════════════════════ -->
+    <section id="hierarquia-fontes">
+      <div class="section-label">Parte VI · Hierarquia Dinâmica</div>
+      <h2>6. A Hierarquia das Fontes no Direito do Trabalho: A Adaptação de Kelsen</h2>
+
+      <p>No Direito Comum (Civil/Constitucional), a pirâmide de Kelsen é rígida e inflexível: a norma de hierarquia formal superior sempre prevalece sobre a inferior. No <strong>Direito do Trabalho</strong>, essa lógica kelseniana sofre uma adaptação fundamental pelo <strong>Princípio da Norma Mais Favorável</strong>: <em>a pirâmide jurídica tem vértice móvel e prevalece a norma que conferir maior benefício ao trabalhador, independentemente de sua posição hierárquica formal</em> (ex.: um regulamento de empresa ou CCT que concede 45 dias de férias prevalece sobre o Art. 130 da CLT que concede 30 dias).</p>
+
+      <h3>As Exceções Legais à Prevalência da Norma Mais Favorável</h3>
+      <p>Existem situações específicas expressamente delimitadas pela lei e pela Constituição onde a regra da norma mais favorável é mitigada:</p>
+
+      <div class="grid2">
+        <div class="card dark">
+          <h4>a) Acordo Coletivo vs. Convenção Coletiva (Art. 620, CLT)</h4>
+          <p><em>"As condições estabelecidas em acordo coletivo de trabalho (ACT) SEMPRE prevalecerão sobre as estipuladas em convenção coletiva de trabalho (CCT)."</em><br>
+          <span class="kw">Atenção:</span> A Reforma Trabalhista aboliu o critério da norma mais favorável no conflito entre ACT e CCT. O ACT sempre prevalece por ser mais específico à realidade daquela empresa.</p>
+        </div>
+
+        <div class="card gold">
+          <h4>b) Contrato Individual vs. Norma Coletiva (Art. 619, CLT)</h4>
+          <p>Nenhuma disposição do contrato individual de trabalho que reduza os direitos previstos em Acordo ou Convenção Coletiva poderá prevalecer, sendo nula de pleno direito.</p>
+        </div>
+
+        <div class="card teal">
+          <h4>c) Empregado Hipersuficiente (Art. 444, Parágrafo Único, CLT)</h4>
+          <p>O empregado portador de <strong>diploma de nível superior</strong> e que perceba <strong>salário mensal igual ou superior a duas vezes o teto do RGPS</strong> pode pactuar cláusulas contratuais individuais com a mesma força e preponderância sobre os instrumentos coletivos quanto às matérias do Art. 611-A.</p>
+        </div>
+
+        <div class="card">
+          <h4>d) Prevalência do Negociado sobre o Legislado (Art. 611-A, CLT)</h4>
+          <p>A CCT e o ACT têm prevalência sobre a lei quando dispuserem sobre o rol exemplificativo do Art. 611-A (ex.: pacto de jornada, banco de horas anual, intervalo intrajornada reduzido até 30min, plano de cargos e salários, teletrabalho, etc.), respeitado o rol de vedações absolutas do Art. 611-B.</p>
+        </div>
+
+        <div class="card dark">
+          <h4>e) Decreto Regulamentar vs. Lei (Art. 84, IV, CF/88)</h4>
+          <p>O Decreto do Poder Executivo não pode inovar na ordem jurídica nem contrariar a lei ordinária, servindo estritamente à sua fiel execução.</p>
+        </div>
+
+        <div class="card gold">
+          <h4>f) Concurso Público na Administração vs. CLT (Art. 37, II, CF/88)</h4>
+          <p>Os valores constitucionais estruturantes do Estado sobrepõem-se à proteção celetista: a contratação sem concurso público gera <strong>nulidade contratual absoluta</strong>, conferindo ao trabalhador apenas o saldo de salário e os depósitos do FGTS (<strong>Súmula 363 do TST</strong>).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 7. PRINCÍPIOS FUNDAMENTAIS DO DIREITO DO TRABALHO ══════════════════════════════ -->
+    <section id="principios-fundamentais">
+      <div class="section-label">Parte VII · Principiologia Essencial</div>
+      <h2>7. Os 6 Princípios Fundamentais do Direito do Trabalho</h2>
+
+      <!-- PRINCÍPIO 1: PROTEÇÃO -->
+      <h3>1. Princípio da Proteção (Princípio Matriz)</h3>
+      <p>O Princípio da Proteção é o núcleo axiológico de todo o Direito do Trabalho. Parte do pressuposto fático e sociológico de que o <strong>trabalhador é a parte hipossuficiente</strong> na relação jurídica (vulnerabilidade econômica, técnica e informacional). Para equilibrar a desigualdade fática, a ordem jurídica confere uma superioridade jurídica compensatória ao trabalhador.</p>
+      
+      <p>Desdobra-se em <strong>3 subprincípios indispensáveis para a prova</strong>:</p>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">a) In Dubio Pro Operario (ou Pro Misero)</div>
+          <p>Diante de uma <strong>dúvida estritamente interpretativa</strong> sobre o sentido de um texto de lei ou cláusula contratual plurissignificativa, o magistrado deve acolher a interpretação que for mais benéfica ao trabalhador.<br>
+          <span class="kw">Alerta Máximo:</span> Este subprincípio <strong>não se aplica ao campo probatório</strong>! Não existe <em>in dubio pro operario</em> para fatos controversos na audiência; a prova rege-se pelas regras estritas do ônus probatório (Art. 818 da CLT e Art. 373 do CPC).</p>
+        </div>
+
+        <div class="level-box level-2">
+          <div class="level-title">b) Aplicação da Norma Mais Favorável</div>
+          <p>Havendo duas ou mais normas jurídicas vigentes e concorrentes aplicáveis ao mesmo caso concreto, aplica-se aquela que for mais vantajosa ao trabalhador, independentemente de sua hierarquia formal.<br>
+          <em>Teoria adotada no Brasil:</em> <strong>Teoria do Conglobamento Mitigado ou por Matéria</strong> (analisa-se o bloco de matérias homogêneas de cada norma para aplicar a mais favorável naquele tema específico).<br>
+          <em>Exceções:</em> Arts. 620 (ACT > CCT), 611-A (Negociado > Legislado) e 444 parágrafo único da CLT.</p>
+        </div>
+
+        <div class="level-box level-3">
+          <div class="level-title">c) Condição Mais Benéfica (ou Inalterabilidade Contratual Lesiva)</div>
+          <p>As vantagens e benefícios mais favoráveis já conquistados pelo empregado e integrados ao seu patrimônio jurídico e contrato de trabalho constituem <strong>direito adquirido</strong> e não podem ser suprimidos ou alterados para pior.</p>
+          <ul>
+            <li><strong>Art. 468 da CLT:</strong> <em>"Nos contratos individuais de trabalho só é lícita a alteração das respectivas condições por mútuo consentimento, e ainda assim desde que não resultem, direta ou indiretamente, prejuízos ao empregado, sob pena de nulidade da cláusula infringente desta garantia."</em></li>
+            <li><strong>Súmula nº 51, I do TST:</strong> As cláusulas regulamentares que revoguem ou alterem vantagens anteriores só atingirão os trabalhadores admitidos <em>após</em> a alteração do regulamento.</li>
+            <li><strong>Súmula nº 51, II do TST:</strong> Havendo a coexistência de dois regulamentos da empresa, a opção voluntária do empregado por um deles tem efeito jurídico de renúncia às regras do outro.</li>
+            <li><strong>Princípio da Inalterabilidade Contratual Objetiva (Arts. 10 e 448 da CLT):</strong> Qualquer alteração na estrutura jurídica ou na propriedade da empresa não afetará os direitos adquiridos nem os contratos dos empregados.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PRINCÍPIO 2: IRREDUTIBILIDADE SALARIAL -->
+      <h3>2. Princípio da Irredutibilidade Salarial</h3>
+      <p>Fundamentado na <strong>natureza estritamente alimentar do salário</strong>, indispensável à subsistência digna do trabalhador e de sua família.</p>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Art. 7º, VI da CF/88 – Irredutibilidade Salarial</summary>
+          <div class="lei-seca">
+            <strong>Art. 7º</strong> São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social:<br>
+            <strong>VI -</strong> <span class="kw">irredutibilidade do salário, salvo o disposto em convenção ou acordo coletivo</span>;
+          </div>
+        </details>
+      </div>
+      <div class="pitfall">
+        <span class="box-label">⚠️ Ressalva Importante · Salário-Condição (Súmula 248 do TST)</span>
+        Parcelas que remuneram o trabalho sob condições gravosas transitórias (ex.: adicional de insalubridade, periculosidade e adicional noturno) configuram <strong>salário-condição</strong>. Cessada a condição nociva ou reclassificada a atividade pela autoridade competente, a supressão do adicional é perfeitamente lícita e não viola o princípio da irredutibilidade salarial nem configura direito adquirido (<strong>Súmula 248 do TST</strong>).
+      </div>
+
+      <!-- PRINCÍPIO 3: IMPERATIVIDADE DAS NORMAS TRABALHISTAS -->
+      <h3>3. Princípio da Imperatividade das Normas Trabalhistas</h3>
+      <p>As regras trabalhistas são revestidas de <strong>cogência e imperatividade pública</strong> (normas de ordem pública). As partes não podem, pela autonomia privada individual, afastar ou renunciar às proteções mínimas instituídas pela lei.</p>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Art. 9º da CLT – Nulidade dos Atos de Fraude</summary>
+          <div class="lei-seca">
+            <strong>Art. 9º</strong> - Serão <span class="kw">nulos de pleno direito</span> os atos praticados com o objetivo de desvirtuar, impedir ou fraudar a aplicação dos preceitos contidos na presente Consolidação.
+          </div>
+        </details>
+      </div>
+
+      <!-- PRINCÍPIO 4: INDISPONIBILIDADE DOS DIREITOS TRABALHISTAS -->
+      <h3>4. Princípio da Indisponibilidade dos Direitos Trabalhistas</h3>
+      <p>Em regra, são nulos os atos de <strong>renúncia</strong> (abrir mão unilateralmente do direito) e <strong>transação para pior</strong> praticados pelo empregado no curso do contrato de trabalho, visto que sua hipossuficiência vicia a manifestação de vontade.</p>
+      <div class="card teal">
+        <h4>Hipóteses Excepcionais de Disponibilidade e Transação Válida:</h4>
+        <ol>
+          <li><strong>Renúncia como consequência de opção juridicamente válida:</strong> Ex.: empregado que pede demissão abrindo mão da estabilidade ou opta por novo regulamento de empresa (Súmula 51, II do TST);</li>
+          <li><strong>Conciliação celebrada perante o Poder Judiciário:</strong> Acordo homologado judicialmente perante o juiz do trabalho;</li>
+          <li><strong>Empregado Hipersuficiente (Art. 444, parágrafo único da CLT):</strong> Com nível superior e salário >= 2x teto do RGPS;</li>
+          <li><strong>Negociação Coletiva Autêntica:</strong> Concessões recíprocas pactuadas por meio de Sindicato (CCT/ACT);</li>
+          <li><strong>Prescrição e Decadência:</strong> Perda da exigibilidade jurídica pelo decurso do prazo legal (Art. 7º, XXIX da CF/88: 5 anos até o limite de 2 anos após a extinção do contrato).</li>
+        </ol>
+      </div>
+
+      <!-- PRINCÍPIO 5: CONTINUIDADE DA RELAÇÃO DE EMPREGO -->
+      <h3>5. Princípio da Continuidade da Relação de Emprego</h3>
+      <p>Presume-se que o contrato de trabalho foi celebrado para viger por <strong>prazo indeterminado</strong>, pois o emprego é a fonte de sustento e integração social do trabalhador. A ruptura do vínculo é sempre medida excepcional que atrai o ônus probatório ao empregador.</p>
+      <div class="jurisprudence">
+        <span class="box-label">🏛️ Súmula nº 212 do TST · Ônus da Prova no Despedimento</span>
+        <em>"O ônus de provar o término do contrato de trabalho, quando negados a prestação de serviço e o despedimento, é do empregador, pois o princípio da continuidade da relação de emprego constitui presunção favorável ao empregado."</em>
+      </div>
+
+      <!-- PRINCÍPIO 6: PRIMAZIA DA REALIDADE -->
+      <h3>6. Princípio da Primazia da Realidade sobre a Forma</h3>
+      <p>No Direito do Trabalho, <strong>a verdade fática dos acontecimentos cotidianos prevalece de forma absoluta sobre qualquer documento, rótulo ou contrato formalizado no papel</strong>. Se os fatos revelarem uma relação de emprego, de nada valerá um contrato assinado com título de "prestador autônomo" ou "contrato de pessoa jurídica (pejotização)".</p>
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Súmula nº 12 do TST (Presunção Relativa da CTPS)</h4>
+          <p><em>"As anotações apostas pelo empregador na carteira profissional do empregado não geram presunção 'juris et de jure' (absoluta), mas apenas 'juris tantum' (relativa)."</em> A realidade fática pode provar salário superior ou data de admissão diversa.</p>
+        </div>
+        <div class="card gold">
+          <h4>Exceção Constitucional Estrita: Concurso Público (Art. 37, II, CF/88)</h4>
+          <p>A primazia da realidade não pode superar o comando constitucional de aprovação prévia em concurso público para cargos ou empregos estatais (Súmula 363 do TST).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 8. QUESTÕES DE PROVA E FIXAÇÃO ══════════════════════════════ -->
+    <section id="questoes-fixacao">
+      <div class="section-label">Parte VIII · Questões de Prova &amp; Revisão</div>
+      <h2>8. Questões de Prova e Casos Práticos Comentados</h2>
+
+      <!-- QUESTÃO 1 - DISCURSIVA MODELO PROVA (ITENS A e B) -->
+      <div class="exercise" style="border: 2px solid var(--p-500); background: rgba(245, 158, 11, 0.03);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <span class="box-label" style="background: #dc2626; margin: 0;">🔥 QUESTÃO DISCURSIVA CONFIRMADA DE PROVA</span>
+          <span style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--p-600);">ESTRUTURA DISCURSIVA COM ITENS (A) e (B)</span>
+        </div>
+        <p><strong>Questão 01 (Discursiva · Princípio da Proteção e seus Subprincípios):</strong></p>
+        <p style="margin-left: 15px;">
+          <strong>a)</strong> Conceitue o <em>Princípio da Proteção</em> no Direito do Trabalho, explicando o pressuposto fático da <strong>hipossuficiência</strong> do trabalhador e a razão pela qual a ordem jurídica confere uma superioridade jurídica compensatória ao empregado.<br><br>
+          <strong>b)</strong> Identifique e diferencie os <strong>três subprincípios</strong> derivados da proteção (<em>in dubio pro operario</em>, <em>norma mais favorável</em> e <em>condição mais benéfica</em>). Esclareça expressamente por que o subprincípio <em>in dubio pro operario</em> <strong>não pode</strong> ser invocado pelo juiz para suprir dúvida ou contradição probatória sobre fatos alegados pelas partes em audiência.
+        </p>
+        <details class="gabarito" open>
+          <summary>🔍 Ver Resposta Padrão Nota 10 (Com Palavras-Chave Obrigatórias da Correção)</summary>
+          <div style="margin-top:12px; line-height: 1.8;">
+            <p><strong>Padrão de Resposta do Item (a):</strong><br>
+            O Princípio da Proteção constitui a viga-mestra do Direito do Trabalho. Ele parte do pressuposto fático e sociológico de que o empregado é a parte <strong>hipossuficiente</strong> na relação de emprego, desprovido do mesmo poder econômico, técnico, social e negocial detido pelo empregador detentor dos meios de produção. Diante dessa disparidade real (desigualdade no plano fático), o ordenamento jurídico institui uma <strong>desigualdade no plano jurídico</strong> em favor do trabalhador (superioridade jurídica compensatória), com o escopo de reequilibrar a relação contratual e assegurar condições mínimas de dignidade, justiça social e proteção à sua integridade física e moral (cumprindo a igualdade material consagrada no Art. 1º, IV e Art. 7º da CF/88).</p>
+            
+            <p><strong>Padrão de Resposta do Item (b):</strong><br>
+            O Princípio da Proteção desdobra-se em três subprincípios indispensáveis:
+            <ol style="margin-left: 20px; margin-top: 5px;">
+              <li><strong>In dubio pro operario (ou pro misero):</strong> Diante de uma <em>dúvida estritamente interpretativa</em> a respeito de um texto legal ou cláusula contratual de múltiplos sentidos plausíveis, o magistrado deve optar pela interpretação mais favorável ao trabalhador.</li>
+              <li><strong>Norma mais favorável:</strong> Havendo conflito entre duas ou mais normas jurídicas válidas e vigentes aplicáveis ao mesmo caso, prevalece aquela que conferir maiores vantagens ao empregado, independentemente da rigidez da pirâmide hierárquica kelseniana (observadas as exceções dos Arts. 620, 611-A e 444 parágrafo único da CLT).</li>
+              <li><strong>Condição mais benéfica:</strong> As vantagens concedidas contratualmente ou em regulamento de empresa integram o patrimônio jurídico do trabalhador como <em>direito adquirido</em>, não podendo ser suprimidas ou alteradas para pior (Art. 468 da CLT e Súmula nº 51, I do TST - Inalterabilidade Contratual Lesiva).</li>
+            </ol>
+            <strong>Inaplicabilidade no campo probatório:</strong> O <em>in dubio pro operario</em> restringe-se estritamente à <em>interpretação de textos normativos em tese</em>. Ele <strong>não se aplica à valoração da prova de fatos em juízo</strong>. Se uma prova testemunhal ou documental for duvidosa, contraditória ou insuficiente em audiência, a lide deve ser solucionada pelas regras técnicas e objetivas de <strong>distribuição do ônus da prova</strong> (Art. 818 da CLT e Art. 373 do CPC), julgando-se contra a parte que detinha o encargo de provar o fato e dele não se desincumbiu, sendo vedado ao magistrado presumir a veracidade dos fatos por mera benevolência processual.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 2 -->
+      <div class="exercise">
+        <p><strong>Questão 02 (Fontes e Art. 8º da CLT):</strong> A empresa "Alfa S.A." suprimiu unilateralmente um benefício de auxílio-educação pago habitualmente há 5 anos aos seus empregados, alegando que uma nova Convenção Coletiva nada mencionou a respeito. À luz dos princípios e súmulas do TST, essa supressão é lícita?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            A supressão é <strong>ilícita</strong>. Aplica-se o <strong>Princípio da Condição Mais Benéfica</strong> e da <strong>Inalterabilidade Contratual Lesiva</strong>, consagrados no <strong>Art. 468 da CLT</strong> e na <strong>Súmula nº 51, I do TST</strong>. A vantagem reiteradamente concedida aderiu ao contrato individual de trabalho dos empregados como cláusula tácita mais vantajosa (direito adquirido). A superveniência de norma coletiva omissa não tem o condão de suprimir vantagem contratual individual pretérita já incorporada.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 3 -->
+      <div class="exercise">
+        <p><strong>Questão 03 (Hierarquia das Fontes):</strong> De acordo com a sistemática introduzida pela Reforma Trabalhista (Lei nº 13.467/2017), havendo conflito entre cláusula de Acordo Coletivo de Trabalho (ACT) e cláusula de Convenção Coletiva de Trabalho (CCT), qual instrumento prevalecerá? Explique o fundamento legal.</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            Prevalecerá <strong>sempre o Acordo Coletivo de Trabalho (ACT)</strong>, independentemente de ser mais ou menos favorável que a Convenção Coletiva de Trabalho (CCT). O fundamento expresso é o <strong>Artigo 620 da CLT</strong>, que instituiu a prevalência absoluta do ACT sobre a CCT em virtude do princípio da especificidade setorial da empresa.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 4 -->
+      <div class="exercise">
+        <p><strong>Questão 04 (Taylorismo e Origem Histórica):</strong> Explique o conceito de "expropriação sistemática do saber operário" no Taylorismo (1911) e estabeleça a relação entre essa organização científica do trabalho e o nascimento do Direito do Trabalho.</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            A expropriação sistemática do saber operário consistiu na retirada do conhecimento empírico e prático que os operários detinham sobre os processos de fabricação, transferindo todo o planejamento, controle e cronometragem para a gerência/engenharia industrial (criação do <em>"The Best Way"</em>). Esse método retirou a autonomia e a criatividade do trabalhador, fragmentando o trabalho em gestos repetitivos e desumanizados. Esse modelo hiperprodutivo e degradante gerou adoecimento e despersonalização, tornando imperativo o surgimento do Direito do Trabalho como conjunto normativo protetivo e limitador da exploração humana.
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center; color: #94a3b8; font-size: 0.9rem;">
+      <p><strong>Portal de Estudos Acadêmicos · Direito do Trabalho</strong></p>
+      <p>&copy; 2026 - Material Consolidado, Integral e Atualizado com Foco em Provas e Concursos.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito do Trabalho – Relações de Trabalho, Modalidades Especiais &amp; Poder Diretivo | Resumo Consolidado 02</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1c130b 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.85rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 { color: var(--p-500); }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 { color: #f59e0b; }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: #f59e0b;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(120, 53, 15, 0.08);
+      border-color: #78350F;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #d97706; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: var(--p-700); }
+    [data-theme="dark"] .level-3 .level-title { color: #f59e0b; }
+
+    /* Lei Seca & Artigos */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .artigo summary { color: var(--p-500); }
+    .artigo summary::-webkit-details-marker { display: none; }
+
+    .artigo summary::after {
+      content: '➕';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .artigo[open] summary::after { content: '➖'; }
+
+    .lei-seca {
+      background: var(--p-50);
+      color: #1f2937;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
+
+    /* Grids e Cards */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--p-500);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.teal { border-top-color: var(--accent-teal); }
+    .card.dark { border-top-color: var(--p-700); }
+
+    /* Boxes Informativos */
+    .box-info {
+      position: relative;
+      padding: 22px 25px 20px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid;
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: #d97706; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doctrine {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doctrine .box-label { background: #16a34a; }
+
+    .jurisprudence {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #075985;
+    }
+    .jurisprudence .box-label { background: #0284c7; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #fef3c7; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: #fee2e2; }
+    [data-theme="dark"] .doctrine { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: #bbf7d0; }
+    [data-theme="dark"] .jurisprudence { background: rgba(2, 132, 199, 0.1); border-color: rgba(2, 132, 199, 0.2); color: #bae6fd; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.93rem;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Mnemônico */
+    .mnemonic-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(13, 148, 136, 0.15) 100%);
+      border: 2px dashed var(--p-500);
+      padding: 22px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .mnemonic-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--p-700);
+      letter-spacing: 3px;
+    }
+
+    [data-theme="dark"] .mnemonic-title { color: #fbbf24; }
+
+    /* Questions */
+    .exercise {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .gabarito {
+      margin-top: 12px;
+      padding: 14px;
+      background: rgba(13, 148, 136, 0.1);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="badge">Resumo Consolidado 02 · Direito do Trabalho I</div>
+      <h1>Relações de Trabalho vs. Emprego, Modalidades Especiais &amp; Poder Diretivo</h1>
+      <div class="subtitle">Guia Completo: Os 5 Requisitos Fáticos do Art. 3º da CLT (PEPO-S), Pejotização, Uberização, Modalidades Não Empregatícias (Autônomo, Eventual, Avulso OGMO, Voluntário, Estágio, Presidiário) e o Poder Diretivo com os 11 Requisitos de Validade Disciplinar</div>
+      <div class="meta">
+        <span>⚖️ Arts. 2º, 3º, 6º, 442-B CLT</span> | <span>📜 Leis 11.788/08, 9.608/98, 12.023/09, 12.815/13</span> | <span>🎯 Foco em Questões de Prova</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <div class="nav-list">
+        <a href="#genero-especie" class="nav-item">Gênero vs. Espécie</a>
+        <a href="#cinco-requisitos" class="nav-item">5 Requisitos Fáticos (PEPO-S)</a>
+        <a href="#fraudes-uberizacao" class="nav-item">Pejotização &amp; Uberização</a>
+        <a href="#modalidades-especiais" class="nav-item">Modalidades Especiais</a>
+        <a href="#estagio-lei11788" class="nav-item">Estágio (Lei 11.788/08)</a>
+        <a href="#poder-diretivo" class="nav-item">Poder Diretivo</a>
+        <a href="#requisitos-disciplinares" class="nav-item">11 Requisitos Disciplinares</a>
+        <a href="#questoes-prova" class="nav-item">Questões de Prova</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 1. GÊNERO E ESPÉCIE ══════════════════════════════ -->
+    <section id="genero-especie">
+      <div class="section-label">Parte I · Teoria Geral</div>
+      <h2>1. Relação de Trabalho (Gênero) vs. Relação de Emprego (Espécie)</h2>
+      
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">🌱 Nível 1: Compreensão Básica</div>
+          <strong>Toda relação de emprego é uma relação de trabalho, mas nem toda relação de trabalho é uma relação de emprego.</strong> A relação de trabalho abrange qualquer esforço humano produtivo prestado a outrem; a relação de emprego é um tipo especial e restrito de trabalho protegido por toda a CLT.
+        </div>
+
+        <div class="level-box level-2">
+          <div class="level-title">🎓 Nível 2: Estrutura Jurídica</div>
+          <ul>
+            <li><strong>Relação de Trabalho (Gênero):</strong> Vínculo jurídico amplo que tem por objeto a prestação de serviços por uma pessoa natural a um tomador. Compreende o trabalho autônomo, o trabalho eventual, o trabalho avulso, o estágio, o voluntariado, a prestação civil de serviços e a relação de emprego. A competência para processar e julgar todas essas relações pertence à Justiça do Trabalho (Art. 114, I da CF/88 - EC nº 45/2004).</li>
+            <li><strong>Relação de Emprego (Espécie):</strong> Vínculo jurídico específico, formal e fático que preenche de forma <strong>cumulativa</strong> todos os 5 elementos caracterizadores previstos nos artigos 2º e 3º da CLT. Apenas a relação de emprego gera direito a aviso prévio, FGTS + 40%, 13º salário, férias remuneradas com 1/3 e seguro-desemprego.</li>
+          </ul>
+        </div>
+
+        <div class="level-box level-3">
+          <div class="level-title">⚖️ Nível 3: Requisitos Formais de Validade (Art. 104 do Código Civil)</div>
+          Para que o contrato de emprego seja plenamente válido, exige-se a presença dos 4 requisitos gerais do negócio jurídico:
+          <ol>
+            <li><strong>Capacidade das partes:</strong> Idade mínima de 16 anos (Art. 7º, XXXIII da CF/88), admitido como aprendiz a partir dos 14 anos; proibido trabalho noturno, perigoso ou insalubre a menores de 18 anos;</li>
+            <li><strong>Licitude do objeto:</strong> A atividade deve ser lícita (distinção entre trabalho ilícito, que gera nulidade absoluta sem direitos, e trabalho proibido, que protege o trabalhador hipossuficiente);</li>
+            <li><strong>Forma prescrita ou não proibida em lei:</strong> O contrato de trabalho é em regra consensual e não solene (Art. 443 da CLT), admitindo forma verbal, tácita ou escrita;</li>
+            <li><strong>Higidez na manifestação de vontade:</strong> Ausência de vícios de consentimento (erro, dolo, coação ou fraude).</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. OS 5 REQUISITOS FÁTICOS DA RELAÇÃO DE EMPREGO ══════════════════════════════ -->
+    <section id="cinco-requisitos">
+      <div class="section-label">Parte II · Elementos do Art. 3º CLT</div>
+      <h2>2. Os 5 Requisitos Fático-Jurídicos da Relação de Emprego (Cumulativos)</h2>
+
+      <div class="mnemonic-box">
+        <div class="mnemonic-title">MNEMÔNICO INFALÍVEL: P - E - P - O - S</div>
+        <p style="margin-top: 8px; font-size: 1.05rem;"><strong>P</strong>essoa Física · Não <strong>E</strong>ventualidade · <strong>P</strong>essoalidade · <strong>O</strong>nerosidade · <strong>S</strong>ubordinação Jurídica</p>
+      </div>
+
+      <div class="artigo">
+        <details open>
+          <summary>📜 Artigo 3º da CLT – Definição Legal de Empregado</summary>
+          <div class="lei-seca">
+            <strong>Art. 3º</strong> - Considera-se empregado toda <span class="kw">pessoa física</span> que prestar serviços de natureza <span class="kw">não eventual</span> a empregador, sob a <span class="kw">dependência deste</span> [subordinação] e mediante <span class="kw">salário</span> [onerosidade].<br>
+            <strong>Parágrafo único</strong> - Não haverá distinções relativas à espécie de emprego e à condição de trabalhador, nem entre o trabalho intelectual, técnico e manual.
+          </div>
+        </details>
+      </div>
+
+      <div class="level-container">
+        <!-- 1. PESSOA FÍSICA -->
+        <div class="level-box level-1">
+          <div class="level-title">1. Pessoa Física (Pessoa Natural)</div>
+          <p>O empregado há de ser necessariamente um ser humano de carne e osso. O contrato de trabalho tem caráter pessoal e visa tutelar a energia e a dignidade humana. A prestação de serviços subordinados mascarada sob o formato de pessoa jurídica constitui a fraude da <strong>Pejotização</strong> (nula pelo Art. 9º da CLT).</p>
+        </div>
+
+        <!-- 2. PESSOALIDADE -->
+        <div class="level-box level-2">
+          <div class="level-title">2. Pessoalidade (Intuitu Personae / Infungibilidade)</div>
+          <p>O trabalhador é contratado em razão de seus atributos individuais e não pode se fazer substituir por terceiro sem o consentimento prévio do empregador. Se o prestador envia livremente amigos ou parentes para trabalhar em seu lugar a seu bel-prazer, não há pessoalidade e o vínculo de emprego inexiste.</p>
+          <div class="exam-tip">
+            <span class="box-label">🎯 Pegadinha Clássica de Prova · Pessoalidade do Empregador</span>
+            <strong>Regra Geral:</strong> Não existe pessoalidade quanto à figura do empregador (ele é despersonalizado; se a empresa muda de dono ou sócio, os contratos continuam intactos - Arts. 10 e 448 CLT).<br>
+            <strong>A Grande Exceção Doutrinária:</strong> No <strong>trabalho doméstico</strong>, há uma pessoalidade qualificada dirigida à pessoa da família/empregador, já que a prestação ocorre na intimidade do lar. O falecimento do empregador doméstico permite o encerramento justificado do vínculo se a família não desejar continuá-lo.
+          </div>
+        </div>
+
+        <!-- 3. NÃO EVENTUALIDADE / HABITUALIDADE -->
+        <div class="level-box level-3">
+          <div class="level-title">3. Não Eventualidade (Habitualidade / Inserção na Dinâmica)</div>
+          <p>A prestação de serviços deve ser permanente, contínua ou integrada à dinâmica ordinária do tomador. Teorias explicativas doutrinárias:</p>
+          <ul>
+            <li><strong>Teoria do Evento:</strong> Eventual é o trabalho realizado para um acontecimento pontual e incerto no tempo (ex.: conserto emergencial de um vazamento).</li>
+            <li><strong>Teoria dos Fins do Empreendimento:</strong> O trabalho é não eventual quando ligado às atividades necessárias (meio ou fim) ao funcionamento regular do tomador.</li>
+            <li><strong>Teoria da Fixação Jurídica:</strong> Eventual é o trabalhador que presta serviços a múltiplos tomadores sem fixação jurídica a nenhum deles.</li>
+          </ul>
+          <div class="pitfall">
+            <span class="box-label">⚠️ Alerta de Simulado · O Trabalho Eventual por 90 Dias</span>
+            <em>"O trabalho eventual gera vínculo de emprego automático após 90 dias de prestação?"</em> <strong>FALSO!</strong> Se o trabalho foi pactuado para um projeto temporário e carece de continuidade ou subordinação, o mero transcurso de 90 dias não transmuta o eventual em empregado com vínculo indeterminado.
+          </div>
+        </div>
+
+        <!-- 4. ONEROSIDADE -->
+        <div class="level-box level-1">
+          <div class="level-title">4. Onerosidade (Contraprestação Pecuniária + Animus Contrahendi)</div>
+          <p>A relação de emprego tem natureza sinalagmática e onerosa. Exige dois elementos:</p>
+          <ul>
+            <li><strong>Elemento Objetivo:</strong> O pagamento de salário/remuneração pela prestação da força de trabalho;</li>
+            <li><strong>Elemento Subjetivo (<em>Animus Contrahendi</em>):</strong> A intenção volitiva do trabalhador de se vincular profissionalmente para obter os meios materiais de sua subsistência (precedente TST: prestar serviços por 15 anos sem remuneração por razões afetivas afasta o <em>animus contrahendi</em> e o vínculo de emprego).</li>
+          </ul>
+        </div>
+
+        <!-- 5. SUBORDINAÇÃO JURÍDICA -->
+        <div class="level-box level-3">
+          <div class="level-title">5. Subordinação Jurídica (O Requisito Principal)</div>
+          <p>A subordinação é o <em>nervus probandi</em> da relação de emprego. Significa a sujeição legítima do trabalhador ao poder de comando, fiscalização e disciplina do empregador decorrente do contrato.</p>
+          <div class="grid3">
+            <div class="card dark">
+              <h4>Subordinação Tradicional (Subjetiva)</h4>
+              <p>Comando direto e pessoal de ordens cotidianas, cumprimento estrito de jornada e fiscalização presencial.</p>
+            </div>
+            <div class="card gold">
+              <h4>Subordinação Objetiva &amp; Estrutural</h4>
+              <p>O trabalhador integra a engrenagem e a cultura produtiva da empresa, colaborando com os fins do negócio (ex.: psicólogo em RH ou professor universitário).</p>
+            </div>
+            <div class="card teal">
+              <h4>Subordinação Telemática (Art. 6º CLT)</h4>
+              <p>Ordens transmitidas por meios telemáticos, algoritmos, e-mails, mensagens ou sistemas digitais equiparam-se plenamente ao comando pessoal direto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. FRAUDES TRABALHISTAS E UBERIZAÇÃO ══════════════════════════════ -->
+    <section id="fraudes-uberizacao">
+      <div class="section-label">Parte III · Patologias &amp; Atualidade</div>
+      <h2>3. Fraudes à Relação de Emprego: Pejotização &amp; Fenômeno da Uberização</h2>
+
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Pejotização (Fraude Contratual Ilícita)</h4>
+          <p>Ocorre quando a empresa exige ou induz o trabalhador a constituir uma Pessoa Jurídica (PJ/MEI) para emitir notas fiscais, ocultando uma relação que no plano fático preenche todos os requisitos do Art. 3º da CLT (pessoalidade, subordinação e habitualidade).<br>
+          <span class="kw">Consequência Jurídica:</span> Nulidade absoluta com base no <strong>Artigo 9º da CLT</strong> e aplicação do <strong>Princípio da Primazia da Realidade</strong>, reconhecendo-se o vínculo de emprego formal retroativo com todas as verbas rescisórias e rescisão indireta.</p>
+        </div>
+
+        <div class="card gold">
+          <h4>Uberização e Precarização do Trabalho</h4>
+          <p>Fenômeno contemporâneo de organização do trabalho intermediado por plataformas digitais e algoritmos, caracterizado por:</p>
+          <ul>
+            <li>Ausência de regulamentação protetiva estrita;</li>
+            <li>Discurso ideológico de "autonomia" e "empreendedorismo de si mesmo";</li>
+            <li><strong>Transferência integral dos custos e riscos para o trabalhador:</strong> O motorista/entregador arca com combustível, veículo, manutenção, riscos de assaltos, acidentes e invalidez sem qualquer cobertura da empresa de tecnologia proprietária da plataforma.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. MODALIDADES ESPECIAIS DE TRABALHO ══════════════════════════════ -->
+    <section id="modalidades-especiais">
+      <div class="section-label">Parte IV · Modalidades Especiais</div>
+      <h2>4. Modalidades Especiais de Trabalho Não Empregatícias</h2>
+
+      <!-- TRABALHO AUTÔNOMO -->
+      <h3>A) Trabalho Autônomo (Art. 442-B da CLT)</h3>
+      <p>O trabalhador autônomo exerce sua atividade profissional por conta própria, assume os riscos econômicos de sua atividade (alteridade própria) e <strong>não possui subordinação jurídica</strong>.</p>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Art. 442-B da CLT (Incluído pela Lei nº 13.467/2017)</summary>
+          <div class="lei-seca">
+            <strong>Art. 442-B.</strong> A contratação do autônomo, cumpridas por este todas as formalidades legais, com ou sem exclusividade, de forma contínua ou não, <span class="kw">afasta a qualidade de empregado</span> prevista no art. 3º desta Consolidação.
+          </div>
+        </details>
+      </div>
+      <div class="exam-tip">
+        <span class="box-label">🎯 Destaque de Prova · Habitualidade no Autônomo</span>
+        A prestação de serviço habitual ou contínua (ex.: professor contratado para gravar um curso de 3 meses que define seus próprios horários e negocia diretamente as aulas) não transmuta o contrato autônomo em emprego se a <strong>subordinação jurídica estiver ausente</strong>.
+      </div>
+
+      <!-- TRABALHO AVULSO -->
+      <h3>B) Trabalho Avulso (Portuário e Não Portuário)</h3>
+      <p>O trabalhador avulso presta serviços de curta duração a diversos tomadores, mediante <strong>intermediação obrigatória</strong> de um sindicato ou de um Órgão Gestor de Mão de Obra (OGMO). Possui <strong>igualdade constitucional de direitos com os trabalhadores com vínculo permanente (Art. 7º, XXXIV da CF/88)</strong>.</p>
+
+      <div class="grid2">
+        <div class="card teal">
+          <h4>1. Avulso Não Portuário (Lei nº 12.023/2009)</h4>
+          <ul>
+            <li>Atividades de movimentação de mercadorias em geral (carga, descarga, ensaque, etc.);</li>
+            <li>Intermediação obrigatória do <strong>Sindicato da Categoria</strong> mediante CCT ou ACT;</li>
+            <li>Escala e rodízio equitativo organizado pelo sindicato;</li>
+            <li><strong>Repasse da Remuneração:</strong> O tomador repassa os valores ao sindicato, que deve efetuar o pagamento ao trabalhador em até <span class="kw">72 horas úteis</span>;</li>
+            <li>Responsabilidade solidária entre os tomadores de serviços.</li>
+          </ul>
+        </div>
+
+        <div class="card dark">
+          <h4>2. Avulso Portuário (Lei nº 12.815/2013)</h4>
+          <ul>
+            <li>Intermediação exclusiva do <strong>Órgão Gestor de Mão de Obra (OGMO)</strong>;</li>
+            <li>Fluxo de pagamento: Navio $\rightarrow$ Operador Portuário (24h) $\rightarrow$ OGMO (24h) $\rightarrow$ Trabalhador Avulso;</li>
+            <li>Responsabilidade solidária entre Operador Portuário e OGMO;</li>
+            <li><strong>6 Atividades Portuárias da Lei:</strong> 1) Capatazia (movimentação em terra); 2) Estiva (movimentação no convés/porão da embarcação); 3) Conferência de carga; 4) Conserto de carga; 5) Vigilância de embarcações; 6) Bloco (limpeza e conservação de embarcações).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TRABALHO VOLUNTÁRIO -->
+      <h3>C) Trabalho Voluntário (Lei nº 9.608/1998)</h3>
+      <p>Atividade não remunerada prestada por pessoa física a entidade pública ou instituição privada sem fins lucrativos com objetivos cívicos, culturais, educacionais, científicos ou recreativos.</p>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Requisitos Formais e Ressarcimento de Despesas (Lei nº 9.608/1998)</summary>
+          <div class="lei-seca">
+            <strong>Art. 2º</strong> O serviço voluntário será exercido mediante a <span class="kw">celebração de termo de adesão</span> entre a entidade e o prestador do serviço, dele devendo constar o objeto e as condições de seu exercício.<br><br>
+            <strong>Art. 3º</strong> O prestador do serviço voluntário <span class="kw">poderá ser ressarcido pelas despesas</span> que comprovadamente realizar no desempenho das atividades voluntárias (ex.: transporte e alimentação expressamente autorizados).
+          </div>
+        </details>
+      </div>
+      <div class="jurisprudence">
+        <span class="box-label">🏛️ Jurisprudência do TST · Ônus da Prova no Voluntariado</span>
+        Apresentado pela entidade tomadora o regular <strong>Termo de Adesão ao Trabalho Voluntário</strong> (fato impeditivo do direito da parte autora), transfere-se integralmente para o trabalhador o ônus de comprovar cabalmente a fraude ou desvirtuamento da relação jurídica (AIRR-10740-35.2010.5.04.0000 TST).
+      </div>
+
+      <!-- TRABALHO DO CONDENADO/PRESIDIÁRIO -->
+      <h3>D) Trabalho do Presidiário (Lei nº 7.210/1984 - LEP)</h3>
+      <p>O trabalho do condenado constitui dever social e condição de dignidade humana, tendo finalidade puramente educativa e produtiva (Arts. 28 e 29 da LEP).</p>
+      <div class="pitfall">
+        <span class="box-label">⚠️ Ponto Crítico de Prova</span>
+        1. <strong>NÃO se sujeita ao regime da CLT</strong> (Art. 28, § 2º da LEP);<br>
+        2. Remuneração obrigatória conforme tabela, <strong>não podendo ser inferior a 3/4 (três quartos) do salário mínimo</strong> (Art. 29 da LEP).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. ESTÁGIO ══════════════════════════════ -->
+    <section id="estagio-lei11788">
+      <div class="section-label">Parte V · Ato Educativo</div>
+      <h2>5. Estágio: Requisitos de Validade &amp; Desvirtuamento (Lei nº 11.788/2008)</h2>
+
+      <p>O estágio é conceituado como <strong>ato educativo escolar supervisionado</strong>, desenvolvido no ambiente de trabalho e voltado à preparação profissional do estudante.</p>
+
+      <div class="doctrine">
+        <span class="box-label">📚 Os 4 Requisitos Cumulativos para Não Gerar Vínculo de Emprego (Art. 3º)</span>
+        <ol>
+          <li><strong>Matrícula e frequência regular</strong> do educando em curso de ensino superior, profissional, médio ou EJA, atestadas pela instituição de ensino;</li>
+          <li><strong>Celebração formal do Termo de Compromisso de Estágio (TCE)</strong> entre estudante, parte concedente e instituição de ensino (relação tripartite);</li>
+          <li><strong>Compatibilidade estrita</strong> entre as atividades práticas desempenhadas e o conteúdo pedagógico do curso;</li>
+          <li><strong>Acompanhamento e supervisão efetiva:</strong> Indicação de professor orientador pela escola e de supervisor profissional pela empresa (que pode supervisionar no máximo <strong>até 10 estagiários simultaneamente</strong> - Art. 9º, III).</li>
+        </ol>
+      </div>
+
+      <h3>Direitos, Limitações e Carga Horária do Estagiário</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Hipótese / Nível de Ensino</th>
+            <th>Jornada Máxima Permitida</th>
+            <th>Duração Máxima do Contrato</th>
+            <th>Direitos Assegurados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ensino Superior, Técnico e Médio Regular</strong></td>
+            <td><strong>6 horas diárias e 30 horas semanais</strong></td>
+            <td rowspan="2"><strong>Até 2 anos</strong> na mesma parte concedente (exceto quando se tratar de estagiário com deficiência, sem limite de prazo).</td>
+            <td rowspan="2">
+              • Bolsa-auxílio compulsória se o estágio for não obrigatório;<br>
+              • Auxílio-transporte compulsório;<br>
+              • Seguro contra acidentes pessoais compulsório;<br>
+              • <strong>Recesso Remunerado de 30 dias</strong> a cada 1 ano de estágio (preferencialmente nas férias escolares);<br>
+              • <strong>Redução da carga horária pela metade</strong> nos períodos de avaliação escolar formalmente comunicados.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Educação Especial e Anos Finais Fundamental (EJA)</strong></td>
+            <td><strong>4 horas diárias e 20 horas semanais</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ Desvirtuamento do Estágio = Vínculo de Emprego Automático</span>
+        O descumprimento de qualquer dos requisitos legais (ex.: ausência de termo tripartite, excesso de horas diárias, desvio para funções burocráticas sem supervisão ou estagiário não matriculado) <strong>gera vínculo de emprego direto e automático com a parte concedente</strong> com o pagamento retroativo de todos os direitos trabalhistas (Art. 3º, § 2º e Art. 15 da Lei 11.788/08).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. PODER DIRETIVO DO EMPREGADOR ══════════════════════════════ -->
+    <section id="poder-diretivo">
+      <div class="section-label">Parte VI · Prerrogativas Empresariais</div>
+      <h2>6. O Poder Diretivo do Empregador (Artigo 2º da CLT)</h2>
+
+      <p>O Poder Diretivo (ou poder empregatício) é o conjunto de prerrogativas asseguradas pela ordem jurídica ao empregador para gerir, organizar, fiscalizar e disciplinar a prestação de serviços no âmbito da empresa. Seu fundamento ético-jurídico é o <strong>Princípio da Alteridade</strong> (quem assume exclusivamente os riscos e custos do negócio tem o direito de ditar as diretrizes da produção).</p>
+
+      <h3>As Vertentes do Poder Diretivo</h3>
+      <div class="grid3">
+        <div class="card dark">
+          <h4>1. Poder de Direção / Regulamentar</h4>
+          <p>Organização da estrutura interna, divisão de setores, fixação de metas, normas de conduta interna, uso de fardamento e regulamento da empresa.</p>
+        </div>
+        <div class="card gold">
+          <h4>2. Poder Fiscalizatório / de Controle</h4>
+          <p>Vigilância sobre a execução do trabalho: relógios de ponto, câmeras de segurança em áreas comuns e controle de acesso.<br>
+          <span class="kw">Limites:</span> Vedadas câmeras em vestiários/banheiros e proibida revista íntima e desumana (Art. 373-A, VI da CLT).</p>
+        </div>
+        <div class="card teal">
+          <h4>3. Poder Disciplinar</h4>
+          <p>Aplicação legítima de sanções ao trabalhador em decorrência de infrações às obrigações contratuais ou legais.</p>
+        </div>
+      </div>
+
+      <h3>Espécies de Sanções Disciplinares Admitidas no Direito do Trabalho Brasileiro</h3>
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">1. Advertência (Verbal ou Escrita)</div>
+          Aviso formal de censura ao empregado, aceita pacificamente pela praxe e jurisprudência embora sem previsão literal na CLT.
+        </div>
+        <div class="level-box level-2">
+          <div class="level-title">2. Suspensão Disciplinar (Art. 474 da CLT)</div>
+          Afastamento temporário do trabalho com perda do salário correspondente e do repouso semanal. <strong>Limite Máximo: até 30 dias consecutivos</strong>. A suspensão superior a 30 dias importa em rescisão indireta do contrato de trabalho (Art. 474 da CLT).
+        </div>
+        <div class="level-box level-3">
+          <div class="level-title">3. Ruptura por Justa Causa (Art. 482 da CLT)</div>
+          Sanção máxima do Direito do Trabalho que extingue o contrato por falta grave praticada pelo trabalhador, com perda da maioria das verbas rescisórias indenizatórias.
+        </div>
+      </div>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ Proibição Absoluta de Multas Disciplinares</span>
+        É <strong>terminantemente proibida a imposição de multas pecuniárias</strong> como sanção disciplinar no contrato de trabalho individual, sendo nula qualquer cláusula contratual punitiva que autorize descontos punitivos (Artigo 462 da CLT).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 7. OS 11 REQUISITOS DE VALIDADE DA PUNIÇÃO DISCIPLINAR ══════════════════════════════ -->
+    <section id="requisitos-disciplinares">
+      <div class="section-label">Parte VII · Controle da Validade</div>
+      <h2>7. Os 11 Requisitos Cumulativos de Validade da Punição Disciplinar</h2>
+
+      <p>Para que uma penalidade disciplinar seja considerada legítima perante a Justiça do Trabalho, devem concorrer os seguintes requisitos:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Requisito de Validade</th>
+            <th>Conceito e Aplicação Prática</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Autoria</strong></td>
+            <td>Certeza absoluta de que o ato faltoso foi praticado pelo trabalhador punido.</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td><strong>Dolo ou Culpa</strong></td>
+            <td>Comprovação de intenção deliberada (dolo) ou negligência/imprudência/imperícia (culpa) na conduta.</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td><strong>Nexo Causal</strong></td>
+            <td>Vínculo direto de causa e efeito entre a conduta do empregado e a falta disciplinar verificada.</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td><strong>Adequação da Penalidade</strong></td>
+            <td>A sanção escolhida deve guardar relação qualitativa com a natureza da infração cometida.</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td><strong>Proporcionalidade</strong></td>
+            <td>Equilíbrio e bom senso entre a gravidade do fato e a intensidade da punição (vedado excesso).</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td><strong>Imediatidade (Atualidade)</strong></td>
+            <td>A punição deve ser aplicada logo após o conhecimento inequívoco do fato pelo empregador.</td>
+          </tr>
+          <tr>
+            <td><strong>7</strong></td>
+            <td><strong>Ausência de Perdão Tácito</strong></td>
+            <td>A inércia ou demora prolongada e injustificada do empregador em punir presume o perdão da falta.</td>
+          </tr>
+          <tr>
+            <td><strong>8</strong></td>
+            <td><strong>Singularidade da Punição (<em>Non Bis in Idem</em>)</strong></td>
+            <td>Cada falta cometida enseja apenas uma única punição (proibido aplicar advertência e suspensão pela mesma infração).</td>
+          </tr>
+          <tr>
+            <td><strong>9</strong></td>
+            <td><strong>Inalterabilidade da Punição</strong></td>
+            <td>Uma vez fixada e comunicada a sanção, não pode o empregador agravá-la posteriormente pelo mesmo fato.</td>
+          </tr>
+          <tr>
+            <td><strong>10</strong></td>
+            <td><strong>Ausência de Discriminação</strong></td>
+            <td>Faltas idênticas cometidas por empregados na mesma situação devem receber tratamento disciplinar isonômico.</td>
+          </tr>
+          <tr>
+            <td><strong>11</strong></td>
+            <td><strong>Gradação de Penalidades</strong></td>
+            <td>Regra pedagógica de progressão das punições (advertência $\rightarrow$ suspensão $\rightarrow$ justa causa), ressalvada falta gravíssima imediata.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ 8. QUESTÕES DE PROVA E CASOS PRÁTICOS ══════════════════════════════ -->
+    <section id="questoes-prova">
+      <div class="section-label">Parte VIII · Treinamento de Prova</div>
+      <h2>8. Caderno de Questões e Casos Práticos de Prova</h2>
+
+      <!-- QUESTÃO 1 - DISCURSIVA MODELO PROVA (ITENS A e B) -->
+      <div class="exercise" style="border: 2px solid var(--p-500); background: rgba(245, 158, 11, 0.03);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <span class="box-label" style="background: #dc2626; margin: 0;">🔥 QUESTÃO DISCURSIVA PROVÁVEL DE PROVA</span>
+          <span style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--p-600);">MODELO DISCURSIVO COM ITENS (A) e (B)</span>
+        </div>
+        <p><strong>Questão 01 (Discursiva · Requisitos Fáticos da Relação de Emprego e Pejotização):</strong></p>
+        <p style="margin-left: 15px;">
+          <strong>a)</strong> À luz do Artigo 3º da CLT e da doutrina trabalhista majoritária, aponte os <strong>cinco requisitos fático-jurídicos cumulativos</strong> da relação de emprego. Em seguida, diferencie a <em>subordinação tradicional (subjetiva)</em> da <em>subordinação estrutural</em> e da <em>subordinação por meios telemáticos</em> (Art. 6º, parágrafo único da CLT).<br><br>
+          <strong>b)</strong> O que se entende por <strong>pejotização</strong>? Esclareça por que essa prática constitui ilícito trabalhista e indique o dispositivo da CLT e o princípio aplicável pelo magistrado para declarar o vínculo empregatício.
+        </p>
+        <details class="gabarito" open>
+          <summary>🔍 Ver Resposta Padrão Nota 10 (Com Palavras-Chave Obrigatórias)</summary>
+          <div style="margin-top:12px; line-height: 1.8;">
+            <p><strong>Padrão de Resposta do Item (a):</strong><br>
+            Os cinco elementos fático-jurídicos cumulativos são: <strong>1) Pessoa Física</strong> (ser humano natural); <strong>2) Pessoalidade</strong> (prestação <em>intuitu personae</em>, infungível); <strong>3) Não Eventualidade</strong> (habitualidade, inserção na atividade-fim/dinâmica normal do tomador); <strong>4) Onerosidade</strong> (contraprestação salarial somada ao <em>animus contrahendi</em>); e <strong>5) Subordinação Jurídica</strong> (mnemônico PEPO-S).<br>
+            <strong>Diferenciação das vertentes de subordinação:</strong>
+            <ul>
+              <li><em>Subordinação Tradicional (Subjetiva):</em> Caracteriza-se por ordens diretas, comando verbal/escrito cotidiano e fiscalização presencial de horários e tarefas.</li>
+              <li><em>Subordinação Estrutural:</em> Ocorre quando o trabalhador está integrado à dinâmica operacional, aos processos produtivos e à cultura da empresa, colaborando com os fins essenciais do empreendimento, dispensando ordens pontuais a cada instante (ex.: profissionais liberais celetistas).</li>
+              <li><em>Subordinação Telemática (Art. 6º, parágrafo único da CLT):</em> Equiparação legal expressa dos comandos informatizados, e-mails, sistemas digitais e algoritmos às ordens pessoais e diretas para fins de subordinação jurídica.</li>
+            </ul></p>
+            
+            <p><strong>Padrão de Resposta do Item (b):</strong><br>
+            A <strong>pejotização</strong> consiste na fraude contratual em que a empresa exige ou induz o trabalhador a abrir uma Pessoa Jurídica (PJ/MEI) para emitir notas fiscais, mascarando a existência de uma relação fática subordinada, habitual, pessoal e onerosa. Essa conduta constitui ilícito civil e trabalhista fundado na simulação e na fraude à lei. Conforme o <strong>Artigo 9º da CLT</strong> (<em>"serão nulos de pleno direito os atos praticados com o objetivo de desvirtuar, impedir ou fraudar a aplicação dos preceitos trabalhistas"</em>) e com base no <strong>Princípio da Primazia da Realidade sobre a Forma</strong>, o magistrado desconsidera o invólucro formal da pessoa jurídica e declara a existência de autêntico vínculo de emprego celetista retroativo, com o pagamento de todas as parcelas e reflexos de direito.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO 2 - DISCURSIVA MODELO PROVA (ITENS A e B) -->
+      <div class="exercise" style="border: 2px solid var(--p-500); background: rgba(245, 158, 11, 0.03); margin-top: 25px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <span class="box-label" style="background: #dc2626; margin: 0;">🔥 QUESTÃO DISCURSIVA PROVÁVEL DE PROVA</span>
+          <span style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--p-600);">MODELO DISCURSIVO COM ITENS (A) e (B)</span>
+        </div>
+        <p><strong>Questão 02 (Discursiva · Poder Diretivo e Limites Disciplinares / Validade do Estágio):</strong></p>
+        <p style="margin-left: 15px;">
+          <strong>a)</strong> Quais são as <strong>três espécies do Poder Diretivo</strong> do empregador (Art. 2º da CLT)? Esclareça se é lícita a fixação de multas pecuniárias contratuais como sanção disciplinar e cite três requisitos que condicionam a validade da punição disciplinar sob pena de anulação pela Justiça do Trabalho.<br><br>
+          <strong>b)</strong> Quais são os <strong>quatro requisitos de validade</strong> exigidos pela Lei nº 11.788/2008 para que a contratação de estagiário não configure vínculo de emprego? Qual a consequência jurídica se o estudante cumprir jornada diária de 8 horas?</p>
+        <details class="gabarito" open>
+          <summary>🔍 Ver Resposta Padrão Nota 10 (Com Palavras-Chave Obrigatórias)</summary>
+          <div style="margin-top:12px; line-height: 1.8;">
+            <p><strong>Padrão de Resposta do Item (a):</strong><br>
+            O poder diretivo subdivide-se em: <strong>1) Poder de Direção / Regulamentar</strong>; <strong>2) Poder Fiscalizatório / de Controle</strong>; e <strong>3) Poder Disciplinar</strong>.<br>
+            A aplicação de multas pecuniárias como sanção disciplinar é <strong>absolutamente ilícita</strong> no Direito do Trabalho brasileiro (Art. 462 da CLT), sendo admitidas unicamente as sanções de advertência, suspensão disciplinar (máximo 30 dias - Art. 474 CLT) e demissão por justa causa (Art. 482 CLT). Três requisitos essenciais de validade são: <em>1. Proporcionalidade</em> (adequação entre gravidade da falta e intensidade da pena); <em>2. Imediatidade / Atualidade</em> (punição logo após ciência inequívoca, sob pena de perdão tácito); e <em>3. Non bis in idem</em> (proibição de dupla punição pela mesma falta).</p>
+            
+            <p><strong>Padrão de Resposta do Item (b):</strong><br>
+            Os quatro requisitos formais e materiais indispensáveis (Art. 3º da Lei nº 11.788/2008) são:
+            1) Matrícula e frequência escolar/acadêmica regular atestadas pela instituição de ensino;<br>
+            2) Celebração formal do Termo de Compromisso de Estágio (TCE) tripartite (aluno, concedente e instituição);<br>
+            3) Compatibilidade real entre as tarefas práticas e o conteúdo pedagógico do curso;<br>
+            4) Acompanhamento efetivo por supervisor da parte concedente (máx. 10 estagiários por supervisor) e professor orientador da escola.<br>
+            <strong>Consequência da jornada de 8 horas:</strong> Há violação direta do teto legal de jornada (máx. 6h/30h para ensino superior - Art. 10, II da Lei 11.788/08). Conforme o Artigo 3º, § 2º e Artigo 15 da Lei nº 11.788/2008, o descumprimento legal opera o <strong>desvirtuamento absoluto do estágio</strong>, gerando <strong>vínculo de emprego direto e automático</strong> regido pela CLT, com condenação ao pagamento de horas extras, aviso prévio, 13º, férias e FGTS.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- SEÇÃO ESPECIAL: 2 QUESTÕES OBJETIVAS CAPCIOSAS DE PROVA -->
+      <div class="exercise" style="border: 2px solid #0d9488; background: rgba(13, 148, 136, 0.03); margin-top: 25px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+          <span class="box-label" style="background: #0d9488; margin: 0;">🎯 QUESTÕES OBJETIVAS CAPCIOSAS (MODELO PROVA)</span>
+        </div>
+        <p><strong>Questão 03 (Múltipla Escolha / V ou F Capcioso · Revisão da Professora):</strong> Julgue a veracidade das proposições a seguir:</p>
+        <p style="margin-left: 15px;">
+          <strong>Item I:</strong> <em>"O trabalho eventual gera vínculo de emprego automático após 90 dias ininterruptos de sua prestação."</em><br>
+          <strong>Item II:</strong> <em>"É permitido o ressarcimento de despesas de transporte no trabalho voluntário (Lei nº 9.608/98), sem que isso desfigure a gratuidade do vínculo."</em><br>
+          <strong>Item III:</strong> <em>"Na relação de emprego, a pessoalidade incide apenas sobre o empregado, sem qualquer exceção na legislação trabalhista."</em>
+        </p>
+        <details class="gabarito" open>
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top:10px; line-height: 1.8;">
+            • <strong>Item I: FALSO.</strong> A causalidade transitória e a ausência de continuidade mantêm a natureza eventual. Transcorrer 90 dias não gera vínculo automático sem os requisitos cumulativos do Art. 3º da CLT.<br>
+            • <strong>Item II: VERDADEIRO.</strong> O Art. 3º da Lei nº 9.608/98 autoriza expressamente o ressarcimento de despesas de transporte e alimentação autorizadas e comprovadas.<br>
+            • <strong>Item III: FALSO.</strong> Há uma notória exceção doutrinária no <strong>trabalho doméstico</strong> (LC 150/15), onde a pessoalidade também se projeta sobre o empregador e o âmbito de sua família.
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center; color: #94a3b8; font-size: 0.9rem;">
+      <p><strong>Portal de Estudos Acadêmicos · Direito do Trabalho</strong></p>
+      <p>&copy; 2026 - Material Consolidado, Integral e Atualizado com Foco em Provas e Concursos.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+</html>

@@ -100,6 +100,23 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    .tag-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: #b45309;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.75rem;
+    }
+
+    [data-theme="dark"] .tag-badge {
+      background: rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
   </style>
 </head>
 
@@ -111,12 +128,12 @@
   <header>
     <div class="container">
       <div class="badge">Matéria Acadêmica</div>
-      <h1>Direito do Trabalho</h1>
-      <div class="subtitle">Introdução Histórica, Conceitos, Modos de Produção, Autonomia, Taylorismo, Direitos Humanos e Princípios Fundamentais</div>
+      <h1>Direito do Trabalho I</h1>
+      <div class="subtitle">Módulo Unificado e Consolidado em 3 Resumos Mestres: Fundamentos, Relações de Trabalho &amp; Dinâmica Contratual com Simulado Completo de Prova</div>
       <div class="meta">
         <span>⚖️ Direito Social &amp; Especializado</span>
-        <span>📚 8 Resumos Disponíveis</span>
-        <span>🔥 Foco em Concursos e OAB</span>
+        <span>📚 3 Resumos Mestres Consolidados</span>
+        <span>🔥 Foco Total em Provas e OAB</span>
       </div>
     </div>
   </header>
@@ -142,102 +159,49 @@
   <main>
     <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
       <div id="modulos">
-        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; border: none;">📚 Módulos de Estudo</h2>
-        <p style="color: var(--text-muted); margin-bottom: 3rem; font-family: 'Inter', sans-serif;">Todo o material didático, evolução histórica, jurisprudência do TST, direitos humanos e princípios transcritos na íntegra para máxima retenção de conteúdo.</p>
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; border: none;">📚 Módulos Mestres de Estudo</h2>
+        <p style="color: var(--text-muted); margin-bottom: 3rem; font-family: 'Inter', sans-serif;">Todo o material didático dos slides e da revisão oral foi unificado em 3 resumos profundos, exaustivos e sem omissão de conteúdo, otimizados para rápida navegação e máxima retenção.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
           
-          <!-- RESUMO 1: INTRODUÇÃO HISTÓRICA, CONCEITOS & PRINCÍPIOS -->
-          <a href="introducao-principios-direito-do-trabalho.html" class="subject-card">
-            <div class="subject-icon">⚒️</div>
-            <h3>Introdução Histórica, Conceitos &amp; Princípios do Direito do Trabalho</h3>
-            <p>Evolução histórica (1802 a 1919), crise e transformações contemporâneas (flexibilização, precarização e uberização), autonomia, definições (subjetivista, objetivista e mista), e o Princípio da Proteção com suas vertentes (*In Dubio Pro Operario*, exceções e jurisprudência do TST).</p>
+          <!-- RESUMO 1: FUNDAMENTOS, HISTÓRIA, FONTES & PRINCÍPIOS -->
+          <a href="fundamentos-historia-fontes-principios.html" class="subject-card">
+            <div class="tag-badge">MÓDULO 01 · FUNDAMENTOS &amp; PRINCÍPIOS</div>
+            <div class="subject-icon">📜</div>
+            <h3>Fundamentos Históricos, Modos de Produção, Fontes &amp; Princípios Fundamentais</h3>
+            <p>Ontologia do trabalho humano (intencional, idealizado e transformador; escravidão, servidão e corporações), 3 causas formadoras (Revolução Industrial, Estado Social e sindicalismo), manufatura (1776), Taylorismo (1911) e expropriação do saber, constitucionalismo social (México 1917, Weimar 1919, OIT 1919, CLT 1943 e DUDH), fontes materiais e formais, Art. 8º da CLT (limitações da Reforma às Súmulas e intervenção mínima), hierarquia das fontes (Kelsen adaptado pelo princípio da norma mais favorável, Arts. 620, 619, 611-A e 444 da CLT) e os 6 Princípios Fundamentais (Proteção com seus 3 subprincípios, Irredutibilidade Salarial, Imperatividade, Indisponibilidade, Continuidade e Primazia da Realidade).</p>
             <div class="card-footer">
               <span>Acessar Resumo 01</span>
               <span>→</span>
             </div>
           </a>
 
-          <!-- RESUMO 2: PRINCÍPIOS FUNDAMENTAIS -->
-          <a href="principios-direito-do-trabalho.html" class="subject-card">
-            <div class="subject-icon">⚖️</div>
-            <h3>Princípios Fundamentais do Direito do Trabalho</h3>
-            <p>Análise exaustiva do Princípio da Proteção (In Dubio Pro Operario, Norma Mais Favorável, Condição Mais Benéfica / Inalterabilidade Contratual Lesiva), Reforma Trabalhista (Lei 13.467/17), Irredutibilidade Salarial, Imperatividade, Indisponibilidade, Continuidade e Primazia da Realidade.</p>
+          <!-- RESUMO 2: RELAÇÕES DE TRABALHO, MODALIDADES ESPECIAIS & PODER DIRETIVO -->
+          <a href="relacoes-de-trabalho-modalidades-poder-diretivo.html" class="subject-card">
+            <div class="tag-badge">MÓDULO 02 · RELAÇÕES &amp; PODER DIRETIVO</div>
+            <div class="subject-icon">👔</div>
+            <h3>Relações de Trabalho vs. Emprego, Modalidades Especiais &amp; Poder Diretivo</h3>
+            <p>Diferenciação gênero e espécie, os 5 requisitos fáticos cumulativos do Art. 3º da CLT (PEPO-S: Pessoa Física, Pessoalidade, Não Eventualidade, Onerosidade e Subordinação Jurídica), pejotização como fraude ilícita (Art. 9º CLT), fenômeno da uberização e precarização, modalidades especiais (Trabalho Autônomo do Art. 442-B, Eventual e teorias, Avulso Não Portuário da Lei 12.023/09 e Portuário do OGMO na Lei 12.815/13, Voluntário da Lei 9.608/98 com permissão de ressarcimento de despesas, Estágio da Lei 11.788/08 com seus 4 requisitos de validade para afastar vínculo, Presidiário da Lei 7.210/84) e Poder Diretivo do Empregador (Direção, Fiscalização, Disciplinar e os 11 requisitos cumulativos de validade da punição com vedação a multas).</p>
             <div class="card-footer">
               <span>Acessar Resumo 02</span>
               <span>→</span>
             </div>
           </a>
 
-          <!-- RESUMO 3: FONTES DO DIREITO DO TRABALHO -->
-          <a href="fontes-direito-do-trabalho.html" class="subject-card">
-            <div class="subject-icon">📜</div>
-            <h3>Fontes do Direito do Trabalho</h3>
-            <p>Fontes materiais (Máynez) e formais, heteronomia vs. autonomia, sistema de integração do Art. 8º da CLT, limitações às Súmulas TST (§ 2º), intervenção mínima na autonomia coletiva (§ 3º), hierarquia flexível (Kelsen modificada), regras de prevalência (Arts. 619, 620, 611-A e 444 CLT) e nulidade por ausência de concurso público (Art. 37, II, CF e Súmula 363 TST).</p>
+          <!-- RESUMO 3: SUJEITOS DO CONTRATO, DINÂMICA & CADERNO DE PROVA -->
+          <a href="sujeitos-contrato-trabalho-dinamica-revisao.html" class="subject-card">
+            <div class="tag-badge">MÓDULO 03 · SUJEITOS &amp; REVISÃO DE PROVA</div>
+            <div class="subject-icon">🔥</div>
+            <h3>Sujeitos do Contrato, Dinâmica Contratual &amp; Caderno Completo de Prova</h3>
+            <p>Empregados especiais (Hipersuficiente do Art. 444 parágrafo único, Cargos de Confiança do Art. 62, II e gratificação de 40%, Bancários dos Arts. 224/225, Diretores Eleitos da Súmula 269 TST, Domésticos da LC 150/15 com Simples Doméstico e regras de intervalos, Rurícolas da Lei 5.889/73 e OJ 38 TST, Indígenas da Lei 6.001/73), Empregador e Princípio da Alteridade (Art. 2º CLT), Empresa vs. Estabelecimento (unicidade contratual), Grupo Econômico Trabalhista por subordinação e coordenação (§§ 2º e 3º), Sucessão Trabalhista (Arts. 10 e 448 CLT), Empregador Estatal e Súmula 363 TST, CTPS Digital e vedação a anotações desabonadoras (Art. 29, § 4º CLT), duração do contrato (experiência máx 90 dias) e o <strong>Caderno Completo da Revisão de Prova da Professora com 35 Questões-Chave Comentadas</strong>.</p>
             <div class="card-footer">
               <span>Acessar Resumo 03</span>
               <span>→</span>
             </div>
           </a>
 
-          <!-- RESUMO 4: CONTEXTO HISTÓRICO & MODOS DE PRODUÇÃO -->
-          <a href="contexto-historico-evolucao.html" class="subject-card">
-            <div class="subject-icon">📜</div>
-            <h3>Contexto Histórico, Modos de Produção &amp; Direitos Humanos</h3>
-            <p>Conceito ontológico de trabalho, escravidão, servidão e corporações de ofício, causas de emergência (econômica, política e jurídica), artesanato, manufatura (1776), Taylorismo (1911), Constituições do México (1917) e Weimar (1919), OIT, CLT (1943), Art. 23 da DUDH e Arts. 1º, IV e 6º da CF/88.</p>
-            <div class="card-footer">
-              <span>Acessar Resumo 04</span>
-              <span>→</span>
-            </div>
-          </a>
-
-          <!-- RESUMO 5: RELAÇÕES DE TRABALHO VS EMPREGO -->
-          <a href="relacoes-de-trabalho.html" class="subject-card">
-            <div class="subject-icon">👔</div>
-            <h3>Relações de Trabalho vs. Relação de Emprego</h3>
-            <p>Gênero e espécie, modalidades de trabalho (emprego, estágio, autônomo, eventual, avulso e voluntário), 5 elementos fático-jurídicos do Art. 3º da CLT (PEPO-S), vedações à pejotização, subordinação jurídica (tradicional, objetiva, estrutural, telemática do Art. 6º parágrafo único e parassubordinação) e <em>animus contrahendi</em>.</p>
-            <div class="card-footer">
-              <span>Acessar Resumo 05</span>
-              <span>→</span>
-            </div>
-          </a>
-
-          <!-- RESUMO 6: PODER DIRETIVO DO EMPREGADOR -->
-          <a href="poder-diretivo-do-empregador.html" class="subject-card">
-            <div class="subject-icon">🎯</div>
-            <h3>Poder Diretivo do Empregador</h3>
-            <p>Prerrogativas empresariais (Art. 2º da CLT), vertentes (direção, regulamentar, fiscalizatório e disciplinar), limites às revistas corporais (Art. 373-A, VI), sanções permitidas (advertência, suspensão do Art. 474 e justa causa do Art. 482), vedação a multas (Art. 462) e os 11 requisitos de validade das punições.</p>
-            <div class="card-footer">
-              <span>Acessar Resumo 06</span>
-              <span>→</span>
-            </div>
-          </a>
-
-          <!-- RESUMO 7: MODALIDADES ESPECIAIS DE TRABALHO -->
-          <a href="modalidades-especiais-de-trabalho.html" class="subject-card">
-            <div class="subject-icon">💼</div>
-            <h3>Modalidades Especiais de Trabalho</h3>
-            <p>Trabalho Eventual (Teorias do Evento, Fins do Empreendimento e Fixação Jurídica), Autônomo (Art. 442-B CLT, alteridade e exceções), Avulso Não Portuário (Lei 12.023/09, repasse 72h) e Portuário (Lei 12.815/13, OGMO e Operador Portuário), Voluntário (Lei 9.608/98, Termo de Adesão e ônus da prova TST) e Estágio (Lei 11.788/08, TCE e nulidade).</p>
-            <div class="card-footer">
-              <span>Acessar Resumo 07</span>
-              <span>→</span>
-            </div>
-          </a>
-
-          <!-- RESUMO 8: SUJEITOS DO CONTRATO DE TRABALHO -->
-          <a href="sujeitos-do-contrato-empregado-empregador.html" class="subject-card">
-            <div class="subject-icon">🤝</div>
-            <h3>Sujeitos do Contrato de Trabalho</h3>
-            <p>Análise dos Arts. 3º e 2º da CLT, Hipersuficientes (Art. 444 parágrafo único), Altos Empregados e Cargos de Confiança (Art. 62, II e primazia da realidade), Bancários (Art. 224), Diretores Eleitos (Súmula 269 TST), Domésticos (LC 150/15), Rurícolas (Lei 5.889/73 e OJ 38 TST), Indígenas (Lei 6.001/73), Empresa vs. Estabelecimento (contrato único), Grupo Econômico (§§ 2º e 3º), Sucessão e Empregador Estatal (Súmula 363 TST).</p>
-            <div class="card-footer">
-              <span>Acessar Resumo 08</span>
-              <span>→</span>
-            </div>
-          </a>
-
         </div>
 
-        </div>
       </div>
     </div>
   </main>

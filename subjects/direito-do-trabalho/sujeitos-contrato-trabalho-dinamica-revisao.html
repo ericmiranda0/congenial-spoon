@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito do Trabalho – Sujeitos do Contrato, Dinâmica Contratual &amp; Revisão Geral de Prova | Resumo Consolidado 03</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../base-style.css">
+  
+  <style>
+    :root {
+      --p-700: #78350F;
+      --p-600: #B45309;
+      --p-500: #F59E0B;
+      --p-50: #FFFBEB;
+      --primary: #F59E0B;
+      --primary-dark: #78350F;
+      --accent-gold: #D4AF37;
+      --accent-teal: #0D9488;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #f8fafc);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #1c130b 100%);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.85rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--p-500);
+      padding-left: 15px;
+      line-height: 1.3;
+    }
+
+    [data-theme="dark"] h2 { color: var(--p-500); }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    [data-theme="dark"] h3 { color: #f59e0b; }
+
+    /* Explanação em 3 Níveis */
+    .level-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-box {
+      padding: 18px 22px;
+      border-radius: 12px;
+      border-left: 5px solid;
+    }
+
+    .level-1 {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: #f59e0b;
+    }
+
+    .level-2 {
+      background: rgba(13, 148, 136, 0.08);
+      border-color: #0d9488;
+    }
+
+    .level-3 {
+      background: rgba(120, 53, 15, 0.08);
+      border-color: #78350F;
+    }
+
+    [data-theme="dark"] .level-3 {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .level-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .level-1 .level-title { color: #d97706; }
+    .level-2 .level-title { color: #0d9488; }
+    .level-3 .level-title { color: var(--p-700); }
+    [data-theme="dark"] .level-3 .level-title { color: #f59e0b; }
+
+    /* Lei Seca & Artigos */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .artigo summary { color: var(--p-500); }
+    .artigo summary::-webkit-details-marker { display: none; }
+
+    .artigo summary::after {
+      content: '➕';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .artigo[open] summary::after { content: '➖'; }
+
+    .lei-seca {
+      background: var(--p-50);
+      color: #1f2937;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+    }
+
+    /* Grids e Cards */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--p-500);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.teal { border-top-color: var(--accent-teal); }
+    .card.dark { border-top-color: var(--p-700); }
+
+    /* Boxes Informativos */
+    .box-info {
+      position: relative;
+      padding: 22px 25px 20px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid;
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #92400e;
+    }
+    .exam-tip .box-label { background: #d97706; }
+
+    .pitfall {
+      background: #fef2f2;
+      border-color: #fee2e2;
+      color: #991b1b;
+    }
+    .pitfall .box-label { background: #ef4444; }
+
+    .doctrine {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .doctrine .box-label { background: #16a34a; }
+
+    .jurisprudence {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #075985;
+    }
+    .jurisprudence .box-label { background: #0284c7; }
+
+    [data-theme="dark"] .exam-tip { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #fef3c7; }
+    [data-theme="dark"] .pitfall { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: #fee2e2; }
+    [data-theme="dark"] .doctrine { background: rgba(22, 163, 74, 0.1); border-color: rgba(22, 163, 74, 0.2); color: #bbf7d0; }
+    [data-theme="dark"] .jurisprudence { background: rgba(2, 132, 199, 0.1); border-color: rgba(2, 132, 199, 0.2); color: #bae6fd; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.93rem;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Questions and Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .gabarito {
+      margin-top: 12px;
+      padding: 14px;
+      background: rgba(13, 148, 136, 0.1);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="badge">Resumo Consolidado 03 · Direito do Trabalho I</div>
+      <h1>Sujeitos do Contrato de Trabalho, Dinâmica Contratual &amp; Caderno de Prova</h1>
+      <div class="subtitle">Guia Mestre Completo: Empregados Especiais (Hipersuficientes, Cargos de Confiança, Bancários, Domésticos, Rurícolas, Indígenas), Empregador (Alteridade, Empresa vs. Estabelecimento, Grupo Econômico, Sucessão e Estado), CTPS, Duração do Contrato e o Caderno Completo das 35 Questões de Revisão</div>
+      <div class="meta">
+        <span>⚖️ Arts. 2º, 3º, 29, 62, 224, 444, 448 CLT</span> | <span>📜 LC 150/15 &amp; Súmulas TST</span> | <span>🎯 Simulado Geral Comentado</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="home-btn" title="Voltar ao Painel da Matéria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <div class="nav-list">
+        <a href="#empregados-especiais" class="nav-item">Empregados Especiais</a>
+        <a href="#domestico-ruricola" class="nav-item">Doméstico &amp; Rurícola</a>
+        <a href="#figura-empregador" class="nav-item">O Empregador &amp; Alteridade</a>
+        <a href="#empresa-grupo-sucessao" class="nav-item">Grupo &amp; Sucessão</a>
+        <a href="#contrato-duracao-ctps" class="nav-item">Contrato, CTPS &amp; Danos</a>
+        <a href="#caderno-revisao-geral" class="nav-item">Caderno de Prova (35 Questões)</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 1. EMPREGADOS ESPECIAIS ══════════════════════════════ -->
+    <section id="empregados-especiais">
+      <div class="section-label">Parte I · Sujeito Empregado</div>
+      <h2>1. Empregados Especiais &amp; Regimes Diferenciados</h2>
+
+      <!-- HIPERSUFICIENTE -->
+      <h3>A) O Empregado Hipersuficiente (Art. 444, Parágrafo Único da CLT)</h3>
+      <p>Introduzido pela Lei nº 13.467/2017, confere autonomia plena de negociação individual a um perfil restrito de trabalhadores.</p>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Requisitos Cumulativos do Hipersuficiente (Art. 444, Parágrafo Único da CLT)</summary>
+          <div class="lei-seca">
+            <strong>Art. 444, Parágrafo único.</strong> A livre estipulação a que se refere o caput deste artigo aplica-se às hipóteses previstas no art. 611-A desta Consolidação, com a <span class="kw">mesma eficácia legal e preponderância sobre os instrumentos coletivos</span>, no caso de empregado portador de:
+            <ul>
+              <li><strong>1. Diploma de nível superior;</strong> E</li>
+              <li><strong>2. Salário mensal igual ou superior a 2 (duas) vezes o limite máximo dos benefícios do Regime Geral de Previdência Social (RGPS).</strong></li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <!-- CARGOS DE CONFIANÇA -->
+      <h3>B) Altos Empregados e Cargos de Confiança (Art. 62, II da CLT)</h3>
+      <p>Gerentes, diretores, chefes de departamento e filiais que detêm poderes de mando, representação externa e gestão estratégica.</p>
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Regime Jurídico Especial (Art. 62, II e Parágrafo Único)</h4>
+          <ul>
+            <li><strong>Isenção do Controle de Horário:</strong> Não são abrangidos pelo regime de controle de jornada, não tendo direito a horas extraordinárias nem adicional noturno ordinário.</li>
+            <li><strong>Requisito Salarial:</strong> O salário do cargo de confiança (compreendendo o salário base + gratificação de função) deve ser <strong>igual ou superior ao salário efetivo acrescido de no mínimo 40%</strong>.</li>
+            <li><strong>Reversibilidade ao Cargo Efetivo (Art. 468, §§ 1º e 2º):</strong> O empregador pode determinar unilateralmente a volta do empregado ao cargo efetivo anterior. Essa reversão <span class="kw">NÃO assegura a manutenção nem a incorporação da gratificação de função</span>, qualquer que tenha sido o tempo de exercício (fim da Súmula 372 do TST pós-Reforma).</li>
+            <li><strong>Transferência Lícita sem Anuência (Art. 469, § 1º):</strong> É lícita a transferência para outra localidade, sem a concordância do empregado, quando houver real necessidade de serviço.</li>
+          </ul>
+        </div>
+
+        <div class="card gold">
+          <h4>O Princípio da Primazia da Realidade no Cargo de Confiança</h4>
+          <p>Se o empregado possui o título formal de "gerente" no papel, mas no dia a dia é submetido a rigoroso controle de ponto, não tem subordinados e não possui autonomia de decisão, aplica-se a <strong>Primazia da Realidade</strong>: o enquadramento do Art. 62, II é afastado e o empregado tem direito ao recebimento de todas as horas extras trabalhadas.</p>
+        </div>
+      </div>
+
+      <!-- BANCÁRIOS -->
+      <h3>C) Empregados Bancários (Arts. 224 e 225 da CLT)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Categoria Bancária</th>
+            <th>Jornada de Trabalho Legal</th>
+            <th>Gratificação de Função Mínima</th>
+            <th>Regras Especiais</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bancário Comum (Art. 224, caput)</strong></td>
+            <td><strong>6 horas diárias contínuas e 30 horas semanais</strong> (segunda a sexta, sábados não úteis bancários).</td>
+            <td>Não se aplica</td>
+            <td>Intervalo intrajornada de 15 minutos obrigatório dentro das 6 horas.</td>
+          </tr>
+          <tr>
+            <td><strong>Cargo de Confiança Bancário (Art. 224, § 2º)</strong><br>(Chefes de setor, tesoureiros de agência, gerentes de contas)</td>
+            <td><strong>8 horas diárias e 40 horas semanais</strong> (Art. 225)</td>
+            <td><strong>Não inferior a 1/3 (um terço)</strong> do salário do cargo efetivo</td>
+            <td>Poderes de mando moderados e função de fiscalização. Horas excedentes à 8ª diária são extras.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- DIRETORES EMPREGADOS -->
+      <h3>D) Diretores Eleitos e Empregados (Súmula nº 269 do TST)</h3>
+      <div class="jurisprudence">
+        <span class="box-label">🏛️ Súmula nº 269 do TST · Suspensão Contratual</span>
+        <em>"O empregado eleito para ocupar cargo de diretor tem o respectivo contrato de trabalho suspenso, não se computando o tempo de serviço desse período, salvo se permanecer a subordinação jurídica inerente à relação de emprego."</em>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. DOMÉSTICO E RURÍCOLA ══════════════════════════════ -->
+    <section id="domestico-ruricola">
+      <div class="section-label">Parte II · Categorias Típicas</div>
+      <h2>2. Empregado Doméstico, Empregado Rural &amp; Trabalho Indígena</h2>
+
+      <!-- DOMÉSTICO -->
+      <h3>A) Empregado Doméstico (Lei Complementar nº 150/2015)</h3>
+      <p>Considera-se empregado doméstico aquele que presta serviços de forma contínua, subordinada, onerosa e pessoal e de <strong>finalidade não lucrativa</strong> à pessoa ou à família, no âmbito residencial destas, por <strong>mais de 2 (dois) dias por semana</strong> (Art. 1º da LC 150/15).</p>
+
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">Regras Essenciais do Trabalho Doméstico</div>
+          <ul>
+            <li><strong>Idade Mínima:</strong> É <strong>proibido o trabalho doméstico a menores de 18 anos</strong> (Decreto nº 6.481/2008 - Lista TIP das piores formas de trabalho infantil);</li>
+            <li><strong>Simples Doméstico (eSocial):</strong> Arrecadação unificada de tributos e FGTS (<strong>8% depósito mensal + 3,2% de reserva indenizatória para perda involuntária do emprego</strong>);</li>
+            <li><strong>Pessoalidade Diferenciada:</strong> Há uma pessoalidade em relação ao <strong>empregador e sua família</strong>. O falecimento do empregador permite a resilição válida se não houver interesse familiar na continuidade;</li>
+            <li><strong>Intervalo Intrajornada:</strong> Em regra de 1h a 2h, podendo ser reduzido para até 30 minutos por acordo escrito. <span class="kw">Empregado que reside no local:</span> O intervalo pode ser desmembrado em 2 períodos de no mínimo 1 hora cada, até o limite máximo de 4 horas diárias;</li>
+            <li><strong>Vedação a Descontos Salariais:</strong> É terminantemente vedado descontar valores por fornecimento de alimentação, vestuário, higiene ou moradia (Art. 18 da LC 150/15). O vale-transporte pode ser descontado em até 6% do salário.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RURÍCOLA -->
+      <h3>B) Empregado Rural / Rurícola (Lei nº 5.889/1973)</h3>
+      <div class="doctrine">
+        <span class="box-label">📚 O Segmento da Atividade Econômica do Empregador</span>
+        A caracterização do empregado rural depende do <strong>enquadramento da atividade econômica do empregador</strong> em prédio rústico ou propriedade rural. Exemplo: um bibliotecário que trabalha em uma fazenda agropecuária é rurícola; mas a empregada doméstica que trabalha na casa da família do fazendeiro é doméstica regida pela LC 150/15.
+      </div>
+      <div class="jurisprudence">
+        <span class="box-label">🏛️ OJ nº 38 da SBDI-1 do TST · Empresas de Reflorestamento</span>
+        <em>"O empregado que trabalha em empresa de reflorestamento, cuja atividade está diretamente ligada ao manuseio da terra e de matéria-prima, é rurícola e não industriário, nos termos do Decreto n.º 73.626/1974, pouco importando que o fruto de seu trabalho seja destinado à indústria. Assim, aplica-se a prescrição própria dos rurícolas."</em>
+      </div>
+
+      <!-- INDÍGENA -->
+      <h3>C) Trabalho Indígena (Lei nº 6.001/1973 - Estatuto do Índio)</h3>
+      <p>O contrato de trabalho realizado com índios isolados (Art. 4º, I) sem a prévia autorização e assistência do órgão indigenista competente (FUNAI) é <strong>nulo de pleno direito</strong> (Artigo 15 da Lei nº 6.001/73).</p>
+    </section>
+
+    <!-- ══════════════════════════════ 3. O EMPREGADOR E ALTERIDADE ══════════════════════════════ -->
+    <section id="figura-empregador">
+      <div class="section-label">Parte III · Sujeito Empregador</div>
+      <h2>3. O Empregador, Princípio da Alteridade &amp; Empresa vs. Estabelecimento</h2>
+
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Artigo 2º da CLT – Definição de Empregador e Equiparados</summary>
+          <div class="lei-seca">
+            <strong>Art. 2º</strong> - Considera-se empregador a <span class="kw">empresa, individual ou coletiva</span>, que, <span class="kw">assumindo os riscos da atividade econômica</span> [alteridade], admite, assalaria e dirige a prestação pessoal de serviço.<br><br>
+            <strong>§ 1º</strong> - <span class="kw">Equiparam-se ao empregador</span>, para os efeitos exclusivos da relação de emprego, os profissionais liberais, as instituições de beneficência, as associações recreativas ou outras instituições sem fins lucrativos, que admitirem trabalhadores como empregados.
+          </div>
+        </details>
+      </div>
+
+      <div class="grid2">
+        <div class="card dark">
+          <h4>O Princípio da Alteridade (Assunção dos Riscos)</h4>
+          <p>Os riscos do empreendimento econômico, custos operacionais, lucros, perdas e até a falência pertencem <strong>exclusiva e integralmente ao empregador</strong>. É terminantemente proibido repassar prejuízos, custos ou danos da atividade para o empregado, garantindo-se sempre a intangibilidade e a natureza alimentar de sua remuneração.</p>
+        </div>
+
+        <div class="card gold">
+          <h4>Empresa vs. Estabelecimento (Unicidade Contratual)</h4>
+          <ul>
+            <li><strong>Empresa:</strong> Atividade econômica organizada titular da personalidade jurídica e do CNPJ (sujeito de direito);</li>
+            <li><strong>Estabelecimento:</strong> Unidade produtiva física/filial instrumentalizada para o exercício da atividade;</li>
+            <li><strong>Unicidade Contratual:</strong> Se o empregado trabalha de manhã na matriz e à tarde em uma filial da mesma empresa, existe <strong>apenas um único contrato de trabalho</strong>, somando-se a jornada para fins de horas extras e intervalos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. GRUPO ECONÔMICO, SUCESSÃO E ESTADO ══════════════════════════════ -->
+    <section id="empresa-grupo-sucessao">
+      <div class="section-label">Parte IV · Dinâmica Empresarial</div>
+      <h2>4. Grupo Econômico Trabalhista, Sucessão &amp; Empregador Estatal</h2>
+
+      <!-- GRUPO ECONÔMICO -->
+      <h3>A) Grupo Econômico Trabalhista (Art. 2º, §§ 2º e 3º da CLT)</h3>
+      <p>Caracteriza-se pela reunião de duas ou mais empresas que, embora com personalidades jurídicas próprias, atuam integradas no mercado, gerando <strong>responsabilidade solidária ativa e passiva</strong> pelas obrigações trabalhistas.</p>
+
+      <div class="grid2">
+        <div class="card teal">
+          <h4>Grupo por Subordinação (§ 2º) &amp; por Coordenação (§ 2º)</h4>
+          <ul>
+            <li><strong>Por Subordinação/Direção Hierárquica:</strong> Uma empresa controladora exerce o comando e a gestão direta sobre as empresas controladas;</li>
+            <li><strong>Por Coordenação Interempresarial:</strong> Empresas autônomas que atuam conjuntamente com <span class="kw">demonstração de interesse integrado, efetiva comunhão de interesses e atuação conjunta no mercado</span>.</li>
+          </ul>
+        </div>
+
+        <div class="card dark">
+          <h4>Vedação ao Mero Grupo por Sócios Idênticos (§ 3º)</h4>
+          <p><em>"§ 3º Não caracteriza grupo econômico a mera identidade de sócios, sendo necessárias, para a configuração do grupo, a demonstração do interesse integrado, a efetiva comunhão de interesses e a atuação conjunta das empresas dele integrantes."</em> (Inovação da Lei nº 13.467/17).</p>
+        </div>
+      </div>
+
+      <!-- SUCESSÃO TRABALHISTA -->
+      <h3>B) Sucessão Trabalhista (Arts. 10 e 448 da CLT)</h3>
+      <div class="artigo">
+        <details open>
+          <summary>⚖️ Inalterabilidade Contratual Objetiva (Arts. 10 e 448 da CLT)</summary>
+          <div class="lei-seca">
+            <strong>Art. 10</strong> - Qualquer alteração na estrutura jurídica da empresa <span class="kw">não afetará os direitos adquiridos</span> por seus empregados.<br><br>
+            <strong>Art. 448</strong> - A mudança na propriedade ou na estrutura jurídica da empresa <span class="kw">não afetará os contratos de trabalho</span> dos respectivos empregados.
+          </div>
+        </details>
+      </div>
+
+      <!-- EMPREGADOR ESTATAL -->
+      <h3>C) Empregador Estatal e a Súmula nº 363 do TST</h3>
+      <div class="jurisprudence">
+        <span class="box-label">🏛️ Súmula nº 363 do TST · Nulidade por Falta de Concurso Público</span>
+        <em>"A contratação de servidor público, após a CF/1988, sem prévia aprovação em concurso público, encontra óbice no respectivo art. 37, II e § 2º, somente lhe conferindo direito ao pagamento da contraprestação pactuada, em relação ao número de horas trabalhadas, respeitado o valor da hora do salário mínimo, e dos valores referentes aos depósitos do FGTS."</em><br><br>
+        <strong>Outras Particularidades Estatais:</strong> Criação de cargos e salários depende de lei em sentido formal (Art. 37, X CF); proibição de equiparação salarial (Art. 37, XIII CF); e exigência de motivação formal para a dispensa de empregados públicos (STF - Tema 1022).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. CONTRATO, DURAÇÃO, CTPS & DANOS MORAIS ══════════════════════════════ -->
+    <section id="contrato-duracao-ctps">
+      <div class="section-label">Parte V · Contrato de Trabalho &amp; CTPS</div>
+      <h2>5. Duração do Contrato, CTPS Digital &amp; Danos Morais no Trabalho</h2>
+
+      <h3>Duração do Contrato: Regra Geral vs. Prazo Determinado</h3>
+      <div class="grid2">
+        <div class="card dark">
+          <h4>Regra Geral: Prazo Indeterminado</h4>
+          <p>Presunção de continuidade da relação empregatícia (Súmula 212 do TST). O contrato vigora por tempo ilimitado até que ocorra causa legal ou rescisão.</p>
+        </div>
+
+        <div class="card gold">
+          <h4>Exceção: Contrato por Prazo Determinado (Art. 443, § 2º CLT)</h4>
+          <ul>
+            <li>a) Serviço cuja natureza ou transitoriedade justifique a predeterminação do prazo;</li>
+            <li>b) Atividades empresariais de caráter transitório;</li>
+            <li>c) <strong>Contrato de Experiência:</strong> Prazo máximo de <span class="kw">até 90 dias</span>, permitida uma única prorrogação. A extrapolação dos 90 dias ou mais de uma prorrogação converte o contrato automaticamente para prazo indeterminado (Artigo 451 da CLT).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>A Carteira de Trabalho Digital e a Vedação a Anotações Desabonadoras</h3>
+      <div class="level-container">
+        <div class="level-box level-1">
+          <div class="level-title">Prazos e Proteção da CTPS (Artigos 29 e 29-A da CLT)</div>
+          <ul>
+            <li><strong>Prazo de Anotação:</strong> O empregador tem o prazo improrrogável de <strong>5 (cinco) dias úteis</strong> após a admissão para anotar a CTPS digital do trabalhador;</li>
+            <li><strong>Presunção Relativa (Súmula 12 do TST):</strong> As anotações da CTPS geram presunção <em>juris tantum</em> (podem ser elididas por prova fática em contrário);</li>
+            <li><strong>Vedação Absoluta a Anotações Desabonadoras (Art. 29, § 4º da CLT):</strong> É expressamente proibido ao empregador efetuar qualquer anotação desabonadora à conduta do empregado em sua carteira profissional (ex.: mencionar atestados médicos, ações trabalhistas ajuizadas ou justa causa). Essa conduta gera <strong>dano moral <em>in re ipsa</em></strong> indenizável.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. CADERNO COMPLETO DA REVISÃO DE PROVA (35 QUESTÕES) ══════════════════════════════ -->
+    <section id="caderno-revisao-geral">
+      <div class="section-label">Parte VI · Simulado de Prova da Professora</div>
+      <h2>6. Caderno de Revisão Geral &amp; Simulado de Prova (35 Questões-Chave Comentadas)</h2>
+
+      <p>Transcrição e estruturação didática de todas as questões, respostas, pegadinhas e conceitos fundamentais debatidos no sorteio e revisão oral da professora:</p>
+
+      <!-- QUESTÃO 15 REVISÃO -->
+      <div class="exercise">
+        <p><strong>Questão 01 / Sorteio 15:</strong> Cite e explique dois princípios fundamentais do Direito do Trabalho.</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>1) Princípio da Irredutibilidade Salarial:</strong> Fundamenta-se na natureza estritamente alimentar do salário, impedindo sua redução unilateral pelo empregador, salvo mediante convenção ou acordo coletivo de trabalho (Art. 7º, VI da CF/88).<br>
+            <strong>2) Princípio da Primazia da Realidade:</strong> Estabelece que os fatos reais vivenciados no dia a dia da prestação de serviços prevalecem de forma absoluta sobre qualquer documento, rótulo formal ou contrato assinado no papel.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO PEJOTIZAÇÃO -->
+      <div class="exercise">
+        <p><strong>Questão 02 / Sorteio Pejotização:</strong> O que é Pejotização no Direito do Trabalho e qual a sua consequência jurídica?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            Pejotização é uma <strong>fraude à relação de emprego</strong> consistente na contratação irregular de um trabalhador individual formalizado sob a capa de Pessoa Jurídica (PJ/MEI) para executar serviços com pessoalidade, subordinação, onerosidade e não eventualidade. Consequência: nulidade de pleno direito do contrato de prestação de serviços (Art. 9º da CLT) e reconhecimento retroativo do vínculo de emprego celetista com todas as verbas legais.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO PESSOALIDADE EMPREGADOR -->
+      <div class="exercise">
+        <p><strong>Questão 03 / Sorteio Pessoalidade:</strong> Existe requisito da pessoalidade aplicado à figura do empregador na relação de emprego? Há alguma exceção?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>Regra Geral:</strong> Não. O empregador é despersonalizado; alterações nos sócios ou propriedade não afetam os contratos de emprego (Arts. 10 e 448 da CLT).<br>
+            <strong>Exceção Doutrinária:</strong> O <strong>trabalho doméstico</strong> (LC 150/15). Por ser realizado no recinto familiar, há pessoalidade dirigida à pessoa do empregador. Se o empregador doméstico falecer e a família não quiser manter a contratação, o vínculo extingue-se validamente.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO TRABALHO HUMANO VS ANIMAL -->
+      <div class="exercise">
+        <p><strong>Questão 04 / Sorteio 11:</strong> Qual a principal diferença ontológica entre o trabalho humano e o trabalho animal?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            O trabalho humano é <strong>intencional</strong>, <strong>idealizado</strong> (concebido previamente na mente através da racionalidade abstrata) e <strong>transformador consciente da natureza</strong>. O animal transforma a natureza apenas por instinto biológico de sobrevivência, sem intenção teleológica nem capacidade de idealização mental prévia.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO AUTÔNOMO E EVENTUALIDADE -->
+      <div class="exercise">
+        <p><strong>Questão 05 / Sorteio 08:</strong> Na relação de trabalho autônomo, pode haver habitualidade (não eventualidade)? Explique.</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>Sim, pode haver habitualidade.</strong> A nota distintiva essencial do trabalho autônomo é a <strong>ausência de subordinação jurídica</strong> (Art. 442-B da CLT). O autônomo pode prestar serviços diários por meses seguidos (ex.: gravação de um curso ou consultoria) mantendo sua condição autônoma se ele mesmo gere seu horário, assume os riscos e não se submete ao poder de comando do tomador.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO PRINCÍPIO DA PROTEÇÃO SUBPRINCÍPIOS -->
+      <div class="exercise">
+        <p><strong>Questão 06 / Sorteio Proteção:</strong> Quais são os três subprincípios derivados do Princípio da Proteção? Explique o fundamento da hipossuficiência.</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            Os três subprincípios são: <strong>1) In dubio pro operario</strong>; <strong>2) Aplicação da norma mais favorável</strong>; e <strong>3) Condição mais benéfica</strong>.<br>
+            <strong>Hipossuficiência:</strong> O trabalhador é fática e economicamente vulnerável perante o detentor do capital. Para compensar essa desigualdade de forças e viabilizar a justiça material, o Direito do Trabalho confere superioridade jurídica protetiva ao empregado.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO TRABALHO AVULSO E OGMO -->
+      <div class="exercise">
+        <p><strong>Questão 07 / Sorteio 20:</strong> O trabalho avulso ocorre mediante intermediação obrigatória. Quem faz a intermediação no trabalho portuário e quais são suas funções?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            No trabalho portuário, a intermediação é exercida com exclusividade pelo <strong>Órgão Gestor de Mão de Obra (OGMO)</strong> (Lei nº 12.815/2013). Funções do OGMO: manter o cadastro e registro dos avulsos, realizar o rodízio e a escala das equipes nos navios, arrecadar os valores pagos pelos operadores portuários, efetuar os descontos legais (INSS) e repassar a remuneração aos trabalhadores.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO PODER DIRETIVO ESPÉCIES -->
+      <div class="exercise">
+        <p><strong>Questão 08 / Sorteio 27:</strong> Quais são as três espécies do Poder Diretivo do empregador? O empregador pode aplicar multa como sanção disciplinar?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            As três espécies são: <strong>Poder Regulamentar (Direção)</strong>, <strong>Poder Fiscalizatório (Controle)</strong> e <strong>Poder Disciplinar</strong>.<br>
+            <strong>Multa Disciplinar:</strong> É <strong>proibida</strong>. No Direito do Trabalho brasileiro, a imposição de multas salariais é ilícita (Art. 462 da CLT), admitindo-se apenas advertência, suspensão (máx. 30 dias) e justa causa.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO UBERIZAÇÃO -->
+      <div class="exercise">
+        <p><strong>Questão 09 / Sorteio 34:</strong> Em que consiste o fenômeno da Uberização do trabalho no contexto da precarização contemporânea?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            Consiste na organização do trabalho subordinado por meio de plataformas digitais e gestão algorítmica, marcada pela perda de direitos sociais e pela <strong>transferência integral de todos os custos, despesas, riscos do negócio, assaltos e acidentes para a pessoa física do trabalhador</strong>, enquanto a empresa gestora se isenta de qualquer responsabilidade trabalhista ou securitária.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO VOLUNTÁRIO RESSARCIMENTO -->
+      <div class="exercise">
+        <p><strong>Questão 10 / Sorteio Voluntariado:</strong> É permitido o ressarcimento de despesas no trabalho voluntário? Isso gera vínculo empregatício?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>É permitido e não gera vínculo de emprego.</strong> O Artigo 3º da Lei nº 9.608/1998 autoriza expressamente o ressarcimento de gastos comprovados e autorizados de transporte e alimentação necessários à execução da atividade voluntária, sem desnaturar a gratuidade da relação.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO EVENTUAL 90 DIAS -->
+      <div class="exercise">
+        <p><strong>Questão 11 / Sorteio 26:</strong> Julgue o item: <em>"O trabalho eventual gera vínculo de emprego automático após 90 dias de sua prestação contínua."</em> (Verdadeiro ou Falso? Justifique).</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>FALSO.</strong> A prestação de serviço por 90 dias pactuada para um projeto temporário e eventual não transmuta a relação automaticamente em emprego indeterminado se ausente a continuidade permanente ou se não concorrerem cumulativamente todos os outros requisitos do Artigo 3º da CLT (especialmente a subordinação jurídica).
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO ESTÁGIO VÍNCULO -->
+      <div class="exercise">
+        <p><strong>Questão 12 / Sorteio 10:</strong> Quais irregularidades no contrato de estágio geram o reconhecimento de vínculo de emprego com a empresa concedente?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            Geram vínculo de emprego (Lei nº 11.788/2008): 1) Falta de matrícula ou frequência escolar regular; 2) Ausência do Termo de Compromisso de Estágio tripartite assinado; 3) Extrapolação da jornada máxima (superior a 6h/30h); 4) Incompatibilidade das tarefas executadas com a proposta pedagógica do curso; 5) Falta de indicação e atuação de supervisor profissional (limite de até 10 estagiários por supervisor).
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO DOMÉSTICO CONTINUIDADE -->
+      <div class="exercise">
+        <p><strong>Questão 13:</strong> Uma faxineira presta serviços na residência de uma família 2 (duas) vezes por semana. Ela é considerada empregada doméstica pela Lei Complementar nº 150/2015?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>NÃO.</strong> O Artigo 1º da LC nº 150/2015 exige expressamente que a prestação de serviços ocorra por <strong>MAIS de 2 (dois) dias por semana</strong> (ou seja, no mínimo 3 dias semanais) para configurar o vínculo de empregado doméstico. Trabalhando apenas 2 dias por semana, é considerada diarista autônoma.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO ANOTAÇÃO CTPS -->
+      <div class="exercise">
+        <p><strong>Questão 14:</strong> Qual o prazo legal para anotação da CTPS após a admissão do empregado e qual a consequência da anotação de conduta desabonadora?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            O prazo legal é de <strong>5 (cinco) dias úteis</strong> a contar da admissão (Art. 29 da CLT). A aposição de anotações desabonadoras na carteira é expressamente proibida (Art. 29, § 4º da CLT) e gera obrigação de indenizar o empregado por dano moral presumido (<em>in re ipsa</em>).
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO GRUPO ECONÔMICO SÓCIOS -->
+      <div class="exercise">
+        <p><strong>Questão 15:</strong> A mera constatação de que duas empresas possuem os mesmos sócios no contrato social é suficiente para configurar Grupo Econômico Trabalhista após a Reforma Trabalhista?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>NÃO.</strong> O Artigo 2º, § 3º da CLT veda expressamente a configuração de grupo econômico pela mera identidade de sócios, exigindo a demonstração cabal do interesse integrado, da efetiva comunhão de interesses e da atuação conjunta das empresas no mercado.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÃO SUCESSÃO TRABALHISTA -->
+      <div class="exercise">
+        <p><strong>Questão 16:</strong> A empresa "Beta" comprou todas as cotas e o estabelecimento da empresa "Alfa". Os contratos de trabalho dos empregados de Alfa sofrerão alguma alteração?</p>
+        <details class="gabarito">
+          <summary>🔍 Ver Resposta Padrão Comentada</summary>
+          <div style="margin-top:10px;">
+            <strong>Resposta Padrão:</strong><br>
+            <strong>NÃO sofrerão alteração prejudicial.</strong> Conforme os <strong>Artigos 10 e 448 da CLT</strong> (Princípio da Inalterabilidade Contratual Objetiva), a mudança na propriedade ou na estrutura jurídica não afeta os contratos vigentes nem os direitos adquiridos dos empregados, respondendo a compradora sucessora por todas as obrigações trabalhistas passadas e futuras.
+          </div>
+        </details>
+      </div>
+
+      <!-- QUESTÕES 17 A 35: BANCO DE FIXAÇÃO RÁPIDA -->
+      <div class="exercise">
+        <p><strong>Questões 17 a 35 (Banco de Fixação Rápida da Revisão de Prova):</strong></p>
+        <div style="font-size: 0.95rem; line-height: 1.8;">
+          <p><strong>17. O que é salário-condição?</strong> É a parcela salarial paga em função de condições transitórias ou nocivas (insalubridade, periculosidade, adicional noturno). Cessada a condição, a parcela é suprimida licitamente sem ofensa à irredutibilidade (Súmula 248 TST).</p>
+          <p><strong>18. Qual o limite máximo da suspensão disciplinar?</strong> Até 30 dias consecutivos. Se for superior a 30 dias, configura rescisão indireta do contrato de trabalho (Art. 474 CLT).</p>
+          <p><strong>19. O empregado com cargo de confiança perde a gratificação ao voltar ao cargo efetivo?</strong> Sim. O Artigo 468, § 2º da CLT determina que a gratificação de função não será incorporada, independentemente do tempo de exercício.</p>
+          <p><strong>20. Qual a jornada do bancário comum e do bancário de confiança?</strong> O bancário comum cumpre 6h/30h com 15 min de intervalo; o bancário de confiança com gratificação de no mínimo 1/3 cumpre 8h/40h (Arts. 224 e 225 CLT).</p>
+          <p><strong>21. O que acontece com o contrato do empregado eleito diretor societário?</strong> Fica suspenso durante o mandato, não se computando tempo de serviço, salvo se mantida subordinação jurídica efetiva (Súmula 269 TST).</p>
+          <p><strong>22. Qual a idade mínima para o trabalho doméstico?</strong> 18 anos completos (proibido para menores de 18 anos - Decreto 6.481/08).</p>
+          <p><strong>23. Empregado de empresa de reflorestamento é rurícola ou industriário?</strong> É rurícola, pois manuseia a terra e matéria-prima rural, aplicando-se a prescrição rural (OJ 38 SBDI-1 TST).</p>
+          <p><strong>24. Quem responde pelas verbas do trabalhador avulso portuário?</strong> O Operador Portuário e o OGMO respondem solidariamente pelas obrigações (Lei 12.815/13).</p>
+          <p><strong>25. Em quanto tempo o sindicato deve pagar o trabalhador avulso não portuário?</strong> Em até 72 horas úteis após o repasse pelo tomador (Lei 12.023/09).</p>
+          <p><strong>26. Presidiário que trabalha em presídio tem direito a carteira assinada pela CLT?</strong> Não. O trabalho do preso é regido pela LEP (Lei 7.210/84, Art. 28, § 2º) e não está sujeito à CLT, recebendo remuneração mínima de 3/4 do salário mínimo.</p>
+          <p><strong>27. Qual o limite de estagiários por supervisor profissional?</strong> Até 10 estagiários simultaneamente (Art. 9º, III da Lei 11.788/08).</p>
+          <p><strong>28. Qual o prazo máximo do contrato de experiência?</strong> Até 90 dias, admitindo apenas uma única prorrogação dentro desse limite (Art. 445 e 451 CLT).</p>
+          <p><strong>29. O que é princípio da alteridade?</strong> É o comando do Art. 2º da CLT pelo qual os riscos da atividade econômica pertencem exclusivamente ao empregador, vedado repassar prejuízos ao empregado.</p>
+          <p><strong>30. O que é non bis in idem na esfera disciplinar?</strong> É a proibição de punir o trabalhador duas vezes pela mesma falta cometida.</p>
+          <p><strong>31. O que acontece se a contratação em órgão estatal ocorrer sem concurso público?</strong> O contrato é nulo de pleno direito, gerando apenas direito ao saldo de salários pelo valor hora do SM e depósitos do FGTS (Art. 37, II CF e Súmula 363 TST).</p>
+          <p><strong>32. O que é in dubio pro operario?</strong> Subprincípio da proteção aplicável apenas em dúvida interpretativa de texto de lei ou cláusula, vedada sua aplicação para suprir falta de provas em audiência.</p>
+          <p><strong>33. O que prevalece: ACT ou CCT?</strong> Sempre o Acordo Coletivo de Trabalho (ACT), por força expressa do Art. 620 da CLT.</p>
+          <p><strong>34. Quem é o empregado hipersuficiente?</strong> Trabalhador com diploma de nível superior e salário igual ou superior a 2 vezes o teto do RGPS (Art. 444, parágrafo único CLT).</p>
+          <p><strong>35. A quem pertence o ônus da prova em caso de despedimento contestado?</strong> Ao empregador, por força do Princípio da Continuidade da Relação de Emprego (Súmula 212 do TST).</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center; color: #94a3b8; font-size: 0.9rem;">
+      <p><strong>Portal de Estudos Acadêmicos · Direito do Trabalho</strong></p>
+      <p>&copy; 2026 - Material Consolidado, Integral e Atualizado com Foco em Provas e Concursos.</p>
+    </div>
+  </footer>
+
+  <script src="../../portal-core.js"></script>
+</body>
+</html>
