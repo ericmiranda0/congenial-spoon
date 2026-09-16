@@ -430,6 +430,59 @@
       color: var(--text-main);
       font-size: 0.95rem;
     }
+
+    /* ══════ SINALIZAÇÃO DE REVISÃO DE PROVA ══════ */
+    .tag-revisao {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      color: #ffffff !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+      margin-left: 10px;
+      vertical-align: middle;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .tag-revisao.alerta {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      animation: pulseAlert 2.5s infinite;
+    }
+    @keyframes pulseAlert {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+    }
+    .callout-revisao {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      border-left: 6px solid #e11d48;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      color: #881337;
+    }
+    [data-theme="dark"] .callout-revisao {
+      background: rgba(225, 29, 72, 0.12);
+      border-color: rgba(244, 63, 94, 0.3);
+      border-left-color: #fb7185;
+      color: #ffe4e6;
+    }
+    .callout-revisao .box-label {
+      background: #e11d48;
+      color: white;
+    }
+    .callout-revisao strong {
+      color: #9f1239;
+    }
+    [data-theme="dark"] .callout-revisao strong {
+      color: #fda4af;
+    }
   </style>
 </head>
 
@@ -445,7 +498,7 @@
       <h1>Fundamentos Históricos, Modos de Produção, Fontes &amp; Princípios Fundamentais</h1>
       <div class="subtitle">Síntese Integral e Profunda: Ontologia do Trabalho, Revolução Industrial, Taylorismo, Fases Históricas, Fontes Materiais e Formais, Art. 8º da CLT, Hierarquia Dinâmica e os 6 Princípios Essenciais</div>
       <div class="meta">
-        <span>⚖️ Arts. 8º, 9º, 468, 611-A CLT</span> | <span>📜 Arts. 1º, IV e 7º CF/88</span> | <span>🎯 Foco em Revisão de Prova e Concursos</span>
+        <span>⚖️ Arts. 8º, 9º, 468, 611-A CLT</span> | <span>📜 Arts. 1º, IV e 7º CF/88</span> | <span>🎯 Foco em Revisão de Prova</span> | <span>🛡️ Conteúdo da Revisão Oficial Sinalizado</span>
       </div>
     </div>
   </header>
@@ -475,8 +528,17 @@
 
     <!-- ══════════════════════════════ 1. ONTOLOGIA E CONTEXTO HISTÓRICO ══════════════════════════════ -->
     <section id="ontologia-historica">
-      <div class="section-label">Parte I · Fundamentos</div>
-      <h2>1. Ontologia do Trabalho Humano &amp; Período Pré-Industrial</h2>
+      <div class="section-label">Parte I · Fundamentos · 🎯 COBRADO NA REVISÃO ORAL (SORTEIO 11)</div>
+      <h2>1. Ontologia do Trabalho Humano &amp; Período Pré-Industrial <span class="tag-revisao">🔥 Caiu na Revisão</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Sorteio da Revisão Oral · Sorteio 11</span>
+        <p><strong>Diferença Ontológica entre Trabalho Humano e Trabalho Animal:</strong> A professora destacou enfaticamente a tríplice característica do trabalho humano cobrada na dinâmica de revisão:</p>
+        <ul>
+          <li><strong>Trabalho Humano:</strong> É <strong>intencional</strong> (decorre de uma vontade deliberada), <strong>idealizado</strong> (capacidade abstrata e racional de conceber e projetar mentalmente a realidade antes de executá-la — <em>exemplo do arquiteto citado em aula</em>) e <strong>transformador consciente da natureza</strong>.</li>
+          <li><strong>Trabalho Animal:</strong> Transforma o meio ambiente, porém de forma meramente <strong>instintiva, biológica e programada para sobrevivência</strong>, sem qualquer idealização mental prévia ou intenção teleológica.</li>
+        </ul>
+      </div>
       
       <div class="level-container">
         <div class="level-box level-1">
@@ -798,11 +860,25 @@
 
     <!-- ══════════════════════════════ 7. PRINCÍPIOS FUNDAMENTAIS DO DIREITO DO TRABALHO ══════════════════════════════ -->
     <section id="principios-fundamentais">
-      <div class="section-label">Parte VII · Principiologia Essencial</div>
+      <div class="section-label">Parte VII · Principiologia Essencial · 🚨 ALERTA MÁXIMO NA REVISÃO DE PROVA</div>
       <h2>7. Os 6 Princípios Fundamentais do Direito do Trabalho</h2>
 
       <!-- PRINCÍPIO 1: PROTEÇÃO -->
-      <h3>1. Princípio da Proteção (Princípio Matriz)</h3>
+      <h3>1. Princípio da Proteção (Princípio Matriz) <span class="tag-revisao alerta">🚨 Alerta Máximo de Prova</span></h3>
+      
+      <div class="callout-revisao">
+        <span class="box-label">🚨 Destaque Absoluto da Revisão Oral · Questão Confirmada em Aula</span>
+        <p><strong>Aviso Categórico da Professora em Aula:</strong> <em>"Se vocês forem para a prova sem saber o Princípio da Proteção, nem sei... Por favor não deixem de estudar, cai muito em prova e precisa estar na ponta da língua!"</em></p>
+        <ul>
+          <li><strong>Fundamento e Palavra-Chave Obrigatória na Correção:</strong> O ponto de partida inegociável é a <strong>hipossuficiência</strong> do trabalhador na relação jurídica e fática (vulnerabilidade econômica, jurídica, social e técnica perante o empregador). Para reequilibrar essa assimetria estrutural, o Direito do Trabalho confere <strong>superioridade jurídica compensatória</strong> ao empregado.</li>
+          <li><strong>Os 3 Subprincípios Exigidos e Diferenciados:</strong>
+            <br>1) <strong>In dubio pro operario:</strong> Aplicável <em>exclusivamente</em> diante de dúvida interpretativa sobre o texto da lei ou norma jurídica obscura/plurissignificativa. <span style="text-decoration: underline; font-weight: 700;">Pegadinha alertada:</span> <strong>NÃO</strong> se aplica para suprir falta ou fragilidade de provas em audiência (o ônus da prova segue o Art. 818 da CLT).
+            <br>2) <strong>Aplicação da norma mais favorável:</strong> Conflito entre normas vigentes resolve-se aplicando o conjunto normativo mais benéfico ao trabalhador, independentemente da pirâmide hierárquica formal (adota-se a <em>Teoria do Conglobamento Mitigado por Matéria</em>).
+            <br>3) <strong>Condição mais benéfica:</strong> Assegura que cláusulas mais vantajosas já incorporadas ao contrato constituem <em>direito adquirido</em>, vedada qualquer alteração lesiva para pior (Art. 468 CLT e Súmula 51 TST).
+          </li>
+        </ul>
+      </div>
+
       <p>O Princípio da Proteção é o núcleo axiológico de todo o Direito do Trabalho. Parte do pressuposto fático e sociológico de que o <strong>trabalhador é a parte hipossuficiente</strong> na relação jurídica (vulnerabilidade econômica, técnica e informacional). Para equilibrar a desigualdade fática, a ordem jurídica confere uma superioridade jurídica compensatória ao trabalhador.</p>
       
       <p>Desdobra-se em <strong>3 subprincípios indispensáveis para a prova</strong>:</p>
@@ -834,7 +910,13 @@
       </div>
 
       <!-- PRINCÍPIO 2: IRREDUTIBILIDADE SALARIAL -->
-      <h3>2. Princípio da Irredutibilidade Salarial</h3>
+      <h3>2. Princípio da Irredutibilidade Salarial <span class="tag-revisao">🔥 Cobrado no Sorteio 15</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Sorteio da Revisão Oral · Sorteio 15</span>
+        <p><strong>Fundamento e Exceção Constitucional Expressa:</strong> Fundamenta-se na <strong>natureza alimentar do salário</strong>, que visa garantir a subsistência do trabalhador e de sua família. O <strong>Art. 7º, VI da CF/88</strong> estabelece como regra geral a irredutibilidade, admitindo como <strong>única exceção legítima</strong> a redução pactuada mediante <em>Convenção Coletiva (CCT)</em> ou <em>Acordo Coletivo de Trabalho (ACT)</em>.</p>
+      </div>
+
       <p>Fundamentado na <strong>natureza estritamente alimentar do salário</strong>, indispensável à subsistência digna do trabalhador e de sua família.</p>
       <div class="artigo">
         <details open>
@@ -877,7 +959,13 @@
       </div>
 
       <!-- PRINCÍPIO 5: CONTINUIDADE DA RELAÇÃO DE EMPREGO -->
-      <h3>5. Princípio da Continuidade da Relação de Emprego</h3>
+      <h3>5. Princípio da Continuidade da Relação de Emprego <span class="tag-revisao">🔥 Cobrado no Sorteio 15 / Q13</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Roteiro de Revisão · Súmula 212 do TST</span>
+        <p><strong>Presunção em Favor do Empregado:</strong> Presume-se sempre que o contrato vigora por <strong>prazo indeterminado</strong>. O término do vínculo é fato extintivo ou impeditivo cujo <strong>ônus de prova pertence integralmente ao empregador</strong> quando negados a demissão e o término (Súmula nº 212 do TST).</p>
+      </div>
+
       <p>Presume-se que o contrato de trabalho foi celebrado para viger por <strong>prazo indeterminado</strong>, pois o emprego é a fonte de sustento e integração social do trabalhador. A ruptura do vínculo é sempre medida excepcional que atrai o ônus probatório ao empregador.</p>
       <div class="jurisprudence">
         <span class="box-label">🏛️ Súmula nº 212 do TST · Ônus da Prova no Despedimento</span>
@@ -885,7 +973,13 @@
       </div>
 
       <!-- PRINCÍPIO 6: PRIMAZIA DA REALIDADE -->
-      <h3>6. Princípio da Primazia da Realidade sobre a Forma</h3>
+      <h3>6. Princípio da Primazia da Realidade sobre a Forma <span class="tag-revisao">🔥 Cobrado no Sorteio 15</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Sorteio da Revisão Oral · Sorteio 15</span>
+        <p><strong>A Realidade Fática Prevalece sobre Documentos:</strong> A professora reforçou que o que vale de fato perante a Justiça do Trabalho é a <strong>relação fática vivenciada no dia a dia</strong> (horários efetivos, ordens recebidas, fiscalização, presença pessoal) e <em>não o que está formalizado, mascarado ou assinado no papel</em>. Esse princípio é o esteio central para desmascarar a fraude da <em>pejotização</em> e afastar contratos fictícios de autônomo.</p>
+      </div>
+
       <p>No Direito do Trabalho, <strong>a verdade fática dos acontecimentos cotidianos prevalece de forma absoluta sobre qualquer documento, rótulo ou contrato formalizado no papel</strong>. Se os fatos revelarem uma relação de emprego, de nada valerá um contrato assinado com título de "prestador autônomo" ou "contrato de pessoa jurídica (pejotização)".</p>
       <div class="grid2">
         <div class="card dark">

@@ -1,4 +1,103 @@
-### 
+### Revisão - Direito do Trabalho I
+
+01- Conceitue o elemento fático-jurídico da pessoallidade no contrato individual de emprego
+e explique a diferença entre a infungibilidade da pessoa do empregado e a fungibilidade do
+empregador.
+2- Discorra sobre a onerosidade como requisito constitutivo da relação de emprego,
+diferenciando a intenção de contraprestação (animus contrahendi) da simples ajuda
+financeira eventual.
+3- A doutrina trabalhista evoluiu no conceito de subordinação jurídica, desdobrando-a em
+subordinação objetiva e subordinação estrutural. Explique o conceito de subordinação
+estrutural e como ele se aplica às empresas contemporâneas.
+4- O que se entende por habitualidade (ou não eventualidade) para fins de caracterização
+do vínculo de emprego celetista? Apresente as principais teorias doutrinárias que buscam
+explicar a não eventualidade (ex: teoria da fixação, teoria da descontinuidade e teoria do
+empreendimento).
+5- Conceitue o Princípio da Primazia da Realidade sobre as Formas e demonstre sua
+relevância prática no momento processual da instrução probatória.
+6- Qual é o alcance do artigo 9º da CLT na declaração de nulidade dos atos jurídicos
+praticados no âmbito laboral? Explique como esse dispositivo atua nos casos de simulação
+e fraude.
+7- A prática conhecida como "pejotização" consiste na exigência ou estímulo para que o
+trabalhador constitua uma pessoa jurídica para prestar serviços. Sob o prisma dogmático
+trabalhista, como se caracteriza a ilicitude dessa conduta e quais são suas consequências
+jurídicas na esfera dos direitos do empregado?
+8- O art. 442-B da CLT, inserido pela Reforma Trabalhista (Lei nº 13.467/2017), prevê que a
+contratação do autônomo cumpridas as formalidades legais afasta a qualidade de
+empregado. Diante do Princípio da Primazia da Realidade, analise a eficácia absoluta ou
+relativa dessa vedação legal.
+9- Qual é a justificativa sociojurídica para a existência do Princípio da Proteção no Direito do
+Trabalho? Em sua resposta, aborde a assimetria fática e econômica entre as partes do
+contrato de trabalho.
+10- Diferencie com precisão teórica o Princípio do In Dubio Pro Operario do Princípio da
+Norma Mais Favorável. Em que momentos ou situações contratuais/processuais cada um
+deve ser aplicado?
+11- Explique o funcionamento do subprincípio da Condição Mais Benéfica, relacionando-o
+com o direito adquirido e a vedação à alteração contratual lesiva (art. 468 da CLT).
+12- No julgamento de conflitos entre normas trabalhistas (ex: norma legal vs. convenção
+coletiva), a doutrina consagrou a Teoria do Conglobamento e a Teoria da Acumulação.
+Explique a diferença entre ambas e indique qual é a teoria prevalecente no sistema jurídico
+brasileiro.
+13- Conceitue o Princípio da Continuidade da Relação de Emprego e explique de que forma
+a Súmula nº 212 do Tribunal Superior do Trabalho (TST) operacionaliza a presunção
+favorável ao trabalhador quanto ao término do contrato.
+14- Analise a compatibilidade ou tensão existente entre a incidência do Princípio da
+Proteção e o postulado constitucional da Autonomia Privada Coletiva (art. 7º, XXVI,
+CRFB/88), especialmente após os parâmetros fixados pela Reforma Trabalhista no art.
+611-A da CLT.
+15- Em que consiste o Princípio da Inalterabilidade Contratual Lesiva? Apresente a regra
+geral contida no artigo 468 da CLT e indique se há exceções legais a essa vedação.
+16- Diferencie o contrato de trabalho por prazo determinado do contrato por prazo
+indeterminado. Qual é a regra geral no Direito do Trabalho brasileiro e qual princípio
+fundamenta essa premissa?
+17- Caso um contrato de trabalho a termo fixo (prazo determinado) ultrapasse a data limite
+contratada sem a formalização de um novo instrumento legal de prorrogação e sem solução
+de continuidade dos serviços, qual é a consequência jurídica incidente sobre a natureza do
+contrato? Indique a fundamentação legal da CLT.
+18- Em caso de conflito de regras entre uma disposição contida na CLT e uma cláusula
+disposta em Convenção Coletiva de Trabalho (CCT) que verse sobre o cálculo de adicionais
+de insalubridade, como o intérprete deve solucionar a controvérsia sob a ótica da hierarquia
+flexível do Direito do Trabalho?
+19- A Constituição Federal de 1988 estabeleceu expressamente no art. 7º, XXIII, os
+adicionais para as atividades penosas, insalubres ou perigosas. Explique a natureza jurídica
+do adicional de insalubridade e qual é a sua função compensatória no contrato de trabalho.
+20- o que se entende por irredutibilidade salarial segundo o texto constitucional (art. 7º, VI,
+CRFB/88) e em quais hipóteses expressas a própria Constituição admite a mitigação dessa
+garantia?
+21- Explique a figura da sucessão de empregadores (arts. 10 e 448 da CLT) e demonstre de
+que forma ela atua como manifestação direta do Princípio da Continuidade da Relação de
+Emprego e da despersonalização da figura do empregador.
+22- O trabalho intermediado por aplicativos digitais inaugurou o debate sobre a
+subordinação algorítmica. Conceitue a subordinação algorítmica e diferencie-a da
+subordinação jurídica clássica (direta e interpessoal).
+23- Explique o fenômeno sócio-discursivo da ideologia do "trabalhador-empreendedor" no
+contexto da uberização do trabalho e disserte sobre como a doutrina crítica interpreta essa
+narrativa em face da precarização das condições laborais.
+24- Algumas doutrinas defendem a aplicação da categoria da parassubordinação para reger
+o trabalho prestado via plataformas digitais. Conceitue o que é um "trabalhador
+parassubordinado" e em que medida essa figura difere do empregado celetista e do
+autônomo pleno.
+25- Sob a ótica da teoria do risco do empreendimento (alteridade - art. 2º da CLT), analise a
+legitimidade jurídica da transferência dos custos de capital, manutenção de equipamentos e
+combustíveis ao próprio prestador de serviço em plataformas digitais.
+26- Diferencie tecnicamente a figura do trabalhador autônomo da figura do trabalhador
+eventual, destacando os critérios de subordinação e habitualidade em cada um desses tipos
+contratuais.
+27- O trabalhador avulso possui garantia constitucional de igualdade de direitos em relação
+ao trabalhador com vínculo empregatício permanente (art. 7º, XXXIV, CRFB/88). Explique a
+peculiaridade do traabalho avulso no tocante à obrigatoriedade da intermediação de mão de
+obra (OGMO ou Sindicato).
+28- A Lei nº 11.788/2008 regulamenta o estágio de estudantes. Apresente os requisitos
+formais e materiais indispensáveis para a validade do contrato de estágio e explique quais
+são as consequências jurídicas imediatas na hipótese de descumprimento de qualquer um
+desses requisitos.
+29- Conceitue o trabalho voluntário regido pela Lei nº 9.608/1998. É permitido o
+ressarcimento de despesas ao prestador do trabalho voluntário? Em que momento eventual
+contraprestação financeira pode descaracterizar o trabalho voluntário e desdobrar-se em
+vínculo de emprego?
+30- Sintetize a distinção ontológica entre a expressão genérica "relação de trabalho"] e a
+expressão específica "relação de emprego", citando ao menos duas modalidades de
+relação de trabalho que não configuram relação de emprego.
 
 vai funcionar. Vou sortear entre 1 a 35 para equipe o número que cair eu olho. Qual é a pergunta? Tá e faço isso.
 
@@ -329,8 +428,6 @@ Sim.
 Gente, por favor, sem a anotação do código, certo? Eu vou ficar passando
 
 vocês, tá? Então não adianta, por favor, sem a anotação do Vamos evar como, certo? Segundo, né? Eh, ah, professora, posso trazer empresa? Não. Não, código. Pode trazer o código, tá? Nada impresso. Certo. Agora para essa primeira prova não vamos pensar nisso, não. Ah, tem um assumo aí. Paraa segunda prova a gente pensa nessa questão das somos, certo? Mas para agora não tem necessidade, tá? Que mais? Questões subjetivas. Leiam a
-
-
 
 ### **1. Princípio da Proteção e seus Subprincípios (Alerta Máximo)**
 

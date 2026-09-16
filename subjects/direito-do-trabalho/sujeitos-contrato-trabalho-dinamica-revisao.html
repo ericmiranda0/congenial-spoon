@@ -393,6 +393,59 @@
       color: var(--text-main);
       font-size: 0.95rem;
     }
+
+    /* ══════ SINALIZAÇÃO DE REVISÃO DE PROVA ══════ */
+    .tag-revisao {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      color: #ffffff !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+      margin-left: 10px;
+      vertical-align: middle;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .tag-revisao.alerta {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      animation: pulseAlert 2.5s infinite;
+    }
+    @keyframes pulseAlert {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+    }
+    .callout-revisao {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      border-left: 6px solid #e11d48;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      color: #881337;
+    }
+    [data-theme="dark"] .callout-revisao {
+      background: rgba(225, 29, 72, 0.12);
+      border-color: rgba(244, 63, 94, 0.3);
+      border-left-color: #fb7185;
+      color: #ffe4e6;
+    }
+    .callout-revisao .box-label {
+      background: #e11d48;
+      color: white;
+    }
+    .callout-revisao strong {
+      color: #9f1239;
+    }
+    [data-theme="dark"] .callout-revisao strong {
+      color: #fda4af;
+    }
   </style>
 </head>
 
@@ -408,7 +461,7 @@
       <h1>Sujeitos do Contrato de Trabalho, Dinâmica Contratual &amp; Caderno de Prova</h1>
       <div class="subtitle">Guia Mestre Completo: Empregados Especiais (Hipersuficientes, Cargos de Confiança, Bancários, Domésticos, Rurícolas, Indígenas), Empregador (Alteridade, Empresa vs. Estabelecimento, Grupo Econômico, Sucessão e Estado), CTPS, Duração do Contrato e o Caderno Completo das 35 Questões de Revisão</div>
       <div class="meta">
-        <span>⚖️ Arts. 2º, 3º, 29, 62, 224, 444, 448 CLT</span> | <span>📜 LC 150/15 &amp; Súmulas TST</span> | <span>🎯 Simulado Geral Comentado</span>
+        <span>⚖️ Arts. 2º, 3º, 29, 62, 224, 444, 448 CLT</span> | <span>📜 LC 150/15 &amp; Súmulas TST</span> | <span>🎯 Simulado Geral Comentado</span> | <span>🛡️ Conteúdo da Revisão Oficial Sinalizado</span>
       </div>
     </div>
   </header>
@@ -512,11 +565,21 @@
 
     <!-- ══════════════════════════════ 2. DOMÉSTICO E RURÍCOLA ══════════════════════════════ -->
     <section id="domestico-ruricola">
-      <div class="section-label">Parte II · Categorias Típicas</div>
+      <div class="section-label">Parte II · Categorias Típicas · 🎯 COBRADO NA REVISÃO ORAL</div>
       <h2>2. Empregado Doméstico, Empregado Rural &amp; Trabalho Indígena</h2>
 
       <!-- DOMÉSTICO -->
-      <h3>A) Empregado Doméstico (Lei Complementar nº 150/2015)</h3>
+      <h3>A) Empregado Doméstico (Lei Complementar nº 150/2015) <span class="tag-revisao">🔥 Cobrado na Revisão</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio Pessoalidade &amp; Questão 13</span>
+        <p><strong>Exceção da Pessoalidade quanto ao Empregador &amp; Requisito Temporal:</strong></p>
+        <ul>
+          <li><strong>A Grande Exceção da Pessoalidade do Empregador:</strong> A professora cobrou em sala: enquanto no empregado comum a pessoalidade existe apenas do lado do trabalhador, no <strong>trabalho doméstico há pessoalidade dirigida à pessoa do empregador e sua família</strong>. Com o falecimento do empregador doméstico, se a família não quiser manter o vínculo, o contrato pode ser rescindido validamente sem irregularidade;</li>
+          <li><strong>Regra dos "Mais de 2 Dias":</strong> A prestação de serviços domésticos 1 ou 2 vezes por semana qualifica a trabalhadora como <em>diarista autônoma</em>. Conforme o Artigo 1º da LC nº 150/2015, exige-se prestação por <strong>mais de 2 (dois) dias por semana</strong> (ou seja, no mínimo 3 dias semanais) para configurar o vínculo de emprego doméstico.</li>
+        </ul>
+      </div>
+
       <p>Considera-se empregado doméstico aquele que presta serviços de forma contínua, subordinada, onerosa e pessoal e de <strong>finalidade não lucrativa</strong> à pessoa ou à família, no âmbito residencial destas, por <strong>mais de 2 (dois) dias por semana</strong> (Art. 1º da LC 150/15).</p>
 
       <div class="level-container">
@@ -550,8 +613,14 @@
 
     <!-- ══════════════════════════════ 3. O EMPREGADOR E ALTERIDADE ══════════════════════════════ -->
     <section id="figura-empregador">
-      <div class="section-label">Parte III · Sujeito Empregador</div>
-      <h2>3. O Empregador, Princípio da Alteridade &amp; Empresa vs. Estabelecimento</h2>
+      <div class="section-label">Parte III · Sujeito Empregador · 🎯 COBRADO NA REVISÃO ORAL</div>
+      <h2>3. O Empregador, Princípio da Alteridade &amp; Empresa vs. Estabelecimento <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio 27 &amp; Questão 25</span>
+        <p><strong>Princípio da Alteridade (Art. 2º da CLT):</strong></p>
+        <p>A ordem jurídica impõe que a assunção dos riscos econômicos da atividade incumbe <strong>única e exclusivamente ao empregador</strong>. Na revisão, a professora enfatizou que a alteridade é a matriz justificadora do poder diretivo e, simultaneamente, o fundamento dogmático que evidencia a ilicitude da precarização na uberização, já que as plataformas transferem indevidamente os riscos e custos para a pessoa física do prestador.</p>
+      </div>
 
       <div class="artigo">
         <details open>
@@ -582,7 +651,7 @@
 
     <!-- ══════════════════════════════ 4. GRUPO ECONÔMICO, SUCESSÃO E ESTADO ══════════════════════════════ -->
     <section id="empresa-grupo-sucessao">
-      <div class="section-label">Parte IV · Dinâmica Empresarial</div>
+      <div class="section-label">Parte IV · Dinâmica Empresarial · 🎯 COBRADO NA REVISÃO</div>
       <h2>4. Grupo Econômico Trabalhista, Sucessão &amp; Empregador Estatal</h2>
 
       <!-- GRUPO ECONÔMICO -->
@@ -605,7 +674,14 @@
       </div>
 
       <!-- SUCESSÃO TRABALHISTA -->
-      <h3>B) Sucessão Trabalhista (Arts. 10 e 448 da CLT)</h3>
+      <h3>B) Sucessão Trabalhista (Arts. 10 e 448 da CLT) <span class="tag-revisao">🔥 Cobrado no Roteiro de Revisão (Q21 e Q16)</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Roteiro de Revisão · Questões 21 e 16</span>
+        <p><strong>Inalterabilidade Contratual Subjetiva &amp; Continuidade da Relação:</strong></p>
+        <p>Conforme os <strong>Artigos 10 e 448 da CLT</strong>, qualquer alteração societária, transferência de propriedade ou mudança na estrutura jurídica da empresa <strong>NÃO afeta os direitos adquiridos nem os contratos de trabalho em curso</strong>. O novo titular assume a posição jurídica do empregador sucedido, respondendo integralmente pelas obrigações trabalhistas pretéritas e futuras, manifestando a despersonalização do empregador e o Princípio da Continuidade.</p>
+      </div>
+
       <div class="artigo">
         <details open>
           <summary>⚖️ Inalterabilidade Contratual Objetiva (Arts. 10 e 448 da CLT)</summary>
@@ -627,10 +703,21 @@
 
     <!-- ══════════════════════════════ 5. CONTRATO, DURAÇÃO, CTPS & DANOS MORAIS ══════════════════════════════ -->
     <section id="contrato-duracao-ctps">
-      <div class="section-label">Parte V · Contrato de Trabalho &amp; CTPS</div>
+      <div class="section-label">Parte V · Contrato de Trabalho &amp; CTPS · 🎯 COBRADO NA REVISÃO</div>
       <h2>5. Duração do Contrato, CTPS Digital &amp; Danos Morais no Trabalho</h2>
 
-      <h3>Duração do Contrato: Regra Geral vs. Prazo Determinado</h3>
+      <h3>Duração do Contrato: Regra Geral vs. Prazo Determinado <span class="tag-revisao">🔥 Cobrado no Roteiro de Revisão (Q16 e Q17)</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Roteiro de Revisão · Questões 16 e 17</span>
+        <p><strong>Regra Geral vs. Exceções &amp; Contrato de Experiência:</strong></p>
+        <ul>
+          <li><strong>Regra Geral:</strong> Contrato por <strong>prazo indeterminado</strong>, em homenagem ao Princípio da Continuidade da Relação de Emprego (Súmula 212 TST);</li>
+          <li><strong>Contrato a Termo (Art. 443 CLT):</strong> Admitido apenas em serviços transitórios, atividades empresariais transitórias e contrato de experiência;</li>
+          <li><strong>Contrato de Experiência (Art. 445 e 451 CLT):</strong> Prazo máximo improrrogável de <strong>90 dias</strong>, admitida no máximo uma única prorrogação. A extrapolação dos 90 dias ou celebração de mais de uma prorrogação converte o contrato automaticamente para prazo indeterminado.</li>
+        </ul>
+      </div>
+
       <div class="grid2">
         <div class="card dark">
           <h4>Regra Geral: Prazo Indeterminado</h4>
@@ -647,7 +734,13 @@
         </div>
       </div>
 
-      <h3>A Carteira de Trabalho Digital e a Vedação a Anotações Desabonadoras</h3>
+      <h3>A Carteira de Trabalho Digital e a Vedação a Anotações Desabonadoras <span class="tag-revisao">🔥 Cobrado no Simulado (Q14)</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado no Simulado · Questão 14</span>
+        <p><strong>Prazo Legal &amp; Dano Moral Presumido:</strong> O empregador dispõe de <strong>5 (cinco) dias úteis</strong> a partir da admissão para anotar a CTPS digital. É terminantemente proibido lançar qualquer anotação desabonadora à conduta do empregado (Art. 29, § 4º da CLT), gerando <strong>dano moral <em>in re ipsa</em></strong> (presumido) indenizável perante a Justiça do Trabalho.</p>
+      </div>
+
       <div class="level-container">
         <div class="level-box level-1">
           <div class="level-title">Prazos e Proteção da CTPS (Artigos 29 e 29-A da CLT)</div>
@@ -662,8 +755,13 @@
 
     <!-- ══════════════════════════════ 6. CADERNO COMPLETO DA REVISÃO DE PROVA (35 QUESTÕES) ══════════════════════════════ -->
     <section id="caderno-revisao-geral">
-      <div class="section-label">Parte VI · Simulado de Prova da Professora</div>
-      <h2>6. Caderno de Revisão Geral &amp; Simulado de Prova (35 Questões-Chave Comentadas)</h2>
+      <div class="section-label">Parte VI · Simulado de Prova da Professora · 🚨 GABARITO OFICIAL</div>
+      <h2>6. Caderno de Revisão Geral &amp; Simulado de Prova (35 Questões-Chave Comentadas) <span class="tag-revisao alerta">🔥 Gabarito Oficial Completo</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🚨 Caderno Oficial da Dinâmica da Professora</span>
+        <p>Este caderno reúne a transcrição, organização e gabarito comentado de <strong>todas as perguntas sorteadas e debatidas na revisão de prova em sala de aula</strong>. Cada questão está correlacionada com as palavras-chave exigidas pela professora, pegadinhas doutrinárias e precedentes do TST.</p>
+      </div>
 
       <p>Transcrição e estruturação didática de todas as questões, respostas, pegadinhas e conceitos fundamentais debatidos no sorteio e revisão oral da professora:</p>
 

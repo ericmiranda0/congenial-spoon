@@ -413,6 +413,59 @@
       color: var(--text-main);
       font-size: 0.95rem;
     }
+
+    /* ══════ SINALIZAÇÃO DE REVISÃO DE PROVA ══════ */
+    .tag-revisao {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      color: #ffffff !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+      margin-left: 10px;
+      vertical-align: middle;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .tag-revisao.alerta {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      animation: pulseAlert 2.5s infinite;
+    }
+    @keyframes pulseAlert {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+    }
+    .callout-revisao {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      border-left: 6px solid #e11d48;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      color: #881337;
+    }
+    [data-theme="dark"] .callout-revisao {
+      background: rgba(225, 29, 72, 0.12);
+      border-color: rgba(244, 63, 94, 0.3);
+      border-left-color: #fb7185;
+      color: #ffe4e6;
+    }
+    .callout-revisao .box-label {
+      background: #e11d48;
+      color: white;
+    }
+    .callout-revisao strong {
+      color: #9f1239;
+    }
+    [data-theme="dark"] .callout-revisao strong {
+      color: #fda4af;
+    }
   </style>
 </head>
 
@@ -428,7 +481,7 @@
       <h1>Relações de Trabalho vs. Emprego, Modalidades Especiais &amp; Poder Diretivo</h1>
       <div class="subtitle">Guia Completo: Os 5 Requisitos Fáticos do Art. 3º da CLT (PEPO-S), Pejotização, Uberização, Modalidades Não Empregatícias (Autônomo, Eventual, Avulso OGMO, Voluntário, Estágio, Presidiário) e o Poder Diretivo com os 11 Requisitos de Validade Disciplinar</div>
       <div class="meta">
-        <span>⚖️ Arts. 2º, 3º, 6º, 442-B CLT</span> | <span>📜 Leis 11.788/08, 9.608/98, 12.023/09, 12.815/13</span> | <span>🎯 Foco em Questões de Prova</span>
+        <span>⚖️ Arts. 2º, 3º, 6º, 442-B CLT</span> | <span>📜 Leis 11.788/08, 9.608/98, 12.023/09, 12.815/13</span> | <span>🎯 Foco em Questões de Prova</span> | <span>🛡️ Conteúdo da Revisão Oficial Sinalizado</span>
       </div>
     </div>
   </header>
@@ -458,9 +511,18 @@
 
     <!-- ══════════════════════════════ 1. GÊNERO E ESPÉCIE ══════════════════════════════ -->
     <section id="genero-especie">
-      <div class="section-label">Parte I · Teoria Geral</div>
-      <h2>1. Relação de Trabalho (Gênero) vs. Relação de Emprego (Espécie)</h2>
+      <div class="section-label">Parte I · Teoria Geral · 🎯 COBRADO NA REVISÃO DE PROVA</div>
+      <h2>1. Relação de Trabalho (Gênero) vs. Relação de Emprego (Espécie) <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
       
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Questão 30 &amp; Sorteio 20</span>
+        <p><strong>Distinção Ontológica Essencial para a Prova:</strong> A professora reforçou que <em>"com certeza a diferenciação entre relação de trabalho e relação de emprego vai cair na prova de vocês"</em>:</p>
+        <ul>
+          <li><strong>Relação de Trabalho (Gênero):</strong> Compreende todo e qualquer vínculo jurídico de prestação de serviços por pessoa física (trabalho autônomo, eventual, avulso, voluntário, estágio, etc.), sob competência da Justiça do Trabalho (Art. 114, I da CF/88);</li>
+          <li><strong>Relação de Emprego (Espécie):</strong> Vínculo tipificado e protegido pela CLT que preenche, necessariamente e de forma cumulativa, os <strong>5 requisitos fático-jurídicos do Art. 3º da CLT</strong>.</li>
+        </ul>
+      </div>
+
       <div class="level-container">
         <div class="level-box level-1">
           <div class="level-title">🌱 Nível 1: Compreensão Básica</div>
@@ -490,8 +552,17 @@
 
     <!-- ══════════════════════════════ 2. OS 5 REQUISITOS FÁTICOS DA RELAÇÃO DE EMPREGO ══════════════════════════════ -->
     <section id="cinco-requisitos">
-      <div class="section-label">Parte II · Elementos do Art. 3º CLT</div>
-      <h2>2. Os 5 Requisitos Fático-Jurídicos da Relação de Emprego (Cumulativos)</h2>
+      <div class="section-label">Parte II · Elementos do Art. 3º CLT · 🚨 ALERTA MÁXIMO NA REVISÃO</div>
+      <h2>2. Os 5 Requisitos Fático-Jurídicos da Relação de Emprego (Cumulativos) <span class="tag-revisao alerta">🚨 Alerta Máximo de Prova</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🚨 Alerta Máximo da Revisão Oral · Sorteio 06</span>
+        <p><strong>Aviso Categórico da Professora:</strong> <em>"Gente, vai cair requisito da relação de emprego pelo amor de Deus, saibam falar sobre isso! Tem que saber conceituar os 5 e explicar detalhadamente."</em></p>
+        <ul>
+          <li><strong>Requisitos Cumulativos:</strong> Pessoa Física, Pessoalidade, Não Eventualidade (Habitualidade), Onerosidade e Subordinação Jurídica (PEPO-S);</li>
+          <li><strong>O Requisito Principal:</strong> A <strong>Subordinação Jurídica</strong> foi apontada como o elemento mais determinante e indispensável da relação de emprego (sujeição ao poder diretivo, cumprimento de ordens e sujeição disciplinar).</li>
+        </ul>
+      </div>
 
       <div class="mnemonic-box">
         <div class="mnemonic-title">MNEMÔNICO INFALÍVEL: P - E - P - O - S</div>
@@ -520,9 +591,9 @@
           <div class="level-title">2. Pessoalidade (Intuitu Personae / Infungibilidade)</div>
           <p>O trabalhador é contratado em razão de seus atributos individuais e não pode se fazer substituir por terceiro sem o consentimento prévio do empregador. Se o prestador envia livremente amigos ou parentes para trabalhar em seu lugar a seu bel-prazer, não há pessoalidade e o vínculo de emprego inexiste.</p>
           <div class="exam-tip">
-            <span class="box-label">🎯 Pegadinha Clássica de Prova · Pessoalidade do Empregador</span>
-            <strong>Regra Geral:</strong> Não existe pessoalidade quanto à figura do empregador (ele é despersonalizado; se a empresa muda de dono ou sócio, os contratos continuam intactos - Arts. 10 e 448 CLT).<br>
-            <strong>A Grande Exceção Doutrinária:</strong> No <strong>trabalho doméstico</strong>, há uma pessoalidade qualificada dirigida à pessoa da família/empregador, já que a prestação ocorre na intimidade do lar. O falecimento do empregador doméstico permite o encerramento justificado do vínculo se a família não desejar continuá-lo.
+            <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Pessoalidade do Empregador Doméstico</span>
+            <strong>Regra Geral:</strong> Não existe pessoalidade quanto à figura do empregador (ele é fungível e despersonalizado; a mudança de proprietário ou sócio não altera o contrato de trabalho - Arts. 10 e 448 CLT).<br>
+            <strong>A Grande Exceção Doutrinária Destacada na Revisão:</strong> No <strong>trabalho doméstico</strong> (LC nº 150/15), há pessoalidade qualificada dirigida à pessoa física do empregador/família, tendo em vista a prestação no recesso do lar. Ocorrendo o falecimento do empregador doméstico e não havendo interesse da família na continuidade, o contrato extingue-se validamente.
           </div>
         </div>
 
@@ -536,8 +607,8 @@
             <li><strong>Teoria da Fixação Jurídica:</strong> Eventual é o trabalhador que presta serviços a múltiplos tomadores sem fixação jurídica a nenhum deles.</li>
           </ul>
           <div class="pitfall">
-            <span class="box-label">⚠️ Alerta de Simulado · O Trabalho Eventual por 90 Dias</span>
-            <em>"O trabalho eventual gera vínculo de emprego automático após 90 dias de prestação?"</em> <strong>FALSO!</strong> Se o trabalho foi pactuado para um projeto temporário e carece de continuidade ou subordinação, o mero transcurso de 90 dias não transmuta o eventual em empregado com vínculo indeterminado.
+            <span class="box-label">⚠️ Pegadinha Capciosa da Revisão Oral · O Trabalho Eventual por 90 Dias (Sorteio 26)</span>
+            <em>"O trabalho eventual gera vínculo de emprego automático após 90 dias de prestação?"</em> <strong>FALSO!</strong> Conforme debatido em sala, a prestação pontual de um serviço delimitado a 90 dias sem continuidade habitual, ou onde inexiste subordinação jurídica, não se transmuta automaticamente em emprego por prazo indeterminado.
           </div>
         </div>
 
@@ -553,7 +624,7 @@
 
         <!-- 5. SUBORDINAÇÃO JURÍDICA -->
         <div class="level-box level-3">
-          <div class="level-title">5. Subordinação Jurídica (O Requisito Principal)</div>
+          <div class="level-title">5. Subordinação Jurídica (O Requisito Principal Cobrado na Revisão)</div>
           <p>A subordinação é o <em>nervus probandi</em> da relação de emprego. Significa a sujeição legítima do trabalhador ao poder de comando, fiscalização e disciplina do empregador decorrente do contrato.</p>
           <div class="grid3">
             <div class="card dark">
@@ -575,8 +646,16 @@
 
     <!-- ══════════════════════════════ 3. FRAUDES TRABALHISTAS E UBERIZAÇÃO ══════════════════════════════ -->
     <section id="fraudes-uberizacao">
-      <div class="section-label">Parte III · Patologias &amp; Atualidade</div>
-      <h2>3. Fraudes à Relação de Emprego: Pejotização &amp; Fenômeno da Uberização</h2>
+      <div class="section-label">Parte III · Patologias &amp; Atualidade · 🎯 COBRADO NA REVISÃO ORAL</div>
+      <h2>3. Fraudes à Relação de Emprego: Pejotização &amp; Fenômeno da Uberização <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio Pejotização e Sorteio 34 (Uberização)</span>
+        <ul>
+          <li><strong>Pejotização:</strong> Conceituada abertamente pela professora como <strong>fraude à relação de emprego</strong>. Ocorre quando a empresa contrata pessoa jurídica (PJ/MEI) para prestar serviços com pessoalidade, não eventualidade e subordinação jurídica típica de pessoa física. Consequência: <strong>nulidade absoluta pelo Artigo 9º da CLT</strong> e reconhecimento do vínculo com todas as verbas trabalhistas retroativas.</li>
+          <li><strong>Uberização do Trabalho:</strong> Tendência marcante da contemporaneidade destacada na revisão. Caracteriza-se pela <strong>precarização das condições laborais</strong> e pela <strong>transferência integral de todos os riscos e custos do empreendimento ao trabalhador</strong> (combustível, manutenção do veículo, assaltos, acidentes e invalidez), sem que a plataforma digital assuma qualquer ônus ou responsabilidade contratual/securitária.</li>
+        </ul>
+      </div>
 
       <div class="grid2">
         <div class="card dark">
@@ -599,11 +678,21 @@
 
     <!-- ══════════════════════════════ 4. MODALIDADES ESPECIAIS DE TRABALHO ══════════════════════════════ -->
     <section id="modalidades-especiais">
-      <div class="section-label">Parte IV · Modalidades Especiais</div>
+      <div class="section-label">Parte IV · Modalidades Especiais · 🎯 PONTOS COBRADOS NA REVISÃO</div>
       <h2>4. Modalidades Especiais de Trabalho Não Empregatícias</h2>
 
       <!-- TRABALHO AUTÔNOMO -->
-      <h3>A) Trabalho Autônomo (Art. 442-B da CLT)</h3>
+      <h3>A) Trabalho Autônomo (Art. 442-B da CLT) <span class="tag-revisao">🔥 Cobrado nos Sorteios 08 e 04</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteios 08 e 04</span>
+        <p><strong>Nota Distintiva &amp; Questão da Habitualidade:</strong></p>
+        <ul>
+          <li><strong>Principal Característica:</strong> A nota essencial do trabalhador autônomo é a <strong>ausência de subordinação jurídica</strong> (Art. 442-B da CLT);</li>
+          <li><strong>Pode haver habitualidade (não eventualidade)?</strong> <strong>SIM!</strong> A professora destacou o exemplo em aula: uma faculdade contrata uma professora para ministrar/gravar curso por 3 meses diários. Se ela define seu horário, negocia o formato e atua sem sujeição ao poder de comando do tomador, a presença de habitualidade <em>não descaracteriza a autonomia nem cria vínculo empregatício</em>.</li>
+        </ul>
+      </div>
+
       <p>O trabalhador autônomo exerce sua atividade profissional por conta própria, assume os riscos econômicos de sua atividade (alteridade própria) e <strong>não possui subordinação jurídica</strong>.</p>
       <div class="artigo">
         <details open>
@@ -619,7 +708,17 @@
       </div>
 
       <!-- TRABALHO AVULSO -->
-      <h3>B) Trabalho Avulso (Portuário e Não Portuário)</h3>
+      <h3>B) Trabalho Avulso (Portuário e Não Portuário) <span class="tag-revisao">🔥 Cobrado no Sorteio 20</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio 20</span>
+        <p><strong>Intermediação Obrigatória no Trabalho Avulso:</strong> A professora reforçou que o trabalho avulso não é relação de emprego, mas possui igualdade constitucional de direitos (Art. 7º, XXXIV da CF/88):</p>
+        <ul>
+          <li><strong>Avulso Portuário:</strong> A intermediação é feita exclusivamente pelo <strong>Órgão Gestor de Mão de Obra (OGMO)</strong> (Lei nº 12.815/13). O OGMO organiza a escala e o rodízio dos avulsos (estivagem, capatazia), recebe os pagamentos dos armadores/operadores portuários, efetua os descontos legais (como o INSS) e repassa a remuneração aos trabalhadores;</li>
+          <li><strong>Avulso Não Portuário:</strong> A intermediação cabe obrigatoriamente ao <strong>Sindicato da Categoria Profissional</strong> (Lei nº 12.023/09), que repassa os valores em até 72 horas úteis.</li>
+        </ul>
+      </div>
+
       <p>O trabalhador avulso presta serviços de curta duração a diversos tomadores, mediante <strong>intermediação obrigatória</strong> de um sindicato ou de um Órgão Gestor de Mão de Obra (OGMO). Possui <strong>igualdade constitucional de direitos com os trabalhadores com vínculo permanente (Art. 7º, XXXIV da CF/88)</strong>.</p>
 
       <div class="grid2">
@@ -646,7 +745,17 @@
       </div>
 
       <!-- TRABALHO VOLUNTÁRIO -->
-      <h3>C) Trabalho Voluntário (Lei nº 9.608/1998)</h3>
+      <h3>C) Trabalho Voluntário (Lei nº 9.608/1998) <span class="tag-revisao">🔥 Cobrado no Sorteio Voluntariado</span></h3>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio Voluntariado</span>
+        <p><strong>Gratuidade &amp; Ressarcimento de Despesas:</strong></p>
+        <ul>
+          <li><strong>Requisito Ausente:</strong> O trabalho voluntário é desprovido de <strong>onerosidade</strong> (prestação graciosa e gratuita);</li>
+          <li><strong>Permissão Legal de Ressarcimento:</strong> É perfeitamente <strong>permitido o ressarcimento de despesas</strong> expressamente comprovadas e realizadas no desempenho do serviço (ex.: passagens de transporte e alimentação). Isso <strong>NÃO</strong> descaracteriza a gratuidade nem transforma a relação em vínculo de emprego (Art. 3º da Lei nº 9.608/1998).</li>
+        </ul>
+      </div>
+
       <p>Atividade não remunerada prestada por pessoa física a entidade pública ou instituição privada sem fins lucrativos com objetivos cívicos, culturais, educacionais, científicos ou recreativos.</p>
       <div class="artigo">
         <details open>
@@ -674,8 +783,21 @@
 
     <!-- ══════════════════════════════ 5. ESTÁGIO ══════════════════════════════ -->
     <section id="estagio-lei11788">
-      <div class="section-label">Parte V · Ato Educativo</div>
-      <h2>5. Estágio: Requisitos de Validade &amp; Desvirtuamento (Lei nº 11.788/2008)</h2>
+      <div class="section-label">Parte V · Ato Educativo · 🎯 COBRADO NO SORTEIO 10</div>
+      <h2>5. Estágio: Requisitos de Validade &amp; Desvirtuamento (Lei nº 11.788/2008) <span class="tag-revisao">🔥 Cobrado no Sorteio 10</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio 10</span>
+        <p><strong>Possibilidade de Vínculo de Emprego &amp; Requisitos Inegociáveis:</strong> O estágio <strong>pode gerar vínculo de emprego direto</strong> com a empresa tomadora caso haja descumprimento de seus requisitos legais:</p>
+        <ul>
+          <li><strong>1. Matrícula e Assiduidade/Frequência escolar regular:</strong> Comprovada periodicamente;</li>
+          <li><strong>2. Termo de Compromisso de Estágio (TCE):</strong> Instrumento formal tripartite firmado entre o estudante, a concedente e a instituição de ensino;</li>
+          <li><strong>3. Carga Horária Estrita:</strong> Limite máximo de 6 horas diárias e 30 horas semanais (ensino superior e médio);</li>
+          <li><strong>4. Compatibilidade Real de Atividades:</strong> As tarefas cotidianas executadas pelo estagiário devem ter consonância obrigatória com o plano de estágio e o projeto pedagógico do curso;</li>
+          <li><strong>5. Limite de Supervisão:</strong> Cada supervisor profissional da concedente pode orientar no máximo até <strong>10 estagiários</strong> simultaneamente.</li>
+        </ul>
+        <p><em>Consequência do Descumprimento:</em> O contrato pedagógico é desconsiderado e declara-se judicialmente o <strong>vínculo de emprego celetista</strong> com todas as verbas rescisórias e reflexos.</p>
+      </div>
 
       <p>O estágio é conceituado como <strong>ato educativo escolar supervisionado</strong>, desenvolvido no ambiente de trabalho e voltado à preparação profissional do estudante.</p>
 
@@ -727,8 +849,22 @@
 
     <!-- ══════════════════════════════ 6. PODER DIRETIVO DO EMPREGADOR ══════════════════════════════ -->
     <section id="poder-diretivo">
-      <div class="section-label">Parte VI · Prerrogativas Empresariais</div>
-      <h2>6. O Poder Diretivo do Empregador (Artigo 2º da CLT)</h2>
+      <div class="section-label">Parte VI · Prerrogativas Empresariais · 🎯 COBRADO NO SORTEIO 27</div>
+      <h2>6. O Poder Diretivo do Empregador (Artigo 2º da CLT) <span class="tag-revisao">🔥 Cobrado no Sorteio 27</span></h2>
+
+      <div class="callout-revisao">
+        <span class="box-label">🎯 Ponto Cobrado na Revisão Oral · Sorteio 27</span>
+        <p><strong>Fundamento e Espécies do Poder Diretivo:</strong></p>
+        <ul>
+          <li><strong>Fundamento:</strong> Decorre da <strong>alteridade</strong> do contrato de trabalho (Art. 2º da CLT). Como a responsabilidade integral dos riscos econômicos pertence ao empregador, ele possui a prerrogativa de determinar como o trabalho será executado na prática;</li>
+          <li><strong>As 3 Espécies Exigidas na Revisão:</strong>
+            <br>1) <strong>Poder Regulamentador (de Direção):</strong> Estabelece regras internas, diretrizes organizacionais e regulamento de empresa;
+            <br>2) <strong>Poder Fiscalizatório:</strong> Controla, fiscaliza e monitora o cumprimento da prestação de serviços (ponto, tarefas, câmeras em áreas comuns);
+            <br>3) <strong>Poder Disciplinar:</strong> Aplica sanções legítimas em caso de infração contratual.
+          </li>
+          <li><strong>Vedação a Multas:</strong> É terminantemente proibida a imposição de multas disciplinares no contrato individual (Art. 462 da CLT).</li>
+        </ul>
+      </div>
 
       <p>O Poder Diretivo (ou poder empregatício) é o conjunto de prerrogativas asseguradas pela ordem jurídica ao empregador para gerir, organizar, fiscalizar e disciplinar a prestação de serviços no âmbito da empresa. Seu fundamento ético-jurídico é o <strong>Princípio da Alteridade</strong> (quem assume exclusivamente os riscos e custos do negócio tem o direito de ditar as diretrizes da produção).</p>
 
@@ -766,8 +902,8 @@
       </div>
 
       <div class="pitfall">
-        <span class="box-label">⚠️ Proibição Absoluta de Multas Disciplinares</span>
-        É <strong>terminantemente proibida a imposição de multas pecuniárias</strong> como sanção disciplinar no contrato de trabalho individual, sendo nula qualquer cláusula contratual punitiva que autorize descontos punitivos (Artigo 462 da CLT).
+        <span class="box-label" style="background:#dc2626;">🔥 Cobrado na Revisão Oral · Proibição Absoluta de Multas Disciplinares</span>
+        É <strong>terminantemente proibida a imposição de multas pecuniárias</strong> como sanção disciplinar no contrato de trabalho individual, sendo nula qualquer cláusula contratual punitiva que autorize descontos punitivos (Artigo 462 da CLT). Apenas são admitidas: advertência, suspensão (máx. 30 dias) e justa causa.
       </div>
     </section>
 
