@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoria do Processo &amp; Pressupostos Processuais | Processo Civil I</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Subject Specific Branding: Processo Civil Cobalt / Indigo Palette */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-400: #60A5FA;
+      --p-100: #DBEAFE;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.75rem;
+      margin: 15px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-top: 15px;
+    }
+
+    .meta span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Index Nav */
+    .nav-summary {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] .nav-summary {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .nav-summary h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      margin-top: 0;
+      border-bottom: 2px solid var(--p-500);
+      padding-bottom: 10px;
+    }
+
+    [data-theme="dark"] .nav-summary h3 {
+      color: var(--p-400);
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .nav-grid a {
+      color: var(--p-600);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--p-50);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    [data-theme="dark"] .nav-grid a {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--p-400);
+    }
+
+    .nav-grid a:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateX(4px);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      border-left: 6px solid var(--p-500);
+      padding-left: 18px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-size: 1.85rem;
+      font-weight: 800;
+    }
+
+    [data-theme="dark"] h2 {
+      color: var(--p-400);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      margin-top: 35px;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #93C5FD;
+    }
+
+    h4 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      margin-top: 25px;
+      font-size: 1.15rem;
+    }
+
+    [data-theme="dark"] h4 {
+      color: #E2E8F0;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 1.2px;
+      margin-bottom: -10px;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      font-size: 1.02rem;
+      color: var(--text-main, #1F2937);
+      margin-bottom: 1.2rem;
+    }
+
+    [data-theme="dark"] p {
+      color: #CBD5E1;
+    }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      margin: 15px 0;
+      padding: 16px 20px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    [data-theme="dark"] .artigo {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 1.05rem;
+      outline: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: var(--p-400);
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(37, 99, 235, 0.1);
+      color: #E2E8F0;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-100);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      color: #60A5FA;
+      background: rgba(37, 99, 235, 0.25);
+    }
+
+    /* Cards & Layout */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid var(--p-500);
+      border-left: 1px solid #E2E8F0;
+      border-right: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    [data-theme="dark"] .card {
+      background: #1E293B;
+      border-color: #334155;
+      border-top-color: var(--p-500);
+    }
+
+    .card.gold {
+      border-top-color: var(--accent-gold);
+    }
+
+    .card.dark-box {
+      border-top-color: #0F172A;
+      background: #0F172A;
+      color: white;
+    }
+
+    .card.dark-box p {
+      color: #94A3B8;
+    }
+
+    /* Level Explanations Cards */
+    .level-block {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    [data-theme="dark"] .level-block {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .level-header {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .level-1 { background: #E0F2FE; color: #0369A1; }
+    .level-2 { background: #DBEAFE; color: #1D4ED8; }
+    .level-3 { background: #FEF3C7; color: #B45309; }
+
+    [data-theme="dark"] .level-1 { background: rgba(3, 105, 161, 0.25); color: #7DD3FC; }
+    [data-theme="dark"] .level-2 { background: rgba(29, 78, 216, 0.25); color: #93C5FD; }
+    [data-theme="dark"] .level-3 { background: rgba(180, 83, 9, 0.25); color: #FDE68A; }
+
+    /* Info Boxes */
+    .info-box {
+      padding: 20px;
+      border-radius: 12px;
+      margin: 22px 0;
+      position: relative;
+      border-left: 5px solid;
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .dica-prova {
+      background: #FFFBEB;
+      border-color: #F59E0B;
+    }
+    .dica-prova .box-label { background: #F59E0B; }
+
+    .erro-comum {
+      background: #FEF2F2;
+      border-color: #EF4444;
+    }
+    .erro-comum .box-label { background: #EF4444; }
+
+    .doutrina {
+      background: #EFF6FF;
+      border-color: #2563EB;
+    }
+    .doutrina .box-label { background: #2563EB; }
+
+    .jurisprudencia {
+      background: #F0FDF4;
+      border-color: #10B981;
+    }
+    .jurisprudencia .box-label { background: #10B981; }
+
+    .atencao {
+      background: #FFF7ED;
+      border-color: #EA580C;
+    }
+    .atencao .box-label { background: #EA580C; }
+
+    .pegadinha {
+      background: #FAF5FF;
+      border-color: #9333EA;
+    }
+    .pegadinha .box-label { background: #9333EA; }
+
+    [data-theme="dark"] .info-box { background: #1E293B; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] table {
+      background: #1E293B;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] td {
+      border-bottom-color: #334155;
+    }
+
+    /* Mindmaps */
+    .mindmap-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 25px 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .mm-l1 {
+      margin-left: 20px;
+      color: #F59E0B;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .mm-l2 {
+      margin-left: 45px;
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+
+    .mm-l3 {
+      margin-left: 65px;
+      color: #CBD5E1;
+      font-size: 0.85rem;
+    }
+
+    /* Flowcharts & Timelines */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 25px 0;
+      position: relative;
+      padding-left: 20px;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 1px solid #E2E8F0;
+      position: relative;
+    }
+
+    [data-theme="dark"] .timeline-item {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid white;
+    }
+
+    /* Exercises */
+    .exercise {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    [data-theme="dark"] .exercise {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .gabarito {
+      margin-top: 15px;
+      padding: 15px;
+      background: #F0FDF4;
+      border-radius: 8px;
+      color: #166534;
+      font-weight: 600;
+      border-left: 4px solid #10B981;
+    }
+
+    [data-theme="dark"] .gabarito {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    /* Flashcards Interativos */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: white;
+      border: 2px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 1.5rem;
+      cursor: pointer;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    [data-theme="dark"] .flashcard {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .flashcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--p-500);
+      box-shadow: 0 12px 20px -4px rgba(37, 99, 235, 0.15);
+    }
+
+    .flashcard .fc-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard .fc-pergunta {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-main, #0F172A);
+      line-height: 1.4;
+    }
+
+    [data-theme="dark"] .flashcard .fc-pergunta {
+      color: #F8FAFC;
+    }
+
+    .flashcard .fc-resposta {
+      display: none;
+      font-size: 0.92rem;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 0.85rem;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      border-left: 3px solid var(--p-500);
+      line-height: 1.5;
+    }
+
+    [data-theme="dark"] .flashcard .fc-resposta {
+      background: rgba(37, 99, 235, 0.15);
+      color: #93C5FD;
+    }
+
+    .flashcard.revelado .fc-resposta { display: block; }
+    .flashcard.revelado .fc-dica-clique { display: none; }
+
+    .fc-dica-clique {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Mnemônicos */
+    .mnemonico-box {
+      background: #0F172A !important;
+      color: #F8FAFC !important;
+      padding: 1.75rem 2rem;
+      border-radius: 16px;
+      margin: 1.75rem 0;
+      border: 2px solid var(--p-500);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+    }
+
+    .mnemonico-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FACC15 !important;
+      background: rgba(250, 204, 21, 0.12);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      padding: 6px 18px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .mnemonico-letter {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #0F172A !important;
+      background: #FACC15 !important;
+      padding: 2px 9px;
+      border-radius: 6px;
+      margin-right: 5px;
+      border: 1px solid #EAB308;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    /* Cheat Sheet */
+    .cheat-sheet {
+      background: var(--p-50);
+      border: 2px solid var(--p-500);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+
+    [data-theme="dark"] .cheat-sheet {
+      background: rgba(30, 58, 138, 0.2);
+    }
+
+    /* Top Progress Bar */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 3000;
+      background: transparent;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--p-500), var(--p-400), #F59E0B);
+      width: 0%;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Navigation Bar */
+    nav.main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-bottom: 1px solid #E2E8F0;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] nav.main-nav {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom-color: #334155;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    nav.main-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 16px;
+      gap: 12px;
+      max-width: 1140px;
+    }
+
+    .home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--p-50);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--p-700);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .home-btn {
+      background: rgba(37, 99, 235, 0.15);
+      border-color: rgba(96, 165, 250, 0.3);
+      color: var(--p-400);
+    }
+
+    .home-btn:hover {
+      background: var(--p-500);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      flex: 1;
+      padding: 4px 0;
+    }
+
+    .nav-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: #64748B;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] .nav-item {
+      color: #94A3B8;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      color: var(--p-700);
+      background: var(--p-50);
+    }
+
+    [data-theme="dark"] .nav-item:hover, [data-theme="dark"] .nav-item.active {
+      color: var(--p-400);
+      background: rgba(37, 99, 235, 0.2);
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--p-50);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--p-700);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .theme-toggle {
+      background: rgba(37, 99, 235, 0.15);
+      border-color: rgba(96, 165, 250, 0.3);
+      color: #FACC15;
+    }
+
+    .theme-toggle:hover {
+      background: var(--p-500);
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I</div>
+      <h1>Teoria do Processo &amp; Pressupostos Processuais</h1>
+      <div class="subtitle">Tratado Completo: Natureza Jurídica, Instrumentalidade, Sincretismo Processual, Ordem de Cognição Prévia, Pressupostos de Eficácia e Validade, Nulidades, Ineficácia e o Regime da Capacidade Processual</div>
+      <div class="meta">
+        <span>⚖️ Arts. 70 a 76, 103, 104, 330, 332, 485, 525 e 966 do CPC/2015</span>
+        <span>📚 Teoria Geral do Processo</span>
+        <span>🛡️ Foco em Concursos de Alto Nível &amp; OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Principal Sticky Bar -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Hub Principal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#mod1-conceito" class="nav-item">1. Teoria do Processo</a>
+        <a href="#mod2-cognicao" class="nav-item">2. Ordem de Cognição</a>
+        <a href="#mod3-vicios" class="nav-item">3. Nulidades &amp; Ineficácia</a>
+        <a href="#mod4-eficacia" class="nav-item">4. Pressupostos de Eficácia</a>
+        <a href="#mod5-validade" class="nav-item">5. Pressupostos de Validade</a>
+        <a href="#mod6-capacidade" class="nav-item">6. Teoria da Capacidade</a>
+        <a href="#mod7-legitimidade" class="nav-item">7. Capacidade vs Legitimidade</a>
+        <a href="#mapas-mentais" class="nav-item">Mapas Mentais</a>
+        <a href="#mnemonicos" class="nav-item">Mnemônicos</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#revisao-ativa" class="nav-item">Questões</a>
+        <a href="#resumo-final" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo claro/escuro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ÍNDICE DE NAVEGAÇÃO RÁPIDA -->
+    <div class="nav-summary">
+      <h3>📑 Sumário Executivo do Guia</h3>
+      <div class="nav-grid">
+        <a href="#mod1-conceito"><span>🏛️</span> 1. Teoria do Processo &amp; Sincretismo</a>
+        <a href="#mod2-cognicao"><span>⚖️</span> 2. Ordem Prévia de Cognição Judicial</a>
+        <a href="#mod3-vicios"><span>⚠️</span> 3. Nulidades vs Ineficácia Transrescisória</a>
+        <a href="#mod4-eficacia"><span>🎯</span> 4. Pressupostos Processuais de Eficácia</a>
+        <a href="#mod5-validade"><span>🛡️</span> 5. Pressupostos de Validade Positivos e Negativos</a>
+        <a href="#mod6-capacidade"><span>👤</span> 6. Capacidade no Processo Civil (3 Espécies)</a>
+        <a href="#mod7-legitimidade"><span>🔍</span> 7. Capacidade Processual vs Legitimidade ad causam</a>
+        <a href="#mapas-mentais"><span>🧠</span> 8. Mapas Mentais em Árvore Hierárquica</a>
+        <a href="#mnemonicos"><span>⚡</span> 9. Mnemônicos Mágicos de Fixação</a>
+        <a href="#flashcards"><span>🃏</span> 10. Flashcards Interativos de Memorização</a>
+        <a href="#revisao-ativa"><span>📝</span> 11. Bateria de Questões Comentadas (OAB/Bancas)</a>
+        <a href="#resumo-final"><span>🚀</span> 12. Cheat Sheet Express de 1 Página</a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+    <section id="objetivos">
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao concluir o estudo deste material didático de alta densidade, você será capaz de dominar com segurança analítica e precisão dogmática:</p>
+      <ul>
+        <li>Diferenciar com rigor terminológico <strong>processo</strong>, <strong>procedimento</strong> e <strong>autos processuais</strong>, compreendendo os aspectos objetivo e subjetivo da relação processual;</li>
+        <li>Explicar a natureza eclética (sincrética) do processo moderno e o princípio da <strong>instrumentalidade das formas</strong>;</li>
+        <li>Dominar a <strong>ordem lógica e cronológica de cognição do juiz</strong>: pressupostos processuais → condições da ação → mérito da causa;</li>
+        <li>Identificar e classificar com precisão os <strong>pressupostos processuais de eficácia</strong> e os <strong>pressupostos processuais de validade</strong> (positivos e negativos);</li>
+        <li>Distinguir o regime das <strong>nulidades relativas</strong>, <strong>nulidades absolutas</strong> (Ação Rescisória - biênio decadencial) e <strong>atos ineficazes</strong> (*Querela Nullitatis Insanabilis* / Impugnação ao Cumprimento de Sentença);</li>
+        <li>Compreender o regime tridimensional da capacidade: <strong>capacidade de ser parte</strong>, <strong>capacidade processual</strong> (de estar em juízo) e <strong>capacidade postulatória</strong>, incluindo o tratamento dos entes despersonalizados e os remédios do art. 76 do CPC;</li>
+        <li>Diferenciar em profundidade <strong>capacidade processual</strong> (atributo abstrato da pessoa) de <strong>legitimidade ad causam</strong> (pertinência subjetiva concreta da lide).</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 01 ══════════════════════════════ -->
+    <section id="mod1-conceito" class="section">
+      <div class="section-label">Módulo 01</div>
+      <h2>1. Teoria do Processo: Noções Fundamentais &amp; Ecletismo Sincrético</h2>
+
+      <p>Desde o exato momento em que a petição inicial é distribuída ou protocolada, tem-se a <strong>formação do processo</strong>. O processo é o instrumento constitucional da <strong>jurisdição</strong>: é através dele que o Estado-Juiz exerce seu poder-dever de aplicar o ordenamento jurídico objetivo ao caso concreto para solucionar a lide e pacificar o corpo social.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>Aspecto Objetivo do Processo</h4>
+          <p>Constituído por um <strong>conjunto de atos ordenadamente encadeados</strong> e previamente previstos na legislação, destinados a uma finalidade unívoca: a prestação da tutela jurisdicional. Para ser alcançada, exige um <strong>procedimento</strong> temporal: petição inicial → juízo de admissibilidade/citação → resposta do réu → saneamento/julgamento antecipado → instrução probatória → sentença de mérito.</p>
+        </div>
+        <div class="card">
+          <h4>Aspecto Subjetivo do Processo</h4>
+          <p>O processo consubstancia uma <strong>relação jurídica complexa e continuativa</strong> entre os sujeitos do processo: autor, réu e Estado-Juiz (relação trilateral ou triangular). Essa relação gera no tempo um complexo feixe de <strong>direitos subjetivos, faculdades, poderes, deveres e ônus processuais</strong> recíprocos.</p>
+        </div>
+      </div>
+
+      <div class="info-box doutrina">
+        <span class="box-label">📚 Doutrina Clássica: Büllow e a Relação Jurídica Processual</span>
+        <p>A partir da obra seminal de Oskar von Büllow (1868 - <em>A Teoria das Exceções Processuais e os Pressupostos Processuais</em>), o Direito Processual Civil conquistou autonomia científica em face do direito material. Büllow demonstrou que o processo é uma <strong>relação jurídica de direito público</strong> autônoma, gradual, vinculante e distinta da relação litigiosa de direito material debatida entre as partes.</p>
+      </div>
+
+      <h3>1.1 As Distinções Cruciais: Processo vs. Autos vs. Procedimento</h3>
+      <p>A confusão terminológica entre esses três conceitos é recorrente e rigorosamente cobrada em bancas examinadoras:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Conceito</th>
+            <th>Definição Dogmática</th>
+            <th>Natureza</th>
+            <th>Exemplo Prático</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Processo</strong></td>
+            <td>Relação jurídica de direito público e instrumento estatal para a prestação jurisdicional. Nunca é um fim em si mesmo.</td>
+            <td>Entidade jurídica imaterial, dinâmica e teleológica.</td>
+            <td>A lide pendente entre autor e réu submetida ao Estado para resolução definitiva.</td>
+          </tr>
+          <tr>
+            <td><strong>Procedimento</strong></td>
+            <td>Rito exterior formal; a ordem cronológica e o encadeamento normativo estabelecido pela lei para a prática dos atos processuais.</td>
+            <td>Forma / Rito externo (comum ou especial).</td>
+            <td>O rito do Procedimento Comum (art. 318 CPC) vs. Procedimento Especial dos Embargos de Terceiro ou Ação Monitória.</td>
+          </tr>
+          <tr>
+            <td><strong>Autos Processuais</strong></td>
+            <td>A materialização física (pastas de papel) ou digital (processo eletrônico, código de bytes no PJe/e-SAJ) dos atos que compõem o processo.</td>
+            <td>Suporte físico ou eletrônico documental.</td>
+            <td>Os volumes em papel que foram ao arquivo, ou o arquivo em formato PDF/eletrônico do sistema eletrônico da comarca.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box erro-comum">
+        <span class="box-label">⚠️ Erro Comum em Provas</span>
+        <p>Não confunda a queima ou perda dos autos físicos com a extinção do processo! Se os autos forem extraviados ou destruídos, não morre o processo: promove-se o procedimento de <strong>Restauração de Autos</strong> (arts. 712 a 718 do CPC), pois o processo — relação jurídica processual — subsiste incólume.</p>
+      </div>
+
+      <h3>1.2 Princípio da Instrumentalidade das Formas &amp; Amoldamento ao Direito Material</h3>
+      <p>O processo <strong>nunca é um fim em si mesmo</strong>. Ele existe unicamente como meio ético e técnico pelo qual o Estado confere efetividade ao direito material violado ou ameaçado. Disso decorre a regra do art. 277 do CPC: <em>"Quando a lei prescrever determinada forma, o juiz considerará válido o ato se, realizado de outro modo, lhe alcançar a finalidade essencial."</em></p>
+      <p>O processo deve <strong>amoldar-se</strong> à pretensão material deduzida, e não o inverso. Se o vício formal não acarretou prejuízo aos fins da justiça nem violou a ampla defesa e o contraditório, não há nulidade processual (<em>pas de nullité sans grief</em>).</p>
+
+      <h3>1.3 O Sincretismo Processual: Do Dualismo Autônomo ao Ecletismo das Fases</h3>
+      <p>Historicamente (sob a vigência original do CPC de 1973), havia uma separação rígida e formal: para que uma dívida reconhecida em sentença condenatória fosse satisfeita, a parte vitoriosa tinha de propor uma nova e independente relação jurídica processual — a autônoma <strong>Ação de Execução de Título Judicial</strong>.</p>
+      <p>Com as sucessivas reformas e a consagração definitiva no CPC/2015, vigora o chamado <strong>Processo Sincrético ou de Natureza Eclética</strong>:</p>
+
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Fase Cognitiva (Cognição)</h4>
+          <p>Inicia-se com a petição inicial e destina-se a declarar a existência do direito, fixar a certeza jurídica e constituir o título executivo judicial através da sentença condenatória transitada em julgado.</p>
+        </div>
+        <div class="card blue">
+          <h4>Fase Executiva (Cumprimento de Sentença)</h4>
+          <p>A sentença condenatória não põe mais fim ao processo, mas tão somente à fase cognitiva. Se não houver pagamento voluntário, deflagra-se imediatamente, nos mesmos autos, a fase de satisfação forçada do julgado (Cumprimento de Sentença - art. 523 CPC).</p>
+        </div>
+      </div>
+
+      <div class="info-box dica-prova">
+        <span class="box-label">💡 Dica de Concurso: O Conceito de Ecletismo</span>
+        <p>Bancas como FGV e CEBRASPE usam a expressão <strong>"ecletismo processual"</strong> para designar a reunião, num processo unitário, de duas ordens procedimentais ontologicamente distintas: o sistema cognitivo e o sistema executivo, eliminando a antiga duplicidade de processos e consagrando o princípio da razoável duração do processo (art. 5º, LXXVIII da CF/88).</p>
+      </div>
+
+      <!-- Explicações em 3 Níveis -->
+      <div class="level-block">
+        <span class="level-header level-1">Nível 1 · Analogia Intuitiva</span>
+        <p>Pense no processo como uma corrida com duas etapas: a primeira etapa é descobrir quem tem razão (fase cognitiva); a segunda é entregar o troféu e o prêmio em dinheiro ao vencedor (fase executiva). Antigamente você tinha que comprar dois ingressos e ir a dois estádios diferentes. Hoje, tudo acontece na mesma arena, num evento só contínuo.</p>
+      </div>
+      <div class="level-block">
+        <span class="level-header level-2">Nível 2 · Abordagem Dogmática de Graduação</span>
+        <p>O processo sincrético reúne na mesma relação processual as tutelas de conhecimento e satisfativa. A sentença de procedência condenatória encerra o módulo de acertamento do direito, inaugurando a fase executiva sem nova citação citatória, bastando a intimação do devedor na pessoa de seu advogado.</p>
+      </div>
+      <div class="level-block">
+        <span class="level-header level-3">Nível 3 · Foco em Concursos de Magistratura &amp; MP</span>
+        <p>Atenção à exceção do título executivo extrajudicial (art. 784 CPC): neste caso não há processo sincrético, e sim um <strong>processo de execução autônomo</strong>, no qual o réu é citado para pagar em 3 dias e sua defesa se instrumentaliza mediante ação autônoma incidental de embargos à execução.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 02 ══════════════════════════════ -->
+    <section id="mod2-cognicao" class="section">
+      <div class="section-label">Módulo 02</div>
+      <h2>2. A Ordem Lógica e Prévia de Cognição Judicial</h2>
+
+      <p>Quem recorre ao Poder Judiciário formula uma pretensão: busca a <strong>resposta de mérito</strong> (a tutela do bem da vida disputado). Contudo, o magistrado está submetido a uma rígida e inafastável <strong>ordem de precedência lógica de cognição</strong>.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>1º Passo: Exame dos Pressupostos Processuais</h4>
+          <p>O juiz afere se a relação processual nasceu e se desenvolveu de forma válida e regular. Se houver vício sanável, o juiz <strong>deve conceder prazo para saneamento</strong> (art. 139, IX e art. 317). Se for insanável ou não for corrigido, extingue-se o processo <strong>sem resolução de mérito</strong> (art. 485, IV do CPC).</p>
+        </div>
+        <div class="timeline-item">
+          <h4>2º Passo: Exame das Condições da Ação</h4>
+          <p>Preenchidos os pressupostos processuais, o juiz verifica se estão presentes as duas condições da ação consagradas no CPC/2015: <strong>legitimidade das partes</strong> e <strong>interesse de agir</strong>. Ausente qualquer delas, o autor é carecedor de ação e o processo é extinto <strong>sem resolução de mérito</strong> (art. 485, VI do CPC).</p>
+        </div>
+        <div class="timeline-item">
+          <h4>3º Passo: Exame do Mérito da Causa</h4>
+          <p>Superadas as duas ordens de questões prévias, o magistrado atinge o cerne da lide: acolhe ou rejeita o pedido formulado pelo autor, extinguindo o processo <strong>com resolução de mérito</strong> e formando coisa julgada material (art. 487, I do CPC).</p>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 485, IV e VI do CPC/2015 - Extinção sem Resolução de Mérito</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 485.</strong> O juiz não resolverá o mérito quando:<br>
+          (...)<br>
+          <strong>IV -</strong> verificar a <span class="kw">ausência de pressupostos de constituição e de desenvolvimento válido e regular do processo</span>;<br>
+          (...)<br>
+          <strong>VI -</strong> verificar a <span class="kw">ausência de legitimidade ou de interesse processual</span>.</p>
+          <div class="info-box dica-prova" style="margin-top:10px;">
+            <strong>Comentário Prático:</strong> Essa ordem é sucessiva e prejudicial: sem pressupostos processuais válidos, o juiz sequer tem autorização jurídica para examinar a legitimidade do autor; e sem condições da ação, é vedado pronunciar-se sobre a procedência ou improcedência do pedido.
+          </div>
+        </div>
+      </details>
+
+      <h3>2.1 A Natureza de Ordem Pública e a Inexistência de Preclusão</h3>
+      <p>Tanto os pressupostos processuais quanto as condições da ação constituem <strong>matéria de ordem pública</strong> (<em>questiones iuris</em> absolutas). Disso derivam três efeitos de máxima relevância prática:</p>
+      <ul>
+        <li><strong>Cognoscibilidade de ofício:</strong> O juiz tem o dever de examinar tais matérias mesmo que nenhuma das partes as tenha suscitado em suas petições;</li>
+        <li><strong>Inexistência de preclusão para o juiz e instâncias ordinárias:</strong> A falta de alegação pelo réu na contestação não preclui o tema. O magistrado pode analisar e reanalisar a ausência de pressupostos processuais em qualquer tempo e grau ordinário de jurisdição (1º grau e Tribunais de Justiça / TRFs);</li>
+        <li><strong>A Única e Decisiva Exceção (Instâncias Extraordinárias):</strong> Nas instâncias extraordinárias (Recurso Especial perante o STJ e Recurso Extraordinário perante o STF), <strong>NÃO se admite o exame de ofício de matérias de ordem pública sem o prévio PREQUESTIONAMENTO</strong> (Súmulas 282 e 356 do STF; Súmula 211 do STJ).</li>
+      </ul>
+
+      <div class="info-box pegadinha">
+        <span class="box-label">🎯 Pegadinha Suprema de Concurso (Magistratura e Analista)</span>
+        <p><em>"Matérias de ordem pública, como a falta de pressuposto processual de validade, podem ser apreciadas pelo STF ou STJ de ofício a qualquer momento, independentemente de prequestionamento?"</em><br>
+        <strong>RESPOSTA: ERRADO!</strong> Para que o STJ ou STF conheçam de matéria de ordem pública, é indispensável que o tema tenha sido debatido no Tribunal de origem (prequestionamento) ou que o recurso especial/extraordinário já tenha sido previamente conhecido por outro fundamento (efeito translativo subordinado ao conhecimento do recurso).</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 03 ══════════════════════════════ -->
+    <section id="mod3-vicios" class="section">
+      <div class="section-label">Módulo 03</div>
+      <h2>3. A Teoria das Invalidade Processuais: Nulidades vs. Ineficácia Transrescisória</h2>
+
+      <p>O sistema de nulidades do Processo Civil difere substancialmente do Direito Civil material. No Direito Privado, o negócio jurídico nulo de pleno direito não convalesce pelo decurso do tempo (art. 169 CC). No Processo Civil, impera o <strong>princípio da instrumentalidade</strong> e da <strong>segurança jurídica</strong>: a imensa maioria dos vícios processuais sana-se caso providências sejam adotadas ou o tempo transcorra.</p>
+
+      <h3>3.1 Nulidade Relativa vs. Nulidade Absoluta</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>Nulidade Relativa</h4>
+          <ul>
+            <li><strong>Objeto:</strong> Diz respeito a interesses predominantemente particulares das partes na relação procedimental;</li>
+            <li><strong>Iniciativa:</strong> Depende de provocação expressa da parte prejudicada; o juiz não pode conhecer de ofício;</li>
+            <li><strong>Momento de arguição:</strong> Deve ser arguida na <strong>primeira oportunidade</strong> em que couber à parte falar nos autos (art. 278 CPC);</li>
+            <li><strong>Efeito do silêncio:</strong> Preclusão imediata do direito de alegar, sanando-se o vício de plano.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Nulidade Absoluta</h4>
+          <ul>
+            <li><strong>Objeto:</strong> Decorre de vício estrutural que afeta as garantias fundamentais da jurisdição ou a higidez da relação processual pública;</li>
+            <li><strong>Iniciativa:</strong> Pode e deve ser conhecida <strong>de ofício</strong> pelo magistrado ou alegada por qualquer das partes;</li>
+            <li><strong>Momento de arguição:</strong> Não preclui nas instâncias ordinárias durante a marcha processual;</li>
+            <li><strong>Limite Temporal Máximo:</strong> Transita em julgado a sentença, a nulidade absoluta <strong>SÓ PODE SER DISCUTIDA ATRAVÉS DE AÇÃO RESCISÓRIA</strong> (art. 966 CPC) no prazo decadencial estrito de <strong>2 (dois) anos</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-box atencao">
+        <span class="box-label">📝 O Efeito Pacificador do Prazo Decadencial da Ação Rescisória</span>
+        <p>Ultrapassado o biênio de 2 anos a contar do trânsito em julgado da decisão sem o ajuizamento da Ação Rescisória, <strong>até mesmo as mais graves nulidades absolutas restam definitivamente convalidadas</strong> pelo manto soberano da coisa julgada material. Nada mais resta a fazer contra a sentença, sob a ótica da nulidade.</p>
+      </div>
+
+      <h3>3.2 A Categoria Dogmática da Ineficácia Transrescisória (*Querela Nullitatis*)</h3>
+      <p>Se as nulidades absolutas se sanam após os 2 anos da rescisória, como solucionar casos gravíssimos em que o réu jamais foi citado e correu o processo à revelia, ou quando a sentença foi proferida por alguém que não era juiz?</p>
+      <p>A doutrina e a jurisprudência consagraram a existência dos <strong>atos e processos ineficazes</strong> (vícios transrescisórios ou inexistência jurídica relativa):</p>
+
+      <div class="card dark-box">
+        <h4 style="color:#FACC15;">Processo Nulo vs. Processo Ineficaz</h4>
+        <p>A categoria da ineficácia não traduz inexistência no plano físico-material. O processo existiu factualmente, tramitou em cartório, o juiz assinou sentenças e até penhoras foram realizadas no mundo concreto. Ambos existem e contêm vícios.</p>
+        <p>A diferença essencial repousa <strong>no grau de gravidade do vício e na barreira temporal de sanação</strong>:</p>
+        <ul>
+          <li><strong>No processo nulo:</strong> O vício perdura no máximo até o biênio decadencial da ação rescisória. Escoado o prazo, convalida-se;</li>
+          <li><strong>No processo ineficaz:</strong> O vício <strong>jamais preclui, não se sana pelo tempo e rompe a barreira da rescisória</strong>. O ato decisório é ineficaz perante o prejudicado para sempre.</li>
+        </ul>
+      </div>
+
+      <h3>3.3 Quadro Comparativo: Instrumentos de Impugnação</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Critério Diferenciador</th>
+            <th>Ação Rescisória (Para Processo Nulo)</th>
+            <th>Querela Nullitatis / Declaratória de Ineficácia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Espécie de Vício Atacado</strong></td>
+            <td>Nulidade absoluta prevista taxativamente no rol do art. 966 do CPC (ex: juiz impedido, incompetência absoluta, violação manifesta de norma jurídica).</td>
+            <td>Vício insanável transrescisório de eficácia (ex: ausência ou nulidade insanável da citação de réu revel).</td>
+          </tr>
+          <tr>
+            <td><strong>Prazo para Propositura</strong></td>
+            <td><strong>Decadencial de 2 (dois) anos</strong>, contados do trânsito em julgado da última decisão (art. 975 CPC).</td>
+            <td><strong>Imprescritível</strong> (sem prazo decadencial ou prescricional). Pode ser ajuizada a qualquer tempo.</td>
+          </tr>
+          <tr>
+            <td><strong>Órgão Competente para Julgar</strong></td>
+            <td>Competência originária do <strong>Tribunal</strong> (TJ ou TRF; STJ se acórdão seu).</td>
+            <td>Juízo de <strong>1º Grau que proferiu a sentença viciada</strong> (distribuição por dependência ao processo original).</td>
+          </tr>
+          <tr>
+            <td><strong>Mecanismo Alternativo na Execução</strong></td>
+            <td>Não cabe via simples impugnação; depende de ação autônoma e depósito de 5% (art. 968, II).</td>
+            <td>Pode ser veiculada via <strong>Impugnação ao Cumprimento de Sentença (Art. 525, § 1º, I CPC)</strong> ou Embargos à Execução.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 525, § 1º, I do CPC/2015 - Arguição de Falta/Nulidade de Citação na Execução</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 525.</strong> Transcorrido o prazo previsto no art. 523 sem o pagamento voluntário, inicia-se o prazo de 15 (quinze) dias para que o executado, independentemente de penhora ou nova intimação, apresente impugnação.<br>
+          <strong>§ 1º</strong> Na impugnação, o executado poderá alegar:<br>
+          <strong>I -</strong> <span class="kw">falta ou nulidade da citação se, na fase de conhecimento, o processo correu à revelia</span>.</p>
+          <div class="info-box jurisprudencia" style="margin-top:10px;">
+            <strong>Jurisprudência Pacífica do STJ:</strong> A alegação de ausência ou nulidade de citação prescinde de Ação Rescisória. É vício transrescisório que autoriza a propositura de <em>querela nullitatis</em> a qualquer tempo perante o primeiro grau ou a interposição de simples impugnação ao cumprimento de sentença.
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 04 ══════════════════════════════ -->
+    <section id="mod4-eficacia" class="section">
+      <div class="section-label">Módulo 04</div>
+      <h2>4. Os Pressupostos Processuais de Eficácia</h2>
+
+      <p>São os requisitos de existência jurídica e de aptidão essencial para que o processo gere eficácia vinculante em face dos jurisdicionados. Se omitidos, o ato decisório é desprovido de eficácia jurídica plena, não operando coisa julgada material.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>a) Existência de Jurisdição (Investidura)</h4>
+          <p>A jurisdição é monopólio estatal conferido a membros do Poder Judiciário regularmente investidos no cargo. Atos praticados por quem não é juiz (usurpador de função, ou indivíduo que perdeu a investidura antes do ato) são <strong>ineficazes</strong> e juridicamente inidôneos.</p>
+        </div>
+        <div class="card">
+          <h4>b) Existência de Demanda (Inércia da Jurisdição)</h4>
+          <p>A jurisdição é inerte (art. 2º CPC - <em>ne procedat iudex ex officio</em>). É indispensável que o titular promova a demanda. O que for julgado sem pedido formulado é ineficaz: a <strong>sentença extra petita</strong> (julga algo fora do pedido) e a <strong>ultra petita</strong> (no quantum que excede o pedido) não produzem efeitos válidos.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>c) Capacidade Postulatória</h4>
+          <p>Aptidão técnica para postular perante o Judiciário (privativa de advogados, Defensoria Pública e MP). O <strong>art. 104, § 2º do CPC</strong> estabelece expressamente a consequência jurídica: o ato praticado por quem não possui capacidade postulatória, não sendo ratificado no prazo, <strong>será havido por INEFICAZ</strong>.</p>
+        </div>
+        <div class="card">
+          <h4>d) Citação Válida do Réu</h4>
+          <p>É a omissão prática mais frequente. Antes da citação, o processo já existe juridicamente, mas de forma <strong>incompleta</strong> (relação linear entre autor e Estado-Juiz). Para que a sentença vincule o réu, a citação é pressuposto de eficácia inafastável da relação processual.</p>
+        </div>
+      </div>
+
+      <div class="info-box dica-prova">
+        <span class="box-label">💡 Atenção à Exceção Notável: Art. 332 do CPC</span>
+        <p>Existe hoje uma hipótese paradigmática em que a citação do réu <strong>NÃO É PRESSUPOSTO DE EFICÁCIA da sentença de mérito</strong>: trata-se da <strong>Improcedência Liminar do Pedido (Art. 332 do CPC)</strong>.<br>
+        Nas causas que dispensem fase instrutória e contrariem enunciado de súmula do STF/STJ, acórdão em IRDR/IAC ou precedente vinculante, o juiz proferirá sentença julgando liminarmente improcedente o pedido do autor <strong>sem citar o réu</strong>. Essa sentença tem resolução de mérito, faz coisa julgada e é 100% eficaz!</p>
+      </div>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 104, § 2º do CPC - Efeito da Falta de Ratificação de Capacidade Postulatória</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 104.</strong> O advogado não será admitido a postular em juízo sem procuração, salvo para evitar preclusão, decadência ou prescrição, ou para praticar ato considerado urgente.<br>
+          <strong>§ 1º</strong> Nas hipóteses previstas no caput, o advogado deverá, independentemente de caução, exibir a procuração no prazo de 15 (quinze) dias, prorrogável por igual período por despacho do juiz.<br>
+          <strong>§ 2º</strong> O ato não ratificado <span class="kw">será considerado ineficaz</span> relativamente àquele em cujo nome foi praticado, respondendo o advogado pelas despesas e por perdas e danos.</p>
+        </div>
+      </details>
+
+      <div class="card gold">
+        <h4>e) Outros Casos de Ineficácia Óbvia</h4>
+        <p>A doutrina elenca outros elementos materiais sem os quais o provimento é ineficaz: <strong>sentença sem assinatura do juiz</strong> (é mero documento apócrifo sem fé pública) e <strong>sentença sem parte dispositiva</strong> (se não há dispositivo com comando decisório, não há julgamento algum, sendo inidônea a gerar efeitos executivos).</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 05 ══════════════════════════════ -->
+    <section id="mod5-validade" class="section">
+      <div class="section-label">Módulo 05</div>
+      <h2>5. Os Pressupostos Processuais de Validade: Requisitos Positivos e Negativos</h2>
+
+      <p>Os pressupostos processuais de validade são as condições legais necessárias para que a relação jurídica processual se desenvolva de modo regular e produza um julgamento de mérito imune a nulidades.</p>
+
+      <h3>5.1 Pressupostos de Validade Positivos (Devem Estar Presentes)</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>1. Petição Inicial Apta</h4>
+          <p>A petição inicial deve atender aos requisitos do art. 319 e não incidir nos vícios de inépcia do art. 330, § 1º do CPC. Se inepta, impede o contraditório e o prosseguimento regular.</p>
+          <div class="info-box atencao" style="margin-top:10px;">
+            <strong>Distinção Fina:</strong> A falta de pedido (art. 330, § 1º, I) gera a <strong>ineficácia</strong> do pronunciamento; as demais hipóteses de inépcia (narração fática confusa, causa de pedir ilógica) geram <strong>nulidade</strong> sanável via emenda (art. 321 CPC).
+          </div>
+        </div>
+        <div class="card">
+          <h4>2. Juízo Competente e Juiz Imparcial</h4>
+          <p>A competência é atributo do órgão judicial; a imparcialidade é predicado subjetivo do magistrado pessoa física:</p>
+          <ul>
+            <li><strong>Competência Absoluta:</strong> Matéria de ordem pública; gera nulidade processual e enseja Ação Rescisória (art. 966, II);</li>
+            <li><strong>Competência Relativa:</strong> Interesse privado territorial/valor; prorroga-se caso o réu não alegue em preliminar de contestação;</li>
+            <li><strong>Impedimento:</strong> Presunção absoluta de parcialidade; gera nulidade e cabe Ação Rescisória (art. 966, II);</li>
+            <li><strong>Suspeição:</strong> Presunção relativa de parcialidade; deve ser arguida na primeira oportunidade sob pena de preclusão absoluta.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>3. Capacidade das Partes</h4>
+        <p>Desdobra-se em <strong>capacidade de ser parte</strong> e <strong>capacidade processual</strong> (capacidade para estar em juízo sem assistência ou representação). Estudaremos em minúcias no Módulo 06.</p>
+      </div>
+
+      <h3>5.2 Pressupostos Processuais Negativos (Devem Estar Ausentes)</h3>
+      <p>São circunstâncias fáticas ou processuais cuja <strong>presença impede o juiz de julgar o mérito da ação</strong>, determinando a extinção do feito sem resolução de mérito (art. 485, V e VII do CPC):</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Pressuposto Negativo</th>
+            <th>Conceito Dogmático</th>
+            <th>Efeito Prático</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Litispendência</strong></td>
+            <td>Quando se reproduz ação que está em curso. Há litispendência entre 2 ações que têm as mesmas partes, mesma causa de pedir e mesmo pedido (art. 337, §§ 1º, 2º e 3º CPC).</td>
+            <td>Extingue-se o segundo processo sem julgamento de mérito (art. 485, V).</td>
+          </tr>
+          <tr>
+            <td><strong>Coisa Julgada</strong></td>
+            <td>Quando se repete ação que já foi decidida por sentença transitada em julgado e não mais sujeita a recurso (art. 337, § 4º CPC).</td>
+            <td>Extingue-se a nova demanda sem resolução de mérito, preservando a segurança jurídica.</td>
+          </tr>
+          <tr>
+            <td><strong>Perempção</strong></td>
+            <td>Penalidade imposta ao autor que, por <strong>3 (três) vezes</strong> consecutivas ou alternadas, dá causa à extinção do processo sem resolução de mérito por <strong>abandono da causa</strong> (art. 485, III e art. 486, § 3º CPC).</td>
+            <td>O autor perde o direito de propor nova ação contra o réu com o mesmo objeto. Seu direito material só poderá ser alegado como matéria de defesa.</td>
+          </tr>
+          <tr>
+            <td><strong>Convenção / Compromisso Arbitral</strong></td>
+            <td>As partes capazes celebraram cláusula compromissória ou compromisso de arbitragem para dirimir litígios de direitos patrimoniais disponíveis (Lei 9.307/96 e art. 485, VII CPC).</td>
+            <td>O juiz estatal extingue o processo sem mérito em respeito à jurisdição arbitral pactuada (salvo se não alegada pelo réu).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box pegadinha">
+        <span class="box-label">🎯 Pegadinha Clássica: A Perempção no Processo Civil</span>
+        <p>Bancas adoram confundir perempção penal com civil! No Processo Civil, a perempção <strong>NÃO extingue o direito material</strong> de crédito do autor. O autor continua credor da dívida, mas perde a possibilidade de ajuizar ação para cobrança judicial. Se o réu vier a processá-lo cobrando outra coisa, o autor pode invocar seu crédito em sede de reconvenção ou exceção substancial de retenção/defesa!</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 06 ══════════════════════════════ -->
+    <section id="mod6-capacidade" class="section">
+      <div class="section-label">Módulo 06</div>
+      <h2>6. Teoria da Capacidade no Processo Civil: A Tríplice Dimensão</h2>
+
+      <p>O conceito de capacidade processual não se confunde com o do Direito Civil material, embora haja uma simetria estrutural evidente entre ambos os ramos. No Direito Civil, distingue-se a capacidade de direito (gozo) da capacidade de fato (exercício). No Processo Civil, a dogmática consagra três espécies distintas de capacidade:</p>
+
+      <div class="grid3">
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:10px;">👤</div>
+          <h4>1. Capacidade de Ser Parte</h4>
+          <p><strong>Definição:</strong> Aptidão genérica para figurar em um dos polos da relação jurídica processual (autor ou réu). Pertence a todas as pessoas que têm personalidade jurídica no direito material.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:10px;">⚖️</div>
+          <h4>2. Capacidade Processual (Estar em Juízo)</h4>
+          <p><strong>Definição:</strong> Aptidão para exercer, por si só, atos processuais válidos sem a necessidade de ser representado ou assistido por outrem (também chamada *legitimatio ad processum*).</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:10px;">📜</div>
+          <h4>3. Capacidade Postulatória</h4>
+          <p><strong>Definição:</strong> Aptidão técnica e privativa para dirigir requerimentos e articular defesas e pretensões formais perante o Poder Judiciário. Pertence a advogados, Defensores e MP.</p>
+        </div>
+      </div>
+
+      <h3>6.1 Simetria entre o Direito Civil e o Processo Civil</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Direito Material (Direito Civil)</th>
+            <th>Direito Formal (Processo Civil)</th>
+            <th>Paralelo Dogmático</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Capacidade de Direito (ou de Gozo)</strong><br>Aptidão conferida a todas as pessoas de ser titular de direitos e deveres na ordem civil (art. 1º CC).</td>
+            <td><strong>Capacidade de Ser Parte</strong><br>Aptidão para figurar no polo ativo ou passivo de uma ação judicial.</td>
+            <td>Quem pode ter direitos no mundo civil pode, em regra, ser parte em juízo para postulá-los ou defendê-los.</td>
+          </tr>
+          <tr>
+            <td><strong>Capacidade de Fato (ou de Exercício)</strong><br>Aptidão para exercer por si mesmo os atos da vida civil, sem assistência ou representação legal.</td>
+            <td><strong>Capacidade Processual (Estar em Juízo)</strong><br>Aptidão para praticar atos processuais por si mesmo, sem o concurso de representante legal ou curador.</td>
+            <td>Quem tem capacidade de fato tem plena capacidade processual. O incapaz civil não tem capacidade processual própria, devendo ser integrado.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>6.2 Capacidade de Ser Parte e os Entes Despersonalizados</h3>
+      <p>No Direito Civil, apenas as pessoas físicas ou jurídicas dotadas de personalidade jurídica gozam de capacidade de direito. Todavia, <strong>o CPC vai além e confere capacidade de ser parte a entes despersonalizados</strong> (entes formais sem personalidade jurídica material), porque a realidade fática e o tráfego jurídico exigem que eles possam demandar e ser demandados em juízo:</p>
+
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Rol de Entes Despersonalizados (Art. 75 CPC)</h4>
+          <ul>
+            <li><strong>Massa Falida:</strong> Representada pelo Administrador Judicial;</li>
+            <li><strong>Condomínio Edilício:</strong> Representado pelo Síndico eleito;</li>
+            <li><strong>Espólio:</strong> Representado pelo Inventariante (ou administrador provisório);</li>
+            <li><strong>Herança Jacente ou Vacante:</strong> Representada pelo seu curador;</li>
+            <li><strong>Sociedades Sem Personalidade Jurídica (de fato):</strong> Representadas pela pessoa encarregada de sua administração;</li>
+            <li><strong>O Nascituro:</strong> Defesa de seus direitos pré-natais (alimentos gravídicos).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Regra de Ouro: Excepcionalidade</h4>
+          <p>Os entes despersonalizados <strong>SÓ possuem capacidade de ser parte quando houver autorização legislativa expressa</strong>. A capacidade de ser parte é a regra para as pessoas dotadas de personalidade, e exceção estrita para entes despersonalizados criados pelo legislador processual.</p>
+        </div>
+      </div>
+
+      <h3>6.3 Incapacidade Processual &amp; O Procedimento de Saneamento do Art. 76</h3>
+      <p>A pessoa civilmente incapaz não tem capacidade processual autônoma. Para figurar validamente em juízo, sua incapacidade deve ser suprida:</p>
+      <ul>
+        <li><strong>Incapacidade Absoluta (art. 3º CC):</strong> É <strong>REPRESENTADA</strong> pelos pais, tutores ou curadores;</li>
+        <li><strong>Incapacidade Relativa (art. 4º CC):</strong> É <strong>ASSISTIDA</strong> pelos pais, tutores ou curadores, assinando os atos em conjunto.</li>
+      </ul>
+
+      <p>O vício de incapacidade processual ou de representação postulatória é um <strong>defeito sanável</strong>. O juiz não pode extinguir o processo sumariamente: deve abrir prazo razoável para que a parte corrija a falha.</p>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 76 do CPC/2015 - O Tratamento das Nulidades de Capacidade Processual</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 76.</strong> Verificada a incapacidade processual ou a irregularidade da representação da parte, o juiz suspenderá o processo e designará prazo razoável para que seja sanado o vício.<br>
+          <strong>§ 1º</strong> Descumprida a determinação, caso o processo esteja na instância originária:<br>
+          <strong>I -</strong> <span class="kw">o processo será extinto, se a providência couber ao autor</span>;<br>
+          <strong>II -</strong> <span class="kw">o réu será considerado revel, se a providência lhe couber</span>;<br>
+          <strong>III -</strong> <span class="kw">o terceiro será excluído do processo, se a providência lhe couber</span>.<br>
+          <strong>§ 2º</strong> Descumprida a determinação em fase recursal perante tribunal de justiça, tribunal regional federal ou tribunal superior, o relator:<br>
+          <strong>I -</strong> não conhecerá do recurso, se a providência couber ao recorrente;<br>
+          <strong>II -</strong> determinará o desentranhamento das contrarrazões, se a providência couber ao recorrido.</p>
+        </div>
+      </details>
+
+      <h3>6.4 Capacidade Postulatória: Regra, Exceções e Consequências</h3>
+      <p>A capacidade postulatória é privativa dos bacharéis regularmente inscritos nos quadros da <strong>Ordem dos Advogados do Brasil (OAB)</strong>, dos membros da <strong>Defensoria Pública</strong> e do <strong>Ministério Público</strong> (art. 103 CPC).</p>
+      
+      <div class="info-box jurisprudencia">
+        <span class="box-label">⚖️ As Exceções Legais: O Jus Postulandi Direto do Jurisdicionado</span>
+        <p>A lei autoriza excepcionalmente a postulação em juízo sem assistência obrigatória de advogado nos seguintes casos estritos:</p>
+        <ul>
+          <li><strong>Juizados Especiais Cíveis Estaduais (Lei 9.099/95, art. 9º):</strong> Em causas com valor de até <strong>20 salários mínimos</strong> (para recorrer ao Colégio Recursal, o advogado é indispensável);</li>
+          <li><strong>Habeas Corpus (art. 654 CPP):</strong> Pode ser impetrado por qualquer pessoa do povo, nacional ou estrangeira, alfabetizada ou não;</li>
+          <li><strong>Justiça do Trabalho (Art. 791 da CLT):</strong> Empregado e empregador podem reclamar pessoalmente (com a restrição da Súmula 425 do TST, que exige advogado em Ação Rescisória, Ação Cautelar, Mandado de Segurança e recursos ao TST);</li>
+          <li><strong>Ação de Alimentos (Lei 5.478/68, art. 2º):</strong> O credor pode comparecer em cartório e ditar o pedido verbalmente ao escrivão.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 07 ══════════════════════════════ -->
+    <section id="mod7-legitimidade" class="section">
+      <div class="section-label">Módulo 07</div>
+      <h2>7. Diferenciação Científica: Capacidade Processual vs. Legitimidade ad causam</h2>
+
+      <p>A distinção entre capacidade processual e legitimidade para a causa (*legitimatio ad causam*) é uma das questões mais clássicas e eliminatórias dos concursos da magistratura e carreiras jurídicas de topo.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Critério de Cotejo</th>
+            <th>Capacidade Processual (*Legitimatio ad processum*)</th>
+            <th>Legitimidade das Partes (*Legitimatio ad causam*)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Natureza Dogmática</strong></td>
+            <td><strong>Pressuposto Processual de Validade</strong> (art. 485, IV do CPC).</td>
+            <td><strong>Condição da Ação</strong> (art. 17 e art. 485, VI do CPC).</td>
+          </tr>
+          <tr>
+            <td><strong>Caráter da Aptidão</strong></td>
+            <td><strong>Atributo pessoal e genérico</strong> da pessoa, totalmente independente da demanda ajuizada.</td>
+            <td><strong>Pertinência subjetiva concreta</strong> entre os litigantes e a relação de direito material deduzida na petição.</td>
+          </tr>
+          <tr>
+            <td><strong>Forma de Verificação</strong></td>
+            <td>Aferida <strong>em tese e em abstrato</strong>: basta saber se a pessoa é maior de idade e capaz mentalmente para saber que tem capacidade para propor qualquer processo.</td>
+            <td><strong>Impossível aferir em abstrato</strong>: só se descobre se há legitimidade examinando qual é o litígio, quem sofreu a lesão e contra quem se pretende o provimento.</td>
+          </tr>
+          <tr>
+            <td><strong>Amplitude Temporal</strong></td>
+            <td>Se a pessoa tem capacidade processual, ela a possui para todas e quaisquer ações perante a justiça.</td>
+            <td>A pessoa pode ser legítima para uma ação de cobrança de seu aluguel, mas é manifestamente ilegítima para cobrar o aluguel do vizinho.</td>
+          </tr>
+          <tr>
+            <td><strong>Consequência da Falha Insanável</strong></td>
+            <td>Extinção sem resolução de mérito por falta de pressuposto de validade (art. 485, IV).</td>
+            <td>Extinção sem resolução de mérito por carência da ação (art. 485, VI).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Explicações em 3 Níveis -->
+      <div class="level-block">
+        <span class="level-header level-1">Nível 1 · Analogia Intuitiva</span>
+        <p>A capacidade processual é como uma carteira de habilitação (CNH): você a tira uma vez e tem autorização para dirigir qualquer carro na rua. Já a legitimidade é ter a chave daquele carro específico que está estacionado: mesmo com CNH válida, você não pode entrar e levar embora o carro de um estranho que não é seu!</p>
+      </div>
+      <div class="level-block">
+        <span class="level-header level-2">Nível 2 · Abordagem Dogmática de Graduação</span>
+        <p>Para propor uma ação de divórcio, um indivíduo de 25 anos tem plena capacidade processual (maior e capaz). Porém, ele só tem legitimidade ad causam ativa se ele próprio for casado com a ré; ele jamais terá legitimidade para pleitear o divórcio dos seus tios, porque a titularidade da relação de direito material não lhe pertence.</p>
+      </div>
+      <div class="level-block">
+        <span class="level-header level-3">Nível 3 · Foco em Concursos de Alto Nível (Teoria da Asserção)</span>
+        <p>A legitimidade é aferida <em>in statu assertionis</em> (à luz das afirmações do autor na petição inicial). Se na instrução probatória o juiz constatar que o réu de fato não praticou o ato ilícito alegado, não se tratará de ilegitimidade passiva (extinção sem mérito), mas sim de improcedência do pedido com julgamento de mérito (art. 487, I CPC), formando coisa julgada material em favor do réu.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPAS MENTAIS ══════════════════════════════ -->
+    <section id="mapas-mentais" class="section">
+      <div class="section-label">Recurso Visual</div>
+      <h2>🧠 Mapas Mentais: Arquitetura em Árvore Hierárquica</h2>
+
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ SISTEMA DOS PRESSUPOSTOS PROCESSUAIS (CPC/2015)</div>
+        
+        <div class="mm-l1">📂 1. PRESSUPOSTOS DE EFICÁCIA (Vícios Transrescisórios / Insanáveis)</div>
+        <div class="mm-l2">├── 🏛️ Jurisdição: Investidura formal do Magistrado</div>
+        <div class="mm-l2">├── 📜 Demanda: Inércia da Jurisdição (Sentença extra/ultra petita é ineficaz)</div>
+        <div class="mm-l2">├── ⚖️ Capacidade Postulatória: Art. 104, §2º (Ineficaz se não ratificado)</div>
+        <div class="mm-l2">├── 📩 Citação Válida do Réu: Completa a relação (Exceção: Art. 332 - Improcedência Liminar)</div>
+        <div class="mm-l2">└── ✍️ Requisitos Materiais Mínimos: Assinatura do Juiz e Dispositivo na Sentença</div>
+
+        <div class="mm-l1">📂 2. PRESSUPOSTOS DE VALIDADE (Positivos / Devem Estar Presentes)</div>
+        <div class="mm-l2">├── 📑 Petição Inicial Apta: Requisitos do Art. 319 (Inépcia gera nulidade / falta de pedido gera ineficácia)</div>
+        <div class="mm-l2">├── 🏛️ Juízo Competente: Competência Absoluta (Ordem Pública / Gera Rescisória)</div>
+        <div class="mm-l2">├── ⚖️ Juiz Imparcial: Não incidência de Impedimento (Gera Rescisória - Art. 966, II)</div>
+        <div class="mm-l2">└── 👤 Capacidade: De Ser Parte (Entes dotados de personalidade + Despersonalizados legais) e Processual</div>
+
+        <div class="mm-l1">📂 3. PRESSUPOSTOS NEGATIVOS (Devem Estar Ausentes / Extinção Art. 485)</div>
+        <div class="mm-l2">├── 🔁 Litispendência: Identidade de Partes, Causa de Pedir e Pedido em curso</div>
+        <div class="mm-l2">├── 🛡️ Coisa Julgada: Demanda idêntica com julgamento definitivo anterior</div>
+        <div class="mm-l2">├── 🚫 Perempção: Perda do direito de ação após 3 abandonos consecutivos</div>
+        <div class="mm-l2">└── 🤝 Compromisso Arbitral: Existência de cláusula de arbitragem válida</div>
+
+        <div class="mm-l1">📂 4. REGIME DA CAPACIDADE NO PROCESSO CIVIL</div>
+        <div class="mm-l2">├── 👤 De Ser Parte: Capacidade de Gozo (Pessoas + Espólio, Massa Falida, Condomínio)</div>
+        <div class="mm-l2">├── 🚶 Processual (Estar em Juízo): Capacidade de Fato (Suprida por Representação ou Assistência)</div>
+        <div class="mm-l2">│    └── Saneamento Art. 76: Não corrigido -> Autor: Extinção | Réu: Revelia | 3º: Exclusão</div>
+        <div class="mm-l2">└── 🎓 Postulatória: Privativa de Advogados/MP (Exceções: JEC até 20 SM, HC, CLT art. 791)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MNEMÔNICOS ══════════════════════════════ -->
+    <section id="mnemonicos" class="section">
+      <div class="section-label">Técnicas de Memorização</div>
+      <h2>⚡ Mnemônicos Mágicos de Fixação</h2>
+
+      <div class="grid2">
+        <div class="mnemonico-box">
+          <div class="mnemonico-title">Pressupostos Negativos: C.O.P.A.-L</div>
+          <p style="color:#E2E8F0; margin-bottom:1rem;">Circunstâncias que <strong>NÃO PODEM ESTAR PRESENTES</strong> no processo sob pena de extinção sem mérito (art. 485 CPC):</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">C</span><strong>Coisa Julgada</strong> (sentença de mérito irrecorrível prévia)</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">O</span><strong>Objeção de Arbitragem</strong> (compromisso ou convenção arbitral pactuada)</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">P</span><strong>Perempção</strong> (três extinções anteriores por abandono da causa)</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">A</span><strong>Acordo / Transação</strong> anterior ou desistência homologada</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">L</span><strong>Litispendência</strong> (repetição de ação idêntica em curso)</p>
+        </div>
+
+        <div class="mnemonico-box">
+          <div class="mnemonico-title">Efeitos do Art. 76: E.R.E.</div>
+          <p style="color:#E2E8F0; margin-bottom:1rem;">Consequências caso o vício de capacidade processual ou representação <strong>NÃO SEJA SANADO NO PRAZO</strong>:</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">E</span><strong>Extinção</strong> do processo sem resolução de mérito (se couber ao Autor)</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">R</span><strong>Revelia</strong> decretada nos autos (se a omissão couber ao Réu)</p>
+          <p style="margin: 6px 0;"><span class="mnemonico-letter">E</span><strong>Exclusão</strong> do feito de forma compulsória (se couber ao Terceiro interveniente)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FLASHCARDS ══════════════════════════════ -->
+    <section id="flashcards" class="section">
+      <div class="section-label">Fixação Rápida</div>
+      <h2>🃏 Flashcards Interativos de Memorização</h2>
+      <p style="font-family:'Lora', serif; color:var(--text-muted);">Clique sobre os cards abaixo para revelar a resposta comentada e consolidar a memória ativa de longo prazo:</p>
+
+      <div class="flashcards-grid">
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 01 · Dogmática</div>
+            <div class="fc-pergunta">Qual a diferença substancial entre processo e procedimento?</div>
+          </div>
+          <div class="fc-resposta">Processo é a relação jurídica processual e o instrumento da jurisdição para aplicar a lei ao caso concreto. Procedimento é o rito formal e exterior estabelecido pela lei para ordenar cronologicamente a prática dos atos processuais.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 02 · CPC/2015</div>
+            <div class="fc-pergunta">O que traduz a natureza sincrética (ou eclética) do processo civil moderno?</div>
+          </div>
+          <div class="fc-resposta">A reunião, num processo unitário, das tutelas cognitiva e executiva. A sentença condenatória não encerra mais o processo, mas apenas a fase de cognição, iniciando-se imediatamente a fase executiva (cumprimento de sentença).</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 03 · Ordem de Julgamento</div>
+            <div class="fc-pergunta">Qual a ordem estrita de cognição prévia do magistrado ao analisar a petição inicial?</div>
+          </div>
+          <div class="fc-resposta">1º Pressupostos Processuais (validade/eficácia); 2º Condições da Ação (legitimidade e interesse); 3º Mérito da Causa (acolhimento ou rejeição do pedido da petição inicial).</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 04 · Recursos Excepcionais</div>
+            <div class="fc-pergunta">Matéria de ordem pública pode ser conhecida de ofício pelo STJ ou STF sem prequestionamento?</div>
+          </div>
+          <div class="fc-resposta">NÃO! O prequestionamento é requisito constitucional de admissibilidade do REsp e do RExt (Súmulas 282 e 356 do STF e 211 do STJ). Sem ele, é vedado ao tribunal superior apreciar matéria de ordem pública de ofício.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 05 · Vícios Decisórios</div>
+            <div class="fc-pergunta">Qual a distinção fundamental de efeitos temporais entre o processo nulo e o ineficaz?</div>
+          </div>
+          <div class="fc-resposta">No processo nulo, a nulidade absoluta se convalida após o prazo decadencial de 2 anos da Ação Rescisória. No processo ineficaz (ex: réu revel sem citação), o vício é transrescisório, imprescritível e arguível a qualquer tempo via querela nullitatis.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 06 · Eficácia Processual</div>
+            <div class="fc-pergunta">Existe hipótese legal de sentença de mérito eficaz proferida sem a prévia citação do réu?</div>
+          </div>
+          <div class="fc-resposta">SIM. A Improcedência Liminar do Pedido (Art. 332 do CPC). Quando a petição contrariar súmula do STF/STJ ou precedente vinculante, o juiz julga liminarmente improcedente o mérito antes de determinar a citação do réu.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 07 · Entes Despersonalizados</div>
+            <div class="fc-pergunta">O espólio e a massa falida possuem personalidade jurídica no Direito Civil? E no Processo?</div>
+          </div>
+          <div class="fc-resposta">No Direito Civil NÃO possuem personalidade jurídica (são entes despersonalizados). No Processo Civil, todavia, a lei processual (art. 75 do CPC) confere-lhes excepcionalmente plena capacidade de ser parte.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 08 · Art. 76 do CPC</div>
+            <div class="fc-pergunta">Se o réu, instado pelo juiz a sanar falha na representação processual, mantiver-se inerte, o que ocorre?</div>
+          </div>
+          <div class="fc-resposta">O magistrado decretará a sua revelia (art. 76, § 1º, II do CPC), desconsiderando sua resposta e fazendo incidir a presunção de veracidade sobre os fatos alegados pelo autor.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Card 09 · Pressuposto Negativo</div>
+            <div class="fc-pergunta">O que caracteriza a perempção no Processo Civil e qual o seu efeito no direito material?</div>
+          </div>
+          <div class="fc-resposta">Caracteriza-se quando o autor dá causa por 3 vezes à extinção do processo por abandono (art. 486, §3º). O efeito atinge apenas o direito de ação (não pode mais processar o réu), permanecendo intacto o seu direito material para ser usado em defesa.</div>
+          <div class="fc-dica-clique">Toque para ver a resposta ↻</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA (QUESTÕES) ══════════════════════════════ -->
+    <section id="revisao-ativa" class="section">
+      <div class="section-label">Testes de Fixação</div>
+      <h2>📝 Revisão Ativa Multiformato: Questões Comentadas</h2>
+
+      <!-- Discursiva -->
+      <div class="exercise">
+        <p><strong>Questão Discursiva 01 (Magistratura Estadual):</strong><br>
+        Diferencie minuciosamente a incapacidade processual (de estar em juízo) da ilegitimidade <em>ad causam</em>, esclarecendo sob qual ótica teórica ambas são examinadas e quais as consequências processuais caso não sejam sanadas.</p>
+        <details>
+          <summary>Ver resposta e espelho de correção</summary>
+          <div class="gabarito">
+            <strong>Padrão de Resposta / Espelho de Prova:</strong><br>
+            <strong>1. Natureza Jurídica:</strong> A capacidade processual (<em>legitimatio ad processum</em>) consubstancia pressuposto processual de validade (art. 485, IV CPC). Por sua vez, a legitimidade <em>ad causam</em> é condição da ação (art. 17 e art. 485, VI CPC).<br>
+            <strong>2. Caráter Abstrato vs. Concreto:</strong> A capacidade processual é atributo pessoal e genérico da pessoa humana, aferível em abstrato pela maioridade e higidez civil, valendo para qualquer ação. Já a legitimidade exige pertinência subjetiva concreta entre os polos da lide e a relação jurídica de direito material posta em julgamento.<br>
+            <strong>3. Consequências da Falha:</strong> A incapacidade processual é vício sanável nos termos do art. 76 do CPC; caso o autor não sane no prazo assinalado, o processo será extinto sem resolução de mérito (art. 485, IV). Já a ilegitimidade de parte, se insanável ou evidente desde a petição inicial, conduz de plano ao indeferimento da inicial ou à extinção sem resolução de mérito por carência de ação (art. 485, VI CPC).
+          </div>
+        </details>
+      </div>
+
+      <!-- Verdadeiro ou Falso -->
+      <div class="exercise">
+        <p><strong>Questão 02 (Verdadeiro ou Falso):</strong><br>
+        ( &nbsp; ) O ato processual praticado por advogado sem procuração e que não venha a ser oportunamente ratificado no prazo conferido pelo juiz gera nulidade absoluta da relação processual, devendo ser desconstituído mediante Ação Rescisória no prazo bienal.</p>
+        <details>
+          <summary>Ver gabarito e comentário legal</summary>
+          <div class="gabarito">
+            <strong>GABARITO: FALSO.</strong><br>
+            <strong>Fundamentação:</strong> Nos termos do art. 104, § 2º do CPC, o ato não ratificado praticado por quem não possui capacidade postulatória é havido expressamente pela lei como <strong>INEFICAZ</strong> perante a parte que ele pretendia representar (e não nulo absoluto sujeito a ação rescisória). A ineficácia transrescisória opera de pleno direito, respondendo o profissional pessoalmente pelas despesas e eventuais perdas e danos.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- CEBRASPE -->
+      <div class="exercise">
+        <p><strong>Questão 03 (Estilo CEBRASPE / Juiz Substituto):</strong><br>
+        (CEBRASPE) Em relação aos pressupostos processuais e ao regime das invalidades no CPC de 2015, julgue o item a seguir:<br>
+        <em>"Uma vez transitada em julgado a sentença proferida em processo que correu à revelia de réu não citado, opera-se a coisa julgada formal e material, de sorte que eventual desconstituição do provimento só poderá ser buscada por meio de ação rescisória ajuizada no prazo improrrogável de dois anos."</em></p>
+        <details>
+          <summary>Ver gabarito e comentário legal</summary>
+          <div class="gabarito">
+            <strong>GABARITO: ERRADO.</strong><br>
+            <strong>Fundamentação:</strong> A citação válida do réu em processo onde houve revelia constitui pressuposto processual de eficácia transrescisório. O vício de citação não se convalida com o decurso do biênio da ação rescisória, subsistindo a possibilidade de ajuizamento a qualquer tempo de ação declaratória de ineficácia (<em>querela nullitatis insanabilis</em>) perante o juízo de primeiro grau, ou de simples alegação por meio de impugnação ao cumprimento de sentença (art. 525, § 1º, I do CPC).
+          </div>
+        </details>
+      </div>
+
+      <!-- FGV -->
+      <div class="exercise">
+        <p><strong>Questão 04 (Estilo FGV / Exame de Ordem / Cartórios):</strong><br>
+        Caio ajuizou ação de cobrança em face de Tício perante a 2ª Vara Cível da Comarca de São Paulo. Devidamente citado, Tício ofereceu contestação arguindo que Caio, por três vezes pretéritas, aforou idêntica pretensão com as mesmas partes, mesma causa de pedir e mesmo pedido, tendo dado causa à extinção de todas as demandas anteriores sem resolução de mérito em razão de deliberado abandono da causa por mais de trinta dias.<br>
+        Diante desse quadro dogmático, à luz do Código de Processo Civil, assinale a opção correta:</p>
+        <p><strong>A)</strong> A matéria deduzida por Tício consubstancia decadência civil do crédito, acarretando a extinção da ação com resolução de mérito com base no art. 487, II do CPC.<br>
+        <strong>B)</strong> Ocorreu o fenômeno da perempção, que é pressuposto processual negativo, devendo o magistrado extinguir o processo sem resolução de mérito com base no art. 485, V do CPC.<br>
+        <strong>C)</strong> Ocorreu prescrição intercorrente, autorizando a cobrança apenas se Caio recolher previamente o valor das custas das ações anteriores com juros moratórios.<br>
+        <strong>D)</strong> A matéria deduzida por Tício só poderia ser conhecida pelo juiz caso houvesse reconhecimento anterior em Ação Rescisória julgada procedente.</p>
+        <details>
+          <summary>Ver gabarito comentado alternativa por alternativa</summary>
+          <div class="gabarito">
+            <strong>GABARITO: B.</strong><br>
+            <strong>Análise detalhada:</strong><br>
+            • <strong>A está INCORRETA:</strong> A perempção processual não extingue o direito material de crédito, apenas retira do credor a faculdade jurídica de ajuizar nova ação estatal.<br>
+            • <strong>B está CORRETA:</strong> É a dicção expressa dos arts. 485, V e 486, § 3º do CPC. Se o autor der causa por 3 vezes à extinção do processo por abandono, opera-se a perempção, impedindo a propositura de nova ação contra o réu com o mesmo objeto.<br>
+            • <strong>C está INCORRETA:</strong> O recolhimento de custas das ações anteriores aplica-se à reiteração ordinária (art. 486, § 2º), mas não afasta a penalidade fatal da perempção consumada após a terceira extinção por abandono.<br>
+            • <strong>D está INCORRETA:</strong> A perempção é pressuposto negativo apreciável de ofício pelo magistrado na própria relação processual em curso.
+          </div>
+        </details>
+      </div>
+
+      <!-- FCC -->
+      <div class="exercise">
+        <p><strong>Questão 05 (Estilo FCC / Analista Judiciário):</strong><br>
+        Sobre a capacidade e representação no Processo Civil, considere as seguintes assertivas:<br>
+        I. A massa falida e o condomínio edilício, embora desprovidos de personalidade jurídica material no Direito Civil, possuem capacidade de ser parte outorgada por lei no processo civil.<br>
+        II. Verificada a incapacidade processual do réu, o juiz extinguirá o processo sem resolução de mérito de imediato em prestígio ao princípio da celeridade processual.<br>
+        III. A capacidade postulatória é pressuposto processual de eficácia, cuja ausência de saneamento no prazo conferido pelo juízo torna o ato juridicamente ineficaz em relação à parte representada.<br>
+        Está correto o que se afirma em:</p>
+        <p><strong>A)</strong> I e II, apenas.<br>
+        <strong>B)</strong> I e III, apenas.<br>
+        <strong>C)</strong> II e III, apenas.<br>
+        <strong>D)</strong> I, II e III.</p>
+        <details>
+          <summary>Ver gabarito e comentário legal</summary>
+          <div class="gabarito">
+            <strong>GABARITO: B.</strong><br>
+            <strong>Comentário:</strong><br>
+            • O item I é verdadeiro (art. 75, V e XI do CPC);<br>
+            • O item II é FALSO: O juiz tem o dever de assinar prazo razoável para que a irregularidade seja sanada (art. 76 do CPC). Se não for sanada e a omissão for do réu, decreta-se a sua <strong>revelia</strong>, e não a extinção do processo;<br>
+            • O item III é verdadeiro (art. 104, § 2º do CPC).
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ RESUMO FINAL ══════════════════════════════ -->
+    <section id="resumo-final" class="section">
+      <div class="cheat-sheet">
+        <h2 style="margin-top:0; border-left:none; padding-left:0; color:var(--p-700);">🚀 Resumo Final Ultra Rápido (Cheat Sheet de 1 Página)</h2>
+        <p style="font-weight:700; color:var(--p-600);">Pontos capitais para revisão imediata antes de entrar na prova:</p>
+        <ul>
+          <li><strong>Conceito de Processo:</strong> Relação jurídica de direito público e instrumento teleológico da jurisdição. Não se confunde com <em>procedimento</em> (rito cronológico formal) nem com <em>autos</em> (suporte documental em papel ou digital);</li>
+          <li><strong>Sincretismo Processual (Ecletismo):</strong> Processo único estruturado em duas fases sucessivas: Fase Cognitiva (para formar o título) e Fase Executiva (Cumprimento de Sentença - art. 523 CPC);</li>
+          <li><strong>Ordem Lógica de Cognição:</strong> 1º Pressupostos Processuais → 2º Condições da Ação (Legitimidade e Interesse) → 3º Mérito (Procedência/Improcedência);</li>
+          <li><strong>Matéria de Ordem Pública:</strong> Não preclui nas instâncias ordinárias e é conhecida de ofício. <strong>Exceção:</strong> Recursos Excepcionais (REsp/RExt) exigem indispensável prequestionamento;</li>
+          <li><strong>Nulidade Absoluta vs Ineficácia:</strong> A nulidade absoluta convalida-se após o prazo bienal (2 anos) da Ação Rescisória (art. 966 CPC). A ineficácia transrescisória (ex: ausência de citação com revelia) <strong>não convalesce nunca</strong> e é atacável via <em>Querela Nullitatis Insanabilis</em> (juízo de 1º grau, imprescritível) ou impugnação ao cumprimento de sentença (art. 525, § 1º, I);</li>
+          <li><strong>Exceção de Citação no Mérito:</strong> O art. 332 do CPC (Improcedência Liminar do Pedido) autoriza o juiz a julgar o mérito com eficácia plena antes de citar o réu, nas hipóteses de confronto com precedentes vinculantes;</li>
+          <li><strong>Espécies de Capacidade:</strong>
+            <br>• <em>De Ser Parte:</em> Pessoas físicas, jurídicas e entes despersonalizados excepcionais (massa falida, condomínio, espólio);
+            <br>• <em>Processual (Estar em Juízo):</em> Aptidão para praticar atos sem representação. Suprida por representação (absolutos) ou assistência (relativos);
+            <br>• <em>Postulatória:</em> Privativa de advogados inscritos na OAB, DPE e MP. Falha gera ineficácia (art. 104, § 2º CPC);
+          </li>
+          <li><strong>Saneamento do Art. 76 do CPC:</strong> Juiz assina prazo. Descumprido: Autor → Extinção sem mérito; Réu → Revelia; Terceiro → Exclusão do processo;</li>
+          <li><strong>Capacidade vs Legitimidade:</strong> Capacidade processual é atributo genérico em abstrato (ter CNH). Legitimidade <em>ad causam</em> é pertinência subjetiva concreta entre os litigantes e a relação jurídica posta em juízo (ser o dono do veículo).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../portal-core.js"></script>
+</body>
+</html>

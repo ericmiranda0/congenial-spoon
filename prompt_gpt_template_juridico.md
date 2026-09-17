@@ -1,13 +1,13 @@
 # PROMPT MESTRE PARA GERAÇÃO DE TEMPLATES EDUCACIONAIS JURÍDICOS EM HTML5 (GPT / CLAUDE / ANTIGRAVITY)
 
-> **Como usar:** Copie e cole todo o bloco de código abaixo no ChatGPT / Claude / Antigravity, substituindo `{{direito do trabalho}}` (ou a variável da disciplina desejada, ex: `{{direito civil}}`, `{{direito penal}}`, `{{direito constitucional}}`, `{{processo civil}}`) pela disciplina jurídica específica e anexando/colando os textos brutos da pasta `CONTEUDO` (desconsiderando obrigatoriamente qualquer pasta `Não usar`).
+> **Como usar:** Copie e cole todo o bloco de código abaixo no ChatGPT / Claude / Antigravity, substituindo `{{CPC}}` (ou a variável da disciplina jurídica desejada, ex: `{{DIREITO_PENAL}}`, `{{DIREITO_CIVIL}}`, `{{DIREITO_CONSTITUCIONAL}}`, `{{DIREITO_DO_TRABALHO}}`) e anexando/colando os textos brutos da pasta `CONTEUDO` / `conteudo para criação` (desconsiderando obrigatoriamente qualquer pasta `Não usar`).
 
 ---
 
 ```text
-Você é um especialista de classe mundial em Design Instrucional, Direito do Trabalho, Teoria Geral do Direito, Direito Processual e Desenvolvedor Front-End Sênior. Sua tarefa é criar um material didático digital de altíssimo nível em formato de página web única (Standalone HTML5 file com suporte total a visualização local ou em servidor web) a partir do conteúdo bruto fornecido na pasta "CONTEUDO" / "conteudo para criação" (desconsiderando estritamente qualquer pasta "Não usar"), aceitando a variável de disciplina {{direito do trabalho}}.
+Você é um especialista de classe mundial em Design Instrucional, Teoria Geral do Direito, Direito Processual Civil, Direito Civil, Direito Penal, Direito Constitucional e Desenvolvedor Front-End Sênior. Sua tarefa é criar um material didático digital de altíssimo nível em formato de página web única (Standalone HTML5 file com suporte total a visualização local ou em servidor web) a partir do conteúdo bruto fornecido na pasta "CONTEUDO" / "conteudo para criação" (desconsiderando estritamente qualquer pasta "Não usar"), aceitando a variável de disciplina {{CPC}} (ou a respectiva disciplina jurídica parametrizada).
 
-O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Reestruture exaustivamente todo o conteúdo fornecido sem omitir NENHUMA PARTE nem nenhum detalhe do conteúdo base, criando um material didático completo, dinâmico, moderno e pronto para uso imediato em exames da faculdade, OAB e concursos públicos de alto nível (Magistratura do Trabalho, MPT, Analistas e Técnicos dos TRTs).
+O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Reestruture exaustivamente todo o conteúdo fornecido sem omitir NENHUMA PARTE nem nenhum detalhe do conteúdo base, criando um material didático completo, dinâmico, moderno e pronto para uso imediato em exames da faculdade, OAB e concursos públicos de alto nível (Magistratura, Ministério Público, Defensoria Pública, Procuradorias, Analistas e Técnicos dos Tribunais).
 
 ---
 
@@ -22,11 +22,11 @@ O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Re
    - Corpo do texto: `'Lora', serif` (para leitura jurídica elegante) e `'Inter', sans-serif`
    - Código / Mnemônicos / Rótulos / Linhas do tempo / Mapas Mentais: `'JetBrains Mono', monospace`
 3. **Identidade Visual por Disciplina (Color System via CSS Variables)**:
-   - Para Direito do Trabalho ({{direito do trabalho}}): Âmbar Dourado / Terracota (`:root { --p-700: #78350F; --p-600: #B45309; --p-500: #F59E0B; --p-50: #FFFBEB; --primary: #F59E0B; --primary-dark: #78350F; --accent-gold: #D4AF37; --accent-teal: #0D9488; }`)
+   - Para Processo Civil ({{CPC}}): Azul Cobalto / Índigo Profundo (`:root { --p-700: #1E3A8A; --p-600: #1D4ED8; --p-500: #2563EB; --p-400: #60A5FA; --p-100: #DBEAFE; --p-50: #EFF6FF; --primary: #2563EB; --primary-dark: #1E3A8A; --accent-gold: #D4AF37; }`)
    - Para Direito Penal: Crimson / Vermelho Escuro (`:root { --p-700: #7F1D1D; --p-600: #991B1B; --p-500: #EF4444; --p-50: #FEF2F2; }`)
    - Para Direito Constitucional: Verde Esmeralda (`:root { --p-700: #064E3B; --p-600: #065F46; --p-500: #10B981; --p-50: #ECFDF5; }`)
    - Para Direito Civil: Azul Oceano / Índigo Royal (`:root { --p-700: #1E3A8A; --p-600: #1E40AF; --p-500: #3B82F6; --p-50: #EFF6FF; }`)
-   - Para Processo Civil: Azul Cobalto (`:root { --p-700: #1E3A8A; --p-600: #1D4ED8; --p-500: #2563EB; --p-50: #EFF6FF; }`)
+   - Para Direito do Trabalho: Âmbar Dourado / Terracota (`:root { --p-700: #78350F; --p-600: #B45309; --p-500: #F59E0B; --p-50: #FFFBEB; }`)
    - Suporte nativo e automático a Tema Claro e Escuro (`[data-theme="dark"]`).
 4. **Remoção de Vícios e Referências Específicas**:
    - Remova qualquer citação ou referência a nomes de professores específicos, portais de aulas ou institutos comerciais privados. Mantenha um tom estritamente técnico, elegante, institucional e voltado a exames oficiais (OAB, Magistratura, MP, Defensoria e Concursos).
@@ -40,9 +40,9 @@ O resultado NÃO DEVE SER UMA MERA CONVERSÃO DE TEXTO OU RESUMO SUPERFICIAL. Re
 Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preenchidas em profundidade:
 
 1. **HERO SECTION (Cabeçalho Premium)**:
-   - Badge da disciplina (ex: `Material Didático · {{direito do trabalho}}`).
+   - Badge da disciplina (ex: `Material Didático · {{CPC}}`).
    - Título principal do tema e Subtítulo explicativo de alto impacto.
-   - Meta tags: Ícones ⚖️ com fundamentação normativa (ex: Art. 7º CF/88, Arts. 2º, 3º, 9º, 10, 444, 468, 474, 482, 611-A, 620 CLT), Âmbito Teórico e Nível (Foco em Concursos de Alto Nível e OAB).
+   - Meta tags: Ícones ⚖️ com fundamentação normativa (ex: Artigos do CPC/2015), Âmbito Teórico e Nível (Foco em Concursos de Alto Nível e OAB).
 2. **BARRA DE NAVEGAÇÃO SUPERIOR (MAIN NAV BAR OBRIGATÓRIA)**:
    - Tag `<nav class="main-nav">` contendo o botão de atalho para o portal (`<a href="../../index.html" class="home-btn">...</a>`), a lista de links para as seções da página (`<div class="nav-list">...</div>`) e o botão alternador de tema escuro/claro (`<button class="theme-toggle" id="themeToggle">...</button>`).
 3. **OBJETIVOS DE APRENDIZAGEM**:
@@ -98,7 +98,7 @@ Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preench
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{Título do Tema}} | {{direito do trabalho}}</title>
+  <title>{{Título do Tema}} | {{CPC}}</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,14 +108,15 @@ Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preench
   
   <style>
     :root {
-      --p-700: #78350F;
-      --p-600: #B45309;
-      --p-50: #FFFBEB;
-      --p-500: #F59E0B;
-      --primary: #F59E0B;
-      --primary-dark: #78350F;
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-400: #60A5FA;
+      --p-100: #DBEAFE;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
       --accent-gold: #D4AF37;
-      --accent-teal: #0D9488;
     }
     /* Estilos internos de componentes didáticos, cards, tabelas e mapas mentais */
   </style>
@@ -131,5 +132,5 @@ Sua página HTML gerada DEVE conter as seguintes seções estruturadas e preench
 
 ### 4. CONTEÚDO BASE PARA INCORPORAÇÃO AUTOMÁTICA
 
-[Insira aqui o conteúdo bruto do arquivo .md localizado na pasta CONTEUDO referente à disciplina {{direito do trabalho}}, desconsiderando obrigatoriamente qualquer pasta "Não usar"]
+[Insira aqui o conteúdo bruto do arquivo .md localizado na pasta CONTEUDO / conteudo para criação referente à disciplina {{CPC}}, desconsiderando obrigatoriamente qualquer pasta "Não usar"]
 ```

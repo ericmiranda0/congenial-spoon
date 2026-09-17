@@ -104,6 +104,66 @@
       border-color: rgba(147, 197, 253, 0.3);
     }
 
+    /* Destaque Inteligente: Conteúdo Cobrado em Atividade Avaliativa */
+    .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(37, 99, 235, 0.08));
+      border-left: 6px solid #EF4444;
+      border-top: 1px solid rgba(239, 68, 68, 0.25);
+      border-right: 1px solid rgba(37, 99, 235, 0.2);
+      border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .alerta-atividade-avaliativa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px -4px rgba(239, 68, 68, 0.15);
+    }
+    .badge-atividade {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #DC2626, #991B1B);
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+    }
+    .box-analise-atividade {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+    .box-analise-atividade h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    [data-theme="dark"] .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(37, 99, 235, 0.15));
+      border-left-color: #F87171;
+      border-color: rgba(248, 113, 113, 0.3);
+    }
+    [data-theme="dark"] .box-analise-atividade {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
     /* Lei Seca Interativa */
     .artigo {
       background: var(--bg-card);
@@ -510,10 +570,10 @@
         <a href="#pratica-carreiras" class="nav-item">Prática Forense</a>
         <a href="#organograma" class="nav-item">Organograma</a>
         <a href="#modulo1" class="nav-item">1. Hierarquia Normativa</a>
-        <a href="#modulo2" class="nav-item">2. Instâncias &amp; Chiovenda</a>
+        <a href="#modulo2" class="nav-item">2. Instâncias &amp; Chiovenda <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q04, Q07, Q09</span></a>
         <a href="#modulo3" class="nav-item">3. Arts. 46 a 53 CPC</a>
-        <a href="#modulo4" class="nav-item">4. Absoluta vs Relativa</a>
-        <a href="#modulo5" class="nav-item">5. Modificação, Eleição &amp; Lei 14.879/24</a>
+        <a href="#modulo4" class="nav-item">4. Absoluta vs Relativa <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q05, Q08, Q12</span></a>
+        <a href="#modulo5" class="nav-item">5. Modificação &amp; Perpetuação <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q06, Q10, Q13-15</span></a>
         <a href="#modulo6" class="nav-item">6. Conflito de Competência</a>
         <a href="#modulo7" class="nav-item">7. Competência Internacional</a>
         <a href="#modulo8" class="nav-item">8. Gabarito Padrão Ouro</a>
@@ -772,8 +832,8 @@
 
     <!-- ══════════════════════════════ MÓDULO 02: INSTÂNCIAS, CNJ E CRITÉRIOS DE CHIOVENDA ══════════════════════════════ -->
     <section id="modulo2" class="section">
-      <div class="section-label">Módulo 02</div>
-      <h2>Estrutura das Instâncias, CNJ e os Critérios de Giuseppe Chiovenda</h2>
+      <div class="section-label">Módulo 02 · 🎯 COBRADO NA REVISÃO (Q04, Q07, Q09)</div>
+      <h2>Estrutura das Instâncias, CNJ e os Critérios de Giuseppe Chiovenda <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
 
       <p>
         O Poder Judiciário organiza-se em instâncias hierárquicas. O <strong>Prof. Moisés Rodrigues</strong> esclarece aspectos vitais debatidos em aula:
@@ -829,6 +889,33 @@
         <p>
           Resposta Exata: Apenas os <strong>5 Tribunais Superiores</strong>: <span class="kw">STF, STJ, TST, TSE e STM</span>. Os Tribunais Regionais (TRFs, TJs, TRTs, TREs) e juízes de 1º grau possuem jurisdição adstrita à sua respectiva Região, Estado, Comarca ou Subseção Judiciária.
         </p>
+      </div>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÃO 04 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questão 04</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Estrutura Orgânica do Judiciário, Instâncias e Tribunais Superiores</h3>
+        <p><strong>Enunciado Cobrado:</strong> Assinalar a assertiva <strong>incorreta</strong> (a exceção) referente à estrutura do Poder Judiciário brasileiro, instâncias de jurisdição e órgãos superiores.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📌 Gabarito Oficial Comentado</h4>
+          <p><strong>Alternativa Incorreta / Gabarito (Item D):</strong> <em>"O sistema de justiça brasileiro é formado por quatro instâncias de jurisdição, sendo a primeira instância os juízes de primeiro grau, a segunda os tribunais estaduais e federais, a terceira instância composta pelo STJ, TST, TSE e STM, e a quarta instância composta apenas pelo Supremo Tribunal Federal..."</em></p>
+          
+          <h4 style="margin-top: 1rem;">🔬 Aprofundamento Doutrinário &amp; Fundamentação Rigorosa:</h4>
+          <ul style="margin-left: 1.25rem; line-height: 1.8;">
+            <li><strong>O Mito da Quarta Instância:</strong> A dogmática constitucional e processual brasileira consagra estritamente <strong>três instâncias de jurisdição</strong>: 1ª Instância (juízes singulares/varas); 2ª Instância (Tribunais Regionais Federais e Tribunais de Justiça Estaduais); e 3ª Instância (Tribunais de Superposição / Tribunais Superiores: STJ, TST, TSE, STM e o STF).</li>
+            <li><strong>Posição Institucional do STF:</strong> O Supremo Tribunal Federal <strong>NÃO constitui uma quarta instância</strong>. O STF integra o topo da 3ª instância como órgão de cúpula máxima do Poder Judiciário nacional, exercendo primordialmente a guarda da Constituição da República (Art. 102 da CF) mediante recurso extraordinário ou competência originária.</li>
+            <li><strong>Os 5 Tribunais de Jurisdição Nacional:</strong> Conforme o texto constitucional (Arts. 92 a 126 da CF), apenas 5 tribunais exercem jurisdição sobre a totalidade do território brasileiro: <strong>STF, STJ, TST, TSE e STM</strong>. Todos os demais órgãos possuem jurisdição limitada à respectiva base territorial estadual ou regional.</li>
+          </ul>
+
+          <h4 style="margin-top: 1rem; color: #10B981;">✅ Por que as outras alternativas estavam CORRETAS na atividade?</h4>
+          <ul style="margin-left: 1.25rem; line-height: 1.7;">
+            <li><strong>Item A (Correta):</strong> Competência é a medida da jurisdição que determina qual órgão judiciário deve processar e julgar a ação segundo a lei.</li>
+            <li><strong>Item B (Correta):</strong> Ao Poder Judiciário cabe com exclusividade o exercício da função jurisdicional típica do Estado.</li>
+            <li><strong>Item C (Correta):</strong> O sistema de justiça brasileiro organiza-se em três instâncias funcionais com competências traçadas na CF/88.</li>
+            <li><strong>Item E (Correta):</strong> São órgãos superiores do Poder Judiciário os tribunais STF, STJ, TST, TSE e STM.</li>
+          </ul>
+        </div>
       </div>
 
       <h3>2.1 Os Critérios de Giuseppe Chiovenda e a Diferença entre Foro e Juízo</h3>
@@ -893,6 +980,30 @@
             Exemplo: Na Comarca de Sobral (Foro), o juízo competente para um inventário será a <strong>Vara de Família e Sucessões (Juízo)</strong>.<br>
             • <span class="kw">Fixado pelas Leis Estaduais de Organização Judiciária (LOJ).</span>
           </p>
+        </div>
+      </div>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÕES 07 E 09 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questões 07 e 09</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Conceito de Competência &amp; Critérios de Fixação (Objetivo, Funcional e Territorial)</h3>
+        <p><strong>Foco das Questões:</strong> Na <strong>Questão 09</strong>, identificar a definição técnica de competência a partir dos seus elementos constitutivos. Na <strong>Questão 07</strong>, apontar o erro conceitual quanto aos critérios adotados pelo CPC e pelas Leis de Organização Judiciária.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📌 Gabarito da Questão 09 (Conceito de Competência)</h4>
+          <p><strong>Resposta Correta (Item A):</strong> <em>"Competência."</em><br>
+          <strong>Justificativa Doutrinária:</strong> Enquanto a <strong>jurisdição</strong> é o poder-dever soberano, uno e indivisível de aplicar o direito ao caso concreto, a <strong>competência</strong> é a <em>medida ou a quantidade delimitada da jurisdição</em> que cada órgão estatal pode legitimamente exercer. Os elementos <em>lugar (território), pessoas (critério subjetivo/ratione personae), matéria e valor da causa</em> resumem exatamente o âmbito legal em que o Estado-Juiz poderá-deverá conhecer e julgar a demanda.</p>
+
+          <h4 style="margin-top: 1.25rem;">📌 Gabarito da Questão 07 (Critérios de Fixação de Competência)</h4>
+          <p><strong>Assertiva Incorreta / Gabarito (Item E):</strong> <em>"Competência territorial não é utilizada pelo Código de Processo Civil."</em><br>
+          <strong>Fundamentação &amp; Pegadinha:</strong> A assertiva é flagrantemente falsa! O CPC/2015 <strong>utiliza amplamente o critério territorial</strong> para determinar o foro competente em dezenas de dispositivos (notadamente nos artigos 46 a 53), estabelecendo o domicílio do réu, o domicílio do autor vulnerável, o local do ato ou fato e a situação do imóvel.</p>
+
+          <h4 style="margin-top: 1rem;">🔬 Análise Aprofundada dos Critérios de Giuseppe Chiovenda (Corretos na Questão 07):</h4>
+          <ul style="margin-left: 1.25rem; line-height: 1.8;">
+            <li><strong>Critério Objetivo (Item A e B):</strong> É adotado quando a competência é mensurada pela matéria controvertida (direito de família, falência, fazenda pública) ou pelo valor atribuído à causa (juizados especiais). O CPC/15 não utiliza o critério objetivo para definir o foro (comarca), confiando às Leis de Organização Judiciária (LOJs) a divisão das varas dentro de cada comarca com base na matéria e valor.</li>
+            <li><strong>Critério Funcional (Item C):</strong> Abrange tanto a competência hierárquica (competência dos tribunais para julgar recursos e ações originárias) quanto os casos em que a demanda deve ser distribuída a um juízo específico em razão de ligação com processo anterior (prevenção e dependência funcional).</li>
+            <li><strong>Critério Territorial (Item D):</strong> Considera a localização geográfica, como o domicílio dos litigantes ou a situação do imóvel litigioso.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1110,8 +1221,8 @@
 
     <!-- ══════════════════════════════ MÓDULO 04: ABSOLUTA VS RELATIVA & PRELIMINAR DE CONTESTAÇÃO ══════════════════════════════ -->
     <section id="modulo4" class="section">
-      <div class="section-label">Módulo 04</div>
-      <h2>Competência Absoluta vs. Relativa, Prorrogação e a Arguição em Preliminar</h2>
+      <div class="section-label">Módulo 04 · 🎯 COBRADO NA REVISÃO (Q05, Q08, Q12)</div>
+      <h2>Competência Absoluta vs. Relativa, Prorrogação e a Arguição em Preliminar <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
 
       <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
         <div class="card" style="border-top: 4px solid #EF4444;">
@@ -1194,12 +1305,54 @@
           </p>
         </div>
       </div>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÕES 05, 08 E 12 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questões 05, 08 e 12</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Competência Absoluta vs. Relativa (Critérios, Prorrogação, Nulidade e Rescisória)</h3>
+        <p><strong>Foco das Questões:</strong> Na <strong>Questão 05</strong> (Objetiva), identificar a regra de modificação pelas partes e analisar os efeitos da incompetência. Na <strong>Questão 08</strong> (Objetiva), analisar a impossibilidade de prorrogação da competência absoluta. Na <strong>Questão 12</strong> (Discursiva Completa), dissertar sobre ambas as espécies, seus critérios e 3 diferenças fundamentais.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📌 Gabarito Oficial da Questão 05 (Objetiva)</h4>
+          <p><strong>Alternativa Correta (Item A):</strong> <em>"Somente as normas de competência relativa estão sujeitas à modificação pelas partes."</em><br>
+          <strong>Fundamentação:</strong> As normas de competência relativa (território e valor) são fixadas no interesse privado das partes, admitindo alteração por convenção (eleição de foro/derrogação - Art. 63), prorrogação pelo silêncio (Art. 65), ou conexão e continência. Já as de competência absoluta protegem o interesse público e a boa ordem da jurisdição, sendo imutáveis pela vontade privada.</p>
+
+          <h4 style="margin-top: 1rem; color: #DC2626;">⚠️ Por que as outras alternativas da Questão 05 estavam ERRADAS?</h4>
+          <ul style="margin-left: 1.25rem; line-height: 1.7;">
+            <li><strong>Item B (Incorreto):</strong> Afirmava que normas absolutas se modificam pelas partes. Errado! São inderrogáveis.</li>
+            <li><strong>Item C (Incorreto):</strong> Afirmava que em <em>nenhuma hipótese</em> a incompetência relativa pode ser alegada de ofício. Errado! Pode ser conhecida de ofício em foro abusivo de contrato de adesão antes da citação (Art. 63, § 3º) e no ajuizamento em juízo aleatório (Art. 63, § 5º / Lei 14.879/2024).</li>
+            <li><strong>Item D (Incorreto - Pegadinha Fatal):</strong> Afirmava que os efeitos da decisão proferida pelo juízo incompetente são <em>necessariamente anulados</em>. <strong>ERRADO!</strong> Conforme o <strong>Art. 64, § 4º, do CPC</strong>, declarada a incompetência (absoluta ou relativa), os autos são remetidos ao juízo competente, mas <strong>conservam-se os efeitos da decisão proferida pelo juízo incompetente</strong> até que outra seja proferida pelo juízo competente! Não há nulidade automática de atos decisórios.</li>
+            <li><strong>Item E (Incorreto):</strong> Afirmava que após o trânsito em julgado não cabe mais alegar a incompetência. Errado! Cabe o ajuizamento de <strong>Ação Rescisória</strong> com base expressa no Art. 966, inciso II, do CPC.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.25rem;">📌 Análise da Questão 08 (Afirmativas I, II, III e IV):</h4>
+          <p>Gabarito: <strong>Alternativa D (II, III e IV, apenas)</strong>.</p>
+          <ul style="margin-left: 1.25rem; line-height: 1.7;">
+            <li><em>Afirmativa I (FALSA):</em> A competência absoluta <strong>JAMAIS admite prorrogação</strong>, mesmo que não arguida na contestação. Apenas a relativa se prorroga.</li>
+            <li><em>Afirmativa II (VERDADEIRA):</em> A incompetência relativa deve ser arguida em preliminar de contestação, sob pena de prorrogação (Arts. 64 e 65 CPC).</li>
+            <li><em>Afirmativa III (VERDADEIRA):</em> A competência se fixa no registro ou distribuição (Art. 43 CPC - <em>perpetuatio jurisdictionis</em>).</li>
+            <li><em>Afirmativa IV (VERDADEIRA):</em> O conflito de competência pode ser suscitado por juiz, parte ou Ministério Público (Art. 951 CPC).</li>
+          </ul>
+
+          <h4 style="margin-top: 1.25rem;">📝 Resposta Padrão Ouro da Questão 12 (Discursiva de Prova):</h4>
+          <div style="background: rgba(37, 99, 235, 0.04); border-left: 4px solid var(--p-600); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+            <p><strong>1. Critérios Adotados por Cada Espécie:</strong><br>
+            • <em>Competência Absoluta:</em> Instituída no resguardo do <strong>interesse público</strong> e da ordem judiciária. No CPC, adota o critério <strong>funcional</strong> (graus de jurisdição e fases) e a exceção do art. 47 (direitos reais imobiliários). Na CF/88 e nas Leis de Organização Judiciária, adota os critérios <strong>da matéria, da pessoa e funcional</strong>.<br>
+            • <em>Competência Relativa:</em> Fixada no <strong>interesse privado das partes</strong> (comodidade e facilitação da ampla defesa). Pauta-se na regra geral do critério <strong>territorial</strong> (Arts. 46 a 53 do CPC) e no <strong>valor da causa</strong>.</p>
+
+            <p style="margin-top: 0.75rem;"><strong>2. As Três Diferenças Fundamentais:</strong><br>
+            1ª) <strong>Modificação e Prorrogação:</strong> A competência relativa admite derrogação por cláusula de eleição de foro (Art. 63) e prorroga-se caso o réu não a alegue tempestivamente (Art. 65); a competência absoluta é inderrogável pelas partes e nunca sofre prorrogação.<br>
+            2ª) <strong>Conhecimento de Ofício pelo Juiz:</strong> A incompetência absoluta pode e deve ser declarada de ofício pelo magistrado em qualquer tempo e grau ordinário de jurisdição (Art. 64, § 1º); a incompetência relativa, em regra, não pode ser conhecida de ofício pelo juiz, dependendo de provocação do réu (Súmula 33 do STJ), admitindo exceção apenas nos casos de foro abusivo em contrato de adesão antes da citação (Art. 63, § 3º) e juízo aleatório (Art. 63, § 5º).<br>
+            3ª) <strong>Momento de Arguição, Preclusão e Ação Rescisória:</strong> A incompetência relativa deve ser arguida estritamente em preliminar de contestação (Art. 64), sob pena de preclusão temporal irremediável, não cabendo rescisória; a incompetência absoluta não preclui durante o processo e, mesmo após o trânsito em julgado, enseja a desconstituição da sentença mediante <strong>Ação Rescisória</strong> no prazo decadencial de 2 anos (Art. 966, II c/c Art. 975 do CPC).</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ══════════════════════════════ MÓDULO 05: MODIFICAÇÃO DE COMPETÊNCIA, DERROGAÇÃO E LEI 14.879/2024 ══════════════════════════════ -->
     <section id="modulo5" class="section">
-      <div class="section-label">Módulo 05</div>
-      <h2>Modificação de Competência, Derrogação, Juízo Aleatório e Distribuição (Aulas 3 e 4)</h2>
+      <div class="section-label">Módulo 05 · 🎯 COBRADO NA REVISÃO (Q06, Q10, Q13, Q14, Q15, BÔNUS 01, BÔNUS 02)</div>
+      <h2>Modificação de Competência, Derrogação, Juízo Aleatório e Distribuição (Aulas 3 e 4) <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
 
       <div class="mnemonico-card">
         <div class="mnemonico-sigla">P - D - C - C</div>
@@ -1317,6 +1470,45 @@
         </ul>
       </div>
 
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÕES 10, 13 E BÔNUS 01 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questões 10, 13 e Bônus 01</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Derrogação de Competência, Foro de Eleição &amp; Incompetência Relativa de Ofício</h3>
+        <p><strong>Foco das Questões:</strong> Na <strong>Questão 10</strong> (Objetiva), identificar a regra sobre foro de eleição e competência relativa. Na <strong>Questão 13</strong> (Discursiva), citar as causas de modificação de competência. Na <strong>Questão Bônus 01</strong> (Discursiva Aprofundada), responder se há hipóteses em que o juiz pode alegar a incompetência relativa de ofício.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📌 Gabarito Oficial da Questão 10 (Derrogação e Foro de Eleição)</h4>
+          <p><strong>Assertiva Incorreta / Gabarito (Item D):</strong> <em>"Não se permite a eleição de foro nos casos de competência relativa."</em><br>
+          <strong>Fundamentação &amp; Pegadinha:</strong> É exatamente o oposto! A eleição de foro (derrogação) <strong>SÓ é permitida nas hipóteses de competência relativa</strong> (territorial e valor, Art. 63, caput, CPC). É terminantemente proibida a eleição de foro nas hipóteses de competência absoluta (interesse público indisponível).</p>
+
+          <h4 style="margin-top: 1rem; color: #10B981;">✅ Por que as outras alternativas da Questão 10 estavam CORRETAS?</h4>
+          <ul style="margin-left: 1.25rem; line-height: 1.7;">
+            <li><strong>Item A (Correta):</strong> A derrogação ocorre quando há convenção das partes por cláusula de eleição de foro.</li>
+            <li><strong>Item B (Correta):</strong> A eleição de foro só cabe em ações fundadas em direito das obrigações (contratos).</li>
+            <li><strong>Item C (Correta):</strong> A cláusula deve constar de contrato escrito, referir-se a negócio jurídico determinado e guardar pertinência territorial com o domicílio das partes ou local da obrigação (Art. 63, § 1º / Lei 14.879/2024), ressalvada a convenção protetiva do consumidor.</li>
+            <li><strong>Item E (Correta):</strong> O foro de eleição vincula tanto os contratantes originais quanto seus herdeiros e sucessores (Art. 63, § 2º).</li>
+          </ul>
+
+          <h4 style="margin-top: 1.25rem;">📝 Resposta da Questão 13 (Causas de Modificação de Competência):</h4>
+          <p>As causas legais de modificação de competência aplicam-se <strong>exclusivamente à competência relativa</strong> e traduzem-se no clássico mnemônico <strong>P - D - C - C</strong>:</p>
+          <ol style="margin-left: 1.5rem; line-height: 1.8;">
+            <li><strong>Prorrogação</strong> (decorrente da inércia do réu ao silenciar na preliminar da contestação - Art. 65);</li>
+            <li><strong>Derrogação</strong> (decorrente da convenção das partes por foro de eleição - Art. 63);</li>
+            <li><strong>Conexão</strong> (Art. 55 do CPC);</li>
+            <li><strong>Continência</strong> (Arts. 56 e 57 do CPC).</li>
+          </ol>
+
+          <h4 style="margin-top: 1.25rem; color: #2563EB;">⭐ Resposta Padrão Ouro da Questão Bônus 01 (Incompetência Relativa de Ofício):</h4>
+          <div style="background: rgba(37, 99, 235, 0.04); border-left: 4px solid var(--p-600); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+            <p><strong>SIM.</strong> Embora a regra geral consagre que a incompetência relativa não pode ser conhecida de ofício pelo magistrado (enunciado da <strong>Súmula 33 do STJ</strong>: <em>"A incompetência relativa não pode ser declarada de ofício"</em>), o Código de Processo Civil de 2015 prevê <strong>duas hipóteses legais expressas e excepcionais</strong> em que o juiz pode atuar *ex officio*:</p>
+            <ol style="margin-left: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
+              <li><strong>Cláusula Abusiva de Eleição de Foro em Contrato de Adesão (Art. 63, § 3º, do CPC):</strong> O magistrado pode, por iniciativa própria, reputar ineficaz a cláusula abusiva de eleição de foro que dificulte ou inviabilize a defesa do aderente hipossuficiente e declinar da competência para o foro de domicílio do réu. <em>Atenção ao limite temporal rígido:</em> O juiz só pode agir de ofício <strong>ANTES DA CITAÇÃO DO RÉU</strong>. Se o réu já tiver sido validamente citado, o juiz perde o poder de agir de ofício, transferindo-se o ônus exclusivamente ao réu em preliminar de contestação (§ 4º).</li>
+              <li><strong>Ajuizamento em Juízo Aleatório (Art. 63, § 5º, do CPC / Lei nº 14.879/2024):</strong> A propositura de ação em foro eleito que não guarde nenhuma relação de pertinência com o domicílio ou residência de nenhuma das partes, nem com o negócio jurídico subjacente ou local de cumprimento da obrigação, constitui prática abusiva contra a administração da justiça e <strong>autoriza expressamente o juiz a declinar de ofício da competência</strong>. <em>Ressalva de aula:</em> Essa hipótese não se aplica a litígios entre grandes empresas de porte equivalente, hipótese em que prevalece a autonomia negocial e a Súmula 33 do STJ.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
       <!-- APROFUNDAMENTO DA CONEXÃO (AULAS 3 E 4) -->
       <h3>5.3 Conexão (Art. 55 do CPC) — Análise Aprofundada das Aulas 3 e 4</h3>
       <p>
@@ -1417,6 +1609,30 @@
         O professor relatou a rotina prática das Procuradorias Públicas perante ações contidas/repetitivas ajuizadas por cidadãos vulneráveis. Ocorre com frequência de ajuizarem ações contidas por intermédio de advogados diferentes por desconhecimento. Nesses casos, a segunda ação contida é extinta sem resolução do mérito por litispendência parcial (Art. 57). Se for constatado que o mesmo advogado ajuizou intencionalmente duas ações para burlar a distribuição, cabe apuração de advocacia predatória perante a OAB.
       </div>
 
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÃO BÔNUS 02 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questão Bônus 02</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Conexão (Art. 55) e Continência (Arts. 56 e 57) no CPC/2015</h3>
+        <p><strong>Enunciado Cobrado (Discursiva Bônus):</strong> Discorrer de forma completa e fundamentada sobre os institutos da conexão e da continência, especificando seus pressupostos, finalidades, efeitos processuais e limitações temporais.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📝 Resposta Padrão Ouro da Questão Bônus 02 (Discursiva):</h4>
+          <div style="background: rgba(37, 99, 235, 0.04); border-left: 4px solid var(--p-600); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+            <p><strong>1. Conexão (Art. 55 do CPC):</strong><br>
+            • <em>Conceito e Pressupostos:</em> Reputam-se conexas duas ou mais ações quando lhes for comum o <strong>PEDIDO OU A CAUSA DE PEDIR</strong> (requisito alternativo, sendo irrelevante a identidade de partes).<br>
+            • <em>Finalidade Processual:</em> Visa garantir a segurança jurídica, a economia processual e impedir a prolação de <strong>decisões judiciais conflitantes ou contraditórias</strong> sobre o mesmo substrato fático-jurídico.<br>
+            • <em>Efeito (Reunião de Processos):</em> Os feitos conexos devem ser reunidos perante o <strong>juízo prevento</strong> (Art. 58 c/c Art. 59) mediante distribuição por dependência para julgamento simultâneo.<br>
+            • <em>Limite Temporal Rígido (Súmula 235 do STJ):</em> Conforme o Art. 55, § 1º, a reunião de ações conexas é <strong>estritamente vedada se uma delas já tiver sido sentenciada</strong>. Não se exige o trânsito em julgado! Bastando a prolação da sentença no 1º grau, cessa o risco de contradição primária, tornando <em>inadmissível pleitear conexão em sede de recurso de Apelação</em>.</p>
+
+            <p style="margin-top: 0.85rem;"><strong>2. Continência (Arts. 56 e 57 do CPC):</strong><br>
+            • <em>Conceito e Pressupostos:</em> Ocorre quando há identidade plena quanto às <strong>partes e à causa de pedir</strong>, mas o pedido da ação continente (mais ampla), por ser mais abrangente, engloba o pedido da ação contida (mais restrita).<br>
+            • <em>Regras Imperativas de Ajuizamento (Art. 57 do CPC):</em><br>
+            &nbsp;&nbsp;1) <strong>Se a ação continente (ampla) for ajuizada POSTERIORMENTE:</strong> Opera-se a <strong>reunião obrigatória</strong> de ambos os processos no juízo prevento para sentença única.<br>
+            &nbsp;&nbsp;2) <strong>Se a ação contida (menor) for ajuizada POSTERIORMENTE:</strong> <em>Não haverá reunião!</em> A ação contida proposta depois será <strong>extinta sem resolução do mérito</strong> (Art. 485, V c/c Art. 57, 2ª parte, do CPC) pelo reconhecimento de <em>litispendência parcial</em>, prestigiando-se a ação ampla que já tramitava.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- APROFUNDAMENTO DA PREVENÇÃO -->
       <h3>5.5 Prevenção (Art. 59, Art. 286 e Art. 930 CPC) — Coibindo a Escolha Maldosa de Juiz</h3>
       <p>
@@ -1431,6 +1647,26 @@
           <br><em style="color:var(--text-muted);">Exemplo Prático de Aula: Os processos e recursos relacionados aos atos do 8 de janeiro no Supremo Tribunal Federal foram distribuídos por prevenção ao Min. Alexandre de Moraes, por ter sido o relator dos inquéritos originários.</em>
         </li>
       </ul>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÃO 15 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questão 15</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Instituto da Prevenção de Competência (Art. 59 c/c Art. 286 CPC)</h3>
+        <p><strong>Enunciado Cobrado (Discursiva):</strong> Explicar em que consiste a prevenção de competência, como ela se fixa no processo civil e quais suas aplicações práticas fundamentais.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📝 Resposta Padrão Ouro da Questão 15 (Discursiva):</h4>
+          <div style="background: rgba(37, 99, 235, 0.04); border-left: 4px solid var(--p-600); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+            <p><strong>1. Conceito:</strong> A prevenção é o critério legal de fixação e atração da competência que determina qual órgão judiciário julgará a demanda quando houver <strong>mais de um juízo abstratamente competente</strong> (competência concorrente) ou para atuar como polo de atração obrigatória de ações conexas e continentes.</p>
+
+            <p style="margin-top: 0.75rem;"><strong>2. Momento Exato de Fixação (Art. 59 do CPC):</strong> Nos termos literais do Art. 59 do CPC, a prevenção fixa-se pelo <strong>registro ou pela distribuição da petição inicial</strong>. Em comarca de vara única, fixa-se no momento do registro; em comarca com duas ou mais varas com idêntica competência, fixa-se no momento exato do protocolo da distribuição.</p>
+
+            <p style="margin-top: 0.75rem;"><strong>3. Aplicações Práticas Essenciais de Prova:</strong><br>
+            • <em>Combate ao Forum Shopping / Escolha Maldosa de Juiz (Art. 286, II, do CPC):</em> Se o autor ajuizar uma ação e depois dela desistir (ou deixá-la ser extinta sem resolução de mérito), ao repropor a demanda, a nova petição inicial será <strong>obrigatoriamente distribuída por dependência ao juízo da primeira ação</strong>, impedindo a escolha arbitrária do magistrado por sucessivos ajuizamentos e desistências.<br>
+            • <em>Prevenção Recursal nos Tribunais (Art. 930, p. único, do CPC):</em> O primeiro recurso ou ação autônoma de impugnação protocolado perante o Tribunal torna o respectivo Relator prevento para todos os recursos e incidentes posteriores originários daquele processo ou de ações conexas.</p>
+          </div>
+        </div>
+      </div>
 
       <h3>5.6 Perpetuatio Jurisdictionis (Art. 43 CPC) e Desmembramento de Comarca</h3>
 
@@ -1448,6 +1684,30 @@
           • <em>Posição Doutrinária Majoritária (Athos Gusmão Carneiro) e Jurisprudência Predominante:</em> Prevalece a <strong>PERPETUATIO JURISDICTIONIS (Art. 43 CPC)</strong>. Trata-se de alteração de regra territorial relativa de organização judiciária, sendo irrelevante para causas já ajuizadas. O processo <strong>PERMANECE na comarca originária X</strong>.<br>
           • <em>Duas Exceções Legais expressas que alteram a competência do processo em curso:</em> 1. Supressão daquele órgão judiciário por lei; 2. Alteração de norma de Competência ABSOLUTA.
         </p>
+      </div>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÕES 06 E 14 DA ATIVIDADE AVALIATIVA -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu na Atividade Avaliativa de CPC · Questões 06 e 14</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: O Princípio da Perpetuação da Jurisdição (*Perpetuatio Jurisdictionis* - Art. 43 CPC)</h3>
+        <p><strong>Foco das Questões:</strong> Na <strong>Questão 06</strong> (Objetiva), identificar a regra e o momento exato de determinação da competência. Na <strong>Questão 14</strong> (Discursiva Completa), discorrer sobre os fundamentos do instituto, seu momento de incidência, sua estabilidade e as exceções legais expressas.</p>
+        
+        <div class="box-analise-atividade">
+          <h4>📌 Gabarito Oficial da Questão 06 (Objetiva)</h4>
+          <p><strong>Alternativa Correta (Item B):</strong> <em>"De acordo com esse princípio, a competência é determinada no momento do registro ou distribuição da petição inicial, sendo irrelevantes as alterações posteriores do estado de fato ou de direito, salvo se suprimirem o órgão jurisdicional ou alterarem a competência absoluta."</em><br>
+          <strong>Fundamentação:</strong> Transcrição literal do artigo 43 do CPC, refutando as pegadinhas de que inexiste previsão legal (previsão expressa no art. 43) ou de que a competência se fixaria no primeiro despacho (fixa-se no registro ou distribuição).</p>
+
+          <h4 style="margin-top: 1.25rem;">📝 Resposta Padrão Ouro da Questão 14 (Discursiva de Prova):</h4>
+          <div style="background: rgba(37, 99, 235, 0.04); border-left: 4px solid var(--p-600); padding: 1rem; border-radius: 8px; margin-top: 0.5rem;">
+            <p><strong>1. Fundamento Legal e Conceito:</strong> Positivado expressamente no Artigo 43 do Código de Processo Civil, o princípio da <em>perpetuatio jurisdictionis</em> assegura a estabilidade da competência do juiz natural durante toda a tramitação do processo. A competência fixa-se definitivamente no <strong>momento do registro ou da distribuição da petição inicial</strong>.</p>
+
+            <p style="margin-top: 0.75rem;"><strong>2. Regra Geral da Irrelevância das Alterações Supervenientes:</strong> Uma vez fixada a competência naquele juízo originário, tornam-se <strong>completamente irrelevantes as modificações posteriores do estado de fato ou de direito</strong>. Por exemplo: se o réu mudar de domicílio para outra comarca, ou se o valor do imóvel disputado sofrer grande valorização após o ajuizamento, a competência do juízo originário não se altera, mantendo-se o feito no foro inicial.</p>
+
+            <p style="margin-top: 0.75rem;"><strong>3. As Duas Exceções Legais Taxativas:</strong> A competência fixada no início do processo só será supervenientemente alterada em duas hipóteses expressas no art. 43 do CPC:<br>
+            &nbsp;&nbsp;1ª) Se a lei nova <strong>suprimir o órgão jurisdicional</strong> (ex: extinção de uma comarca ou vara, hipótese em que os autos são compulsoriamente remetidos ao novo juízo criado);<br>
+            &nbsp;&nbsp;2ª) Se a lei nova <strong>alterar norma de competência absoluta</strong> (ex: criação de uma Vara Especializada da Fazenda Pública ou de Família com competência em razão da matéria dotada de efeito retroativo imediato aos feitos sem sentença).</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1488,14 +1748,18 @@
       </div>
 
       <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-        <div class="card">
-          <h4 style="color:var(--p-700);">Legitimados para Suscitar (Art. 951)</h4>
+        <div class="card" style="border-top: 4px solid var(--p-500);">
+          <h4 style="color:var(--p-700);">Legitimados para Suscitar (Art. 951 CPC)</h4>
           <p>• As Partes;<br>
              • O Ministério Público (como parte ou fiscal da ordem jurídica);<br>
              • Qualquer dos Juízes conflitantes (de ofício).</p>
+          <div style="background: rgba(37, 99, 235, 0.08); border-left: 3px solid var(--p-600); padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; margin-top: 8px;">
+            <span class="badge-atividade" style="font-size: 0.7rem; padding: 2px 8px; margin-bottom: 4px;">🎯 Cobrado na Questão 08 (Item IV)</span><br>
+            A legitimidade para instaurar o conflito é <strong>ampla</strong>: juiz, parte e MP podem suscitá-lo perante o Tribunal competente.
+          </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-top: 4px solid #EF4444;">
           <h4 style="color:var(--p-700);">Vedação Expressa (Art. 952)</h4>
           <p>O réu que tiver arguido incompetência relativa <strong>NÃO pode suscitar conflito de competência</strong>, devendo aguardar a decisão da preliminar ou interpor o recurso cabível.</p>
         </div>

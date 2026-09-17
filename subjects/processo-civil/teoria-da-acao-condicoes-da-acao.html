@@ -548,43 +548,64 @@
       color: #6EE7B7;
     }
 
-    /* Flashcards */
-    .flashcard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 25px 0;
+    /* Destaque Inteligente: Conteúdo Cobrado em Atividade Avaliativa */
+    .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(37, 99, 235, 0.08));
+      border-left: 6px solid #EF4444;
+      border-top: 1px solid rgba(239, 68, 68, 0.25);
+      border-right: 1px solid rgba(37, 99, 235, 0.2);
+      border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
-    .flashcard {
-      background: white;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    .alerta-atividade-avaliativa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px -4px rgba(239, 68, 68, 0.15);
     }
-
-    [data-theme="dark"] .flashcard {
-      background: #1E293B;
-      border-color: #334155;
-    }
-
-    .flashcard summary {
-      font-weight: 700;
-      color: var(--p-700);
-      cursor: pointer;
+    .badge-atividade {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #DC2626, #991B1B);
+      color: #FFFFFF;
       font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
     }
-
-    [data-theme="dark"] .flashcard summary {
-      color: var(--p-400);
+    .box-analise-atividade {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      line-height: 1.7;
     }
-
-    .flashcard-back {
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed #E2E8F0;
-      font-size: 0.95rem;
+    .box-analise-atividade h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    [data-theme="dark"] .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(37, 99, 235, 0.15));
+      border-left-color: #F87171;
+      border-color: rgba(248, 113, 113, 0.3);
+    }
+    [data-theme="dark"] .box-analise-atividade {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: rgba(255, 255, 255, 0.1);
     }
 
     /* High-contrast Mnemonicos Pill Badges */
@@ -860,7 +881,7 @@
         <a href="#mapa-mental">🧠 Mapa Mental Visual</a>
         <a href="#mnemonicos">💡 Mnemônicos &amp; Fixação</a>
         <a href="#revisao-ativa">📝 Revisão Ativa (Questões)</a>
-        <a href="#flashcards">🎴 Flashcards de Fixação</a>
+        <a href="#destaque-atividade">🎯 Conteúdos da Atividade de CPC</a>
         <a href="#resumo-final">🚀 Resumo Final (Cheat Sheet)</a>
       </div>
     </nav>
@@ -1635,33 +1656,47 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════ FLASHCARDS ══════════════════════════════ -->
-    <section id="flashcards">
-      <h2>🎴 Flashcards Interativos de Memorização</h2>
+    <!-- ══════════════════════════════ CONTEÚDOS DA ATIVIDADE AVALIATIVA DE CPC ══════════════════════════════ -->
+    <section id="destaque-atividade">
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Conteúdos Cobrados na Atividade Avaliativa de CPC</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Articulação Teórica: Ação, Jurisdição Inerte, Elementos da Causa e Defesa do Réu</h3>
+        <p>A atividade avaliativa de CPC articulou diretamente os conceitos da Teoria da Ação com as regras de Jurisdição, Competência, Conexão e Coisa Julgada. Confira o aprofundamento das conexões essenciais:</p>
+        
+        <div class="box-analise-atividade">
+          <h4>1. O Direito de Ação como Antídoto à Inércia da Jurisdição (Questões 01 e 11)</h4>
+          <p>
+            Na <strong>Questão 01</strong> e <strong>Questão 11 (item "d")</strong> da atividade, cobrou-se o entendimento de que a jurisdição é <em>inerte por natureza</em> (Art. 2º do CPC). O Estado-Juiz não sai de seu estado de inatividade de ofício para resolver os litígios que ocorrem na sociedade.<br>
+            • <strong>O Elo com a Teoria da Ação:</strong> É justamente através do <strong>Direito de Ação</strong> (direito público subjetivo, autônomo e abstrato exercido <em>contra o Estado</em>) que o cidadão provoca a atividade jurisdicional. Sem o ajuizamento da petição inicial, o Poder Judiciário permanece inerte para assegurar sua indeclinável <em>imparcialidade</em>.
+          </p>
 
-      <div class="flashcard-grid">
-        <details class="flashcard">
-          <summary>❓ Quais são os 3 Elementos da Ação?</summary>
-          <div class="flashcard-back">
-            <strong>Partes</strong> (Autor e Réu), <strong>Pedido</strong> (Imediato e Mediato) e <strong>Causa de Pedir</strong> (Fatos e Fundamentos Jurídicos).
-          </div>
-        </details>
+          <h4 style="margin-top: 1.25rem;">2. A Teoria da Tríplice Identidade de Elementos nas Questões 03, 08 e Bônus 02</h4>
+          <p>
+            Toda ação é individualizada por seus 3 elementos basilares: <strong>Partes</strong> (autor e réu), <strong>Pedido</strong> (imediato e mediato) e <strong>Causa de Pedir</strong> (fatos e fundamentos jurídicos). Essa tríplice identidade foi o alicerce fundamental de três questões centrais da atividade avaliativa:
+          </p>
+          <ul style="margin-left: 1.25rem; line-height: 1.8;">
+            <li><strong>Na Conexão (Art. 55 / Questão Bônus 02):</strong> Exige-se a coincidência de apenas <em>um dos elementos objetivos</em> (o <strong>Pedido OU a Causa de Pedir</strong>), sendo dispensável a identidade das partes. A reunião dos feitos conexos perante o prevento visa evitar julgamentos contraditórios, mas possui o <em>limite temporal inegociável da sentença</em> (Art. 55, § 1º c/c Súmula 235 do STJ — não cabe conexão em grau de Apelação!).</li>
+            <li><strong>Na Continência (Arts. 56 e 57 / Questão Bônus 02):</strong> Exige identidade rigorosa das <strong>partes e da causa de pedir</strong>, mas o pedido da ação continente é mais amplo que o da ação contida. Se a continente for proposta depois, os processos se reúnem; se a contida for proposta depois, é <em>extinta sem resolução do mérito</em> por litispendência parcial (Art. 57, 2ª parte).</li>
+            <li><strong>Na Homologação de Decisão Estrangeira (Art. 963, VI / Questão 03):</strong> Quando houver decisão transitada em julgado no Brasil envolvendo a <strong>mesma tríplice identidade (mesmas partes, causa de pedir e pedido)</strong>, é expressamente vedada a homologação de sentença estrangeira pelo STJ, em respeito à autoridade soberana da coisa julgada brasileira.</li>
+          </ul>
 
-        <details class="flashcard">
-          <summary>❓ O que é o Pedido Imediato e o Pedido Mediato?</summary>
-          <div class="flashcard-back">
-            <strong>Imediato:</strong> O provimento jurisdicional pretendido (condenatório, declaratório, constitutivo).<br>
-            <strong>Mediato:</strong> O bem da vida almejado (a quantia, o imóvel, a coisa).
+          <h4 style="margin-top: 1.25rem;">3. Direito de Defesa: Objeções de Ordem Pública vs. Exceções em Sentido Estrito (Questões 05, 08 e 12)</h4>
+          <p>
+            Ao exercer o direito de defesa (exceção em sentido amplo), o réu pode suscitar duas grandes categorias de defesas processuais, cobradas nas <strong>Questões 05, 08 e 12</strong> da atividade:
+          </p>
+          <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+            <div style="background: rgba(239, 68, 68, 0.05); border-left: 4px solid #EF4444; padding: 12px; border-radius: 8px;">
+              <strong style="color: #DC2626;">Objeções (Matérias de Ordem Pública):</strong><br>
+              • <em>Exemplos:</em> Incompetência Absoluta, falta de Condições da Ação (Art. 17 CPC), ausência de pressupostos processuais de validade.<br>
+              • <em>Regime:</em> O juiz <strong>deve conhecer de ofício</strong> a qualquer tempo e grau ordinário de jurisdição. <strong>NUNCA precluem</strong> durante o processo e nunca se prorrogam. Após o trânsito em julgado, autorizam o ajuizamento de <strong>Ação Rescisória</strong> (Art. 966, II do CPC).
+            </div>
+            <div style="background: rgba(37, 99, 235, 0.05); border-left: 4px solid #2563EB; padding: 12px; border-radius: 8px;">
+              <strong style="color: #1D4ED8;">Exceções em Sentido Estrito (Ordem Privada):</strong><br>
+              • <em>Exemplos:</em> Incompetência Relativa (território e valor) e Foro de Eleição.<br>
+              • <em>Regime:</em> O juiz, em regra, <strong>NÃO pode conhecer de ofício</strong> (Súmula 33 do STJ). Devem ser alegadas obrigatoriamente em capítulo de <strong>preliminar de contestação</strong> (Art. 64 c/c Art. 337, II), sob pena de preclusão temporal e <strong>prorrogação definitiva da competência</strong> (Art. 65 do CPC), não cabendo ação rescisória.
+            </div>
           </div>
-        </details>
-
-        <details class="flashcard">
-          <summary>❓ O que diferencia uma Objeção de uma Exceção em Sentido Estrito?</summary>
-          <div class="flashcard-back">
-            <strong>Objeção:</strong> Matéria de ordem pública, o juiz conhece de ofício e JAMAIS preclui.<br>
-            <strong>Exceção em Sentido Estrito:</strong> Matéria privada, depende de alegação do réu e PRECLUE.
-          </div>
-        </details>
+        </div>
       </div>
     </section>
 
