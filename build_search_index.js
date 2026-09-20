@@ -57,7 +57,7 @@ htmlFiles.forEach(filepath => {
     summaryTitle = cleanText(titleMatch[1]).split(/[-–|]/)[0].trim();
   }
 
-  const relativeUrl = `subjects/${subjectDir}/${filename}`;
+  const relativeUrl = path.relative('.', filepath).replace(/\\/g, '/');
 
   // Match all <section id="...">...</section>
   const sectionRegex = /<section\s+[^>]*id=["']([^"']+)["'][^>]*>([\s\S]*?)<\/section>/gi;

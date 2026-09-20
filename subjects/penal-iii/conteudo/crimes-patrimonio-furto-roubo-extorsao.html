@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal III — Crimes Contra o Patrimônio I: Furto, Roubo e Extorsões (Arts. 155 a 160 CP) | Premium Learning</title>
+
+  <!-- Typography: Outfit, Lora, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      padding: 60px 20px 50px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
+    }
+
+    main {
+      padding-top: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #FCA5A5;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #F87171;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--p-500);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.blue { border-top-color: #3B82F6; }
+    .card.purple { border-top-color: #8B5CF6; }
+    .card.emerald { border-top-color: #10B981; }
+
+    /* Dogmatic Elements Card */
+    .crime-elements {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .crime-elements h4 {
+      margin-top: 0;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      margin-bottom: 0.85rem;
+    }
+
+    [data-theme="dark"] .crime-elements h4 {
+      color: #FCA5A5;
+    }
+
+    .crime-elements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      font-size: 0.92rem;
+    }
+
+    .elem-tag {
+      font-weight: 700;
+      color: var(--p-700);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    [data-theme="dark"] .elem-tag {
+      color: var(--accent-gold);
+    }
+
+    /* Interactive Lei Seca */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .artigo:hover {
+      border-color: var(--p-500);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      user-select: none;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.2rem;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.25rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #1F2937;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(239, 68, 68, 0.08);
+      color: #F3F4F6;
+    }
+
+    /* Callout Boxes */
+    .exam-tip, .pitfall {
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exam-tip {
+      background: #FFFBEB;
+      border: 1px solid #FEF3C7;
+    }
+
+    .pitfall {
+      background: #FEF2F2;
+      border: 1px solid #FEE2E2;
+    }
+
+    [data-theme="dark"] .exam-tip {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    [data-theme="dark"] .pitfall {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip .box-label {
+      background: #D97706;
+    }
+
+    .pitfall .box-label {
+      background: #EF4444;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 1.1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background-color: var(--bg-hover);
+    }
+
+    /* Mindmap */
+    .mindmap-box {
+      background: #111827;
+      color: #F9FAFB;
+      padding: 2.25rem;
+      border-radius: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      line-height: 1.7;
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid #374151;
+      padding-bottom: 0.5rem;
+    }
+
+    .mm-l1 {
+      margin-left: 1.5rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .mm-l2 {
+      margin-left: 3rem;
+      color: #E5E7EB;
+      font-size: 0.92rem;
+      position: relative;
+    }
+
+    .mm-l2::before {
+      content: "├─ ";
+      color: #6B7280;
+    }
+
+    .mm-l3 {
+      margin-left: 4.5rem;
+      color: #9CA3AF;
+      font-size: 0.85rem;
+    }
+
+    .mm-l3::before {
+      content: "│  └─ ";
+      color: #4B5563;
+    }
+
+    /* Mnemonic Box */
+    .mnemonic-box {
+      background: #1E293B;
+      color: #FFFFFF;
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #F59E0B;
+    }
+
+    .mnemonic-pill {
+      background: #F59E0B;
+      color: #000000;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-right: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Active Review Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exercise p {
+      margin-top: 0;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      background: var(--bg-hover);
+      border-radius: 10px;
+      border-left: 4px solid #10B981;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #FEE2E2;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(239, 68, 68, 0.25);
+      color: #FCA5A5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="badge badge-penal">Material Didático · Direito Penal III</div>
+      <h1>Crimes Contra o Patrimônio I: Furto, Roubo e Extorsões</h1>
+      <div class="subtitle">Análise Dogmática Completa dos Arts. 155 a 160 do Código Penal — Edições 47, 51 e 87 de Jurisprudência em Teses do STJ e Súmulas Vinculantes</div>
+      <div class="meta">
+        <span>⚖️ Arts. 155 a 160 CP</span>
+        <span>📚 Título II - Dos Crimes Contra o Patrimônio</span>
+        <span>🛡️ Foco em Magistratura, MP, DPE e OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../../index.html" class="home-btn" title="Voltar ao Portal Hub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#furto" class="nav-item">Furto (Art. 155)</a>
+        <a href="#coisacomum" class="nav-item">Coisa Comum</a>
+        <a href="#roubo" class="nav-item">Roubo (Art. 157)</a>
+        <a href="#extorsao" class="nav-item">Extorsão (Art. 158)</a>
+        <a href="#sequestro" class="nav-item">Extorsão Mediante Sequestro</a>
+        <a href="#mapamental" class="nav-item">Mapa Mental</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+        <a href="#resumofinal" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema escuro/claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+    <section id="objetivos" class="section">
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao finalizar este estudo intensivo, você dominará com precisão técnico-jurídica:</p>
+      <ul>
+        <li>A teoria da consumação patrimonial (<em>Amotio / Apprehensio</em> — Súmula 582 do STJ) e o regime do furto noturno (Tema 1.087 STJ);</li>
+        <li>Os critérios objetivos do Princípio da Insignificância no furto e o furto privilegiado (Súmula 511 STJ);</li>
+        <li>A diferenciação entre Furto Qualificado por Fraude e Estelionato, e entre "gato" de energia e adulteração de hidrômetro/relógio;</li>
+        <li>A estrutura do Roubo Próprio vs. Impróprio, todas as majorantes das Leis 13.654/18 e 13.964/19, e a dosimetria conforme a Súmula 443 do STJ;</li>
+        <li>O Latrocínio (Art. 157, § 3º, II): competência do juiz singular (Súmula 603 STF), consumação com morte (Súmula 610 STF) e hediondez;</li>
+        <li>A distinção cirúrgica entre Roubo, Extorsão e Extorsão Mediante Sequestro, compreendendo o "Sequestro-Relâmpago" (Art. 158, § 3º) e a Súmula 96 do STJ.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. FURTO ══════════════════════════════ -->
+    <section id="furto" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo I do Título II</div>
+      <h2>1. Do Furto (Art. 155 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> Furtar é pegar para si uma coisa que pertence a outra pessoa, escondido ou sem que ela use de violência. É a clássica subtração "na surdina". Se a vítima nem percebeu ou não foi ameaçada, é furto.</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> O núcleo do tipo é o verbo <em>subtrair</em> (tirar da esfera de disponibilidade da vítima). O bem jurídico protegido é a posse e a propriedade. Consuma-se pela <strong>Teoria da Amotio (Apprehensio)</strong>, bastando a inversão da posse, ainda que por breve tempo e mesmo que haja perseguição policial imediata (Súmula 582 STJ).</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> O Tema 1.087 do STJ pacificou que a causa de aumento do repouso noturno (§ 1º) incide <em>exclusivamente</em> sobre o furto simples (caput), sendo <strong>inaplicável</strong> ao furto qualificado (§ 4º). Ademais, o furto privilegiado (§ 2º) é <em>compatível</em> com as qualificadoras de natureza puramente <strong>objetiva</strong> (Súmula 511 STJ).</p>
+      </div>
+
+      <!-- Dogmatic Elements: Furto -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Furto (Art. 155 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Verbo <em>subtrair</em> (apoderar-se) de coisa alheia móvel. Crime comum, material e de dano patrimonial. Admite tentativa.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            Dolo + Elemento Subjetivo Especial: <em>animus rem sibi habendi</em> (intenção de assenhoreamento definitivo para si ou outrem). Furto de uso é atípico!
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            "Coisa alheia" (se a coisa for própria, de ninguém <em>res nullius</em> ou abandonada <em>res derelicta</em>, o fato é atípico).
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Furto Simples (caput: 1 a 4 anos): Rito Ordinário (admite ANPP art. 28-A CPP e suspensão condicional do processo).<br>
+            • Furto Qualificado: Reclusão de 2 a 8 anos (ou 4 a 10 anos se explosivo) -> Rito Ordinário.
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            Ação Penal <strong>PÚBLICA INCONDICIONADA</strong> (salvo imunidade relativa do art. 182 CP).
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 155 do Código Penal - Furto e suas Modalidades</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 155 -</strong> Subtrair, para si ou para outrem, coisa alheia móvel:<br>
+          Pena - reclusão, de 1 (um) a 4 (quatro) anos, e multa.</p>
+
+          <p><strong>§ 1º [REPOUSO NOTURNO]:</strong> A pena aumenta-se de 1/3 (um terço), se o crime é praticado durante o repouso noturno.</p>
+
+          <p><strong>§ 2º [FURTO PRIVILEGIADO]:</strong> Se o criminoso é primário, e é de pequeno valor a coisa furtada, o juiz pode substituir a pena de reclusão pela de detenção, diminuí-la de um a dois terços, ou aplicar somente a pena de multa.</p>
+
+          <p><strong>§ 3º [EQUIPARAÇÃO]:</strong> Equipara-se à coisa móvel a <span class="kw">energia elétrica</span> ou qualquer outra que tenha valor econômico.</p>
+
+          <p><strong>§ 4º [FURTO QUALIFICADO]:</strong> A pena é de reclusão de 2 (dois) a 8 (oito) anos, e multa, se o crime é cometido com:<br>
+          I - destruição ou rompimento de obstáculo à subtração da coisa;<br>
+          II - com abuso de confiança, ou mediante fraude, escalada ou destreza;<br>
+          III - com emprego de chave falsa;<br>
+          IV - mediante concurso de 2 (duas) ou mais pessoas.</p>
+
+          <p><strong>§ 4º-A:</strong> A pena é de reclusão de 4 (quatro) a 10 (dez) anos e multa, se houver <span class="kw">emprego de explosivo</span> ou de artefato análogo que cause perigo comum.</p>
+
+          <p><strong>§ 4º-B [FRAUDE ELETRÔNICA]:</strong> A pena é de reclusão, de 4 (quatro) a 8 (oito) anos, e multa, se a subtração for cometida por meio de dispositivo eletrônico ou informático, conectado ou não à rede de computadores. <em>(Lei 14.155/21)</em></p>
+
+          <p><strong>§ 5º:</strong> A pena é de reclusão de 3 (três) a 8 (oito) anos, se a subtração for de <span class="kw">veículo automotor</span> que venha a ser transportado para outro Estado ou para o exterior.</p>
+
+          <p><strong>§ 6º [ABIGEATO]:</strong> A pena é de reclusão de 2 (dois) a 5 (cinco) anos se a subtração for de <span class="kw">semovente domesticável de produção</span>, ainda que abatido ou dividido em partes. <em>(Lei 13.330/16)</em></p>
+
+          <p><strong>§ 7º:</strong> A pena é de reclusão de 4 a 10 anos e multa se a subtração for de substâncias explosivas ou de acessórios que viabilizem sua fabricação. <em>(Lei 13.654/18)</em></p>
+        </div>
+      </details>
+
+      <!-- Comparative Table: Furto mediante Fraude x Estelionato -->
+      <h3>Diferenciação Crítica: Furto Mediante Fraude vs. Estelionato</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Critério Dogmático</th>
+            <th>Furto Mediante Fraude (Art. 155, § 4º, II)</th>
+            <th>Estelionato (Art. 171)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Papel da Fraude</strong></td>
+            <td>A fraude é usada para <strong>burlar a vigilância</strong> da vítima ou diminuir sua atenção, permitindo que o ladrão <strong>subtraia</strong> a coisa.</td>
+            <td>A fraude é usada para induzir a vítima em erro, fazendo com que ela própria <strong>entregue voluntariamente</strong> a coisa ao agente.</td>
+          </tr>
+          <tr>
+            <td><strong>Atuação da Vítima</strong></td>
+            <td>Passiva. A vítima é ludibriada e <strong>não percebe</strong> a subtração acontecendo.</td>
+            <td>Ativa. A vítima entrega o bem achando que está fazendo um negócio vantajoso ou legítimo.</td>
+          </tr>
+          <tr>
+            <td><strong>Exemplo Típico</strong></td>
+            <td>O falso técnico que pede um copo d'água e, enquanto a dona da casa vai à cozinha, subtrai as joias sobre a mesa.</td>
+            <td>O golpista do bilhete premiado que convence a vítima a lhe entregar dinheiro para resgatar o suposto prêmio.</td>
+          </tr>
+          <tr>
+            <td><strong>Ligação de Energia Elétrica</strong></td>
+            <td><strong>"Gato" direto:</strong> ligação clandestina direta no poste (subtração direta = furto de energia art. 155, § 3º).</td>
+            <td><strong>Adulteração do medidor:</strong> manipulação do relógio medidor para registrar a menor (fraude = estelionato art. 171).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Súmulas Furto -->
+      <div class="card" style="border-left: 5px solid #3B82F6;">
+        <span class="box-label" style="background:#3B82F6;">⚖️ Súmulas e Teses Consolidadas do STJ sobre Furto</span>
+        <ul>
+          <li><strong>Súmula 511 do STJ:</strong> É possível o reconhecimento do privilégio previsto no § 2º do art. 155 do CP nos casos de furto qualificado, se estiverem presentes a primariedade do agente, o pequeno valor da coisa e a qualificadora for de ordem <strong>objetiva</strong> (ex: rompimento de obstáculo, chave falsa, escalada). É inadmissível com abuso de confiança (subjetiva).</li>
+          <li><strong>Súmula 567 do STJ:</strong> A existência de sistema de segurança eletrônico ou vigilância realizada por circuito interno em estabelecimento comercial, por si só, <strong>não torna o crime de furto impossível</strong> (não atrai o art. 17 do CP).</li>
+          <li><strong>Súmula 582 do STJ (Amotio):</strong> Consuma-se o crime de furto (e roubo) com a simples <strong>inversão da posse</strong> da coisa subtraída, após cessada a clandestinidade, sendo desnecessária a posse mansa, pacífica ou desvigiada do bem, ainda que haja perseguição imediata e recuperação da coisa.</li>
+          <li><strong>Furto de Uso:</strong> Conduta <strong>atípica</strong>, exigindo: <em>(a)</em> intenção de uso momentâneo; <em>(b)</em> restituição imediata; <em>(c)</em> devolução integral e no mesmo estado no local de origem (STJ Teses Ed. 47).</li>
+          <li><strong>Sinal de TV a Cabo:</strong> O STF (HC 97.261) firmou que a interceptação de sinal clandestino de TV a cabo <strong>não é furto</strong> de energia, sendo fato atípico criminalmente pela vedação à analogia <em>in malam partem</em>.</li>
+        </ul>
+      </div>
+
+      <!-- Furto de Coisa Comum -->
+      <h3 id="coisacomum">Furto de Coisa Comum (Art. 156 CP)</h3>
+      <details class="artigo">
+        <summary>Art. 156 do Código Penal - Furto de Coisa Comum</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 156 -</strong> Subtrair o condômino, coerdeiro ou sócio, para si ou para outrem, a quem legitimamente a detém, a coisa comum:<br>
+          Pena - detenção, de 6 (seis) meses a 2 (dois) anos, ou multa.</p>
+          <p><strong>§ 1º -</strong> Somente se procede mediante <span class="kw">representação</span>.</p>
+          <p><strong>§ 2º -</strong> <span class="kw">Não é punível</span> a subtração de coisa comum fungível, cujo valor não excede a quota a que tem direito o agente.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ 2. ROUBO ══════════════════════════════ -->
+    <section id="roubo" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo II do Título II</div>
+      <h2>2. Do Roubo (Art. 157 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> O roubo é o furto violento. Quando alguém subtrai coisa alheia usando de agressão física (soco, empurrão), ameaça com arma de fogo ou deixando a vítima desacordada (com "boa noite, Cinderela"), comete roubo.</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> É um crime <strong>complexo</strong>, que tutela simultaneamente o patrimônio e a integridade física ou liberdade pessoal da vítima. Divide-se em <em>Roubo Próprio</em> (caput) e <em>Roubo Impróprio</em> (§ 1º). Consuma-se pela teoria da <em>amotio</em> (inversão da posse).</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> O roubo impróprio <strong>não admite tentativa</strong> (se empregou a violência para assegurar a posse, consumou o roubo impróprio; se não conseguiu empregar a violência, responde por tentativa de furto). As frações de majorantes devem ser motivadas concretamente (Súmula 443 STJ). No Latrocínio (§ 3º, II), a morte consumada com subtração tentada configura latrocínio consumado (Súmula 610 STF), julgado pelo juiz singular (Súmula 603 STF).</p>
+      </div>
+
+      <!-- Dogmatic Elements: Roubo -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Roubo (Art. 157 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Subtrair coisa móvel alheia mediante violência física (<em>vis corporalis</em>), grave ameaça (<em>vis compulsiva</em>) ou qualquer outro meio que reduza a capacidade de resistência da vítima.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            Dolo + <em>animus rem sibi habendi</em>. No roubo impróprio (§ 1º), exige o elemento subjetivo especial: fim de assegurar a impunidade do crime ou a detenção da coisa para si ou terceiro.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            "Coisa móvel alheia", "grave ameaça" e "depois de havê-la, por qualquer meio, reduzido à impossibilidade de resistência".
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Roubo Simples: Reclusão 4 a 10 anos -> Rito Ordinário (inaplicável ANPP e suspensão da pena por ter violência/grave ameaça).<br>
+            • Latrocínio (§ 3º, II): Reclusão 20 a 30 anos (Hediondo) -> Rito Ordinário da Vara Criminal (Juiz Singular).
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            Ação Penal <strong>PÚBLICA INCONDICIONADA</strong>.
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 157 do Código Penal - Roubo e suas Majorantes e Qualificadoras</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 157 -</strong> Subtrair coisa móvel alheia, para si ou para outrem, mediante grave ameaça ou violência a pessoa, ou depois de havê-la, por qualquer meio, reduzido à impossibilidade de resistência:<br>
+          Pena - reclusão, de 4 (quatro) a 10 (dez) anos, e multa.</p>
+
+          <p><strong>§ 1º [ROUBO IMPRÓPRIO]:</strong> Na mesma pena incorre quem, logo depois de subtraída a coisa, emprega violência contra pessoa ou grave ameaça, a fim de assegurar a impunidade do crime ou a detenção da coisa para si ou para terceiro.</p>
+
+          <p><strong>§ 2º [MAJORANTES DE 1/3 ATÉ METADE]:</strong> A pena aumenta-se de 1/3 (um terço) até metade:<br>
+          II - se há o concurso de 2 (duas) ou mais pessoas;<br>
+          III - se a vítima está em serviço de transporte de valores e o agente o sabe;<br>
+          IV - se a subtração for de veículo automotor que venha a ser transportado para outro Estado ou exterior;<br>
+          V - se o agente mantém a vítima em seu poder, restringindo sua liberdade;<br>
+          VI - se a subtração for de substâncias explosivas;<br>
+          VII - se a violência ou ameaça é exercida com emprego de <span class="kw">arma branca</span>. <em>(Lei 13.964/19)</em></p>
+
+          <p><strong>§ 2º-A [MAJORANTE DE 2/3]:</strong> A pena aumenta-se de 2/3 (dois terços):<br>
+          I - se a violência ou ameaça é exercida com emprego de <span class="kw">arma de fogo</span>; <em>(Lei 13.654/18)</em><br>
+          II - se há destruição ou rompimento de obstáculo mediante o emprego de explosivo.</p>
+
+          <p><strong>§ 2º-B [MAJORANTE EM DOBRO]:</strong> Se a violência ou grave ameaça é exercida com emprego de <span class="kw">arma de fogo de uso restrito ou proibido</span>, aplica-se em dobro a pena prevista no caput. <em>(Lei 13.964/19)</em></p>
+
+          <p><strong>§ 3º [ROUBO QUALIFICADO PELO RESULTADO]:</strong> Se da violência resulta:<br>
+          I - lesão corporal grave, a pena é de reclusão de 7 (sete) a 18 (dezoito) anos, e multa;<br>
+          II - <span class="kw">morte [LATROCÍNIO]</span>, a pena é de reclusão de 20 (vinte) a 30 (trinta) anos, e multa.</p>
+        </div>
+      </details>
+
+      <!-- Comparative: Roubo Próprio vs Impróprio -->
+      <h3>Quadro Comparativo: Roubo Próprio vs. Roubo Impróprio</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Roubo Próprio (Art. 157, caput)</th>
+            <th>Roubo Impróprio (Art. 157, § 1º)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Momento da Violência/Ameaça</strong></td>
+            <td>Empregada <strong>antes ou durante</strong> a subtração da coisa.</td>
+            <td>Empregada <strong>logo após</strong> a subtração da coisa.</td>
+          </tr>
+          <tr>
+            <td><strong>Finalidade da Violência</strong></td>
+            <td>Subjugar a vítima para <strong>conseguir subtrair</strong> o bem.</td>
+            <td>Assegurar a <strong>impunidade</strong> do crime ou a <strong>detenção</strong> da coisa furtada.</td>
+          </tr>
+          <tr>
+            <td><strong>Meios de Execução</strong></td>
+            <td>Violência física, grave ameaça OU <em>qualquer outro meio</em> (ex: narcóticos/boa noite cinderela).</td>
+            <td><strong>Apenas</strong> violência física OU grave ameaça (não admite o "outro meio").</td>
+          </tr>
+          <tr>
+            <td><strong>Admissibilidade de Tentativa</strong></td>
+            <td><strong>SIM</strong>, admite tentativa plenamente.</td>
+            <td><strong>NÃO</strong> admite tentativa segundo doutrina e STJ (ou consuma o roubo com a violência pós-subtração, ou se frustrada responde por furto tentado).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Latrocínio Box -->
+      <div class="card purple">
+        <h4>⚖️ Regime Dogmático do Latrocínio (Art. 157, § 3º, II CP)</h4>
+        <p>O latrocínio é espécie de roubo qualificado pelo resultado morte (crime preterdoloso ou com dolo no antecedente e no consequente). É crime hediondo (art. 1º, II, da Lei 8.072/90).</p>
+        <ul>
+          <li><strong>Súmula 610 do STF:</strong> <em>"Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima."</em> A vida é o bem mais valioso tutelado; a morte consuma o delito.</li>
+          <li><strong>Súmula 603 do STF:</strong> <em>"A competência para o processo e julgamento por crime de latrocínio é do juiz singular e não do tribunal do júri."</em> Motivo: cuida-se de crime contra o patrimônio, e não crime doloso contra a vida.</li>
+          <li><strong>Pluralidade de Vítimas com Uma Subtração:</strong> Se o agente mata duas pessoas para subtrair um único patrimônio, responde por latrocínio consumado com concurso formal impróprio ou crime continuado (STJ Teses Ed. 51).</li>
+        </ul>
+      </div>
+
+      <div class="exam-tip">
+        <span class="box-label">💡 Súmula 443 do STJ: Fração de Majorantes</span>
+        O aumento na terceira fase da dosimetria da pena no roubo circunstanciado por mais de uma causa de aumento exige <strong>fundamentação concreta</strong>, sendo <strong>INADMISSÍVEL</strong> a mera utilização de critério matemático ou indicação do número de majorantes (ex: aplicar 1/2 só porque há 3 majorantes sem fundamentar o risco concreto).
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. EXTORSÃO ══════════════════════════════ -->
+    <section id="extorsao" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo II do Título II</div>
+      <h2>3. Das Extorsões (Arts. 158, 159 e 160 CP)</h2>
+
+      <div class="card blue">
+        <h4>Diferença Essencial entre Roubo e Extorsão:</h4>
+        <p>No <strong>Roubo</strong>, a colaboração da vítima é <em>dispensável</em>: o ladrão aponta a arma e subtrai o relógio ou o carro, quer a vítima queira ou não. Na <strong>Extorsão</strong>, o comportamento da vítima é <em>indispensável</em> para a obtenção da vantagem: ela precisa assinar o documento, fornecer a senha bancária ou digitar a chave PIX, sob coação moral ou física.</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 158 do Código Penal - Extorsão e Sequestro-Relâmpago</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 158 -</strong> Constranger alguém, mediante violência ou grave ameaça, e com o intuito de obter para si ou para outrem indevida vantagem econômica, a fazer, tolerar que se faça ou deixar de fazer alguma coisa:<br>
+          Pena - reclusão, de 4 (quatro) a 10 (dez) anos, e multa.</p>
+
+          <p><strong>§ 1º:</strong> Se o crime é cometido por duas ou mais pessoas, ou com emprego de arma, aumenta-se a pena de 1/3 até metade.</p>
+
+          <p><strong>§ 2º:</strong> Aplica-se à extorsão praticada mediante violência o disposto no § 3º do artigo anterior (lesão grave ou morte).</p>
+
+          <p><strong>§ 3º [SEQUESTRO-RELÂMPAGO]:</strong> Se o crime é cometido mediante a <span class="kw">restrição da liberdade da vítima</span>, e essa condição é necessária para a obtenção da vantagem econômica, a pena é de reclusão, de 6 (seis) a 12 (doze) anos, além da multa; se resulta lesão grave, aplica-se o art. 159, § 2º; se resulta morte, reclusão de 24 a 30 anos.</p>
+        </div>
+      </details>
+
+      <div class="exam-tip">
+        <span class="box-label">⚖️ Súmula 96 do STJ: Natureza Formal da Extorsão</span>
+        <em>"O crime de extorsão consuma-se independentemente da obtenção da vantagem indevida."</em> Trata-se de crime <strong>formal (de consumação antecipada)</strong>. No instante em que o agente constrange a vítima com grave ameaça para que esta lhe pague quantia indevida, o crime já está <strong>consumado</strong>. A obtenção do dinheiro é mero exaurimento.
+      </div>
+
+      <!-- Extorsão Mediante Sequestro -->
+      <h3 id="sequestro">Extorsão Mediante Sequestro (Art. 159 CP)</h3>
+      <div class="card">
+        <p><strong>Art. 159 —</strong> Sequestrar pessoa com o fim de obter, para si ou para outrem, qualquer vantagem, como <strong>condição ou preço do resgate</strong>: Pena - reclusão de 8 a 15 anos.</p>
+        <ul>
+          <li><strong>Hediondez:</strong> É crime <strong>hediondo em todas as suas formas</strong> (simples e qualificadas), conforme art. 1º, IV, da Lei 8.072/90.</li>
+          <li><strong>Consumação:</strong> Crime formal e permanente. Consuma-se no exato momento da privação da liberdade da vítima, independentemente do pagamento do resgate.</li>
+          <li><strong>Qualificadoras:</strong>
+            <ul>
+              <li><strong>§ 1º (Reclusão 12 a 20 anos):</strong> Sequestro dura mais de 24 horas; vítima menor de 18 ou maior de 60 anos; cometido por bando ou quadrilha (associação criminosa).</li>
+              <li><strong>§ 2º (Reclusão 16 a 24 anos):</strong> Se resulta lesão corporal de natureza grave.</li>
+              <li><strong>§ 3º (Reclusão 24 a 30 anos):</strong> Se resulta morte.</li>
+            </ul>
+          </li>
+          <li><strong>Delação Premiada (§ 4º):</strong> Se o crime é cometido em concurso, o concorrente que o denunciar à autoridade, facilitando a libertação do sequestrado, terá sua pena <strong>reduzida de 1/3 a 2/3</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Extorsão Indireta -->
+      <h3>Extorsão Indireta (Art. 160 CP)</h3>
+      <p>Exigir ou receber, como garantia de dívida, abusando da situação de alguém, documento que pode dar causa a procedimento criminal contra a vítima ou terceiro (ex: agiota que exige cheque em branco sem fundos ou nota promissória fraudada como garantia coercitiva de dívida usurária). Pena: Reclusão de 1 a 3 anos e multa.</p>
+    </section>
+
+    <!-- ══════════════════════════════ 4. MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapamental" class="section">
+      <h2>🧠 Mapa Mental Sintético: Crimes Contra o Patrimônio I</h2>
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ CRIMES CONTRA O PATRIMÔNIO I (ARTS. 155 A 160 CP)</div>
+        <div class="mm-l1">FURTO (ART. 155)</div>
+        <div class="mm-l2">Consumação -> Teoria da Amotio / Inversão da Posse (Súmula 582 STJ)</div>
+        <div class="mm-l2">Repouso Noturno (§ 1º) -> Só incide no furto simples (Tema 1.087 STJ)</div>
+        <div class="mm-l2">Privilegiado (§ 2º) -> Primário + Pequeno Valor (compatível com qualificadora objetiva - Súmula 511)</div>
+        <div class="mm-l2">Qualificado (§ 4º e 4º-A) -> Obstáculo | Abuso | Fraude | Concurso | Explosivo</div>
+        <div class="mm-l2">Fraude Eletrônica (§ 4º-B) -> Reclusão 4 a 8 anos (Lei 14.155/21)</div>
+        
+        <div class="mm-l1">ROUBO (ART. 157)</div>
+        <div class="mm-l2">Próprio (caput) -> Violência antes/durante | Admite tentativa</div>
+        <div class="mm-l2">Impróprio (§ 1º) -> Violência logo após para manter posse/impunidade | Não admite tentativa</div>
+        <div class="mm-l2">Majorantes: Arma branca (+1/3 a 1/2) | Arma de fogo (+2/3) | Arma restrita/proibida (EM DOBRO)</div>
+        <div class="mm-l2">Latrocínio (§ 3º, II) -> 20 a 30a | Morte consumada com furto tentado = Latrocínio consumado (Súmula 610 STF) | Juiz Singular (Súmula 603 STF)</div>
+        
+        <div class="mm-l1">EXTORSÃO (ARTS. 158 A 160)</div>
+        <div class="mm-l2">Extorsão Comum (158) -> Comportamento da vítima indispensável | Crime formal (Súmula 96 STJ)</div>
+        <div class="mm-l2">Sequestro-Relâmpago (§ 3º) -> Restrição de liberdade necessária para obter vantagem</div>
+        <div class="mm-l2">Extorsão Mediante Sequestro (159) -> Resgate | Hediondo em todas as formas | Delação (§ 4º)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. MNEMÔNICOS ══════════════════════════════ -->
+    <section class="section">
+      <h2>💡 Mnemônicos Estratégicos de Fixação</h2>
+
+      <div class="mnemonic-box">
+        <h4><span class="mnemonic-pill">M-A-R-I</span> Requisitos da Insignificância no Furto (STF)</h4>
+        <p>• <span class="mnemonic-pill">M</span> <strong>M</strong>ínima ofensividade da conduta;</p>
+        <p>• <span class="mnemonic-pill">A</span> <strong>A</strong>usência de periculosidade social da ação;</p>
+        <p>• <span class="mnemonic-pill">R</span> <strong>R</strong>eduzidíssimo grau de reprovabilidade do comportamento;</p>
+        <p>• <span class="mnemonic-pill">I</span> <strong>I</strong>nexpressividade da lesão jurídica provocada.</p>
+      </div>
+
+      <div class="mnemonic-box" style="border-left-color: #3B82F6;">
+        <h4><span class="mnemonic-pill" style="background:#3B82F6; color:#fff;">A-M-O-T-I-O</span> Momento Consumativo dos Delitos Patrimoniais (Súmula 582 STJ)</h4>
+        <p>A simples <strong>inversão da posse</strong> consuma o delito. <em>NÃO</em> se exige posse mansa, nem pacífica, nem desvigiada!</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="revisao" class="section">
+      <h2>📝 Revisão Ativa (Questões Comentadas)</h2>
+
+      <!-- Q1 Discursiva -->
+      <div class="exercise">
+        <p><strong>01. (Magistratura Estadual):</strong> Lucas entra em uma agência bancária durante a madrugada, explode os caixas eletrônicos destruindo o prédio, subtrai 100 mil reais e foge. Logo em seguida, a polícia cerca o local e o prende 20 minutos depois com todo o dinheiro. Analise a tipificação penal, as qualificadoras e o momento consumativo do delito.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Lucas cometeu o crime de <strong>Furto Qualificado pelo Emprego de Explosivo</strong> (Art. 155, § 4º-A, do CP - reclusão de 4 a 10 anos e multa). O crime restou <strong>plenamente consumado</strong> no instante em que houve a inversão da posse dos valores subtraídos, sendo absolutamente irrelevante a perseguição policial e a ausência de posse mansa e desvigiada, conforme a <strong>Súmula 582 do STJ</strong> (Teoria da Amotio/Apprehensio).
+          </div>
+        </details>
+      </div>
+
+      <!-- Q2 CEBRASPE -->
+      <div class="exercise">
+        <p><strong>02. (CEBRASPE / Delegado de Polícia):</strong> Configura latrocínio consumado a hipótese em que o agente, imbuído de animus furandi, dispara sua arma de fogo contra a vítima para subtrair seus pertences, matando-a no local, mas foge sem conseguir levar qualquer objeto em razão da aproximação de transeuntes.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: CERTO.</strong> Nos termos da <strong>Súmula 610 do STF</strong>: "Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima." A vida humana é o bem jurídico preponderante; consumando-se a morte no contexto patrimonial, consumado está o latrocínio.
+          </div>
+        </details>
+      </div>
+
+      <!-- Q3 FGV OAB -->
+      <div class="exercise">
+        <p><strong>03. (FGV / OAB):</strong> Jonas, necessitando de dinheiro, aborda Clara na saída de um restaurante e, simulando portar arma de fogo sob a camisa, exige que ela lhe entregue o celular e a bolsa, sob ameaça de morte. Diante da ameaça, Clara entrega os objetos e Jonas foge. Clara não sofreu qualquer agressão física. Jonas responderá por:</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: Roubo Simples (Art. 157, caput, do CP).</strong> A simulação de porte de arma de fogo é meio idôneo para caracterizar a <strong>grave ameaça</strong> do caput do art. 157, inviabilizando a desclassificação para furto. Todavia, a arma fictícia ou o simulacro <strong>não autorizam a majorante</strong> de arma de fogo do § 2º-A, I (que exige a lesividade real do artefato bélico, conforme jurisprudência pacífica do STJ).
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 7. FLASHCARDS ══════════════════════════════ -->
+    <section class="section">
+      <h2>⚡ Flashcards de Memorização Imediata</h2>
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Pergunta 1: Câmera de Vigilância e Crime Impossível</h4>
+          <p><strong>Câmera de segurança ou segurança particular impede a consumação do furto gerando crime impossível?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">NÃO! (Súmula 567 STJ: o monitoramento eletrônico não torna o crime impossível).</p>
+          </details>
+        </div>
+
+        <div class="card blue">
+          <h4>Pergunta 2: Repouso Noturno no Furto Qualificado</h4>
+          <p><strong>A majorante do repouso noturno (§ 1º) aplica-se ao furto qualificado (§ 4º)?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">NÃO! (Tema 1.087 do STJ: incide exclusivamente no furto simples do caput).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 8. RESUMO FINAL ══════════════════════════════ -->
+    <section id="resumofinal" class="section">
+      <div class="card gold">
+        <h2>🚀 Resumo Final Ultra Rápido (One-Page Cheat Sheet)</h2>
+        <ul>
+          <li><strong>Consumação dos Patrimoniais:</strong> Teoria da Amotio (Súmula 582 STJ) -> Inversão da posse, prescindindo de posse mansa ou desvigiada.</li>
+          <li><strong>Furto Privilegiado (Art. 155, § 2º):</strong> Primariedade + pequeno valor (até 1 SM). Compatível com qualificadoras objetivas (Súmula 511 STJ).</li>
+          <li><strong>Repouso Noturno (Art. 155, § 1º):</strong> Aumento de 1/3. Aplica-se apenas ao furto simples (Tema 1.087 STJ).</li>
+          <li><strong>Furto Mediante Fraude x Estelionato:</strong> No furto, a fraude distrai a vítima para o ladrão subtrair; no estelionato, a vítima iludida entrega voluntariamente.</li>
+          <li><strong>Roubo Impróprio (§ 1º):</strong> Violência empregada logo após a subtração para garantir posse ou impunidade. Não admite tentativa!</li>
+          <li><strong>Majorantes do Roubo:</strong> Arma branca (+1/3 a 1/2), arma de fogo comum (+2/3), arma de fogo restrita/proibida (EM DOBRO - Lei 13.964/19).</li>
+          <li><strong>Latrocínio (§ 3º, II):</strong> Morte consumada com furto tentado = latrocínio consumado (Súmula 610 STF). Julgado pelo juiz singular (Súmula 603 STF). Hediondo!</li>
+          <li><strong>Extorsão (Art. 158):</strong> Comportamento da vítima é indispensável. Crime formal (Súmula 96 STJ). Sequestro-relâmpago no § 3º (reclusão 6 a 12 anos).</li>
+          <li><strong>Extorsão Mediante Sequestro (Art. 159):</strong> Resgate. Crime formal, permanente e hediondo em todas as hipóteses. Delação premiada no § 4º (-1/3 a 2/3).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../../portal-core.js"></script>
+</body>
+
+</html>

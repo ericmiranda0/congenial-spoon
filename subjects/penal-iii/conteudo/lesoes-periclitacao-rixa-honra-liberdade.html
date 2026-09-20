@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal III — Lesões Corporais, Periclitação da Vida, Rixa, Honra & Liberdade Individual (Arts. 129 a 154-B CP) | Premium Learning</title>
+
+  <!-- Typography: Outfit, Lora, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      padding: 60px 20px 50px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
+    }
+
+    main {
+      padding-top: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #FCA5A5;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #F87171;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--p-500);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.blue { border-top-color: #3B82F6; }
+    .card.purple { border-top-color: #8B5CF6; }
+    .card.emerald { border-top-color: #10B981; }
+
+    /* Dogmatic Elements Card */
+    .crime-elements {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .crime-elements h4 {
+      margin-top: 0;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      margin-bottom: 0.85rem;
+    }
+
+    [data-theme="dark"] .crime-elements h4 {
+      color: #FCA5A5;
+    }
+
+    .crime-elements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      font-size: 0.92rem;
+    }
+
+    .elem-tag {
+      font-weight: 700;
+      color: var(--p-700);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    [data-theme="dark"] .elem-tag {
+      color: var(--accent-gold);
+    }
+
+    /* Interactive Lei Seca */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .artigo:hover {
+      border-color: var(--p-500);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      user-select: none;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.2rem;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.25rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #1F2937;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(239, 68, 68, 0.08);
+      color: #F3F4F6;
+    }
+
+    /* Callout Boxes */
+    .exam-tip, .pitfall {
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exam-tip {
+      background: #FFFBEB;
+      border: 1px solid #FEF3C7;
+    }
+
+    .pitfall {
+      background: #FEF2F2;
+      border: 1px solid #FEE2E2;
+    }
+
+    [data-theme="dark"] .exam-tip {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    [data-theme="dark"] .pitfall {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip .box-label {
+      background: #D97706;
+    }
+
+    .pitfall .box-label {
+      background: #EF4444;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 1.1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background-color: var(--bg-hover);
+    }
+
+    /* Mindmap */
+    .mindmap-box {
+      background: #111827;
+      color: #F9FAFB;
+      padding: 2.25rem;
+      border-radius: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      line-height: 1.7;
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid #374151;
+      padding-bottom: 0.5rem;
+    }
+
+    .mm-l1 {
+      margin-left: 1.5rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .mm-l2 {
+      margin-left: 3rem;
+      color: #E5E7EB;
+      font-size: 0.92rem;
+      position: relative;
+    }
+
+    .mm-l2::before {
+      content: "├─ ";
+      color: #6B7280;
+    }
+
+    .mm-l3 {
+      margin-left: 4.5rem;
+      color: #9CA3AF;
+      font-size: 0.85rem;
+    }
+
+    .mm-l3::before {
+      content: "│  └─ ";
+      color: #4B5563;
+    }
+
+    /* Mnemonic Box */
+    .mnemonic-box {
+      background: #1E293B;
+      color: #FFFFFF;
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #F59E0B;
+    }
+
+    .mnemonic-pill {
+      background: #F59E0B;
+      color: #000000;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-right: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Active Review Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exercise p {
+      margin-top: 0;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      background: var(--bg-hover);
+      border-radius: 10px;
+      border-left: 4px solid #10B981;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #FEE2E2;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(239, 68, 68, 0.25);
+      color: #FCA5A5;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 1rem 0 1rem 2rem;
+      border-left: 3px solid var(--p-500);
+      margin: 2rem 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.45rem;
+      top: 0.35rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-card);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="badge badge-penal">Material Didático · Direito Penal III</div>
+      <h1>Lesões Corporais, Periclitação, Rixa, Honra &amp; Liberdade Individual</h1>
+      <div class="subtitle">Guia Dogmático Completo: Dos Arts. 129 a 154-B do Código Penal — Atualizado pelas Leis 14.811/24, 14.994/24, 15.159/25, 15.163/25, 15.358/26 e 15.455/26</div>
+      <div class="meta">
+        <span>⚖️ Arts. 129 a 154-B CP</span>
+        <span>📚 Crimes Contra a Pessoa II</span>
+        <span>🛡️ Foco em Concursos de Alto Nível &amp; OAB</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../../index.html" class="home-btn" title="Voltar ao Portal Hub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#lesoes" class="nav-item">Lesões Corporais</a>
+        <a href="#periclitacao" class="nav-item">Periclitação da Vida</a>
+        <a href="#rixa" class="nav-item">Rixa</a>
+        <a href="#honra" class="nav-item">Crimes Contra a Honra</a>
+        <a href="#liberdade" class="nav-item">Liberdade Individual</a>
+        <a href="#mapamental" class="nav-item">Mapa Mental</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+        <a href="#resumofinal" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema escuro/claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+    <section id="objetivos" class="section">
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao concluir o estudo deste módulo avançado, você terá dominado integralmente:</p>
+      <ul>
+        <li>A gradação das <strong>Lesões Corporais</strong> (leves, graves, gravíssimas e seguidas de morte), com domínio das súmulas do STJ e das inovações das Leis 14.994/24, 15.159/25, 15.358/26 e 15.455/26;</li>
+        <li>A dogmática dos <strong>Crimes de Periclitação da Vida e da Saúde</strong> (Arts. 130 a 136), incluindo o abandono de incapaz com as novas penas da Lei 15.163/25 e a omissão de socorro;</li>
+        <li>O crime plurissubjetivo de <strong>Rixa (Art. 137)</strong>, a cumplicidade correlativa e a incidência da forma qualificada sobre todos os participantes;</li>
+        <li>A distinção cirúrgica entre os <strong>Crimes Contra a Honra</strong> (Calúnia, Difamação e Injúria), a nova disciplina da injúria racial (Lei 14.532/23), a exceção da verdade e o regime especial das ações penais;</li>
+        <li>Os <strong>Crimes Contra a Liberdade Individual</strong> (Arts. 146 a 154-B), com foco total no Stalking (Art. 147-A), Violência Psicológica contra a Mulher (Art. 147-B), Cyberbullying (Art. 146-A), Trabalho Escravo (Art. 149), Tráfico de Pessoas (Art. 149-A) e Invasão de Dispositivo Informático (Art. 154-A).</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. LESÕES CORPORAIS ══════════════════════════════ -->
+    <section id="lesoes" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo II do Título I</div>
+      <h2>1. Lesões Corporais (Art. 129 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> Machucar alguém fisicamente ou causar dano à saúde mental/física de outra pessoa é crime de lesão corporal. A lei pune com mais rigor conforme a gravidade do estrago: um arranhão é leve; ficar sem trabalhar por um mês é grave; perder um olho ou ficar com cicatriz deformante é gravíssima; se morrer sem intenção de matar, é lesão seguida de morte.</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> O tipo penal tutela a integridade corporal e a saúde física e fisiopsíquica da pessoa humana. Classifica-se em: Leve (caput), Grave (§ 1º), Gravíssima (§ 2º - construção doutrinária), Seguida de Morte (§ 3º - crime preterdoloso: dolo no antecedente e culpa no consequente) e Culposa (§ 6º).</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> Atenção para as inovações legislativas recentes: <em>(i)</em> Lei 15.358/2026 incluiu o § 3º-A (lesão seguida de morte por crime organizado ultraviolento com reclusão de 20 a 40 anos) e o § 8º-A (aumento de 2/3); <em>(ii)</em> Lei 15.455/2026 atualizou a violência doméstica (§ 9º) incluindo trabalho doméstico; <em>(iii)</em> Lei 14.994/2024 fixou pena de reclusão de 2 a 5 anos no § 13 (lesão contra mulher por razões de gênero); <em>(iv)</em> Lei 15.159/2025 aumentou a pena para crimes contra agentes de segurança, juízes, promotores e em instituições de ensino (§ 12).</p>
+      </div>
+
+      <!-- Dogmatic Elements Box -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Lesão Corporal (Art. 129 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Verbo <em>ofender</em> a integridade corporal ou a saúde (física/mental) de outrem. Crime comum, de dano e material (exige laudo pericial, salvo vestígios desaparecidos supridos por prova testemunhal).
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            <em>Animus vulnerandi</em> ou <em>laedendi</em> (dolo direto ou eventual de lesionar). Na forma culposa (§ 6º), negligência, imprudência ou imperícia. No § 3º, preterdolo (dolo na lesão + culpa na morte).
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            Conceitos jurídicos avaliativos: "ocupações habituais", "perigo de vida", "debilidade permanente", "deformidade permanente", "razões da condição do sexo feminino".
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Leve (caput) e Culposa (§ 6º): Menor Potencial Ofensivo -> Rito Sumaríssimo (JECRIM), SALVO violência doméstica.<br>
+            • Grave (§ 1º), Gravíssima (§ 2º), Doméstica (§ 9º/§ 13) e Morte (§ 3º): Rito Ordinário / Especial Maria da Penha (vedado JECRIM).
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            • Leve e Culposa Comum: Pública Condicionada à representação (art. 88 Lei 9.099/95).<br>
+            • Violência Doméstica contra Mulher: Pública INCONDICIONADA (Súmula 542 do STJ).<br>
+            • Grave, Gravíssima e Morte: Pública INCONDICIONADA.
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 129 do Código Penal - Lesão Corporal (Texto Legal Completo)</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 129.</strong> Ofender a integridade corporal ou a saúde de outrem: <br>
+          Pena - detenção, de 3 (três) meses a 1 (um) ano.</p>
+
+          <p><strong>§ 1º Se resulta [LESÃO GRAVE]:</strong><br>
+          I - <span class="kw">Incapacidade para as ocupações habituais, por mais de 30 dias</span>;<br>
+          II - <span class="kw">perigo de vida</span>;<br>
+          III - <span class="kw">debilidade permanente de membro, sentido ou função</span>;<br>
+          IV - <span class="kw">aceleração de parto</span>:<br>
+          Pena - reclusão, de 1 (um) a 5 (cinco) anos.</p>
+
+          <p><strong>§ 2º Se resulta [LESÃO GRAVÍSSIMA]:</strong><br>
+          I - <span class="kw">Incapacidade permanente para o trabalho</span>;<br>
+          II - <span class="kw">enfermidade incurável</span>;<br>
+          III - <span class="kw">perda ou inutilização do membro, sentido ou função</span>;<br>
+          IV - <span class="kw">deformidade permanente</span>;<br>
+          V - <span class="kw">aborto</span>:<br>
+          Pena - reclusão, de 2 (dois) a 8 (oito) anos.</p>
+
+          <p><strong>§ 3º [LESÃO SEGUIDA DE MORTE]:</strong> Se resulta morte e as circunstâncias evidenciam que o agente não quis o resultado, nem assumiu o risco de produzi-lo [CRIME PRETERDOLOSO]:<br>
+          Pena - reclusão, de 4 (quatro) a 12 (doze) anos.</p>
+
+          <p><strong>§ 3º-A.</strong> No crime previsto no § 3º deste artigo, se cometido no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil: <br>
+          Pena - reclusão, de 20 (vinte) a 40 (quarenta) anos. <em>(LEI 15.358/26)</em></p>
+
+          <p><strong>§ 4º [LESÃO PRIVILEGIADA]:</strong> Se o agente comete o crime impelido por motivo de relevante valor social ou moral ou sob o domínio de violenta emoção, logo em seguida a injusta provocação da vítima, o juiz pode reduzir a pena de 1/6 a 1/3.</p>
+
+          <p><strong>§ 5º [SUBSTITUIÇÃO DA PENA]:</strong> O juiz, não sendo graves as lesões, pode ainda substituir a pena de detenção pela de multa: I - se ocorre qualquer das hipóteses do parágrafo anterior; II - se as lesões são recíprocas.</p>
+
+          <p><strong>§ 6º:</strong> Se a lesão é culposa: Pena - detenção, de 2 (dois) meses a 1 (um) ano.</p>
+
+          <p><strong>§ 7º:</strong> Aumenta-se a pena de 1/3 se ocorrer qualquer das hipóteses dos §§ 4º e 6º do art. 121 deste Código.</p>
+
+          <p><strong>§ 8º:</strong> Aplica-se à lesão culposa o disposto no § 5º do art. 121 (Perdão Judicial).</p>
+
+          <p><strong>§ 8º-A:</strong> Com exceção do disposto no § 3º-A, aumenta-se a pena em 2/3 se a lesão é praticada por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada. <em>(LEI 15.358/26)</em></p>
+
+          <p><strong>§ 9º [VIOLÊNCIA DOMÉSTICA]:</strong> Se a lesão for praticada contra ascendente, descendente, irmão, cônjuge ou companheiro, pessoa com relação de trabalho doméstico ou com quem conviva ou tenha convivido, ou, ainda, prevalecendo-se o agente das relações domésticas, de trabalho doméstico, de coabitação ou de hospitalidade: Pena – reclusão, de 2 a 5 anos. <em>(LEI 14.994/24 e 15.455/26)</em></p>
+
+          <p><strong>§ 10:</strong> Nos casos previstos nos §§ 1º a 3º (grave, gravíssima e seguida de morte), se as circunstâncias forem de violência doméstica, aumenta-se a pena em 1/3.</p>
+
+          <p><strong>§ 11:</strong> Na hipótese do § 9º, a pena é aumentada de 1/3 se praticada contra pessoa com deficiência.</p>
+
+          <p><strong>§ 12:</strong> Aumenta-se a pena de 1/3 a 2/3 se praticada contra agente dos arts. 142 e 144 da CF, integrantes do sistema prisional, juízes, promotores, defensores, advogados públicos, oficiais de justiça, ou nas dependências de instituição de ensino. <em>(LEI 15.159/25)</em></p>
+
+          <p><strong>§ 13:</strong> Se a lesão é praticada contra a mulher, por razões da condição do sexo feminino: Pena – reclusão, de 2 a 5 anos. <em>(LEI 14.994/24)</em></p>
+        </div>
+      </details>
+
+      <!-- Comparative Table: Grave vs Gravíssima -->
+      <h3>Quadro Diferencial: Lesão Grave (§ 1º) vs. Gravíssima (§ 2º)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Critério de Gravidade</th>
+            <th>Lesão Grave (§ 1º) — Reclusão 1 a 5 anos</th>
+            <th>Lesão Gravíssima (§ 2º) — Reclusão 2 a 8 anos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Incapacidade Laboral</strong></td>
+            <td>Incapacidade para ocupações habituais por <strong>mais de 30 dias</strong> (exige exame complementar no 31º dia).</td>
+            <td>Incapacidade <strong>permanente</strong> para o trabalho (qualquer trabalho lícito).</td>
+          </tr>
+          <tr>
+            <td><strong>Integridade Funcional</strong></td>
+            <td><strong>Debilidade permanente</strong> de membro, sentido ou função (redução da capacidade). Ex: perda de 2 dentes.</td>
+            <td><strong>Perda ou inutilização</strong> de membro, sentido ou função (anulação total da capacidade funcional).</td>
+          </tr>
+          <tr>
+            <td><strong>Impacto Vital / Gravídico</strong></td>
+            <td><strong>Perigo de vida</strong> (perigo concreto e comprovado por perícia) ou <strong>aceleração de parto</strong>.</td>
+            <td><strong>Enfermidade incurável</strong> ou <strong>aborto</strong> preterdoloso decorrente da agressão.</td>
+          </tr>
+          <tr>
+            <td><strong>Estética</strong></td>
+            <td>Não qualifica no § 1º (a cicatriz simples integra a lesão leve).</td>
+            <td><strong>Deformidade permanente</strong> (dano estético indelével, expressivo e visível que cause repulsa ou constrangimento).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Jurisprudence Box -->
+      <div class="card" style="border-left: 5px solid #3B82F6;">
+        <span class="box-label" style="background:#3B82F6;">⚖️ Jurisprudência Vinculante e Teses do STJ</span>
+        <ul>
+          <li><strong>Perda de Dentes (STJ):</strong> A perda de dois dentes da vítima configura lesão corporal <strong>grave</strong> (art. 129, § 1º, III - debilidade permanente da função mastigatória), e <em>NÃO</em> lesão gravíssima (art. 129, § 2º, IV).</li>
+          <li><strong>Deformidade Permanente e Cirurgia Reparadora (STJ HC 306.677/RJ):</strong> A realização de cirurgia plástica reparadora estética posterior custeada pela vítima <strong>não afasta</strong> a qualificadora de deformidade permanente, pois o crime se consuma no momento da produção da lesão.</li>
+          <li><strong>Deformidade e Dano Psíquico (STJ HC 689.921/SP - Info 728):</strong> A qualificadora de "deformidade permanente" aplica-se exclusivamente a lesões <strong>estéticas corporais físicas</strong> e visíveis. Não abrange abalos psíquicos ou alterações permanentes da personalidade.</li>
+          <li><strong>Súmula 542 do STJ:</strong> A ação penal relativa ao crime de lesão corporal resultante de violência doméstica contra a mulher é <strong>PÚBLICA INCONDICIONADA</strong> (independe de representação, mesmo na lesão leve).</li>
+          <li><strong>Violência Doméstica contra Homens (STJ RHC 27.622/RJ):</strong> A qualificadora do § 9º também incide quando o homem for a vítima no âmbito doméstico (o que não se aplica ao homem é a Lei Maria da Penha em sua tutela especial de gênero, mas o tipo penal do § 9º é protetivo de qualquer ente doméstico).</li>
+          <li><strong>Vedação ao Bis in Idem (STJ REsp 2.247.908/RS - Info 884):</strong> A agravante genérica do art. 61, II, "f", do CP <strong>não pode</strong> ser aplicada conjuntamente com o tipo do art. 129, § 13, do CP, pois a condição de gênero já integra o tipo autônomo qualificado.</li>
+          <li><strong>Concausa Anterior Relativamente Independente:</strong> Não desnatura a lesão corporal grave se a conduta agressiva foi a causa direta eficiente do resultado desdobrado (STJ, Sexta Turma, 2023).</li>
+        </ul>
+      </div>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ Pegadinha Clássica de Prova</span>
+        <strong>Aceleração de Parto (§ 1º, IV) vs. Aborto (§ 2º, V):</strong> Na aceleração de parto, o feto nasce <em>VIVO</em> prematuramente em virtude da agressão. No aborto (§ 2º, V), o feto é <em>EXPULSO MORTO</em>. Em ambos os casos, a responsabilidade é preterdolosa (o agressor queria lesionar a mulher e causou culposamente o resultado no feto). Se o agressor QUERIA matar o feto, responderá por Lesão Corporal em concurso formal com Aborto Provocado por Terceiro (Art. 125 CP)!
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. PERICLITAÇÃO DA VIDA E SAÚDE ══════════════════════════════ -->
+    <section id="periclitacao" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo III do Título I</div>
+      <h2>2. Da Periclitação da Vida e da Saúde (Arts. 130 a 136 CP)</h2>
+
+      <div class="card blue">
+        <p><strong>Conceito Fundamental:</strong> São crimes de <strong>perigo</strong>, onde a consumação prescinde da ocorrência de lesão efetiva à integridade ou à vida. O dolo do agente é o <em>perigo concreto</em> (vontade de criar uma situação de risco real para o bem jurídico alheio).</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>Art. 130 — Contágio Venéreo</h4>
+          <p>Expor alguém, por relações sexuais ou ato libidinoso, a contágio de moléstia venérea:</p>
+          <ul>
+            <li><strong>Caput:</strong> Sabe ou deve saber que está contaminado (dolo de perigo ou culpa com dolo eventual no contágio). Pena: Detenção de 3 meses a 1 ano.</li>
+            <li><strong>§ 1º:</strong> Intenção deliberada de transmitir (dolo direto específico). Pena: Reclusão de 1 a 4 anos.</li>
+            <li><strong>Ação Penal (§ 2º):</strong> Privada? NÃO! <strong>Pública Condicionada à representação</strong> do ofendido.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Art. 131 — Contágio de Moléstia Grave</h4>
+          <p>Praticar ato capaz de transmitir moléstia grave com o <strong>fim específico</strong> de transmiti-la:</p>
+          <ul>
+            <li>Exige <em>dolo direto específico</em> ("com o fim de"). Não admite modalidade culposa nem dolo eventual.</li>
+            <li>Abrange qualquer doença grave que não seja meramente venérea. Se for transmissão dolosa de HIV com intenção de matar, configura tentativa de homicídio!</li>
+            <li><strong>Ação Penal:</strong> Pública Incondicionada.</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 132 do Código Penal - Perigo para a Vida ou Saúde de Outrem</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 132 -</strong> Expor a vida ou a saúde de outrem a perigo direto e iminente:<br>
+          Pena - detenção, de 3 (três) meses a 1 (um) ano, <span class="kw">se o fato não constitui crime mais grave</span>.</p>
+          <p><strong>Parágrafo único.</strong> A pena é aumentada de 1/6 a 1/3 se a exposição da vida ou da saúde de outrem decorre do <span class="kw">transporte de pessoas para a prestação de serviços</span> em estabelecimentos de qualquer natureza, em desacordo com as normas legais.</p>
+        </div>
+      </details>
+
+      <div class="exam-tip">
+        <span class="box-label">💡 Dica de Concurso: Princípio da Subsidiariedade Expressa</span>
+        O Art. 132 do CP é norma expressamente subsidiária (chamado de tipo "soldado de reserva"). Se a conduta integrar crime mais grave (ex: disparo de arma de fogo na direção da vítima configurando tentativa de homicídio ou porte ilegal com disparo), o Art. 132 é integralmente absorvido.
+      </div>
+
+      <!-- Abandono de Incapaz -->
+      <h3>Abandono de Incapaz (Art. 133 CP) — Atualizado pela Lei 15.163/2025</h3>
+      <details class="artigo">
+        <summary>Art. 133 do Código Penal - Abandono de Incapaz</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 133 -</strong> Abandonar pessoa que está sob seu cuidado, guarda, vigilância ou autoridade, e, por qualquer motivo, incapaz de defender-se dos riscos resultantes do abandono:<br>
+          Pena - reclusão, de <span class="kw">2 (dois) a 5 (cinco) anos</span>. <em>(Nova pena base pela Lei 15.163/2025)</em></p>
+          <p><strong>§ 1º -</strong> Se resulta lesão grave: Pena - reclusão, de 3 a 7 anos.</p>
+          <p><strong>§ 2º -</strong> Se resulta morte: Pena - reclusão, de 8 a 14 anos.</p>
+          <p><strong>§ 3º -</strong> Aumenta-se a pena de 1/3: I - em lugar ermo; II - se ascendente, descendente, cônjuge, irmão, tutor ou curador; III - se vítima maior de 60 anos.</p>
+        </div>
+      </details>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>Art. 134 — Exposição de Recém-Nascido</h4>
+          <p>Expor ou abandonar recém-nascido para <strong>ocultar desonra própria</strong> (crime próprio com motivação de honra):</p>
+          <ul>
+            <li>Pena base: Detenção de 6 meses a 2 anos (JECRIM).</li>
+            <li>Se resulta lesão grave: Detenção de 1 a 3 anos (§ 1º).</li>
+            <li>Se resulta morte: Detenção de 2 a 6 anos (§ 2º).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Art. 135 — Omissão de Socorro</h4>
+          <p>Crime <strong>omissivo próprio (puro)</strong>. Deixar de prestar socorro quando possível fazê-lo <em>sem risco pessoal</em>:</p>
+          <ul>
+            <li>A vulnerabilidade abrange: criança abandonada/extraviada, pessoa inválida, ferida ou em grave perigo.</li>
+            <li>Se houver risco pessoal para o socorro direto, o dever legal se cumpre <strong>pedindo socorro à autoridade pública</strong>.</li>
+            <li>Parágrafo único: Pena aumentada de metade se resulta lesão grave, e triplicada se resulta morte (responsabilidade preterdolosa).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. DA RIXA ══════════════════════════════ -->
+    <section id="rixa" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo IV do Título I</div>
+      <h2>3. Da Rixa (Art. 137 CP)</h2>
+
+      <div class="card purple">
+        <h4>Natureza Jurídica e Características Essenciais:</h4>
+        <p>A rixa é um crime <strong>plurissubjetivo (de concurso necessário)</strong>: exige no mínimo <span class="kw">3 participantes (três rixosos)</span> em confronto recíproco e desordenado. Não há dois lados definidos como num duelo militar ou briga de torcidas organizadas com divisão estanque; é a clássica briga tumultuária generalizada ("todos contra todos").</p>
+      </div>
+
+      <!-- Dogmatic Elements: Rixa -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Crime de Rixa (Art. 137 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Participar de luta corporal generalizada e tumultuária entre 3 ou mais indivíduos. Sujeito ativo e passivo recíprocos (todos são autores e potenciais vítimas).
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            <em>Animus rixandi</em>: dolo de intervir e manter-se na confusão tumultuária. Não se pune a modalidade culposa.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            O conceito fático de "rixa" (tumulto, confusão física violenta sem alinhamento prévio fixo).
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Rixa Simples: Menor Potencial Ofensivo (pena: detenção de 15 dias a 2 meses) -> Rito Sumaríssimo.<br>
+            • Rixa Qualificada: Detenção de 6 meses a 2 anos -> Rito Sumaríssimo (JECRIM).
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            Ação Penal Pública INCONDICIONADA.
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 137 do Código Penal - Rixa Simples e Qualificada</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 137 -</strong> Participar de rixa, salvo para separar os contendores:<br>
+          Pena - detenção, de quinze dias a dois meses, ou multa.</p>
+          <p><strong>Parágrafo único -</strong> Se ocorre morte ou lesão corporal de natureza grave, aplica-se, pelo fato da rixa, a pena de detenção, de seis meses a dois anos.</p>
+        </div>
+      </details>
+
+      <div class="pitfall">
+        <span class="box-label">🎯 Pegadinha Suprema de Concurso: Cumplicidade Correlativa</span>
+        Na <strong>Rixa Qualificada (parágrafo único)</strong>, se ocorrer morte ou lesão corporal grave, <strong>TODOS OS PARTICIPANTES</strong> respondem pela forma qualificada, inclusive:
+        <ol>
+          <li>O rixoso que entrou depois do início do entrevero;</li>
+          <li>O autor da lesão grave (que responderá por Lesão Grave + Rixa Qualificada em concurso);</li>
+          <li><strong>A PRÓPRIA VÍTIMA DA LESÃO GRAVE</strong>! Exatamente: o indivíduo que participava ativamente da rixa e acabou tendo o braço quebrado por um rixoso não identificado responde por <em>Rixa Qualificada</em>, pois ajudou a criar o tumulto que gerou o resultado gravoso!</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. CRIMES CONTRA A HONRA ══════════════════════════════ -->
+    <section id="honra" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo V do Título I</div>
+      <h2>4. Crimes Contra a Honra (Arts. 138 a 145 CP)</h2>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>Honra Objetiva</h4>
+          <p>É a <strong>reputação social</strong>, a consideração e o respeito que a sociedade tem pelo indivíduo. É aquilo que os outros pensam sobre você.</p>
+          <p><strong>Crimes que atingem a honra objetiva:</strong></p>
+          <ul>
+            <li><strong>Calúnia (Art. 138):</strong> Consuma-se quando terceira pessoa toma conhecimento da falsa imputação. Admite pessoa jurídica como vítima (em crimes ambientais)!</li>
+            <li><strong>Difamação (Art. 139):</strong> Consuma-se no momento em que terceira pessoa toma conhecimento do fato ofensivo.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Honra Subjetiva</h4>
+          <p>É o <strong>juízo de auto-estima</strong>, o sentimento interior de dignidade, decoro e amor-próprio. É aquilo que você pensa de si mesmo.</p>
+          <p><strong>Crime que atinge a honra subjetiva:</strong></p>
+          <ul>
+            <li><strong>Injúria (Art. 140):</strong> Consuma-se quando a própria vítima toma conhecimento do xingamento ou ofensa. NÃO admite pessoa jurídica como vítima (PJ não tem sentimentos).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Comparative Table: Honra -->
+      <h3>Tabela Comparativa Fundamental dos Crimes Contra a Honra</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Elemento Diferenciador</th>
+            <th>Calúnia (Art. 138)</th>
+            <th>Difamação (Art. 139)</th>
+            <th>Injúria (Art. 140)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Conduta Típica</strong></td>
+            <td>Imputar <strong>falsamente</strong> fato determinado definido como <strong>CRIME</strong>.</td>
+            <td>Imputar fato determinado desonroso que <strong>NÃO seja crime</strong> (contravenção ou conduta imoral).</td>
+            <td>Atribuir qualidade negativa, xingamento, ofensa ao decoro ou dignidade (não há fato determinado).</td>
+          </tr>
+          <tr>
+            <td><strong>Momento Consumativo</strong></td>
+            <td>Quando <strong>terceiro</strong> toma conhecimento.</td>
+            <td>Quando <strong>terceiro</strong> toma conhecimento.</td>
+            <td>Quando a <strong>própria vítima</strong> toma conhecimento.</td>
+          </tr>
+          <tr>
+            <td><strong>Vítima Pessoa Jurídica?</strong></td>
+            <td><strong>SIM</strong> (apenas crimes ambientais, conforme STF/STJ).</td>
+            <td><strong>SIM</strong> (atinge a reputação no mercado).</td>
+            <td><strong>NÃO</strong> (carece de honra subjetiva).</td>
+          </tr>
+          <tr>
+            <td><strong>Exceção da Verdade</strong></td>
+            <td><strong>É a regra ampla</strong> (§ 3º), ressalvadas as vedações legais.</td>
+            <td><strong>Exceção absoluta</strong>: só cabe se ofendido for funcionário público e fato ligado à função.</td>
+            <td><strong>NÃO CABE</strong> em nenhuma hipótese.</td>
+          </tr>
+          <tr>
+            <td><strong>Retratação Cabal (Art. 143)</strong></td>
+            <td><strong>CABE</strong> antes da sentença de 1º grau (extingue a punibilidade).</td>
+            <td><strong>CABE</strong> antes da sentença de 1º grau.</td>
+            <td><strong>NÃO CABE</strong> retratação na injúria.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Injúria Racial Lei 14.532/2023 -->
+      <div class="exam-tip">
+        <span class="box-label">🔥 Atualização Crítica: Injúria Racial (Lei 14.532/2023)</span>
+        Com a Lei 14.532/2023, a <strong>Injúria Racial</strong> foi transferida para a Lei do Racismo (Lei 7.716/89, art. 2º-A), tornando-se:
+        <ul>
+          <li>Crime <strong>ININAFIANÇÁVEL</strong> e <strong>IMPRESCRITÍVEL</strong> (equiparado aos crimes de racismo nos termos do art. 5º, XLII, da CF);</li>
+          <li>Pena de <strong>reclusão de 2 a 5 anos</strong> e multa;</li>
+          <li>Ação penal <strong>PÚBLICA INCONDICIONADA</strong> (não depende mais de representação da vítima).</li>
+        </ul>
+      </div>
+
+      <!-- Regime das Ações Penais na Honra -->
+      <h3>Regime Especial de Ação Penal nos Crimes Contra a Honra (Art. 145 CP)</h3>
+      <div class="card">
+        <ul>
+          <li><strong>Regra Geral:</strong> Ação Penal <strong>PRIVADA</strong> (inicia-se por Queixa-Crime no prazo decadencial de 6 meses).</li>
+          <li><strong>Exceção 1 — Funcionário Público (Art. 141, II e Súmula 714 STF):</strong> Se a ofensa for referente ao exercício da função, a legitimidade é <em>CONCORRENTE</em>: o servidor pode optar pela queixa-crime (ação privada) OU representar ao Ministério Público para que este ofereça denúncia (ação pública condicionada).</li>
+          <li><strong>Exceção 2 — Presidente da República ou Chefe de Governo Estrangeiro:</strong> Ação Pública Condicionada à <em>Requisição do Ministro da Justiça</em>.</li>
+          <li><strong>Exceção 3 — Injúria Real com Lesão (Art. 140, § 2º):</strong> Ação Pública Incondicionada quanto à violência física.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. LIBERDADE INDIVIDUAL ══════════════════════════════ -->
+    <section id="liberdade" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo VI do Título I</div>
+      <h2>5. Dos Crimes Contra a Liberdade Individual (Arts. 146 a 154-B CP)</h2>
+
+      <!-- Stalking, Cyberbullying, Violência Psicológica -->
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Art. 146-A — Bullying e Cyberbullying (Lei 14.811/2024)</h4>
+          <p><strong>Intimidação Sistemática:</strong> Praticar, mediante violência física ou psicológica, atos de intimidação, humilhação ou discriminação reiterados.</p>
+          <ul>
+            <li><strong>Caput (Bullying presencial):</strong> Multa, se o fato não constituir crime mais grave.</li>
+            <li><strong>Parágrafo único (Cyberbullying):</strong> Se praticado por meio da rede de computadores, redes sociais ou transmissão em tempo real: Pena de <strong>reclusão de 2 a 4 anos</strong> e multa!</li>
+          </ul>
+        </div>
+
+        <div class="card blue">
+          <h4>Art. 147-A — Perseguição ("Stalking" - Lei 14.132/2021)</h4>
+          <p>Perseguir alguém, reiteradamente e por qualquer meio, ameaçando-lhe a integridade ou invadindo/perturbando sua esfera de liberdade ou privacidade:</p>
+          <ul>
+            <li>Pena: Reclusão de 6 meses a 2 anos e multa (Rito Sumaríssimo).</li>
+            <li>Aumenta-se de metade (§ 1º) contra: mulher por razões de gênero, criança/adolescente/idoso, com concurso de 2 ou mais pessoas ou emprego de arma.</li>
+            <li><strong>Ação Penal (§ 3º):</strong> Pública Condicionada à representação.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card emerald">
+          <h4>Art. 147-B — Violência Psicológica contra a Mulher (Lei 14.188/2021)</h4>
+          <p>Causar dano emocional à mulher que a prejudique e perturbe seu pleno desenvolvimento ou que vise a degradar ou controlar suas ações, comportamentos, crenças e decisões:</p>
+          <ul>
+            <li>Pena: Reclusão de 6 meses a 2 anos e multa, se a conduta não constitui crime mais grave.</li>
+            <li><strong>Ação Penal:</strong> Pública <strong>INCONDICIONADA</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="card purple">
+          <h4>Art. 148 — Sequestro e Cárcere Privado</h4>
+          <p>Privar alguém de sua liberdade de locomoção:</p>
+          <ul>
+            <li><strong>Sequestro:</strong> Cerceamento em espaço aberto ou amplo (ex: sítio, ilha).</li>
+            <li><strong>Cárcere Privado:</strong> Confinamento em recinto fechado e trancado (ex: quarto, banheiro).</li>
+            <li>Qualificadoras (§ 1º): Vítima ascendente/descendente/cônjuge, se o confinamento supera 15 dias, vítima internada em clínica sob falso pretexto, ou grave sofrimento físico/moral (§ 2º).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trabalho Escravo e Tráfico de Pessoas -->
+      <h3>Trabalho Escravo (Art. 149) &amp; Tráfico de Pessoas (Art. 149-A)</h3>
+      <div class="card">
+        <p><strong>Art. 149 — Redução a Condição Análoga à de Escravo:</strong> É crime formal, permanente e de perigo abstrato. Pune quatro condutas autônomas:</p>
+        <ol>
+          <li>Submissão a trabalhos forçados;</li>
+          <li>Sujeição a jornada exaustiva (que degrade e supere a capacidade humana);</li>
+          <li>Sujeição a condições degradantes de trabalho;</li>
+          <li>Restrição de locomoção em razão de dívida (servidão por dívida / <em>truck system</em>).</li>
+        </ol>
+        <div class="exam-tip">
+          <span class="box-label">⚖️ Competência Jurisdicional (Tema 85 STF)</span>
+          Compete à <strong>Justiça Federal</strong> processar e julgar o crime do art. 149 do CP, pois vulnera a organização do trabalho como um todo e os direitos fundamentais tutelados por tratados internacionais ratificados pelo Brasil (art. 109, VI, CF).
+        </div>
+      </div>
+
+      <!-- Invasão de Dispositivo Informático -->
+      <h3>Invasão de Dispositivo Informático (Art. 154-A e 154-B CP)</h3>
+      <details class="artigo">
+        <summary>Art. 154-A do Código Penal - Invasão de Dispositivo (Lei Carolina Dieckmann e Lei 14.155/21)</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 154-A -</strong> Invadir dispositivo informático de uso alheio, conectado ou não à rede de computadores, com violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações ou instalar vulnerabilidades:<br>
+          Pena - reclusão, de <span class="kw">1 (um) a 4 (quatro) anos</span>, e multa.</p>
+          <p><strong>§ 3º [Forma Qualificada]:</strong> Se da invasão resulta a obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas: Pena - reclusão, de 2 a 5 anos.</p>
+          <p><strong>§ 5º:</strong> Aumenta-se a pena de 1/3 a 2/3 se há prejuízo econômico.</p>
+        </div>
+      </details>
+
+      <div class="exam-tip">
+        <span class="box-label">⚖️ Ação Penal no Art. 154-A (Art. 154-B CP)</span>
+        A regra é <strong>Ação Penal Pública Condicionada à Representação</strong>. Será <strong>Pública INCONDICIONADA</strong> apenas se cometida contra a administração pública direta ou indireta de qualquer dos Poderes da União, Estados, DF ou Municípios, ou contra empresas concessionárias de serviços públicos.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapamental" class="section">
+      <h2>🧠 Mapa Mental Sintético: Crimes Contra a Pessoa II</h2>
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ CRIMES CONTRA A PESSOA (ARTS. 129 A 154-B CP)</div>
+        <div class="mm-l1">LESÕES CORPORAIS (ART. 129)</div>
+        <div class="mm-l2">Leve (caput) -> Menor potencial | Representação (salvo violência doméstica)</div>
+        <div class="mm-l2">Grave (§ 1º) -> Incapaz > 30 dias | Perigo de Vida | Debilidade | Acelera Parto</div>
+        <div class="mm-l2">Gravíssima (§ 2º) -> Incapaz Trabalho | Incurável | Perda/Inutilização | Deformidade | Aborto</div>
+        <div class="mm-l2">Preterdolosa (§ 3º) -> Lesão com Morte culposa (reclusão 4-12a | Crime Org. Ultraviolento 20-40a)</div>
+        <div class="mm-l2">Doméstica (§ 9º e § 13) -> Reclusão 2-5a | Pública Incondicionada (Súmula 542 STJ)</div>
+        
+        <div class="mm-l1">PERICLITAÇÃO DA VIDA E SAÚDE (ARTS. 130 A 136)</div>
+        <div class="mm-l2">Contágio Venéreo (130) -> Dolo/Culpa (Repres.) | Moléstia Grave (131) -> Dolo específico</div>
+        <div class="mm-l2">Abandono de Incapaz (133) -> Lei 15.163/25 (Reclusão 2 a 5a)</div>
+        <div class="mm-l2">Omissão de Socorro (135) -> Omissivo puro | Sem risco pessoal</div>
+        
+        <div class="mm-l1">RIXA (ART. 137)</div>
+        <div class="mm-l2">Mínimo 3 pessoas | Conflito desordenado</div>
+        <div class="mm-l2">Qualificada (morte/lesão grave) -> Cumplicidade correlativa (todos respondem, até a vítima ferida)</div>
+        
+        <div class="mm-l1">CRIMES CONTRA A HONRA (ARTS. 138 A 145)</div>
+        <div class="mm-l2">Calúnia (138) -> Fato Falso definido como CRIME | Cabe exceção da verdade</div>
+        <div class="mm-l2">Difamação (139) -> Fato Desonroso | Exceção só p/ funcionário público</div>
+        <div class="mm-l2">Injúria (140) -> Atributo depreciativo | Não cabe exceção da verdade nem retratação</div>
+        <div class="mm-l2">Injúria Racial -> Lei 14.532/23 (Racismo: Inafiançável, Imprescritível, Ação Incondicionada)</div>
+
+        <div class="mm-l1">LIBERDADE INDIVIDUAL (ARTS. 146 A 154-B)</div>
+        <div class="mm-l2">Cyberbullying (146-A, p.ú.) -> Reclusão 2 a 4 anos</div>
+        <div class="mm-l2">Stalking (147-A) -> Perseguição reiterada | Condicionada à representação</div>
+        <div class="mm-l2">Violência Psicológica (147-B) -> Contra mulher | Incondicionada</div>
+        <div class="mm-l2">Trabalho Escravo (149) -> 4 hipóteses | Competência Federal (Tema 85 STF)</div>
+        <div class="mm-l2">Invasão Informática (154-A) -> Romper dispositivo | Lei 14.155/21</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 7. MNEMÔNICOS ══════════════════════════════ -->
+    <section class="section">
+      <h2>💡 Mnemônicos Estratégicos para Memorização Rápida</h2>
+
+      <div class="mnemonic-box">
+        <h4><span class="mnemonic-pill">P-I-D-A</span> Lesões Graves (Art. 129, § 1º)</h4>
+        <p>• <span class="mnemonic-pill">P</span> <strong>P</strong>erigo de vida;</p>
+        <p>• <span class="mnemonic-pill">I</span> <strong>I</strong>ncapacidade para ocupações habituais por mais de 30 dias;</p>
+        <p>• <span class="mnemonic-pill">D</span> <strong>D</strong>ebilidade permanente de membro, sentido ou função;</p>
+        <p>• <span class="mnemonic-pill">A</span> <strong>A</strong>celeração de parto.</p>
+      </div>
+
+      <div class="mnemonic-box" style="border-left-color: #EF4444;">
+        <h4><span class="mnemonic-pill" style="background:#EF4444; color:#fff;">P-E-D-I-A</span> Lesões Gravíssimas (Art. 129, § 2º)</h4>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">P</span> <strong>P</strong>erda ou inutilização de membro, sentido ou função;</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">E</span> <strong>E</strong>nfermidade incurável;</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">D</span> <strong>D</strong>eformidade permanente;</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">I</span> <strong>I</strong>ncapacidade permanente para o trabalho;</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">A</span> <strong>A</strong>borto preterdoloso.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 8. REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="revisao" class="section">
+      <h2>📝 Revisão Ativa (Questões Inéditas com Gabarito Oculto)</h2>
+
+      <!-- Q1 Discursiva -->
+      <div class="exercise">
+        <p><strong>01. (Questão Discursiva — Ministério Público):</strong> Tício, durante acalorada discussão de trânsito com Mévio, desfere-lhe dois socos na boca, resultando na perda definitiva de dois dentes caninos da vítima. Posteriormente, Mévio realiza implantes odontológicos perfeitos com dentista particular. Tipifique a conduta de Tício, esclarecendo a espécie de lesão corporal e se a posterior cirurgia afasta a qualificadora.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Tício praticou o crime de <strong>Lesão Corporal Grave</strong> (Art. 129, § 1º, inciso III, do CP - debilidade permanente da função mastigatória). Segundo a jurisprudência pacífica do Superior Tribunal de Justiça (STJ), a perda de dentes configura debilidade permanente de função (lesão grave), e não deformidade permanente (lesão gravíssima). Ademais, a realização posterior de procedimento reparador/estético (implante dentário) <strong>não afasta a qualificadora</strong>, pois a tipificação se afere no momento da consumação com a ofensa anatômica, nos termos do art. 4º do Código Penal.
+          </div>
+        </details>
+      </div>
+
+      <!-- Q2 Certo/Errado CEBRASPE -->
+      <div class="exercise">
+        <p><strong>02. (CEBRASPE / Delegado de Polícia):</strong> Durante uma rixa generalizada envolvendo cinco indivíduos, um dos contendores sofre lesão corporal grave praticada por pessoa não identificada. Nesse caso, em razão do princípio da individualização da pena e da presunção de inocência, apenas os outros quatro indivíduos responderão pela forma qualificada da rixa, restando a vítima da agressão isenta do tipo qualificado.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong> Na rixa qualificada pelo resultado morte ou lesão corporal grave (art. 137, parágrafo único, do CP), incide o fenômeno da <em>cumplicidade correlativa</em>. Todos os participantes da contenda respondem pela rixa qualificada, <strong>inclusive a própria vítima que sofreu a lesão corporal grave</strong>, pois contribuiu ativamente para a eclosão do perigo comum decorrente do tumulto.
+          </div>
+        </details>
+      </div>
+
+      <!-- Q3 FGV OAB -->
+      <div class="exercise">
+        <p><strong>03. (FGV / OAB):</strong> Mário, servidor público federal da Receita Federal, no exercício de suas funções fiscalizatórias, é difamado por Antônio nas dependências da repartição. Diante do ocorrido, Mário procura um advogado para saber como proceder. À luz do Código Penal e da jurisprudência sumulada do STF, a ação penal cabível é:</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: Concorrente (Privada ou Pública Condicionada).</strong> Nos termos da <strong>Súmula 714 do STF</strong>: "É concorrente a legitimidade do ofendido, mediante queixa, e do Ministério Público, condicionada à representação do ofendido, para a ação penal por crime contra a honra de servidor público em razão do exercício de suas funções." Mário tem a faculdade de ajuizar queixa-crime ou representar ao Ministério Público.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 9. FLASHCARDS ══════════════════════════════ -->
+    <section class="section">
+      <h2>⚡ Flashcards de Fixação Rápida</h2>
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Pergunta 1: Retratação nos crimes contra a honra</h4>
+          <p><strong>Em quais crimes cabe retratação cabal antes da sentença?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">Apenas na Calúnia e na Difamação (Art. 143 CP). Na Injúria NÃO cabe retratação.</p>
+          </details>
+        </div>
+
+        <div class="card blue">
+          <h4>Pergunta 2: Ação na Lesão contra a Mulher</h4>
+          <p><strong>Qual a espécie de ação penal na lesão corporal leve doméstica contra mulher?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">Pública INCONDICIONADA (Súmula 542 do STJ / ADI 4424 STF).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 10. RESUMO FINAL ══════════════════════════════ -->
+    <section id="resumofinal" class="section">
+      <div class="card gold">
+        <h2>🚀 Resumo Final Ultra Rápido (One-Page Cheat Sheet)</h2>
+        <ul>
+          <li><strong>Lesão Corporal Grave (§ 1º):</strong> P-I-D-A (Perigo de vida, Incapacidade > 30d, Debilidade permanente, Aceleração de parto). Reclusão 1 a 5 anos.</li>
+          <li><strong>Lesão Corporal Gravíssima (§ 2º):</strong> P-E-D-I-A (Perda/inutilização, Enfermidade incurável, Deformidade permanente, Incapacidade permanente trab., Aborto). Reclusão 2 a 8 anos.</li>
+          <li><strong>Violência Doméstica:</strong> § 9º (2 a 5 anos) e § 13 (mulher por razão de gênero: 2 a 5 anos). Ação sempre pública incondicionada (Súmula 542 STJ).</li>
+          <li><strong>Abandono de Incapaz:</strong> Atualizado pela Lei 15.163/25 -> Reclusão de 2 a 5 anos na forma simples.</li>
+          <li><strong>Rixa (Art. 137):</strong> Mínimo de 3 agentes. Qualificada se morte ou lesão grave: todos respondem, inclusive o rixoso ferido!</li>
+          <li><strong>Honra:</strong> Calúnia (imputar falso crime), Difamação (imputar fato desonroso não criminoso), Injúria (ofensa à dignidade/decoro).</li>
+          <li><strong>Injúria Racial (Lei 14.532/23):</strong> Equiparada ao racismo: inafiançável, imprescritível e de ação pública incondicionada.</li>
+          <li><strong>Stalking (Art. 147-A):</strong> Perseguição reiterada. Ação condicionada à representação. Cyberbullying (Art. 146-A p.ú.): reclusão 2 a 4 anos.</li>
+          <li><strong>Trabalho Escravo (Art. 149):</strong> 4 modalidades. Crime de perigo abstrato. Competência da Justiça Federal (Tema 85 STF).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../../portal-core.js"></script>
+</body>
+
+</html>

@@ -99,6 +99,264 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
+    /* ══════ ESTILOS DO ROTEIRO DIDÁTICO SEQUENCIAL (ordem todo conteudo de cpc.md) ══════ */
+    .roadmap-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      margin-top: 2rem;
+    }
+
+    .roadmap-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2.25rem;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border-left: 6px solid var(--p-500);
+    }
+
+    .roadmap-card:hover {
+      box-shadow: var(--shadow-premium);
+      transform: translateY(-4px);
+    }
+
+    .roadmap-card.bloco-jurisdicao { border-left-color: #2563EB; }
+    .roadmap-card.bloco-competencia { border-left-color: #7C3AED; }
+    .roadmap-card.bloco-acao { border-left-color: #059669; }
+    .roadmap-card.bloco-processo { border-left-color: #D97706; }
+
+    .roadmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .roadmap-title-group {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .roadmap-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--p-600), var(--p-700));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    }
+
+    .roadmap-card.bloco-competencia .roadmap-number {
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+    }
+    .roadmap-card.bloco-acao .roadmap-number {
+      background: linear-gradient(135deg, #059669, #047857);
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+    }
+    .roadmap-card.bloco-processo .roadmap-number {
+      background: linear-gradient(135deg, #D97706, #B45309);
+      box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3);
+    }
+
+    .roadmap-title {
+      margin: 0;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .roadmap-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .tag-slide {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--p-600);
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] .tag-slide {
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .logic-box {
+      background: var(--neutral-50, #f8fafc);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    [data-theme="dark"] .logic-box {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .logic-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--p-600);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logic-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .logic-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .logic-arrow {
+      color: var(--p-500);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .activity-panel {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(37, 99, 235, 0.04));
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-left: 5px solid #ef4444;
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .activity-title-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .activity-label {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #b91c1c;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    [data-theme="dark"] .activity-label {
+      color: #f87171;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1rem;
+    }
+
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .q-tag {
+      display: inline-block;
+      font-weight: 800;
+      color: #dc2626;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .q-desc {
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .q-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    .roadmap-action {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-roadmap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--p-50);
+      color: var(--p-600);
+      border: 1px solid var(--p-500);
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    [data-theme="dark"] .btn-roadmap {
+      background: rgba(37, 99, 235, 0.15);
+      color: #93c5fd;
+      border-color: rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-roadmap:hover {
+      background: var(--p-600);
+      color: white;
+      transform: translateX(4px);
+    }
   </style>
 </head>
 
@@ -129,7 +387,8 @@
         </svg>
       </a>
       <div class="nav-list">
-        <a href="#resumos" class="nav-item active">Resumos da Disciplina</a>
+        <a href="#resumos" class="nav-item">Guias &amp; Resumos</a>
+        <a href="#roteiro-didatico" class="nav-item active">🎯 Roteiro Didático · Ordem do CPC</a>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
         <svg width="20" height="20" id="themeIcon"></svg>
@@ -138,10 +397,11 @@
   </nav>
 
   <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+    <!-- ══════════════════════════════ CARDS DE ACESSO RÁPIDO AOS GUIAS ══════════════════════════════ -->
     <section id="resumos">
       <div class="section-header" style="margin-bottom: 2rem;">
-        <h2>📚 Guia de Estudos de Processo Civil</h2>
-        <p style="color: var(--text-muted);">Selecione o resumo para acessar o guia completo com Lei Seca interativa, conteúdos sinalizados da atividade avaliativa e revisão ativa aprofundada.</p>
+        <h2>📚 Guias &amp; Resumos de Direito Processual Civil</h2>
+        <p style="color: var(--text-muted);">Acesse os 4 módulos essenciais da disciplina com Lei Seca interativa, jurisprudência sistematizada e sinalização cirúrgica de provas.</p>
       </div>
 
       <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
@@ -168,7 +428,7 @@
 
         <a href="teoria-da-acao-condicoes-da-acao.html" class="card subject-card">
           <div class="subject-icon">📜</div>
-          <h3>Teoria da Ação &amp; Condições da Ação <span class="tag-revisao">🔥 Conexões da Revisão</span></h3>
+          <h3>Teoria da Ação &amp; Condições da Ação <span class="tag-revisao">🔥 Q06 a Q08, Q16 a Q19</span></h3>
           <p>Teorias Históricas (Concretista e Abstratista Pura), Teoria Abstratista Eclética de Liebman, Conceito de Mérito, Cognição vs Execução, Condições da Ação (CPC/15) e Legitimidade Ordinária vs Extraordinária (Art. 18 CPC).</p>
           <div class="card-footer">
             <span>Guia Completo · 7 Módulos</span>
@@ -178,13 +438,345 @@
 
         <a href="teoria-do-processo-pressupostos-processuais.html" class="card subject-card">
           <div class="subject-icon">⚖️</div>
-          <h3>Teoria do Processo &amp; Pressupostos Processuais</h3>
+          <h3>Teoria do Processo &amp; Pressupostos Processuais <span class="tag-revisao">🔥 Q09, Q10 e Q20</span></h3>
           <p>Aspectos Objetivo e Subjetivo, Sincretismo (Ecletismo), Ordem Prévia de Cognição, Pressupostos de Eficácia e Validade, Nulidade vs Ineficácia Transrescisória e Tríplice Capacidade.</p>
           <div class="card-footer">
             <span>Guia Completo · 7 Módulos</span>
             <span>Acessar →</span>
           </div>
         </a>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ ROTEIRO DIDÁTICO SEQUENCIAL & ATIVIDADE AVALIATIVA ══════════════════════════════ -->
+    <section id="roteiro-didatico" style="margin-top: 4.5rem;">
+      <div class="section-header" style="margin-bottom: 1.5rem;">
+        <span class="badge" style="background: linear-gradient(135deg, var(--p-600), var(--p-700)); color:white; border:none;">Arquitetura Pedagógica Oficial</span>
+        <h2 style="font-size: 2rem; margin-top: 0.5rem; letter-spacing: -0.02em;">🧭 Roteiro Didático Integrado: A Ordem do Conteúdo &amp; O que Caiu na Atividade Avaliativa</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 950px;">
+          Esta seção organiza o estudo na exata <strong>ordem de desenvolvimento lógico do conteúdo</strong> adotada pelo <strong>Prof. Moisés Rodrigues</strong> em sala de aula (arquivo de referência: <code style="background: rgba(37,99,235,0.08); color: var(--p-600); padding: 2px 8px; border-radius: 6px;">CONTEUDO/ordem todo conteudo de cpc.md</code>). Cada bloco evidencia a linha de raciocínio encadeada e destaca, com precisão cirúrgica, os pontos cobrados na <strong>Atividade Avaliativa / Simulado</strong>.
+        </p>
+      </div>
+
+      <div class="roadmap-container">
+
+        <!-- ── BLOCO 01: JURISDIÇÃO CIVIL ── -->
+        <article class="roadmap-card bloco-jurisdicao">
+          <div class="roadmap-header">
+            <div class="roadmap-title-group">
+              <div class="roadmap-number">01</div>
+              <div>
+                <h3 class="roadmap-title">Parte I · Jurisdição Civil</h3>
+                <div class="roadmap-subtitle">Origem, Poder-Dever Estatal, Características Essenciais, Espécies &amp; Homologação no STJ</div>
+              </div>
+            </div>
+            <span class="tag-slide">📖 Material Base: Linhas 1 a 226</span>
+          </div>
+
+          <!-- Linha de Raciocínio -->
+          <div class="logic-box">
+            <div class="logic-title">
+              <span>🧠 Linha de Raciocínio Sequencial (Do Primitivo ao Controle de Soberania)</span>
+            </div>
+            <div class="logic-flow">
+              <span class="logic-step">1. Autotutela Primitiva</span>
+              <span class="logic-arrow">➔</span>
+              <span class="logic-step">2. Monopólio Estatal (Poder-Dever de Pacificar)</span>
+              <span class="logic-arrow">➔</span>
+              <span class="logic-step">3. Princípio da Inércia (Art. 2º)</span>
+              <span class="logic-arrow">➔</span>
+              <span class="logic-step">4. As 7 Características Essenciais</span>
+              <span class="logic-arrow">➔</span>
+              <span class="logic-step">5. Contenciosa vs. Voluntária</span>
+              <span class="logic-arrow">➔</span>
+              <span class="logic-step">6. Homologação de Sentença Estrangeira (STJ / Art. 963)</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>O Fio Condutor da Aula:</strong> O Estado surge para afastar a justiça com as próprias mãos (autotutela) e assume com exclusividade o dever de aplicar a lei geral ao caso concreto. Para garantir que o julgador permaneça neutro e imparcial, institui-se o dogma da <strong>Inércia</strong> (o juiz não se mobiliza de ofício). As decisões proferidas adquirem <strong>Substitutividade</strong> (substituem os litigantes), <strong>Imperatividade</strong> (coerção forçada) e <strong>Definitividade</strong> (Coisa Julgada Material). Em dimensão externa, para que uma sentença alienígena tenha eficácia no território nacional, exige-se o <em>juízo de delibação</em> do <strong>STJ</strong>, vedada qualquer ofensa à coisa julgada nacional.
+          </p>
+
+          <!-- O que caiu na Atividade Avaliativa -->
+          <div class="activity-panel">
+            <div class="activity-title-bar">
+              <div class="activity-label">
+                <span>🎯 Conteúdos Cobrados na Atividade Avaliativa de CPC</span>
+              </div>
+              <span class="tag-revisao">4 Questões neste Bloco</span>
+            </div>
+            <div class="activity-grid">
+              <div class="q-card">
+                <span class="q-tag">Questão 01 · Objetiva</span>
+                <p class="q-desc"><strong>Conceito e Finalidade da Jurisdição:</strong> O Estado assumiu para si o poder-dever de solucionar os conflitos com exclusividade, aplicando as normas gerais e abstratas aos casos concretos.</p>
+                <span class="q-note">📌 Slides 6 a 30 · Refuta a falsa tese de atuação de ofício ou atribuição à Administração Pública.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questão 02 · Objetiva</span>
+                <p class="q-desc"><strong>As Características da Jurisdição (Exceção):</strong> O gabarito apontou a <em>Delegabilidade</em> como assertiva incorreta. A jurisdição é indelegável (Princípio do Juiz Natural).</p>
+                <span class="q-note">📌 Slides 31 a 63 · Fixação do rol taxativo das 7 características fundamentais.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questão 11 · Discursiva</span>
+                <p class="q-desc"><strong>Dissertação das 4 Características Capitais:</strong> Conceituar com precisão: <em>a) Definitividade</em> (Coisa Julgada Material); <em>b) Imperatividade</em> (Poderes implícitos de coerção); <em>c) Inafastabilidade</em> (CF, art. 5º, XXXV); <em>d) Inércia</em> (CPC, art. 2º).</p>
+                <span class="q-note">📌 Slides 38 a 60 · Alerta do professor: inércia não é "processo parado", mas necessidade de acionamento inicial.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questão 03 · Objetiva</span>
+                <p class="q-desc"><strong>Homologação de Decisão Estrangeira pelo STJ:</strong> É incorreto afirmar que cabe homologação havendo decisão transitada em julgado no Brasil entre as mesmas partes, causa de pedir e pedido (Art. 963, VI CPC).</p>
+                <span class="q-note">📌 Slides 109 a 191 · STJ exerce delibação formal; contestação em 15 dias sem reexame de mérito.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-action">
+            <a href="jurisdicao-cooperacao-internacional.html" class="btn-roadmap">
+              <span>Ler Resumo Completo de Jurisdição &amp; Cooperação Internacional</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── BLOCO 02: COMPETÊNCIA ── -->
+        <article class="roadmap-card bloco-competencia">
+          <div class="roadmap-header">
+            <div class="roadmap-title-group">
+              <div class="roadmap-number">02</div>
+              <div>
+                <h3 class="roadmap-title">Parte II · Teoria Geral da Competência</h3>
+                <div class="roadmap-subtitle">A Medida da Jurisdição, Organograma, Chiovenda, Absoluta vs Relativa, Perpetuatio &amp; Modificações</div>
+              </div>
+            </div>
+            <span class="tag-slide">📖 Material Base: Linhas 227 a 685</span>
+          </div>
+
+          <!-- Linha de Raciocínio -->
+          <div class="logic-box">
+            <div class="logic-title">
+              <span style="color: #7C3AED;">🧠 Linha de Raciocínio Sequencial (Do Fracionamento da Jurisdição à Prevenção)</span>
+            </div>
+            <div class="logic-flow">
+              <span class="logic-step">1. Jurisdição Una ➔ Competência Fracionada</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">2. Organograma (3 Instâncias)</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">3. Foro vs. Juízo (3 Níveis de Apuração)</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">4. Critérios de Chiovenda</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">5. Absoluta vs. Relativa</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">6. Perpetuatio (Art. 43)</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">7. Modificações (P-D-C-C)</span>
+              <span class="logic-arrow" style="color: #7C3AED;">➔</span>
+              <span class="logic-step">8. Prevenção &amp; Conflito</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>O Fio Condutor da Aula:</strong> Como a jurisdição é una mas o território é vasto, fraciona-se o poder de julgar em <strong>Competência</strong> (a medida da jurisdição). Para identificar o órgão adequado, consultam-se três esferas normativas: 1. CF/88 (ramos e instâncias); 2. CPC (foro/comarca); 3. Lei de Organização Judiciária (juízo/vara). As regras dividem-se em <strong>Absolutas</strong> (ordem pública, insanáveis, de ofício e geram rescisória) e <strong>Relativas</strong> (interesse privado, modificáveis e prorrogáveis caso o réu não alegue em preliminar). Ajuizada a demanda, opera-se a <strong>Perpetuação da Jurisdição</strong> (Art. 43), que congela o juiz natural, admitindo alterações apenas por causas legais restritas (P-D-C-C: Prorrogação, Derrogação, Conexão e Continência).
+          </p>
+
+          <!-- O que caiu na Atividade Avaliativa -->
+          <div class="activity-panel">
+            <div class="activity-title-bar">
+              <div class="activity-label">
+                <span>🎯 Conteúdos Cobrados na Atividade Avaliativa de CPC</span>
+              </div>
+              <span class="tag-revisao">11 Questões neste Bloco</span>
+            </div>
+            <div class="activity-grid">
+              <div class="q-card">
+                <span class="q-tag">Questão 04 · Objetiva</span>
+                <p class="q-desc"><strong>Estrutura das Instâncias:</strong> É falso afirmar que o Brasil possui 4 instâncias. O sistema judiciário organiza-se em <strong>três instâncias</strong> funcionais, integrando o STF a terceira instância.</p>
+                <span class="q-note">📌 Slides 231 a 305 · Alerta enfático do professor em sala de aula.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questões 07 e 09 · Objetivas</span>
+                <p class="q-desc"><strong>Conceito de Competência &amp; Chiovenda:</strong> Competência como medida da jurisdição balizada por lugar, pessoas, matérias e valor. Falsa a afirmação de que o CPC não usa competência territorial.</p>
+                <span class="q-note">📌 Slides 306 a 350 e 425 a 491 · CPC adota amplamente o critério territorial nos arts. 46 a 53.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questões 05, 08 e 12 · Objetivas e Discursiva</span>
+                <p class="q-desc"><strong>Competência Absoluta vs. Relativa:</strong> Apenas a relativa é modificável pelas partes. A incompetência absoluta não prorroga, gera Ação Rescisória (art. 966, II) e suas decisões conservam efeitos até manifestação do juízo competente (art. 64, § 4º).</p>
+                <span class="q-note">📌 Slides 351 a 391 · Na relativa, o silêncio na preliminar de contestação opera prorrogação.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questões 06 e 14 · Objetiva e Discursiva</span>
+                <p class="q-desc"><strong>Perpetuação da Jurisdição (*Perpetuatio* - Art. 43 CPC):</strong> Fixação da competência no registro ou distribuição da petição inicial, sendo irrelevantes alterações supervenientes de fato ou direito, ressalvadas supressão de órgão ou competência absoluta.</p>
+                <span class="q-note">📌 Slides 392 a 424 · Estudo dogmático do desmembramento de comarca e estabilidade processual.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questões 10, 13 e Bônus 01 · Obj. e Discursivas</span>
+                <p class="q-desc"><strong>Derrogação e Incompetência Relativa de Ofício:</strong> Eleição de foro só cabe em competência relativa (obrigações). O juiz pode reconhecer de ofício cláusula abusiva antes da citação (art. 63, § 3º) ou juízo aleatório (art. 63, § 5º / Lei 14.879/2024).</p>
+                <span class="q-note">📌 Slides 492 a 555 · Mnemônico de modificação P-D-C-C e inovações legislativas recentes.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag">Questão 15 e Bônus 02 · Discursivas de Prova</span>
+                <p class="q-desc"><strong>Prevenção, Conexão e Continência:</strong> Prevenção fixada no registro/distribuição (art. 59) e combate ao <em>forum shopping</em> (art. 286, II). Conexão limitada pela prolação de sentença (Súmula 235 STJ); Continência posterior gera extinção da menor sem julgamento de mérito.</p>
+                <span class="q-note">📌 Slides 556 a 639 · Vedação estrita de arguição de conexão em recurso de Apelação.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-action">
+            <a href="competencia-poder-judiciario.html" class="btn-roadmap">
+              <span>Ler Resumo Completo de Competência &amp; Organograma</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── BLOCO 03: DA AÇÃO ── -->
+        <article class="roadmap-card bloco-acao">
+          <div class="roadmap-header">
+            <div class="roadmap-title-group">
+              <div class="roadmap-number">03</div>
+              <div>
+                <h3 class="roadmap-title">Parte III · Teoria da Ação &amp; Condições da Ação</h3>
+                <div class="roadmap-subtitle">Direito Público Subjetivo, Teorias Históricas, Conceito de Mérito, Tríplice Identidade &amp; Defesa</div>
+              </div>
+            </div>
+            <span class="tag-slide">📖 Material Base: Linhas 686 a 1170</span>
+          </div>
+
+          <!-- Linha de Raciocínio -->
+          <div class="logic-box">
+            <div class="logic-title">
+              <span style="color: #059669;">🧠 Linha de Raciocínio Sequencial (Do Acionamento contra o Estado à Identificação da Lide)</span>
+            </div>
+            <div class="logic-flow">
+              <span class="logic-step">1. Direito Material vs. Direito de Ação</span>
+              <span class="logic-arrow" style="color: #059669;">➔</span>
+              <span class="logic-step">2. Ação como Antídoto à Inércia</span>
+              <span class="logic-arrow" style="color: #059669;">➔</span>
+              <span class="logic-step">3. Teoria Eclética de Liebman (Mérito)</span>
+              <span class="logic-arrow" style="color: #059669;">➔</span>
+              <span class="logic-step">4. Condições (Legitimidade e Interesse)</span>
+              <span class="logic-arrow" style="color: #059669;">➔</span>
+              <span class="logic-step">5. Tríplice Identidade (Partes, Pedido, Causa de Pedir)</span>
+              <span class="logic-arrow" style="color: #059669;">➔</span>
+              <span class="logic-step">6. Defesas: Objeções vs. Exceções</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>O Fio Condutor da Aula:</strong> O direito de ação é um <strong>direito público subjetivo exercido contra o Estado</strong>, com o escopo de retirar a máquina judiciária de sua inércia original. Superadas as teorias concretistas e abstratistas puras, o Brasil consagrou a <strong>Teoria Abstratista Eclética de Liebman</strong> (Arts. 17 e 485, VI), definindo a ação como o direito a obter uma <em>resposta de mérito</em> (sentença declaratória na cognição; atos materiais na execução). Para tanto, exige-se o preenchimento das <strong>Condições da Ação</strong> (Legitimidade <em>ad causam</em> e Interesse de Agir). A ação é individualizada por seus 3 elementos basilares (Partes, Pedido e Causa de Pedir / Teoria da Substanciação). Ao réu, garante-se o direito de opor <strong>Objeções</strong> (ordem pública, conhecidas de ofício) e <strong>Exceções em sentido estrito</strong> (privadas e preclusivas).
+          </p>
+
+          <!-- O que caiu no Trabalho de Revisão / Atividade Avaliativa -->
+          <div class="activity-panel">
+            <div class="activity-title-bar">
+              <div class="activity-label">
+                <span>🎯 Questões Cobradas na Revisão de CPC</span>
+              </div>
+              <span class="tag-revisao" style="background: linear-gradient(135deg, #059669, #047857);">7 Questões neste Bloco</span>
+            </div>
+            <div class="activity-grid">
+              <div class="q-card">
+                <span class="q-tag" style="color: #059669;">Questão 16 · Discursiva</span>
+                <p class="q-desc"><strong>Teoria Abstratista Eclética (Liebman):</strong> Teoria intermediária entre a Concretista e a Abstratista Pura. Condiciona o julgamento de mérito ao preenchimento das condições da ação; sem elas, extingue-se sem mérito (art. 485, VI).</p>
+                <span class="q-note">📌 Slides 787 a 848 · Direito a obter pronunciamento sobre a lide.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag" style="color: #059669;">Questões 06 e 17 · Objetiva e Discursiva</span>
+                <p class="q-desc"><strong>Condições da Ação no CPC/15:</strong> São apenas duas: Legitimidade das Partes e Interesse Processual (art. 17). O Interesse de Agir desdobra-se no binômio <em>Necessidade</em> (utilidade da via judicial) e <em>Adequação</em> (procedimento e provimento idôneos).</p>
+                <span class="q-note">📌 Slides 849 a 886 e 926 a 982 · Possibilidade jurídica do pedido foi remetida ao mérito (art. 487, I).</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag" style="color: #059669;">Questões 07 e 18 · Objetiva e Discursiva</span>
+                <p class="q-desc"><strong>Legitimidade Ordinária vs. Extraordinária:</strong> Em regra, ninguém pode pleitear direito alheio em nome próprio (art. 18). A legitimidade extraordinária (substituição processual) é excepcional, depende de autorização legal, e a coisa julgada atinge o substituído.</p>
+                <span class="q-note">📌 Slides 887 a 925 · Exemplo: Ministério Público em Ação Civil Pública ou alienação da coisa litigiosa (art. 109).</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag" style="color: #059669;">Questões 08 e 19 · Objetiva e Discursiva</span>
+                <p class="q-desc"><strong>Elementos da Ação e Vinculação do Juiz:</strong> Pedido imediato (provimento processual) vs. mediato (bem da vida). O juiz está vinculado às Partes, aos Pedidos e à Causa de Pedir Remota (fatos). Pelos brocardos <em>iura novit curia</em> e <em>da mihi factum</em> (Teoria da Substanciação), o juiz não se vincula à qualificação jurídica dada pelo autor.</p>
+                <span class="q-note">📌 Slides 983 a 1139 · Princípio da Congruência / Adstrição (arts. 141 e 492).</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-action">
+            <a href="teoria-da-acao-condicoes-da-acao.html" class="btn-roadmap">
+              <span>Ler Resumo Completo de Teoria da Ação &amp; Condições da Ação</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── BLOCO 04: DO PROCESSO ── -->
+        <article class="roadmap-card bloco-processo">
+          <div class="roadmap-header">
+            <div class="roadmap-title-group">
+              <div class="roadmap-number">04</div>
+              <div>
+                <h3 class="roadmap-title">Parte IV · Teoria do Processo &amp; Pressupostos Processuais</h3>
+                <div class="roadmap-subtitle">O Processo como Instrumento, Sincretismo, Ordem de Cognição, Nulidades vs Ineficácia &amp; Tríplice Capacidade</div>
+              </div>
+            </div>
+            <span class="tag-slide">📖 Material Base: Linhas 1171 a 1390</span>
+          </div>
+
+          <!-- Linha de Raciocínio -->
+          <div class="logic-box">
+            <div class="logic-title">
+              <span style="color: #D97706;">🧠 Linha de Raciocínio Sequencial (Da Relação Jurídica ao Exame de Mérito)</span>
+            </div>
+            <div class="logic-flow">
+              <span class="logic-step">1. Processo como Instrumento</span>
+              <span class="logic-arrow" style="color: #D97706;">➔</span>
+              <span class="logic-step">2. Sincretismo Processual (Ecletismo)</span>
+              <span class="logic-arrow" style="color: #D97706;">➔</span>
+              <span class="logic-step">3. Ordem Lógica Prévia de Cognição</span>
+              <span class="logic-arrow" style="color: #D97706;">➔</span>
+              <span class="logic-step">4. Nulidades vs. Ineficácia Transrescisória</span>
+              <span class="logic-arrow" style="color: #D97706;">➔</span>
+              <span class="logic-step">5. Pressupostos de Eficácia e de Validade</span>
+              <span class="logic-arrow" style="color: #D97706;">➔</span>
+              <span class="logic-step">6. A Tríplice Capacidade</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); line-height: 1.7; margin-bottom: 1.25rem;">
+            <strong>O Fio Condutor da Aula:</strong> O processo não é um fim em si mesmo, mas o instrumento estatal para pacificar os conflitos. Apresenta um aspecto <strong>objetivo</strong> (procedimento ordenado em lei) e outro <strong>subjetivo</strong> (relação jurídica triangular entre juiz, autor e réu). No modelo atual de <em>sincretismo</em>, a fase cognitiva e a fase executiva ocorrem em processo unitário. Antes de emitir qualquer julgamento sobre o direito material, o magistrado tem o dever indeclinável de seguir uma <strong>ordem lógica e prévia de cognição judicial</strong>: 1º examina os <strong>Pressupostos Processuais</strong>; 2º verifica as <strong>Condições da Ação</strong>; e apenas se ambos estiverem regulares é que adentra o <strong>Mérito</strong>. Seus vícios dividem-se em <em>Nulidades Absolutas</em> (sujeitas a rescisória em 2 anos) e <em>Ineficácia Transrescisória</em> (insanável perante <em>querela nullitatis</em>).
+          </p>
+
+          <!-- O que caiu no Trabalho de Revisão / Atividade Avaliativa -->
+          <div class="activity-panel">
+            <div class="activity-title-bar">
+              <div class="activity-label">
+                <span>🎯 Questões Cobradas na Revisão de CPC</span>
+              </div>
+              <span class="tag-revisao" style="background: linear-gradient(135deg, #D97706, #B45309);">3 Questões neste Bloco</span>
+            </div>
+            <div class="activity-grid">
+              <div class="q-card">
+                <span class="q-tag" style="color: #D97706;">Questão 10 · Objetiva</span>
+                <p class="q-desc"><strong>A Tríplice Capacidade Processual:</strong> Desdobra-se em: 1. <em>Capacidade de Ser Parte</em> (personalidade civil); 2. <em>Capacidade Processual / Estar em Juízo</em> (capacidade de fato ou suprida por representação/assistência); 3. <em>Capacidade Postulatória</em> (habilitação técnica privativa de advogados inscritos na OAB e membros do Ministério Público).</p>
+                <span class="q-note">📌 Slides 1342 a 1390 · Ausência de capacidade postulatória gera nulidade dos atos se não sanada (art. 76).</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag" style="color: #D97706;">Questão 09 · Objetiva</span>
+                <p class="q-desc"><strong>Citação Válida e Relação Triangular:</strong> A citação do réu aperfeiçoa a relação processual triangular (pressuposto de eficácia perante o réu). A assertiva incorreta tentava anular o processo sem considerar a ressalva expressa da improcedência liminar do pedido (art. 332 do CPC).</p>
+                <span class="q-note">📌 Slides 1289 a 1301 · Citação inexistente/nula enseja querela nullitatis insanável.</span>
+              </div>
+              <div class="q-card">
+                <span class="q-tag" style="color: #D97706;">Questão 20 · Discursiva</span>
+                <p class="q-desc"><strong>Pressupostos de Eficácia (Existência) vs. Validade:</strong> Eficácia condiciona a própria gênese jurídica do processo (órgão investido de jurisdição e petição inicial). Validade condiciona o desenvolvimento regular da relação (competência, imparcialidade, citação válida e capacidade postulatória). Falta de pressuposto de validade gera nulidade; de eficácia gera ato inexistente/ineficaz.</p>
+                <span class="q-note">📌 Slides 1285 a 1341 · Distinção teórica vital entre plano da existência e plano da validade.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-action">
+            <a href="teoria-do-processo-pressupostos-processuais.html" class="btn-roadmap">
+              <span>Ler Resumo Completo de Teoria do Processo &amp; Pressupostos</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
 
       </div>
     </section>

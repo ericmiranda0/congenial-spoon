@@ -555,6 +555,66 @@
       color: #6EE7B7;
     }
 
+    /* Destaque Inteligente: Conteúdo Cobrado em Atividade Avaliativa */
+    .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(37, 99, 235, 0.08));
+      border-left: 6px solid #EF4444;
+      border-top: 1px solid rgba(239, 68, 68, 0.25);
+      border-right: 1px solid rgba(37, 99, 235, 0.2);
+      border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .alerta-atividade-avaliativa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px -4px rgba(239, 68, 68, 0.15);
+    }
+    .badge-atividade {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #DC2626, #991B1B);
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+    }
+    .box-analise-atividade {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+    .box-analise-atividade h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    [data-theme="dark"] .alerta-atividade-avaliativa {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(37, 99, 235, 0.15));
+      border-left-color: #F87171;
+      border-color: rgba(248, 113, 113, 0.3);
+    }
+    [data-theme="dark"] .box-analise-atividade {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
     /* Flashcards Interativos */
     .flashcards-grid {
       display: grid;
@@ -864,14 +924,15 @@
         <a href="#mod1-conceito" class="nav-item">1. Teoria do Processo</a>
         <a href="#mod2-cognicao" class="nav-item">2. Ordem de Cognição</a>
         <a href="#mod3-vicios" class="nav-item">3. Nulidades &amp; Ineficácia</a>
-        <a href="#mod4-eficacia" class="nav-item">4. Pressupostos de Eficácia</a>
-        <a href="#mod5-validade" class="nav-item">5. Pressupostos de Validade</a>
-        <a href="#mod6-capacidade" class="nav-item">6. Teoria da Capacidade</a>
+        <a href="#mod4-eficacia" class="nav-item">4. Pressupostos de Eficácia <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q09, Q20</span></a>
+        <a href="#mod5-validade" class="nav-item">5. Pressupostos de Validade <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q20</span></a>
+        <a href="#mod6-capacidade" class="nav-item">6. Teoria da Capacidade <span class="tag-revisao" style="font-size:0.6rem; padding:1px 6px;">Q10</span></a>
         <a href="#mod7-legitimidade" class="nav-item">7. Capacidade vs Legitimidade</a>
         <a href="#mapas-mentais" class="nav-item">Mapas Mentais</a>
         <a href="#mnemonicos" class="nav-item">Mnemônicos</a>
         <a href="#flashcards" class="nav-item">Flashcards</a>
         <a href="#revisao-ativa" class="nav-item">Questões</a>
+        <a href="#destaque-atividade" class="nav-item">🎯 Caiu na Revisão (3 Q)</a>
         <a href="#resumo-final" class="nav-item">Resumo Final</a>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo claro/escuro">
@@ -889,15 +950,16 @@
         <a href="#mod1-conceito"><span>🏛️</span> 1. Teoria do Processo &amp; Sincretismo</a>
         <a href="#mod2-cognicao"><span>⚖️</span> 2. Ordem Prévia de Cognição Judicial</a>
         <a href="#mod3-vicios"><span>⚠️</span> 3. Nulidades vs Ineficácia Transrescisória</a>
-        <a href="#mod4-eficacia"><span>🎯</span> 4. Pressupostos Processuais de Eficácia</a>
-        <a href="#mod5-validade"><span>🛡️</span> 5. Pressupostos de Validade Positivos e Negativos</a>
-        <a href="#mod6-capacidade"><span>👤</span> 6. Capacidade no Processo Civil (3 Espécies)</a>
+        <a href="#mod4-eficacia"><span>🎯</span> 4. Pressupostos Processuais de Eficácia <span class="tag-revisao">🔥 Cobrado na Revisão (Q09 e Q20)</span></a>
+        <a href="#mod5-validade"><span>🛡️</span> 5. Pressupostos de Validade Positivos e Negativos <span class="tag-revisao">🔥 Cobrado na Revisão (Q20)</span></a>
+        <a href="#mod6-capacidade"><span>👤</span> 6. Capacidade no Processo Civil (3 Espécies) <span class="tag-revisao">🔥 Cobrado na Revisão (Q10)</span></a>
         <a href="#mod7-legitimidade"><span>🔍</span> 7. Capacidade Processual vs Legitimidade ad causam</a>
         <a href="#mapas-mentais"><span>🧠</span> 8. Mapas Mentais em Árvore Hierárquica</a>
         <a href="#mnemonicos"><span>⚡</span> 9. Mnemônicos Mágicos de Fixação</a>
         <a href="#flashcards"><span>🃏</span> 10. Flashcards Interativos de Memorização</a>
         <a href="#revisao-ativa"><span>📝</span> 11. Bateria de Questões Comentadas (OAB/Bancas)</a>
-        <a href="#resumo-final"><span>🚀</span> 12. Cheat Sheet Express de 1 Página</a>
+        <a href="#destaque-atividade"><span>🎯</span> 12. Conteúdos do Trabalho de Revisão (Q09, Q10 e Q20)</a>
+        <a href="#resumo-final"><span>🚀</span> 13. Cheat Sheet Express de 1 Página</a>
       </div>
     </div>
 
@@ -1164,10 +1226,42 @@
 
     <!-- ══════════════════════════════ MÓDULO 04 ══════════════════════════════ -->
     <section id="mod4-eficacia" class="section">
-      <div class="section-label">Módulo 04</div>
-      <h2>4. Os Pressupostos Processuais de Eficácia</h2>
+      <div class="section-label">Módulo 04 · 🎯 COBRADO NA REVISÃO (Q09 e Q20)</div>
+      <h2>4. Os Pressupostos Processuais de Eficácia <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
 
       <p>São os requisitos de existência jurídica e de aptidão essencial para que o processo gere eficácia vinculante em face dos jurisdicionados. Se omitidos, o ato decisório é desprovido de eficácia jurídica plena, não operando coisa julgada material.</p>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÕES 09 E 20 DO TRABALHO DE REVISÃO -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu no Trabalho de Revisão de CPC · Questões 09 (Obj) e 20 (Discursiva)</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: Pressupostos de Eficácia vs. Validade &amp; A Citação Válida (Art. 332 CPC)</h3>
+        <p><strong>Questão 09 (Objetiva):</strong> <em>"A respeito dos pressupostos processuais, é correto afirmar:"</em></p>
+        
+        <div class="box-analise-atividade">
+          <p style="font-weight: 700; color: #166534; font-size: 1.05rem;">
+            ✅ Gabarito Oficial da Q09 (Item C): <em>"A ausência de citação válida do réu é, em regra, pressuposto processual de eficácia, ressalvada a hipótese de improcedência liminar do pedido (art. 332 do CPC)."</em>
+          </p>
+          <p style="margin-top: 0.5rem; line-height: 1.6;">
+            <strong>Por que a citação é pressuposto de eficácia?</strong> Sem a citação, a sentença não produz nenhum efeito contra o réu (vício de ineficácia transrescisória / querela nullitatis). Contudo, o Art. 332 do CPC cria a exceção: na <strong>Improcedência Liminar</strong>, a sentença de improcedência de mérito é plenamente eficaz e válida <em>mesmo antes de citar o réu</em>.
+          </p>
+        </div>
+
+        <h4 style="margin-top: 1.25rem; color: var(--p-700);">📝 Resposta Padrão Ouro da Questão 20 (Discursiva de Prova):</h4>
+        <div class="box-analise-atividade">
+          <p><strong>Enunciado da Q20:</strong> <em>"Diferencie pressupostos processuais de eficácia e de validade, exemplificando cada categoria."</em></p>
+          <ul style="margin-left: 1.25rem; line-height: 1.7; margin-top: 0.5rem;">
+            <li>
+              <strong>Pressupostos Processuais de Eficácia:</strong> São os requisitos de existência e aptidão intrínseca necessários para que os atos do processo produzam efeitos vinculantes perante os sujeitos da relação jurídica processual e terceiros. Se ausentes, o pronunciamento judicial é <em>juridicamente ineficaz</em> perante a parte prejudicada (vício insanável que desafia *querela nullitatis* a qualquer tempo).<br>
+              • <em>Exemplos:</em> A <strong>citação válida do réu</strong> (indispensável para que a condenação tenha eficácia sobre o demandado, ressalvada a improcedência liminar do art. 332); a <strong>investidura do julgador</strong> no cargo de juiz; e a <strong>existência de petição inicial/demanda</strong> (afastamento da inércia).
+            </li>
+            <li>
+              <strong>Pressupostos Processuais de Validade:</strong> São os requisitos legais necessários para que a relação jurídica processual, uma vez existente e instaurada, desenvolva-se de forma regular e hígida, viabilizando um julgamento de mérito sem nulidades processuais.<br>
+              • <em>Exemplos Positivos:</em> A <strong>competência absoluta do juízo</strong> (art. 64); a <strong>imparcialidade do magistrado</strong> (ausência de causas de impedimento do art. 144); a <strong>capacidade processual das partes</strong> (art. 70); e a <strong>aptidão da petição inicial</strong> (art. 319).<br>
+              • <em>Exemplos Negativos:</em> A ausência de <strong>litispendência</strong>, ausência de <strong>coisa julgada material</strong> e ausência de <strong>convenção de arbitragem</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div class="grid2">
         <div class="card">
@@ -1237,6 +1331,12 @@
             <li><strong>Impedimento:</strong> Presunção absoluta de parcialidade; gera nulidade e cabe Ação Rescisória (art. 966, II);</li>
             <li><strong>Suspeição:</strong> Presunção relativa de parcialidade; deve ser arguida na primeira oportunidade sob pena de preclusão absoluta.</li>
           </ul>
+          <div class="info-box box-revisao" style="background: rgba(239, 68, 68, 0.04); border-left: 4px solid #EF4444; padding: 10px 14px; border-radius: 8px; margin-top: 10px;">
+            <strong style="color: #DC2626; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">🎯 Conexão com a Atividade Avaliativa de CPC (Questões 05, 08 e 12)</strong>
+            <span style="font-size: 0.88rem; line-height: 1.5; color: var(--text-main);">
+              No material de aula (<em>ordem todo conteudo de cpc.md - Linhas 1209 a 1254</em>), o Prof. Moisés Rodrigues enfatiza que a <strong>Competência do Juízo</strong> é pressuposto processual de validade positivo. A inobservância da competência absoluta acarreta nulidade processual grave, não preclui durante as instâncias ordinárias e viabiliza a <strong>Ação Rescisória</strong> (Art. 966, II do CPC). Já a incompetência relativa preclui e prorroga-se caso não seja arguida em preliminar de contestação.
+            </span>
+          </div>
         </div>
       </div>
 
@@ -1288,26 +1388,46 @@
 
     <!-- ══════════════════════════════ MÓDULO 06 ══════════════════════════════ -->
     <section id="mod6-capacidade" class="section">
-      <div class="section-label">Módulo 06</div>
-      <h2>6. Teoria da Capacidade no Processo Civil: A Tríplice Dimensão</h2>
+      <div class="section-label">Módulo 06 · 🎯 COBRADO NA REVISÃO (Q10)</div>
+      <h2>6. Teoria da Capacidade no Processo Civil: A Tríplice Dimensão <span class="tag-revisao">🔥 Cobrado na Revisão</span></h2>
 
       <p>O conceito de capacidade processual não se confunde com o do Direito Civil material, embora haja uma simetria estrutural evidente entre ambos os ramos. No Direito Civil, distingue-se a capacidade de direito (gozo) da capacidade de fato (exercício). No Processo Civil, a dogmática consagra três espécies distintas de capacidade:</p>
+
+      <!-- SINALIZAÇÃO INTELIGENTE: QUESTÃO 10 DO TRABALHO DE REVISÃO -->
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Caiu no Trabalho de Revisão de CPC · Questão 10 (Objetiva)</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Tema: A Tríplice Capacidade &amp; A Capacidade Postulatória</h3>
+        <p><strong>Enunciado da Questão 10:</strong> <em>"Sobre a capacidade no processo civil, é correto afirmar:"</em></p>
+        
+        <div class="box-analise-atividade">
+          <p style="font-weight: 700; color: #166534; font-size: 1.05rem;">
+            ✅ Gabarito Oficial (Item C): <em>"A capacidade postulatória é, em regra, atributo dos advogados e dos membros do Ministério Público."</em>
+          </p>
+          <p style="margin-top: 0.75rem; line-height: 1.7;">
+            <strong>Análise das Afirmativas Incorretas da Questão:</strong><br>
+            • <em>A) Conceitos sinônimos:</em> Falso. São três dimensões ontologicamente distintas (ser parte, estar em juízo e postular).<br>
+            • <em>B) Incapaz carece de capacidade de ser parte:</em> Falso. O nascituro e o menor têm plena capacidade de ser parte (titularizam direitos); o que lhes falta é capacidade processual (devem ser representados ou assistidos).<br>
+            • <em>D) Capacidade processual verificada em função da relação material:</em> Falso. A capacidade processual é atributo genérico e abstrato da pessoa civil (art. 70). Quem é aferida em função da relação de direito material é a <strong>legitimidade ad causam</strong>!<br>
+            • <em>E) Entes despersonalizados jamais podem ser parte:</em> Falso. O Art. 75 do CPC confere capacidade de ser parte expressa a condomínios, espólios e massa falida.
+          </p>
+        </div>
+      </div>
 
       <div class="grid3">
         <div class="card">
           <div style="font-size:2rem; margin-bottom:10px;">👤</div>
           <h4>1. Capacidade de Ser Parte</h4>
-          <p><strong>Definição:</strong> Aptidão genérica para figurar em um dos polos da relação jurídica processual (autor ou réu). Pertence a todas as pessoas que têm personalidade jurídica no direito material.</p>
+          <p><strong>Definição:</strong> Aptidão genérica para figurar em um dos polos da relação jurídica processual (autor ou réu). Pertence a todas as pessoas que têm personalidade jurídica no direito material e a entes despersonalizados (Art. 75).</p>
         </div>
         <div class="card">
           <div style="font-size:2rem; margin-bottom:10px;">⚖️</div>
           <h4>2. Capacidade Processual (Estar em Juízo)</h4>
-          <p><strong>Definição:</strong> Aptidão para exercer, por si só, atos processuais válidos sem a necessidade de ser representado ou assistido por outrem (também chamada *legitimatio ad processum*).</p>
+          <p><strong>Definição:</strong> Aptidão para exercer, por si só, atos processuais válidos sem a necessidade de ser representado ou assistido por outrem (também chamada *legitimatio ad processum* - Art. 70 CPC).</p>
         </div>
         <div class="card">
           <div style="font-size:2rem; margin-bottom:10px;">📜</div>
           <h4>3. Capacidade Postulatória</h4>
-          <p><strong>Definição:</strong> Aptidão técnica e privativa para dirigir requerimentos e articular defesas e pretensões formais perante o Poder Judiciário. Pertence a advogados, Defensores e MP.</p>
+          <p><strong>Definição:</strong> Aptidão técnica e privativa para dirigir requerimentos e articular defesas e pretensões formais perante o Poder Judiciário. Pertence a advogados (OAB), Defensores e MP (Art. 103 CPC).</p>
         </div>
       </div>
 
@@ -1694,6 +1814,30 @@
             • O item III é verdadeiro (art. 104, § 2º do CPC).
           </div>
         </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ CONTEÚDOS DO TRABALHO DE REVISÃO DE CPC ══════════════════════════════ -->
+    <section id="destaque-atividade" class="section">
+      <div class="alerta-atividade-avaliativa">
+        <span class="badge-atividade">🎯 Conteúdos Cobrados no Trabalho de Revisão de CPC · 3 Questões</span>
+        <h3 style="color: var(--p-700); margin-top: 0.5rem;">Guia Consolidado: O que Caiu na Revisão sobre Teoria do Processo &amp; Pressupostos Processuais</h3>
+        <p>O <strong>Trabalho de Revisão de CPC</strong> contemplou o tema <em>Do Processo</em> (Parte IV do programa) com <strong>2 Questões Objetivas (Q09 e Q10)</strong> e <strong>1 Questão Discursiva (Q20)</strong>. Abaixo está a síntese didática consolidada dos pontos cobrados:</p>
+        
+        <div class="box-analise-atividade">
+          <h4>1. Pressupostos de Eficácia vs. Validade &amp; A Citação (Questões 09 e 20 · Objetiva e Discursiva)</h4>
+          <p>
+            • <strong>Diferenciação Dogmática (Q20):</strong> Os <em>Pressupostos de Eficácia</em> são os requisitos intrínsecos para que os atos processuais gerem efeitos vinculantes contra as partes (ex: citação válida do réu, investidura do magistrado, existência de demanda). Os <em>Pressupostos de Validade</em> são os requisitos legais para que a relação processual já instaurada se desenvolva sem nulidades (ex: competência absoluta do juízo, imparcialidade do juiz, aptidão da petição inicial, capacidade processual).<br>
+            • <strong>A Natureza da Citação Válida (Q09):</strong> A ausência de citação válida do réu é, em regra, <strong>pressuposto processual de eficácia</strong>. A sentença proferida contra réu revel não citado é ineficaz para sempre (*querela nullitatis*).<br>
+            • <strong>A Exceção Notável do Art. 332 (Q09):</strong> Na <em>Improcedência Liminar do Pedido</em>, a citação do réu <strong>NÃO é pressuposto de eficácia</strong>: o juiz rejeita o mérito liminarmente sem citar o réu quando o pedido contraria súmula vinculante ou precedentes dos tribunais superiores!
+          </p>
+
+          <h4 style="margin-top: 1.25rem;">2. Tríplice Capacidade no Processo Civil &amp; Capacidade Postulatória (Questão 10 · Objetiva)</h4>
+          <p>
+            • <strong>Três Dimensões Autônomas:</strong> (1) <em>Capacidade de Ser Parte</em>: aptidão genérica conferida a pessoas físicas, jurídicas e entes despersonalizados (Art. 75: espólio, condomínio, massa falida); (2) <em>Capacidade Processual / Estar em Juízo</em>: aptidão de praticar atos sem representação (incapazes têm capacidade de ser parte, mas precisam de representação ou assistência); (3) <em>Capacidade Postulatória</em>: habilitação técnica privativa.<br>
+            • <strong>Gabarito Oficial (Q10):</strong> A <em>capacidade postulatória</em> é, em regra, <strong>atributo privativo dos advogados inscritos na OAB e dos membros do Ministério Público</strong> (Art. 103 do CPC). Sua falta insanável torna o ato judicialmente <em>ineficaz</em> (Art. 104, § 2º).
+          </p>
+        </div>
       </div>
     </section>
 

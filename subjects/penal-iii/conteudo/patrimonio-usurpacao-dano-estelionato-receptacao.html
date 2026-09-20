@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito Penal III — Crimes Contra o Patrimônio II & Propriedade Imaterial: Usurpação, Dano, Apropriação, Estelionato, Receptação e Direitos Autorais (Arts. 161 a 186 CP) | Premium Learning</title>
+
+  <!-- Typography: Outfit, Lora, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../../base-style.css">
+  <style>
+    /* Subject Specific Branding: Penal Law Crimson */
+    :root {
+      --p-700: #7F1D1D;
+      --p-600: #991B1B;
+      --p-500: #EF4444;
+      --p-50: #FEF2F2;
+      --primary: #EF4444;
+      --primary-dark: #7F1D1D;
+      --accent-gold: #D4AF37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #450A0A 100%);
+      padding: 60px 20px 50px;
+    }
+
+    .badge-penal {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #FEE2E2;
+    }
+
+    main {
+      padding-top: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      color: var(--p-700);
+      border-left: 5px solid var(--p-500);
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #FCA5A5;
+    }
+
+    h3 {
+      color: var(--p-600);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #F87171;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--p-500);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.gold { border-top-color: var(--accent-gold); }
+    .card.blue { border-top-color: #3B82F6; }
+    .card.purple { border-top-color: #8B5CF6; }
+    .card.emerald { border-top-color: #10B981; }
+
+    /* Dogmatic Elements Card */
+    .crime-elements {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .crime-elements h4 {
+      margin-top: 0;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+      margin-bottom: 0.85rem;
+    }
+
+    [data-theme="dark"] .crime-elements h4 {
+      color: #FCA5A5;
+    }
+
+    .crime-elements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      font-size: 0.92rem;
+    }
+
+    .elem-tag {
+      font-weight: 700;
+      color: var(--p-700);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    [data-theme="dark"] .elem-tag {
+      color: var(--accent-gold);
+    }
+
+    /* Interactive Lei Seca */
+    .artigo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .artigo:hover {
+      border-color: var(--p-500);
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      user-select: none;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::before {
+      content: "⚖️";
+      font-size: 1.2rem;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.25rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #1F2937;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(239, 68, 68, 0.08);
+      color: #F3F4F6;
+    }
+
+    /* Callout Boxes */
+    .exam-tip, .pitfall {
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 2rem 0;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exam-tip {
+      background: #FFFBEB;
+      border: 1px solid #FEF3C7;
+    }
+
+    .pitfall {
+      background: #FEF2F2;
+      border: 1px solid #FEE2E2;
+    }
+
+    [data-theme="dark"] .exam-tip {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    [data-theme="dark"] .pitfall {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .box-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .exam-tip .box-label {
+      background: #D97706;
+    }
+
+    .pitfall .box-label {
+      background: #EF4444;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 1.1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background-color: var(--bg-hover);
+    }
+
+    /* Mindmap */
+    .mindmap-box {
+      background: #111827;
+      color: #F9FAFB;
+      padding: 2.25rem;
+      border-radius: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      line-height: 1.7;
+    }
+
+    .mm-root {
+      color: var(--p-500);
+      font-weight: 800;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid #374151;
+      padding-bottom: 0.5rem;
+    }
+
+    .mm-l1 {
+      margin-left: 1.5rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .mm-l2 {
+      margin-left: 3rem;
+      color: #E5E7EB;
+      font-size: 0.92rem;
+      position: relative;
+    }
+
+    .mm-l2::before {
+      content: "├─ ";
+      color: #6B7280;
+    }
+
+    .mm-l3 {
+      margin-left: 4.5rem;
+      color: #9CA3AF;
+      font-size: 0.85rem;
+    }
+
+    .mm-l3::before {
+      content: "│  └─ ";
+      color: #4B5563;
+    }
+
+    /* Mnemonic Box */
+    .mnemonic-box {
+      background: #1E293B;
+      color: #FFFFFF;
+      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #F59E0B;
+    }
+
+    .mnemonic-pill {
+      background: #F59E0B;
+      color: #000000;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-right: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Active Review Exercises */
+    .exercise {
+      background: var(--bg-card);
+      padding: 1.75rem;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exercise p {
+      margin-top: 0;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      background: var(--bg-hover);
+      border-radius: 10px;
+      border-left: 4px solid #10B981;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: #FEE2E2;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(239, 68, 68, 0.25);
+      color: #FCA5A5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="badge badge-penal">Material Didático · Direito Penal III</div>
+      <h1>Crimes Contra o Patrimônio II &amp; Propriedade Imaterial</h1>
+      <div class="subtitle">Usurpação, Dano, Apropriação Indébita, Estelionato, Fraude com Criptoativos, Receptação, Imunidades Penais e Direitos Autorais (Arts. 161 a 186 CP)</div>
+      <div class="meta">
+        <span>⚖️ Arts. 161 a 186 CP</span>
+        <span>📚 Patrimônio &amp; Propriedade Imaterial</span>
+        <span>🛡️ Atualizado pelas Leis 14.155/21, 14.478/22 e 15.397/26</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../../index.html" class="home-btn" title="Voltar ao Portal Hub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#usurpacao-dano" class="nav-item">Usurpação &amp; Dano</a>
+        <a href="#apropriacao" class="nav-item">Apropriação Indébita</a>
+        <a href="#estelionato" class="nav-item">Estelionato &amp; Fraudes</a>
+        <a href="#cripto" class="nav-item">Criptoativos</a>
+        <a href="#receptacao" class="nav-item">Receptação</a>
+        <a href="#imunidades" class="nav-item">Imunidades Penais</a>
+        <a href="#autorais" class="nav-item">Direitos Autorais</a>
+        <a href="#mapamental" class="nav-item">Mapa Mental</a>
+        <a href="#revisao" class="nav-item">Revisão Ativa</a>
+        <a href="#resumofinal" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema escuro/claro">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 0. OBJETIVOS ══════════════════════════════ -->
+    <section id="objetivos" class="section">
+      <h2>🎯 Objetivos de Aprendizagem</h2>
+      <p>Ao finalizar este módulo terminal de Direito Penal III, você dominará:</p>
+      <ul>
+        <li>A tipicidade do <strong>Dano (Art. 163)</strong> e do <strong>Esbulho Possessório (Art. 161, § 1º, II)</strong>, com o regime de ação penal privada e pública;</li>
+        <li>A dogmática da <strong>Apropriação Indébita (Art. 168)</strong>, diferenciando-a do furto e do estelionato, além da apropriação de coisa havida por erro (Art. 169 — incluindo PIX por engano);</li>
+        <li>O <strong>Estelionato (Art. 171)</strong> após o Pacote Anticrime e Lei 15.397/2026: regra da ação penal pública condicionada à representação, exceções incondicionadas e o crime de <strong>Fraude com Ativos Virtuais / Criptoativos (Art. 171-A)</strong>;</li>
+        <li>A aplicação da <strong>Súmula 17 do STJ</strong> (consunção do falso pelo estelionato) e Súmula 554 do STF (cheque sem fundos);</li>
+        <li>A <strong>Receptação (Art. 180)</strong> em todas as suas modalidades (própria, imprópria, qualificada e culposa), a autonomia do delito e o abigeato receptivo (Art. 180-A);</li>
+        <li>As <strong>Imunidades Penais Absolutas e Relativas (Escusas Absolutórias — Arts. 181 a 183)</strong> e as vedações em crimes com violência ou vítimas idosas;</li>
+        <li>A tutela penal da <strong>Propriedade Imaterial (Arts. 184 a 186)</strong>: pirataria com intuito de lucro vs. cópia privada única, súmulas 502 e 574 do STJ e o regime de ação penal.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ 1. USURPAÇÃO E DANO ══════════════════════════════ -->
+    <section id="usurpacao-dano" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulos III e IV do Título II</div>
+      <h2>1. Da Usurpação e do Dano (Arts. 161 a 167 CP)</h2>
+
+      <div class="grid2">
+        <div class="card">
+          <h4>Art. 161 — Da Usurpação de Imóveis</h4>
+          <p>Tutela a posse e propriedade imobiliária:</p>
+          <ul>
+            <li><strong>Caput:</strong> Alteração de limites (suprimir ou deslocar marco/tapume).</li>
+            <li><strong>§ 1º, I:</strong> Usurpação de águas alheias.</li>
+            <li><strong>§ 1º, II:</strong> <em>Esbulho possessório</em>: invadir, com violência à pessoa ou grave ameaça, ou mediante concurso de mais de duas pessoas, terreno ou edifício alheio para o fim de esbulho possessório.</li>
+            <li><strong>Ação Penal (§ 3º):</strong> Se não há violência e a propriedade é privada, a ação é <strong>PRIVADA</strong>; se há violência ou a propriedade é pública, é Pública Incondicionada.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Art. 163 — Do Crime de Dano</h4>
+          <p>Destruir, inutilizar ou deteriorar coisa alheia:</p>
+          <ul>
+            <li><strong>Simples (caput):</strong> Detenção de 1 a 6 meses -> <strong>Ação Penal Privada</strong> (art. 167).</li>
+            <li><strong>Qualificado (Parágrafo único):</strong> Reclusão de 6 meses a 3 anos e multa:
+              <ul>
+                <li>I - com violência ou grave ameaça;</li>
+                <li>II - com emprego de substância inflamável ou explosiva;</li>
+                <li>III - contra patrimônio da União, Estado, DF, Município, autarquia, fundação, concessionária;</li>
+                <li>IV - por motivo egoístico ou com considerável prejuízo para a vítima.</li>
+              </ul>
+            </li>
+            <li><strong>Ação Penal no Dano Qualificado:</strong> Pública Incondicionada nos incisos II e III; Privada nos incisos I e IV (Art. 167 CP).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dogmatic Elements: Dano -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Dano (Art. 163 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Verbos <em>destruir</em> (aniquilar), <em>inutilizar</em> (tornar imprestável) ou <em>deteriorar</em> (diminuir a qualidade) de coisa alheia móvel ou imóvel.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            <em>Animus nocendi</em> (dolo de causar prejuízo). Não existe modalidade culposa no Código Penal (dano culposo é mero ilícito civil!).
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            "Coisa alheia" (destruir coisa própria é atípico, salvo crime de fraude para recebimento de indenização).
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Dano Simples: Menor Potencial Ofensivo -> Rito Sumaríssimo (JECRIM).<br>
+            • Dano Qualificado: Detenção de 6 meses a 3 anos -> Rito Sumário (admite suspensão condicional do processo).
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            Regra no dano simples: <strong>PRIVADA</strong> (art. 167 CP).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 2. APROPRIAÇÃO INDÉBITA ══════════════════════════════ -->
+    <section id="apropriacao" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo V do Título II</div>
+      <h2>2. Da Apropriação Indébita (Arts. 168 a 170 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> É a traição da confiança patrimonial. Alguém recebe emprestado ou para guardar um objeto de forma legal e legítima. Depois, recusa-se a devolver e passa a agir como se fosse o dono absoluto do bem (vendendo-o, gastando-o ou ocultando-o).</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> O agente tem a <strong>posse ou detenção legítima e desvigiada</strong> anterior, livre de qualquer fraude inicial. A ilicitude surge em momento posterior (<em>inversão do animus da posse</em>), passando o sujeito a agir com <em>animus rem sibi habendi</em>.</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> O Art. 169 pune a apropriação de coisa havida por erro (ex: <strong>PIX ou transferência bancária recebida por engano</strong> de terceiro e não restituída voluntariamente à vítima ou ao banco em 15 dias). Na apropriação de coisa achada (art. 169, II), o agente tem o dever legal de entregar a coisa à autoridade competente ou ao dono no prazo estrito de 15 dias.</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 168 do Código Penal - Apropriação Indébita</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 168 -</strong> Apropriar-se de coisa alheia móvel, de que tem a posse ou a detenção:<br>
+          Pena - reclusão, de 1 (um) a 4 (quatro) anos, e multa.</p>
+          <p><strong>§ 1º [CAUSAS DE AUMENTO DE 1/3]:</strong> A pena é aumentada de 1/3 (um terço) quando o agente recebeu a coisa:<br>
+          I - em depósito necessário;<br>
+          II - na qualidade de tutor, curador, síndico, liquidatário, inventariante, testamenteiro ou depositário judicial;<br>
+          III - em razão de ofício, emprego ou profissão (ex: advogado que apropria levantamento de alvará do cliente).</p>
+        </div>
+      </details>
+
+      <div class="grid2">
+        <div class="card blue">
+          <h4>Art. 169 — Apropriação por Erro (PIX)</h4>
+          <p>Apropriar-se de coisa alheia vinda ao seu poder por <strong>erro, caso fortuito ou força da natureza</strong> (Pena: Detenção de 1 mês a 1 ano):</p>
+          <ul>
+            <li><strong>Transferência Eletrônica (PIX por engano):</strong> O STJ pacificou que quem recebe valores creditados indevidamente por engano de outrem e se recusa a devolver comete o crime do art. 169, caput, do CP.</li>
+          </ul>
+        </div>
+
+        <div class="card emerald">
+          <h4>Art. 169, II — Coisa Achada</h4>
+          <p>Quem acha coisa alheia perdida e dela se apropria, total ou parcialmente, deixando de restituí-la ao dono ou legítimo possuidor ou de entregá-la à autoridade competente, no prazo de <strong>15 (quinze) dias</strong>:</p>
+          <ul>
+            <li>Coisa perdida tem dono! "Achado não é roubado, mas se não devolver em 15 dias é apropriação de coisa achada".</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 3. ESTELIONATO E FRAUDES ══════════════════════════════ -->
+    <section id="estelionato" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo VI do Título II</div>
+      <h2>3. Do Estelionato e Outras Fraudes (Arts. 171 a 179 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> O estelionato é o famoso "golpe". O golpista usa de lábia, mentiras, documentos falsos ou artimanhas na internet para enganar a vítima, fazendo com que ela própria entregue dinheiro ou bens achando que está fazendo um bom negócio.</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> A estrutura típica exige o binômio <strong>vantagem ilícita + prejuízo alheio</strong> decorrente da indução ou manutenção da vítima em erro mediante artifício (aparência material), ardil (conversa enganosa) ou qualquer outro meio fraudulento.</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> Com a Lei 14.155/21, criou-se a <strong>Fraude Eletrônica (§ 2º-A)</strong> com reclusão severa de 4 a 8 anos. Além disso, desde o Pacote Anticrime (Lei 13.964/19) e consolidado pela Lei 15.397/2026, a <strong>ação penal no estelionato é pública condicionada à representação</strong> como regra geral (§ 5º), com exceções taxativas.</p>
+      </div>
+
+      <!-- Dogmatic Elements: Estelionato -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Estelionato (Art. 171 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            Verbo <em>obter</em> vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro mediante artifício, ardil ou fraude. Crime comum, duplo subjetivo passivo e material.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            Dolo + Elemento Subjetivo Especial: intuito de obter lucro ou vantagem patrimonial ilícita para si ou para outrem. Não admite modalidade culposa.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            "Vantagem ilícita", "prejuízo alheio", "artifício, ardil ou qualquer outro meio fraudulento".
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Estelionato Comum (caput: 1 a 5 anos): Rito Ordinário (admite ANPP art. 28-A CPP e suspensão condicional do processo).<br>
+            • Fraude Eletrônica (§ 2º-A: 4 a 8 anos): Rito Ordinário.
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            <strong>REGRA: Pública Condicionada à representação</strong> do ofendido (§ 5º).<br>
+            <strong>EXCEÇÕES (Pública Incondicionada):</strong> Vítima Administração Pública (direta ou indireta), Criança ou Adolescente, Pessoa com Deficiência Mental, ou Maior de 70 anos / Incapaz.
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 171 do Código Penal - Estelionato e Novas Modalidades</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 171 -</strong> Obter, para si ou para outrem, vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil, ou qualquer outro meio fraudulento:<br>
+          Pena - reclusão, de 1 (um) a 5 (cinco) anos, e multa.</p>
+
+          <p><strong>§ 2º-A [FRAUDE ELETRÔNICA]:</strong> A pena é de <span class="kw">reclusão, de 4 (quatro) a 8 (oito) anos</span>, e multa, se a fraude é cometida com a utilização de informações fornecidas pela vítima ou por terceiro induzido a erro por meio de redes sociais, contatos telefônicos ou envio de correio eletrônico fraudulento, ou por qualquer outro meio fraudulento análogo. <em>(Lei 14.155/21)</em></p>
+
+          <p><strong>§ 2º-B:</strong> A pena prevista no § 2º-A aumenta-se de 1/3 a 2/3 se o crime é praticado mediante a utilização de servidor mantido fora do território nacional.</p>
+
+          <p><strong>§ 4º [CONTRA IDOSO OU VULNERÁVEL]:</strong> A pena aumenta-se de 1/3 ao dobro se o crime é cometido contra idoso ou vulnerável.</p>
+
+          <p><strong>§ 5º [AÇÃO PENAL]:</strong> Somente se procede mediante <span class="kw">representação</span>, salvo se a vítima for:<br>
+          I - a administração pública, direta ou indireta;<br>
+          II - criança ou adolescente;<br>
+          III - pessoa com deficiência mental; ou<br>
+          IV - maior de 70 (setenta) anos de idade ou incapaz.</p>
+        </div>
+      </details>
+
+      <!-- Comparative Table: Estelionato x Furto com Fraude x Apropriação Indébita -->
+      <h3>Super Quadro Comparativo Dogmático: O Trio dos Delitos Patrimoniais com Confiança</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Instituto Jurídico</th>
+            <th>Momento da Ilicitude / Atuação da Vítima</th>
+            <th>Origem da Posse do Bem</th>
+            <th>Rito / Ação Penal Típica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Furto Mediante Fraude (Art. 155, § 4º, II)</strong></td>
+            <td>A fraude é empregada para <strong>ludibriar a vigilância</strong> da vítima, permitindo que o autor <strong>subtraia</strong> a coisa. A vítima não quer entregar.</td>
+            <td>O ladrão <strong>não tem</strong> a posse; ele a toma clandestinamente.</td>
+            <td>Rito Ordinário (2 a 8 anos). Ação Pública <strong>Incondicionada</strong>.</td>
+          </tr>
+          <tr>
+            <td><strong>Estelionato (Art. 171)</strong></td>
+            <td>A fraude induz a vítima em erro, e ela <strong>entrega voluntariamente</strong> a coisa ao golpista, achando que é um ato lícito/vantajoso.</td>
+            <td>O agente recebe a coisa <strong>diretamente das mãos</strong> da vítima enganada.</td>
+            <td>Rito Ordinário (1 a 5 anos / 4 a 8 anos). Ação Pública <strong>Condicionada</strong> à representação (salvo exceções do § 5º).</td>
+          </tr>
+          <tr>
+            <td><strong>Apropriação Indébita (Art. 168)</strong></td>
+            <td>A entrega inicial é <strong>legítima, lícita e de boa-fé</strong>, sem fraude. O dolo de se apropriar surge <strong>posteriormente</strong>, quando o agente se nega a devolver.</td>
+            <td>O agente <strong>já tem a posse justa e desvigiada</strong> antes de praticar a ilicitude.</td>
+            <td>Rito Ordinário (1 a 4 anos). Ação Pública <strong>Incondicionada</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Criptomoedas Art. 171-A -->
+      <h3 id="cripto">Fraude com Ativos Virtuais / Criptoativos (Art. 171-A CP) — Lei 14.478/2022</h3>
+      <div class="card blue">
+        <p><strong>Art. 171-A —</strong> Organizar, gerir, ofertar ou distribuir carteiras ou intermediar operações que envolvam <strong>ativos virtuais (criptomoedas, tokens, etc.)</strong>, valores mobiliários ou quaisquer ativos financeiros com o fim de obter vantagem ilícita, em prejuízo alheio, induzindo ou mantendo alguém em erro, mediante artifício, ardil ou qualquer outro meio fraudulento: Pena - <strong>reclusão, de 4 (quatro) a 8 (oito) anos</strong>, e multa.</p>
+        <p><em>Exemplo Prático:</em> Criação de esquemas de pirâmide financeira disfarçados de corretora de Bitcoin ou carteiras virtuais falsas que bloqueiam os saques dos investidores.</p>
+      </div>
+
+      <!-- Súmulas Estelionato -->
+      <div class="card" style="border-left: 5px solid #3B82F6;">
+        <span class="box-label" style="background:#3B82F6;">⚖️ Súmulas Estratégicas sobre Estelionato</span>
+        <ul>
+          <li><strong>Súmula 17 do STJ (Consunção):</strong> <em>"Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido."</em> Se o sujeito falsifica um documento unicamente para aplicar um golpe específico e o documento perde a utilidade, responde apenas por estelionato (princípio da consunção).</li>
+          <li><strong>Súmula 73 do STJ (Moeda Falsa Grosseira):</strong> A utilização de papel-moeda grosseiramente falsificado configura, em tese, o crime de <strong>estelionato</strong> (competência da Justiça Estadual), da competência da Justiça Comum Estadual, e não o crime de moeda falsa (Justiça Federal).</li>
+          <li><strong>Súmula 554 do STF (Cheque sem fundos):</strong> O pagamento de cheque emitido sem provisão de fundos, <strong>antes do recebimento da denúncia</strong>, obsta a instauração ou prosseguimento da ação penal pelo crime do art. 171, § 2º, VI, do CP (reparação tempestiva).</li>
+          <li><strong>Súmula 244 do STJ:</strong> Compete ao foro do local da recusa do pagamento do cheque sem provisão de fundos julgar o estelionato (salvo se alterado pela sede da instituição bancária da vítima nos termos do CPP art. 70, § 4º).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 4. RECEPTAÇÃO ══════════════════════════════ -->
+    <section id="receptacao" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo VII do Título II</div>
+      <h2>4. Da Receptação (Arts. 180 e 180-A CP)</h2>
+
+      <div class="card purple">
+        <h4>Conceito e Autonomia do Delito:</h4>
+        <p>A receptação é um crime <strong>acessório (ou parasitário)</strong>, pois pressupõe a prática anterior de outro crime (crime pressuposto ou antecedente). Todavia, possui <strong>autonomia processual e punitiva</strong>: o receptador pode ser processado e condenado mesmo que o autor do crime antecedente seja desconhecido, inimputável ou isento de pena (§ 4º).</p>
+      </div>
+
+      <!-- Dogmatic Elements: Receptação -->
+      <div class="crime-elements">
+        <h4>⚖️ Estrutura Dogmática do Delito de Receptação (Art. 180 CP)</h4>
+        <div class="crime-elements-grid">
+          <div>
+            <span class="elem-tag">Elemento Objetivo</span>
+            • <em>Própria:</em> Adquirir, receber, transportar, conduzir ou ocultar coisa produto de crime.<br>
+            • <em>Imprópria:</em> Influir para que terceiro de boa-fé adquira, receba ou oculte a coisa.
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Subjetivo</span>
+            • Simples e Qualificada: Dolo Direto ("coisa que <strong>sabe</strong> ser produto de crime").<br>
+            • Culposa (§ 3º): Culpa ("coisa que deve <strong>presumir-se</strong> obtida por meio criminoso", em razão da desproporção do valor ou condição de quem oferece).
+          </div>
+          <div>
+            <span class="elem-tag">Elemento Normativo</span>
+            "Coisa que sabe ser produto de crime" e "exercício de atividade comercial ou industrial".
+          </div>
+          <div>
+            <span class="elem-tag">Potencial Ofensivo &amp; Rito</span>
+            • Receptação Simples (caput: 1 a 4 anos): Rito Ordinário.<br>
+            • Receptação Qualificada (§ 1º: 3 a 8 anos): Rito Ordinário.<br>
+            • Receptação Culposa (§ 3º: 1 mês a 1 ano): Menor Potencial Ofensivo -> Rito Sumaríssimo (JECRIM).
+          </div>
+          <div>
+            <span class="elem-tag">Espécie de Ação Penal</span>
+            Ação Penal <strong>PÚBLICA INCONDICIONADA</strong>.
+          </div>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>Art. 180 do Código Penal - Receptação e Receptação de Animal</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 180 -</strong> Adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que sabe ser produto de crime, ou influir para que terceiro, de boa-fé, a adquira, receba ou oculte:<br>
+          Pena - reclusão, de 1 (um) a 4 (quatro) anos, e multa.</p>
+
+          <p><strong>§ 1º [RECEPTAÇÃO QUALIFICADA]:</strong> Adquirir, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, vender, expor à venda, ou de qualquer forma utilizar, em proveito próprio ou alheio, no exercício de <span class="kw">atividade comercial ou industrial</span>, coisa que deve saber ser produto de crime:<br>
+          Pena - reclusão, de <span class="kw">3 (três) a 8 (oito) anos</span>, e multa.</p>
+
+          <p><strong>§ 2º:</strong> Equipara-se à atividade comercial qualquer forma de comércio irregular ou clandestino, inclusive o exercido em residência.</p>
+
+          <p><strong>§ 3º [RECEPTAÇÃO CULPOSA]:</strong> Adquirir ou receber coisa que, por sua natureza ou pela desproporção entre o valor e o preço, ou pela condição de quem a oferece, deve presumir-se obtida por meio criminoso: Pena - detenção, de um mês a um ano, ou multa, ou ambas as penas.</p>
+
+          <p><strong>§ 5º:</strong> Na receptação culposa, se o criminoso é primário, pode o juiz, tendo em consideração as circunstâncias, <span class="kw">deixar de aplicar a pena</span> (Perdão Judicial).</p>
+
+          <p><strong>§ 6º:</strong> Tratando-se de bens do patrimônio da União, de Estado, do DF, de Município ou de autarquia, fundação pública ou concessionária de serviços públicos, a pena aplica-se em dobro.</p>
+
+          <p><strong>Art. 180-A [RECEPTAÇÃO DE ANIMAL]:</strong> Adquirir, receber, transportar, conduzir, ocultar, ter em depósito ou vender, com a finalidade de produção ou de comercialização, <span class="kw">semovente domesticável de produção</span>, ainda que abatido ou dividido em partes, que deve saber ser produto de crime: Pena - reclusão, de 2 a 5 anos, e multa. <em>(Lei 13.330/16)</em></p>
+        </div>
+      </details>
+
+      <div class="pitfall">
+        <span class="box-label">⚠️ Pegadinha de Prova: A Pena da Receptação Qualificada</span>
+        No § 1º (receptação qualificada comercial), o legislador usou a expressão <em>"deve saber ser produto de crime"</em> (que dá a entender dolo eventual), com pena de 3 a 8 anos. O STF e STJ já pacificaram a constitucionalidade do dispositivo: quem age no comércio formal com dolo eventual ou direto responde pela qualificadora, pois o comerciante tem dever especial de cautela sobre a origem das mercadorias.
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 5. IMUNIDADES PENAIS (ESCUSAS) ══════════════════════════════ -->
+    <section id="imunidades" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Capítulo VIII do Título II</div>
+      <h2>5. Disposições Gerais: As Imunidades Penais nos Crimes Patrimoniais (Arts. 181 a 183 CP)</h2>
+
+      <div class="card gold">
+        <h4>Três Níveis de Compreensão:</h4>
+        <p><strong>Nível 1 (Linguagem Direta):</strong> Para proteger a paz familiar, o Código Penal perdoa crimes patrimoniais cometidos entre certos familiares muito próximos (como marido e mulher, ou filho que furta do pai), desde que não haja violência física ou ameaça.</p>
+        <p><strong>Nível 2 (Graduação / Dogmática):</strong> São causas de <strong>exclusão da punibilidade (escusas absolutórias)</strong> ou condições especiais de procedibilidade (imunidades relativas). Fundamentam-se no princípio da intervenção mínima do Direito Penal na entidade familiar.</p>
+        <p><strong>Nível 3 (Concursos de Alto Nível):</strong> O Estatuto da Pessoa Idosa (art. 183, III) afasta <strong>completamente</strong> a imunidade se a vítima tiver 60 anos ou mais! Além disso, a imunidade é de natureza estritamente pessoal e <strong>não se comunica</strong> ao comparsa/estranho à família (art. 183, I).</p>
+      </div>
+
+      <!-- Comparative Table: Imunidade Absoluta x Relativa -->
+      <h3>Quadro Comparativo: Imunidade Absoluta (Art. 181) vs. Imunidade Relativa (Art. 182)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Espécie de Imunidade</th>
+            <th>Hipóteses de Parentesco / Relação</th>
+            <th>Efeito Jurídico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Imunidade Absoluta / Escusa Absolutória (Art. 181)</strong></td>
+            <td>Crime cometido em prejuízo de:<br>
+            I - do <strong>cônjuge</strong>, na constância da sociedade conjugal (ou companheiro em união estável);<br>
+            II - de <strong>ascendente ou descendente</strong> (pai, filho, neto, avô), seja o parentesco legítimo ou ilegítimo, civil ou natural.</td>
+            <td><strong>ISENÇÃO TOTAL DE PENA</strong> (causa extintiva da punibilidade). O fato permanece típico e ilícito, mas o autor não pode ser punido.</td>
+          </tr>
+          <tr>
+            <td><strong>Imunidade Relativa (Art. 182)</strong></td>
+            <td>Crime cometido em prejuízo de:<br>
+            I - do cônjuge desquitado ou <strong>separado judicialmente</strong> (ou de fato);<br>
+            II - de <strong>irmão</strong>, legítimo ou ilegítimo;<br>
+            III - de <strong>tio ou sobrinho, com quem o agente coabita</strong>.</td>
+            <td>O crime <strong>continua punível</strong>, mas a ação penal passa a ser <strong>PÚBLICA CONDICIONADA À REPRESENTAÇÃO</strong> do ofendido.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="exam-tip">
+        <span class="box-label">🚫 Exceções às Imunidades Penais (Art. 183 CP) — Cai em toda prova!</span>
+        O Art. 183 determina que <strong>NÃO SE APLICA</strong> nenhuma imunidade (nem do 181 nem do 182):
+        <ol>
+          <li>Se o crime for de <strong>roubo ou extorsão</strong>, ou, em geral, quando haja emprego de <strong>grave ameaça ou violência</strong> à pessoa (ex: bater na mãe para roubar sua pensão é roubo inafastável!);</li>
+          <li>Ao <strong>estranho que participa do crime</strong> (ex: o comparsa do filho responde integralmente pelo furto qualificado, enquanto o filho fica isento);</li>
+          <li>Se o crime é praticado contra pessoa com <strong>idade igual ou superior a 60 (sessenta) anos</strong> (regra protetiva do Estatuto da Pessoa Idosa).</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 6. DIREITOS AUTORAIS ══════════════════════════════ -->
+    <section id="autorais" class="section">
+      <div class="section-label" style="color:var(--p-500); font-weight:700; text-transform:uppercase; font-size:0.85rem;">Título III do Código Penal</div>
+      <h2>6. Dos Crimes Contra a Propriedade Imaterial: Violação de Direito Autoral (Arts. 184 a 186 CP)</h2>
+
+      <details class="artigo">
+        <summary>Art. 184 do Código Penal - Violação de Direito Autoral (Pirataria)</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 184 -</strong> Violar direitos de autor e os que lhe são conexos:<br>
+          Pena - detenção, de 3 (três) meses a 1 (um) ano, ou multa.</p>
+
+          <p><strong>§ 1º [FORMA QUALIFICADA COM INTUITO DE LUCRO]:</strong> Se a violação consistir em reprodução total ou parcial, <span class="kw">com intuito de lucro direto ou indireto</span>, por qualquer meio ou processo, de obra intelectual, interpretação, execução ou fonograma, sem autorização expressa: Pena - <span class="kw">reclusão, de 2 (dois) a 4 (quatro) anos</span>, e multa.</p>
+
+          <p><strong>§ 2º:</strong> Na mesma pena do § 1º incorre quem, com o intuito de lucro direto ou indireto, distribui, vende, expõe à venda, aluga, introduz no País, adquire, oculta ou tem em depósito, original ou cópia de obra intelectual.</p>
+
+          <p><strong>§ 3º:</strong> Transmissão ou retransmissão ao público por cabo, fibra ótica, satélite, ondas ou internet com intuito de lucro.</p>
+
+          <p><strong>§ 4º [EXCLUDENTE DE TIPICIDADE / CÓPIA PRIVADA]:</strong> O disposto nos §§ 1º, 2º e 3º não se aplica quando se tratar de <span class="kw">cópia de obra intelectual ou fonograma, em um só exemplar, para uso privado do copista</span>, sem intuito de lucro direto ou indireto.</p>
+        </div>
+      </details>
+
+      <div class="card" style="border-left: 5px solid #3B82F6;">
+        <span class="box-label" style="background:#3B82F6;">⚖️ Súmulas Vinculantes e Jurisprudência do STJ</span>
+        <ul>
+          <li><strong>Súmula 502 do STJ (Vedação à Adequação Social):</strong> <em>"Presentes a materialidade e a autoria, afigura-se típica, em relação ao crime previsto no art. 184, § 2º, do CP, a conduta de expor à venda CDs e DVDs piratas, tornando inviável a aplicação do princípio da adequação social."</em> Não importa se a sociedade tolera a venda no camelô; a conduta permanece criminosa.</li>
+          <li><strong>Súmula 574 do STJ (Dispensa de Perícia Total):</strong> Para a configuração do delito do art. 184, § 2º, do CP, é <strong>desnecessária a realização de perícia sobre todos os bens apreendidos</strong>, bastando a análise pericial em amostra representativa.</li>
+        </ul>
+      </div>
+
+      <!-- Ação Penal nos Direitos Autorais -->
+      <h3>Regime de Ação Penal nos Crimes Contra a Propriedade Intelectual (Art. 186 CP)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Dispositivo Legal</th>
+            <th>Conduta Enquadrada</th>
+            <th>Espécie de Ação Penal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Art. 186, I</strong></td>
+            <td>Crime do Art. 184, caput (violação simples sem finalidade lucrativa direta).</td>
+            <td>Ação Penal <strong>PRIVADA</strong> (inicia-se mediante queixa-crime).</td>
+          </tr>
+          <tr>
+            <td><strong>Art. 186, II</strong></td>
+            <td>Crimes dos §§ 1º e 2º do Art. 184 (reprodução e venda/distribuição com intuito de lucro).</td>
+            <td>Ação Penal <strong>PÚBLICA INCONDICIONADA</strong>.</td>
+          </tr>
+          <tr>
+            <td><strong>Art. 186, III</strong></td>
+            <td>Crimes do § 3º do Art. 184 (transmissão por cabo, satélite ou internet com intuito de lucro).</td>
+            <td>Ação Penal <strong>PÚBLICA CONDICIONADA À REPRESENTAÇÃO</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ 7. MAPA MENTAL ══════════════════════════════ -->
+    <section id="mapamental" class="section">
+      <h2>🧠 Mapa Mental Sintético: Crimes Contra o Patrimônio II &amp; Propriedade Imaterial</h2>
+      <div class="mindmap-box">
+        <div class="mm-root">⚖️ CRIMES CONTRA O PATRIMÔNIO II &amp; DIREITOS AUTORAIS (ARTS. 161 A 186)</div>
+        <div class="mm-l1">DANO (ART. 163)</div>
+        <div class="mm-l2">Simples -> Ação Privada (art. 167) | Somente doloso (animus nocendi)</div>
+        <div class="mm-l2">Qualificado -> Violência | Explosivo | Patrimônio Público | Motivo Egoístico</div>
+
+        <div class="mm-l1">APROPRIAÇÃO INDÉBITA (ART. 168)</div>
+        <div class="mm-l2">Posse inicial justa e sem fraude -> Posterior inversão do ânimo</div>
+        <div class="mm-l2">Art. 169 -> PIX por engano (coisa havida por erro) | Coisa achada (devolver em 15 dias)</div>
+
+        <div class="mm-l1">ESTELIONATO (ART. 171)</div>
+        <div class="mm-l2">Vantagem ilícita + prejuízo mediante erro (vítima entrega espontaneamente)</div>
+        <div class="mm-l2">Fraude Eletrônica (§ 2º-A) -> Reclusão 4 a 8 anos</div>
+        <div class="mm-l2">Ação Penal (§ 5º) -> Pública Condicionada (salvo ente público, menor, idoso > 70a, incapaz)</div>
+        <div class="mm-l2">Criptoativos (Art. 171-A) -> Fraude com ativos virtuais (reclusão 4 a 8a)</div>
+        <div class="mm-l2">Súmula 17 STJ -> Falso absorvido pelo estelionato quando nele se exaure</div>
+
+        <div class="mm-l1">RECEPTAÇÃO (ART. 180)</div>
+        <div class="mm-l2">Crime acessório / parasitário, mas autônomo (§ 4º)</div>
+        <div class="mm-l2">Qualificada (§ 1º) -> Comércio ou indústria (reclusão 3 a 8 anos)</div>
+        <div class="mm-l2">Culposa (§ 3º) -> Desproporção do preço / perdão judicial (§ 5º)</div>
+
+        <div class="mm-l1">IMUNIDADES PENAIS (ARTS. 181 A 183)</div>
+        <div class="mm-l2">Absoluta (181) -> Cônjuge ou Ascendente/Descendente = ISENTO DE PENA</div>
+        <div class="mm-l2">Relativa (182) -> Cônjuge separado, irmão, tio/sobrinho com coabitação = Representação</div>
+        <div class="mm-l2">Exceções (183) -> Violência/Grave ameaça | Estranho comparsa | Idoso >= 60 anos</div>
+
+        <div class="mm-l1">DIREITOS AUTORAIS (ART. 184)</div>
+        <div class="mm-l2">Simples (caput) -> Ação Privada | Qualificada lucro (§§ 1º e 2º) -> Pública Incondicionada</div>
+        <div class="mm-l2">Cópia Privada (§ 4º) -> 1 só exemplar sem lucro = atípico | Súmula 502 STJ (venda CD pirata é crime)</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 8. MNEMÔNICOS ══════════════════════════════ -->
+    <section class="section">
+      <h2>💡 Mnemônicos Estratégicos para Memorização</h2>
+
+      <div class="mnemonic-box">
+        <h4><span class="mnemonic-pill">C-A-D-E</span> Hipóteses de Imunidade Absoluta (Art. 181 CP)</h4>
+        <p>• <span class="mnemonic-pill">C</span> <strong>C</strong>ônjuge (na constância do casamento ou união estável);</p>
+        <p>• <span class="mnemonic-pill">A</span> <strong>A</strong>scendente (pais, avós);</p>
+        <p>• <span class="mnemonic-pill">D</span> <strong>D</strong>escendente (filhos, netos);</p>
+        <p>• <span class="mnemonic-pill">E</span> <strong>E</strong>scusa absolutória que isenta totalmente de pena!</p>
+      </div>
+
+      <div class="mnemonic-box" style="border-left-color: #EF4444;">
+        <h4><span class="mnemonic-pill" style="background:#EF4444; color:#fff;">V-E-I</span> Exceções às Imunidades Penais (Art. 183 CP)</h4>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">V</span> <strong>V</strong>iolência ou grave ameaça (roubo, extorsão);</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">E</span> <strong>E</strong>stranho (concorrente/comparsa de fora);</p>
+        <p>• <span class="mnemonic-pill" style="background:#EF4444; color:#fff;">I</span> <strong>I</strong>doso (vítima com 60 anos ou mais).</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 9. REVISÃO ATIVA ══════════════════════════════ -->
+    <section id="revisao" class="section">
+      <h2>📝 Revisão Ativa (Questões Inéditas com Gabarito Oculto)</h2>
+
+      <!-- Q1 Discursiva -->
+      <div class="exercise">
+        <p><strong>01. (Defensoria Pública):</strong> Rodrigo, filho de Paulo (65 anos), furta do quarto de seu pai um relógio avaliado em 5 mil reais, contando com o auxílio de seu amigo Cláudio. Descoberto o fato, ambos são indiciados por furto qualificado pelo concurso de pessoas. Na condição de defensor de Rodrigo e Cláudio, quais teses jurídicas relativas às escusas absolutórias do art. 181 do CP você sustentaria?</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta:</strong> Em relação a <strong>Rodrigo</strong>, embora seja descendente (hipótese de escusa absolutória do art. 181, II, do CP), incide a vedação imperativa do <strong>Art. 183, inciso III, do Código Penal</strong> (e Estatuto da Pessoa Idosa), visto que a vítima (Paulo) possui 65 anos de idade (igual ou superior a 60 anos). Portanto, Rodrigo NÃO se beneficia da isenção de pena. Em relação a <strong>Cláudio</strong>, por ser estranho à relação familiar, a escusa absolutória jamais se comunicaria a ele, por força expressa do <strong>Art. 183, inciso I, do CP</strong>. Logo, ambos responderão normalmente pela infração penal.
+          </div>
+        </details>
+      </div>
+
+      <!-- Q2 CEBRASPE -->
+      <div class="exercise">
+        <p><strong>02. (CEBRASPE / Promotor de Justiça):</strong> Conforme jurisprudência sumulada do Superior Tribunal de Justiça, a conduta de expor à venda cópias não autorizadas de mídias audiovisuais (CDs e DVDs piratas) não é punível criminalmente pelo princípio da adequação social, haja vista a ampla tolerância dessa prática na sociedade brasileira.</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong> Nos termos da <strong>Súmula 502 do STJ</strong>: "Presentes a materialidade e a autoria, afigura-se típica, em relação ao crime previsto no art. 184, § 2º, do CP, a conduta de expor à venda CDs e DVDs piratas, tornando inviável a aplicação do princípio da adequação social."
+          </div>
+        </details>
+      </div>
+
+      <!-- Q3 FGV OAB -->
+      <div class="exercise">
+        <p><strong>03. (FGV / OAB):</strong> Fernanda falsifica uma carteira de identidade com sua foto e nome fictício exclusivamente com a finalidade de obter um empréstimo fraudulento em uma instituição financeira, logrando êxito em sacar os valores. Posteriormente, o documento não mais é utilizado. De acordo com a Súmula 17 do STJ, Fernanda deverá responder por:</p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: Apenas Estelionato (Art. 171 do CP).</strong> Aplica-se a <strong>Súmula 17 do STJ</strong>: "Quando o falso se exaure no estelionato, sem mais potencialidade lesiva, é por este absorvido." Como o documento falso foi confeccionado unicamente como crime-meio para consumar o estelionato (crime-fim) e nele exauriu sua eficácia nociva, o falso é absorvido pelo princípio da consunção.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 10. FLASHCARDS ══════════════════════════════ -->
+    <section class="section">
+      <h2>⚡ Flashcards de Fixação Imediata</h2>
+      <div class="grid2">
+        <div class="card gold">
+          <h4>Pergunta 1: Ação no Estelionato Comum</h4>
+          <p><strong>Qual a espécie de ação penal no estelionato comum após o Pacote Anticrime?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">Ação Penal Pública CONDICIONADA à representação (Art. 171, § 5º CP).</p>
+          </details>
+        </div>
+
+        <div class="card blue">
+          <h4>Pergunta 2: PIX Recebido por Engano</h4>
+          <p><strong>Quem recebe PIX indevido por engano e não devolve comete qual crime?</strong></p>
+          <details>
+            <summary>Ver Resposta</summary>
+            <p style="margin-top:10px; color:var(--p-700); font-weight:700;">Apropriação de coisa havida por erro (Art. 169, caput, do CP).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ 11. RESUMO FINAL ══════════════════════════════ -->
+    <section id="resumofinal" class="section">
+      <div class="card gold">
+        <h2>🚀 Resumo Final Ultra Rápido (One-Page Cheat Sheet)</h2>
+        <ul>
+          <li><strong>Dano (Art. 163):</strong> Somente doloso (animus nocendi). Simples é ação privada (Art. 167 CP). Qualificado se contra patrimônio público ou com violência.</li>
+          <li><strong>Apropriação Indébita (Art. 168):</strong> Posse inicial lícita e desvigiada. Inversão posterior da posse. Coisa havida por erro no Art. 169 (PIX por engano). Coisa achada: devolver em 15 dias!</li>
+          <li><strong>Estelionato (Art. 171):</strong> Vítima induzida em erro que entrega voluntariamente. Fraude Eletrônica (§ 2º-A): reclusão 4 a 8 anos. Ação condicionada à representação (§ 5º).</li>
+          <li><strong>Criptoativos (Art. 171-A):</strong> Fraude na gestão e corretagem de ativos virtuais (reclusão 4 a 8 anos - Lei 14.478/22).</li>
+          <li><strong>Súmula 17 STJ:</strong> Falso se exaure no estelionato -> Princípio da consunção (responde só por estelionato).</li>
+          <li><strong>Receptação (Art. 180):</strong> Autônoma (§ 4º). Qualificada no comércio (§ 1º: 3 a 8 anos). Culposa no § 3º (admite perdão judicial § 5º). Receptação de animal no Art. 180-A.</li>
+          <li><strong>Imunidades Penais:</strong> Art. 181 Absoluta (cônjuge e ascendente/descendente). Art. 182 Relativa (irmão, separado, tio coabitante). Art. 183 Vedações (violência, estranho, idoso >= 60 anos).</li>
+          <li><strong>Direitos Autorais (Art. 184):</strong> Cópia privada em 1 exemplar sem lucro é fato atípico (§ 4º). Venda comercial de pirataria é crime qualificado (§ 2º e Súmula 502 STJ). Ação incondicionada se intuito de lucro (Art. 186, II).</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../../portal-core.js"></script>
+</body>
+
+</html>
