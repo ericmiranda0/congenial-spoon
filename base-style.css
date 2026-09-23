@@ -2151,6 +2151,55 @@ body.is-generating-pdf h6 {
   page-break-inside: avoid !important;
 }
 
+/* ── Reset de backgrounds escuros no gerador de PDF (html2pdf) ── */
+body.is-generating-pdf .lei-seca,
+body.is-generating-pdf .lei-comentario {
+  background: #F8FAFC !important;
+  color: #0F172A !important;
+  border-left-color: #1E3A8A !important;
+}
+
+body.is-generating-pdf .lei-seca *,
+body.is-generating-pdf .lei-comentario * {
+  color: #0F172A !important;
+}
+
+body.is-generating-pdf .card-title,
+body.is-generating-pdf .box-title,
+body.is-generating-pdf .box-label,
+body.is-generating-pdf .module-title,
+body.is-generating-pdf .section-title,
+body.is-generating-pdf h1,
+body.is-generating-pdf h2,
+body.is-generating-pdf h3,
+body.is-generating-pdf h4,
+body.is-generating-pdf h5,
+body.is-generating-pdf h6 {
+  color: #0F172A !important;
+  text-shadow: none !important;
+}
+
+body.is-generating-pdf [style*="background: #0"],
+body.is-generating-pdf [style*="background:#0"],
+body.is-generating-pdf [style*="background: linear-gradient"],
+body.is-generating-pdf [style*="background:linear-gradient"],
+body.is-generating-pdf [style*="background-color: #0"],
+body.is-generating-pdf [style*="background-color:#0"] {
+  background: #ffffff !important;
+  color: #0F172A !important;
+}
+
+body.is-generating-pdf [style*="color: white"],
+body.is-generating-pdf [style*="color:white"],
+body.is-generating-pdf [style*="color: #fff"],
+body.is-generating-pdf [style*="color:#fff"],
+body.is-generating-pdf [style*="color: #ffffff"],
+body.is-generating-pdf [style*="color:#ffffff"] {
+  color: #0F172A !important;
+}
+
+
+
 @media print {
   @page {
     size: A4 portrait;
@@ -2267,6 +2316,69 @@ body.is-generating-pdf h6 {
   h1, h2, h3, h4, h5, h6 {
     break-after: avoid !important;
     page-break-after: avoid !important;
+  }
+
+  /* ── Reset de backgrounds escuros para impressão ── */
+  /* Converte qualquer elemento com bg escuro (dark mode) para branco/preto */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Boxes com background escuro: lei-seca, card-header, etc. */
+  .lei-seca,
+  .lei-comentario {
+    background: #F8FAFC !important;
+    color: #0F172A !important;
+    border-left-color: #1E3A8A !important;
+  }
+
+  .lei-seca *,
+  .lei-comentario * {
+    color: #0F172A !important;
+  }
+
+  /* Títulos e textos brancos dentro de boxes escuros */
+  .card-title,
+  .box-title,
+  .box-label,
+  .module-title,
+  .section-title,
+  h1, h2, h3, h4, h5, h6 {
+    color: #0F172A !important;
+    text-shadow: none !important;
+  }
+
+  /* Reset geral: elementos com backgrounds escuros (gradients ou hex escuros) */
+  [style*="background: #0"],
+  [style*="background:#0"],
+  [style*="background: linear-gradient"],
+  [style*="background:linear-gradient"],
+  [style*="background-color: #0"],
+  [style*="background-color:#0"] {
+    background: #ffffff !important;
+    color: #0F172A !important;
+  }
+
+  /* Força textos brancos (color: white / #fff / rgb(255,255,255)) para preto */
+  [style*="color: white"],
+  [style*="color:white"],
+  [style*="color: #fff"],
+  [style*="color:#fff"],
+  [style*="color: #ffffff"],
+  [style*="color:#ffffff"] {
+    color: #0F172A !important;
+  }
+
+  /* Variáveis CSS escuras resetadas via override de variáveis na impressão */
+  :root {
+    --box-legal-bg: #F8FAFC !important;
+    --box-legal-text: #0F172A !important;
+    --bg-main: #ffffff !important;
+    --bg-card: #ffffff !important;
+    --bg-surface: #ffffff !important;
+    --text-main: #0F172A !important;
+    --text-muted: #374151 !important;
   }
 }
 
