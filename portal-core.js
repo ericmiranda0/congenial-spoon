@@ -1291,8 +1291,8 @@ function initPdfExport() {
         document.documentElement.setAttribute('data-theme', 'light');
         document.body.classList.add('is-generating-pdf');
 
-        // Always exclude Sumário / Index cards
-        document.querySelectorAll('.summary-card, #sumario, [id*="sumario"], .sumario, .table-of-contents, .card-summary').forEach(el => {
+        // Always exclude Sumário / Index cards (Remoção Global Estrita de Sumários Interativos)
+        document.querySelectorAll('.summary-card, #sumario, [id*="sumario"], .sumario, [class*="sumario"], .table-of-contents, .toc, .card-summary, [aria-label*="sumario" i]').forEach(el => {
             el.classList.add('pdf-excluded');
         });
 

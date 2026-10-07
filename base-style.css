@@ -2152,21 +2152,92 @@ body.is-generating-pdf h6 {
 }
 
 /* ── Reset de backgrounds escuros no gerador de PDF (html2pdf) ── */
+/* 1. Reset Global de Caixas e Cartões para economizar tinta e garantir legibilidade */
+body.is-generating-pdf .box,
+body.is-generating-pdf .card,
 body.is-generating-pdf .lei-seca,
-body.is-generating-pdf .lei-comentario {
-  background: #F8FAFC !important;
-  color: #0F172A !important;
+body.is-generating-pdf .lei-comentario,
+body.is-generating-pdf .mindmap,
+body.is-generating-pdf .mindmap-box,
+body.is-generating-pdf .mindmap-tree,
+body.is-generating-pdf .quick-review,
+body.is-generating-pdf .super-box,
+body.is-generating-pdf .mnemonico-card,
+body.is-generating-pdf .mnemonico-box,
+body.is-generating-pdf .professor-focus,
+body.is-generating-pdf .quadro-prof,
+body.is-generating-pdf .flashcard,
+body.is-generating-pdf .org-stf-top,
+body.is-generating-pdf .org-box-base,
+body.is-generating-pdf .mm-root,
+body.is-generating-pdf .mm-l1,
+body.is-generating-pdf .info-box,
+body.is-generating-pdf .level-box,
+body.is-generating-pdf .nivel-box,
+body.is-generating-pdf .card-triad,
+body.is-generating-pdf .alert,
+body.is-generating-pdf .gabarito,
+body.is-generating-pdf .gabarito-box,
+body.is-generating-pdf .exercise,
+body.is-generating-pdf .solution,
+body.is-generating-pdf .answer-key,
+body.is-generating-pdf .ans-body,
+body.is-generating-pdf .final-summary,
+body.is-generating-pdf pre,
+body.is-generating-pdf code,
+body.is-generating-pdf table,
+body.is-generating-pdf th,
+body.is-generating-pdf td {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body.is-generating-pdf .lei-seca,
+body.is-generating-pdf .lei-comentario,
+body.is-generating-pdf .mindmap,
+body.is-generating-pdf .mindmap-box,
+body.is-generating-pdf .mindmap-tree,
+body.is-generating-pdf .quick-review,
+body.is-generating-pdf .super-box,
+body.is-generating-pdf .mnemonico-card,
+body.is-generating-pdf .mnemonico-box,
+body.is-generating-pdf .professor-focus,
+body.is-generating-pdf .quadro-prof {
+  border: 1px solid #CBD5E1 !important;
+  border-left-width: 5px !important;
   border-left-color: #1E3A8A !important;
 }
 
 body.is-generating-pdf .lei-seca *,
-body.is-generating-pdf .lei-comentario * {
-  color: #0F172A !important;
+body.is-generating-pdf .lei-comentario *,
+body.is-generating-pdf .mindmap *,
+body.is-generating-pdf .mindmap-box *,
+body.is-generating-pdf .mindmap-tree *,
+body.is-generating-pdf .quick-review *,
+body.is-generating-pdf .super-box *,
+body.is-generating-pdf .mnemonico-card *,
+body.is-generating-pdf .mnemonico-box *,
+body.is-generating-pdf .professor-focus *,
+body.is-generating-pdf .quadro-prof * {
+  color: #111827 !important;
+  text-shadow: none !important;
 }
 
-body.is-generating-pdf .card-title,
-body.is-generating-pdf .box-title,
+/* Badges e Labels dentro de boxes - borda e fundo suave legível */
 body.is-generating-pdf .box-label,
+body.is-generating-pdf .box-title,
+body.is-generating-pdf .focus-label,
+body.is-generating-pdf .box-badge,
+body.is-generating-pdf .mnemonico-sigla,
+body.is-generating-pdf .mnemonico-letter,
+body.is-generating-pdf .mnemonico-title,
+body.is-generating-pdf .mm-title,
+body.is-generating-pdf .tag,
+body.is-generating-pdf .card-title,
 body.is-generating-pdf .module-title,
 body.is-generating-pdf .section-title,
 body.is-generating-pdf h1,
@@ -2177,16 +2248,28 @@ body.is-generating-pdf h5,
 body.is-generating-pdf h6 {
   color: #0F172A !important;
   text-shadow: none !important;
+  background: #F1F5F9 !important;
 }
 
+/* Reset inline background gradients ou cores escuras */
 body.is-generating-pdf [style*="background: #0"],
 body.is-generating-pdf [style*="background:#0"],
+body.is-generating-pdf [style*="background: #1"],
+body.is-generating-pdf [style*="background:#1"],
+body.is-generating-pdf [style*="background: #2"],
+body.is-generating-pdf [style*="background:#2"],
 body.is-generating-pdf [style*="background: linear-gradient"],
 body.is-generating-pdf [style*="background:linear-gradient"],
 body.is-generating-pdf [style*="background-color: #0"],
-body.is-generating-pdf [style*="background-color:#0"] {
+body.is-generating-pdf [style*="background-color:#0"],
+body.is-generating-pdf [style*="background-color: #1"],
+body.is-generating-pdf [style*="background-color:#1"],
+body.is-generating-pdf [style*="background-color: #2"],
+body.is-generating-pdf [style*="background-color:#2"] {
   background: #ffffff !important;
-  color: #0F172A !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #111827 !important;
 }
 
 body.is-generating-pdf [style*="color: white"],
@@ -2195,7 +2278,7 @@ body.is-generating-pdf [style*="color: #fff"],
 body.is-generating-pdf [style*="color:#fff"],
 body.is-generating-pdf [style*="color: #ffffff"],
 body.is-generating-pdf [style*="color:#ffffff"] {
-  color: #0F172A !important;
+  color: #111827 !important;
 }
 
 
@@ -2213,7 +2296,9 @@ body.is-generating-pdf [style*="color:#ffffff"] {
     line-height: 1.5 !important;
   }
   
+  /* Ocultar elementos navegacionais e sumários interativos globalmente */
   nav,
+  .main-nav,
   .bottom-nav, 
   .report-btn, 
   #scroll-top, 
@@ -2224,12 +2309,15 @@ body.is-generating-pdf [style*="color:#ffffff"] {
   .ml-controls, 
   .pdf-export-btn, 
   .summary-card, 
+  .card-summary,
   #sumario,
   [id*="sumario"],
   .sumario,
   .table-of-contents,
+  .toc,
   .pdf-excluded,
-  .ml-nav-buttons {
+  .ml-nav-buttons,
+  .progress-container {
     display: none !important;
   }
 
@@ -2318,67 +2406,154 @@ body.is-generating-pdf [style*="color:#ffffff"] {
     page-break-after: avoid !important;
   }
 
-  /* ── Reset de backgrounds escuros para impressão ── */
-  /* Converte qualquer elemento com bg escuro (dark mode) para branco/preto */
+  /* ── Reset Global de backgrounds e cores na Impressão para economia de tinta ── */
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* Boxes com background escuro: lei-seca, card-header, etc. */
+  /* Converte todos os boxes e containers escuros para fundo branco com letra escura */
+  .box,
+  .card,
   .lei-seca,
-  .lei-comentario {
-    background: #F8FAFC !important;
-    color: #0F172A !important;
+  .lei-comentario,
+  .mindmap,
+  .mindmap-box,
+  .mindmap-tree,
+  .quick-review,
+  .super-box,
+  .mnemonico-card,
+  .mnemonico-box,
+  .professor-focus,
+  .quadro-prof,
+  .flashcard,
+  .org-stf-top,
+  .org-box-base,
+  .mm-root,
+  .mm-l1,
+  .info-box,
+  .level-box,
+  .nivel-box,
+  .card-triad,
+  .alert,
+  .gabarito,
+  .gabarito-box,
+  .exercise,
+  .solution,
+  .answer-key,
+  .ans-body,
+  .final-summary,
+  pre,
+  code,
+  table,
+  th,
+  td {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Bordas nítidas para manter organização visual sem gastar tinta */
+  .lei-seca,
+  .lei-comentario,
+  .mindmap,
+  .mindmap-box,
+  .mindmap-tree,
+  .quick-review,
+  .super-box,
+  .mnemonico-card,
+  .mnemonico-box,
+  .professor-focus,
+  .quadro-prof {
+    border: 1px solid #CBD5E1 !important;
+    border-left-width: 5px !important;
     border-left-color: #1E3A8A !important;
   }
 
   .lei-seca *,
-  .lei-comentario * {
-    color: #0F172A !important;
+  .lei-comentario *,
+  .mindmap *,
+  .mindmap-box *,
+  .mindmap-tree *,
+  .quick-review *,
+  .super-box *,
+  .mnemonico-card *,
+  .mnemonico-box *,
+  .professor-focus *,
+  .quadro-prof * {
+    color: #111827 !important;
+    text-shadow: none !important;
   }
 
-  /* Títulos e textos brancos dentro de boxes escuros */
-  .card-title,
-  .box-title,
+  /* Labels, títulos e badges dentro de caixas */
   .box-label,
+  .box-title,
+  .focus-label,
+  .box-badge,
+  .mnemonico-sigla,
+  .mnemonico-letter,
+  .mnemonico-title,
+  .mm-title,
+  .tag,
+  .card-title,
   .module-title,
   .section-title,
   h1, h2, h3, h4, h5, h6 {
     color: #0F172A !important;
     text-shadow: none !important;
+    background: #F1F5F9 !important;
   }
 
-  /* Reset geral: elementos com backgrounds escuros (gradients ou hex escuros) */
+  /* Reset geral de gradientes ou backgrounds escuros inline */
   [style*="background: #0"],
   [style*="background:#0"],
+  [style*="background: #1"],
+  [style*="background:#1"],
+  [style*="background: #2"],
+  [style*="background:#2"],
   [style*="background: linear-gradient"],
   [style*="background:linear-gradient"],
   [style*="background-color: #0"],
-  [style*="background-color:#0"] {
+  [style*="background-color:#0"],
+  [style*="background-color: #1"],
+  [style*="background-color:#1"],
+  [style*="background-color: #2"],
+  [style*="background-color:#2"] {
     background: #ffffff !important;
-    color: #0F172A !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111827 !important;
   }
 
-  /* Força textos brancos (color: white / #fff / rgb(255,255,255)) para preto */
+  /* Força textos brancos inline para preto */
   [style*="color: white"],
   [style*="color:white"],
   [style*="color: #fff"],
   [style*="color:#fff"],
   [style*="color: #ffffff"],
   [style*="color:#ffffff"] {
-    color: #0F172A !important;
+    color: #111827 !important;
   }
 
-  /* Variáveis CSS escuras resetadas via override de variáveis na impressão */
+  /* Variáveis CSS para impressão */
   :root {
-    --box-legal-bg: #F8FAFC !important;
-    --box-legal-text: #0F172A !important;
+    --box-legal-bg: #ffffff !important;
+    --box-legal-text: #111827 !important;
     --bg-main: #ffffff !important;
     --bg-card: #ffffff !important;
     --bg-surface: #ffffff !important;
-    --text-main: #0F172A !important;
+    --text-main: #111827 !important;
     --text-muted: #374151 !important;
+    --primary-light: #F1F5F9 !important;
+    --success-bg: #F0FDF4 !important;
+    --info-bg: #EFF6FF !important;
+    --warning-bg: #FFFBEB !important;
+    --danger-bg: #FEF2F2 !important;
+    --neutral-100: #F1F5F9 !important;
+    --neutral-50: #F8FAFC !important;
   }
 }
 

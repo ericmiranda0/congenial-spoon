@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partes, Procuradores e Gratuidade da Justiça | Processo Civil I</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Identidade Visual da Disciplina: Direito Processual Civil (Azul Cobalto & Safira Real) */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-400: #60A5FA;
+      --p-100: #DBEAFE;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+      --border-blue: rgba(37, 99, 235, 0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.75rem;
+      margin: 15px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-style: italic;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-top: 15px;
+    }
+
+    .meta span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.85rem;
+      border-left: 5px solid var(--p-500);
+      padding-left: 15px;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #93C5FD;
+      border-left-color: var(--p-400);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #BFDBFE;
+    }
+
+    h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .kw {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      border-color: rgba(147, 197, 253, 0.3);
+    }
+
+    /* Cards e Layout Grid */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .grid2, .grid3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card, #FFFFFF);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm, 0 4px 6px -1px rgba(0,0,0,0.06));
+      border: 1px solid var(--border, #E2E8F0);
+      border-top: 4px solid var(--p-500);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md, 0 10px 15px -3px rgba(0,0,0,0.1));
+    }
+
+    .card.gold {
+      border-top-color: var(--accent-gold);
+    }
+
+    .card.danger {
+      border-top-color: #EF4444;
+    }
+
+    .card.success {
+      border-top-color: #10B981;
+    }
+
+    /* Explicação em Três Níveis Pedagógicos */
+    .nivel-box {
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+    }
+
+    .nivel-1 { border-left: 5px solid #10B981; }
+    .nivel-2 { border-left: 5px solid #2563EB; }
+    .nivel-3 { border-left: 5px solid #8B5CF6; }
+
+    .nivel-badge {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .nivel-1 .nivel-badge { background: #D1FAE5; color: #065F46; }
+    .nivel-2 .nivel-badge { background: #DBEAFE; color: #1E40AF; }
+    .nivel-3 .nivel-badge { background: #EDE9FE; color: #5B21B6; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 12px;
+      margin: 1.25rem 0;
+      padding: 1.1rem 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #93C5FD;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "⚖️ Ver Redação da Lei";
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--p-50);
+      color: var(--p-600);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      transition: background 0.2s;
+    }
+
+    [data-theme="dark"] .artigo summary::after {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      border-color: rgba(147, 197, 253, 0.3);
+    }
+
+    .artigo[open] summary::after {
+      content: "📖 Recolher Artigo";
+      background: var(--p-600);
+      color: white;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(15, 23, 42, 0.6);
+      border-left-color: #3B82F6;
+    }
+
+    .lei-comentario {
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(37, 99, 235, 0.25);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Boxes Informativos Coloridos */
+    .info-box {
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .box-dica {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-left: 5px solid #F59E0B;
+    }
+    .box-erro {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-left: 5px solid #EF4444;
+    }
+    .box-doutrina {
+      background: #F5F3FF;
+      border: 1px solid #DDD6FE;
+      border-left: 5px solid #8B5CF6;
+    }
+    .box-juris {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-left: 5px solid #2563EB;
+    }
+    .box-atencao {
+      background: #FFF7ED;
+      border: 1px solid #FFEDD5;
+      border-left: 5px solid #F97316;
+    }
+    .box-resumo {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-left: 5px solid #10B981;
+    }
+    .box-pegadinha {
+      background: #FDF2F8;
+      border: 1px solid #FBCFE8;
+      border-left: 5px solid #EC4899;
+    }
+
+    [data-theme="dark"] .box-dica { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); }
+    [data-theme="dark"] .box-erro { background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); }
+    [data-theme="dark"] .box-doutrina { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.3); }
+    [data-theme="dark"] .box-juris { background: rgba(37, 99, 235, 0.12); border-color: rgba(37, 99, 235, 0.3); }
+    [data-theme="dark"] .box-atencao { background: rgba(249, 115, 22, 0.12); border-color: rgba(249, 115, 22, 0.3); }
+    [data-theme="dark"] .box-resumo { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); }
+    [data-theme="dark"] .box-pegadinha { background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.3); }
+
+    .box-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .box-dica .box-label { color: #B45309; }
+    .box-erro .box-label { color: #B91C1C; }
+    .box-doutrina .box-label { color: #6D28D9; }
+    .box-juris .box-label { color: #1D4ED8; }
+    .box-atencao .box-label { color: #C2410C; }
+    .box-resumo .box-label { color: #047857; }
+    .box-pegadinha .box-label { color: #BE185D; }
+
+    [data-theme="dark"] .box-dica .box-label { color: #FBBF24; }
+    [data-theme="dark"] .box-erro .box-label { color: #F87171; }
+    [data-theme="dark"] .box-doutrina .box-label { color: #C4B5FD; }
+    [data-theme="dark"] .box-juris .box-label { color: #93C5FD; }
+    [data-theme="dark"] .box-atencao .box-label { color: #FB923C; }
+    [data-theme="dark"] .box-resumo .box-label { color: #6EE7B7; }
+    [data-theme="dark"] .box-pegadinha .box-label { color: #F472B6; }
+
+    /* Tabelas Modernas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.75rem 0;
+      background: var(--bg-card, #FFFFFF);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      font-size: 0.95rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(37, 99, 235, 0.02);
+    }
+
+    /* Linha do Tempo Horizontal / Procedimental */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-body, #F8FAFC);
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.05rem;
+    }
+
+    [data-theme="dark"] .timeline-title {
+      color: #93C5FD;
+    }
+
+    /* Fluxogramas e Processo de Decisão */
+    .flowchart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--p-50);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--p-500);
+    }
+
+    [data-theme="dark"] .flow-step {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .flow-num {
+      background: var(--p-500);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: var(--p-500);
+      font-weight: 900;
+      font-size: 1.3rem;
+      margin: -0.4rem 0;
+    }
+
+    /* Mapas Mentais em Bloco Mono */
+    .mindmap-tree {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 2rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 1.75rem 0;
+      line-height: 1.7;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+
+    .mm-l1 {
+      color: #FBBF24;
+      font-weight: 700;
+      margin-left: 1.25rem;
+      margin-top: 8px;
+    }
+
+    .mm-l2 {
+      color: #E2E8F0;
+      margin-left: 2.75rem;
+      font-size: 0.92rem;
+    }
+
+    .mm-l3 {
+      color: #94A3B8;
+      margin-left: 4.25rem;
+      font-size: 0.85rem;
+    }
+
+    /* Flashcards Interativos */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card, #FFFFFF);
+      border: 2px solid var(--border-blue);
+      border-radius: 14px;
+      padding: 1.5rem;
+      cursor: pointer;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .flashcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--p-500);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flashcard .fc-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard .fc-pergunta {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .flashcard .fc-resposta {
+      display: none;
+      font-size: 0.95rem;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 0.85rem;
+      border-left: 3px solid var(--p-500);
+      line-height: 1.55;
+    }
+
+    [data-theme="dark"] .flashcard .fc-resposta {
+      background: rgba(37, 99, 235, 0.15);
+      color: #BFDBFE;
+    }
+
+    .flashcard.revelado .fc-resposta { display: block; }
+    .flashcard.revelado .fc-dica-clique { display: none; }
+
+    .fc-dica-clique {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Mnemônicos */
+    .mnemonico-card {
+      background: linear-gradient(135deg, var(--p-700), #0F172A);
+      color: white;
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mnemonico-sigla {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #FBBF24;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Exercícios e Revisão Ativa */
+    .exercise {
+      background: var(--bg-card, #FFFFFF);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border, #E2E8F0);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid #10B981;
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .tag-banca {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--p-500);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Destaques de Prática Forense e Casos Reais */
+    .exemplo-pratico-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .exemplo-item {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .exemplo-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .exemplo-tipo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--p-600);
+      display: block;
+      margin-bottom: 3px;
+    }
+    [data-theme="dark"] .exemplo-tipo {
+      color: #93C5FD;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header / Hero Section Obrigatória -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I (CPC/15)</div>
+      <h1>Partes, Procuradores, Despesas e Gratuidade da Justiça</h1>
+      <div class="subtitle">Guia Avançado: Capacidade Processual, Suprimento de Outorga, Deveres Éticos, Multas da Dignidade da Justiça, Honorários Sucumbenciais e Benefício da Gratuidade</div>
+      <div class="meta">
+        <span>⚖️ Arts. 70 a 107 CPC</span>
+        <span>📚 Sujeitos do Processo</span>
+        <span>🛡️ Foco em OAB &amp; Carreiras Jurídicas</span>
+        <span>🏛️ Nível: Intermediário a Avançado</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Principal -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Hub Principal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#modulo1" class="nav-item">1. Capacidade de Ser Parte</a>
+        <a href="#modulo2" class="nav-item">2. Capacidade Processual &amp; Cônjuges</a>
+        <a href="#modulo3" class="nav-item">3. Saneamento do Art. 76</a>
+        <a href="#modulo4" class="nav-item">4. Deveres Éticos &amp; Atentado</a>
+        <a href="#modulo5" class="nav-item">5. Despesas &amp; Honorários</a>
+        <a href="#modulo6" class="nav-item">6. Gratuidade da Justiça</a>
+        <a href="#modulo7" class="nav-item">7. Dos Procuradores &amp; Mandato</a>
+        <a href="#mindmaps" class="nav-item">Mapas &amp; Fluxos</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#revisao-ativa" class="nav-item">Revisão Ativa</a>
+        <a href="#resumo-final" class="nav-item">Resumo Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ 1. OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="card" style="border-top-color: var(--p-500); background: var(--bg-card);">
+        <h2>🎯 Objetivos de Aprendizagem &amp; Visão Sistêmica</h2>
+        <p>Ao finalizar o estudo exaustivo deste módulo doutrinário e jurisprudencial, o estudante e operador do direito será plenamente capaz de:</p>
+        <ul style="line-height: 1.85; margin-left: 1.25rem;">
+          <li>Distinguir com precisão técnica a <strong>Capacidade de Ser Parte</strong>, a <strong>Capacidade Processual (de Estar em Juízo)</strong> e a <strong>Capacidade Postulatória</strong> na teoria geral do processo civil.</li>
+          <li>Identificar o regime jurídico de representação das <strong>Pessoas Jurídicas de Direito Público</strong> (União pela AGU, Estados por Procuradores, Municípios por Prefeito/Procurador/Associação) e das <strong>Pessoas Jurídicas Estrangeiras</strong> (Art. 75, X e § 3º).</li>
+          <li>Explicar a personalidade judiciária dos <strong>entes despersonalizados</strong> (espólio, massa falida, herança jacente/vacante, condomínio edilício e nascituro).</li>
+          <li>Dominar as hipóteses de representação (incapacidade absoluta) e assistência (incapacidade relativa), diferenciando com clareza as figuras do <strong>tutor</strong>, do <strong>curador comum</strong> e do <strong>curador especial</strong>.</li>
+          <li>Compreender as regras de <strong>outorga uxória e marital</strong> nas ações imobiliárias (Art. 73 do CPC), o procedimento de suprimento judicial de outorga (Art. 74) e as consequências da sua ausência.</li>
+          <li>Aplicar a sistemática imperativa de <strong>saneamento de irregularidade processual (Art. 76 do CPC)</strong> e as sanções legais para autor, réu e terceiro.</li>
+          <li>Diferenciar dogmaticamente a <strong>Litigância de Má-Fé (Arts. 79 a 81)</strong> do <strong>Ato Atentatório à Dignidade da Justiça (Art. 77, §§ 2º e 5º)</strong> quanto ao destinatário da multa e sua imunidade para a advocacia e Ministério Público.</li>
+          <li>Dominar o regime de <strong>antecipação de despesas em geral (Art. 82)</strong> vs. <strong>antecipação da prova pericial (Art. 95)</strong>, bem como os limites da fixação de honorários advocatícios por equidade segundo o <strong>Tema 1.076 do STJ</strong>.</li>
+          <li>Analisar o instituto da <strong>Gratuidade da Justiça (Arts. 98 a 102 do CPC)</strong>: extensão, presunção relativa de pessoa física, necessidade de prova contábil para pessoa jurídica (Súmula 481 do STJ), prazos de suspensão e vias recursais adequadas.</li>
+          <li>Identificar as exigências formais e os poderes especiais da <strong>procuração ad judicia (Art. 105)</strong>, os deveres do advogado em causa própria (Art. 106) e a dispensa de instrumento para a advocacia pública (Súmula 644 do STF).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 01: CAPACIDADE DE SER PARTE ══════════════════════════════ -->
+    <section id="modulo1" class="section">
+      <div class="section-label">Módulo 01</div>
+      <h2>Capacidade de Ser Parte &amp; Representação dos Sujeitos</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>Quem pode estar no polo de um processo?</strong> Imagine que o processo judicial é um palco de teatro. Para ter o seu nome estampado no cartaz como autor ou réu, você precisa existir perante o direito. Todas as pessoas vivas (você, seus vizinhos) e todas as empresas registradas podem ter o nome na capa do processo. Até mesmo certas realidades que não são pessoas, como a herança deixada por alguém que faleceu (o espólio) ou o prédio de apartamentos (o condomínio), podem processar ou ser processadas para resolver suas questões práticas.</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>A <strong>Capacidade de Ser Parte</strong> (ou personalidade judiciária) decorre diretamente da aptidão genérica para ser titular de direitos e deveres na ordem civil (Art. 1º do Código Civil). Ela abrange sem exceção todas as pessoas naturais (desde o nascimento com vida até a morte) e todas as pessoas jurídicas, sejam elas de direito público (interno ou externo) ou de direito privado (associações, sociedades, fundações, organizações religiosas e partidos políticos).</p>
+        <p>O Livro III da Parte Geral do Código de Processo Civil (Arts. 70 a 187) inaugura o tratamento dos sujeitos do processo, disciplinando sucessivamente as partes e seus procuradores, o litisconsórcio, a intervenção de terceiros, o Ministério Público, a Defensoria Pública, a Advocacia Pública, o Juiz e os auxiliares da justiça.</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Aprofundamento para Concursos &amp; Prática Forense</div>
+        <p>A ordem processual brasileira estende a personalidade judiciária aos chamados <strong>entes despersonalizados</strong>. Trata-se de ficção instrumental criada pelo legislador infraconstitucional por razões pragmáticas de celeridade e efetividade na tutela jurisdicional. Embora careçam de personalidade jurídica de direito material, possuem plena aptidão processual para figurar no polo ativo ou passivo de relações jurídicas litigiosas, representados na forma exaustiva do Art. 75 do CPC.</p>
+      </div>
+
+      <h3>1.1 Representação em Juízo: Pessoas Jurídicas e Entes Despersonalizados (Art. 75 do CPC)</h3>
+      <p>A representação processual legal é o elo indispensável que conecta a vontade formal do ente à atuação perante o juiz:</p>
+
+      <details class="artigo">
+        <summary>Artigo 75 do CPC — Representação Legal das Partes em Juízo</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 75.</strong> Serão representados em juízo, ativa e passivamente:<br>
+          I - a União, pela Advocacia-Geral da União, diretamente ou mediante órgão vinculado;<br>
+          II - os Estados e o Distrito Federal, por seus procuradores;<br>
+          III - o Município, por seu prefeito, procurador ou associação de representação de municípios, quando expressamente autorizada;<br>
+          IV - a autarquia e a fundação pública de direito público, por quem a lei do ente federado designar;<br>
+          V - a massa falida, pelo administrador judicial;<br>
+          VI - a herança jacente ou vacante, por seu curador;<br>
+          VII - o espólio, pelo inventariante;<br>
+          VIII - a pessoa jurídica, por quem os respectivos estatutos designarem, ou, não os designando, por seus diretores;<br>
+          IX - a sociedade e a associação despersonalizadas, pela pessoa a quem couber a administração de seus bens;<br>
+          X - a pessoa jurídica estrangeira, pelo gerente, representante ou administrador de sua filial, agência ou sucursal aberta ou instalada no Brasil;<br>
+          XI - o condomínio, pelo administrador ou síndico.<br>
+          <strong>§ 1º</strong> Quando o inventariante for dativo, os sucessores do autor da herança serão intimados no processo no qual o espólio seja parte.<br>
+          <strong>§ 2º</strong> A sociedade ou associação sem personalidade jurídica não poderá opor a irregularidade de sua constituição quando demandada.<br>
+          <strong>§ 3º</strong> O gerente de filial ou agência presume-se autorizado pela pessoa jurídica estrangeira a receber citação para qualquer processo.<br>
+          <strong>§ 4º</strong> Os Estados e o Distrito Federal poderão ajustar compromisso recíproco para qualquer deles praticar ato processual em favor de outro em qualquer foro.<br>
+          <strong>§ 5º</strong> A representação judicial do Município pela associação de representação de municípios somente poderá ocorrer em questões de interesse comum dos municípios associados e dependerá de autorização expressa em assembleia geral especialmente convocada para esse fim.</p>
+        </div>
+        <div class="lei-comentario">
+          <strong>Comentário Prático:</strong> Atenção redobrada ao § 3º: a lei estabelece uma presunção legal absoluta de mandato para recebimento de citação inicial ao administrador de filial/sucursal de empresa estrangeira no Brasil, impedindo arguições infundadas de nulidade citatória transnacional.
+        </div>
+      </details>
+
+      <!-- Tabela Comparativa de Representação -->
+      <h3>Quadro Esquemático: Quem Representa Quem em Juízo?</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Ente / Sujeito</th>
+            <th>Representante Legal em Juízo</th>
+            <th>Dispositivo Legal</th>
+            <th>Pegadinha Recorrente em Provas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>União</strong></td>
+            <td>Advocacia-Geral da União (AGU) ou órgão vinculado (PGFN, PGF)</td>
+            <td>Art. 75, I, CPC</td>
+            <td>Dizer que é representada pelo Ministério Público Federal ou Presidente da República.</td>
+          </tr>
+          <tr>
+            <td><strong>Estados e DF</strong></td>
+            <td>Seus Procuradores do Estado / Procuradores do DF</td>
+            <td>Art. 75, II, CPC</td>
+            <td>Podem pactuar cooperação recíproca entre Estados federados (§ 4º).</td>
+          </tr>
+          <tr>
+            <td><strong>Municípios</strong></td>
+            <td>Prefeito, Procurador Municipal ou Associação autorizada em AG</td>
+            <td>Art. 75, III e § 5º, CPC</td>
+            <td>Associação exige convocação especial e interesse estritamente comum.</td>
+          </tr>
+          <tr>
+            <td><strong>Autarquias e Fundações Públicas</strong></td>
+            <td>Quem a lei do respectivo ente federado designar</td>
+            <td>Art. 75, IV, CPC</td>
+            <td>Ex: INSS representado pelos Procuradores Federais da AGU.</td>
+          </tr>
+          <tr>
+            <td><strong>Massa Falida</strong></td>
+            <td>Administrador Judicial nomeado pelo juiz falimentar</td>
+            <td>Art. 75, V, CPC</td>
+            <td>Confundir com o falido ou com o comitê de credores.</td>
+          </tr>
+          <tr>
+            <td><strong>Espólio</strong></td>
+            <td>Inventariante compromissado</td>
+            <td>Art. 75, VII e § 1º, CPC</td>
+            <td>Se o inventariante for <em>dativo</em>, todos os herdeiros devem ser intimados.</td>
+          </tr>
+          <tr>
+            <td><strong>Empresa Estrangeira</strong></td>
+            <td>Gerente ou diretor de filial instalada no Brasil</td>
+            <td>Art. 75, X e § 3º, CPC</td>
+            <td>Presunção legal de poderes para receber citação inicial independente de carta rogatória!</td>
+          </tr>
+          <tr>
+            <td><strong>Condomínio Edilício</strong></td>
+            <td>Síndico ou Administrador eleito</td>
+            <td>Art. 75, XI, CPC</td>
+            <td>Não necessita de outorga de procuração de cada um dos condôminos.</td>
+          </tr>
+          <tr>
+            <td><strong>Sociedade de Fato (Sem Registro)</strong></td>
+            <td>Quem administra os bens</td>
+            <td>Art. 75, IX e § 2º, CPC</td>
+            <td>Não pode arguir a própria falta de registro para anular a demanda em que é ré!</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Boxes Informativos -->
+      <div class="info-box box-pegadinha">
+        <div class="box-label">🎯 Pegadinha de Prova · Nascituro e Espólio</div>
+        <p><strong>Nascituro tem capacidade de ser parte?</strong> SIM! Embora a aquisição da personalidade civil plena ocorra com o nascimento com vida (Art. 2º do CC), a lei põe a salvo desde a concepção os direitos do nascituro. Logo, o nascituro possui capacidade de ser parte (por exemplo, na ação de alimentos gravídicos ou anulação de doação), sendo <strong>representado pela mãe gestante</strong>.</p>
+        <p><strong>Espólio vs. Herdeiros:</strong> Enquanto o inventário não for finalizado pela partilha, quem detém capacidade processual ativa e passiva é o espólio, representado pelo inventariante. Encerrada a partilha, o espólio deixa de existir, passando os herdeiros a responder nos limites das forças da herança recebida.</p>
+      </div>
+
+      <!-- Exemplos Práticos Obrigatórios -->
+      <div class="exemplo-pratico-box">
+        <h4>Casos Concretos de Aplicação da Capacidade de Ser Parte</h4>
+        <div class="exemplo-item">
+          <span class="exemplo-tipo">Exemplo Cotidiano</span>
+          <p>O condomínio do Edifício Solar das Flores precisa cobrar as cotas condominiais atrasadas de um morador inadimplente. O condomínio não é uma empresa formal nem tem sócios, mas é um ente despersonalizado com personalidade judiciária. O síndico eleito em assembleia assina a procuração em nome do condomínio e ingressa com a ação de execução.</p>
+        </div>
+        <div class="exemplo-item">
+          <span class="exemplo-tipo">Exemplo Forense / Jurídico</span>
+          <p>Uma multinacional sediada na Alemanha comercializa produtos com defeito no mercado consumidor brasileiro por meio de um escritório em São Paulo. O consumidor lesado aciona a empresa e o oficial de justiça cita diretamente o gerente da filial paulista. Com base no Art. 75, § 3º, do CPC, o gerente tem poderes presumidos por lei para receber a citação, tornando o ato perfeitamente hígido sem necessidade de carta rogatória internacional.</p>
+        </div>
+        <div class="exemplo-item">
+          <span class="exemplo-tipo">Exemplo Típico de Concurso</span>
+          <p>Determinada sociedade empresária comercial irregular (sem contrato registrado na Junta Comercial) celebra contrato de compra e venda e deixa de pagar o fornecedor. Ao ser executada em juízo, opõe embargos alegando que não possui capacidade de ser parte por não possuir personalidade jurídica. A tese é rechaçada de plano com fundamento no <strong>Art. 75, § 2º, do CPC</strong>, que proíbe expressamente a sociedade sem personalidade jurídica de opor a irregularidade de sua constituição para se esquivar de suas obrigações judiciais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 02: CAPACIDADE PROCESSUAL & CÔNJUGES ══════════════════════════════ -->
+    <section id="modulo2" class="section">
+      <div class="section-label">Módulo 02</div>
+      <h2>Capacidade Processual, Tutela, Curatela &amp; Outorga de Cônjuges</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>Ter direito não significa poder ir sozinho ao tribunal.</strong> Um bebê de 6 meses tem direito à herança do pai, mas não tem como contratar um advogado ou assinar petições. Por isso, a mãe o "representa". Da mesma forma, quando uma pessoa adulta é interditada por sofrer de uma demência grave, ela precisa de um "curador" para zelar pelos seus atos na justiça. A capacidade de estar em juízo sozinho é o poder de caminhar com as próprias pernas no processo.</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>A <strong>Capacidade Processual</strong> (ou capacidade de estar em juízo — <em>legitimatio ad processum</em>) corresponde à aptidão para praticar atos processuais eficazes pessoalmente, em nome próprio ou alheio. O <strong>Art. 70 do CPC</strong> é taxativo: <em>"Toda pessoa que se encontre no exercício de seus direitos tem capacidade para estar em juízo"</em>. Trata-se do reflexo adjetivo da capacidade de fato ou de exercício do Direito Civil (Arts. 3º e 4º do Código Civil).</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Aprofundamento para Concursos &amp; Estatuto da Pessoa com Deficiência</div>
+        <p>Com o advento da <strong>Lei Brasileira de Inclusão / Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015)</strong>, a pessoa com deficiência física, intelectual ou sensorial é plenamente capaz. A curatela passou a ser medida protetiva extraordinária, adstrita aos atos de conteúdo patrimonial e negocial (Art. 84, § 1º, da Lei 13.146/15). Se a incapacidade provém de causas psíquicas transitórias ou prodigalidade, há interdição e curador de assistência. Além disso, não se confunde o curador material com o <strong>curador especial (Art. 72 do CPC)</strong>, encargo exercido precipuamente pela Defensoria Pública para assegurar a paridade de armas aos revéis citados por edital/hora certa ou aos incapazes com conflito de interesses.</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Artigo 71 do CPC — Incapazes em Juízo (Representação e Assistência)</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 71.</strong> O incapaz será representado ou assistido por seus pais, por tutor ou por curador, na forma da lei civil.</p>
+        </div>
+        <div class="lei-comentario">
+          <strong>Regra Mnemônica:</strong><br>
+          • <strong>Incapacidade Absoluta (Menores de 16 anos - Art. 3º CC):</strong> Exige <strong>REPRESENTAÇÃO</strong> (o representante age no lugar do incapaz).<br>
+          • <strong>Incapacidade Relativa (16 a 18 anos, pródigos, toxicômanos - Art. 4º CC):</strong> Exige <strong>ASSISTÊNCIA</strong> (o assistente assina juntamente com o incapaz).<br>
+          • <strong>Tutor:</strong> Exclusivo para menores de idade quando não houver poder familiar (pais falecidos ou destituídos).<br>
+          • <strong>Curador:</strong> Voltado aos maiores interditados e vulneráveis patrimoniais.
+        </div>
+      </details>
+
+      <h3>2.1 O Curador Especial (Art. 72 do CPC) vs. Curador de Interdição</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>🛡️ Curador Material / Ordinário</h4>
+          <p>Nomeado em ação de interdição civil decorrente de processo de família. Administra o patrimônio, vida civil e negócios do curatelado de forma ampla e contínua.</p>
+        </div>
+        <div class="card gold">
+          <h4>⚖️ Curador Especial Processual (Art. 72)</h4>
+          <p>Função estritamente processual de garantia do contraditório e da isonomia substancial. Nomeado pelo juiz quando:</p>
+          <ul style="font-size: 0.9rem; padding-left: 1.2rem;">
+            <li>Houver colidência de interesses entre o incapaz e seu representante legal;</li>
+            <li>O incapaz não tiver representante legal designado;</li>
+            <li>O réu preso ou o réu citado fictamente (por edital ou por hora certa) for <strong>revel</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Outorga Uxória e Marital -->
+      <h3>2.2 Restrição à Capacidade Processual dos Cônjuges: Outorga Uxória &amp; Marital (Arts. 73 e 74)</h3>
+      <p>O casamento gera impactos patrimoniais diretos na esfera jurídica imobiliária do casal. Por isso, a propositura de demandas judiciais imobiliárias exige integração de capacidade:</p>
+
+      <details class="artigo">
+        <summary>Artigo 73 do CPC — Ações Imobiliárias e Vênia Conjugal</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 73.</strong> O cônjuge necessitará do consentimento do outro para propor ação que verse sobre direito real imobiliário, salvo quando casados sob o regime de separação absoluta de bens.<br>
+          <strong>§ 1º</strong> Ambos os cônjuges serão necessariamente citados para a ação:<br>
+          I - que verse sobre direito real imobiliário, salvo quando casados sob o regime de separação absoluta de bens;<br>
+          II - resultante de fato que diga respeito a ambos os cônjuges ou por atos praticados por eles;<br>
+          III - fundada em dívida contraída por um dos cônjuges a bem da família;<br>
+          IV - que tenha por objeto o reconhecimento, a constituição ou a extinção de ônus sobre imóvel de um ou de ambos os cônjuges.<br>
+          <strong>§ 2º</strong> Nas ações possessórias, a participação do cônjuge do autor ou do réu somente é indispensável nas hipóteses de composse ou de ato por ambos praticado.<br>
+          <strong>§ 3º</strong> Aplica-se o disposto neste artigo à união estável comprovada nos autos.</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Artigo 74 do CPC — Suprimento Judicial de Consentimento</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 74.</strong> O consentimento previsto no art. 73 pode ser suprido judicialmente quando for negado por um dos cônjuges sem justo motivo, ou quando lhe seja impossível concedê-lo.<br>
+          <strong>Parágrafo único.</strong> A falta de consentimento, quando necessário e não suprido pelo juiz, invalida o processo.</p>
+        </div>
+        <div class="lei-comentario">
+          <strong>Procedimento Forense:</strong> O pedido de suprimento da outorga uxória/marital é formulado em procedimento autônomo de <strong>jurisdição voluntária</strong>, perante a Vara de Família. Se o juiz verificar que a recusa do cônjuge decorre de mero capricho, rixa conjugal ou desavença sem prejuízo econômico real à família, ou que o cônjuge está desaparecido ou interditado, expedirá o suprimento judicial.
+        </div>
+      </details>
+
+      <div class="info-box box-erro">
+        <div class="box-label">⚠️ Erro Comum em Provas e Petições Forenses</div>
+        <p><strong>Erro 1: Achar que a outorga exige forma solene tabelioa:</strong> Não é obrigatória escritura pública. A outorga uxória/marital é mero consentimento por escrito nos autos, ou até mesmo a assinatura conjunta na procuração outorgada ao patrono da causa.</p>
+        <p><strong>Erro 2: Confundir ação reivindicatória (direito real) com ação possessória (fato):</strong> Na ação reivindicatória, a citação de ambos os cônjuges é obrigatória. Já nas <strong>ações possessórias</strong> (reintegração, manutenção de posse), o § 2º do Art. 73 estabelece que a participação do cônjuge SÓ é obrigatória se houver <strong>composse</strong> ou <strong>esbulho/turbação praticado conjuntamente por ambos</strong>!</p>
+        <p><strong>Erro 3: Esquecer a exceção do regime de bens:</strong> Se o casal for casado sob o regime de <strong>separação absoluta / total de bens</strong> (seja convencional por pacto antenupcial ou obrigatória por lei), a outorga conjugal é <strong>DISPENSADA</strong> tanto para propor quanto para ser réu!</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 03: SANEAMENTO DO ART. 76 ══════════════════════════════ -->
+    <section id="modulo3" class="section">
+      <div class="section-label">Módulo 03</div>
+      <h2>O Dever de Saneamento da Incapacidade Processual (Art. 76 do CPC)</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>Se faltar um documento de representação, o processo acaba na hora?</strong> Não! A justiça não funciona como um jogo de pegadinhas mortais. Se o juiz perceber que o autor esqueceu de juntar a certidão de tutela ou a procuração, ele primeiro manda consertar o defeito dando um prazo. Somente se a pessoa for avisada e cruzar os braços é que virão as punições graves: o autor perde a ação e o réu é considerado omisso (revel).</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>O Código de Processo Civil de 2015 consagrou expressamente o <strong>Princípio da Primazia do Julgamento do Mérito (Arts. 4º, 6º e 317)</strong> e o <strong>Dever de Prevenção e Cooperação Judicial</strong>. Diante de qualquer defeito atinente à capacidade processual (Art. 70/71) ou à representação processual das partes (Art. 75), é vedado ao juiz extinguir o processo prematuramente. Ele é obrigado a suspender o procedimento e assinar prazo razoável para a convalidação do vício sanável.</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Aprofundamento para Carreiras Jurídicas &amp; Tribunais Superiores</div>
+        <p>O <strong>Art. 76 do CPC</strong> estabelece um regime rígido e escalonado de consequências para a inércia da parte após a oportunidade formal de emenda. Esse regime atua tanto em primeiro grau de jurisdição quanto em grau recursal perante os Tribunais de Justiça, Tribunais Regionais Federais e Tribunais Superiores (STJ e STF), conforme expressamente disciplinado nos incisos de seu § 1º e § 2º.</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Artigo 76 do CPC — Regime de Regularização da Incapacidade e Representação</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 76.</strong> Verificada a incapacidade processual ou a irregularidade da representação da parte, o juiz suspenderá o processo e designará prazo razoável para que seja sanado o vício.<br>
+          <strong>§ 1º</strong> Descumprida a determinação, em fase de conhecimento:<br>
+          I - o processo será extinto, se a providência couber ao autor;<br>
+          II - o réu será considerado revel, se a providência lhe couber;<br>
+          III - o terceiro será considerado revel ou excluído do processo, dependendo do polo em que se encontre.<br>
+          <strong>§ 2º</strong> Descumprida a determinação em fase recursal perante tribunal de justiça, tribunal regional federal ou tribunal superior, o relator:<br>
+          I - não conhecerá do recurso, se a providência couber ao recorrente;<br>
+          II - determinará o desentranhamento das contrarrazões, se a providência couber ao recorrido.</p>
+        </div>
+      </details>
+
+      <!-- Fluxograma Visual de Decisão do Art. 76 -->
+      <h3>Fluxograma de Aplicação do Artigo 76 do CPC</h3>
+      <div class="flowchart-container">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div>
+            <strong>Constatação do Vício de Capacidade ou Representação</strong>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Juiz ou Relator identifica ausência de procuração, falta de outorga, ausência de ato de posse do inventariante ou irregularidade societária.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div>
+            <strong>Suspensão Obrigatória &amp; Assunção de Prazo Razoável</strong>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Intimação específica da parte para sanar a falha documental sob cominação legal expressa.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step" style="border-left-color: #EF4444; background: #FEF2F2;">
+          <div class="flow-num" style="background: #EF4444;">3</div>
+          <div>
+            <strong>Sanções em Caso de Desídia / Inércia da Parte Notificada:</strong>
+            <ul style="margin: 5px 0 0 1rem; font-size: 0.88rem; line-height: 1.6;">
+              <li><strong>Autor Inerte:</strong> Extinção do processo sem resolução de mérito (Art. 485, IV).</li>
+              <li><strong>Réu Inerte:</strong> Decretação dos efeitos da revelia (Art. 344).</li>
+              <li><strong>Terceiro Inerte:</strong> Revelia (se interveniente adesivo/réu) ou exclusão do feito.</li>
+              <li><strong>Recorrente no Tribunal:</strong> Não conhecimento do recurso por vício formal insanado.</li>
+              <li><strong>Recorrido no Tribunal:</strong> Desentranhamento físico/digital das contrarrazões.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 04: DEVERES DAS PARTES & ATENTADO À JUSTIÇA ══════════════════════════════ -->
+    <section id="modulo4" class="section">
+      <div class="section-label">Módulo 04</div>
+      <h2>Deveres das Partes, Litigância de Má-Fé &amp; Ato Atentatório à Dignidade da Justiça</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>O processo é um ambiente ético de busca da verdade.</strong> Ninguém pode inventar mentiras absurdas de propósito, esconder documentos propositalmente para enrolar ou desobedecer uma ordem dada por um juiz. Quem usa o judiciário de forma desleal sofre sanções financeiras pesadas: ou paga uma indenização à outra parte por agir com má-fé, ou leva uma multa que vai para os cofres públicos por desrespeitar o próprio Poder Judiciário.</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>O <strong>Art. 5º do CPC</strong> elevou o princípio da <strong>Boa-Fé Processual Objetiva</strong> à categoria de norma fundamental estruturante. Em consonância com ela, o <strong>Art. 77 do CPC</strong> positivou um catálogo de sete deveres imperativos impostos a todos que atuam no processo (partes, advogados, MP, peritos, testemunhas e terceiros intervenientes).</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Diferenciação Aprofundada: Litigância de Má-Fé vs. Atentado à Justiça</div>
+        <p>Esta é uma das matérias com maior índice de cobrança técnica nas provas da Magistratura, Ministério Público e OAB. O sistema processual bifurcou as consequências da violação dos deveres processuais em duas categorias jurídicas ontologicamente distintas: a <strong>Litigância de Má-Fé (Arts. 79 a 81)</strong> e o <strong>Ato Atentatório à Dignidade da Justiça (Art. 77, §§ 2º e 5º)</strong>.</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Artigo 77 do CPC — O Catálogo de Sete Deveres Processuais</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 77.</strong> Além de outros decorrentes da boa-fé, são deveres das partes, de seus procuradores e de todos aqueles que de qualquer forma participem do processo:<br>
+          <strong>I -</strong> expor os fatos em juízo conforme a verdade;<br>
+          <strong>II -</strong> não formular pretensão ou de apresentar defesa quando cientes de que são destituídas de fundamento;<br>
+          <strong>III -</strong> não produzir provas e não praticar atos inúteis ou desnecessários à declaração ou à defesa do direito;<br>
+          <strong>IV -</strong> cumprir com exatidão as decisões jurisdicionais, de natureza provisória ou final, e não criar embaraços à sua efetivação;<br>
+          <strong>V -</strong> declinar, no primeiro momento que lhes couber falar nos autos, o endereço residencial ou profissional onde receberão intimações, atualizando essa informação sempre que ocorrer qualquer modificação temporária ou definitiva;<br>
+          <strong>VI -</strong> não praticar inovação ilegal no estado de fato de bem ou direito litigioso;<br>
+          <strong>VII -</strong> informar e manter atualizados seus dados cadastrais perante os órgãos do Poder Judiciário e, no caso do § 6º do art. 246 deste Código, da Administração Tributária, para recebimento de citações e intimações.</p>
+        </div>
+      </details>
+
+      <div class="info-box box-doutrina">
+        <div class="box-label">📚 Doutrina Crítica · O Requisito Subjetivo da Violação (Dolo vs. Equívoco)</div>
+        <p>A violação aos incisos I, II e III do Art. 77 reclama <strong>comprovação inequívoca de dolo / má-fé intencional</strong>. Não caracteriza infração processual a errônea narração de fatos decorrente de má compreensão da realidade, falsa percepção ou equívoco fático honesto. Tampouco viola o dever legal a postulação de tese jurídica que venha a ser rejeitada pelo tribunal, ou o requerimento de prova que o juiz considere prescindível, salvo quando manifestamente protelatória.</p>
+      </div>
+
+      <!-- Tabela Comparativa de Multas: Má-fé vs Atentado -->
+      <h3>Quadro Comparativo: Litigância de Má-Fé vs. Ato Atentatório à Dignidade da Justiça</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Critério Dogmático</th>
+            <th>Litigância de Má-Fé (Arts. 79 a 81)</th>
+            <th>Ato Atentatório à Dignidade da Justiça (Art. 77, §§ 2º a 5º)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hipóteses Legais</strong></td>
+            <td>Condutas do Art. 80 (alterar a verdade, usar o processo para fim ilegal, provocar incidentes infundados).</td>
+            <td><strong>Violação específica aos incisos IV e VI do Art. 77</strong> (descumprir ordens judiciais ou inovar estado de fato).</td>
+          </tr>
+          <tr>
+            <td><strong>Beneficiário da Multa</strong></td>
+            <td><strong>Reverte em favor da parte contrária prejudicada</strong> (natureza indenizatória).</td>
+            <td><strong>Reverte integralmente em favor da Fazenda Pública</strong> (União ou Estado) como Dívida Ativa!</td>
+          </tr>
+          <tr>
+            <td><strong>Valor da Multa</strong></td>
+            <td>Superior a 1% e inferior a 10% do valor corrigido da causa + perdas e danos.</td>
+            <td><strong>Até 20% do valor da causa</strong>. Se irrisório ou inestimável o valor, de até <strong>10 salários mínimos</strong>!</td>
+          </tr>
+          <tr>
+            <td><strong>Cumulação</strong></td>
+            <td>Pode incidir juntamente com indenização por perdas e danos.</td>
+            <td>Sem prejuízo das sanções criminais (desobediência), civis e da própria multa por litigância de má-fé!</td>
+          </tr>
+          <tr>
+            <td><strong>Aplicação a Advogados e MP</strong></td>
+            <td>Pode ser apurada em ação própria contra o causídico (Art. 32 do Estatuto da OAB).</td>
+            <td><strong>INAPLICÁVEL expressamente (§ 6º)!</strong> O juiz oficia a OAB, Corregedoria do MP ou Defensoria.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Expressões Ofensivas Art. 78 -->
+      <h3>4.1 Vedação de Expressões Ofensivas nos Autos (Art. 78 do CPC)</h3>
+      <p>O <strong>Art. 78 do CPC</strong> veda terminantemente a qualquer participante do processo o emprego de linguagem injuriosa, caluniosa ou difamatória. Não se proíbe o debate vigoroso, a argumentação enérgica ou a veemência retórica, mas sim o ultraje à civilidade:</p>
+      <ul>
+        <li><strong>Em peças escritas:</strong> O juiz, de ofício ou a requerimento, determinará que as expressões ofensivas sejam <strong>riscadas</strong> dos autos, expedindo certidão de inteiro teor à disposição do ofendido para eventuais reparações civis e criminais.</li>
+        <li><strong>Em manifestações orais (audiências/sessões):</strong> O magistrado advertirá o orador de que não as utilize, sob pena de imediata <strong>cassação da palavra</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 05: DESPESAS PROCESSUAIS & HONORÁRIOS ══════════════════════════════ -->
+    <section id="modulo5" class="section">
+      <div class="section-label">Módulo 05</div>
+      <h2>Despesas Processuais, Prova Pericial &amp; Honorários Advocatícios</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>Quem paga a conta de um processo na justiça?</strong> Movimentar a máquina do judiciário tem custos: taxas da petição, condução do oficial de justiça e laudos de peritos. A regra do jogo é simples: quem pede o ato adianta o dinheiro durante a partida; mas quem perder o jogo no final paga toda a conta e ainda remunera o advogado da parte vencedora (são os chamados honorários de sucumbência).</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>A teoria da causalidade e da sucumbência rege as despesas processuais no Código de Processo Civil. O <strong>Art. 82 do CPC</strong> fixa o ônus da <em>antecipação</em> das despesas, ao passo que o <strong>Art. 85</strong> disciplina a condenação definitiva na sentença. A sucumbência pertence com exclusividade ao advogado da causa (Art. 23 do Estatuto da OAB - Lei 8.906/94), detendo natureza alimentar.</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Tema Repetitivo 1.076 do STJ &amp; Fazenda Pública</div>
+        <p>No julgamento histórico do <strong>Tema Repetitivo 1.076 do STJ</strong> (REsp 1.850.512/SP e REsp 1.877.883/SP), a Corte Especial pacificou que a fixação de honorários advocatícios por <strong>apreciação equitativa (Art. 85, § 8º)</strong> possui caráter estritamente subsidiário. É vedado ao magistrado aplicar a equidade nas causas de valor elevado para reduzir percentuais. Devem ser obrigatoriamente observados os parâmetros estritos de <strong>10% a 20% do Art. 85, § 2º</strong> (ou faixas do § 3º para Fazenda Pública), calculados sucessivamente sobre o valor da condenação, proveito econômico obtido ou valor da causa.</p>
+      </div>
+
+      <h3>5.1 Regras de Antecipação: Despesas em Geral vs. Prova Pericial</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>📑 Regra Geral das Despesas (Art. 82)</h4>
+          <p>• <strong>Quem pediu o ato:</strong> Antecipa as despesas respectivas.<br>
+          • <strong>Se requerida por ambos, de ofício pelo juiz ou pelo MP (fiscal da ordem jurídica):</strong> A antecipação cabe integralmente ao <strong>AUTOR</strong>!</p>
+        </div>
+        <div class="card gold">
+          <h4>🔬 Regra Específica da Prova Pericial (Art. 95)</h4>
+          <p>• <strong>Quem pediu a perícia:</strong> Adiantará a remuneração do perito.<br>
+          • <strong>Se requerida por ambos, de ofício pelo juiz ou pelo MP:</strong> Os honorários periciais serão <strong>RATEADOS EM PARTES IGUAIS</strong> entre autor e réu!</p>
+        </div>
+      </div>
+
+      <div class="info-box box-dica">
+        <div class="box-label">💡 Dica de Ouro de Prova · Art. 82 vs. Art. 95 do CPC</div>
+        <p>Essa é a pegadinha favorita da Fundação Getúlio Vargas (FGV) e da Fundação Carlos Chagas (FCC):<br>
+        Se o juiz determina <em>de ofício</em> uma diligência cartorária genérica, o <strong>autor</strong> antecipa tudo (Art. 82, § 1º). Porém, se o juiz determina <em>de ofício</em> a realização de uma <strong>prova pericial de engenharia ou contabilidade</strong>, as despesas do perito são <strong>rateadas</strong> entre ambas as partes (Art. 95, caput)! Memorize essa exceção!</p>
+      </div>
+
+      <h3>5.2 Fixação Definitiva de Honorários Sucumbenciais (Art. 85)</h3>
+      <p>Os honorários sucumbenciais são fixados pelo magistrado na sentença ou no acórdão:</p>
+      <ul>
+        <li><strong>Regra Geral (§ 2º):</strong> Fixação entre o mínimo de <strong>10%</strong> e o máximo de <strong>20%</strong> sobre: (1º) o valor da condenação; (2º) o proveito econômico obtido; ou, não sendo possível mensurá-lo, (3º) o valor atualizado da causa.</li>
+        <li><strong>Critérios de Ponderação do Magistrado (§ 2º, I a IV):</strong> O grau de zelo profissional; o lugar da prestação do serviço; a natureza e a importância da causa; o trabalho realizado e o tempo exigido.</li>
+        <li><strong>Causas com a Fazenda Pública (§ 3º):</strong> Tabela escalonada e decrescente em 5 faixas (de até 200 salários mínimos até patamares superiores a 100.000 salários mínimos).</li>
+        <li><strong>Cumulatividade dos Honorários (§ 1º):</strong> São devidos cumulativamente na reconvenção, no cumprimento de sentença (provisório ou definitivo), no processo de execução (resistido ou não) e nos recursos interpostos (honorários recursais - § 11).</li>
+      </ul>
+
+      <!-- Jurisprudência Vinculante -->
+      <div class="info-box box-juris">
+        <div class="box-label">⚖️ Jurisprudência Vinculante · TEMA 1.076 DO STJ</div>
+        <p><em>"A fixação dos honorários por apreciação equitativa não é permitida quando os valores da condenação, da causa ou o proveito econômico da demanda forem elevados. É obrigatória nesses casos a observância dos percentuais previstos nos §§ 2º ou 3º do artigo 85 do CPC — a depender da presença da Fazenda Pública na lide —, os quais serão subsequentemente calculados sobre o valor: (a) da condenação; ou (b) do proveito econômico obtido; ou (c) do valor atualizado da causa."</em></p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 06: GRATUIDADE DA JUSTIÇA ══════════════════════════════ -->
+    <section id="modulo6" class="section">
+      <div class="section-label">Módulo 06</div>
+      <h2>Gratuidade da Justiça: Pressupostos, Alcance, Revogação &amp; Recursos</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>A falta de dinheiro não pode fechar as portas da justiça.</strong> Qualquer cidadão que não tenha condições financeiras de pagar as despesas do processo sem passar fome ou deixar de sustentar sua família tem direito à gratuidade. O cidadão comum só precisa declarar que é pobre no sentido da lei; já a empresa comercial precisa abrir seus livros e provar que está falida ou no vermelho para conseguir a isenção.</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>A <strong>Gratuidade da Justiça</strong> positivada nos Arts. 98 a 102 do CPC efetiva a garantia constitucional da assistência jurídica integral e gratuita aos que comprovarem insuficiência de recursos (Art. 5º, LXXIV, da CF/88). Abrange taxas judiciárias, custas de apelação, despesas de editais, certidões, exames de DNA e os próprios emolumentos de cartórios de notas e registro de imóveis (§ 1º).</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Diferenciação Probatória &amp; Súmula 481 do STJ</div>
+        <p>Há profunda assimetria dogmática no ônus da prova:</p>
+        <ul>
+          <li><strong>Pessoa Natural (Art. 99, § 3º):</strong> Presume-se verdadeira a alegação de hipossuficiência formulada por pessoa física. O magistrado só pode indeferir se houver nos autos elementos concretos incompatíveis, devendo antes conceder prazo à parte para comprovar sua situação (Art. 99, § 2º).</li>
+          <li><strong>Pessoa Jurídica (Súmula 481 do STJ):</strong> NÃO se presume hipossuficiente! Sejam entidades com fins lucrativos ou sem fins lucrativos (fundações, sindicatos, associações), <strong>cumpre à pessoa jurídica demonstrar contabilmente a sua impossibilidade de arcar com os encargos processuais</strong>.</li>
+        </ul>
+      </div>
+
+      <details class="artigo">
+        <summary>Artigo 98 do CPC — Abrangência e Efeitos da Gratuidade</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 98.</strong> A pessoa natural ou jurídica, brasileira ou estrangeira, com insuficiência de recursos para pagar as custas, as despesas processuais e os honorários advocatícios tem direito à gratuidade da justiça, na forma da lei.<br>
+          <strong>§ 1º</strong> A gratuidade da justiça compreende:<br>
+          I - as taxas ou as custas judiciais;<br>
+          II - os selos postais;<br>
+          III - as despesas com publicação na imprensa oficial;<br>
+          IV - a indenização de viagem testemunhal;<br>
+          V - a remuneração do perito e o custo do exame de DNA;<br>
+          VI - os honorários do advogado e do perito e a remuneração do intérprete;<br>
+          IX - os emolumentos devidos a notários ou registradores em decorrência da prática de atos necessários à efetivação de decisão judicial.<br>
+          <strong>§ 2º</strong> A concessão de gratuidade não afasta a responsabilidade do beneficiário pelas despesas processuais e pelos honorários advocatícios decorrentes de sua sucumbência.<br>
+          <strong>§ 3º</strong> Vencido o beneficiário, as obrigações decorrentes de sua sucumbência ficarão sob <strong>condição suspensiva de exigibilidade e somente poderão ser executadas se, nos 5 (cinco) anos subsequentes ao trânsito em julgado</strong>, o credor demonstrar que deixou de existir a situação de insuficiência de recursos, extinguindo-se, passado esse prazo, tais obrigações.<br>
+          <strong>§ 4º</strong> A concessão de gratuidade não afasta o dever de o beneficiário pagar, ao final, as multas processuais que lhe sejam impostas.</p>
+        </div>
+      </details>
+
+      <!-- Linha do Tempo da Suspensividade de 5 anos -->
+      <h3>Linha do Tempo: A Condição Suspensiva da Sucumbência (Art. 98, § 3º)</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-title">Trânsito em Julgado da Sentença com Beneficiário Sucumbente</div>
+          <p>O beneficiário da justiça gratuita é condenado nas custas e honorários sucumbenciais. No entanto, a exigibilidade é imediatamente suspensa por força de lei.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">Período Quinquenal de Vigilância Econômica (0 a 5 Anos)</div>
+          <p>Se o credor comprovar que o devedor enriqueceu (ex: ganhou na loteria, herdou fortuna ou teve alta elevação de renda), o juiz autoriza a deflagração da execução patrimonial.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">Decurso In Albis dos 5 Anos</div>
+          <p>Decorrido o prazo decadencial de 5 anos sem comprovação de alteração patrimonial, a obrigação do sucumbente extingue-se integralmente de pleno direito.</p>
+        </div>
+      </div>
+
+      <!-- Procedimento de Impugnação e Recursos -->
+      <h3>6.1 Dinâmica da Impugnação e Sistema Recursal da Gratuidade</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Momento do Pedido</th>
+            <th>Via Própria de Impugnação pelo Adversário</th>
+            <th>Decisão Judicial Proferida</th>
+            <th>Recurso Cabível</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Requerido na Petição Inicial</td>
+            <td>Preliminar de Contestação (Art. 100)</td>
+            <td>Decisão Interlocutória que DEFERE a gratuidade</td>
+            <td><strong>NÃO CABE RECURSO IMEDIATO</strong> (apenas impugnação nos próprios autos).</td>
+          </tr>
+          <tr>
+            <td>Requerido na Contestação</td>
+            <td>Na Petição de Réplica (Art. 100)</td>
+            <td>Decisão que <strong>INDEFERE</strong> ou <strong>REVOGA</strong> a gratuidade</td>
+            <td><strong>AGRAVO DE INSTRUMENTO</strong> (Art. 1.015, V), dispensado o preparo preliminarmente!</td>
+          </tr>
+          <tr>
+            <td>Requerido em Grau de Recurso</td>
+            <td>Nas Contrarrazões Recursais</td>
+            <td>Questão apreciada expressamente na <strong>SENTENÇA</strong></td>
+            <td><strong>APELAÇÃO CÍVEL</strong> (Art. 1.009, caput).</td>
+          </tr>
+          <tr>
+            <td>Requerido por Simples Petição</td>
+            <td>Petição incidental em 15 dias sem suspensão</td>
+            <td>Revogação por comprovada má-fé do requerente</td>
+            <td>Pagamento das despesas atrasadas + <strong>Multa de até 10 vezes (décuplo)</strong> para Fazenda!</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════ MÓDULO 07: PROCURADORES & MANDATO FORENSE ══════════════════════════════ -->
+    <section id="modulo7" class="section">
+      <div class="section-label">Módulo 07</div>
+      <h2>Capacidade Postulatória, Procuração Ad Judicia &amp; Endereçamento</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🌱 Nível 1 · Explicação Introdutória e Simples</div>
+        <p><strong>Nem todo cidadão pode falar diretamente em nome próprio na justiça.</strong> Para operar a máquina forense, a lei exige capacidade técnica especializada (a capacidade postulatória). Em 99% das vezes, você precisa de um advogado devidamente aprovado na OAB ou de um Defensor Público para redigir suas petições e falar por você em audiência.</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🎓 Nível 2 · Explicação Técnica de Graduação</div>
+        <p>A <strong>Capacidade Postulatória</strong> é pressuposto processual de eficácia técnica (Arts. 103 a 107 do CPC). É privativa dos advogados regularmente inscritos nos quadros da Ordem dos Advogados do Brasil (Lei nº 8.906/94) e dos membros integrantes do Ministério Público e Defensoria Pública. Sem procuração formal juntada com a inicial, o advogado não poderá postular em juízo, salvo casos urgentes do Art. 104 (prazo improrrogável de 15 dias para exibir o mandato, prorrogável por mais 15 mediante despacho fundamentado).</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">⚡ Nível 3 · Poderes Gerais vs. Especiais &amp; Súmula 644 do STF</div>
+        <p>A procuração geral para o foro (cláusula <em>ad judicia</em>) habilita o advogado a praticar todos os atos processuais ordinários até o trânsito em julgado. Contudo, o <strong>Art. 105 do CPC</strong> estabelece uma barreira de proteção ao cliente, exigindo poderes expressos e destacados para a prática de atos de disposição patrimonial. Por outro lado, para os representantes de cargos públicos concursados da Defensoria Pública, Procuradoria do Estado e Fazenda Nacional, a procuração é inteiramente dispensada, bastando a comprovação de investidura no cargo público (<strong>Súmula 644 do STF</strong>).</p>
+      </div>
+
+      <details class="artigo">
+        <summary>Artigo 105 do CPC — Cláusula Ad Judicia e Poderes Especiais Obrigatórios</summary>
+        <div class="lei-seca">
+          <p><strong>Art. 105.</strong> A procuração geral para o foro, outorgada por instrumento público ou particular assinado pela parte, habilita o advogado a praticar todos os atos do processo, salvo para:<br>
+          • <strong>Receber citação</strong>;<br>
+          • <strong>Confessar</strong>;<br>
+          • <strong>Reconhecer a procedência do pedido</strong>;<br>
+          • <strong>Transigir</strong>;<br>
+          • <strong>Desistir</strong>;<br>
+          • <strong>Renunciar ao direito sobre o qual se funda a ação</strong>;<br>
+          • <strong>Receber e dar quitação</strong>;<br>
+          • <strong>Firmar compromisso</strong> e <strong>assinar declaração de hipossuficiência econômica</strong>.<br>
+          <strong>§ 1º</strong> A procuração pode ser assinada digitalmente, na forma da lei.<br>
+          <strong>§ 2º</strong> A procuração deverá conter o nome do advogado, seu número de inscrição na Ordem dos Advogados do Brasil e endereço completo.<br>
+          <strong>§ 3º</strong> Se o outorgante integrar sociedade de advogados, a procuração deverá indicar a sociedade de que faz parte.</p>
+        </div>
+      </details>
+
+      <div class="info-box box-atencao">
+        <div class="box-label">📝 Atenção Especial · Advogado Postulando em Causa Própria (Art. 106)</div>
+        <p>Quando o advogado atua em causa própria (defendendo seus próprios direitos), a exibição de procuração é logicamente dispensada. No entanto, ele tem a <strong>obrigação legal de declarar na petição inicial ou contestação</strong>:<br>
+        1. Seu endereço físico e eletrônico;<br>
+        2. Seu número de inscrição na OAB;<br>
+        3. O nome da sociedade de advogados da qual faz parte.<br>
+        Se mudar de endereço e não comunicar em juízo, as intimações enviadas para o endereço antigo são consideradas juridicamente válidas e eficazes!</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: MAPAS MENTAIS & FLUXOGRAMAS ══════════════════════════════ -->
+    <section id="mindmaps" class="section">
+      <div class="section-label">Recursos Visuais de Fixação</div>
+      <h2>🧠 Mapas Mentais &amp; Organogramas Conceituais</h2>
+
+      <div class="mindmap-tree">
+        <div class="mm-root">⚖️ SISTEMÁTICA GERAL DAS PARTES E PROCURADORES (CPC/2015)</div>
+        <div class="mm-l1">├─ 1. CAPACIDADE PROCESSUAL</div>
+        <div class="mm-l2">│  ├─ Capacidade de Ser Parte: Todas as pessoas físicas, jurídicas e entes despersonalizados (Art. 75).</div>
+        <div class="mm-l2">│  ├─ Capacidade de Estar em Juízo: Exercício dos direitos (Art. 70) ➔ Incapazes (Art. 71: Representação / Assistência).</div>
+        <div class="mm-l2">│  └─ Capacidade Postulatória: Privativa de Advogados habilitados na OAB (Art. 103).</div>
+        <div class="mm-l1">├─ 2. CASAMENTO E OUTORGA CONJUGAL (Art. 73)</div>
+        <div class="mm-l2">│  ├─ Ações de Direitos Reais Imobiliários ➔ Exige consentimento (outorga uxória/marital).</div>
+        <div class="mm-l2">│  ├─ Exceção: Separação Absoluta de Bens ➔ Dispensa total de outorga.</div>
+        <div class="mm-l2">│  └─ Recusa Injustificada: Suprimento judicial via Jurisdição Voluntária na Vara de Família (Art. 74).</div>
+        <div class="mm-l1">├─ 3. SANEAMENTO DE VÍCIOS DE CAPACIDADE (Art. 76)</div>
+        <div class="mm-l2">│  ├─ Dever do Juiz: Suspender e conceder prazo razoável para regularização.</div>
+        <div class="mm-l2">│  └─ Sanções: Autor inerte (Extinção) | Réu inerte (Revelia) | Recorrente inerte (Não conhecimento).</div>
+        <div class="mm-l1">├─ 4. DEVERES PROCESSUAIS E SANÇÕES (Art. 77 a 81)</div>
+        <div class="mm-l2">│  ├─ Litigância de Má-Fé (Art. 80): Multa de 1% a 10% ➔ Reverte para a Parte Adversa.</div>
+        <div class="mm-l2">│  └─ Atentado à Dignidade da Justiça (Art. 77, IV/VI): Multa até 20% ➔ Reverte para a Fazenda Pública!</div>
+        <div class="mm-l1">├─ 5. HONORÁRIOS ADVOCATÍCIOS (Art. 85 / Tema 1.076 STJ)</div>
+        <div class="mm-l2">│  ├─ Regra Geral: 10% a 20% da condenação, proveito econômico ou valor da causa.</div>
+        <div class="mm-l2">│  └─ Apreciação Equitativa (§ 8º): Subsidiária (inaplicável em causas de valor elevado).</div>
+        <div class="mm-l1">└─ 6. GRATUIDADE DA JUSTIÇA (Arts. 98 a 102)</div>
+        <div class="mm-l2">   ├─ Pessoa Física: Presunção relativa de veracidade (Art. 99, § 3º).</div>
+        <div class="mm-l2">   ├─ Pessoa Jurídica: Prova contábil indispensável (Súmula 481 do STJ).</div>
+        <div class="mm-l2">   └─ Sucumbência do Beneficiário: Suspensão por 5 anos ➔ Extinção superveniente (Art. 98, § 3º).</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: MNEMÔNICOS ══════════════════════════════ -->
+    <section id="mnemonicos" class="section">
+      <div class="section-label">Técnicas de Memorização</div>
+      <h2>💡 Mnemônicos Exclusivos de Aprovação</h2>
+
+      <div class="mnemonico-card">
+        <div class="mnemonico-sigla">PODERES ESPECIAIS: "C-C-R-R-T-D-D-Q"</div>
+        <p>Para memorizar os poderes que <strong>exigem menção expressa na procuração</strong> do Artigo 105 do CPC:</p>
+        <ul style="line-height: 1.8; margin-top: 10px; font-size: 1.05rem;">
+          <li><strong>C</strong>itação (receber citação em nome do mandante)</li>
+          <li><strong>C</strong>onfessar fatos articulados pela parte adversa</li>
+          <li><strong>R</strong>econhecer a procedência do pedido autoral</li>
+          <li><strong>R</strong>enunciar ao direito material sobre o qual se funda a ação</li>
+          <li><strong>T</strong>ransigir (celebrar acordo/conciliação com concessões)</li>
+          <li><strong>D</strong>esistir do processo ou do recurso interposto</li>
+          <li><strong>D</strong>eclaração de hipossuficiência econômica assinar</li>
+          <li><strong>Q</strong>uitação (receber valores e dar formal quitação da dívida)</li>
+        </ul>
+      </div>
+
+      <div class="mnemonico-card" style="background: linear-gradient(135deg, #0F172A, #1E3A8A);">
+        <div class="mnemonico-sigla">MULTA DO ATENTADO: "V-F-P"</div>
+        <p>Quem é o alvo e quem recebe a sanção no Ato Atentatório à Dignidade da Justiça (Art. 77, § 2º):</p>
+        <ul style="line-height: 1.8; margin-top: 10px; font-size: 1.05rem;">
+          <li><strong>V</strong>inte por cento (multa de até 20% do valor da causa)</li>
+          <li><strong>F</strong>azenda Pública é a destinatária do crédito (vai para Dívida Ativa)</li>
+          <li><strong>P</strong>rocuradores e Defensores têm imunidade da multa (oficia-se a OAB/Corregedoria)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: FLASHCARDS INTERATIVOS ══════════════════════════════ -->
+    <section id="flashcards" class="section">
+      <div class="section-label">Treinamento Rápido de Memória</div>
+      <h2>⚡ Flashcards Interativos de Revisão Ativa</h2>
+      <p style="color: var(--text-muted);">Clique no card para revelar a fundamentação jurídica consolidada:</p>
+
+      <div class="flashcards-grid">
+        <!-- Flashcard 1 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 01 · Representação de Município</div>
+            <div class="fc-pergunta">Quem possui legitimidade legal para representar os Municípios em juízo?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>Prefeito, Procurador Municipal ou Associação de Representação de Municípios</strong> (quando expressamente autorizada em assembleia geral para fins de interesse comum), conforme o Art. 75, III e § 5º, do CPC.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+
+        <!-- Flashcard 2 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 02 · Empresa Estrangeira</div>
+            <div class="fc-pergunta">O gerente de filial brasileira de empresa com sede no exterior pode receber citação inicial?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>SIM, PRESUME-SE AUTORIZADO POR LEI.</strong> O Art. 75, § 3º, do CPC estabelece presunção legal absoluta de autorização para receber citação para qualquer processo, dispensando carta rogatória.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+
+        <!-- Flashcard 3 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 03 · Separação Absoluta de Bens</div>
+            <div class="fc-pergunta">Cônjuge casado sob o regime de separação absoluta de bens precisa de outorga uxória para propor ação imobiliária?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>NÃO.</strong> O Art. 73, caput, do CPC excepciona expressamente: casados sob o regime de separação absoluta de bens não dependem de consentimento do cônjuge para ações imobiliárias.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 04 · Despesas de Prova Pericial</div>
+            <div class="fc-pergunta">Se a realização da prova pericial for determinada de ofício pelo juiz, quem antecipa os honorários periciais?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>AS DESPESAS SÃO RATEADAS EM PARTES IGUAIS.</strong> Conforme o Art. 95 do CPC, na prova pericial de ofício ou a requerimento do MP, as partes rateiam o adiantamento dos honorários (diferente da regra geral do Art. 82).
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 05 · Destino das Multas Processuais</div>
+            <div class="fc-pergunta">Para quem reverte o valor da multa por Ato Atentatório à Dignidade da Justiça? E da Litigância de Má-Fé?</div>
+          </div>
+          <div class="fc-resposta">
+            • <strong>Atentado (Art. 77, § 2º):</strong> Reverte para a <strong>FAZENDA PÚBLICA</strong> (União ou Estado).<br>
+            • <strong>Litigância de Má-Fé (Art. 81):</strong> Reverte em favor da <strong>PARTE CONTRÁRIA</strong> prejudicada.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 06 · Justiça Gratuita e Pessoa Jurídica</div>
+            <div class="fc-pergunta">A pessoa jurídica com ou sem fins lucrativos goza de presunção de veracidade da insuficiência de recursos?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>NÃO GOZA DE PRESUNÇÃO.</strong> Segundo a <strong>Súmula 481 do STJ</strong>, faz jus à gratuidade a pessoa jurídica que <em>demonstrar contabilmente</em> sua impossibilidade de arcar com os encargos processuais.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta ➔</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: REVISÃO ATIVA (QUESTÕES EXAUSTIVAS) ══════════════════════════════ -->
+    <section id="revisao-ativa" class="section">
+      <div class="section-label">Simulado Prático Padrão Concursos</div>
+      <h2>📝 Revisão Ativa Multibancas (Discursivas, V/F, CEBRASPE, FGV, FCC)</h2>
+
+      <!-- 1. Pergunta Discursiva -->
+      <div class="exercise">
+        <span class="tag-banca">Discursiva · Prática Processual / Magistratura</span>
+        <p><strong>01. Em sede de ação ordinária de cobrança, o juiz constata que o autor outorgou procuração a advogado suspenso dos quadros da OAB, e que o réu não juntou instrumento procuratório ao apresentar contestação. Diante desse quadro fático, qual deve ser a conduta procedimental do magistrado e quais as consequências jurídicas imediatas caso ambas as partes permaneçam inertes? Fundamente no CPC.</strong></p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Padrão de Resposta Esperado:</strong><br>
+            1. <strong>Conduta Inicial Obrigatória:</strong> Em homenagem ao Princípio da Primazia do Julgamento do Mérito e da Cooperação (Arts. 4º e 6º), o magistrado não pode extinguir a causa de imediato nem decretar a revelia de plano. Com fulcro no <strong>Art. 76, caput, do CPC</strong>, o juiz deve <strong>suspender o processo e fixar prazo razoável</strong> para que tanto o autor quanto o réu sanem o vício de capacidade postulatória e representação processual.<br>
+            2. <strong>Consequências da Inércia Superveniente (§ 1º do Art. 76):</strong><br>
+            • Em relação ao <strong>AUTOR</strong>: Descumprida a ordem de regularização, o processo será extinto sem resolução do mérito, com esteio no <strong>Art. 76, § 1º, I c/c Art. 485, IV, do CPC</strong>.<br>
+            • Em relação ao <strong>RÉU</strong>: Verificada a inércia, o magistrado o reputará <strong>REVEL</strong>, nos exatos termos do <strong>Art. 76, § 1º, II do CPC</strong>, com o desentranhamento ou preclusão de suas manifestações e presunção relativa de veracidade dos fatos articulados na exordial.
+          </div>
+        </details>
+      </div>
+
+      <!-- 2. Verdadeiro ou Falso -->
+      <div class="exercise">
+        <span class="tag-banca">Verdadeiro ou Falso · Aprofundado</span>
+        <p><strong>02. Analise a assertiva: "O beneficiário da justiça gratuita, caso sucumbente ao final da demanda, fica integralmente isento do pagamento de honorários advocatícios e de despesas processuais, bem como isento de quaisquer multas processuais que lhe tenham sido cominadas durante a instrução." (V / F)</strong></p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: FALSO.</strong><br>
+            <strong>Fundamentação Legal (Art. 98, §§ 2º, 3º e 4º do CPC):</strong><br>
+            1. O beneficiário sucumbente <strong>é condenado</strong> em custas e honorários, contudo sua exigibilidade fica sob condição suspensiva pelo prazo de 5 anos (Art. 98, §§ 2º e 3º).<br>
+            2. A gratuidade da justiça <strong>NÃO AFASSTA</strong> o dever de pagar as multas processuais que lhe tenham sido impostas (litigância de má-fé, ato atentatório à dignidade da justiça e astreintes), conforme expressamente determina o <strong>Art. 98, § 4º, do CPC</strong>.
+          </div>
+        </details>
+      </div>
+
+      <!-- 3. CEBRASPE -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo CEBRASPE · Certo ou Errado</span>
+        <p><strong>03. (CEBRASPE / Adaptada) O advogado público ou privado que descumprir deliberadamente decisão judicial cominatória ou criar embaraços à efetivação de tutela provisória estará sujeito à aplicação direta pelo magistrado de multa de até vinte por cento do valor da causa por ato atentatório à dignidade da justiça. (Certo / Errado)</strong></p>
+        <details>
+          <summary>Ver resposta comentada e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Resposta: ERRADO.</strong><br>
+            <strong>Fundamentação Legal (Art. 77, § 6º do CPC):</strong> O dispositivo estabelece expressamente que as sanções cominadas pelo cometimento de ato atentatório à dignidade da justiça previstas nos §§ 2º e 5º <strong>NÃO SE APLICAM aos advogados públicos ou privados, aos defensores públicos e aos membros do Ministério Público</strong>. Caberá ao juiz oficiar à Ordem dos Advogados do Brasil (OAB) ou ao respectivo órgão corregedor para apuração de responsabilidade ético-disciplinar correspondente.
+          </div>
+        </details>
+      </div>
+
+      <!-- 4. FGV -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo FGV · OAB / Carreiras</span>
+        <p><strong>04. (FGV / OAB) Roberto, casado com Mariana pelo regime da comunhão parcial de bens, pretende ajuizar ação de usucapião ordinária referente a uma fazenda no interior do Estado. Mariana, contudo, recusa-se categoricamente a assinar a petição inicial ou fornecer anuência, sem apresentar qualquer justificativa plausível. Diante do direito processual civil vigente:</strong></p>
+        <p>A) Roberto poderá ajuizar a ação independentemente de qualquer providência, pois o direito de ação é absoluto e incondicionado.<br>
+           B) Roberto deverá requerer o suprimento judicial do consentimento em procedimento de jurisdição voluntária, cuja falta não suprida acarreta invalidação do processo.<br>
+           C) A recusa de Mariana enseja a extinção imediata de qualquer pretensão possessória ou dominial, sendo vedado ao Estado-Juiz interferir na autonomia privada do casal.<br>
+           D) Roberto necessita apenas prestar caução real no valor da causa para dispensar a outorga uxória da esposa.</p>
+        <details>
+          <summary>Ver gabarito e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Gabarito: B (Suprimento Judicial via Jurisdição Voluntária).</strong><br>
+            <strong>Fundamentação Legal:</strong> Conforme os <strong>Arts. 73, caput, e 74 do CPC</strong>, a propositura de ação sobre direito real imobiliário exige a outorga uxória/marital. Negada a vênia sem justo motivo, o interessado deve requerer o suprimento judicial perante a Vara de Família. A falta do consentimento necessário e não suprido pelo juiz acarreta a nulidade e invalidação de todo o processo (Art. 74, parágrafo único).
+          </div>
+        </details>
+      </div>
+
+      <!-- 5. FCC -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo FCC · Magistratura / Defensoria</span>
+        <p><strong>05. (FCC) Em relação à fixação dos honorários advocatícios sucumbenciais no Código de Processo Civil e ao entendimento vinculante do Superior Tribunal de Justiça (Tema 1.076):</strong></p>
+        <p>A) É discricionariedade do magistrado reduzir equitativamente os honorários sempre que o valor da causa for milionário, prestigiando a razoabilidade.<br>
+           B) Nas causas de valor inestimável ou irrisório, o juiz deve fixar os honorários obrigatoriamente entre 10% e 20% do valor da causa.<br>
+           C) A fixação dos honorários por apreciação equitativa possui aplicação subsidiária restrita às hipóteses de proveito econômico inestimável ou irrisório, ou valor da causa muito baixo, sendo vedada em causas de valor elevado.<br>
+           D) A Fazenda Pública não se sujeita ao pagamento de honorários sucumbenciais quando for vencida em lide tributária de grande porte.</p>
+        <details>
+          <summary>Ver gabarito e fundamentação</summary>
+          <div class="gabarito">
+            <strong>Gabarito: C (Aplicação subsidiária do Art. 85, § 8º e Tema 1.076 STJ).</strong><br>
+            <strong>Fundamentação:</strong> O Superior Tribunal de Justiça, ao fixar a tese vinculante do Tema 1.076, assentou que os honorários por equidade (Art. 85, § 8º) não podem ser utilizados como válvula de escape para reduzir o percentual mínimo de 10% nas causas de valor elevado. A equidade é excepcional, restrita a causas de proveito econômico irrisório, inestimável ou valor excessivamente baixo.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SEÇÃO: RESUMO FINAL (CHEAT SHEET DE UMA PÁGINA) ══════════════════════════════ -->
+    <section id="resumo-final" class="section">
+      <div class="section-label">Módulo de Revisão Final de Uma Página</div>
+      <div class="card gold" style="background: var(--p-50);">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Final de Partes e Procuradores)</h2>
+        <p style="font-size: 1.05rem; line-height: 1.85;">
+          • <strong>Tríplice Capacidade:</strong> (1) <em>Capacidade de Ser Parte</em>: Todas as pessoas civis e entes despersonalizados (Art. 75). (2) <em>Capacidade Processual</em>: Aptidão para estar em juízo pessoalmente (Art. 70); incapazes são representados ou assistidos (Art. 71). (3) <em>Capacidade Postulatória</em>: Habilitação técnica exclusiva de advogados na OAB e MP (Art. 103).<br>
+          • <strong>Representações Fundamentais (Art. 75):</strong> União pela AGU; Estados por Procuradores; Município por Prefeito/Procurador/Associação autorizada (§ 5º); Filial de empresa estrangeira citada na pessoa do gerente (§ 3º); Espólio pelo inventariante (se dativo, intima os herdeiros - § 1º).<br>
+          • <strong>Outorga Conjugal (Art. 73/74):</strong> Obrigatória em ações de direito real imobiliário, <strong>salvo separação absoluta de bens</strong>. Recusa imotivada é suprida judicialmente na Vara de Família. Ausência gera nulidade insanável (Art. 74, p. único). Possessória só exige outorga em composse ou esbulho praticado por ambos.<br>
+          • <strong>Saneamento Imperativo (Art. 76):</strong> Juiz suspende e dá prazo. Se autor inerte &rarr; extinção sem resolução de mérito (Art. 485, IV). Se réu inerte &rarr; revelia. Se recorrente inerte &rarr; não conhecimento do recurso.<br>
+          • <strong>Deveres Éticos &amp; Violações (Art. 77/80):</strong> Descumprir ordem judicial (inciso IV) e inovar no estado do bem (inciso VI) &rarr; <strong>Ato Atentatório à Dignidade da Justiça</strong>: multa de até 20% para a Fazenda Pública (Dívida Ativa). Advogados e MP têm imunidade dessa multa (§ 6º). Litigância de má-fé reverte para a outra parte (Art. 81).<br>
+          • <strong>Despesas &amp; Honorários (Arts. 82, 95 e 85):</strong> Regra geral: quem requer antecipa; se pelo juiz/MP, autor adianta (Art. 82). Perícia: se determinada de ofício, <strong>rateia-se</strong> (Art. 95). Honorários gerais de 10% a 20% (Tema 1.076 STJ proíbe equidade em causas elevadas).<br>
+          • <strong>Gratuidade da Justiça (Arts. 98 a 102):</strong> Pessoa natural &rarr; presunção relativa de pobreza (Art. 99, § 3º). Pessoa jurídica &rarr; necessita de prova contábil (Súmula 481 STJ). Sucumbência suspensa por 5 anos (Art. 98, § 3º). Revogação ou indeferimento desafia Agravo de Instrumento (Art. 1.015, V). Beneficiário não é isento de multas processuais!<br>
+          • <strong>Mandato Judicial (Art. 105):</strong> Cláusula <em>ad judicia</em> para atos gerais. Cláusula especial expressa (C-C-R-R-T-D-D-Q) para confessar, transigir, desistir, receber citação e dar quitação. Procuração dispensada à advocacia pública (Súmula 644 STF).
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Core Scripts do Portal Hub -->
+  <script src="../../portal-core.js"></script>
+</body>
+</html>
