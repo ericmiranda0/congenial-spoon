@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistência Social e BPC | Direito Constitucional III</title>
+
+  <!-- Google Fonts: Heading: Outfit | Body: Lora / Inter | Monospace: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Identidade Visual: Direito Constitucional (Verde Esmeralda & Floresta Profunda) */
+    :root {
+      --p-700: #064E3B;
+      --p-600: #065F46;
+      --p-500: #10B981;
+      --p-400: #34D399;
+      --p-100: #D1FAE5;
+      --p-50: #ECFDF5;
+      --primary: #10B981;
+      --primary-dark: #064E3B;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+      --border-green: rgba(16, 185, 129, 0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #022C22 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin: 10px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    header .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #A7F3D0;
+      max-width: 850px;
+      margin: 10px auto 20px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Navegação */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      padding: 10px 0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] .main-nav {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .home-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--p-50);
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid var(--border-green);
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] .home-btn {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    .home-btn:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 4px 0;
+    }
+
+    .nav-list a {
+      color: var(--text-muted, #64748B);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .nav-list a:hover {
+      color: var(--p-600);
+      background: var(--p-50);
+    }
+
+    [data-theme="dark"] .nav-list a:hover {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    /* Caixas e Componentes Didáticos */
+    .objectives-card {
+      background: var(--p-50);
+      border: 2px solid var(--p-500);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    [data-theme="dark"] .objectives-card {
+      background: rgba(6, 78, 59, 0.2);
+    }
+
+    .objectives-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    [data-theme="dark"] .objectives-title {
+      color: #A7F3D0;
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .objective-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--p-700);
+      border-bottom: 2px solid var(--p-100);
+      padding-bottom: 8px;
+      margin: 45px 0 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    [data-theme="dark"] .section-title {
+      color: #6EE7B7;
+      border-bottom-color: rgba(16, 185, 129, 0.2);
+    }
+
+    /* 3 Níveis de Explicação */
+    .levels-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-card {
+      border-radius: 12px;
+      padding: 18px 22px;
+      border-left: 6px solid;
+      background: var(--bg-card, #FFFFFF);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-top: 1px solid var(--border, #E2E8F0);
+      border-right: 1px solid var(--border, #E2E8F0);
+      border-bottom: 1px solid var(--border, #E2E8F0);
+    }
+
+    .level-1 {
+      border-left-color: #3B82F6;
+    }
+
+    .level-2 {
+      border-left-color: #10B981;
+    }
+
+    .level-3 {
+      border-left-color: #8B5CF6;
+    }
+
+    .level-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .tag-l1 { background: #DBEAFE; color: #1E40AF; }
+    .tag-l2 { background: #D1FAE5; color: #065F46; }
+    .tag-l3 { background: #EDE9FE; color: #5B21B6; }
+
+    /* Palavras-chave & Artigos */
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border-green);
+    }
+
+    [data-theme="dark"] .kw {
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.15);
+    }
+
+    .artigo {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #CBD5E1);
+      border-radius: 12px;
+      margin: 18px 0;
+      padding: 16px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #A7F3D0;
+    }
+
+    .artigo-conteudo {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed var(--border, #CBD5E1);
+      font-family: 'Lora', serif;
+      font-size: 1.02rem;
+    }
+
+    /* Boxes Informações */
+    .box {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-left: 5px solid;
+    }
+
+    .box-dica {
+      background: #EFF6FF;
+      border-left-color: #2563EB;
+      color: #1E3A8A;
+    }
+
+    .box-alerta {
+      background: #FEF2F2;
+      border-left-color: #EF4444;
+      color: #991B1B;
+    }
+
+    .box-juris {
+      background: #FAF5FF;
+      border-left-color: #9333EA;
+      color: #581C87;
+    }
+
+    .box-pegadinha {
+      background: #FFFBEB;
+      border-left-color: #F59E0B;
+      color: #92400E;
+    }
+
+    [data-theme="dark"] .box-dica { background: rgba(37, 99, 235, 0.12); color: #93C5FD; }
+    [data-theme="dark"] .box-alerta { background: rgba(239, 68, 68, 0.12); color: #FCA5A5; }
+    [data-theme="dark"] .box-juris { background: rgba(147, 51, 234, 0.12); color: #D8B4FE; }
+    [data-theme="dark"] .box-pegadinha { background: rgba(245, 158, 11, 0.12); color: #FCD34D; }
+
+    /* Tabelas Comparativas */
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border, #E2E8F0);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      padding: 14px 18px;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      background: var(--bg-card, #FFFFFF);
+    }
+
+    tr:nth-child(even) td {
+      background: var(--p-50);
+    }
+
+    [data-theme="dark"] tr:nth-child(even) td {
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    /* Mapa Mental Monospace */
+    .mindmap {
+      background: #0F172A;
+      color: #38BDF8;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 24px;
+      border-radius: 14px;
+      line-height: 1.6;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      margin: 25px 0;
+      border: 1px solid #1E293B;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .mindmap .hl {
+      color: #FACC15;
+      font-weight: 700;
+    }
+
+    .mindmap .sub {
+      color: #34D399;
+    }
+
+    /* Mnemônico */
+    .mnemonic-card {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .mnemonic-pill {
+      background: #FACC15;
+      color: #0F172A;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    /* Flashcards */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .flashcard-q {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--p-700);
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    [data-theme="dark"] .flashcard-q {
+      color: #A7F3D0;
+    }
+
+    .flashcard-a {
+      font-size: 0.9rem;
+      color: var(--text-muted, #475569);
+      border-top: 1px dashed var(--border, #E2E8F0);
+      padding-top: 10px;
+    }
+
+    /* Questões */
+    .question-card {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+    }
+
+    .question-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge-banca {
+      background: var(--p-700);
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .gabarito-details {
+      margin-top: 16px;
+      background: var(--p-50);
+      border-radius: 8px;
+      padding: 12px 16px;
+      border: 1px solid var(--border-green);
+    }
+
+    [data-theme="dark"] .gabarito-details {
+      background: rgba(6, 78, 59, 0.2);
+    }
+
+    .gabarito-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 0.92rem;
+    }
+
+    [data-theme="dark"] .gabarito-details summary {
+      color: #6EE7B7;
+    }
+
+    /* Cheat Sheet Final */
+    .cheatsheet {
+      background: linear-gradient(135deg, var(--p-50) 0%, #FFFFFF 100%);
+      border: 2px dashed var(--p-500);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 40px 0;
+    }
+
+    [data-theme="dark"] .cheatsheet {
+      background: rgba(15, 23, 42, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER HERO -->
+  <header>
+    <div class="container">
+      <div class="badge">Direito Constitucional III · Ordem Social</div>
+      <h1>Assistência Social e BPC</h1>
+      <div class="subtitle">Artigos 203 e 204 da CF/88, Lei Orgânica da Assistência Social (LOAS), Benefício de Prestação Continuada e Diretrizes Constitucionais</div>
+      <div class="meta">
+        <span>⚖️ Arts. 203 e 204 CF/88 &amp; Lei 8.742/93</span>
+        <span>🏛️ Seguridade Social Não Contributiva</span>
+        <span>🎯 Foco em OAB e Concursos de Alto Nível</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR FIXA -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal Geral">← Portal</a>
+      <div class="nav-list">
+        <a href="#objetivos">Objetivos</a>
+        <a href="#modulo1">1. Conceito e Destinatários</a>
+        <a href="#modulo2">2. Objetivos Constitucionais</a>
+        <a href="#modulo3">3. BPC & Requisitos</a>
+        <a href="#modulo4">4. Vedação de Acúmulo e Vedações Financeiras</a>
+        <a href="#modulo5">5. Diretrizes do Art. 204</a>
+        <a href="#modulo6">6. Vinculação Orçamentária dos Estados (0,5%)</a>
+        <a href="#mapas">Mapas Mentais</a>
+        <a href="#questoes">Revisão Ativa</a>
+        <a href="#cheatsheet">Resumo Expresso</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- OBJETIVOS DE APRENDIZAGEM -->
+    <div class="objectives-card" id="objetivos">
+      <div class="objectives-title">🎯 Objetivos de Aprendizagem e Competências Chave</div>
+      <div class="objectives-grid">
+        <div class="objective-item"><span>✅</span> <strong>Distinção Dogmática:</strong> Compreender a natureza não contributiva da Assistência Social frente à Previdência.</div>
+        <div class="objective-item"><span>✅</span> <strong>Regime do BPC/LOAS:</strong> Dominar requisitos de idade, deficiência, cálculo de miserabilidade e exclusões legais.</div>
+        <div class="objective-item"><span>✅</span> <strong>Diretrizes do Art. 204:</strong> Analisar a descentralização político-administrativa e a participação comunitária representativa.</div>
+        <div class="objective-item"><span>✅</span> <strong>Vinculação Tributária:</strong> Aplicar o limite facultativo de até 0,5% da receita líquida estadual e suas vedações de custeio.</div>
+      </div>
+    </div>
+
+    <!-- MÓDULO 1: INTRODUÇÃO, NATUREZA E DESTINATÁRIOS -->
+    <section id="modulo1">
+      <h2 class="section-title"><span>01</span> Natureza Jurídica, Não Contributividade e Destinatários</h2>
+      
+      <p>A Assistência Social compõe, ao lado da Saúde e da Previdência Social, o consagrado <strong>Tripé da Seguridade Social</strong> (art. 194 da CF/88). Enquanto a Previdência tem caráter estritamente contributivo e a Saúde é universal a todos, a Assistência Social é prestada <span class="kw">a quem dela necessitar</span>, sem exigir qualquer contraprestação financeira direta ou prévia.</p>
+
+      <div class="levels-container">
+        <div class="level-card level-1">
+          <span class="level-tag tag-l1">Nível 1 · Analogia Intuitiva</span>
+          <p>Pense na Previdência como um seguro de carro: se você não pagar o boleto mensalmente, a seguradora não cobre o sinistro. Já a <strong>Assistência Social</strong> é como a Defesa Civil ou uma ambulância do SAMU para desastres de sobrevivência: ela ampara quem não tem o que comer ou quem depende de cuidado urgente, mesmo que nunca tenha recolhido um único centavo de tributo previdenciário.</p>
+        </div>
+
+        <div class="level-card level-2">
+          <span class="level-tag tag-l2">Nível 2 · Dogmática Universitária</span>
+          <p>Conforme o art. 203, caput, da CF/88, a assistência social integra a seguridade com a característica basilar da <em>gratuidade</em> e da <em>não contributividade</em>. Os benefícios assistenciais pecuniários destinam-se precipuamente a brasileiros natos, naturalizados e também a estrangeiros residentes no país (conforme pacificado pelo STF no Tema 173 de Repercussão Geral), desde que domiciliados e em situação de hipossuficiência.</p>
+        </div>
+
+        <div class="level-card level-3">
+          <span class="level-tag tag-l3">Nível 3 · Concursos Públicos & Pegadinhas</span>
+          <p><strong>Estrangeiros residentes têm direito ao BPC?</strong> SIM! O STF fixou a tese de que o art. 203, V, da CF/88 alcança os estrangeiros residentes no Brasil que atendam aos requisitos legais de miserabilidade e idade/deficiência, em homenagem ao princípio da dignidade da pessoa humana e ao caput do art. 5º da Carta Magna. Bancas frequentemente tentam restringir o direito a "exclusivamente brasileiros natos". Falso!</p>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 203 da CF/88 — Caput (Princípio da Não Contributividade)</summary>
+        <div class="artigo-conteudo">
+          <blockquote>"A assistência social será prestada a <strong>quem dela necessitar, independentemente de contribuição</strong> à seguridade social, e tem por objetivos: [...]"</blockquote>
+          <p><strong>Comentário:</strong> Repare no binômio basilar: necessidade comprovada + independência de custeio individual prévio. Quem recebe assistência não é "segurado", mas "beneficiário".</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- MÓDULO 2: OS OBJETIVOS CONSTITUCIONAIS -->
+    <section id="modulo2">
+      <h2 class="section-title"><span>02</span> Rol Constitucional dos Objetivos da Assistência Social</h2>
+      <p>O art. 203 elenca metas materiais expressas para a atuação estatal:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0;">
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>I - Proteção Intergeracional</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Proteção à família, à maternidade, à infância, à adolescência e à velhice.</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>II - Amparo Infantojuvenil</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Amparo especial a crianças e adolescentes carentes em risco social.</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>III - Inserção Laboral</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Promoção da integração ao mercado de trabalho (não apenas assistencialismo passivo).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>IV - Habilitação & Reabilitação</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Habilitação e reabilitação de PCDs e promoção de sua integração à vida comunitária.</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>VI - Redução de Vulnerabilidade</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Redução da vulnerabilidade socioeconômica de famílias em pobreza extrema (incluído pela EC 114/2021).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 3: BPC (BENEFÍCIO DE PRESTAÇÃO CONTINUADA) -->
+    <section id="modulo3">
+      <h2 class="section-title"><span>03</span> O Benefício de Prestação Continuada (BPC/LOAS)</h2>
+      <p>Previsto no art. 203, inciso V, da CF e regulamentado pela Lei nº 8.742/1993 (LOAS), o BPC é o instrumento de maior relevância prática e incidência em provas da assistência social.</p>
+
+      <div class="box box-dica">
+        <strong>💡 Valor Imutável:</strong> O valor do BPC é fixado pela Constituição em <strong>exatamente 1 (um) salário mínimo mensal</strong>. Não pode ser inferior nem superior.
+      </div>
+
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 25px;">Requisitos Cumulativos para Concessão:</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Exigência Legal (LOAS)</th>
+              <th>Doutrina e Jurisprudência dos Tribunais Superiores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Idoso</strong></td>
+              <td>Idade igual ou superior a <strong>65 anos</strong> (para homens e mulheres).</td>
+              <td>O Estatuto do Idoso considera idoso quem tem 60 anos, mas para fins de BPC a exigência constitucional e legal permanece em 65 anos!</td>
+            </tr>
+            <tr>
+              <td><strong>Pessoa com Deficiência</strong></td>
+              <td>Impedimento de longo prazo (mínimo de <strong>2 anos</strong>) de natureza física, mental, intelectual ou sensorial.</td>
+              <td>O impedimento deve obstruir, em interação com barreiras, a participação plena e igualitária na sociedade (conceito biopsicossocial do Estatuto da PCD).</td>
+            </tr>
+            <tr>
+              <td><strong>Miserabilidade Objetiva</strong></td>
+              <td>Renda familiar per capita mensal <strong>inferior a 1/4 do salário mínimo</strong>.</td>
+              <td><strong>STF (STF RE 567.985):</strong> Declarou a inconstitucionalidade sem pronúncia de nulidade do critério de 1/4 como absoluto. O juiz pode avaliar outros meios probatórios (§ 11 do art. 20 da LOAS).</td>
+            </tr>
+            <tr>
+              <td><strong>Cadastro CadÚnico & CPF</strong></td>
+              <td>Inscrição obrigatória e regular do requerente e membros da família no CPF e CadÚnico (§ 12).</td>
+              <td>Requisito procedimental obrigatório sob pena de indeferimento ou imediata suspensão do benefício.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box-pegadinha">
+        <strong>🎯 Pegadinha Suprema de Concursos — BPC Duplo na Mesma Família (§ 14 da LOAS):</strong>
+        <p>O BPC ou benefício previdenciário no valor de até 1 salário mínimo já recebido por um idoso (+65 anos) ou pessoa com deficiência <strong>NÃO É COMPUTADO</strong> no cálculo da renda per capita para conceder novo BPC a outro membro da mesma família! Ou seja: em uma casa com dois idosos vulneráveis, ambos podem receber o BPC simultaneamente.</p>
+      </div>
+
+      <div class="box box-alerta">
+        <strong>⚠️ O que o BPC NÃO Gera de Forma Alguma:</strong>
+        <ul>
+          <li><strong>Não gera Abono Anual (13º salário):</strong> O BPC paga apenas as 12 parcelas mensais ordinárias do ano.</li>
+          <li><strong>Não gera Pensão por Morte:</strong> Com o falecimento do beneficiário, o benefício é imediatamente extinto, não deixando qualquer resíduo ou pensão aos dependentes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4: VEDAÇÕES DE ACÚMULO E COMPOSIÇÃO FAMILIAR -->
+    <section id="modulo4">
+      <h2 class="section-title"><span>04</span> Vedações Legais de Acúmulo e Conceito de Grupo Familiar</h2>
+      
+      <p>Nos moldes do <strong>Art. 20, § 4º, da Lei 8.742/93</strong>, o BPC <strong>não pode ser acumulado</strong> com qualquer outro benefício no âmbito da Seguridade Social (Previdência, Seguro-Desemprego, outro BPC) ou de qualquer outro regime, <strong>com apenas DUAS EXCEÇÕES</strong>:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0;">
+        <div class="level-card" style="border-left-color: #10B981; background: #ECFDF5;">
+          <strong>✅ Exceção 1: Assistência Médica</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Serviços médicos, farmacêuticos ou hospitalares fornecidos pelo Poder Público/SUS.</p>
+        </div>
+        <div class="level-card" style="border-left-color: #10B981; background: #ECFDF5;">
+          <strong>✅ Exceção 2: Pensão Especial Indenizatória</strong>
+          <p style="font-size: 0.9rem; margin-top: 5px;">Pensões especiais decorrentes de responsabilidade civil do Estado (ex: vítimas de Talidomida, vítimas do Césio-137, Zika Vírus).</p>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 25px;">Conceito Legal Estrito de Família para a LOAS (Art. 20, § 1º):</h3>
+      <p>Para fins de cálculo da renda familiar per capita, compreendem o grupo familiar exclusivamente as seguintes pessoas que <strong>vivam sob o mesmo teto</strong>:</p>
+      <ul>
+        <li>O requerente;</li>
+        <li>O cônjuge ou companheiro(a);</li>
+        <li>Os pais (e, na ausência de um deles, a madrasta ou padrasto);</li>
+        <li>Os irmãos solteiros;</li>
+        <li>Os filhos e enteados solteiros;</li>
+        <li>Os menores tutelados.</li>
+      </ul>
+      <div class="box box-dica">
+        <strong>💡 Atenção:</strong> Irmãos casados, filhos casados, tios ou avós — mesmo que morem no mesmo lote ou residência — <strong>não entram no cálculo formal da renda familiar da LOAS</strong>!
+      </div>
+    </section>
+
+    <!-- MÓDULO 5: DIRETRIZES CONSTITUCIONAIS DO ART. 204 -->
+    <section id="modulo5">
+      <h2 class="section-title"><span>05</span> Financiamento e Diretrizes Organizacionais (Art. 204 CF)</h2>
+
+      <p>O financiamento da assistência social utiliza recursos do <strong>Orçamento da Seguridade Social</strong> (previstos no art. 195 da CF), além de dotações orçamentárias de outras fontes da União, Estados, DF e Municípios.</p>
+
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 25px;">As Duas Diretrizes Fundamentais:</h3>
+
+      <div class="levels-container">
+        <div class="level-card" style="border-left-color: var(--p-600);">
+          <strong style="font-size: 1.1rem; color: var(--p-700);">I - Descentralização Político-Administrativa</strong>
+          <p>O poder central não monopoliza a assistência. A distribuição federativa opera da seguinte maneira:</p>
+          <ul>
+            <li><strong>União:</strong> Coordenação geral e edição de normas gerais em nível nacional.</li>
+            <li><strong>Estados, DF e Municípios:</strong> Coordenação local e execução direta dos respectivos programas socioassistenciais.</li>
+            <li><strong>Entidades Beneficentes e de Assistência Social:</strong> Participação complementar na execução física e operacional dos serviços à comunidade.</li>
+          </ul>
+        </div>
+
+        <div class="level-card" style="border-left-color: var(--p-600);">
+          <strong style="font-size: 1.1rem; color: var(--p-700);">II - Participação Comunitária por Organizações Representativas</strong>
+          <p>A população atua diretamente por meio de conselhos e entidades nas seguintes vertentes duplas:</p>
+          <ul>
+            <li><strong>Formulação de Políticas:</strong> Participação na definição das diretrizes e prioridades de investimento social.</li>
+            <li><strong>Controle e Fiscalização das Ações:</strong> Acompanhamento contínuo da execução dos gastos e da lisura dos programas públicos.</li>
+            <li><strong>Abrangência Plena:</strong> A participação ocorre obrigatoriamente <em>em todos os níveis federativos</em> (Conselhos Municipais, Estaduais e Nacional de Assistência Social - CMAS, CEAS e CNAS).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 6: VINCULAÇÃO ORÇAMENTÁRIA FACULTATIVA (PARÁGRAFO ÚNICO DO ART. 204) -->
+    <section id="modulo6">
+      <h2 class="section-title"><span>06</span> Vinculação Orçamentária Facultativa dos Estados e DF</h2>
+
+      <details class="artigo" open>
+        <summary>⚖️ Art. 204, Parágrafo Único da CF/88 — Vinculação da Receita Tributária Líquida</summary>
+        <div class="artigo-conteudo">
+          <blockquote>"É <strong>facultado</strong> aos Estados e ao Distrito Federal vincular a programa de apoio à inclusão e promoção social <strong>até cinco décimos por cento (0,5%)</strong> de sua receita tributária líquida, <strong>vedada a aplicação desses recursos</strong> no pagamento de:
+          <br>I - despesas com pessoal e encargos sociais;
+          <br>II - serviço da dívida;
+          <br>III - qualquer outra despesa corrente não vinculada diretamente aos investimentos ou ações apoiados."</blockquote>
+        </div>
+      </details>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Regra Constitucional</th>
+              <th>Pegadinha Frequente de Banca</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Natureza do Ato</strong></td>
+              <td><strong>Facultativo:</strong> O Estado/DF não é obrigado a vincular. Ele decide discricionariamente se quer ou não reservar esse percentual.</td>
+              <td>Afirmar que existe a <em>"imposição obrigatória de reserva orçamentária para a promoção social"</em>. <strong>FALSO!</strong> É mera faculdade.</td>
+            </tr>
+            <tr>
+              <td><strong>Entes Alcançados</strong></td>
+              <td>Exclusivamente <strong>Estados e Distrito Federal</strong>. Municípios NÃO foram incluídos neste parágrafo único!</td>
+              <td>Estender a prerrogativa expressa do parágrafo único aos Municípios.</td>
+            </tr>
+            <tr>
+              <td><strong>Teto Percentual</strong></td>
+              <td><strong>Até 0,5%</strong> (cinco décimos por cento) da Receita Tributária Líquida (RTL). Pode ser 0,2%, 0,4%, mas nunca superior a 0,5%.</td>
+              <td>Confundir 0,5% (meio por cento) com 5% (cinco por cento). Uma diferença de 10 vezes que anula questões!</td>
+            </tr>
+            <tr>
+              <td><strong>Destinação Obrigatória</strong></td>
+              <td>Exclusiva para programas finalísticos de apoio à inclusão e promoção social.</td>
+              <td>Utilizar os fundos para pagar salários atrasados de servidores do Estado. <strong>VEDADO!</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box-alerta">
+        <strong>🚫 As 3 Vedações Absolutas de Aplicação desses Recursos (Art. 204, P. Único):</strong>
+        <ol>
+          <li><strong>Despesas com pessoal e encargos sociais:</strong> Proibido usar para folha de pagamento de servidores.</li>
+          <li><strong>Serviço da dívida pública:</strong> Proibido usar para amortizar juros ou pagar parcelas de empréstimos do Estado.</li>
+          <li><strong>Despesas correntes desvinculadas:</strong> Proibido usar para custeio de máquina pública geral (combustível, papelaria, reformas de prédios gerais) que não estejam 100% voltadas aos programas sociais.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- MAPA MENTAL MONOSPACE -->
+    <section id="mapas">
+      <h2 class="section-title"><span>07</span> Mapas Mentais Textuais Consolidados</h2>
+
+      <div class="mindmap">
+<span class="hl">ASSISTÊNCIA SOCIAL NA CF/88 (ARTS. 203 E 204)</span>
+│
+├── <span class="sub">1. CARACTERÍSTICAS MATRIZES</span>
+│   ├── Não Contributiva (independe de pagamento prévio)
+│   ├── Seletiva: Destinada a "quem dela necessitar"
+│   └── Custeio: Orçamento da Seguridade Social (Art. 195) + Outras Fontes
+│
+├── <span class="sub">2. BPC / LOAS (Art. 203, V)</span>
+│   ├── Valor: Exatamente 1 Salário Mínimo
+│   ├── Beneficiários: Idoso (&ge; 65 anos) OU Pessoa com Deficiência (longo prazo &ge; 2 anos)
+│   ├── Miserabilidade: Renda familiar per capita &lt; 1/4 SM (mitigável judicialmente)
+│   ├── Inscrição Obrigatória: CPF + CadÚnico
+│   ├── Acúmulo Proibido (Salvo: Assistência Médica e Pensão Especial Indenizatória)
+│   ├── <span class="hl">Regra de Ouro: NÃO gera 13º salário e NÃO gera Pensão por Morte</span>
+│   └── Proteção Recíproca: BPC anterior de idoso/PCD não entra na renda para novo BPC
+│
+├── <span class="sub">3. DIRETRIZES DO ART. 204</span>
+│   ├── Descentralização Político-Administrativa
+│   │   ├── União: Normas Gerais & Coordenação Central
+│   │   ├── Estados/DF/Municípios: Coordenação & Execução dos Programas
+│   │   └── Entidades Beneficentes: Participação na Execução
+│   └── Participação Popular Representativa
+│       ├── Atuação: Formulação + Fiscalização/Controle
+│       └── Âmbito: Em todos os níveis federativos (Conselhos Sociais)
+│
+└── <span class="sub">4. VINCULAÇÃO TRIBUTÁRIA DOS ESTADOS E DF (Art. 204, Parágrafo Único)</span>
+    ├── Natureza: FACULTADA (não obrigatória)
+    ├── Limite Máximo: ATÉ 0,5% da Receita Tributária Líquida
+    └── Vedações Expressas:
+        ├── 1. Folha de Pessoal e Encargos
+        ├── 2. Serviço da Dívida
+        └── 3. Despesas Correntes Genéricas
+      </div>
+
+      <!-- Mnemônico -->
+      <div class="mnemonic-card">
+        <h3 style="font-family: 'Outfit'; color: #FACC15; margin-top: 0;">🧠 Mnemônico Supremo: As 3 Vedações Orçamentárias do Art. 204</h3>
+        <p>Lembre-se da palavra <span class="mnemonic-pill">P · E · D</span> para nunca errar onde o Estado <strong>NÃO PODE</strong> gastar os 0,5% sociais:</p>
+        <p><span class="mnemonic-pill">P</span> <strong>Pessoal:</strong> Proibido pagamento de servidores e encargos sociais.</p>
+        <p><span class="mnemonic-pill">E</span> <strong>Encargos da Dívida:</strong> Proibido amortização e serviço da dívida pública.</p>
+        <p><span class="mnemonic-pill">D</span> <strong>Despesas Correntes:</strong> Proibida qualquer despesa de custeio não ligada diretamente aos investimentos sociais.</p>
+      </div>
+    </section>
+
+    <!-- FLASHCARDS INTERATIVOS -->
+    <section id="flashcards">
+      <h2 class="section-title"><span>08</span> Flashcards de Fixação Rápida</h2>
+      <div class="flashcards-grid">
+        <div class="flashcard">
+          <div class="flashcard-q">Qual a idade mínima para o BPC do Idoso?</div>
+          <div class="flashcard-a"><strong>65 anos</strong> (para homens e mulheres). O marco de 60 anos do Estatuto do Idoso não se aplica para concessão de BPC.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">O titular de BPC pode receber abono de Natal (13º salário)?</div>
+          <div class="flashcard-a"><strong>Não.</strong> Benefício assistencial é estritamente mensal (12 parcelas), sem direito a gratificação natalina.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">O BPC deixa pensão por morte aos dependentes?</div>
+          <div class="flashcard-a"><strong>Não.</strong> Extingue-se com a morte do titular, pois não é benefício de natureza previdenciária.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Quais benefícios podem ser acumulados com o BPC?</div>
+          <div class="flashcard-a">Apenas <strong>assistência médica</strong> e <strong>pensão especial de natureza indenizatória</strong> (art. 20, §4º, LOAS).</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Qual o limite que os Estados podem vincular à promoção social?</div>
+          <div class="flashcard-a"><strong>Até 0,5%</strong> (cinco décimos por cento) de sua receita tributária líquida, em caráter facultativo.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Municípios podem se valer do percentual do art. 204, p. único?</div>
+          <div class="flashcard-a"><strong>Não.</strong> A previsão é taxativa e expressa apenas para Estados e o Distrito Federal.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTÕES DE REVISÃO ATIVA COM GABARITO OCULTO -->
+    <section id="questoes">
+      <h2 class="section-title"><span>09</span> Questões de Revisão Ativa (Padrão OAB / CEBRASPE / FGV)</h2>
+
+      <!-- Questão 1 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">FGV · OAB Exame de Ordem</span>
+          <strong>Questão 1 — Regime Jurídico do BPC</strong>
+        </div>
+        <p>Severino, com 66 anos de idade, e sua esposa Madalena, com 65 anos de idade, vivem sob extrema pobreza em habitação precária, sem qualquer registro de emprego formal durante a vida. Severino teve seu pedido de BPC deferido pelo INSS no valor de 1 salário mínimo. Posteriormente, Madalena requereu o mesmo benefício perante a autarquia. O INSS indeferiu o pedido de Madalena afirmando que a renda familiar trazida pelo BPC de Severino dividida entre os dois gera 1/2 salário mínimo per capita, superando o critério legal de 1/4 de salário mínimo. À luz da legislação de regência e da CF/88, assinale a opção correta:</p>
+        <p>A) O indeferimento foi legítimo, pois a renda per capita superou 1/4 do salário mínimo.<br>
+        B) O indeferimento foi indevido, pois o benefício concedido ao idoso não é computado para fins de concessão de novo BPC a outro idoso da mesma família.<br>
+        C) Madalena só fará jus ao benefício caso Severino renuncie formalmente a 50% de seu benefício.<br>
+        D) Madalena teria direito se tivesse deficiência motora, mas entre dois idosos é vedada a duplicidade sob o mesmo teto.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: B</strong></p>
+            <p><strong>Fundamentação:</strong> Conforme o art. 20, § 14, da Lei 8.742/93 (LOAS), o BPC ou o benefício previdenciário no valor de até 1 salário mínimo concedido a idoso acima de 65 anos ou pessoa com deficiência <em>não será computado</em> para fins de concessão do BPC a outro idoso ou PCD da mesma família. Portanto, a renda de Severino é desconsiderada, fazendo Madalena jus ao seu próprio BPC integral.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 2 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">CEBRASPE · Concurso Magistratura / MP</span>
+          <strong>Questão 2 — Certo ou Errado: Vinculação Orçamentária</strong>
+        </div>
+        <p>(CEBRASPE) Em atenção às diretrizes da Seguridade Social, é obrigatório aos Estados e aos Municípios vincular a programa de apoio à inclusão e promoção social no mínimo 5% de sua receita tributária líquida, sendo admitida a utilização excepcional dessa verba para cobrir rombos na folha salarial dos servidores públicos da área de assistência social.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: ERRADO</strong></p>
+            <p><strong>Fundamentação:</strong> A questão contém múltiplos erros grosseiros à luz do art. 204, parágrafo único, da CF/88: (1) O ato é <em>facultado</em> e não obrigatório; (2) Não alcança os Municípios, mas apenas Estados e DF; (3) O teto é de <em>até 0,5%</em> (cinco décimos por cento) e não no mínimo 5%; (4) É expressamente <em>vedada</em> a aplicação de tais recursos no pagamento de despesas com pessoal e encargos sociais (inciso I).</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 3 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">FCC · Analista Judiciário TRF</span>
+          <strong>Questão 3 — Descentralização e Participação Social</strong>
+        </div>
+        <p>Acerca da organização e das diretrizes da assistência social consagradas na Constituição da República de 1988, é correto afirmar que:</p>
+        <p>A) A execução direta dos programas de assistência social é de competência privativa e centralizada da União Federal.<br>
+        B) A assistência social exige ao menos 12 contribuições mensais prévias para a concessão de amparo aos hipossuficientes.<br>
+        C) A descentralização prevê a coordenação e normas gerais na esfera federal, e a execução dos programas nas esferas estadual e municipal, além de entidades beneficentes.<br>
+        D) A participação popular na assistência social é meramente consultiva e circunscrita com exclusividade à esfera federal.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: C</strong></p>
+            <p><strong>Fundamentação:</strong> O art. 204, I, da CF/88 consagra a descentralização político-administrativa: normas gerais e coordenação central cabem à União; coordenação e execução direta cabem a Estados, DF, Municípios e entidades beneficentes assistenciais.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- RESUMO FINAL (CHEAT SHEET DE VÉSPERA DE PROVA) -->
+    <div class="cheatsheet" id="cheatsheet">
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 0; display: flex; align-items: center; gap: 8px;">
+        ⚡ Resumo Expresso de Véspera de Prova (Cheat Sheet)
+      </h3>
+      <ul style="line-height: 1.8; font-size: 0.95rem;">
+        <li><strong>Natureza:</strong> Seguridade Social Gratuita e NÃO Contributiva (Art. 203).</li>
+        <li><strong>BPC (Art. 203, V):</strong> Exatamente 1 Salário Mínimo para idoso (&ge;65 anos) ou pessoa com deficiência (impedimento &ge;2 anos) em miserabilidade (&lt; 1/4 SM per capita, flexível por provas).</li>
+        <li><strong>Vedações do BPC:</strong> NÃO gera 13º salário; NÃO gera Pensão por Morte; NÃO acumula com outro benefício (salvo assistência médica e pensão especial indenizatória).</li>
+        <li><strong>Proteção Recíproca (§ 14 da LOAS):</strong> BPC de 1 idoso/PCD não entra na renda para cálculo de BPC de outro membro do lar.</li>
+        <li><strong>Família para BPC (Art. 20, §1º):</strong> Requerente + cônjuge/companheiro + pais/padrasto + irmãos solteiros + filhos solteiros + menores tutelados, desde que sob o mesmo teto. Parentes casados ou outros parentes não entram.</li>
+        <li><strong>Diretrizes do Art. 204:</strong> Descentralização (União = normas gerais; Estados/Municípios/Entidades = execução) e Participação Popular (conselhos paritários em todos os níveis federativos formulando e fiscalizando).</li>
+        <li><strong>Vinculação Estadual (Art. 204, p. único):</strong> É <em>FACULTADA</em> aos Estados e ao DF vincular <em>ATÉ 0,5%</em> da Receita Tributária Líquida.</li>
+        <li><strong>Mnemônico das Proibições (P.E.D.):</strong> Proibido usar esse recurso para <strong>Pessoal</strong>, <strong>Encargos da Dívida</strong> ou <strong>Despesas Correntes</strong> desvinculadas.</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>

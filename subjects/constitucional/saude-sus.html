@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito à Saúde e o Sistema Único de Saúde (SUS) | Direito Constitucional III</title>
+
+  <!-- Google Fonts: Heading: Outfit | Body: Lora / Inter | Monospace: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Identidade Visual: Direito Constitucional (Verde Esmeralda & Floresta Profunda) */
+    :root {
+      --p-700: #064E3B;
+      --p-600: #065F46;
+      --p-500: #10B981;
+      --p-400: #34D399;
+      --p-100: #D1FAE5;
+      --p-50: #ECFDF5;
+      --primary: #10B981;
+      --primary-dark: #064E3B;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+      --border-green: rgba(16, 185, 129, 0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #022C22 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin: 10px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    header .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #A7F3D0;
+      max-width: 880px;
+      margin: 10px auto 20px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Navegação Fixa Superior */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      padding: 10px 0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] .main-nav {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .home-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--p-50);
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid var(--border-green);
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] .home-btn {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    .home-btn:hover {
+      background: var(--p-500);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 4px 0;
+    }
+
+    .nav-list a {
+      color: var(--text-muted, #64748B);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .nav-list a:hover {
+      color: var(--p-600);
+      background: var(--p-50);
+    }
+
+    [data-theme="dark"] .nav-list a:hover {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6EE7B7;
+    }
+
+    /* Cards e Seções Didáticas */
+    .objectives-card {
+      background: var(--p-50);
+      border: 2px solid var(--p-500);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    [data-theme="dark"] .objectives-card {
+      background: rgba(6, 78, 59, 0.2);
+    }
+
+    .objectives-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--p-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    [data-theme="dark"] .objectives-title {
+      color: #A7F3D0;
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .objective-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--p-700);
+      border-bottom: 2px solid var(--p-100);
+      padding-bottom: 8px;
+      margin: 45px 0 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    [data-theme="dark"] .section-title {
+      color: #6EE7B7;
+      border-bottom-color: rgba(16, 185, 129, 0.2);
+    }
+
+    /* 3 Níveis de Explicação */
+    .levels-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .level-card {
+      border-radius: 12px;
+      padding: 18px 22px;
+      border-left: 6px solid;
+      background: var(--bg-card, #FFFFFF);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-top: 1px solid var(--border, #E2E8F0);
+      border-right: 1px solid var(--border, #E2E8F0);
+      border-bottom: 1px solid var(--border, #E2E8F0);
+    }
+
+    .level-1 { border-left-color: #3B82F6; }
+    .level-2 { border-left-color: #10B981; }
+    .level-3 { border-left-color: #8B5CF6; }
+
+    .level-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .tag-l1 { background: #DBEAFE; color: #1E40AF; }
+    .tag-l2 { background: #D1FAE5; color: #065F46; }
+    .tag-l3 { background: #EDE9FE; color: #5B21B6; }
+
+    /* Palavras-chave e Artigos */
+    .kw {
+      font-weight: 700;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border-green);
+    }
+
+    [data-theme="dark"] .kw {
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.15);
+    }
+
+    .artigo {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #CBD5E1);
+      border-radius: 12px;
+      margin: 18px 0;
+      padding: 16px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #A7F3D0;
+    }
+
+    .artigo-conteudo {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed var(--border, #CBD5E1);
+      font-family: 'Lora', serif;
+      font-size: 1.02rem;
+    }
+
+    /* Boxes Informativos */
+    .box {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-left: 5px solid;
+    }
+
+    .box-dica { background: #EFF6FF; border-left-color: #2563EB; color: #1E3A8A; }
+    .box-alerta { background: #FEF2F2; border-left-color: #EF4444; color: #991B1B; }
+    .box-juris { background: #FAF5FF; border-left-color: #9333EA; color: #581C87; }
+    .box-pegadinha { background: #FFFBEB; border-left-color: #F59E0B; color: #92400E; }
+
+    [data-theme="dark"] .box-dica { background: rgba(37, 99, 235, 0.12); color: #93C5FD; }
+    [data-theme="dark"] .box-alerta { background: rgba(239, 68, 68, 0.12); color: #FCA5A5; }
+    [data-theme="dark"] .box-juris { background: rgba(147, 51, 234, 0.12); color: #D8B4FE; }
+    [data-theme="dark"] .box-pegadinha { background: rgba(245, 158, 11, 0.12); color: #FCD34D; }
+
+    /* Tabelas */
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border, #E2E8F0);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      padding: 14px 18px;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      background: var(--bg-card, #FFFFFF);
+    }
+
+    tr:nth-child(even) td { background: var(--p-50); }
+    [data-theme="dark"] tr:nth-child(even) td { background: rgba(16, 185, 129, 0.05); }
+
+    /* Mindmaps Monospace */
+    .mindmap {
+      background: #0F172A;
+      color: #38BDF8;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 24px;
+      border-radius: 14px;
+      line-height: 1.6;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      margin: 25px 0;
+      border: 1px solid #1E293B;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .mindmap .hl { color: #FACC15; font-weight: 700; }
+    .mindmap .sub { color: #34D399; }
+
+    /* Mnemônicos */
+    .mnemonic-card {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin: 25px 0;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .mnemonic-pill {
+      background: #FACC15;
+      color: #0F172A;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    /* Flashcards */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 25px 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .flashcard-q {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--p-700);
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    [data-theme="dark"] .flashcard-q { color: #A7F3D0; }
+
+    .flashcard-a {
+      font-size: 0.9rem;
+      color: var(--text-muted, #475569);
+      border-top: 1px dashed var(--border, #E2E8F0);
+      padding-top: 10px;
+    }
+
+    /* Questões */
+    .question-card {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+    }
+
+    .question-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge-banca {
+      background: var(--p-700);
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .gabarito-details {
+      margin-top: 16px;
+      background: var(--p-50);
+      border-radius: 8px;
+      padding: 12px 16px;
+      border: 1px solid var(--border-green);
+    }
+
+    [data-theme="dark"] .gabarito-details { background: rgba(6, 78, 59, 0.2); }
+
+    .gabarito-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 0.92rem;
+    }
+
+    [data-theme="dark"] .gabarito-details summary { color: #6EE7B7; }
+
+    /* Cheat Sheet */
+    .cheatsheet {
+      background: linear-gradient(135deg, var(--p-50) 0%, #FFFFFF 100%);
+      border: 2px dashed var(--p-500);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 40px 0;
+    }
+
+    [data-theme="dark"] .cheatsheet { background: rgba(15, 23, 42, 0.6); }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER HERO -->
+  <header>
+    <div class="container">
+      <div class="badge">Direito Constitucional III · Ordem Social</div>
+      <h1>Direito à Saúde e o Sistema Único de Saúde (SUS)</h1>
+      <div class="subtitle">Artigos 196 a 200 da CF/88, Financiamento Mínimo Federativo, Pisos da Saúde, Participação Complementar Privada e Regras Vinculantes de Judicialização (STF Temas 793 e 500 / STJ Tema 106)</div>
+      <div class="meta">
+        <span>⚖️ Arts. 196 a 200 CF/88 &amp; LC 141/2012</span>
+        <span>🏥 Seguridade Social Universal &amp; Gratuita</span>
+        <span>🎯 Foco em OAB e Concursos de Alto Nível</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR FIXA -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal Geral">← Portal</a>
+      <div class="nav-list">
+        <a href="#objetivos">Objetivos</a>
+        <a href="#modulo1">1. Conceito e Tríplice Dimensão</a>
+        <a href="#modulo2">2. Organização e Diretrizes do SUS</a>
+        <a href="#modulo3">3. Financiamento e Pisos Federativos</a>
+        <a href="#modulo4">4. Agentes Comunitários & Enfermagem</a>
+        <a href="#modulo5">5. Iniciativa Privada e Vedações</a>
+        <a href="#modulo6">6. Competências Constitucionais</a>
+        <a href="#modulo7">7. Judicialização da Saúde</a>
+        <a href="#mapas">Mapas Mentais</a>
+        <a href="#questoes">Revisão Ativa</a>
+        <a href="#cheatsheet">Resumo Expresso</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- OBJETIVOS DE APRENDIZAGEM -->
+    <div class="objectives-card" id="objetivos">
+      <div class="objectives-title">🎯 Objetivos de Aprendizagem e Competências Chave</div>
+      <div class="objectives-grid">
+        <div class="objective-item"><span>✅</span> <strong>Dimensão Dogmática:</strong> Dominar a universalidade da saúde (Art. 196), sua não contributividade e as 3 dimensões (Promoção, Proteção e Recuperação).</div>
+        <div class="objective-item"><span>✅</span> <strong>Arquitetura do SUS:</strong> Compreender as redes regionalizadas, hierarquizadas (primária, secundária e terciária) e as 3 diretrizes do Art. 198.</div>
+        <div class="objective-item"><span>✅</span> <strong>Financiamento e Pisos:</strong> Diferenciar o piso constitucional da União (15% da RCL) dos pisos estaduais (12%) e municipais (15%) da LC 141/12, além dos regimes de ACS/ACE e Enfermagem.</div>
+        <div class="objective-item"><span>✅</span> <strong>Judicialização Vinculante:</strong> Aplicar a solidariedade e direcionamento do Tema 793/STF, os 3 requisitos cumulativos do Tema 106/STJ e as regras para remédios sem ANVISA do Tema 500/STF.</div>
+      </div>
+    </div>
+
+    <!-- MÓDULO 1: CONCEITO, NATUREZA E A TRÍPLICE DIMENSÃO -->
+    <section id="modulo1">
+      <h2 class="section-title"><span>01</span> Conceito Constitucional e a Tríplice Dimensão da Saúde</h2>
+      
+      <p>O direito à saúde é consagrado no <strong>Art. 196 da CF/88</strong> como um <span class="kw">direito de todos e dever do Estado</span>. Trata-se de um direito social fundamental de <strong>2ª dimensão/geração</strong>, intimamente conectado aos direitos à vida e à dignidade da pessoa humana, impondo ao Estado o dever de prestações materiais positivas.</p>
+
+      <div class="levels-container">
+        <div class="level-card level-1">
+          <span class="level-tag tag-l1">Nível 1 · Analogia Intuitiva</span>
+          <p>Imagine a saúde como a segurança de trânsito em uma grande cidade: o Estado não atua apenas consertando os carros batidos (hospitais e cirurgias), mas também instalando semáforos e faixas (prevenção/proteção) e criando ciclovias e áreas de lazer que estimulam o bem-estar e diminuem o estresse coletivo (promoção da saúde).</p>
+        </div>
+
+        <div class="level-card level-2">
+          <span class="level-tag tag-l2">Nível 2 · Dogmática Universitária</span>
+          <p>Ao contrário da Previdência Social (que exige filiação contributiva prévia) e da Assistência Social (que exige prova de hipossuficiência econômica), o direito à saúde é pautado pelo <strong>Acesso Universal e Igualitário</strong>. Qualquer pessoa em solo brasileiro — rica ou pobre, nacional ou estrangeira em trânsito — tem direito ao atendimento público integral.</p>
+        </div>
+
+        <div class="level-card level-3">
+          <span class="level-tag tag-l3">Nível 3 · Concursos Públicos & Pegadinhas</span>
+          <p><strong>A saúde no Brasil admite cobrança de taxa de quarto privativo ou "diferença de classe" no SUS?</strong> NÃO! O STF (RE 581.488 - Repercussão Geral) fixou a tese de que é <em>inconstitucional</em> a utilização da chamada "diferença de classe" no âmbito do SUS para acomodação superior ou atendimento por médico de preferência mediante pagamento complementar privado, pois isso violaria frontalmente o princípio do acesso universal e estritamente igualitário (Art. 196 da CF).</p>
+        </div>
+      </div>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 196 da CF/88 — Matriz Constitucional do Direito à Saúde</summary>
+        <div class="artigo-conteudo">
+          <blockquote>"A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua <strong>promoção, proteção e recuperação</strong>."</blockquote>
+          <p><strong>Comentário:</strong> Guarde as 3 ações estatais finalísticas: <strong>Promoção</strong> (estilo de vida saudável, saneamento, ciclovias), <strong>Proteção/Prevenção</strong> (vacinas, vigilância epidemiológica, quarentenas) e <strong>Recuperação</strong> (tratamento médico-hospitalar, reabilitação e fármacos).</p>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>⚖️ Art. 197 da CF/88 — Relevância Pública e Execução Direta/Indireta</summary>
+        <div class="artigo-conteudo">
+          <blockquote>"São de <strong>relevância pública</strong> as ações e serviços de saúde, cabendo ao Poder Público dispor, nos termos da lei, sobre sua <strong>regulamentação, fiscalização e controle</strong>, devendo sua execução ser feita diretamente ou através de terceiros e, também, por pessoa física ou jurídica de direito privado."</blockquote>
+          <p><strong>Comentário:</strong> A saúde pública é serviço de relevância pública indelegável quanto à regulamentação e fiscalização, mas sua <em>execução material</em> pode ser delegada e prestada diretamente ou por particulares.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- MÓDULO 2: ORGANIZAÇÃO E DIRETRIZES DO SUS -->
+    <section id="modulo2">
+      <h2 class="section-title"><span>02</span> Organização em Rede e as 3 Diretrizes do SUS (Art. 198)</h2>
+
+      <p>As ações e serviços públicos de saúde integram uma rede <span class="kw">regionalizada e hierarquizada</span> e constituem um sistema único (SUS), estruturado sob 3 diretrizes pétreas:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0;">
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong style="color: var(--p-700); font-size: 1.05rem;">🌐 Rede Regionalizada</strong>
+          <p style="font-size: 0.92rem; margin-top: 6px;">Criação de centros e pontos de saúde desconcentrados geograficamente no território nacional, garantindo que o atendimento chegue próximo ao domicílio do cidadão.</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong style="color: var(--p-700); font-size: 1.05rem;">📶 Rede Hierarquizada (3 Níveis de Atenção)</strong>
+          <p style="font-size: 0.92rem; margin-top: 6px;">
+            <strong>Atenção Primária:</strong> Postos e Unidades Básicas de Saúde (UBS) — porta de entrada e filtro inicial.<br>
+            <strong>Atenção Secundária:</strong> Especialidades (UPAs, ambulatórios de cardiologia, neurologia, etc.).<br>
+            <strong>Atenção Terciária:</strong> Hospitais de alta complexidade e centros cirúrgicos avançados.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 25px;">As 3 Diretrizes Constitucionais Expressas (Art. 198):</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Diretriz</th>
+              <th>Significado Prático / Constitucional</th>
+              <th>Ponto de Atenção em Provas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>I - Descentralização</strong></td>
+              <td>Repartição de competências político-administrativas com <strong>direção única em cada esfera de governo</strong> (Ministério da Saúde na União, Secretarias de Saúde nos Estados e Municípios).</td>
+              <td>Não existe chefia hierárquica do Ministério da Saúde sobre os secretários municipais; cada gestor comanda o SUS em seu território federativo.</td>
+            </tr>
+            <tr>
+              <td><strong>II - Atendimento Integral</strong></td>
+              <td>Tratamento holístico do indivíduo (prevenção, diagnóstico, exames, cirurgia e remédios), com <strong>prioridade para as atividades preventivas</strong>, sem prejuízo dos serviços assistenciais.</td>
+              <td>Bancas invertem dizendo que a prioridade é dada aos tratamentos curativos/hospitalares. <em>FALSO!</em> A prioridade constitucional é expressamente para a prevenção.</td>
+            </tr>
+            <tr>
+              <td><strong>III - Participação da Comunidade</strong></td>
+              <td>Controle social exercido pela sociedade civil organizada nos <strong>Conselhos de Saúde</strong> e <strong>Conferências de Saúde</strong> (Lei 8.142/1990).</td>
+              <td>Os Conselhos de Saúde possuem composição paritária: 50% de representantes dos usuários e 50% divididos entre governo, profissionais e prestadores de serviços.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MÓDULO 3: FINANCIAMENTO E PISOS MÍNIMOS FEDERATIVOS -->
+    <section id="modulo3">
+      <h2 class="section-title"><span>03</span> Financiamento da Saúde e Pisos Federativos Obrigatórios</h2>
+
+      <p>O financiamento do SUS é compartilhado entre a Seguridade Social e todos os entes federativos. Para assegurar recursos contínuos e evitar o desmonte da saúde, o <strong>Art. 198, § 2º, da CF</strong> e a <strong>Lei Complementar nº 141/2012</strong> estipulam percentuais mínimos anuais de aplicação:</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Ente Federativo</th>
+              <th>Percentual Mínimo Anual</th>
+              <th>Base de Cálculo Constitucional / Legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>União</strong></td>
+              <td>Não inferior a <strong>15% (quinze por cento)</strong></td>
+              <td>Calculado sobre a <strong>Receita Corrente Líquida (RCL)</strong> do exercício financeiro (Art. 198, § 2º, I, CF).</td>
+            </tr>
+            <tr>
+              <td><strong>Estados e DF</strong></td>
+              <td>Mínimo de <strong>12% (doze por cento)</strong></td>
+              <td>Impostos estaduais próprios (ICMS, IPVA, ITCMD) e transferências constitucionais, deduzidas as parcelas aos Municípios (LC 141/12, Art. 6º).</td>
+            </tr>
+            <tr>
+              <td><strong>Municípios e DF</strong></td>
+              <td>Mínimo de <strong>15% (quinze por cento)</strong></td>
+              <td>Impostos municipais próprios (ISS, IPTU, ITBI) e transferências tributárias recebidas da União e do Estado (LC 141/12, Art. 7º).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box-dica">
+        <strong>💡 Reavaliação Quinquenal (§ 3º do Art. 198):</strong>
+        <p>A lei complementar que estabelece os critérios de rateio, normas de fiscalização e percentuais federativos deve ser <strong>reavaliada pelo menos a cada 5 (cinco) anos</strong> pelo Congresso Nacional, visando à redução progressiva das disparidades regionais de saúde.</p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4: AGENTES COMUNITÁRIOS, DE ENDEMIAS E PISO DA ENFERMAGEM -->
+    <section id="modulo4">
+      <h2 class="section-title"><span>04</span> Agentes Comunitários (ACS/ACE) e Pisos da Enfermagem</h2>
+
+      <p>O regime jurídico e financeiro dos <strong>Agentes Comunitários de Saúde (ACS)</strong> e <strong>Agentes de Combate às Endemias (ACE)</strong> foi amplamente blindado pela Constituição (ECs 51, 63 e 120):</p>
+
+      <div class="levels-container">
+        <div class="level-card" style="border-left-color: var(--p-600);">
+          <strong style="color: var(--p-700); font-size: 1.05rem;">Admissão e Vínculo (Art. 198, § 4º e § 6º)</strong>
+          <ul>
+            <li>Admissão mediante <strong>Processo Seletivo Público</strong> (dispensa concurso formal tradicional para quem já estava na função antes da EC 51/2006).</li>
+            <li><strong>Perda do Cargo Específica (§ 6º):</strong> Além das hipóteses gerais de estabilidade (sentença judicial transitada em julgado, PAD e insuficiência de desempenho), perdem o cargo em caso de <em>descumprimento de requisitos específicos de lei</em> (ex: residir na área geográfica da comunidade em que atua).</li>
+          </ul>
+        </div>
+
+        <div class="level-card" style="border-left-color: var(--p-600);">
+          <strong style="color: var(--p-700); font-size: 1.05rem;">Piso Salarial e Custeio Federal (Art. 198, §§ 7º a 11)</strong>
+          <ul>
+            <li><strong>Piso Nacional Garantido:</strong> O vencimento não será inferior a <strong>2 (dois) salários mínimos</strong> (§ 9º).</li>
+            <li><strong>Responsabilidade da União:</strong> A União é a responsável financeira direta pelo custeio desse piso, consignando verba própria no Orçamento Geral da União (OGU) e repassando aos Estados, DF e Municípios (§§ 7º e 8º).</li>
+            <li><strong>Adicionais Constitucionais:</strong> Têm direito a <strong>adicional de insalubridade</strong> e <strong>aposentadoria especial</strong> pelos riscos inerentes da profissão (§ 10).</li>
+            <li><strong>Blindagem da LRF (§ 11):</strong> Os recursos repassados pela União aos demais entes <strong>NÃO ENTRAM no limite de despesas com pessoal</strong> da Lei de Responsabilidade Fiscal!</li>
+          </ul>
+        </div>
+
+        <div class="level-card" style="border-left-color: var(--p-600);">
+          <strong style="color: var(--p-700); font-size: 1.05rem;">Pisos Nacionais da Enfermagem (Art. 198, §§ 12 a 15)</strong>
+          <ul>
+            <li>Lei Federal institui piso nacional para enfermeiro, técnico, auxiliar e parteira (observados por entes públicos e instituições privadas).</li>
+            <li>A União presta assistência financeira complementar aos entes subnacionais, hospitais filantrópicos e prestadores de serviços que atendam <strong>no mínimo 60% de pacientes pelo SUS</strong> (§ 14).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 5: INICIATIVA PRIVADA E VEDAÇÕES CONSTITUCIONAIS -->
+    <section id="modulo5">
+      <h2 class="section-title"><span>05</span> Atuação Privada e as Vedações Constitucionais (Art. 199)</h2>
+
+      <p>Nos termos do caput do <strong>Art. 199 da CF</strong>, <span class="kw">a assistência à saúde é livre à iniciativa privada</span>. Todavia, a Carta Magna traça limites intransponíveis para a participação de terceiros no SUS:</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Dispositivo</th>
+              <th>Regra Constitucional</th>
+              <th>Consequência e Aplicação Prática</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Art. 199, § 1º</strong></td>
+              <td>Participação <strong>Complementar</strong> do SUS mediante contrato de direito público ou convênio.</td>
+              <td>A iniciativa privada atua quando os recursos próprios do SUS forem insuficientes. Têm preferência legal as <strong>entidades filantrópicas</strong> e as <strong>sem fins lucrativos</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Art. 199, § 2º</strong></td>
+              <td><strong>Vedação Absoluta de Auxílios Públicos:</strong> É vedada a destinação de recursos públicos para auxílios ou subvenções a instituições privadas <strong>com fins lucrativos</strong>.</td>
+              <td>Hospitais particulares privados com fins lucrativos NÃO podem receber subvenção ou ajuda financeira a fundo perdido do Poder Público.</td>
+            </tr>
+            <tr>
+              <td><strong>Art. 199, § 3º</strong></td>
+              <td>Participação de empresas ou capitais estrangeiros na saúde nacional é vedada, <em>salvo nos casos previstos em lei</em>.</td>
+              <td>A Lei nº 13.097/2015 autorizou a participação de capital estrangeiro em hospitais, clínicas e pesquisas, mantendo a regra geral sob controle legislativo federal.</td>
+            </tr>
+            <tr>
+              <td><strong>Art. 199, § 4º</strong></td>
+              <td><strong>Vedação Absoluta de Comercialização:</strong> Proibição taxativa de venda ou comercialização de órgãos, tecidos humanos, sangue e hemoderivados.</td>
+              <td>A doação de órgãos e sangue no Brasil é estritamente altruísta, gratuita e não onerosa. Qualquer transação financeira configura crime hediondo tipificado em lei.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MÓDULO 6: OUTRAS COMPETÊNCIAS DO SUS -->
+    <section id="modulo6">
+      <h2 class="section-title"><span>06</span> O Rol de Competências Constitucionais do SUS (Art. 200)</h2>
+
+      <p>Muitos concurseiros acreditam que o SUS apenas atende consultas e faz cirurgias. No entanto, o <strong>Art. 200 da CF</strong> confere ao SUS um espectro amplíssimo de proteção social:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 20px 0;">
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>💊 Insumos e Hemoderivados</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Controlar/fiscalizar produtos e substâncias de interesse da saúde e participar da produção de medicamentos e imunobiológicos (Inciso I).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>🔬 Vigilâncias</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Executar ações de vigilância sanitária, epidemiológica e saúde do trabalhador (Inciso II).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>🎓 Formação Profissional</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Ordenar a formação de recursos humanos na área de saúde (residências médicas, cursos técnicos) (Inciso III).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>🚰 Saneamento Básico</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Participar da formulação da política e da execução das ações de saneamento básico (Inciso IV).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>🍲 Alimentos e Bebidas</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Fiscalizar e inspecionar alimentos (compreendido teor nutricional), bem como bebidas e águas para consumo (Inciso VI).</p>
+        </div>
+        <div class="level-card" style="border-left-color: var(--p-500);">
+          <strong>☢️ Substâncias Tóxicas &amp; Meio Ambiente</strong>
+          <p style="font-size: 0.88rem; margin-top: 4px;">Controlar produtos psicoativos, tóxicos e radioativos (Inciso VII) e colaborar na proteção do meio ambiente, inclusive o do trabalho (Inciso VIII).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 7: JUDICIALIZAÇÃO DA SAÚDE E PRECEDENTES VINCULANTES -->
+    <section id="modulo7">
+      <h2 class="section-title"><span>07</span> Judicialização da Saúde: Solidariedade, Medicamentos e ANVISA</h2>
+
+      <p>A judicialização de tratamentos médicos e fornecimento de medicamentos é um dos tópicos mais cobrados em exames da OAB e concursos de carreiras jurídicas. A jurisprudência dos Tribunais Superiores consolidou <strong>3 grandes precedentes vinculantes</strong>:</p>
+
+      <!-- TEMA 793 STF -->
+      <div class="box box-juris">
+        <strong style="font-size: 1.1rem;">⚖️ 1. STF — Tema 793 (Repercussão Geral): Responsabilidade Solidária e Repartição de Ônus</strong>
+        <p style="margin-top: 8px;"><strong>Tese Fixada:</strong> <em>"Os entes da federação, em decorrência da competência comum, são solidariamente responsáveis nas demandas prestacionais na área da saúde, e diante dos critérios constitucionais de descentralização e hierarquização, compete à autoridade judicial direcionar o cumprimento conforme as regras de repartição de competências e determinar o ressarcimento a quem suportou o ônus financeiro."</em></p>
+        <p><strong>Aplicação Prática:</strong> O cidadão pode acionar a União, o Estado, o DF ou o Município conjuntamente ou separadamente. Todavia, o magistrado deve ordenar o cumprimento da obrigação ao ente legalmente responsável pela política pública correspondente e fixar direito de ressarcimento contra o ente financeiramente responsável.</p>
+      </div>
+
+      <!-- TEMA 106 STJ -->
+      <div class="box box-juris">
+        <strong style="font-size: 1.1rem;">⚖️ 2. STJ — Tema 106 (Recurso Repetitivo): Remédios NÃO Incorporados nas Listas do SUS</strong>
+        <p style="margin-top: 8px;">A concessão judicial de medicamento <strong>não incorporado em atos normativos do SUS (Rename/Relação Municipal)</strong> exige a comprovação <strong>CUMULATIVA de 3 REQUISITOS</strong>:</p>
+        <ol style="margin-top: 6px;">
+          <li><strong>Laudo Médico Fundamentado e Circunstanciado:</strong> Expedido por médico que assiste o paciente, comprovando a imprescindibilidade do medicamento e a <em>ineficácia</em> dos fármacos fornecidos pelo SUS para aquela patologia.</li>
+          <li><strong>Incapacidade Financeira (Hipossuficiência):</strong> Demonstração de que o paciente não tem condições de arcar com o custo do medicamento prescrito sem prejuízo do sustento próprio ou familiar.</li>
+          <li><strong>Registro Sanitário na ANVISA:</strong> Existência de registro ativo na ANVISA, observados os usos autorizados pela agência.</li>
+        </ol>
+      </div>
+
+      <!-- TEMA 500 STF -->
+      <div class="box box-juris">
+        <strong style="font-size: 1.1rem;">⚖️ 3. STF — Tema 500 (Repercussão Geral): Medicamentos SEM Registro na ANVISA</strong>
+        <p style="margin-top: 8px;"><strong>Regra Geral:</strong> O Estado NÃO pode ser obrigado a fornecer medicamentos experimentais. A ausência de registro sanitário na ANVISA <strong>impede, como regra geral, a concessão judicial</strong>.</p>
+        <p><strong>Exceção Rara e Cumulativa:</strong> Admite-se excepcionalmente a concessão de medicamento sem registro na ANVISA caso ocorra <strong>mora irrazoável da agência</strong> em analisar o pedido (prazo superior ao da Lei 13.411/2016), cumulada com:</p>
+        <ul>
+          <li>Existência de pedido de registro em trâmite no Brasil (dispensado para doenças raras/ultrarraras órfãs);</li>
+          <li>Registro do fármaco em renomadas agências regulatórias internacionais (FDA, EMA);</li>
+          <li>Inexistência de substituto terapêutico registrado no Brasil.</li>
+        </ul>
+        <div class="box box-pegadinha" style="margin-top: 10px;">
+          <strong>🎯 Competência Jurisdicional Absoluta:</strong> Ações judiciais que pleiteiem fornecimento de medicamento <strong>sem registro na ANVISA</strong> devem NECESSARIAMENTE ser propostas em face da <strong>UNIÃO FEDERAL</strong> perante a <strong>Justiça Federal</strong>!
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA MENTAL MONOSPACE -->
+    <section id="mapas">
+      <h2 class="section-title"><span>08</span> Mapas Mentais Textuais Consolidados</h2>
+
+      <div class="mindmap">
+<span class="hl">SISTEMA ÚNICO DE SAÚDE (SUS) — ARTS. 196 A 200 DA CF/88</span>
+│
+├── <span class="sub">1. MATRIZ CONSTITUCIONAL (ART. 196)</span>
+│   ├── Direito de Todos + Dever do Estado (Direito Social de 2ª Geração)
+│   ├── Gratuito e Universal (Independe de Contribuição)
+│   └── Tríplice Dimensão: Promoção · Proteção (Prevenção) · Recuperação
+│
+├── <span class="sub">2. DIRETRIZES DO SUS (ART. 198)</span>
+│   ├── Descentralização (Direção única em cada esfera governamental)
+│   ├── Atendimento Integral (Prioridade para atividades preventivas)
+│   └── Participação da Comunidade (Conselhos e Conferências Paritários)
+│
+├── <span class="sub">3. FINANCIAMENTO & PISOS OBRIGATÓRIOS</span>
+│   ├── União: &ge; 15% da Receita Corrente Líquida (RCL)
+│   ├── Estados/DF: &ge; 12% dos Impostos e Transferências (LC 141/12)
+│   ├── Municípios/DF: &ge; 15% dos Impostos e Transferências (LC 141/12)
+│   └── Reavaliação: Pelo menos a cada 5 anos por Lei Complementar
+│
+├── <span class="sub">4. PROFISSIONAIS DA SAÚDE</span>
+│   ├── ACS e ACE: Processo seletivo público · Piso &ge; 2 Salários Mínimos
+│   │   ├── Custeio: OGU da União · Excluído da LRF dos Municípios
+│   │   └── Direitos: Adicional de insalubridade + Aposentadoria especial
+│   └── Enfermagem: Piso salarial nacional com auxílio federal complementar (&ge;60% SUS)
+│
+├── <span class="sub">5. INICIATIVA PRIVADA & VEDAÇÕES (ART. 199)</span>
+│   ├── Participação: Complementar (preferência filantrópicas e sem fins lucrativos)
+│   ├── VEDAÇÃO 1: Subvenção ou auxílio a instituições COM fins lucrativos
+│   └── VEDAÇÃO 2: Comercialização de sangue, órgãos, tecidos e derivados
+│
+└── <span class="sub">6. JUDICIALIZAÇÃO VINCULANTE DA SAÚDE</span>
+    ├── Tema 793 STF: Solidariedade federativa com direcionamento e ressarcimento
+    ├── Tema 106 STJ: Remédio sem Rename (Laudo circunstanciado + Hipossuficiência + Registro ANVISA)
+    └── Tema 500 STF: Sem registro ANVISA &rarr; Regra = Proibido. Exceção com mora &rarr; Ação contra UNIÃO
+      </div>
+
+      <!-- Mnemônicos -->
+      <div class="mnemonic-card">
+        <h3 style="font-family: 'Outfit'; color: #FACC15; margin-top: 0;">🧠 Mnemônico Supremo: As 3 Diretrizes do SUS (Art. 198)</h3>
+        <p>Grave a sigla <span class="mnemonic-pill">D · A · P</span> para as diretrizes organizacionais do SUS:</p>
+        <p><span class="mnemonic-pill">D</span> <strong>Descentralização:</strong> Direção única em cada esfera federativa.</p>
+        <p><span class="mnemonic-pill">A</span> <strong>Atendimento Integral:</strong> Com prioridade para as atividades preventivas.</p>
+        <p><span class="mnemonic-pill">P</span> <strong>Participação da Comunidade:</strong> Controle social paritário por conselhos.</p>
+      </div>
+
+      <div class="mnemonic-card">
+        <h3 style="font-family: 'Outfit'; color: #FACC15; margin-top: 0;">🧠 Mnemônico dos Pisos: A Regra do "15 - 12 - 15"</h3>
+        <p><span class="mnemonic-pill">UNIÃO</span> <strong>15%</strong> da Receita Corrente Líquida (CF/88).</p>
+        <p><span class="mnemonic-pill">ESTADOS</span> <strong>12%</strong> dos impostos e repasses tributários (LC 141/12).</p>
+        <p><span class="mnemonic-pill">MUNICÍPIOS</span> <strong>15%</strong> dos impostos e repasses tributários (LC 141/12).</p>
+      </div>
+    </section>
+
+    <!-- FLASHCARDS INTERATIVOS -->
+    <section id="flashcards">
+      <h2 class="section-title"><span>09</span> Flashcards de Fixação Rápida</h2>
+      <div class="flashcards-grid">
+        <div class="flashcard">
+          <div class="flashcard-q">A saúde exige recolhimento ou contribuição prévia?</div>
+          <div class="flashcard-a"><strong>Não!</strong> É direito universal e gratuito a todos, diferentemente da Previdência Social.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Qual a prioridade no atendimento integral do SUS?</div>
+          <div class="flashcard-a"><strong>Atividades preventivas</strong>, sem prejuízo dos serviços curativos/assistenciais.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Qual o piso salarial dos Agentes Comunitários (ACS/ACE)?</div>
+          <div class="flashcard-a">Não inferior a <strong>2 salários mínimos</strong>, pagos com dotação orçamentária direta da União.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Instituições privadas com fins lucrativos podem receber auxílio público?</div>
+          <div class="flashcard-a"><strong>Não!</strong> O Art. 199, § 2º, veda terminantemente subvenções a entidades com fins lucrativos.</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Quem deve ser réu na ação de remédio sem registro na ANVISA?</div>
+          <div class="flashcard-a">Exclusivamente a <strong>União Federal</strong>, perante a Justiça Federal (Tema 500 do STF).</div>
+        </div>
+        <div class="flashcard">
+          <div class="flashcard-q">Os repasses da União para ACS/ACE entram no limite da LRF municipal?</div>
+          <div class="flashcard-a"><strong>Não!</strong> O Art. 198, § 11, afasta expressamente do cômputo da despesa de pessoal.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTÕES DE REVISÃO ATIVA COM GABARITO OCULTO -->
+    <section id="questoes">
+      <h2 class="section-title"><span>10</span> Questões de Revisão Ativa (Padrão OAB / CEBRASPE / FGV)</h2>
+
+      <!-- Questão 1 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">FGV · Exame de Ordem Unificado (OAB)</span>
+          <strong>Questão 1 — Diretrizes e Iniciativa Privada no SUS</strong>
+        </div>
+        <p>A Secretaria de Saúde de determinado Município constatou que os leitos de UTI da rede pública municipal eram insuficientes para atender a demanda de pacientes durante um surto epidemiológico. Diante disso, o Prefeito pretende celebrar contratos com entidades privadas e destinar subvenções para custear reformas em um hospital particular com finalidade lucrativa da cidade. Considerando o regramento constitucional da saúde, assinale a afirmativa correta:</p>
+        <p>A) As instituições privadas com fins lucrativos têm preferência sobre as filantrópicas na contratação com o SUS.<br>
+        B) A assistência à saúde é vedada à iniciativa privada, devendo o Município requisitar os leitos sem qualquer remuneração.<br>
+        C) As instituições privadas podem participar de forma complementar do SUS, mas é vedada a destinação de recursos públicos para auxílios ou subvenções a instituições com fins lucrativos.<br>
+        D) É livre a concessão de subvenções estatais a qualquer hospital privado, desde que aprovado por referendo popular local.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: C</strong></p>
+            <p><strong>Fundamentação:</strong> O Art. 199, § 1º, estabelece que a iniciativa privada participa do SUS de forma <em>complementar</em>, tendo preferência as filantrópicas e sem fins lucrativos. Já o § 2º veda expressamente a destinação de recursos públicos para auxílios ou subvenções a instituições privadas com fins lucrativos.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 2 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">CEBRASPE · Concurso Magistratura Federal</span>
+          <strong>Questão 2 — Certo ou Errado: Fornecimento de Remédios sem ANVISA</strong>
+        </div>
+        <p>(CEBRASPE) Em conformidade com o entendimento vinculante firmado pelo Supremo Tribunal Federal no Tema 500 de Repercussão Geral, a ausência de registro sanitário na ANVISA impede, como regra geral, o fornecimento de medicamentos por decisão judicial; contudo, quando admitida a pretensão em hipóteses excepcionais de mora irrazoável e comprovação regulatória internacional, a ação judicial deverá ser proposta obrigatoriamente em face da União.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: CERTO</strong></p>
+            <p><strong>Fundamentação:</strong> Perfeita transcrição do entendimento do Tema 500 do STF. A ausência de registro na ANVISA veda a concessão como regra. Excepcionalmente, preenchidos os requisitos de mora da agência, ausência de substituto e registro no exterior, a demanda é admitida, impondo-se o litisconsórcio passivo necessário da União perante a Justiça Federal.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 3 -->
+      <div class="question-card">
+        <div class="question-header">
+          <span class="badge-banca">FCC · Analista Judiciário</span>
+          <strong>Questão 3 — Financiamento e Aplicação Mínima da União</strong>
+        </div>
+        <p>Em relação às normas de financiamento do Sistema Único de Saúde preconizadas na Constituição da República de 1988, a União deve aplicar anualmente em ações e serviços públicos de saúde montante não inferior a:</p>
+        <p>A) 12% da arrecadação de todos os seus impostos federais diretos.<br>
+        B) 15% da sua Receita Corrente Líquida do respectivo exercício financeiro.<br>
+        C) 18% da receita bruta da Seguridade Social.<br>
+        D) 25% da receita proveniente de contribuições sobre a folha salarial.</p>
+
+        <details class="gabarito-details">
+          <summary>🔍 Ver Gabarito Comentado</summary>
+          <div style="margin-top: 10px;">
+            <p><strong>Gabarito: B</strong></p>
+            <p><strong>Fundamentação:</strong> O Art. 198, § 2º, I, da CF/88 fixa taxativamente que a União aplicará montante <em>não inferior a 15% de sua Receita Corrente Líquida (RCL)</em> no respectivo exercício financeiro.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- RESUMO FINAL (CHEAT SHEET DE VÉSPERA DE PROVA) -->
+    <div class="cheatsheet" id="cheatsheet">
+      <h3 style="font-family: 'Outfit'; color: var(--p-700); margin-top: 0; display: flex; align-items: center; gap: 8px;">
+        ⚡ Resumo Expresso de Véspera de Prova (Cheat Sheet)
+      </h3>
+      <ul style="line-height: 1.8; font-size: 0.95rem;">
+        <li><strong>Conceito Fundamental (Art. 196):</strong> Direito de todos e dever do Estado; universal, igualitário e NÃO contributivo.</li>
+        <li><strong>Tríplice Dimensão:</strong> Promoção (estilo de vida) + Proteção (prevenção e vacinas) + Recuperação (tratamentos e cirurgias).</li>
+        <li><strong>Diretrizes do SUS (Art. 198):</strong> Descentralização (direção única em cada ente), Atendimento Integral (prioridade para a prevenção) e Participação Comunitária (conselhos paritários).</li>
+        <li><strong>Pisos Mínimos Constitucionais:</strong> União = &ge; 15% da RCL; Estados = &ge; 12% dos tributos/repasses; Municípios = &ge; 15% dos tributos/repasses. Reavaliação a cada 5 anos.</li>
+        <li><strong>ACS e ACE (Art. 198, §§ 4º a 11):</strong> Processo seletivo público; piso de 2 salários mínimos bancado pelo OGU da União; insalubridade e previdência especial; verba NÃO conta no limite de pessoal da LRF.</li>
+        <li><strong>Piso da Enfermagem (§§ 12 a 15):</strong> Fixado por lei federal, com assistência complementar da União para entes e entidades com &ge; 60% atendimentos SUS.</li>
+        <li><strong>Iniciativa Privada (Art. 199):</strong> Complementar (preferência para filantrópicas). VEDADO auxílio/subvenção a entidades com fins lucrativos. VEDADA a comercialização de sangue e órgãos.</li>
+        <li><strong>Judicialização — Tema 793/STF:</strong> Responsabilidade solidária dos entes políticos com dever de direcionamento judicial e ressarcimento interno.</li>
+        <li><strong>Judicialização — Tema 106/STJ:</strong> Remédio sem Rename exige 3 requisitos cumulativos: laudo de imprescindibilidade + hipossuficiência + registro na ANVISA.</li>
+        <li><strong>Judicialização — Tema 500/STF:</strong> Remédio sem registro na ANVISA é regra proibido; exceção por mora da agência deve ser ajuizada obrigatoriamente contra a UNIÃO.</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="../../portal-core.js"></script>
+</body>
+
+</html>
