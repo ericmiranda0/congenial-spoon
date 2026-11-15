@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do Juiz &amp; Dos Atos Processuais | Processo Civil I</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+
+  <style>
+    /* Identidade Visual da Disciplina: Direito Processual Civil (Azul Cobalto & Safira Real) */
+    :root {
+      --p-700: #1E3A8A;
+      --p-600: #1D4ED8;
+      --p-500: #2563EB;
+      --p-400: #60A5FA;
+      --p-100: #DBEAFE;
+      --p-50: #EFF6FF;
+      --primary: #2563EB;
+      --primary-dark: #1E3A8A;
+      --accent-gold: #D4AF37;
+      --accent-gold-bg: #FEF3C7;
+      --accent-gold-border: #F59E0B;
+      --border-blue: rgba(37, 99, 235, 0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body, #F8FAFC);
+      color: var(--text-main, #0F172A);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--p-700) 0%, #0F172A 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.3);
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px 0;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+
+    .meta span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.85rem;
+      border-left: 5px solid var(--p-500);
+      padding-left: 15px;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    [data-theme="dark"] h2 {
+      color: #93C5FD;
+      border-left-color: var(--p-400);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-600);
+      font-size: 1.35rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    [data-theme="dark"] h3 {
+      color: #BFDBFE;
+    }
+
+    h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .section-label {
+      color: var(--p-500);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .kw {
+      background: var(--p-50);
+      color: var(--p-700);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+    }
+
+    [data-theme="dark"] .kw {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      border-color: rgba(147, 197, 253, 0.3);
+    }
+
+    /* Cards e Layout Grid */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .grid2, .grid3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card, #FFFFFF);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm, 0 4px 6px -1px rgba(0,0,0,0.06));
+      border: 1px solid var(--border, #E2E8F0);
+      border-top: 4px solid var(--p-500);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md, 0 10px 15px -3px rgba(0,0,0,0.1));
+    }
+
+    .card.gold {
+      border-top-color: var(--accent-gold);
+    }
+
+    .card.danger {
+      border-top-color: #EF4444;
+    }
+
+    .card.success {
+      border-top-color: #10B981;
+    }
+
+    .card.purple {
+      border-top-color: #8B5CF6;
+    }
+
+    /* Explicação em Três Níveis Pedagógicos */
+    .nivel-box {
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+    }
+
+    .nivel-1 { border-left: 5px solid #10B981; }
+    .nivel-2 { border-left: 5px solid #2563EB; }
+    .nivel-3 { border-left: 5px solid #8B5CF6; }
+
+    .nivel-badge {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .nivel-1 .nivel-badge { background: #D1FAE5; color: #065F46; }
+    .nivel-2 .nivel-badge { background: #DBEAFE; color: #1E40AF; }
+    .nivel-3 .nivel-badge { background: #EDE9FE; color: #5B21B6; }
+
+    /* Lei Seca Interativa */
+    .artigo {
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 12px;
+      margin: 1.25rem 0;
+      padding: 1.1rem 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .artigo summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--p-700);
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    [data-theme="dark"] .artigo summary {
+      color: #93C5FD;
+    }
+
+    .artigo summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .artigo summary::after {
+      content: "⚖️ Ver Redação da Lei";
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--p-50);
+      color: var(--p-600);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      transition: background 0.2s;
+    }
+
+    [data-theme="dark"] .artigo summary::after {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      border-color: rgba(147, 197, 253, 0.3);
+    }
+
+    .artigo[open] summary::after {
+      content: "📖 Recolher Artigo";
+      background: var(--p-600);
+      color: white;
+    }
+
+    .lei-seca {
+      background: var(--p-50);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 4px solid var(--p-500);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    [data-theme="dark"] .lei-seca {
+      background: rgba(15, 23, 42, 0.6);
+      border-left-color: #3B82F6;
+    }
+
+    .lei-comentario {
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(37, 99, 235, 0.25);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Boxes Informativos Coloridos */
+    .info-box {
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .box-dica {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-left: 5px solid #F59E0B;
+    }
+    .box-erro {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-left: 5px solid #EF4444;
+    }
+    .box-doutrina {
+      background: #F5F3FF;
+      border: 1px solid #DDD6FE;
+      border-left: 5px solid #8B5CF6;
+    }
+    .box-juris {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-left: 5px solid #2563EB;
+    }
+    .box-atencao {
+      background: #FFF7ED;
+      border: 1px solid #FFEDD5;
+      border-left: 5px solid #F97316;
+    }
+    .box-resumo {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-left: 5px solid #10B981;
+    }
+    .box-pegadinha {
+      background: #FDF2F8;
+      border: 1px solid #FBCFE8;
+      border-left: 5px solid #EC4899;
+    }
+
+    [data-theme="dark"] .box-dica { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); }
+    [data-theme="dark"] .box-erro { background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); }
+    [data-theme="dark"] .box-doutrina { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.3); }
+    [data-theme="dark"] .box-juris { background: rgba(37, 99, 235, 0.12); border-color: rgba(37, 99, 235, 0.3); }
+    [data-theme="dark"] .box-atencao { background: rgba(249, 115, 22, 0.12); border-color: rgba(249, 115, 22, 0.3); }
+    [data-theme="dark"] .box-resumo { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); }
+    [data-theme="dark"] .box-pegadinha { background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.3); }
+
+    .box-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .box-dica .box-label { color: #B45309; }
+    .box-erro .box-label { color: #B91C1C; }
+    .box-doutrina .box-label { color: #6D28D9; }
+    .box-juris .box-label { color: #1D4ED8; }
+    .box-atencao .box-label { color: #C2410C; }
+    .box-resumo .box-label { color: #047857; }
+    .box-pegadinha .box-label { color: #BE185D; }
+
+    [data-theme="dark"] .box-dica .box-label { color: #FBBF24; }
+    [data-theme="dark"] .box-erro .box-label { color: #F87171; }
+    [data-theme="dark"] .box-doutrina .box-label { color: #C4B5FD; }
+    [data-theme="dark"] .box-juris .box-label { color: #93C5FD; }
+    [data-theme="dark"] .box-atencao .box-label { color: #FB923C; }
+    [data-theme="dark"] .box-resumo .box-label { color: #6EE7B7; }
+    [data-theme="dark"] .box-pegadinha .box-label { color: #F472B6; }
+
+    /* Tabelas Modernas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.75rem 0;
+      background: var(--bg-card, #FFFFFF);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    th {
+      background: var(--p-700);
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border, #E2E8F0);
+      font-size: 0.95rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(37, 99, 235, 0.02);
+    }
+
+    /* Linha do Tempo Horizontal / Procedimental */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+      border-left: 3px solid var(--p-500);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--p-500);
+      border: 3px solid var(--bg-body, #F8FAFC);
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--p-700);
+      font-size: 1.05rem;
+    }
+
+    [data-theme="dark"] .timeline-title {
+      color: #93C5FD;
+    }
+
+    /* Fluxogramas e Processo de Decisão */
+    .flowchart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-card, #FFFFFF);
+      border: 1px solid var(--border, #E2E8F0);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin: 1.75rem 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--p-50);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--p-500);
+    }
+
+    [data-theme="dark"] .flow-step {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .flow-num {
+      background: var(--p-500);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: var(--p-500);
+      font-weight: 900;
+      font-size: 1.3rem;
+      margin: -0.4rem 0;
+    }
+
+    /* Mapas Mentais em Bloco Mono */
+    .mindmap-tree {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 2rem;
+      border-radius: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 1.75rem 0;
+      line-height: 1.7;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+      overflow-x: auto;
+    }
+
+    .mm-root {
+      color: #60A5FA;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+
+    .mm-l1 {
+      color: #FBBF24;
+      font-weight: 700;
+      margin-left: 1.25rem;
+      margin-top: 8px;
+    }
+
+    .mm-l2 {
+      color: #E2E8F0;
+      margin-left: 2.75rem;
+      font-size: 0.92rem;
+    }
+
+    .mm-l3 {
+      color: #94A3B8;
+      margin-left: 4.25rem;
+      font-size: 0.85rem;
+    }
+
+    /* Flashcards Interativos */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .flashcard {
+      background: var(--bg-card, #FFFFFF);
+      border: 2px solid var(--border-blue);
+      border-radius: 14px;
+      padding: 1.5rem;
+      cursor: pointer;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .flashcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--p-500);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flashcard .fc-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--p-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flashcard .fc-pergunta {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .flashcard .fc-resposta {
+      display: none;
+      font-size: 0.95rem;
+      color: var(--p-700);
+      background: var(--p-50);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 0.85rem;
+      border-left: 3px solid var(--p-500);
+      line-height: 1.55;
+    }
+
+    [data-theme="dark"] .flashcard .fc-resposta {
+      background: rgba(37, 99, 235, 0.15);
+      color: #BFDBFE;
+    }
+
+    .flashcard.revelado .fc-resposta { display: block; }
+    .flashcard.revelado .fc-dica-clique { display: none; }
+
+    .fc-dica-clique {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Exercícios e Revisão Ativa */
+    .exercise {
+      background: var(--bg-card, #FFFFFF);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border, #E2E8F0);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gabarito {
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid #10B981;
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .tag-banca {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--p-500);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header / Hero Section Obrigatória -->
+  <header>
+    <div class="container">
+      <div class="badge">Material Didático · Direito Processual Civil I (CPC/15)</div>
+      <h1>Do Juiz &amp; Dos Atos Processuais</h1>
+      <div class="subtitle">Guia Avançado e Estruturado: Poderes e Deveres do Juiz, Impedimento vs Suspeição, Pronunciamentos Judiciais, Teoria Geral dos Atos, Prazos Processuais e Sistema de Citação e Intimação</div>
+      <div class="meta">
+        <span>⚖️ Arts. 139 a 148 &amp; 188 a 275 CPC</span>
+        <span>👨‍⚖️ Prof. Moisés Rodrigues</span>
+        <span>📑 Base: Slides 07 e 08 Oficiais</span>
+        <span>🛡️ Foco em Provas, OAB &amp; Concursos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Principal -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Hub Principal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#slide7" class="nav-item">Slide 07: Do Juiz</a>
+        <a href="#impedimento-suspeicao" class="nav-item">Impedimento vs Suspeição</a>
+        <a href="#slide8" class="nav-item">Slide 08: Atos Processuais</a>
+        <a href="#pronunciamentos" class="nav-item">Pronunciamentos Judiciais</a>
+        <a href="#forma-tempo-lugar" class="nav-item">Forma, Tempo &amp; Lugar</a>
+        <a href="#prazos" class="nav-item">Prazos &amp; Contagem</a>
+        <a href="#preclusao" class="nav-item">Preclusão Geral &amp; Pro Judicato</a>
+        <a href="#comunicacoes" class="nav-item">Citação &amp; Intimação</a>
+        <a href="#mapas-fluxos" class="nav-item">Mapas &amp; Fluxos</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#revisao-ativa" class="nav-item">Questões</a>
+        <a href="#resumo-final" class="nav-item">Cheat Sheet Final</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════ OBJETIVOS DE APRENDIZAGEM ══════════════════════════════ -->
+    <section id="objetivos">
+      <div class="card" style="border-top-color: var(--p-500); background: var(--bg-card);">
+        <h2>🎯 Objetivos de Aprendizagem &amp; Visão Sistêmica</h2>
+        <p>Este módulo consolida de forma analítica e didática o conteúdo dos <strong>Slides 07 e 08</strong> ministrados pelo <strong>Prof. Moisés Rodrigues</strong> em Direito Processual Civil I:</p>
+        <ul style="line-height: 1.85; margin-left: 1.25rem;">
+          <li>Dominar a função dirigente do juiz, a ausência de discricionariedade judicial de conveniência política e a garantia constitucional da imparcialidade e do juiz natural (Arts. 139 a 148).</li>
+          <li>Distinguir dogmaticamente e pragmaticamente as causas objetivas de <strong>Impedimento (Art. 144)</strong> das causas subjetivas de <strong>Suspeição (Art. 145)</strong>, incluindo prazos de arguição, legitimidade, preclusão, cabimento de Ação Rescisória (Art. 966, II) e a histórica declaração de inconstitucionalidade do Art. 144, VIII pelo STF na ADI 5.953.</li>
+          <li>Compreender a distinção ontológica entre <strong>Atos Processuais</strong> (humanos e voluntários) e <strong>Fatos Processuais</strong> (naturais ou involuntários), bem como a cláusula geral de negócio jurídico processual (Art. 190).</li>
+          <li>Classificar a tipologia dos <strong>Pronunciamentos Judiciais (Art. 203)</strong>: Sentença (terminativa vs definitiva), Decisão Interlocutória (simples vs mérito) e Despachos de mero expediente (irrecorribilidade relativa).</li>
+          <li>Identificar as regras fundamentais de <strong>Forma (Art. 188), Vernáculo (Art. 192), Publicidade (Art. 189), Lugar (Art. 217) e Tempo dos atos forenses (Arts. 212 a 216)</strong>.</li>
+          <li>Calcular minuciosamente <strong>Prazos Processuais</strong>: exclusão do dia de início e inclusão do vencimento, contagem exclusiva em <strong>dias úteis (Art. 219)</strong>, citação/intimação em portal eletrônico vs e-mail (Lei 11.419/06 vs Lei 14.195/21 / Art. 231) e privilégios de prazo em dobro (Fazenda, MP, DPE e litisconsortes com advogados distintos - Art. 229).</li>
+          <li>Diferenciar as modalidades de <strong>Preclusão das partes (temporal, lógica e consumativa)</strong> e a <strong>Preclusão Pro Judicato</strong> incidente sobre as decisões do juiz.</li>
+          <li>Mapear exaustivamente o regime de <strong>Comunicações Processuais</strong>: Cartas entre juízos (precatória, rogatória, de ordem e arbitral), modalidades de <strong>Citação (real vs ficta: hora certa e edital)</strong>, restrições temporais e de estado (Art. 244) e distinções essenciais em relação à <strong>Intimação (Art. 269)</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PARTE 1: SLIDE 07 - DO JUIZ ══════════════════════════════ -->
+    <section id="slide7" class="section">
+      <div class="section-label">Slide 07 · CPC Arts. 139 a 148</div>
+      <h2>Slide 07: Do Juiz — Poderes, Deveres e Imparcialidade</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🟢 Nível 1 · Conceito Introdutório Simples</div>
+        <p>O <strong>juiz</strong> é o agente estatal incumbido de dirigir o processo para solucionar conflitos de interesse aplicando a lei. Ele não conduz o processo conforme seus caprichos ou 'conveniência pessoal': deve ser rigorosamente <strong>imparcial e equidistante</strong> de ambas as partes, obedecendo às regras processuais prévias (garantia do Juiz Natural).</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🔵 Nível 2 · Aprofundamento Dogmático</div>
+        <p>O CPC dedica os <strong>Arts. 139 a 148</strong> à figura do magistrado. A direção material e formal do processo impõe impessoalidade estrita. <em>Não há discricionariedade judicial de oportunidade:</em> cumpre ao juiz, auxiliado pelos servidores do cartório e auxiliares da justiça, dar fiel execução às normas processuais civis. Para blindar a equidistância e a confiança social na jurisdição, o ordenamento prevê duas categorias de afastamento preventivo: <strong>Impedimento (vínculos objetivos mais graves)</strong> e <strong>Suspeição (vínculos subjetivos de menor intensidade)</strong>.</p>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">🟣 Nível 3 · Visão Prática &amp; Concursos</div>
+        <p>A perda de imparcialidade compromete a própria validade da relação jurídica processual. Como a imparcialidade é pressuposto processual de validade de ordem pública subjetivo relativo ao juiz, sua inobservância no caso de <strong>impedimento</strong> gera <strong>nulidade absoluta de todos os atos decisórios</strong>, autorizando a desconstituição da coisa julgada via <strong>Ação Rescisória (Art. 966, II do CPC)</strong>, sem necessidade de provar prejuízo material (presunção absoluta <em>jure et de jure</em>).</p>
+      </div>
+
+      <!-- Artigo Interativo 139 -->
+      <details class="artigo">
+        <summary>Art. 139 do CPC — Poderes e Deveres do Juiz na Direção do Processo</summary>
+        <div class="lei-seca">
+          <strong>Art. 139.</strong> O juiz dirigirá o processo conforme as disposições deste Código, incumbindo-lhe:<br>
+          I - assegurar às partes igualdade de tratamento;<br>
+          II - velar pela duração razoável do processo;<br>
+          III - prevenir ou reprimir qualquer ato contrário à dignidade da justiça e indeferir postulações meramente protelatórias;<br>
+          IV - determinar todas as medidas indutivas, coercitivas, mandamentais ou sub-rogatórias necessárias para assegurar o cumprimento de ordem judicial, inclusive nas ações que tenham por objeto prestação pecuniária;<br>
+          V - promover, a qualquer tempo, a autocomposição, preferencialmente com auxílio de conciliadores e mediadores judiciais.
+        </div>
+        <div class="lei-comentario">
+          <strong>Comentário de Sala:</strong> O inciso IV consagra o chamado <em>poder geral de efetivação</em> do magistrado (medidas atípicas, como apreensão de passaporte e CNH, desde que observada a proporcionalidade e o Tema 1.137 do STF).
+        </div>
+      </details>
+    </section>
+
+    <!-- ══════════════════════════════ IMPEDIMENTO VS SUSPEIÇÃO ══════════════════════════════ -->
+    <section id="impedimento-suspeicao" class="section">
+      <div class="section-label">Aprofundamento Slide 07 · Arts. 144 e 145 CPC</div>
+      <h2>Impedimento vs. Suspeição do Magistrado</h2>
+
+      <p>A lei processual estabelece uma gradação do risco à imparcialidade judicial. Compreender esse binômio é fundamental para qualquer exame jurídico:</p>
+
+      <div class="grid2">
+        <div class="card danger">
+          <h3>🚫 Impedimento do Juiz (Art. 144 CPC)</h3>
+          <p><strong>Natureza:</strong> Causa <em>objetiva</em>, de constatação documental direta e risco gravíssimo de parcialidade.</p>
+          <ul style="padding-left: 1.2rem; font-size: 0.95rem;">
+            <li><strong>Conhecimento:</strong> Matéria de ordem pública; o juiz <strong>deve afastar-se de ofício</strong> ou ser arguido por petição a qualquer tempo e grau de jurisdição.</li>
+            <li><strong>Preclusão:</strong> <em>Não preclui</em> para as partes durante a marcha processual.</li>
+            <li><strong>Vício dos atos:</strong> Nulidade absoluta de pleno direito dos atos decisórios (dispensa prova de prejuízo).</li>
+            <li><strong>Ação Rescisória:</strong> <strong>SIM</strong>, cabe expressamente com fulcro no <strong>Art. 966, II do CPC</strong> (prazo de 2 anos após o trânsito em julgado).</li>
+          </ul>
+        </div>
+
+        <div class="card gold">
+          <h3>⚠️ Suspeição do Juiz (Art. 145 CPC)</h3>
+          <p><strong>Natureza:</strong> Causa <em>subjetiva</em>, ligada ao ânimo psíquico, afetividade ou interesse pessoal íntimo.</p>
+          <ul style="padding-left: 1.2rem; font-size: 0.95rem;">
+            <li><strong>Conhecimento:</strong> Pode ser declarada de ofício pelo magistrado (inclusive por foro íntimo sem explicitar razões - § 1º) ou alegada pela parte interessada.</li>
+            <li><strong>Preclusão:</strong> <strong>PRECLUI EM 15 DIAS</strong> a contar do conhecimento do fato gerador (Art. 146).</li>
+            <li><strong>Se ninguém reclamar:</strong> O processo corre validamente; não há nulidade e o vício é convalidado.</li>
+            <li><strong>Ação Rescisória:</strong> <strong>NÃO CABE</strong> ação rescisória fundada em suspeição!</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tabela Comparativa Completa -->
+      <h3>Tabela Comparativa Sistemática: Impedimento vs. Suspeição</h3>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Critério Comparativo</th>
+              <th>Impedimento (Art. 144 CPC)</th>
+              <th>Suspeição (Art. 145 CPC)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Causalidade / Natureza</strong></td>
+              <td>Vínculo objetivo e documental (fatos objetivos externos incontroversos)</td>
+              <td>Vínculo subjetivo / psicológico (sentimento, amizade íntima, inimizade capital)</td>
+            </tr>
+            <tr>
+              <td><strong>Gravidade à Imparcialidade</strong></td>
+              <td>Gravíssima (proibição legal peremptória de atuar)</td>
+              <td>Média / Relativa (conveniência de afastamento recomendada)</td>
+            </tr>
+            <tr>
+              <td><strong>Iniciativa e Arguição</strong></td>
+              <td>Dever de ofício do juiz ou provocação das partes a qualquer tempo</td>
+              <td>De ofício ou mediante petição específica no prazo preclusivo</td>
+            </tr>
+            <tr>
+              <td><strong>Prazo para as Partes</strong></td>
+              <td>Não preclui enquanto tramitar o processo</td>
+              <td><strong>15 dias úteis</strong> do conhecimento do fato gerador (Art. 146)</td>
+            </tr>
+            <tr>
+              <td><strong>Silêncio das Partes e Juiz</strong></td>
+              <td>Gera nulidade absoluta insanável no processo</td>
+              <td>Preclui e <em>convalida</em> o processo sem nulidade processual</td>
+            </tr>
+            <tr>
+              <td><strong>Atos Decisórios Praticados</strong></td>
+              <td>Nulos de pleno direito (independentemente de provar prejuízo)</td>
+              <td>Anulados retroativamente apenas a partir do momento em que surgiu a causa</td>
+            </tr>
+            <tr>
+              <td><strong>Ação Rescisória (Art. 966)</strong></td>
+              <td><span style="color:#EF4444; font-weight:700;">SIM, cabe rescisória (Art. 966, II)</span></td>
+              <td><span style="color:#10B981; font-weight:700;">NÃO cabe ação rescisória</span></td>
+            </tr>
+            <tr>
+              <td><strong>Alcance Funcional</strong></td>
+              <td>Aplica-se a juiz singular e desembargadores/ministros em colegiados</td>
+              <td>Aplica-se a juiz singular e desembargadores/ministros em colegiados</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Box de Destaque Jurisprudencial: ADI 5.953 do STF -->
+      <div class="info-box box-juris">
+        <div class="box-label">🏛️ Jurisprudência Vinculante do STF · Julgamento da ADI 5.953</div>
+        <p><strong>Inconstitucionalidade do Art. 144, VIII do CPC:</strong> O STF declarou inconstitucional a regra que impunha impedimento ao juiz em processos patrocinados por escritório de advocacia de parente seu, mesmo quando outro advogado do escritório atuava na causa. O tribunal entendeu que a exigência violava o devido processo legal e a razoabilidade, pois obrigaria o magistrado a checar previamente a carteira de todos os clientes de grandes bancas de advocacia onde parentes pudessem trabalhar.</p>
+        <p><strong>ATENÇÃO:</strong> Permanece plenamente válida a proibição do <strong>Art. 144, III e § 3º</strong>: o juiz <em>continua absolutamente impedido</em> de julgar causas em que seu cônjuge, companheiro ou parente até 3º grau atue <strong>diretamente como advogado, defensor ou promotor</strong>!</p>
+      </div>
+
+      <!-- Destaque: Art. 144, III - Anterioridade da Atuação -->
+      <div class="info-box box-atencao">
+        <div class="box-label">⚡ Regra da Anterioridade da Atuação (Art. 144, § 2º)</div>
+        <p>No caso de parente advogado atuando na causa (Art. 144, III), o impedimento do juiz só se opera se o advogado já figurava no processo <strong>antes</strong> de o magistrado assumir a condução. Se o juiz já presidia a demanda anteriormente, é <strong>proibido ao advogado parente ingressar nos autos</strong>, impedindo a manobra ilícita de 'comprar impedimento' para afastar o julgador natural da causa!</p>
+      </div>
+
+      <!-- Rol da Suspeição (Art. 145) -->
+      <h3>As Hipóteses Legais de Suspeição (Art. 145 CPC)</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>a) Amizade Íntima ou Inimizade Capital</h4>
+          <p>Relação de grande proximidade afetiva ou animosidade pública e manifesta com qualquer das partes ou com os seus advogados constituídos.</p>
+        </div>
+        <div class="card">
+          <h4>b) Relação Creditícia ou Débito</h4>
+          <p>Quando alguma das partes for credora ou devedora do magistrado, de seu cônjuge/companheiro ou parentes em linha reta/colateral até o 3º grau.</p>
+        </div>
+        <div class="card">
+          <h4>c) Presentes &amp; Aconselhamento</h4>
+          <p>Receber presentes de interessados antes ou durante a demanda, dar conselhos jurídicos sobre o mérito ou custear despesas da lide para alguém.</p>
+        </div>
+        <div class="card">
+          <h4>d) Interesse no Julgamento &amp; Foro Íntimo</h4>
+          <p>Interesse direto na vitória de uma das partes; ou declaração unilateral por motivo de <em>foro íntimo</em> (sem necessidade de motivar publicamente).</p>
+        </div>
+      </div>
+
+      <div class="info-box box-dica">
+        <div class="box-label">💡 Procedimento da Arguição (Art. 146 CPC)</div>
+        <p>Se a parte suscita o impedimento ou a suspeição em petição fundamentada:
+        <br>1º) Se o juiz reconhecer o vício: declara-se impedido/suspeito e remete os autos incontinenti ao seu substituto legal.
+        <br>2º) Se o juiz NÃO concordar: autua as razões em apartado, instrui com documentos e testemunhas e <strong>remete o incidente ao Tribunal</strong> (órgão superior), que decidirá e fixará expressamente a data a partir da qual os atos praticados são nulos.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PARTE 2: SLIDE 08 - ATOS PROCESSUAIS ══════════════════════════════ -->
+    <section id="slide8" class="section">
+      <div class="section-label">Slide 08 · Teoria Geral dos Atos Processuais</div>
+      <h2>Slide 08: Teoria Geral dos Atos Processuais</h2>
+
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🟢 Nível 1 · O que é Ato Processual?</div>
+        <p>O processo é uma sucessão lógica e encadeada de passos cujo objetivo final é a entrega da decisão judicial. O <strong>ato processual</strong> é qualquer conduta humana voluntária realizada dentro do processo que gere efeitos jurídicos (como peticionar, intimar, contestar e sentenciar).</p>
+      </div>
+
+      <div class="nivel-box nivel-2">
+        <div class="nivel-badge">🔵 Nível 2 · Distinção: Ato Processual vs. Fato Processual</div>
+        <p>A doutrina processual distingue rigorosamente:</p>
+        <ul style="line-height: 1.8;">
+          <li><strong>Atos Processuais:</strong> Decorrem de vontade humana comissiva dirigida a produzir efeitos na lide (ex.: citação, interposição de apelação, decisão judicial, depoimento testemunhal).</li>
+          <li><strong>Fatos Processuais:</strong> Acontecimentos naturais ou involuntários que não derivam de vontade processual, mas produzem reflexos imediatos nos autos (ex.: falecimento da parte que enseja suspensão processual - Art. 313, I; inundação que destrói o fórum e autos físicos; greve de serventuários; decorrência inerte do tempo).</li>
+          <li><strong>Omissões Processuais Relevantes:</strong> A inércia humana é relevante quando a lei associa a ela efeitos materiais/processuais diretos (ex.: ausência de contestação gerando revelia - Art. 344).</li>
+        </ul>
+      </div>
+
+      <div class="nivel-box nivel-3">
+        <div class="nivel-badge">🟣 Nível 3 · Negócios Jurídicos Processuais (Art. 190 CPC)</div>
+        <p>Tradicionalmente o procedimento era estritamente rígido. O CPC/15 inovou ao consagrar o <strong>Art. 190 (Cláusula Geral de Negociação Processual)</strong>: em processos que admitam autocomposição sobre direitos disponíveis, partes plenamente capazes podem pactuar antes ou durante o processo alterações no procedimento, ajustando seus ônus, poderes, faculdades e deveres, cabendo ao juiz apenas o controle de validade e abusividade.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PRONUNCIAMENTOS DO JUIZ ══════════════════════════════ -->
+    <section id="pronunciamentos" class="section">
+      <div class="section-label">Slide 08 · Art. 203 do CPC</div>
+      <h2>Pronunciamentos do Juiz: Sentença, Decisão Interlocutória e Despacho</h2>
+
+      <p>O magistrado pratica no processo atos puramente materiais (como ouvir testemunhas, presidir audiências e realizar inspeção judicial pessoal - Art. 381) e <strong>pronunciamentos formais</strong>, previstos no rol estrito do <strong>Art. 203 do CPC</strong>:</p>
+
+      <div class="grid3">
+        <div class="card success">
+          <div class="section-label" style="color:#059669;">Art. 203, § 1º</div>
+          <h3>1. Sentença</h3>
+          <p><strong>Definição Legal:</strong> Pronunciamento por meio do qual o juiz, fundamentado nos <strong>Arts. 485 ou 487</strong>, põe fim à fase cognitiva do procedimento comum ou extingue a execução.</p>
+          <p><strong>Critério Central:</strong> Aptidão para encerrar a fase de cognição em 1º grau (e não apenas o conteúdo material de mérito).</p>
+          <p><strong>Prazo do Juiz:</strong> <strong>30 dias</strong> (Art. 226, III).</p>
+          <p><strong>Recurso Típico:</strong> Apelação (Art. 1.009).</p>
+        </div>
+
+        <div class="card purple">
+          <div class="section-label" style="color:#7C3AED;">Art. 203, § 2º</div>
+          <h3>2. Decisão Interlocutória</h3>
+          <p><strong>Definição Legal:</strong> Todo pronunciamento judicial de natureza <em>decisória</em> que NÃO ponha fim à fase cognitiva nem extinga a execução.</p>
+          <p><strong>Exemplos:</strong> Deferimento de liminar, saneamento, indeferimento de prova, julgamento antecipado parcial de mérito (Art. 356).</p>
+          <p><strong>Prazo do Juiz:</strong> <strong>10 dias</strong> (Art. 226, II).</p>
+          <p><strong>Recurso:</strong> Agravo de Instrumento (se constar do rol do Art. 1.015) ou preliminar de apelação.</p>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Art. 203, § 3º</div>
+          <h3>3. Despacho de Mero Expediente</h3>
+          <p><strong>Definição Legal:</strong> Atos destinados a dar andamento e impulsão oficial ao processo, sem qualquer carga decisória ou gravame prejudicial às partes.</p>
+          <p><strong>Exemplos:</strong> 'Abra-se vista ao autor', 'Junte-se o documento', 'Digam as partes sobre o laudo'.</p>
+          <p><strong>Prazo do Juiz:</strong> <strong>5 dias</strong> (Art. 226, I).</p>
+          <p><strong>Recorribilidade:</strong> Em regra, <strong>irrecorríveis</strong> (Art. 1.001).</p>
+        </div>
+      </div>
+
+      <div class="info-box box-pegadinha">
+        <div class="box-label">⚠️ Pegadinha Clássica de Prova: Despacho com Carga Decisória Anômala</div>
+        <p>A denominação formal dada pelo magistrado não vincula a natureza do ato! Se o juiz rotula um ato como 'despacho', mas impõe comando que cause gravame ou prejuízo concreto à parte (ex.: manda remeter autos à contadoria para cálculo que a lei extinguiu, atrasando indevidamente a execução), <strong>o ato assume ontologicamente feição de decisão interlocutória</strong>, admitindo recurso imediato de Agravo de Instrumento para coibir o prejuízo!</p>
+      </div>
+
+      <div class="info-box box-doutrina">
+        <div class="box-label">📚 E os Acórdãos? (Art. 204 CPC)</div>
+        <p>O <strong>Art. 204</strong> estabelece que <em>Acórdão</em> é o julgamento colegiado proferido pelos Tribunais de 2º grau e Cortes Superiores (STJ, STF, TST, etc.), lavrado sob a responsabilidade do Relator designado.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FORMA, LUGAR E TEMPO ══════════════════════════════ -->
+    <section id="forma-tempo-lugar" class="section">
+      <div class="section-label">Slide 08 · Arts. 188 a 217 CPC</div>
+      <h2>Requisitos dos Atos: Forma, Vernáculo, Publicidade, Lugar e Tempo</h2>
+
+      <h3>1. Princípio da Instrumentalidade e Liberdade das Formas (Art. 188)</h3>
+      <p>No processo civil moderno vigora o <strong>princípio da liberdade das formas</strong> mitigada pela finalidade essencial. Duas regras vitais:</p>
+      <ul style="line-height: 1.85;">
+        <li><strong>Forma livre como regra:</strong> Salvo quando a lei expressamente exigir forma solene, os atos processuais não dependem de forma determinada.</li>
+        <li><strong>Aproveitamento do ato:</strong> Ainda que a lei exija determinada forma, o ato será plenamente válido se, realizado de outro modo, <strong>alcançar sua finalidade essencial sem causar prejuízo</strong> (princípio <em>pas de nullité sans grief</em>). Exemplo do slide: citação nula em que o réu comparece e contesta tempestivamente &rarr; finalidade atingida, nulidade suprida (Art. 239, § 1º).</li>
+      </ul>
+
+      <div class="grid3">
+        <div class="card">
+          <h4>📖 Vernáculo (Art. 192)</h4>
+          <p>Em todos os atos processuais é obrigatório o uso da <strong>língua portuguesa</strong>. Documentos em idioma estrangeiro só podem ser juntados se acompanhados de versão juramentada ou tramitada via diplomática. Ouvida de parte/testemunha estrangeira ou surda exige tradutor/intérprete oficial.</p>
+        </div>
+
+        <div class="card">
+          <h4>👁️ Publicidade (Art. 189)</h4>
+          <p>Os atos são públicos por garantia constitucional (CF, art. 5º, LX). Exceções em <strong>Segredo de Justiça</strong>: direito de família, alimentos, sigilo protegido por lei e arbitragem. Terceiro com interesse jurídico pode obter certidão apenas do dispositivo da sentença.</p>
+        </div>
+
+        <div class="card">
+          <h4>📍 Lugar (Art. 217)</h4>
+          <p>Regra geral: são praticados na <strong>sede do juízo</strong> (fórum). Exceções: inquirição de altas autoridades com prerrogativa de domicílio funcional (Art. 454), testemunhas impossibilitadas de locomoção e atos deprecados por carta.</p>
+        </div>
+      </div>
+
+      <h3>2. Tempo dos Atos Processuais (Arts. 212 a 216)</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-title">Dias Úteis &amp; Feriados Forenses (Art. 216)</div>
+          <p>Os atos processuais realizam-se em dias úteis. Para fins processuais, <strong>são feriados forenses:</strong> sábados, domingos e os dias declarados por lei, além dos dias em que não houver expediente no fórum.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-title">Horário Normal de Prática: 06h00 às 20h00 (Art. 212)</div>
+          <p>Regra geral para atos externos e presenciais. Exceções em que podem ultrapassar as 20h00 ou realizar-se em dias não úteis/férias: atos iniciados antes das 20h cujo adiamento cause grave prejuízo à diligência; e cumprimento urgente de <strong>citação, intimação e penhora</strong> (dispensa prévia autorização judicial - Art. 212, § 2º).</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-title">Horário Limite de Protocolo: Físico vs. Eletrônico</div>
+          <p><strong>Autos físicos:</strong> Até o fechamento do protocolo local do tribunal (ex.: 19h00 no TJSP).<br>
+             <strong>Autos eletrônicos:</strong> Podem ser protocolados via sistema até às <strong>24h00 (23h59m59s)</strong> do último dia do prazo legal!</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-title">Férias Coletivas Extintas na 1ª e 2ª Instâncias (EC 45/04)</div>
+          <p>A EC 45/04 (Art. 93, XII, CF) extinguiu as férias coletivas em juízos e tribunais de 2º grau. Férias forenses remanescem apenas nos <strong>Tribunais Superiores</strong> (STF, STJ), aplicando-se os Arts. 214 e 215 com as ressalvas legais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PRAZOS PROCESSUAIS ══════════════════════════════ -->
+    <section id="prazos" class="section">
+      <div class="section-label">Slide 08 · Arts. 218 a 235 CPC</div>
+      <h2>Prazos Processuais: Regras de Contagem, Preclusão e Privilégios</h2>
+
+      <div class="grid2">
+        <div class="card success">
+          <h3>⏳ Prazos Próprios (Preclusivos)</h3>
+          <p>Destinados às <strong>partes litigantes</strong>, advogados, defensores e ao Ministério Público quando atua como parte na demanda.</p>
+          <p>O desrespeito gera <strong>intempestividade e preclusão temporal</strong> imediata, com perda irreparável da faculdade processual (ex.: perda do prazo recursal ou de contestação).</p>
+        </div>
+
+        <div class="card gold">
+          <h3>🛡️ Prazos Impróprios (Não Preclusivos)</h3>
+          <p>Destinados aos <strong>juízes, auxiliares da justiça e ao MP quando atua estritamente como fiscal da ordem jurídica (custos iuris)</strong>.</p>
+          <p>O término do prazo <em>não extingue</em> a obrigação nem impede o juiz de proferir a sentença. Sujeita apenas a sanções disciplinares e correicionais em caso de atraso injustificado (Art. 235).</p>
+        </div>
+      </div>
+
+      <h3>Contagem Exclusiva em Dias Úteis (Art. 219 do CPC)</h3>
+      <div class="info-box box-resumo">
+        <div class="box-label">📅 Fórmula Fundamental da Contagem de Prazo em Dias</div>
+        <p>1. <strong>Exclui-se o dia de início</strong> (termo <em>a quo</em>) e <strong>inclui-se o dia do vencimento</strong> (termo <em>ad quem</em>).<br>
+        2. Computam-se <strong>APENAS OS DIAS ÚTEIS</strong> (sábados, domingos e feriados forenses não são contados).<br>
+        3. Se não houver previsão legal nem fixação pelo magistrado, o prazo geral supletivo é de <strong>5 dias úteis</strong> (Art. 218, § 3º).<br>
+        4. O início da contagem dá-se sempre no <strong>primeiro dia útil subsequente</strong> à disponibilização ou juntada do mandado!</p>
+      </div>
+
+      <!-- Comparativo Tecnológico: Portal vs E-mail -->
+      <h3>Citação Eletrônica: Portal Eletrônico (Lei 11.419/06) vs. E-mail (Lei 14.195/21)</h3>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Modalidade de Citação Eletrônica</th>
+              <th>Legislação de Regência</th>
+              <th>Público Alvo Principal</th>
+              <th>Procedimento e Início do Prazo de Resposta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Citação por Portal Eletrônico</strong> (Art. 231, V CPC)</td>
+              <td>Lei nº 11.419/2006 (Resolução CNJ nº 234/2016)</td>
+              <td>Pessoas jurídicas públicas e privadas cadastradas (obrigatório)</td>
+              <td>Consulta em até <strong>10 dias corridos</strong>. Feita a consulta, o prazo inicia no próximo dia útil. Se inerte após 10 dias corridos, reputa-se consumada compulsoriamente no 10º dia!</td>
+            </tr>
+            <tr>
+              <td><strong>Citação por E-mail</strong> (Art. 231, IX CPC)</td>
+              <td>Lei nº 14.195/2021 (Art. 246, caput CPC)</td>
+              <td>Pessoas naturais e microempresas cadastradas no Redesim</td>
+              <td>O citando tem <strong>3 dias úteis</strong> para confirmar recebimento. Confirmado, deve-se aguardar <strong>5 dias úteis de carência</strong>: o prazo do ato processual começa no dia útil após o 5º dia!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Benefícios de Prazo em Dobro -->
+      <h3>Privilégios Legais: Quem tem Prazo em Dobro?</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>👥 Fazenda Pública, MP e Defensoria (Arts. 180, 183 e 186)</h4>
+          <p>Gozam de <strong>prazo em dobro para todas as manifestações nos autos</strong>. A Fazenda Pública abrange pessoas jurídicas de direito público (União, Estados, DF, Municípios, autarquias e fundações públicas).<br>
+          <span style="color:#EF4444; font-weight:700;">NÃO GOZAM:</span> Sociedades de economia mista e empresas públicas (pessoas jurídicas de direito privado)!</p>
+        </div>
+
+        <div class="card">
+          <h4>⚖️ Litisconsortes com Diferentes Procuradores (Art. 229)</h4>
+          <p>Têm prazo em dobro para contestar, recorrer e falar nos autos se tiverem advogados diferentes de <strong>escritórios de advocacia distintos</strong>.<br>
+          <span style="color:#EF4444; font-weight:700;">EXCEÇÃO FUNDAMENTAL (§ 2º):</span> A dobra de prazo <strong>NÃO SE APLICA em processos eletrônicos</strong> (pois os autos são acessíveis simultaneamente por todos os advogados na nuvem)!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PRECLUSÃO ══════════════════════════════ -->
+    <section id="preclusao" class="section">
+      <div class="section-label">Slide 08 · Teoria da Preclusão</div>
+      <h2>Preclusão Geral das Partes &amp; Preclusão Pro Judicato</h2>
+
+      <p>A preclusão é o mecanismo que impede o processo de andar em círculos perpétuos, garantindo a marcha para a frente até o provimento definitivo:</p>
+
+      <div class="grid3">
+        <div class="card">
+          <h4>1. Preclusão Temporal</h4>
+          <p>Perda da faculdade de praticar o ato processual pelo <strong>transcurso do prazo legal</strong> sem manifestação (ex.: deixar passar 15 dias sem recorrer ou sem contestar).</p>
+        </div>
+
+        <div class="card">
+          <h4>2. Preclusão Lógica</h4>
+          <p>Perda da faculdade em virtude da prática de um ato <strong>incompatível com a faculdade pretendida</strong> (ex.: cumprir voluntariamente a sentença e depois querer apelar - Art. 1.000).</p>
+        </div>
+
+        <div class="card">
+          <h4>3. Preclusão Consumativa</h4>
+          <p>Extinção da faculdade processual pelo seu <strong>próprio exercício</strong> anterior (ex.: contestar no 5º dia do prazo; não é permitido juntar aditamento no 10º dia, pois o direito já se exauriu).</p>
+        </div>
+      </div>
+
+      <h3>Preclusão Pro Judicato (Preclusão para o Juiz)</h3>
+      <div class="info-box box-doutrina">
+        <div class="box-label">👨‍⚖️ O Juiz pode reconsiderar suas próprias decisões?</div>
+        <p>Embora os prazos do juiz sejam impróprios, ele está sujeito à <strong>preclusão pro judicato</strong>: a proibição de reexaminar matérias já decididas no processo, preservando a estabilidade da lide.</p>
+        <p><strong>Regra da Estabilidade:</strong> O juiz não pode voltar atrás em decisões que deferem provas, concedem liminares ou apreciam matérias sem recurso, salvo se houver fato novo modificador ou no exercício do juízo de retratação em Agravo de Instrumento.</p>
+        <p><strong>Exceções (Matérias imunes à preclusão pro judicato):</strong>
+        <br>• Matérias de <strong>ordem pública</strong> cognoscíveis de ofício a qualquer tempo (pressupostos processuais, condições da ação e nulidades absolutas).
+        <br>• <strong>Indeferimento de provas:</strong> Pelo Art. 370, o juiz, sendo o destinatário das provas, pode de ofício determinar novas perícias se entender necessário ao seu convencimento.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ COMUNICAÇÕES DOS ATOS PROCESSUAIS ══════════════════════════════ -->
+    <section id="comunicacoes" class="section">
+      <div class="section-label">Slide 08 · Comunicações Processuais</div>
+      <h2>Comunicação dos Atos: Cartas, Citação e Intimação</h2>
+
+      <p>As comunicações processuais dividem-se em dois grandes blocos: comunicações <em>interorgânicas</em> (entre juízos) e comunicações <em>extraorgânicas</em> (entre o juízo e as partes/terceiros):</p>
+
+      <h3>1. Comunicação Entre Órgãos Judiciais (As Quatro Espécies de Cartas)</h3>
+      <div class="grid2">
+        <div class="card">
+          <h4>📜 Carta Precatória</h4>
+          <p>Expedida para que outro órgão jurisdicional brasileiro de competência territorial distinta cumpra diligência local (ex.: juiz de SP solicita penhora ou oitiva de testemunha ao juiz de Salvador).</p>
+        </div>
+
+        <div class="card">
+          <h4>🌍 Carta Rogatória</h4>
+          <p>Dirigida a autoridade judiciária de <strong>país estrangeiro</strong>, tramitada via canais diplomáticos e autoridades centrais do Ministério da Justiça.</p>
+        </div>
+
+        <div class="card">
+          <h4>🏛️ Carta de Ordem</h4>
+          <p>Expedida por tribunal (órgão superior colegiado) determinando a prática de ato a juiz que lhe seja diretamente subordinado territorial e funcionalmente.</p>
+        </div>
+
+        <div class="card">
+          <h4>⚖️ Carta Arbitral</h4>
+          <p>Expedida por árbitro de <strong>tribunal arbitral</strong> solicitando ao Poder Judiciário a realização de atos coercitivos ou efetivação de tutela provisória fora do alcance arbitral.</p>
+        </div>
+      </div>
+
+      <h3>2. A Citação Processual (Arts. 238 a 259 CPC)</h3>
+      <div class="nivel-box nivel-1">
+        <div class="nivel-badge">🟢 Conceito &amp; Importância Capital</div>
+        <p><strong>Citação (Art. 238):</strong> É o ato solene de convocação do réu, executado ou interessado para integrar a relação processual e exercer a ampla defesa. <em>Prazo impróprio de efetivação:</em> 45 dias da propositura da ação (Art. 238, p. único). Se o réu comparece espontaneamente, supre a falta ou nulidade da citação (Art. 239, § 1º).</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card success">
+          <h4>🔍 Citação Real</h4>
+          <p>Garante a ciência fática inequívoca da parte convocada:</p>
+          <ul style="padding-left:1.2rem;">
+            <li><strong>Por meio eletrônico:</strong> Forma prioritária de acordo com o Art. 246 caput do CPC.</li>
+            <li><strong>Pelo Correio:</strong> Regra tradicional, com exigência obrigatória de Aviso de Recebimento (AR - Súmula 429 STJ).</li>
+            <li><strong>Por Oficial de Justiça:</strong> Mediante mandado judicial.</li>
+            <li><strong>Por Escrivão/Chefe de Secretaria:</strong> Se o citando comparecer pessoalmente ao cartório.</li>
+          </ul>
+        </div>
+
+        <div class="card danger">
+          <h4>🎭 Citação Ficta (Presumida)</h4>
+          <p>Presume-se a ciência por ficção jurídica legal:</p>
+          <ul style="padding-left:1.2rem;">
+            <li><strong>Com Hora Certa (Arts. 252 a 254):</strong> Oficial procura o réu por <strong>duas vezes</strong> em seu domicílio e, suspeitando de ocultação dolosa, intima vizinho ou familiar de que retornará no dia seguinte com hora designada.</li>
+            <li><strong>Por Edital (Arts. 256 a 259):</strong> Réu desconhecido ou em local ignorado, incerto ou inacessível. Prazo de dilação entre <strong>20 a 60 dias</strong>.</li>
+            <li><strong>GARANTIA INAFASTÁVEL:</strong> Na citação ficta, se o réu for revel, é <strong>obrigatória a nomeação de curador especial</strong> para formular contestação (Art. 72, II)!</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Restrições do Art. 244 -->
+      <div class="info-box box-atencao">
+        <div class="box-label">🛑 Onde e Quando NÃO se Fará Citação (Art. 244 CPC)</div>
+        <p>A citação faz-se em qualquer local em que se encontre o citando (Art. 243). Contudo, salvo para evitar perecimento urgente de direito, <strong>NÃO SE FARÁ CITAÇÃO:</strong>
+        <br>1. A quem estiver participando de <strong>culto religioso</strong>;
+        <br>2. Ao cônjuge/companheiro e parentes consanguíneos ou afins (linha reta ou colateral até 2º grau) no <strong>dia do falecimento e nos 7 dias seguintes (luto de 8 dias)</strong>;
+        <br>3. Aos noivos nos <strong>3 primeiros dias após o casamento</strong>;
+        <br>4. Aos enfermos enquanto grave o seu estado de saúde.</p>
+      </div>
+
+      <div class="info-box box-resumo">
+        <div class="box-label">⚡ Efeitos Substanciais e Processuais da Citação Válida (Art. 240)</div>
+        <p>A citação válida produz três grandes efeitos simultâneos:
+        <br>1º) <strong>Induz litispendência</strong> (impede novo processo idêntico entre as mesmas partes);
+        <br>2º) <strong>Torna a coisa litigiosa</strong> (alienação do bem transfere o risco da evicção);
+        <br>3º) <strong>Constitui o devedor em mora</strong> (início da contagem dos juros moratórios).</p>
+      </div>
+
+      <h3>3. Intimação: Conceito e Distinção Prática (Art. 269)</h3>
+      <div class="card">
+        <h4>Diferenças Cardeais entre Citação e Intimação</h4>
+        <p>Segundo o <strong>Art. 269</strong>, a intimação é o ato pelo qual se dá ciência a alguém dos atos e termos do processo para que faça ou deixe de fazer alguma coisa.</p>
+        <ul style="line-height: 1.85;">
+          <li><strong>Destinatários:</strong> A citação é restrita a réu, executado ou interessado para integrar a lide; a intimação dirige-se a qualquer das partes, seus advogados, peritos, testemunhas e terceiros.</li>
+          <li><strong>Direcionamento:</strong> A citação é feita pessoalmente à parte; a intimação é dirigida ordinariamente ao <strong>advogado constituído</strong>, via Diário da Justiça Eletrônico ou portal, salvo quando a lei expressamente exigir ciência pessoal da parte.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ MAPAS MENTAIS & FLUXOS ══════════════════════════════ -->
+    <section id="mapas-fluxos" class="section">
+      <div class="section-label">Organização Visual</div>
+      <h2>Mapas Mentais &amp; Fluxogramas Decisórios</h2>
+
+      <div class="mindmap-tree">
+        <div class="mm-root">🧠 CPC: DO JUIZ E DOS ATOS PROCESSUAIS (SLIDES 07 &amp; 08)</div>
+        <div class="mm-l1">├── 1. DO JUIZ (Arts. 139 - 148)</div>
+        <div class="mm-l2">│   ├── Direção do processo sem discricionariedade (Art. 139)</div>
+        <div class="mm-l2">│   ├── Impedimento (Art. 144) ➔ Objetivo | Ordem Pública | Nulidade Absoluta | Ação Rescisória (966, II)</div>
+        <div class="mm-l2">│   │   └── Inconstitucionalidade do Inciso VIII (STF ADI 5.953) | Mantido Inciso III</div>
+        <div class="mm-l2">│   └── Suspeição (Art. 145) ➔ Subjetivo | Prazo de 15 dias | Preclui | NÃO cabe Ação Rescisória</div>
+        <div class="mm-l1">├── 2. ATOS PROCESSUAIS (Arts. 188 - 204)</div>
+        <div class="mm-l2">│   ├── Fatos (naturais) vs Atos (humanos voluntários) | Negócio Jurídico Processual (Art. 190)</div>
+        <div class="mm-l2">│   └── Pronunciamentos do Juiz (Art. 203)</div>
+        <div class="mm-l3">│       ├── Sentença (terminativa 485 ou mérito 487) ➔ Encerra cognição | Prazo 30 dias</div>
+        <div class="mm-l3">│       ├── Decisão Interlocutória ➔ Conteúdo decisório sem pôr fim | Prazo 10 dias</div>
+        <div class="mm-l3">│       └── Despacho de Mero Expediente ➔ Sem gravame | Irrecorrível | Prazo 5 dias</div>
+        <div class="mm-l1">├── 3. TEMPO, LUGAR &amp; PRAZOS (Arts. 212 - 235)</div>
+        <div class="mm-l2">│   ├── Horário das 06h às 20h | Eletrônico até 24h00 | Dias úteis (Art. 219)</div>
+        <div class="mm-l2">│   ├── Prazos Próprios (preclusão temporal) vs Impróprios (juiz e auxiliares)</div>
+        <div class="mm-l2">│   ├── Portal Eletrônico (10 dias consulta) vs E-mail (3 dias confirmação + 5 dias carência)</div>
+        <div class="mm-l2">│   └── Dobra de Prazo: Fazenda, MP e DPE (sempre) | Litisconsortes (só em autos físicos!)</div>
+        <div class="mm-l1">└── 4. COMUNICAÇÕES PROCESSUAIS (Arts. 238 - 275)</div>
+        <div class="mm-l2">    ├── Cartas: Precatória (comarcas do Brasil), Rogatória (exterior), Ordem (tribunal), Arbitral</div>
+        <div class="mm-l2">    ├── Citação Real (eletrônica prioritária, correio com AR, oficial, cartório)</div>
+        <div class="mm-l2">    ├── Citação Ficta (hora certa e edital) ➔ EXIGE curador especial se réu revel!</div>
+        <div class="mm-l2">    └── Efeitos: Litispendência, coisa litigiosa e constituição em mora (Art. 240)</div>
+      </div>
+
+      <!-- Fluxograma Decisório: Pronunciamento Judicial -->
+      <h3>Fluxograma de Identificação do Pronunciamento Judicial</h3>
+      <div class="flowchart-container">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div><strong>O pronunciamento do magistrado possui conteúdo decisório?</strong><br>Se NÃO tiver nenhum gravame às partes e for mero andamento do processo &rarr; É <strong>DESPACHO</strong> (prazo de 5 dias; irrecorrível).</div>
+        </div>
+        <div class="flow-arrow">⬇️ Se SIM (tem conteúdo decisório)</div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div><strong>O ato põe fim à fase de cognição em 1º grau ou extingue a execução (Arts. 485 ou 487)?</strong><br>Se SIM &rarr; É <strong>SENTENÇA</strong> (prazo de 30 dias; desafia Apelação).</div>
+        </div>
+        <div class="flow-arrow">⬇️ Se NÃO põe fim à fase de conhecimento</div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div><strong>Pronunciamento proferido no decurso da causa sem encerrá-la:</strong><br>Trata-se de <strong>DECISÃO INTERLOCUTÓRIA</strong> (prazo de 10 dias; desafia Agravo de Instrumento nos casos do Art. 1.015 ou preliminar de recurso).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FLASHCARDS INTERATIVOS ══════════════════════════════ -->
+    <section id="flashcards" class="section">
+      <div class="section-label">Fixação Ativa da Memória</div>
+      <h2>Flashcards Interativos (Toque para Revelar)</h2>
+
+      <div class="flashcards-grid">
+        <!-- Flashcard 1 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 01 · Impedimento vs Rescisória</div>
+            <div class="fc-pergunta">A sentença proferida por juiz suspeito pode ser desconstituída por Ação Rescisória? E a proferida por juiz impedido?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>Por juiz impedido: SIM</strong>, cabe expressamente Ação Rescisória com base no Art. 966, II do CPC por nulidade absoluta.<br>
+            <strong>Por juiz suspeito: NÃO</strong>, a suspeição preclui se não suscitada no prazo de 15 dias e não autoriza ação rescisória.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+
+        <!-- Flashcard 2 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 02 · Julgamento do STF na ADI 5.953</div>
+            <div class="fc-pergunta">O que decidiu o STF sobre o impedimento do juiz em relação a parentes advogados (Art. 144, VIII)?</div>
+          </div>
+          <div class="fc-resposta">
+            O STF declarou <strong>inconstitucional o Art. 144, VIII</strong>, que impedia o juiz de atuar em processos patrocinados por qualquer advogado do mesmo escritório de parente seu. Todavia, <strong>continua impedido</strong> quando seu parente atuar diretamente como advogado na causa (Art. 144, III e § 3º).
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+
+        <!-- Flashcard 3 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 03 · Contagem de Prazos em Dias Úteis</div>
+            <div class="fc-pergunta">Qual é o critério de contagem do prazo processual em dias no CPC/15 e como opera o termo inicial?</div>
+          </div>
+          <div class="fc-resposta">
+            Contam-se <strong>apenas os dias úteis (Art. 219)</strong>. Exclui-se o dia do começo e inclui-se o do vencimento. A contagem tem início no primeiro dia útil após a disponibilização no DJe ou após a juntada do mandado.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 04 · Prazo em Dobro para Litisconsortes</div>
+            <div class="fc-pergunta">Dois litisconsortes com advogados diferentes têm prazo em dobro em processo que tramita no sistema de processo eletrônico?</div>
+          </div>
+          <div class="fc-resposta">
+            <strong>NÃO TÊM PRAZO EM DOBRO!</strong> Segundo o <strong>Art. 229, § 2º do CPC</strong>, a regra de prazo em dobro cessa e não se aplica aos processos com autos integralmente eletrônicos.
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 05 · Citação Ficta e Revelia</div>
+            <div class="fc-pergunta">Se o réu for citado por edital ou com hora certa e não apresentar contestação, o que deve fazer o juiz antes de prosseguir?</div>
+          </div>
+          <div class="fc-resposta">
+            Por se tratar de citação ficta, o juiz é <strong>obrigado a nomear Curador Especial</strong> (geralmente a Defensoria Pública) para oferecer defesa técnica, sob pena de nulidade processual absoluta (Art. 72, II do CPC).
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard" onclick="this.classList.toggle('revelado')">
+          <div>
+            <div class="fc-num">Flashcard 06 · Preclusão Pro Judicato</div>
+            <div class="fc-pergunta">O que é a preclusão pro judicato e quais matérias estão imunes a ela?</div>
+          </div>
+          <div class="fc-resposta">
+            É a impossibilidade de o magistrado rediscutir ou alterar o que já decidiu nos autos. Estão imunes a essa preclusão as matérias de <strong>ordem pública</strong> (pressupostos processuais e condições da ação) e o indeferimento/determinação de provas de ofício (Art. 370).
+          </div>
+          <div class="fc-dica-clique">Toque para revelar a resposta 👆</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ REVISÃO ATIVA / QUESTÕES COMENTADAS ══════════════════════════════ -->
+    <section id="revisao-ativa" class="section">
+      <div class="section-label">Simulação de Concursos e Exames da OAB</div>
+      <h2>Questões Comentadas de Alto Nível</h2>
+
+      <!-- Questão 1: FGV OAB -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo FGV · Exame de Ordem / Advocacia</span>
+        <p><strong>01. (FGV / Adaptada) O Juiz de Direito da 2ª Vara Cível verificou que em determinada ação indenizatória o advogado da parte autora é seu sobrinho consanguíneo em 3º grau, o qual já atuava no patrocínio da causa desde a petição inicial. Todavia, nenhuma das partes arguiu qualquer exceção no prazo de 15 dias. Diante do regime processual civil do CPC/15:</strong></p>
+        <p>A) Houve preclusão da matéria, tornando o magistrado plenamente apto a sentenciar a causa com eficácia natural.<br>
+           B) O magistrado está impedido por causa objetiva absoluta, impondo-se seu afastamento de ofício, sob pena de nulidade absoluta dos atos decisórios e cabimento de ação rescisória.<br>
+           C) Trata-se de hipótese típica de suspeição subjetiva, que se convalida pelo silêncio das partes após o transcurso de 15 dias úteis.<br>
+           D) O magistrado somente seria impedido se seu sobrinho figurasse como sócio administrador de escritório com mais de 50 advogados, em conformidade com a ADI 5.953 do STF.</p>
+        <details>
+          <summary>Ver resposta comentada e gabarito</summary>
+          <div class="gabarito">
+            <strong>Gabarito: B.</strong><br>
+            <strong>Fundamentação:</strong> Trata-se de hipótese expressa de <strong>Impedimento (Art. 144, III do CPC)</strong>: o juiz é impedido quando seu parente consanguíneo até o 3º grau atua diretamente como defensor, advogado ou promotor no processo. As causas de impedimento são de ordem pública, não precluem e geram nulidade absoluta com cabimento de Ação Rescisória (Art. 966, II). A ADI 5.953 do STF afastou o inciso VIII, mas manteve intacto o inciso III.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 2: VUNESP Magistratura -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo VUNESP / Magistratura Estadual</span>
+        <p><strong>02. (VUNESP) Sobre os pronunciamentos do juiz no Código de Processo Civil de 2015, assinale a alternativa correta:</strong></p>
+        <p>A) A sentença é conceituada exclusivamente pelo seu conteúdo de mérito, extinguindo sempre a relação jurídica material litigiosa.<br>
+           B) O ato judicial pelo qual o magistrado resolve antecipadamente parte do mérito da demanda possui natureza jurídica de sentença terminativa.<br>
+           C) A sentença é o ato pelo qual o juiz, fundamentado nos Arts. 485 ou 487 do CPC, põe fim à fase de cognição do procedimento comum ou extingue a execução.<br>
+           D) Todos os despachos de mero expediente são obrigatoriamente passíveis de interposição imediata de recurso de agravo de instrumento.</p>
+        <details>
+          <summary>Ver resposta comentada e gabarito</summary>
+          <div class="gabarito">
+            <strong>Gabarito: C.</strong><br>
+            <strong>Fundamentação:</strong> O conceito moderno de sentença adotado pelo <strong>Art. 203, § 1º do CPC</strong> combina conteúdo (Arts. 485 e 487) e efeito preclusivo de encerramento da fase cognitiva do procedimento comum ou da execução. O julgamento antecipado parcial de mérito (Art. 356) é decisão interlocutória de mérito, pois não põe fim à fase cognitiva.
+          </div>
+        </details>
+      </div>
+
+      <!-- Questão 3: FCC Analista Judiciário -->
+      <div class="exercise">
+        <span class="tag-banca">Estilo FCC · Tribunais</span>
+        <p><strong>03. (FCC) Em relação à citação e intimação por meio eletrônico reguladas pelo CPC e legislação extravagante:</strong></p>
+        <p>A) A citação por e-mail de pessoas naturais dispensa qualquer confirmação de recebimento, fluindo o prazo a partir da emissão pelo servidor do tribunal.<br>
+           B) Na citação por portal eletrônico (Lei 11.419/06), findo o prazo de 10 dias corridos sem consulta do citando, a citação reputa-se automaticamente realizada.<br>
+           C) As pessoas físicas são obrigadas a manter cadastro diário no Redesim sob pena de revelia imediata.<br>
+           D) A citação com hora certa é considerada modalidade de citação real pelo oficial de justiça, dispensando curador especial se ocorrer revelia.</p>
+        <details>
+          <summary>Ver resposta comentada e gabarito</summary>
+          <div class="gabarito">
+            <strong>Gabarito: B.</strong><br>
+            <strong>Fundamentação:</strong> Conforme o Art. 5º, § 3º da Lei nº 11.419/2006 e Art. 231, V do CPC, a consulta no portal deve ocorrer em até 10 dias corridos; caso o citando não consulte, a intimação/citação é dada como automaticamente consumada no 10º dia, iniciando-se a contagem do prazo no dia útil subsequente.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ CHEAT SHEET FINAL (UMA PÁGINA) ══════════════════════════════ -->
+    <section id="resumo-final" class="section">
+      <div class="section-label">Módulo de Revisão Ultra Rápida</div>
+      <div class="card gold" style="background: var(--p-50);">
+        <h2>🚀 Resumão Ultra Rápido (Cheat Sheet Final dos Slides 07 &amp; 08)</h2>
+        <p style="font-size: 1.05rem; line-height: 1.85;">
+          • <strong>Função do Juiz (Art. 139):</strong> Dirige o processo sem discricionariedade de conveniência política pessoal; impessoalidade e juiz natural inafastáveis.<br>
+          • <strong>Impedimento (Art. 144):</strong> Risco gravíssimo e objetivo. Conhecido de ofício a qualquer tempo (ordem pública). Gera <strong>nulidade absoluta</strong> e autoriza <strong>Ação Rescisória (Art. 966, II)</strong>. Parágrafo 3º: parente advogado na causa gera impedimento; STF na ADI 5.953 derrubou apenas o inciso VIII (sociedade com outros advogados).<br>
+          • <strong>Suspeição (Art. 145):</strong> Risco subjetivo / psicológico (amigo íntimo, inimigo, devedor, credor, aconselhamento). <strong>Preclui em 15 dias úteis</strong> se a parte não arguir. O silêncio convalida os atos. <strong>NUNCA cabe ação rescisória</strong>!<br>
+          • <strong>Ato vs Fato Processual:</strong> Ato = conduta humana comissiva voluntária com relevância na lide. Fato = evento natural (morte, incêndio, decurso do tempo) que impacta o processo. Negócio jurídico processual (Art. 190) autoriza partes capazes a modular procedimentos em direitos disponíveis.<br>
+          • <strong>Tríade dos Pronunciamentos (Art. 203):</strong> Sentença (põe fim à fase cognitiva ou extingue execução - prazo 30 dias); Decisão Interlocutória (tem cunho decisório sem pôr fim - prazo 10 dias); Despacho (impulso sem gravame - irrecorrível - prazo 5 dias).<br>
+          • <strong>Forma dos Atos (Art. 188):</strong> Princípio da liberdade das formas e instrumentalidade. O ato alcançou o objetivo sem prejuízo? É válido e não há nulidade.<br>
+          • <strong>Tempo dos Atos:</strong> Dias úteis das 06h às 20h. Citação, intimação e penhora urgentes podem furar horário e férias sem ordem prévia. Autos eletrônicos peticionáveis até às 24h00 do último dia útil.<br>
+          • <strong>Contagem de Prazos (Art. 219):</strong> Computam-se <strong>apenas dias úteis</strong> para prazos em dias. Exclui o início, inclui o vencimento. Portal eletrônico: 10 dias corridos de tolerância. E-mail: 3 dias úteis para confirmar + 5 dias de carência.<br>
+          • <strong>Prazo em Dobro:</strong> MP, Fazenda Pública (direito público) e Defensoria Pública têm dobro geral. Litisconsortes com advogados distintos têm prazo em dobro <strong>apenas se o processo for físico</strong> (não se aplica a processos eletrônicos - Art. 229, § 2º).<br>
+          • <strong>Preclusões:</strong> Temporal (perda do prazo), Lógica (incompatibilidade com ato anterior), Consumativa (direito já exercido). Juiz sofre preclusão <em>pro judicato</em> (não pode rever decisões, salvo matérias de ordem pública e deferimento probatório de ofício do Art. 370).<br>
+          • <strong>Comunicações:</strong> Cartas (Precatória, Rogatória, Ordem, Arbitral). Citação (real vs ficta). Citação por edital ou hora certa exige <strong>curador especial</strong> se o réu for revel! Efeitos da citação válida: induz litispendência, coisa litigiosa e constitui em mora (Art. 240).
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Core Scripts do Portal Hub -->
+  <script src="../../portal-core.js"></script>
+</body>
+</html>

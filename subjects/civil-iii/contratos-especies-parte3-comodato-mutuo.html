@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contratos em Espécie — Parte 3: Comodato e Mútuo | Direito Civil III</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../base-style.css">
+  <link rel="stylesheet" href="civil-resumo-style.css">
+</head>
+
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div class="container">
+      <div class="badge">📚 Direito Civil III · Prof.ª Giovanna Farias</div>
+      <h1>Contratos em Espécie — <span>Parte 3</span></h1>
+      <p class="subtitle">Empréstimo no Código Civil: a dualidade entre ceder uso (Comodato) e transferir domínio (Mútuo)</p>
+      <div class="meta">
+        <span class="meta-item">⚖️ Arts. 579–585 (Comodato)</span>
+        <span class="meta-item">⚖️ Arts. 586–592 (Mútuo)</span>
+        <span class="meta-item">🏛️ Súmula 297/STJ & ADIn 2.591/STF</span>
+        <span class="meta-item">🎓 Graduação · OAB · Concursos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO SUPERIOR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="../../index.html" class="home-btn" title="Voltar ao Portal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <div class="nav-list">
+        <a href="#objetivos" class="nav-item">Objetivos</a>
+        <a href="#visao-geral" class="nav-item">Visão Geral</a>
+        <a href="#comodato" class="nav-item">Comodato</a>
+        <a href="#mutuo" class="nav-item">Mútuo</a>
+        <a href="#lei-seca" class="nav-item">Lei Seca</a>
+        <a href="#comparativo" class="nav-item">Comparativos</a>
+        <a href="#jurisprudencia" class="nav-item">Jurisprudência</a>
+        <a href="#questoes" class="nav-item">Questões</a>
+        <a href="#flashcards" class="nav-item">Flashcards</a>
+        <a href="#cheatsheet" class="nav-item">Cheat Sheet</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg width="20" height="20" id="themeIcon"></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+  <!-- ===== OBJETIVOS ===== -->
+  <section id="objetivos">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🎯</span> Objetivos de Aprendizagem</h2>
+    <p class="section-desc">Ao final deste módulo, você será capaz de:</p>
+    <div class="objetivos-grid">
+      <div class="objetivo-card">
+        <div class="objetivo-num">1</div>
+        <div class="objetivo-text">Distinguir comodato de mútuo com precisão técnica, identificando os elementos essenciais de cada contrato (gratuidade, fungibilidade, transferência de domínio)</div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-num">2</div>
+        <div class="objetivo-text">Enunciar as obrigações e direitos do comodatário e comodante, com suas exceções e penalidades (dupla sanção do art. 582)</div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-num">3</div>
+        <div class="objetivo-text">Classificar as 6 hipóteses de extinção do comodato e aplicá-las a casos concretos, inclusive morte do comodatário (intuitu personae)</div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-num">4</div>
+        <div class="objetivo-text">Compreender o mútuo feneratício, os prazos legais do art. 592 e as regras do mútuo feito a pessoa menor (art. 588 e exceções)</div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-num">5</div>
+        <div class="objetivo-text">Aplicar a Súmula 297 STJ, ADIn 2.591 STF e Enunciado 34 CJF ao mútuo bancário com o CDC</div>
+      </div>
+      <div class="objetivo-card">
+        <div class="objetivo-num">6</div>
+        <div class="objetivo-text">Resolver questões de banca (CEBRASPE, FGV, FCC, OAB) sobre pegadinhas típicas de comodato e mútuo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISÃO GERAL ===== -->
+<section id="visao-geral">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🔭</span> Visão Geral — Os Dois Empréstimos do CC</h2>
+    <p class="section-desc">O Código Civil agrupa dois contratos sob a designação "empréstimo", com naturezas radicalmente distintas.</p>
+
+    <div class="box box-info">
+      <div class="box-title">📌 Ponto de Partida Fundamental</div>
+      <strong>COMODATO</strong> = empresta para <em>usar</em> → devolve a <em>mesma coisa</em> (infungível) → <em>gratuito</em><br>
+      <strong>MÚTUO</strong> = empresta para <em>consumir</em> → devolve coisa <em>equivalente</em> (fungível) → em regra <em>oneroso</em>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>⚖️ Comodato (Arts. 579-585)</th>
+            <th>💰 Mútuo (Arts. 586-592)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Finalidade</strong></td><td>Uso e gozo temporário</td><td>Consumo e disposição</td></tr>
+          <tr><td><strong>Fungibilidade</strong></td><td>Coisas <em>infungíveis</em> (regra)</td><td>Coisas <em>fungíveis</em></td></tr>
+          <tr><td><strong>O que se restitui</strong></td><td>A <em>mesma</em> coisa emprestada</td><td>Coisa do mesmo gênero, qualidade e quantidade</td></tr>
+          <tr><td><strong>Gratuidade/Onerosidade</strong></td><td><span class="badge-sim">Essencialmente gratuito</span></td><td><span class="badge-regra">Em regra oneroso (feneratício)</span></td></tr>
+          <tr><td><strong>Transfere o domínio?</strong></td><td><span class="badge-nao">NÃO</span> — só transfere posse direta</td><td><span class="badge-sim">SIM</span> — mutuário vira proprietário</td></tr>
+          <tr><td><strong>Natureza jurídica</strong></td><td>Real, unilateral, não solene, temporário</td><td>Real, unilateral (após tradição), não solene</td></tr>
+          <tr><td><strong>Partes</strong></td><td>Comodante / Comodatário</td><td>Mutuante / Mutuário</td></tr>
+          <tr><td><strong>Risco de perda</strong></td><td>Comodante (salvo culpa/mora do comodatário)</td><td>Mutuário (é o proprietário)</td></tr>
+          <tr><td><strong>Arts. CC/2002</strong></td><td>579 a 585</td><td>586 a 592</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-pega">
+      <div class="box-title">🎯 Pegadinha de Banca #1</div>
+      A GRATUIDADE é <strong>essência</strong> do comodato. Se houver pagamento, o contrato se desnatura em <strong>locação</strong> ou contrato inominado — mas o pagamento de condomínio, IPTU ou despesas ordinárias pelo comodatário <strong>NÃO desnatura</strong> a gratuidade (são obrigações do comodatário mesmo).
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMODATO ===== -->
+<section id="comodato">
+  <div class="container">
+    <div class="topic-header">
+      <div class="topic-icon">🏠</div>
+      <div>
+        <h2>Contrato de Comodato</h2>
+        <p>Arts. 579–585 CC | Empréstimo gratuito de coisa infungível</p>
+      </div>
+    </div>
+
+    <!-- NIVÉIS -->
+    <div class="nivel-tabs">
+      <button class="nivel-tab active" onclick="showNivel('comodato', 1, this)">Nível 1 · Linguagem Direta</button>
+      <button class="nivel-tab" onclick="showNivel('comodato', 2, this)">Nível 2 · Dogmática Formal</button>
+      <button class="nivel-tab" onclick="showNivel('comodato', 3, this)">Nível 3 · Concursos</button>
+    </div>
+
+    <!-- NÍVEL 1 -->
+    <div id="comodato-n1" class="nivel-panel active">
+      <div class="box box-info">
+        <div class="box-title">💡 Analogia do Dia a Dia</div>
+        <strong>Comodato = amigo que empresta o carro</strong><br>
+        Você empresta seu carro (infungível) para o amigo usar de graça. Ele devolve <em>o mesmo carro</em>. Se ele bate, paga. Se ele usar além do combinado (levar para uma viagem quando combinou só cidade), você pode exigir de volta imediatamente. Simples assim.
+      </div>
+      <div class="cards-2">
+        <div class="content-card">
+          <h4>🧑‍⚖️ Quem é quem?</h4>
+          <ul>
+            <li><strong>Comodante</strong>: quem cede/empresta a coisa</li>
+            <li><strong>Comodatário</strong>: quem recebe e usa a coisa</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>✅ Características-Chave</h4>
+          <ul>
+            <li>Sempre <strong>gratuito</strong></li>
+            <li>Coisa deve ser <strong>infungível</strong> (regra)</li>
+            <li>Contrato <strong>real</strong> (vale com a entrega)</li>
+            <li>Pode ser <strong>verbal</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- NÍVEL 2 -->
+    <div id="comodato-n2" class="nivel-panel">
+      <div class="cards-2" style="margin-bottom:1rem">
+        <div class="content-card">
+          <h4>📜 Conceito — Art. 579</h4>
+          <p style="font-size:0.87rem;font-style:italic;color:#374151;border-left:3px solid var(--p-500);padding-left:12px;margin:8px 0">"Comodato é o empréstimo gratuito de coisas não fungíveis. Perfaz-se com a tradição do objeto."</p>
+          <ul>
+            <li>Contrato <strong>benéfico</strong>: interpreta-se restritivamente</li>
+            <li>Posse direta → comodatário</li>
+            <li>Posse indireta → comodante</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>⚙️ Natureza Jurídica</h4>
+          <ul>
+            <li><strong>Real</strong>: aperfeiçoa-se com a tradição</li>
+            <li><strong>Unilateral</strong>: após tradição, só o comodatário tem obrigações definidas (bilateral imperfeito — comodante pode ter obrigações eventuais)</li>
+            <li><strong>Gratuito</strong>: essencialmente</li>
+            <li><strong>Temporário</strong>: se perpétuo → doação</li>
+            <li><strong>Não solene</strong>: pode ser verbal; prova por testemunhas admitida</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cards-2" style="margin-bottom:1rem">
+        <div class="content-card">
+          <h4>🔑 Requisitos Especiais</h4>
+          <ul>
+            <li><strong>Art. 580 — Administradores de bens alheios</strong>: tutores, curadores, inventariantes, testamenteiros, depositários → precisam de <em>autorização judicial</em> para dar em comodato bens sob sua guarda</li>
+            <li>Não precisa ser proprietário: enfiteuta, usufrutuário, usuário podem dar em comodato</li>
+            <li><strong>Subcomodato</strong>: VEDADO salvo autorização expressa do comodante (relação de confiança pessoal)</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>⚠️ Comodatum ad Pompam vel Ostentationem</h4>
+          <p style="font-size:0.86rem;color:#374151">Exceção à infungibilidade: coisas fungíveis/consumíveis emprestadas para <strong>exposição ou ornamentação</strong> (ex: vinhos finos para enfeitar). São devolvidas as <em>mesmas</em> coisas emprestadas (não se consomem). Isso é comodato, não mútuo.</p>
+        </div>
+      </div>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:1.5rem 0 1rem">Obrigações do Comodatário — Mnemônico CUR</h3>
+      <div class="mnemonico">
+        <span class="mnemonico-sigla">CUR</span>
+        <div class="mnemonico-expand">
+          <div class="mnemonico-item">
+            <div class="mnemonico-letra">C</div>
+            <div class="mnemonico-word">Conservar<br>a coisa</div>
+          </div>
+          <div class="mnemonico-item">
+            <div class="mnemonico-letra">U</div>
+            <div class="mnemonico-word">Usar de forma<br>adequada</div>
+          </div>
+          <div class="mnemonico-item">
+            <div class="mnemonico-letra">R</div>
+            <div class="mnemonico-word">Restituir<br>no prazo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-3" style="margin-top:1.2rem">
+        <div class="content-card">
+          <h4>🛡️ C — Conservar (art. 582)</h4>
+          <ul>
+            <li>Deve conservar "como se sua própria fora"</li>
+            <li>Responde por <em>toda espécie de culpa</em> (inclusive levíssima)</li>
+            <li>Não responde: uso normal, ação do tempo, caso fortuito/FM <strong>sem mora</strong></li>
+            <li>Despesas ordinárias: por conta do comodatário</li>
+            <li>Despesas extraordinárias urgentes: deve comunicar ao comodante</li>
+            <li>Art. 583 — perigo: se preferiu salvar os seus bens, responde pelo dano, <em>mesmo que fortuito</em></li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>🎯 U — Usar Adequadamente (art. 582)</h4>
+          <ul>
+            <li>Conforme o contrato ou a natureza da coisa</li>
+            <li>Não pode: alugar, nem subemprestar sem autorização</li>
+            <li>Uso inadequado → resolução imediata do contrato</li>
+            <li>Desvio de finalidade: comodante pode exigir devolução imediata</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>🔄 R — Restituir (art. 582, 2ª parte)</h4>
+          <ul>
+            <li>No prazo convencionado ou findo o uso</li>
+            <li>Recusa = <strong>esbulho</strong> (ação de reintegração de posse)</li>
+            <li><strong>Dupla sanção</strong>: (a) responde pelos riscos mesmo que fortuitos (mora) + (b) aluguel arbitrado pelo comodante</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:1.5rem 0 1rem">Direitos e Obrigações do Comodante</h3>
+      <div class="cards-2">
+        <div class="content-card">
+          <h4>📋 Obrigações do Comodante</h4>
+          <p style="font-size:0.85rem;color:#6b7280;margin:0 0 8px">Em regra, nenhuma (contrato real + unilateral). Eventuais:</p>
+          <ul>
+            <li>Reembolsar despesas extraordinárias e urgentes feitas pelo comodatário</li>
+            <li>Indenizar por <strong>vício oculto</strong> que conhecia e dolosamente não informou</li>
+            <li>Receber a coisa em restituição (mora do comodante → ação de consignação em pagamento pelo comodatário)</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>✅ Direitos do Comodante</h4>
+          <ul>
+            <li>Exigir conservação da coisa como se fora sua</li>
+            <li>Exigir que despesas ordinárias sejam por conta do comodatário</li>
+            <li>Exigir restituição no prazo</li>
+            <li>Arbitrar e cobrar aluguel (penalidade) em caso de atraso (art. 582)</li>
+            <li>Pedir restituição antecipada se provar urgência imprevista (art. 581)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box box-atencao" style="margin-top:1rem">
+        <div class="box-title">📝 Art. 581 — Comodato por Prazo Indeterminado</div>
+        "Se o comodato não tiver prazo convencional, presumir-se-lhe-á o necessário para o uso concedido; não podendo o comodante, salvo necessidade imprevista e urgente, reconhecida pelo juiz, suspender o uso e gozo da coisa emprestada antes de findo o prazo convencional, ou o que se determine pelo uso outorgado."<br><br>
+        <strong>→</strong> O comodante NÃO pode simplesmente pedir de volta quando quiser. Deve provar necessidade urgente e imprevista ao juiz.
+      </div>
+    </div>
+
+    <!-- NÍVEL 3 -->
+    <div id="comodato-n3" class="nivel-panel">
+      <div class="box box-pega">
+        <div class="box-title">🎯 Pegadinhas CEBRASPE/FGV — Comodato</div>
+        <ul style="margin:8px 0 0;padding-left:1.3rem;font-size:0.88rem;line-height:1.8">
+          <li><strong>FALSO</strong>: "O comodato se aperfeiçoa com o acordo de vontades" → É REAL, aperfeiçoa com a TRADIÇÃO</li>
+          <li><strong>FALSO</strong>: "O comodatário responde apenas por culpa grave" → Responde por TODA espécie de culpa (inclusive levíssima)</li>
+          <li><strong>FALSO</strong>: "O comodante pode pedir a coisa de volta a qualquer tempo em comodato por prazo indeterminado" → Precisa provar urgência imprevista ao juiz (art. 581)</li>
+          <li><strong>FALSO</strong>: "O comodatário pode subemprestar ou sublocar sem necessidade de autorização" → VEDADO salvo autorização expressa</li>
+          <li><strong>VERDADEIRO</strong>: "O pagamento de IPTU pelo comodatário não desnatura a gratuidade do comodato"</li>
+          <li><strong>VERDADEIRO</strong>: "Se o comodatário, diante de perigo, salvar seus bens em detrimento dos do comodante, responde pelo dano, mesmo que fortuito"</li>
+          <li><strong>FALSO</strong>: "Na morte do comodatário, os herdeiros são obrigados a devolver imediatamente" → Depende: se intuitu personae SIM; se não (ex: trator p/ colheita) CONTINUAM até fim da finalidade</li>
+        </ul>
+      </div>
+
+      <div class="box box-erro">
+        <div class="box-title">⚠️ Erros Comuns em Prova — Comodato</div>
+        <ul style="margin:8px 0 0;padding-left:1.3rem;font-size:0.88rem;line-height:1.8">
+          <li><strong>Confundir "bilateral imperfeito" com "bilateral"</strong>: o comodato é UNILATERAL. As obrigações do comodante são eventuais, não originárias.</li>
+          <li><strong>Esquecer a "dupla sanção" do art. 582</strong>: mora do comodatário gera (1) suporte aos riscos mesmo fortuitos E (2) aluguel arbitrado.</li>
+          <li><strong>Ignorar o art. 580</strong>: administradores de bens alheios precisam de autorização judicial especial para comodato.</li>
+          <li><strong>Confundir comodatum ad pompam com mútuo</strong>: a chave é a destinação (ornamentação/exposição), não a fungibilidade intrínseca da coisa.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EXTINÇÃO DO COMODATO -->
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">🔚 Extinção do Comodato</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Causa de Extinção</th>
+            <th>Fundamento</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Advento do termo / uso finalizado</strong></td>
+            <td>Art. 581</td>
+            <td>Expirou o prazo ou foi utilizada para a finalidade prevista</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td><strong>Resolução</strong></td>
+            <td>Art. 582</td>
+            <td>Descumprimento das obrigações pelo comodatário (uso inadequado, desvio de finalidade)</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td><strong>Por sentença</strong></td>
+            <td>Art. 581</td>
+            <td>Comodante prova necessidade imprevista e urgente ao juiz</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td><strong>Morte do comodatário</strong></td>
+            <td>Doutrina</td>
+            <td>Intuitu personae → extingue. Não pessoal (ex: trator p/ colheita) → herdeiros continuam até fim da finalidade</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td><strong>Resilição unilateral</strong></td>
+            <td>Doutrina</td>
+            <td>Prazo indeterminado sem finalidade específica; comodante notifica; comodatário restitui ou consigna</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td><strong>Perecimento do objeto</strong></td>
+            <td>Arts. 583, 582</td>
+            <td>Comodatário responde se culpado; também responde se preferiu salvar seus bens (art. 583) ou se em mora</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MAPA MENTAL EXTINÇÃO -->
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">🗺️ Mapa Mental — Extinção do Comodato</h3>
+    <div class="mapa-mental">
+<span class="root">EXTINÇÃO DO COMODATO</span>
+├── <span class="branch">1. Advento do Termo / Uso Finalizado</span>
+│   └── <span class="leaf">prazo expirou OU finalidade atingida (art. 581)</span>
+│
+├── <span class="branch">2. Resolução</span>
+│   └── <span class="leaf">uso inadequado / desvio de finalidade (art. 582)</span>
+│
+├── <span class="branch">3. Por Sentença</span>
+│   └── <span class="leaf">necessidade URGENTE + IMPREVISTA provada ao juiz (art. 581)</span>
+│
+├── <span class="branch">4. Morte do Comodatário</span>
+│   ├── <span class="highlight">intuitu personae</span> <span class="leaf">→ EXTINGUE (ex: cadeira de rodas)</span>
+│   └── <span class="success">não pessoal</span> <span class="leaf">→ herdeiros continuam (ex: trator p/ colheita)</span>
+│
+├── <span class="branch">5. Resilição Unilateral</span>
+│   └── <span class="leaf">prazo indeterminado s/ finalidade específica → notificação</span>
+│
+└── <span class="branch">6. Perecimento do Objeto</span>
+    ├── <span class="leaf">culpa do comodatário → responde</span>
+    ├── <span class="danger">caso fortuito/FM + mora → responde (art. 582)</span>
+    └── <span class="danger">salvou seus bens em vez dos do comodante → responde (art. 583)</span>
+    </div>
+
+    <!-- EXEMPLOS -->
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">💼 Exemplos Práticos — Comodato</h3>
+    <div class="exemplo-card">
+      <div class="exemplo-label">📅 Cotidiano</div>
+      <div class="exemplo-text">Fernanda empresta seu apartamento de praia para a amiga Maria usar nas férias de janeiro. Maria deve devolver o mesmo imóvel (infungível), sem pagar nada. Se Maria sublocar o apartamento para terceiros sem autorização de Fernanda, haverá uso inadequado e Fernanda pode exigir devolução imediata.</div>
+    </div>
+    <div class="exemplo-card">
+      <div class="exemplo-label">⚖️ Prática Forense</div>
+      <div class="exemplo-text">Um pai empresta seu veículo ao filho sem prazo definido. Com o falecimento do pai, os herdeiros pedem a devolução. Como o comodato era para uso pessoal (intuitu personae), extingue-se com a morte do comodante? <strong>Não</strong> — a morte relevante aqui é do comodatário. A morte do comodante em si não extingue automaticamente, mas os herdeiros do comodante assumem o direito de exigir devolução.</div>
+    </div>
+    <div class="exemplo-card">
+      <div class="exemplo-label">📝 Questão de Exame</div>
+      <div class="exemplo-text"><em>Túlio recebeu em comodato um piano de Rafaela para apresentações musicais. Com o passar do tempo, passou a alugar o piano para terceiros. Qual a consequência jurídica?</em><br><br>
+      <strong>Resposta:</strong> Uso inadequado / desvio de finalidade (art. 582). Rafaela pode rescindir/resolver o contrato e exigir imediata devolução. Se Túlio não devolver, responde por esbulho (reintegração de posse) + dupla sanção: riscos do fortuito + aluguel arbitrado por Rafaela.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MÚTUO ===== -->
+<section id="mutuo">
+  <div class="container">
+    <div class="topic-header">
+      <div class="topic-icon">💰</div>
+      <div>
+        <h2>Contrato de Mútuo</h2>
+        <p>Arts. 586–592 CC | Empréstimo de consumo com transferência de domínio</p>
+      </div>
+    </div>
+
+    <div class="nivel-tabs">
+      <button class="nivel-tab active" onclick="showNivel('mutuo', 1, this)">Nível 1 · Linguagem Direta</button>
+      <button class="nivel-tab" onclick="showNivel('mutuo', 2, this)">Nível 2 · Dogmática Formal</button>
+      <button class="nivel-tab" onclick="showNivel('mutuo', 3, this)">Nível 3 · Concursos</button>
+    </div>
+
+    <!-- NÍVEL 1 -->
+    <div id="mutuo-n1" class="nivel-panel active">
+      <div class="box box-info">
+        <div class="box-title">💡 Analogia do Dia a Dia</div>
+        <strong>Mútuo = empréstimo de dinheiro entre amigos</strong><br>
+        Você empresta R$ 500 ao amigo. Ele pode gastar esse dinheiro (você transferiu a propriedade das notas). Depois, ele devolve outros R$ 500 (mesma quantidade e qualidade — fungível). Se cobrar juros, é <em>mútuo feneratício</em>. Se for banco, aplica-se o CDC (Súmula 297 STJ).
+      </div>
+      <div class="cards-2">
+        <div class="content-card">
+          <h4>🧑‍⚖️ Quem é quem?</h4>
+          <ul>
+            <li><strong>Mutuante</strong>: quem empresta (deve ser proprietário)</li>
+            <li><strong>Mutuário</strong>: quem recebe e fica proprietário</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>✅ Características-Chave</h4>
+          <ul>
+            <li>Coisa <strong>fungível</strong> (dinheiro, grãos, etc.)</li>
+            <li>Transfere o <strong>domínio</strong> ao mutuário</li>
+            <li>Devolve coisa do <strong>mesmo gênero</strong></li>
+            <li>Em regra: <strong>oneroso</strong> (com juros)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- NÍVEL 2 -->
+    <div id="mutuo-n2" class="nivel-panel">
+      <div class="cards-2" style="margin-bottom:1rem">
+        <div class="content-card">
+          <h4>📜 Conceito — Art. 586</h4>
+          <p style="font-size:0.87rem;font-style:italic;color:#374151;border-left:3px solid var(--p-500);padding-left:12px;margin:8px 0">"Mútuo é o empréstimo de coisas fungíveis, pelo qual o mutuário obriga-se a restituir ao mutuante o que dele recebeu em coisa do mesmo gênero, qualidade e quantidade."</p>
+          <ul>
+            <li>O mutuante <strong>transfere o domínio</strong></li>
+            <li>Mutuário vira proprietário: pode consumir, alienar, abandonar</li>
+            <li>"Una pro alia moneta solvi potest" (latim para fungibilidade do dinheiro)</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>⚙️ Natureza Jurídica</h4>
+          <ul>
+            <li><strong>Real</strong>: aperfeiçoa-se com entrega; antes disso = pactum de mutuo dando (promessa de mutuar / contrato preliminar)</li>
+            <li><strong>Unilateral</strong>: após tradição, obrigações apenas do mutuário</li>
+            <li><strong>Gratuito</strong> (mútuo simples) / <strong>Oneroso</strong> (feneratício)</li>
+            <li>"Único contrato unilateral e oneroso" (quando feneratício)</li>
+            <li><strong>Não solene</strong>: forma escrita recomendada para prova</li>
+            <li><strong>Temporário</strong>: se perpétuo → doação</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box box-info" style="margin-bottom:1rem">
+        <div class="box-title">💡 Mútuo Feneratício — Art. 591</div>
+        "Destinando-se o mútuo a fins econômicos, presumem-se devidos juros, os quais, sob pena de redução, não poderão exceder a taxa a que se refere o art. 406, permitida a capitalização anual."<br><br>
+        → Finalidade econômica (≠ amizade/cortesia) = juros presumidos<br>
+        → Taxa não pactuada → art. 406 CC (taxa legal: SELIC)<br>
+        → Enunciado 34 CJF: capitalização anual (não composta)
+      </div>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:1.5rem 0 1rem">⏱️ Prazos Legais — Art. 592</h3>
+      <div class="box box-atencao" style="margin-bottom:1rem">
+        <div class="box-title">📝 Regra: Apenas quando NÃO há convenção expressa de prazo</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Inciso</th><th>Objeto do Mútuo</th><th>Prazo Legal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>I</strong></td><td>Produtos agrícolas (para consumo ou semeadura)</td><td>Até a próxima colheita</td></tr>
+            <tr><td><strong>II</strong></td><td>Dinheiro</td><td>30 dias, pelo menos</td></tr>
+            <tr><td><strong>III</strong></td><td>Qualquer outra coisa fungível</td><td>Prazo declarado pelo mutuante</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:1.5rem 0 1rem">🚸 Mútuo Feito a Pessoa Menor — Art. 588</h3>
+      <div class="box box-erro" style="margin-bottom:1rem">
+        <div class="box-title">⚠️ Regra Geral</div>
+        "O mútuo feito a pessoa menor, sem prévia autorização daquele sob cuja guarda estiver, não pode ser reavido nem do mutuário, nem de seus fiadores." → Proteção ao menor = mutuante não pode cobrar!
+      </div>
+
+      <div class="box box-dica" style="margin-bottom:1rem">
+        <div class="box-title">💡 Mnemônico RABME — 5 Exceções ao Art. 588 (mútuo exigível)</div>
+        <strong>R</strong>atificação do representante<br>
+        <strong>A</strong>limentos (menor obrigado a contrair, ausente o representante)<br>
+        <strong>B</strong>ens do trabalho do menor (execução limitada a essas forças)<br>
+        <strong>M</strong>enor que se beneficiou do empréstimo<br>
+        <strong>E</strong>mpréstimo obtido maliciosamente pelo menor
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Exceção (Art. 588)</th><th>Fundamento / Lógica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>a</td><td>Representante ratificou o empréstimo</td><td>Convalidação posterior pelo responsável</td></tr>
+            <tr><td>b</td><td>Menor obrigado a contrair para alimentos habituais, ausente o representante</td><td>Necessidade vital imperiosa</td></tr>
+            <tr><td>c</td><td>Menor tem bens ganhos com seu trabalho</td><td>Execução limitada a essas forças (patrimônio laboral)</td></tr>
+            <tr><td>d</td><td>Empréstimo reverteu em benefício do menor</td><td>Enriquecimento sem causa</td></tr>
+            <tr><td>e</td><td>Menor obteve o empréstimo maliciosamente</td><td>Ninguém pode se beneficiar da própria torpeza</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cards-2" style="margin-top:1rem">
+        <div class="content-card">
+          <h4>📋 Obrigações do Mutuário</h4>
+          <ul>
+            <li>Restituir no prazo: mesma quantidade e qualidade</li>
+            <li>Desvalorização da coisa → restituir o <strong>valor que tinha na data do empréstimo</strong></li>
+            <li>Art. 590: mutuante pode exigir garantia se mutuário sofrer <em>notória mudança em sua situação econômica</em> (art. 477 — exceptio non adimpleti)</li>
+            <li>Se não presta garantia → mutuante considera vencimento antecipado (art. 333, III), descontando juros cabíveis</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>📋 Obrigações do Mutuante</h4>
+          <p style="font-size:0.85rem;color:#6b7280;margin:0 0 8px">Em princípio, inexistem (contrato real + unilateral). Eventualmente:</p>
+          <ul>
+            <li>Responsabilidade por <strong>vícios/defeitos</strong> da coisa de que tinha conhecimento e não informou ao mutuário</li>
+            <li>Deve ser <strong>proprietário</strong> + ter capacidade para dispor (diferente do comodato!)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- NÍVEL 3 -->
+    <div id="mutuo-n3" class="nivel-panel">
+      <div class="box box-pega">
+        <div class="box-title">🎯 Pegadinhas CEBRASPE/FGV — Mútuo</div>
+        <ul style="margin:8px 0 0;padding-left:1.3rem;font-size:0.88rem;line-height:1.8">
+          <li><strong>FALSO</strong>: "O mutuário pode ser cobrado mesmo sendo menor e sem nenhuma das exceções do art. 588" → NÃO; a regra é a proteção ao menor</li>
+          <li><strong>FALSO</strong>: "O mútuo é essencialmente gratuito" → É EM REGRA ONEROSO (mútuo feneratício)</li>
+          <li><strong>FALSO</strong>: "O mutuante não precisa ser proprietário para celebrar o mútuo" → DEVE ser proprietário (diferente do comodato)</li>
+          <li><strong>VERDADEIRO</strong>: "O mútuo é o único contrato unilateral e oneroso previsto no CC"</li>
+          <li><strong>FALSO</strong>: "O prazo mínimo legal para mútuo de dinheiro sem convenção é de 60 dias" → É DE 30 DIAS (art. 592, II)</li>
+          <li><strong>VERDADEIRO</strong>: "Súmula 297 STJ: o CDC é aplicável às instituições financeiras"</li>
+          <li><strong>FALSO</strong>: "O pactum de mutuo dando é o próprio contrato de mútuo" → É A PROMESSA de mutuar (contrato preliminar)</li>
+        </ul>
+      </div>
+
+      <div class="box box-erro">
+        <div class="box-title">⚠️ Erros Comuns em Prova — Mútuo</div>
+        <ul style="margin:8px 0 0;padding-left:1.3rem;font-size:0.88rem;line-height:1.8">
+          <li><strong>Esquecer as 5 exceções do art. 588</strong>: especialmente a "maliciosa" (ninguém se beneficia da própria torpeza)</li>
+          <li><strong>Confundir prazos do art. 592</strong>: produtos agrícolas = próxima colheita (NÃO é 30 dias)</li>
+          <li><strong>Não distinguir mútuo simples de feneratício</strong>: só o econômico presume juros (art. 591)</li>
+          <li><strong>Ignorar que mutuante DEVE ser proprietário</strong>: comodante apenas precisa ter posse/direito de uso</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAPA COMODATO X MÚTUO -->
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">🗺️ Mapa Mental — Comodato × Mútuo</h3>
+    <div class="mapa-mental">
+<span class="root">EMPRÉSTIMO NO CÓDIGO CIVIL</span>
+│
+├── <span class="highlight">COMODATO</span> (arts. 579-585)
+│   ├── <span class="branch">Objeto:</span> <span class="leaf">coisas INFUNGÍVEIS (regra)</span>
+│   ├── <span class="branch">Finalidade:</span> <span class="leaf">USO temporário</span>
+│   ├── <span class="branch">Gratuidade:</span> <span class="success">ESSENCIAL</span>
+│   ├── <span class="branch">Domínio:</span> <span class="leaf">permanece com o comodante</span>
+│   ├── <span class="branch">Restituição:</span> <span class="leaf">a MESMA coisa</span>
+│   ├── <span class="branch">Obrigações:</span> <span class="leaf">CUR (Conservar, Usar, Restituir)</span>
+│   ├── <span class="branch">Art. 583:</span> <span class="danger">salvar seus bens = responde pelo fortuito</span>
+│   └── <span class="branch">Extinção:</span> <span class="leaf">termo, resolução, sentença, morte, resilição, perecimento</span>
+│
+└── <span class="highlight">MÚTUO</span> (arts. 586-592)
+    ├── <span class="branch">Objeto:</span> <span class="leaf">coisas FUNGÍVEIS</span>
+    ├── <span class="branch">Finalidade:</span> <span class="leaf">CONSUMO e disposição</span>
+    ├── <span class="branch">Gratuidade:</span> <span class="danger">em regra ONEROSO (feneratício)</span>
+    ├── <span class="branch">Domínio:</span> <span class="leaf">TRANSFERE ao mutuário</span>
+    ├── <span class="branch">Restituição:</span> <span class="leaf">coisa do mesmo gênero/qualidade/quantidade</span>
+    ├── <span class="branch">Art. 591:</span> <span class="leaf">fins econômicos → presume juros (taxa: art. 406)</span>
+    ├── <span class="branch">Art. 588:</span> <span class="danger">menor = NÃO exigível (5 exceções: RABME)</span>
+    └── <span class="branch">Art. 592:</span> <span class="leaf">prazos: agrícola=colheita | dinheiro=30d | outros=declarado</span>
+    </div>
+
+    <!-- EXEMPLOS MÚTUO -->
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">💼 Exemplos Práticos — Mútuo</h3>
+    <div class="exemplo-card">
+      <div class="exemplo-label">📅 Cotidiano</div>
+      <div class="exemplo-text">Carlos pede emprestado R$ 2.000 ao amigo Pedro. Pedro transfere a propriedade do dinheiro. Carlos usa para pagar uma conta. No mês seguinte, devolve R$ 2.000 (não as mesmas notas, mas o equivalente). Se Pedro cobrar juros, é mútuo feneratício. Se for simples amizade, é mútuo gratuito (sem presunção de juros).</div>
+    </div>
+    <div class="exemplo-card">
+      <div class="exemplo-label">⚖️ Prática Forense</div>
+      <div class="exemplo-text">Um banco empresta R$ 50.000 a um correntista. Aplica-se o CDC (Súmula 297 STJ + ADIn 2.591 STF). Os juros estão sujeitos ao controle judicial. Se o devedor não pagar e, antes do vencimento, der sinais de insolvência (ex: protestos, execuções ajuizadas), o banco pode exigir garantia (art. 590 CC) e, não prestada, considerar antecipadamente vencida a dívida (art. 333, III).</div>
+    </div>
+    <div class="exemplo-card">
+      <div class="exemplo-label">📝 Questão de Exame</div>
+      <div class="exemplo-text"><em>Lúcio, 16 anos, de forma ardilosa, escondeu sua menoridade e obteve empréstimo de R$ 5.000 de Bruna. Pode Bruna cobrar o valor?</em><br><br>
+      <strong>Resposta:</strong> SIM. A exceção (e) do art. 588 prevê que, se o menor obteve o empréstimo maliciosamente, o mutuante pode cobrar. Ninguém pode alegar a própria torpeza (nemo potest venire contra factum proprium).</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== LEI SECA ===== -->
+<section id="lei-seca">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📖</span> Lei Seca Interativa</h2>
+    <p class="section-desc">Clique para expandir cada artigo. Texto do CC/2002 com notas didáticas.</p>
+    <div class="lei-seca-grid">
+
+      <details class="artigo">
+        <summary>Art. 579 — Conceito de Comodato</summary>
+        <div class="artigo-body">
+          <em>"Comodato é o empréstimo gratuito de coisas não fungíveis. Perfaz-se com a tradição do objeto."</em>
+          <div class="nota">📌 Gratuidade + infungibilidade + tradição = três pilares. Sem um deles, não é comodato.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 580 — Administradores de Bens Alheios</summary>
+        <div class="artigo-body">
+          <em>"Os tutores, curadores e em geral todos os administradores de bens alheios não poderão dar em comodato, sem autorização especial, os bens confiados à sua guarda."</em>
+          <div class="nota">⚠️ Lista não exaustiva: inclui inventariantes, testamenteiros, depositários. Autorização = judicial.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 581 — Prazo / Urgência Imprevista</summary>
+        <div class="artigo-body">
+          <em>"Se o comodato não tiver prazo convencional, presumir-se-lhe-á o necessário para o uso concedido; não podendo o comodante, salvo necessidade imprevista e urgente, reconhecida pelo juiz, suspender o uso e gozo da coisa emprestada antes de findo o prazo convencional, ou o que se determine pelo uso outorgado."</em>
+          <div class="nota">🎯 Questão clássica: o comodante NÃO pode simplesmente pedir de volta — precisa provar urgência ao juiz.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 582 — Obrigações do Comodatário</summary>
+        <div class="artigo-body">
+          <em>"O comodatário é obrigado a conservar, como se sua própria fora, a coisa emprestada, não podendo usá-la senão de acordo com o contrato ou a natureza dela, sob pena de responder por perdas e danos. O comodatário constituído em mora, além de por ela responder, pagará, até restituir a coisa, o aluguel da coisa que for arbitrado pelo comodante."</em>
+          <div class="nota">💡 Dupla sanção: (1) responde pelos riscos (mora) + (2) aluguel arbitrado.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 583 — Perigo e Preferência pelos Bens Próprios</summary>
+        <div class="artigo-body">
+          <em>"Se, correndo risco o objeto do comodato juntamente com outros do comodatário, antepuser este a salvação dos seus abandonando o do comodante, responderá pelo dano ocorrido, ainda que se possa atribuir a caso fortuito, ou força maior."</em>
+          <div class="nota">🔥 Exceção expressa à regra do fortuito: preferiu salvar os seus = responde pelo dano.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 584 — Direito de Retenção</summary>
+        <div class="artigo-body">
+          <em>"O comodatário não poderá jamais recobrar do comodante as benfeitorias que efetuou, ainda que necessárias, podendo levantá-las quando o puder fazer sem detrimento da coisa."</em>
+          <div class="nota">⚠️ Comodatário NÃO tem direito de retenção por benfeitorias. Pode levantar as voluptuárias/necessárias se não danificar a coisa.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 585 — Comodato Coletivo</summary>
+        <div class="artigo-body">
+          <em>"Se duas ou mais pessoas forem simultaneamente comodatárias de uma coisa, ficarão solidariamente responsáveis para com o comodante."</em>
+          <div class="nota">📌 Comodato coletivo = solidariedade passiva entre comodatários.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 586 — Conceito de Mútuo</summary>
+        <div class="artigo-body">
+          <em>"O mútuo é o empréstimo de coisas fungíveis, pelo qual o mutuário se obriga a restituir ao mutuante o que dele recebeu em coisa do mesmo gênero, qualidade e quantidade."</em>
+          <div class="nota">📌 Fungível + domínio transferido + restituição equivalente.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 587 — Momento da Transferência</summary>
+        <div class="artigo-body">
+          <em>"Este empréstimo transfere o domínio da coisa emprestada ao mutuário, por cuja conta correm todos os riscos dela desde a tradição."</em>
+          <div class="nota">🎯 Mutuário = proprietário desde a tradição. Risco integral pelo mutuário.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 588 — Mútuo ao Menor</summary>
+        <div class="artigo-body">
+          <em>"O mútuo feito a pessoa menor, sem prévia autorização daquele sob cuja guarda estiver, não pode ser reavido nem do mutuário, nem de seus fiadores."</em>
+          <div class="nota">⚠️ Regra: proteção total ao menor. Exceções nos incisos I-V do art. 589.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 589 — Exceções ao Art. 588</summary>
+        <div class="artigo-body">
+          <em>"Cessa a disposição do artigo antecedente: I – quando a pessoa, de cuja autorização necessitava o mutuário para contrair o empréstimo, o ratificar posteriormente; II – quando o menor, entre dezesseis e dezoito anos, não puder ser autorizado pelos representantes, e ele houver sido obrigado a contrair o empréstimo para os seus alimentos habituais; III – quando o mútuo reverteu em benefício do menor; IV – quando o menor obteve o empréstimo maliciosamente."</em>
+          <div class="nota">🔑 Mnemônico RABME (Ratificação, Alimentos, Bens do trabalho, Menoridade com benefício, Empréstimo malicioso).</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 590 — Garantia por Mudança Econômica</summary>
+        <div class="artigo-body">
+          <em>"O mutuante pode exigir garantia da restituição, se antes do vencimento o mutuário sofrer notória mudança em sua situação econômica."</em>
+          <div class="nota">📌 Liga-se ao art. 477 (exceção do contrato não cumprido) e art. 333, III (vencimento antecipado se não prestar garantia).</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 591 — Mútuo Feneratício / Juros</summary>
+        <div class="artigo-body">
+          <em>"Destinando-se o mútuo a fins econômicos, presumem-se devidos juros, os quais, sob pena de redução, não poderão exceder a taxa a que se refere o art. 406, permitida a capitalização anual."</em>
+          <div class="nota">🎯 Fins econômicos → presunção de juros. Taxa: art. 406 (SELIC). Capitalização: somente anual.</div>
+        </div>
+      </details>
+
+      <details class="artigo">
+        <summary>Art. 592 — Prazos Legais sem Convenção</summary>
+        <div class="artigo-body">
+          <em>"Não se tendo convencionado expressamente, o prazo do mútuo será: I – até a próxima colheita, se o mútuo for de produtos agrícolas, assim para o consumo, como para semeadura; II – de trinta dias, pelo menos, se for de dinheiro; III – do espaço de tempo que declarar o mutuante, se for de qualquer outra coisa fungível."</em>
+          <div class="nota">📌 Colheita / 30 dias / Declarado pelo mutuante.</div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== JURISPRUDÊNCIA ===== -->
+<section id="jurisprudencia">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">⚖️</span> Jurisprudência & Doutrina</h2>
+    <p class="section-desc">O que cobram as bancas e o que dizem os tribunais superiores.</p>
+
+    <div class="box box-juris">
+      <div class="box-title">⚖️ Súmula 297 STJ</div>
+      "O Código de Defesa do Consumidor é aplicável às instituições financeiras."<br><br>
+      <strong>Impacto no Mútuo:</strong> Contratos bancários de mútuo sujeitam-se ao CDC — práticas abusivas, cláusulas nulas, revisão judicial de juros excessivos.
+    </div>
+
+    <div class="box box-juris">
+      <div class="box-title">⚖️ STF — ADIn 2.591 (04/05/2006)</div>
+      Declarou <strong>constitucional</strong> o art. 3º, §2º do CDC ao incluir as instituições financeiras como fornecedoras de serviços. Consagra: bancos se submetem ao CDC, especialmente nas relações de mútuo bancário/feneratício.
+    </div>
+
+    <div class="box box-juris">
+      <div class="box-title">⚖️ Enunciado n. 34 — I Jornada de Direito Civil CJF</div>
+      "No novo Código Civil, quaisquer contratos de mútuo destinados a fins econômicos presumem-se onerosos (art. 591), sendo os juros compensatórios limitados ao disposto no art. 406, com capitalização anual."<br><br>
+      → Capitalização: apenas anual (não mensal, não composta em períodos inferiores).
+    </div>
+
+    <div class="box box-juris">
+      <div class="box-title">⚖️ STJ — Comodato em Imóvel</div>
+      Firmado na jurisprudência que o comodatário que se recusa a devolver o imóvel ao final do prazo pratica <strong>esbulho possessório</strong>, cabendo ação de reintegração de posse, independentemente de proposta de ação pessoal (ação ex conducto). O comodante pode arbitrar aluguel-pena (art. 582, 2ª parte).
+    </div>
+
+    <div class="box box-doutrina">
+      <div class="box-title">📚 Doutrina — Pablo Stolze Gagliano</div>
+      Para Stolze, o comodato é "contrato real, unilateral, gratuito e não solene, operando mera transmissão de posse." A obrigação de conservar "como se sua própria fora" impõe ao comodatário diligência máxima — responde por culpa levíssima. Ressalta que a gratuidade é elemento essencial; qualquer contraprestação desnatura o comodato.
+    </div>
+
+    <div class="box box-doutrina">
+      <div class="box-title">📚 Doutrina — Carlos Roberto Gonçalves</div>
+      Gonçalves classifica o comodato como "contrato bilateral imperfeito" para ressaltar que, embora em regra unilateral, podem surgir obrigações eventuais para o comodante (vício oculto, despesas extraordinárias). Sobre o mútuo feneratício, destaca que é o "único contrato tipicamente unilateral e oneroso" do direito privado brasileiro.
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUESTÕES REVISÃO ===== -->
+<section id="questoes">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📝</span> Revisão Ativa</h2>
+    <p class="section-desc">Questões estilo CEBRASPE, OAB e discursiva. Teste seus conhecimentos antes de ver o gabarito!</p>
+
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:0 0 1rem">Verdadeiro ou Falso — Estilo CEBRASPE</h3>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q1</span>
+        <span class="questao-banca">CEBRASPE / V-F</span>
+      </div>
+      <div class="questao-enunciado">O comodato aperfeiçoa-se com o simples acordo de vontades entre comodante e comodatário, independentemente da entrega da coisa emprestada.</div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ❌ <strong>FALSO.</strong> O comodato é contrato real, aperfeiçoando-se com a tradição (entrega) da coisa (art. 579: "perfaz-se com a tradição do objeto"). Antes da entrega, existe apenas uma promessa de emprestar, sem força vinculante como comodato.
+        </div>
+      </details>
+    </div>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q2</span>
+        <span class="questao-banca">CEBRASPE / V-F</span>
+      </div>
+      <div class="questao-enunciado">No comodato, se o comodatário, diante de incêndio que ameaçava a coisa emprestada e os seus próprios bens, priorizou salvar os seus, responderá pelo dano à coisa do comodante, mesmo que tal dano seja atribuível a caso fortuito.</div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ✅ <strong>VERDADEIRO.</strong> Art. 583 do CC: "Se, correndo risco o objeto do comodato juntamente com outros do comodatário, antepuser este a salvação dos seus abandonando o do comodante, responderá pelo dano ocorrido, ainda que se possa atribuir a caso fortuito, ou força maior." É uma das exceções expressas à teoria do fortuito.
+        </div>
+      </details>
+    </div>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q3</span>
+        <span class="questao-banca">CEBRASPE / V-F</span>
+      </div>
+      <div class="questao-enunciado">O mútuo feito a menor de 18 anos jamais pode ser cobrado, seja do mutuário, seja de seus fiadores, pois o ordenamento protege absolutamente o incapaz.</div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ❌ <strong>FALSO.</strong> A regra do art. 588 comporta exceções. Quando o menor age maliciosamente para obter o empréstimo, quando o empréstimo reverteu em seu benefício, quando há ratificação pelo representante, quando foi para alimentos habituais (ausente o representante), ou quando possui bens obtidos com seu trabalho — nesses casos, a proteção cessa e o mútuo pode ser cobrado (art. 589 CC).
+        </div>
+      </details>
+    </div>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q4</span>
+        <span class="questao-banca">CEBRASPE / V-F</span>
+      </div>
+      <div class="questao-enunciado">Em comodato por prazo indeterminado, o comodante pode exigir a devolução da coisa a qualquer momento, bastando simples notificação ao comodatário.</div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ❌ <strong>FALSO.</strong> Nos termos do art. 581 CC, em comodato por prazo indeterminado, presume-se o prazo necessário para o uso concedido. O comodante somente pode exigir a devolução antes desse prazo se provar necessidade imprevista e urgente, reconhecida pelo juiz. Mera notificação não basta.
+        </div>
+      </details>
+    </div>
+
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">Múltipla Escolha — Estilo OAB</h3>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q5</span>
+        <span class="questao-banca">OAB / Múltipla Escolha</span>
+      </div>
+      <div class="questao-enunciado">Assinale a alternativa CORRETA sobre o contrato de mútuo no Código Civil de 2002:</div>
+      <div class="questao-opcoes">
+        <label>(A) O mútuo é essencialmente gratuito, sendo vedada a cobrança de juros em qualquer hipótese.</label>
+        <label>(B) O mutuário adquire apenas a posse direta da coisa emprestada, permanecendo o domínio com o mutuante.</label>
+        <label>(C) Destinando-se o mútuo a fins econômicos, presumem-se devidos juros, limitados à taxa do art. 406, com capitalização anual permitida.</label>
+        <label>(D) O prazo mínimo legal do mútuo de dinheiro, quando não convencionado expressamente, é de 60 dias.</label>
+      </div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ✅ <strong>Alternativa C.</strong> Exatamente o que dispõe o art. 591 CC e o Enunciado 34 da I Jornada CJF. (A) Errado: o mútuo econômico presume juros. (B) Errado: o mutuário adquire o DOMÍNIO (art. 587). (D) Errado: o prazo é de 30 dias, pelo menos (art. 592, II).
+        </div>
+      </details>
+    </div>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q6</span>
+        <span class="questao-banca">OAB / Múltipla Escolha</span>
+      </div>
+      <div class="questao-enunciado">Carlos emprestou seu apartamento gratuitamente para Fernanda morar por dois anos. Após um ano, Carlos alegou necessidade imprevista e urgente e pediu a devolução. Fernanda recusou-se a sair. Assinale a alternativa CORRETA:</div>
+      <div class="questao-opcoes">
+        <label>(A) Carlos não pode exigir a devolução antes do prazo, pois o comodato por prazo determinado é irrevogável em qualquer hipótese.</label>
+        <label>(B) Carlos pode pedir a devolução a qualquer tempo, pois o comodato é gratuito e o comodante pode resilir unilateralmente quando quiser.</label>
+        <label>(C) Carlos pode pedir a devolução antes do prazo se provar necessidade imprevista e urgente perante o juiz; se Fernanda recusar, pratica esbulho e sujeita-se à ação de reintegração de posse e ao pagamento de aluguel arbitrado.</label>
+        <label>(D) Fernanda, como comodatária, possui direito de retenção pelo valor das benfeitorias necessárias que realizou no imóvel.</label>
+      </div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ✅ <strong>Alternativa C.</strong> Art. 581: a necessidade imprevista e urgente deve ser provada e reconhecida pelo juiz. A recusa de Fernanda é esbulho, cabendo ação de reintegração de posse + dupla sanção (art. 582). (A) Errado: há exceção do art. 581. (B) Errado: não pode a qualquer tempo sem prova. (D) Errado: art. 584 veda o direito de retenção do comodatário por benfeitorias.
+        </div>
+      </details>
+    </div>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q7</span>
+        <span class="questao-banca">FGV / Múltipla Escolha</span>
+      </div>
+      <div class="questao-enunciado">São comodatários solidários, nos termos do CC, nas seguintes hipóteses:</div>
+      <div class="questao-opcoes">
+        <label>(A) Apenas quando o contrato expressamente assim estipular.</label>
+        <label>(B) Quando duas ou mais pessoas receberem simultaneamente a coisa em comodato.</label>
+        <label>(C) Nunca, pois o comodato é contrato intuitu personae e não admite pluralidade passiva.</label>
+        <label>(D) Apenas se forem parentes do comodante.</label>
+      </div>
+      <details class="gabarito">
+        <summary>Ver Gabarito</summary>
+        <div class="gabarito-body">
+          ✅ <strong>Alternativa B.</strong> Art. 585 CC: "Se duas ou mais pessoas forem simultaneamente comodatárias de uma coisa, ficarão solidariamente responsáveis para com o comodante." A solidariedade decorre da lei, independentemente de previsão contratual.
+        </div>
+      </details>
+    </div>
+
+    <h3 style="font-family:'Outfit',sans-serif;color:var(--p-700);margin:2rem 0 1rem">Questão Discursiva</h3>
+
+    <div class="questao-block">
+      <div class="questao-header">
+        <span class="questao-num">Q8</span>
+        <span class="questao-banca">Discursiva / Exame de Ordem</span>
+      </div>
+      <div class="questao-enunciado">
+        <strong>Diferencie comodato de mútuo</strong>, abordando: (a) definição legal e artigos do CC; (b) natureza jurídica de ambos; (c) a questão da transferência do domínio; (d) qual o critério da fungibilidade e sua importância; (e) a questão da gratuidade/onerosidade. (Máximo: 30 linhas)
+      </div>
+      <details class="gabarito">
+        <summary>Ver Resposta Modelo</summary>
+        <div class="gabarito-body">
+          <strong>(a) Definição Legal:</strong> O comodato (art. 579 CC) é o "empréstimo gratuito de coisas não fungíveis, perfazendo-se com a tradição do objeto." O mútuo (art. 586 CC) é o "empréstimo de coisas fungíveis, pelo qual o mutuário se obriga a restituir ao mutuante o que dele recebeu em coisa do mesmo gênero, qualidade e quantidade."<br><br>
+          <strong>(b) Natureza Jurídica:</strong> Ambos são contratos reais (aperfeiçoam-se com a tradição) e unilaterais (após a tradição, as obrigações recaem principalmente sobre o cessionário/tomador). São também temporários e não solenes.<br><br>
+          <strong>(c) Transferência de Domínio:</strong> No comodato, a propriedade permanece com o comodante — transfere-se apenas a posse direta. No mútuo, o domínio é transferido ao mutuário (art. 587), que se torna proprietário e suporta todos os riscos.<br><br>
+          <strong>(d) Fungibilidade:</strong> No comodato, o objeto deve ser infungível (regra) — devolve-se a mesma coisa. No mútuo, o objeto é fungível — devolve-se coisa do mesmo gênero, qualidade e quantidade. A fungibilidade determina o regime jurídico (transferência de domínio, forma de restituição, riscos).<br><br>
+          <strong>(e) Gratuidade/Onerosidade:</strong> A gratuidade é elemento essencial do comodato (se oneroso → locação). O mútuo, por sua vez, é em regra oneroso: o mútuo feneratício (art. 591) pressupõe fins econômicos e juros presumidos, limitados ao art. 406, com capitalização anual. Daí a peculiaridade apontada pela doutrina: o mútuo feneratício é o único contrato unilateral oneroso do direito civil.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FLASHCARDS ===== -->
+<section id="flashcards">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🃏</span> Flashcards de Memorização Rápida</h2>
+    <p class="section-desc">10 cards para fixar os conceitos-chave antes da prova.</p>
+    <div class="flashcards-grid">
+
+      <div class="flashcard">
+        <div class="flashcard-front">O que é o comodato e qual artigo o define?</div>
+        <div class="flashcard-back">Art. 579: empréstimo <strong>gratuito</strong> de coisas <strong>não fungíveis</strong>. Perfaz-se com a <strong>tradição</strong>. Partes: comodante e comodatário.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">Qual o mnemônico das obrigações do comodatário?</div>
+        <div class="flashcard-back"><strong>CUR</strong> = <strong>C</strong>onservar (art. 582, como se sua fora) + <strong>U</strong>sar adequadamente + <strong>R</strong>estituir no prazo.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">O que é a "dupla sanção" do comodatário em mora?</div>
+        <div class="flashcard-back">Art. 582: (1) suporta os riscos da coisa mesmo que fortuitos + (2) paga aluguel arbitrado pelo comodante até a restituição.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">O comodante pode pedir a coisa antes do prazo em comodato por prazo indeterminado?</div>
+        <div class="flashcard-back">Apenas se provar necessidade <strong>imprevista e urgente</strong>, reconhecida pelo <strong>juiz</strong> (art. 581). Não pode por mera vontade.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">O que é o "comodatum ad pompam vel ostentationem"?</div>
+        <div class="flashcard-back">Exceção: coisas fungíveis/consumíveis emprestadas para <strong>exposição/ornamentação</strong>. Devolvem-se as <em>mesmas</em> coisas. É comodato, não mútuo.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">O que é mútuo feneratício?</div>
+        <div class="flashcard-back">Mútuo com cobrança de <strong>juros</strong>. Finalidade econômica → presunção de juros (art. 591). Taxa: art. 406 (SELIC). Capitalização: anual.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">Quais os prazos do art. 592 (mútuo sem convenção)?</div>
+        <div class="flashcard-back">I – Produtos agrícolas: <strong>próxima colheita</strong><br>II – Dinheiro: <strong>30 dias, pelo menos</strong><br>III – Outros fungíveis: <strong>declarado pelo mutuante</strong></div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">Regra e exceções do mútuo ao menor (arts. 588-589)?</div>
+        <div class="flashcard-back">Regra: não pode cobrar do menor nem do fiador.<br>Exceções (RABME): <strong>R</strong>atificação, <strong>A</strong>limentos, <strong>B</strong>ens do trabalho, <strong>M</strong>enor que se beneficiou, <strong>E</strong>mpréstimo malicioso.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">Qual a diferença entre comodato e mútuo quanto ao domínio?</div>
+        <div class="flashcard-back">Comodato: domínio <strong>permanece</strong> com o comodante (apenas posse direta ao comodatário).<br>Mútuo: domínio é <strong>transferido</strong> ao mutuário (art. 587), que arca com todos os riscos.</div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-front">Súmula 297 STJ e ADIn 2.591 STF — aplicação ao mútuo bancário?</div>
+        <div class="flashcard-back">Súmula 297: CDC aplica-se às <strong>instituições financeiras</strong>.<br>ADIn 2.591/STF (2006): constitucional a aplicação do CDC aos bancos.<br>→ Mútuo bancário sujeito ao controle de cláusulas abusivas.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHEAT SHEET ===== -->
+<section id="cheatsheet">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📋</span> Cheat Sheet — Véspera de Prova</h2>
+    <p class="section-desc">Bullet points densos para revisão final. Leia em 10 minutos.</p>
+    <div class="cheat-sheet">
+<div class="cheat-title">▶ COMODATO (Arts. 579-585)</div>
+<div class="cheat-h2">Definição & Natureza</div>
+<span class="cheat-ok">✓</span> Art. 579: empréstimo GRATUITO de coisa INFUNGÍVEL, aperfeiçoa com TRADIÇÃO
+<span class="cheat-ok">✓</span> Real + Unilateral + Gratuito + Não Solene + Temporário
+<span class="cheat-ok">✓</span> Posse direta → comodatário; Posse indireta → comodante
+<span class="cheat-ok">✓</span> Se oneroso → LOCAÇÃO ou contrato inominado (perde natureza)
+<span class="cheat-ok">✓</span> IPTU/condomínio pelo comodatário: NÃO desnatura gratuidade
+<span class="cheat-warn">✗</span> Comodante NÃO precisa ser proprietário; basta posse/direito de uso
+
+<div class="cheat-h2">Exceção — Comodatum ad Pompam</div>
+<span class="cheat-ok">✓</span> Fungíveis emprestados p/ ornamentação → restituir as MESMAS coisas = comodato
+
+<div class="cheat-h2">Administradores de Bens Alheios (Art. 580)</div>
+<span class="cheat-warn">✗</span> Tutores, curadores, inventariantes, testamenteiros, depositários: precisam AUTORIZAÇÃO JUDICIAL
+
+<div class="cheat-h2">Obrigações do Comodatário — CUR</div>
+<span class="cheat-gold">C</span> onservar — como se sua fora; culpa LEVÍSSIMA; art. 583 → salvar os seus = responde p/ fortuito
+<span class="cheat-gold">U</span> sar adequadamente — conforme contrato/natureza; desvio → resolução; subcomodato VEDADO
+<span class="cheat-gold">R</span> estituir — mora = DUPLA SANÇÃO: riscos fortuitos + aluguel arbitrado (art. 582)
+
+<div class="cheat-h2">Direitos do Comodante</div>
+<span class="cheat-ok">✓</span> Pedir restituição + ação de reintegração de posse + aluguel-pena
+<span class="cheat-ok">✓</span> Pedir devolução antecipada: necessidade URGENTE + IMPREVISTA ao juiz (art. 581)
+<span class="cheat-warn">✗</span> Comodatário: SEM direito de retenção por benfeitorias (art. 584)
+
+<div class="cheat-h2">Extinção — 6 causas</div>
+<span class="cheat-gold">1</span> Advento do termo / uso finalizado
+<span class="cheat-gold">2</span> Resolução (uso inadequado/desvio)
+<span class="cheat-gold">3</span> Sentença (urgência imprevista provada)
+<span class="cheat-gold">4</span> Morte do comodatário: intuitu personae → extingue; outros → herdeiros continuam
+<span class="cheat-gold">5</span> Resilição unilateral (prazo indeterminado s/ finalidade específica)
+<span class="cheat-gold">6</span> Perecimento (culpa/mora do comodatário ou art. 583)
+
+<div class="cheat-h2">Comodato Coletivo (Art. 585)</div>
+<span class="cheat-ok">✓</span> 2+ comodatários → SOLIDARIEDADE PASSIVA (decorre da lei)
+
+<div class="cheat-title" style="margin-top:20px">▶ MÚTUO (Arts. 586-592)</div>
+<div class="cheat-h2">Definição & Natureza</div>
+<span class="cheat-ok">✓</span> Art. 586: empréstimo de coisa FUNGÍVEL → restitui do mesmo gênero/qualidade/quantidade
+<span class="cheat-ok">✓</span> TRANSFERE DOMÍNIO ao mutuário (art. 587); todos os riscos p/ mutuário
+<span class="cheat-ok">✓</span> Real + Unilateral (após tradição) + Em regra Oneroso + Não Solene + Temporário
+<span class="cheat-ok">✓</span> Mutuante DEVE ser PROPRIETÁRIO + capacidade p/ dispor
+<span class="cheat-warn">✗</span> Antes da tradição: pactum de mutuo dando (promessa de mutuar = contrato preliminar)
+
+<div class="cheat-h2">Mútuo Feneratício (Art. 591)</div>
+<span class="cheat-ok">✓</span> Fins econômicos → PRESUME juros; taxa: art. 406 (SELIC); capitalização: ANUAL (Enunc. 34 CJF)
+<span class="cheat-warn">✗</span> Único contrato UNILATERAL e ONEROSO (doutrina)
+
+<div class="cheat-h2">Mútuo ao Menor (Arts. 588-589)</div>
+<span class="cheat-warn">✗</span> Regra: NÃO pode cobrar (nem do menor, nem do fiador)
+<span class="cheat-gold">R</span>atificação pelo representante → exigível
+<span class="cheat-gold">A</span>limentos (menor obrigado, ausente representante) → exigível
+<span class="cheat-gold">B</span>ens do trabalho do menor (limitado a essas forças) → exigível
+<span class="cheat-gold">M</span>enor que se beneficiou do empréstimo → exigível
+<span class="cheat-gold">E</span>mpréstimo malicioso pelo menor → exigível
+
+<div class="cheat-h2">Prazos Legais sem Convenção (Art. 592)</div>
+<span class="cheat-gold">I</span> Produtos agrícolas → próxima COLHEITA
+<span class="cheat-gold">II</span> Dinheiro → 30 DIAS (pelo menos)
+<span class="cheat-gold">III</span> Outros fungíveis → declarado pelo MUTUANTE
+
+<div class="cheat-h2">Garantia por Mudança Econômica (Art. 590)</div>
+<span class="cheat-ok">✓</span> Mutuante pode exigir garantia se mutuário sofrer NOTÓRIA mudança econômica
+<span class="cheat-ok">✓</span> Se não presta garantia → vencimento antecipado (art. 333, III)
+
+<div class="cheat-h2">Jurisprudência-Chave</div>
+<span class="cheat-gold">★</span> Súmula 297 STJ: CDC aplica-se às instituições financeiras
+<span class="cheat-gold">★</span> ADIn 2.591 STF (2006): constitucional a aplicação do CDC a bancos
+<span class="cheat-gold">★</span> Enunciado 34 CJF: capitalização anual; presunção de onerosidade em fins econômicos
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#0f172a;color:rgba(255,255,255,0.6);text-align:center;padding:40px 20px;font-family:'Inter',sans-serif;font-size:0.82rem;margin-top:0">
+  <div style="max-width:800px;margin:0 auto">
+    <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:#60a5fa;margin-bottom:8px">Direito Civil III — Contratos em Espécie | Parte 3</div>
+    <div style="margin-bottom:6px">Comodato (Arts. 579-585) &bull; Mútuo (Arts. 586-592)</div>
+    <div style="margin-bottom:6px">Prof.ª Esp. Giovanna Farias &bull; Código Civil Brasileiro</div>
+    <div style="margin-top:16px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="../../index.html" style="color:#60a5fa;text-decoration:none">🏠 Portal</a>
+      <a href="index.html" style="color:#60a5fa;text-decoration:none">📚 Civil III</a>
+      <a href="#top" style="color:#60a5fa;text-decoration:none">↑ Topo</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../portal-core.js"></script>
+<script>
+  // ===== NIVEL TABS =====
+  function showNivel(section, num, btn) {
+    // hide all panels
+    document.querySelectorAll(`[id^="${section}-n"]`).forEach(p => p.classList.remove('active'));
+    // deactivate all tabs in this section's tab group
+    btn.closest('.nivel-tabs').querySelectorAll('.nivel-tab').forEach(t => t.classList.remove('active'));
+    // activate selected
+    const panel = document.getElementById(`${section}-n${num}`);
+    if (panel) panel.classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // ===== ACTIVE NAV =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 90) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
