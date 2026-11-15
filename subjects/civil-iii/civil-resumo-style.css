@@ -1314,6 +1314,575 @@ details.gabarito summary {
 }
 
 /* ==========================================================================
+   CLÁUSULAS ESPECIAIS (CARDS MODERNOS EM GRID)
+   ========================================================================== */
+.clausulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 25px 0 35px;
+}
+
+.clausula-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--p-500);
+}
+
+.clausula-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Temas específicos por cláusula */
+.clausula-card.cc-retrovenda { border-top-color: #2563EB; }
+.clausula-card.cc-preempcao, .clausula-card.cc-preempção { border-top-color: #D97706; }
+.clausula-card.cc-contento { border-top-color: #10B981; }
+.clausula-card.cc-reserva { border-top-color: #8B5CF6; }
+.clausula-card.cc-documentos { border-top-color: #0D9488; }
+
+.cc-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.cc-titulo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--p-700);
+  margin-bottom: 14px;
+}
+
+[data-theme="dark"] .cc-titulo {
+  color: var(--p-300);
+}
+
+.cc-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  flex-grow: 1;
+}
+
+.cc-lista li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.cc-lista li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--p-500);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.cc-prazo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--p-50);
+  border: 1px solid var(--p-200);
+  color: var(--p-700);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+[data-theme="dark"] .cc-prazo {
+  background: rgba(59,130,246,0.15);
+  border-color: rgba(59,130,246,0.3);
+  color: var(--p-300);
+}
+
+/* Tags de Status e Natureza */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  vertical-align: middle;
+}
+
+.tag-cessivel {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .tag-cessivel {
+  background: rgba(16, 185, 129, 0.25);
+  color: #34D399;
+}
+
+.tag-incessivel {
+  background: rgba(239, 68, 68, 0.15);
+  color: #DC2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+[data-theme="dark"] .tag-incessivel {
+  background: rgba(239, 68, 68, 0.25);
+  color: #F87171;
+}
+
+.tag-nulo {
+  background: rgba(220, 38, 38, 0.15);
+  color: #B91C1C;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.tag-anulavel {
+  background: rgba(245, 158, 11, 0.15);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tag-art {
+  background: var(--p-50);
+  color: var(--p-700);
+  border: 1px solid var(--p-200);
+}
+
+.tag-prazo {
+  background: rgba(212, 175, 55, 0.15);
+  color: #B45309;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="dark"] .tag-prazo {
+  color: #FCD34D;
+}
+
+/* Mnemônicos e Siglas */
+.mnemonico-card {
+  background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(59,130,246,0.05));
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mnemonico-sigla {
+  background: linear-gradient(135deg, #D4AF37, #B45309);
+  color: #FFFFFF;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  padding: 8px 18px;
+  border-radius: 12px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+  white-space: nowrap;
+}
+
+.mnemonico-desc {
+  flex: 1;
+  min-width: 240px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.mnemonico-desc span {
+  font-weight: 800;
+  color: var(--p-700);
+  background: rgba(212,175,55,0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] .mnemonico-desc span {
+  color: #FCD34D;
+  background: rgba(212,175,55,0.25);
+}
+
+/* Lei Seca Detalhada */
+.art-num {
+  display: inline-block;
+  background: var(--p-600);
+  color: #FFFFFF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.artigo-body {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.lei-texto {
+  font-family: 'Lora', serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  background: var(--p-50);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--p-500);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .lei-texto {
+  background: rgba(30, 58, 138, 0.2);
+  border-left-color: var(--p-400);
+}
+
+.comentario {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  background: var(--bg-card-subtle);
+  border-radius: var(--radius-sm);
+}
+
+/* Mapa mental em bloco escuro */
+.mapa-mental {
+  background: #090D16;
+  color: #F8FAFC;
+  padding: 1.8rem;
+  border-radius: var(--radius-md);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  border: 1px solid #1E293B;
+  box-shadow: var(--shadow-md);
+  margin: 1.8rem 0;
+}
+
+.mm-nulo { color: #F87171; font-weight: 700; }
+.mm-anulavel { color: #FBBF24; font-weight: 700; }
+.mm-highlight { color: #60A5FA; font-weight: 700; }
+
+/* Questões de Revisão */
+.questao {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  margin: 1.6rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.questao-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge-vf {
+  background: #2563EB;
+  color: #FFFFFF;
+}
+
+.badge-mc {
+  background: #7C3AED;
+  color: #FFFFFF;
+}
+
+.badge-disc {
+  background: #D97706;
+  color: #FFFFFF;
+}
+
+.questao-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.alternativas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alternativas li {
+  padding: 10px 14px;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.94rem;
+  transition: all 0.15s ease;
+}
+
+.alternativas li:hover {
+  background: var(--p-50);
+  border-color: var(--p-300);
+}
+
+[data-theme="dark"] .alternativas li:hover {
+  background: rgba(59,130,246,0.12);
+  border-color: var(--p-500);
+}
+
+.gabarito-toggle {
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--p-600);
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--p-50);
+  border: 1px solid var(--p-200);
+  display: inline-block;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.gabarito-toggle:hover {
+  background: var(--p-500);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .gabarito-toggle {
+  color: var(--p-300);
+  background: rgba(59,130,246,0.15);
+  border-color: rgba(59,130,246,0.3);
+}
+
+.gabarito-content {
+  margin-top: 12px;
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.gabarito-content.gabarito-errado {
+  background: #FEF2F2;
+  border-left: 4px solid #EF4444;
+  color: #991B1B;
+}
+
+[data-theme="dark"] .gabarito-content.gabarito-errado {
+  background: rgba(239, 68, 68, 0.15);
+  color: #FCA5A5;
+}
+
+/* Flashcards Interativos */
+.fc-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fc-inner:hover {
+  transform: translateY(-3px);
+  border-color: var(--p-400);
+  box-shadow: var(--shadow-md);
+}
+
+.fc-front {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fc-back {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.fc-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--p-500);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.fc-pergunta {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--p-700);
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .fc-pergunta {
+  color: var(--p-300);
+}
+
+.fc-hint {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.fc-resposta {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Cheat Sheet Grid & Columns */
+.cheat-sheet {
+  background: var(--bg-card);
+  border: 2px dashed var(--p-500);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.cheat-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 15px;
+}
+
+.cheat-cols h3 {
+  color: var(--p-700);
+  font-size: 1.15rem;
+  margin-top: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+[data-theme="dark"] .cheat-cols h3 {
+  color: var(--p-300);
+}
+
+.cheat-cols ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.cheat-cols li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.cheat-cols li::before {
+  content: "▸";
+  position: absolute;
+  left: 2px;
+  color: var(--accent-gold);
+}
+
+/* Classes Auxiliares Parte 2 e 3 */
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-top: -8px;
+  margin-bottom: 1.4rem;
+}
+
+.three-col, .cards-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.cards-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.badge-sim, .badge-ok, .cheat-ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.badge-nao, .badge-danger, .danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #DC2626;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.badge-regra, .cheat-warn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #D97706;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.cheat-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: #B45309;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
    RESPONSIVIDADE AJUSTADA
    ========================================================================== */
 @media (max-width: 768px) {
