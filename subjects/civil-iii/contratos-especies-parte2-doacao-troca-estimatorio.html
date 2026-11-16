@@ -122,7 +122,7 @@
     <div id="doacao-panel-2" class="level-panel lvl2">
       <div class="panel-label">🔵 Graduação — Dogmática Formal</div>
       <h4 class="sub">Conceito (Art. 538 CC)</h4>
-      <p style="font-family:'Lora',serif; font-size:0.95rem; line-height:1.7; color:#1e293b;">"O contrato em que uma pessoa, por <strong>liberalidade</strong>, transfere do seu patrimônio bens ou vantagens para o de outra."</p>
+      <p style="font-family:'Lora',serif; font-size:0.95rem; line-height:1.7; color:var(--text-main);">"O contrato em que uma pessoa, por <strong>liberalidade</strong>, transfere do seu patrimônio bens ou vantagens para o de outra."</p>
       <h4 class="sub">Elementos Essenciais</h4>
       <div class="two-col">
         <div>
@@ -370,12 +370,41 @@
 
     <div class="info-box box-erro">
       <div class="box-title">⚠️ Erro Comum #2 — Nulidade vs. Anulabilidade</div>
-      <ul>
-        <li><strong>Doação de todos os bens</strong> (art. 548): <span class="highlight">NULIDADE ABSOLUTA</span></li>
-        <li><strong>Doação inoficiosa</strong> (art. 549): <span class="highlight">NULIDADE PARCIAL</span> (só o excedente)</li>
-        <li><strong>Doação ao cúmplice adúltero</strong> (art. 550): <span class="highlight">ANULABILIDADE</span> — não nulidade!</li>
-        <li>Doação do devedor insolvente: <span class="highlight">ANULABILIDADE</span> via ação pauliana</li>
-      </ul>
+      <p style="margin-bottom: 0.85rem; font-size: 0.9rem; color: var(--text-muted);">As bancas de concurso e da OAB costumam misturar as sanções jurídicas de cada vício da doação:</p>
+      <div class="nulidade-grid">
+        <div class="nulidade-card">
+          <div class="nulidade-header">
+            <span class="nulidade-art">Art. 548 CC</span>
+            <span class="badge-status status-null">Nulidade Absoluta</span>
+          </div>
+          <div class="nulidade-title">Doação Universal (todos os bens)</div>
+          <div class="nulidade-desc">Nula se não reservar renda ou bens bastantes para sua subsistência. Vício insanável que não convalesce.</div>
+        </div>
+        <div class="nulidade-card">
+          <div class="nulidade-header">
+            <span class="nulidade-art">Art. 549 CC</span>
+            <span class="badge-status status-parc">Nulidade Parcial</span>
+          </div>
+          <div class="nulidade-title">Doação Inoficiosa</div>
+          <div class="nulidade-desc">Nula <strong>apenas na parte que exceder</strong> a legítima dos herdeiros necessários (50%). Não anula o todo.</div>
+        </div>
+        <div class="nulidade-card">
+          <div class="nulidade-header">
+            <span class="nulidade-art">Art. 550 CC</span>
+            <span class="badge-status status-anul">Anulabilidade</span>
+          </div>
+          <div class="nulidade-title">Doação ao Cúmplice Adúltero</div>
+          <div class="nulidade-desc">Anulável pelo cônjuge prejudicado ou herdeiros no prazo decadencial de <strong>2 anos</strong> após dissolução.</div>
+        </div>
+        <div class="nulidade-card">
+          <div class="nulidade-header">
+            <span class="nulidade-art">Art. 158 CC</span>
+            <span class="badge-status status-anul">Anulabilidade</span>
+          </div>
+          <div class="nulidade-title">Devedor Insolvente (Pauliana)</div>
+          <div class="nulidade-desc">Anulável pelos credores quirografários via Ação Pauliana por fraude contra credores (prazo decadencial de 4 anos).</div>
+        </div>
+      </div>
     </div>
 
     <div class="info-box box-juris">
@@ -631,15 +660,15 @@
       </div>
       <h4 class="sub">Regras Especiais dos Arts. 535-537</h4>
       <div class="lei-seca-grid">
-        <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 10px; padding: 16px;">
+        <div class="card-alert-red">
           <strong style="color:#dc2626; font-family:'Outfit',sans-serif;">Art. 535 — Risco pelo Consignatário</strong>
           <p style="font-family:'Inter',sans-serif; font-size:0.88rem; margin-top:8px; line-height:1.6;">O consignatário NÃO se exonera de pagar o preço mesmo que a restituição seja impossível — <strong>inclusive por caso fortuito</strong>. Responde pelo risco integral.</p>
         </div>
-        <div style="background: #fffbeb; border: 1px solid #fcd34d; border-radius: 10px; padding: 16px; margin-top:10px;">
+        <div class="card-alert-amber" style="margin-top:10px;">
           <strong style="color:#b45309; font-family:'Outfit',sans-serif;">Art. 536 — Proibição de Penhora/Sequestro</strong>
           <p style="font-family:'Inter',sans-serif; font-size:0.88rem; margin-top:8px; line-height:1.6;">A coisa consignada NÃO pode ser penhorada nem sequestrada por credores do consignatário enquanto não pago integralmente o preço.</p>
         </div>
-        <div style="background: var(--p-50); border: 1px solid var(--p-100); border-radius: 10px; padding: 16px; margin-top:10px;">
+        <div class="card-alert-blue" style="margin-top:10px;">
           <strong style="color:var(--p-700); font-family:'Outfit',sans-serif;">Art. 537 — Impossibilidade de Disposição pelo Consignante</strong>
           <p style="font-family:'Inter',sans-serif; font-size:0.88rem; margin-top:8px; line-height:1.6;">O consignante NÃO pode dispor da coisa (vender a terceiro, dar em penhor etc.) antes de lhe ser restituída ou comunicada a restituição.</p>
         </div>
@@ -647,7 +676,7 @@
       <h4 class="sub">Direitos e Obrigações das Partes</h4>
       <div class="two-col">
         <div>
-          <div style="background: var(--p-50); border-radius:12px; padding:16px; border: 1px solid var(--p-100);">
+          <div class="card-alert-blue">
             <strong style="font-family:'Outfit',sans-serif; color:var(--p-700);">CONSIGNANTE</strong>
             <p style="font-family:'Inter',sans-serif; font-size:0.82rem; margin-top:8px;"><strong>Deveres:</strong></p>
             <ul style="font-family:'Inter',sans-serif; font-size:0.82rem; line-height:1.7; padding-left:16px;">
@@ -663,8 +692,8 @@
           </div>
         </div>
         <div>
-          <div style="background: #f5f3ff; border-radius:12px; padding:16px; border: 1px solid #c4b5fd;">
-            <strong style="font-family:'Outfit',sans-serif; color:#5b21b6;">CONSIGNATÁRIO</strong>
+          <div class="card-alert-purple">
+            <strong style="font-family:'Outfit',sans-serif; color:var(--p-600, #7c3aed);">CONSIGNATÁRIO</strong>
             <p style="font-family:'Inter',sans-serif; font-size:0.82rem; margin-top:8px;"><strong>Deveres:</strong></p>
             <ul style="font-family:'Inter',sans-serif; font-size:0.82rem; line-height:1.7; padding-left:16px;">
               <li>Vender ou devolver no prazo</li>
@@ -953,7 +982,7 @@
     <h3 class="sub" style="margin-top:40px;">Espécies de Doação — Classificação por Revogabilidade</h3>
     <div class="two-col">
       <div>
-        <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius:12px; padding:20px;">
+        <div class="card-alert-red">
           <strong style="color:#dc2626; font-family:'Outfit',sans-serif; font-size:1rem;">❌ NÃO cabe revogação por ingratidão</strong>
           <ul style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.8; margin-top:10px; padding-left:16px;">
             <li>Doação remuneratória</li>
@@ -964,7 +993,7 @@
         </div>
       </div>
       <div>
-        <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius:12px; padding:20px;">
+        <div class="card-alert-green">
           <strong style="color:#166534; font-family:'Outfit',sans-serif; font-size:1rem;">✅ CABE revogação por ingratidão</strong>
           <ul style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.8; margin-top:10px; padding-left:16px;">
             <li>Doação pura e simples</li>
@@ -1142,27 +1171,27 @@
 
     <div class="three-col">
 
-      <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius:14px; padding:24px;">
-        <h4 style="font-family:'Outfit',sans-serif; color:#065f46; margin:0 0 12px; font-size:1rem;">🏠 Cotidiano — Doação com Encargo</h4>
-        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:#1e293b;">João doa sua fazenda a Pedro com a condição de que Pedro construa uma escola para os moradores da região. Pedro usa a fazenda mas nunca constrói a escola. <strong>João pode revogar a doação</strong> por descumprimento do encargo. O MP também pode exigir o cumprimento, pois o encargo é de interesse geral.</p>
+      <div class="card-alert-green">
+        <h4 style="font-family:'Outfit',sans-serif; color:var(--accent-dark, #059669); margin:0 0 12px; font-size:1rem;">🏠 Cotidiano — Doação com Encargo</h4>
+        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:var(--text-main);">João doa sua fazenda a Pedro com a condição de que Pedro construa uma escola para os moradores da região. Pedro usa a fazenda mas nunca constrói a escola. <strong>João pode revogar a doação</strong> por descumprimento do encargo. O MP também pode exigir o cumprimento, pois o encargo é de interesse geral.</p>
       </div>
 
-      <div style="background: var(--p-50); border: 1px solid var(--p-100); border-radius:14px; padding:24px;">
+      <div class="card-alert-blue">
         <h4 style="font-family:'Outfit',sans-serif; color:var(--p-700); margin:0 0 12px; font-size:1rem;">⚖️ Prática Forense — Doação Inoficiosa</h4>
-        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:#1e293b;">Maria, proprietária de bens avaliados em R$ 2.000.000, doa R$ 1.400.000 a amigos. Possui filhos (herdeiros necessários). A legítima = 50% = R$ 1.000.000. A doação excedeu em R$ 400.000 o disponível (R$ 1.000.000). Os filhos podem pedir a <strong>nulidade parcial</strong> dos R$ 400.000 excedentes (doação inoficiosa — art. 549).</p>
+        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:var(--text-main);">Maria, proprietária de bens avaliados em R$ 2.000.000, doa R$ 1.400.000 a amigos. Possui filhos (herdeiros necessários). A legítima = 50% = R$ 1.000.000. A doação excedeu em R$ 400.000 o disponível (R$ 1.000.000). Os filhos podem pedir a <strong>nulidade parcial</strong> dos R$ 400.000 excedentes (doação inoficiosa — art. 549).</p>
       </div>
 
-      <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius:14px; padding:24px;">
-        <h4 style="font-family:'Outfit',sans-serif; color:#c2410c; margin:0 0 12px; font-size:1rem;">📦 Estimatório — Caso Fortuito</h4>
-        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:#1e293b;">A Editora "Leis em Foco" entrega 1.000 livros ao livreiro Carlos por R$ 50 cada (R$ 50.000 total). Incêndio acidental destrói o estoque. Carlos vendeu 0 livros. Mesmo assim, Carlos deve pagar os R$ 50.000 à editora (art. 535). O caso fortuito não o exonera — risco é do consignatário.</p>
+      <div class="card-alert-amber">
+        <h4 style="font-family:'Outfit',sans-serif; color:var(--accent-dark, #ea580c); margin:0 0 12px; font-size:1rem;">📦 Estimatório — Caso Fortuito</h4>
+        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; line-height:1.6; color:var(--text-main);">A Editora "Leis em Foco" entrega 1.000 livros ao livreiro Carlos por R$ 50 cada (R$ 50.000 total). Incêndio acidental destrói o estoque. Carlos vendeu 0 livros. Mesmo assim, Carlos deve pagar os R$ 50.000 à editora (art. 535). O caso fortuito não o exonera — risco é do consignatário.</p>
       </div>
 
     </div>
 
-    <div style="background: white; border: 1px solid var(--p-100); border-radius:14px; padding:24px; margin-top:20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <div class="card-practice" style="margin-top:20px;">
       <h4 style="font-family:'Outfit',sans-serif; color:var(--p-700); margin:0 0 16px; font-size:1.1rem;">🎓 Questão de Exame — OAB</h4>
-      <p style="font-family:'Lora',serif; font-size:0.95rem; line-height:1.7; color:#1e293b;"><strong>Situação:</strong> Álvaro prometeu a Beatriz, em documento particular assinado, que lhe doaria um apartamento quando ela concluísse o curso de Direito. Beatriz se formou, mas Álvaro se recusou a realizar a doação. Pode Beatriz exigir judicialmente o cumprimento da promessa?</p>
-      <p style="font-family:'Inter',sans-serif; font-size:0.88rem; line-height:1.6; color:#374151; margin-top:12px;"><strong>Análise:</strong> A questão envolve a controvertida "promessa de doação". Pela corrente majoritária (Gonçalves, Tartuce), a promessa de doação é <em>inexigível</em>, pois ninguém pode ser compelido a ser generoso — a "doação forçada" contradiz o animus donandi. Pela corrente minoritária (Pablo Stolze), seria exigível. Para fins de OAB, responder pela inexigibilidade.</p>
+      <p style="font-family:'Lora',serif; font-size:0.95rem; line-height:1.7; color:var(--text-main);"><strong>Situação:</strong> Álvaro prometeu a Beatriz, em documento particular assinado, que lhe doaria um apartamento quando ela concluísse o curso de Direito. Beatriz se formou, mas Álvaro se recusou a realizar a doação. Pode Beatriz exigir judicialmente o cumprimento da promessa?</p>
+      <p style="font-family:'Inter',sans-serif; font-size:0.88rem; line-height:1.6; color:var(--text-main); margin-top:12px;"><strong>Análise:</strong> A questão envolve a controvertida "promessa de doação". Pela corrente majoritária (Gonçalves, Tartuce), a promessa de doação é <em>inexigível</em>, pois ninguém pode ser compelido a ser generoso — a "doação forçada" contradiz o animus donandi. Pela corrente minoritária (Pablo Stolze), seria exigível. Para fins de OAB, responder pela inexigibilidade.</p>
     </div>
 
   </div>
@@ -1178,7 +1207,7 @@
     <h2 class="section-title">📝 Revisão Ativa — Questões</h2>
 
     <h3 class="sub">V ou F — Estilo CEBRASPE</h3>
-    <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:#64748b; margin-bottom:16px;">Para CEBRASPE: itens CERTOS valem +1; itens ERRADOS valem -1. Responda antes de ver o gabarito.</p>
+    <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Para CEBRASPE: itens CERTOS valem +1; itens ERRADOS valem -1. Responda antes de ver o gabarito.</p>
 
     <div class="questao-card">
       <div class="vf-row"><div class="vf-badge">1</div><div style="font-family:'Lora',serif; font-size:0.9rem; line-height:1.6;">"A doação do cônjuge adúltero ao cúmplice é <strong>nula</strong> e pode ser declarada a qualquer tempo pelo cônjuge inocente."</div></div>
@@ -1207,7 +1236,7 @@
     <div class="questao-card">
       <div class="questao-header">
         <span class="questao-badge">OAB — Estilo 1ª Fase</span>
-        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:#64748b;">Doação — Revogação</span>
+        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:var(--text-muted);">Doação — Revogação</span>
       </div>
       <div class="questao-text">Carlos doou a Flávio, seu sobrinho, um automóvel de luxo. Dois anos depois, Flávio, em estado de embriaguez, agrediu fisicamente o filho de Carlos. Carlos, indignado, quer revogar a doação. Sobre a situação, assinale a alternativa CORRETA:</div>
       <div class="opcao"><span class="opcao-letra">A)</span> Carlos pode revogar a doação por ingratidão, pois a agressão ao filho equivale à ingratidão ao doador.</div>
@@ -1220,7 +1249,7 @@
     <div class="questao-card">
       <div class="questao-header">
         <span class="questao-badge">CESPE — Estilo Concurso</span>
-        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:#64748b;">Troca/Permuta</span>
+        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:var(--text-muted);">Troca/Permuta</span>
       </div>
       <div class="questao-text">Tício (pai) celebra contrato com Mévio (filho) pelo qual entrega um imóvel avaliado em R$ 500.000 e recebe um imóvel avaliado em R$ 300.000, sem qualquer pagamento em dinheiro. Os demais filhos de Tício não foram consultados. Sobre este negócio, assinale a alternativa CORRETA:</div>
       <div class="opcao"><span class="opcao-letra">A)</span> O contrato é de compra e venda, pois envolve imóveis.</div>
@@ -1233,7 +1262,7 @@
     <div class="questao-card">
       <div class="questao-header">
         <span class="questao-badge">FGV — Estilo OAB 2ª Fase</span>
-        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:#64748b;">Contrato Estimatório</span>
+        <span style="font-family:'Inter',sans-serif; font-size:0.82rem; color:var(--text-muted);">Contrato Estimatório</span>
       </div>
       <div class="questao-text">A empresa "Moda & Arte" entrega 200 vestidos a Tatiana, proprietária de uma butique, pelo preço de R$ 300 cada, com prazo de 60 dias para vender ou devolver. No 30º dia, um temporal destrói toda a loja de Tatiana, inclusive os vestidos. Tatiana alega que não deve nada à empresa, pois o sinistro foi fortuito. Analise a alegação de Tatiana:</div>
       <div class="opcao"><span class="opcao-letra">A)</span> Correta, pois o caso fortuito exonera o devedor de qualquer obrigação.</div>
